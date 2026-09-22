@@ -1,0 +1,574 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Nvm0mCKK+4m1p6y1D/js7ccXNUc</id>
+  <title>arXiv Query: search_query=abs:"force field" AND abs:"phonon" AND abs:"accuracy"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-09-16T15:04:10Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22force+field%22+AND+(abs:%22phonon%22+AND+abs:%22accuracy%22)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>23</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.16526v1</id>
+    <title>Symbolic Ensemble Learning Enables Discovery of Fast Accurate Physics-Based Interatomic Potentials</title>
+    <updated>2026-09-15T02:19:10Z</updated>
+    <link href="https://arxiv.org/abs/2609.16526v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.16526v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning has transformed materials simulation by delivering force fields with ab initio accuracy, yet bridging the gap between high-dimensional regression and physical interpretability remains a grand challenge. Conventional analytical potentials offer transparency but often fail to capture the complexity of far-from-ground state regimes. Here, we introduce a hybrid symbolic-neural framework that unifies the interpretability of the Embedded Atom Method (EAM) with the adaptability of data-driven learning. Using Equation Learner Neural Networks (EqNNs) trained on density functional theory (DFT) data, we obtain interpretable models for aluminum through three distinct training protocols: random initialization trained via Monte Carlo Tree Search (MCTS) and gradient descent, and two transfer-learning strategies initialized from a copper potential - one employing MCTS followed by gradient descent, and the other using gradient descent only. We find that while all three resulting symbolic models achieve sub-10 meV/atom accuracy, they occupy distinct local minima in the functional landscape, exhibiting complementary trade-offs across phonon dispersion, surface energetics, and elastic response. By integrating these diverse functional forms through a weighted symbolic ensemble, we derive a composite potential that surpasses the fidelity of its constituent models. The resulting ensemble effectively mitigates individual biases, delivering superior consistency with DFT benchmarks across equation-of-state curvature, phonon spectra, and melting dynamics. This approach demonstrates that combining transfer learning with ensemble symbolic regression yields compact, transparent potentials capable of robust prediction across equilibrium and non-equilibrium states.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T02:19:10Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Bilvin Varughese</name>
+    </author>
+    <author>
+      <name>Aditya Koneru</name>
+    </author>
+    <author>
+      <name>Adil Muhammad</name>
+    </author>
+    <author>
+      <name>Troy D. Loeffler</name>
+    </author>
+    <author>
+      <name>Sukriti Manna</name>
+    </author>
+    <author>
+      <name>Jan Michael Y. Carrillo</name>
+    </author>
+    <author>
+      <name>Orcun Yildiz</name>
+    </author>
+    <author>
+      <name>Thomas Peterka</name>
+    </author>
+    <author>
+      <name>Subramanian K. R. S. Sankaranarayanan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.21311v1</id>
+    <title>Dynamically training machine-learning-based force fields for strongly anharmonic materials</title>
+    <updated>2026-01-29T06:14:04Z</updated>
+    <link href="https://arxiv.org/abs/2601.21311v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.21311v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning (ML) force fields have emerged as a powerful tool for computing materials properties at finite temperatures, particularly in regimes where traditional phonon-based perturbation theories fail or cannot be extended beyond the harmonic approximation. These approaches offer accuracy comparable to ab initio molecular dynamics (MD), but at a fraction of the computational cost. However, their reliability critically depends on the quality and representativeness of the training data. In particular, static training datasets often lead to failure when the force field encounters previously unseen atomic configurations during MD simulations. In this work, we present a framework for dynamically training ML force fields and demonstrate its effectiveness across materials with varying degrees of anharmonicity, including cubic boron arsenide (c-BAs), silicon (Si), and tin selenide (SnSe). Our method builds on the conventional lattice dynamics expansion of total energy and incorporates Bayesian error estimation to guide adaptive data acquisition during simulation. Specifically, we show that trajectory-averaged Bayesian errors enable efficient and targeted exploration of the configuration space, significantly enhancing the robustness and transferability of the resulting force fields. We further demonstrate how Bayesian error estimation can be applied to determine the convergence of the dynamic training without requiring additional ab initio data. This proposed framework offers a practical and easily implementable scheme to improve the training process, which is the most critical step in developing reliable ML force fields.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-29T06:14:04Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Martin Callsen</name>
+    </author>
+    <author>
+      <name>Tai-Ting Lee</name>
+    </author>
+    <author>
+      <name>Mei-Yin Chou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.06929v2</id>
+    <title>Machine-Learned Force Fields for Lattice Dynamics at Coupled-Cluster Level Accuracy</title>
+    <updated>2026-05-20T11:43:28Z</updated>
+    <link href="https://arxiv.org/abs/2507.06929v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.06929v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate Machine-Learned Force Fields (MLFFs) trained on approximate Density Functional Theory (DFT) and Coupled Cluster (CC) level potential energy surfaces for the carbon diamond and lithium hydride solids. We assess the accuracy and precision of the MLFFs by calculating phonon dispersions and vibrational densities of states (VDOS) that are compared to experiment and reference ab initio results. To overcome limitations from long-range effects and the lack of atomic forces in the CC training data, a delta-learning approach based on the difference between CC and DFT results, as well as a charge aware MLFF approach is explored. Compared to DFT, MLFFs trained on CC theory yield higher vibrational frequencies for optical modes, agreeing better with experiment. Furthermore, the MLFFs are used to estimate anharmonic effects on the VDOS of lithium hydride at the level of CC theory.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-09T15:11:55Z</published>
+    <arxiv:comment>17 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Sita Schönbauer</name>
+    </author>
+    <author>
+      <name>Johanna P. Carbone</name>
+    </author>
+    <author>
+      <name>Fredrik V. Eriksson</name>
+    </author>
+    <author>
+      <name>Florian Libisch</name>
+    </author>
+    <author>
+      <name>Andreas Grüneis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.00376v1</id>
+    <title>Accurate Modeling of Interfacial Thermal Transport in van der Waals Heterostructures via Hybrid Machine Learning and Registry-Dependent Potentials</title>
+    <updated>2025-05-01T08:02:12Z</updated>
+    <link href="https://arxiv.org/abs/2505.00376v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.00376v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Two-dimensional transition metal dichalcogenides (TMDs) exhibit remarkable thermal anisotropy due to their strong intralayer covalent bonding and weak interlayer van der Waals (vdW) interactions. However, accurately modeling their thermal transport properties remains a significant challenge, primarily due to the computational limitations of density functional theory (DFT) and the inaccuracies of classical force fields in non-equilibrium regimes. To address this, we use a recently developed hybrid computational framework that combines machine learning potential (MLP) for intralayer interactions with registry-dependent interlayer potential (ILP) for anisotropic vdW interlayer interaction, achieving near quantum mechanical accuracy. This approach demonstrates exceptional agreement with DFT calculations and experimental data for TMD systems, accurately predicting key properties such as lattice constants, bulk modulus, moiré reconstruction, phonon spectra, and thermal conductivities. The scalability of this method enables accurate simulations of TMD heterostructures with large-scale moiré superlattices, making it a transformative tool for the design of TMD-based thermal metamaterials and devices, bridging the gap between accuracy and computational efficiency.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-01T08:02:12Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <arxiv:journal_ref>J. Chem. Theory Comput. 2026, 22 (9), 4699-4715</arxiv:journal_ref>
+    <author>
+      <name>Wenwu Jiang</name>
+    </author>
+    <author>
+      <name>Hekai Bu</name>
+    </author>
+    <author>
+      <name>Ting Liang</name>
+    </author>
+    <author>
+      <name>Penghua Ying</name>
+    </author>
+    <author>
+      <name>Zheyong Fan</name>
+    </author>
+    <author>
+      <name>Jianbin Xu</name>
+    </author>
+    <author>
+      <name>Wengen Ouyang</name>
+    </author>
+    <arxiv:doi>10.1021/acs.jctc.5c01950</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.jctc.5c01950" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.10516v4</id>
+    <title>CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties</title>
+    <updated>2025-03-19T03:10:46Z</updated>
+    <link href="https://arxiv.org/abs/2412.10516v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.10516v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we introduce CHIPS-FF (Computational High-Performance Infrastructure for Predictive Simulation-based Force Fields), a universal, open-source benchmarking platform for machine learning force fields (MLFFs). This platform provides robust evaluation beyond conventional metrics such as energy, focusing on complex properties including elastic constants, phonon spectra, defect formation energies, surface energies, and interfacial and amorphous phase properties. Utilizing 16 graph-based MLFF models including ALIGNN-FF, CHGNet, MatGL, MACE, SevenNet, ORB, MatterSim and OMat24, the CHIPS-FF workflow integrates the Atomic Simulation Environment (ASE) with JARVIS-Tools to facilitate automated high-throughput simulations. Our framework is tested on a set of 104 materials, including metals, semiconductors and insulators representative of those used in semiconductor components, with each MLFF evaluated for convergence, accuracy, and computational cost. Additionally, we evaluate the force-prediction accuracy of these models for close to 2 million atomic structures. By offering a streamlined, flexible benchmarking infrastructure, CHIPS-FF aims to guide the development and deployment of MLFFs for real-world semiconductor applications, bridging the gap between quantum mechanical simulations and large-scale device modeling.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-13T19:22:31Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Daniel Wines</name>
+    </author>
+    <author>
+      <name>Kamal Choudhary</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.13844v1</id>
+    <title>Force field optimization by end-to-end differentiable atomistic simulation</title>
+    <updated>2024-09-20T18:38:36Z</updated>
+    <link href="https://arxiv.org/abs/2409.13844v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.13844v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The accuracy of atomistic simulations depends on the precision of force fields. Traditional numerical methods often struggle to optimize the empirical force field parameters for reproducing target properties. Recent approaches rely on training these force fields based on forces and energies from first-principle simulations. However, it is unclear whether these approaches will enable capturing complex material responses such as vibrational, or elastic properties. To this extent, we introduce a framework, employing inner loop simulations and outer loop optimization, that exploits automatic differentiation for both property prediction and force-field optimization by computing gradients of the simulation analytically. We demonstrate the approach by optimizing classical Stillinger-Weber and EDIP potentials for silicon systems to reproduce the elastic constants, vibrational density of states, and phonon dispersion. We also demonstrate how a machine-learned potential can be fine-tuned using automatic differentiation to reproduce any target property such as radial distribution functions. Interestingly, the resulting force field exhibits improved accuracy and generalizability to unseen temperatures than those fine-tuned on energies and forces. Finally, we demonstrate the extension of the approach to optimize the force fields towards multiple target properties. Altogether, differentiable simulations, through the analytical computation of their gradients, offer a powerful tool for both theoretical exploration and practical applications toward understanding physical systems and materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-20T18:38:36Z</published>
+    <arxiv:comment>15 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Abhijeet S. Gangan</name>
+    </author>
+    <author>
+      <name>Samuel S. Schoenholz</name>
+    </author>
+    <author>
+      <name>Ekin Dogus Cubuk</name>
+    </author>
+    <author>
+      <name>Mathieu Bauchy</name>
+    </author>
+    <author>
+      <name>N. M. Anoop Krishnan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.07554v1</id>
+    <title>Cyclic and helical symmetry-informed machine learned force fields: Application to lattice vibrations in carbon nanotubes</title>
+    <updated>2024-08-14T13:41:49Z</updated>
+    <link href="https://arxiv.org/abs/2408.07554v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.07554v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a formalism for developing cyclic and helical symmetry-informed machine learned force fields (MLFFs). In particular, employing the smooth overlap of atomic positions descriptors with the polynomial kernel method, we derive cyclic and helical symmetry-adapted expressions for the energy, atomic forces, and phonons (describe lattice vibration frequencies and modes). We use this formulation to construct a symmetry-informed MLFF for carbon nanotubes (CNTs), where the model is trained through Bayesian linear regression, with the data generated from ab initio density functional theory (DFT) calculations performed during on-the-fly symmetry-informed MLFF molecular dynamics simulations of representative CNTs. We demonstrate the accuracy of the MLFF model by comparisons with DFT calculations for the energies and forces, and density functional perturbation theory calculations for the phonons, while considering CNTs not used in the training. In particular, we obtain a root mean square error of $1.4 \times 10^{-4}$ Ha/atom, $4.7 \times 10^{-4}$ Ha/Bohr, and 4.8 cm$^{-1}$ in the energy, forces, and phonon frequencies, respectively, which are well within the accuracy targeted in ab initio calculations. We apply this framework to study phonons in CNTs of various diameters and chiralities, where we identify the torsional rigid body mode that is unique to cylindrical structures and establish laws for variation of the phonon frequencies associated with the ring modes and radial breathing modes. Overall, the proposed formalism provides an avenue for studying nanostructures with cyclic and helical symmetry at ab initio accuracy, while providing orders-of-magnitude speedup relative to such methods.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-14T13:41:49Z</published>
+    <arxiv:comment>21 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Abhiraj Sharma</name>
+    </author>
+    <author>
+      <name>Shashikant Kumar</name>
+    </author>
+    <author>
+      <name>Phanish Suryanarayana</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.10542v1</id>
+    <title>A neural-network-backed effective harmonic potential study of the ambient pressure phases of hafnia</title>
+    <updated>2024-06-15T07:57:45Z</updated>
+    <link href="https://arxiv.org/abs/2406.10542v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.10542v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Phonon-based approaches and molecular dynamics are widely established methods for gaining access to a temperature-dependent description of material properties. However, when a compound's phase space is vast, density-functional-theory-backed studies quickly reach prohibitive levels of computational expense. Here, we explore the complex phase structure of HfO2 using effective harmonic potentials based on a neural-network force field (NNFF) as a surrogate model. We detail the data acquisition and training strategy that enable the NNFF to provide almost ab-initio accuracy at a significantly reduced cost and present a recipe for automation. We demonstrate how the NNFF can generalize beyond its training data and that it is transferable between several phases of hafnia. We find that the thermal expansion of the low-symmetry phases agrees well with experimental results and we determine the P-43m phase to be the favorable (stoichiometric) cubic phase over the established Fm-3m. In contrast, the experimental lattice constants of the cubic phases are substantially larger than what is calculated for the corresponding stoichiometric phases. Furthermore, we show that the stoichiometric cubic phases are unlikely to be thermodynamically stable compared to the tetragonal and monoclinic phases, and hypothesize that they only exist in defect-stabilized forms.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-15T07:57:45Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Sebastian Bichelmaier</name>
+    </author>
+    <author>
+      <name>Jesús Carrete</name>
+    </author>
+    <author>
+      <name>Ralf Wanzenböck</name>
+    </author>
+    <author>
+      <name>Florian Buchner</name>
+    </author>
+    <author>
+      <name>Georg K. H. Madsen</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.107.184111</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.107.184111" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.05568v1</id>
+    <title>Phase discovery with active learning: Application to structural phase transitions in equiatomic NiTi</title>
+    <updated>2024-01-10T22:22:47Z</updated>
+    <link href="https://arxiv.org/abs/2401.05568v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.05568v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Nickel titanium (NiTi) is a protypical shape-memory alloy used in a range of biomedical and engineering devices, but direct molecular dynamics simulations of the martensitic B19' -&gt; B2 phase transition driving its shape-memory behavior are rare and have relied on classical force fields with limited accuracy. Here, we train four machine-learned force fields for equiatomic NiTi based on the LDA, PBE, PBEsol, and SCAN DFT functionals. The models are trained on the fly during NPT molecular dynamics, with DFT calculations and model updates performed automatically whenever the uncertainty of a local energy prediction exceeds a chosen threshold. The models achieve accuracies of 1-2 meV/atom during training and are shown to closely track DFT predictions of B2 and B19' elastic constants and phonon frequencies. Surprisingly, in large-scale molecular dynamics simulations, only the SCAN model predicts a reversible B19' -&gt; B2 phase transition, with the LDA, PBE, and PBEsol models predicting a reversible transition to a previously uncharacterized low-volume phase, which we hypothesize to be a new stable high-pressure phase. We examine the structure of the new phase and estimate its stability on the temperature-pressure phase diagram. This work establishes an automated active learning protocol for studying displacive transformations, reveals important differences between DFT functionals that can only be detected in large-scale simulations, provides an accurate force field for NiTi, and identifies a new phase.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-10T22:22:47Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jonathan Vandermause</name>
+    </author>
+    <author>
+      <name>Anders Johansson</name>
+    </author>
+    <author>
+      <name>Yucong Miao</name>
+    </author>
+    <author>
+      <name>Joost J. Vlassak</name>
+    </author>
+    <author>
+      <name>Boris Kozinsky</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.01278v2</id>
+    <title>Machine learned Force-Fields for an ab-initio Quality Description of Metal-Organic Frameworks</title>
+    <updated>2023-08-03T09:41:24Z</updated>
+    <link href="https://arxiv.org/abs/2308.01278v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.01278v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Metal-organic frameworks (MOFs) are an incredibly diverse group of highly porous hybrid materials, which are interesting for a wide range of possible applications. For a reliable description of many of their properties accurate computationally highly efficient methods, like force-field potentials (FFPs), are required. With the advent of machine learning approaches, it is now possible to generate such potentials with relatively little human effort. Here, we present a recipe to parametrize two fundamentally different types of exceptionally accurate and computationally highly efficient machine learned potentials, which belong to the moment-tensor and kernel-based potential families. They are parametrized relying on reference configurations generated in the course of molecular dynamics based, active learning runs and their performance is benchmarked for a representative selection of commonly studied MOFs. For both potentials, comparison to a random set of validation structures reveals close to DFT precision in predicted forces and structural parameters of all MOFs. Essentially the same applies to elastic constants and phonon band structures. Additionally, for MOF-5 the thermal conductivity is obtained with full quantitative agreement to single-crystal experiments. All this is possible while maintaining a high degree of computational efficiency, with the obtained machine learned potentials being only moderately slower than the extremely simple UFF4MOF or Dreiding force fields. The exceptional accuracy of the presented FFPs combined with their computational efficiency has the potential of lifting the computational modelling of MOFs to the next level.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-02T17:04:01Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Sandro Wieser</name>
+    </author>
+    <author>
+      <name>Egbert Zojer</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-024-01205-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-024-01205-w" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.04662v2</id>
+    <title>Controlled defect production in monolayer MoS2 via electron irradiation at ultralow accelerating voltages</title>
+    <updated>2023-03-28T17:17:32Z</updated>
+    <link href="https://arxiv.org/abs/2210.04662v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.04662v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Control on spatial location and density of defects in 2D materials can be achieved using electron beam irradiation. Conversely, ultralow accelerating voltages (less than or equal to 5kV) are used to measure surface morphology, with no expected defect creation. We find clear signatures of defect creation in monolayer (ML) MoS2 at these voltages. Evolution of E' and A1' Raman modes with electron dose, and appearance of defect activated peaks indicate defect formation. To simulate Raman spectra of MoS2 at realistic defect distributions, while retaining density-functional theory accuracy, we combine machine-learning force fields for phonons and eigenmode projection approach for Raman tensors. Simulated spectra agree with experiments, with sulphur vacancies as suggested defects. We decouple defects, doping and carbonaceous contamination using control (hBN covered and encapsulated MoS2) samples. We observe cryogenic PL quenching and defect peaks, and find that carbonaceous contamination does not affect defect creation. These studies have applications in photonics and quantum emitters.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-10T13:09:26Z</published>
+    <arxiv:comment>49 pages, 24 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <author>
+      <name>Ajit Kumar Dash</name>
+    </author>
+    <author>
+      <name>Hariharan Swaminathan</name>
+    </author>
+    <author>
+      <name>Ethan Berger</name>
+    </author>
+    <author>
+      <name>Mainak Mondal</name>
+    </author>
+    <author>
+      <name>Touko Lehenkari</name>
+    </author>
+    <author>
+      <name>Pushp Raj Prasad</name>
+    </author>
+    <author>
+      <name>Kenji Watanabe</name>
+    </author>
+    <author>
+      <name>Takashi Taniguchi</name>
+    </author>
+    <author>
+      <name>Hannu-Pekka Komsa</name>
+    </author>
+    <author>
+      <name>Akshay Singh</name>
+    </author>
+    <arxiv:doi>10.1088/2053-1583/acc7b6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2053-1583/acc7b6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.01378v1</id>
+    <title>Lattice dynamics and elastic properties of alpha-U at high-temperature and high-pressure by machine learning potential simulations</title>
+    <updated>2022-10-04T04:42:21Z</updated>
+    <link href="https://arxiv.org/abs/2210.01378v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.01378v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Studying the physical properties of materials under high pressure and temperature through experiments is difficult. Theoretical simulations can compensate for this deficiency. Currently, large-scale simulations using machine learning force fields are gaining popularity. As an important nuclear energy material, the evolution of the physical properties of uranium under extreme conditions is still unclear. Herein, we trained an accurate machine learning force field on alpha-U and predicted the lattice dynamics and elastic properties at high pressures and temperatures. The force field agrees well with the ab initio molecular dynamics (AIMD) and experimental results, and it exhibits higher accuracy than classical potentials. Based on the high-temperature lattice dynamics study, we first present the temperature-pressure range in which the Kohn anomalous behavior of the $Σ$4 optical mode exists. Phonon spectral function analysis showed that the phonon anharmonicity of alpha-U is very weak. We predict that the single-crystal elastic constants C44, C55, C66, polycrystalline modulus (E,G), and polycrystalline sound velocity ($C_L$,$C_S$) have strong heating-induced softening. All the elastic moduli exhibited compression-induced hardening behavior. The Poisson's ratio shows that it is difficult to compress alpha-U at high pressures and temperatures. Moreover, we observed that the material becomes substantially more anisotropic at high pressures and temperatures. The accurate predictions of alpha-U demonstrate the reliability of the method. This versatile method facilitates the study of other complex metallic materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-04T04:42:21Z</published>
+    <arxiv:comment>21 pages, 9 figures, with Supplementary Material</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Journal of Nuclear Materials 572, 154029 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Hao Wang</name>
+    </author>
+    <author>
+      <name>Xiao-Long Pan</name>
+    </author>
+    <author>
+      <name>Yu-Feng Wang</name>
+    </author>
+    <author>
+      <name>Xiang-Rong Chen</name>
+    </author>
+    <author>
+      <name>Yi-Xian Wang</name>
+    </author>
+    <author>
+      <name>Hua Y. Geng</name>
+    </author>
+    <arxiv:doi>10.1016/j.jnucmat.2022.154029</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jnucmat.2022.154029" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.09010v1</id>
+    <title>Short-range order and its impacts on the BCC NbMoTaW multi-principal element alloy by the machine-learning potential</title>
+    <updated>2022-07-19T01:28:40Z</updated>
+    <link href="https://arxiv.org/abs/2207.09010v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.09010v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We employ a machine-learning force field, trained by a neural network (NN) with bispectrum coefficients as descriptors, to investigate the short-range order (SRO) influences on the BCC NbMoTaW alloy strengthening mechanism. The NN interatomic potential provides a transferable force field with density functional theory accuracy. This novel NN potential is applied to elucidate the SRO effects on the elasticity, vibrational modes, plasticity, and strength in the NbMoTaW multi-principal element alloy (MPEA). The results show the strong attraction among Mo-Ta pairs forming the local ordered B2 structures, which could be tuned via temperature and improved by Nb content. SRO increases the elastic constants and high-frequency phonon modes as well as introduces extra lattice friction of dislocation motion. This approach enables a rapid compositional screening, paves the way for computation-guided materials design of new MPEAs with better performance, and opens avenues for tuning the mechanical properties by processing optimization.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-19T01:28:40Z</published>
+    <arxiv:comment>17 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Acta Mater., 255, 119041, 2023</arxiv:journal_ref>
+    <author>
+      <name>Pedro A. Santos-Florez</name>
+    </author>
+    <author>
+      <name>Shi-Cheng Dai</name>
+    </author>
+    <author>
+      <name>Yi Yao</name>
+    </author>
+    <author>
+      <name>Howard Yanxon</name>
+    </author>
+    <author>
+      <name>Lin Li</name>
+    </author>
+    <author>
+      <name>Yun-Jiang Wang</name>
+    </author>
+    <author>
+      <name>Qiang Zhu</name>
+    </author>
+    <author>
+      <name>Xiao-xiang Yu</name>
+    </author>
+    <arxiv:doi>10.1016/j.actamat.2023.119041</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.actamat.2023.119041" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.13327v2</id>
+    <title>A deep potential model with long-range electrostatic interactions</title>
+    <updated>2022-02-17T01:45:00Z</updated>
+    <link href="https://arxiv.org/abs/2112.13327v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.13327v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning models for the potential energy of multi-atomic systems, such as the deep potential (DP) model, make possible molecular simulations with the accuracy of quantum mechanical density functional theory, at a cost only moderately higher than that of empirical force fields. However, the majority of these models lack explicit long-range interactions and fail to describe properties that derive from the Coulombic tail of the forces. To overcome this limitation we extend the DP model by approximating the long-range electrostatic interaction between ions (nuclei+core electrons) and valence electrons with that of distributions of spherical Gaussian charges located at ionic and electronic sites. The latter are rigorously defined in terms of the centers of the maximally localized Wannier distributions, whose dependence on the local atomic environment is modeled accurately by a deep neural network. In the deep potential long-range (DPLR) model, the electrostatic energy of the Gaussian charge system is added to short-range interactions that are represented as in the standard DP model. The resulting potential energy surface is smooth and possesses analytical forces and virial. Missing effects in the standard DP scheme are recovered, improving on accuracy and predictive power. By including long-range electrostatics, DPLR correctly extrapolates to large systems the potential energy surface learned from quantum mechanical calculations on smaller systems. We illustrate the approach with three examples, the potential energy profile of the water dimer, the free energy of interaction of a water molecule with a liquid water slab, and the phonon dispersion curves of the NaCl crystal.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-26T07:08:55Z</published>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Linfeng Zhang</name>
+    </author>
+    <author>
+      <name>Han Wang</name>
+    </author>
+    <author>
+      <name>Maria Carolina Muniz</name>
+    </author>
+    <author>
+      <name>Athanassios Z. Panagiotopoulos</name>
+    </author>
+    <author>
+      <name>Roberto Car</name>
+    </author>
+    <author>
+      <name>Weinan E</name>
+    </author>
+    <arxiv:doi>10.1063/5.0083669</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0083669" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.06099v4</id>
+    <title>Anharmonic lattice dynamics in large thermodynamic ensembles with machine-learning force fields: CsPbBr$_{3}$ a phonon-liquid with Cs rattlers</title>
+    <updated>2021-12-14T09:28:41Z</updated>
+    <link href="https://arxiv.org/abs/2101.06099v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.06099v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The phonon dispersion relations of crystal lattices can often be well-described with the harmonic approximation. However, when the potential energy landscape exhibits more anharmonicity, for instance, in case of a weakly bonded crystal or when the temperature is raised, the approximation fails to capture all crystal lattice dynamics properly. Phonon-phonon scattering mechanisms become important and limit the phonon lifetimes. We take a novel approach and simulate the phonon dispersion of a complex dynamic solid at elevated temperatures with Machine-Learning Force Fields of near-first-principles accuracy. Through large-scale molecular dynamics simulations the projected velocity autocorrelation function (PVACF) is obtained. We apply this approach to the inorganic perovskite CsPbBr$_{3}$. Imaginary modes in the harmonic picture of this perovskite are absent in the PVACF, indicating a dynamic stabilization of the crystal. The anharmonic nature of the potential makes a decoupling of the system into a weakly interacting phonon gas impossible. The phonon spectra of CsPbBr$_{3}$ show the characteristics of a phonon liquid. Rattling motions of the Cs$^{+}$ cations are studied by self-correlation functions and are shown to be nearly dispersionless motions of the cations with a frequency of $\sim$0.8THz within the lead-bromide framework.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.other" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-15T13:33:17Z</published>
+    <arxiv:comment>16 pages , 13 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jonathan Lahnsteiner</name>
+    </author>
+    <author>
+      <name>Menno Bokdam</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.105.024302</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.105.024302" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.16082v1</id>
+    <title>Deep Learning of Accurate Force Field of Ferroelectric HfO$_2$</title>
+    <updated>2020-10-30T05:21:20Z</updated>
+    <link href="https://arxiv.org/abs/2010.16082v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.16082v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The discovery of ferroelectricity in HfO$_2$-based thin films opens up new opportunities for using this silicon-compatible ferroelectric to realize low-power logic circuits and high-density non-volatile memories. The functional performances of ferroelectrics are intimately related to their dynamic responses to external stimuli such as electric fields at finite temperatures. Molecular dynamics is an ideal technique for investigating dynamical processes on large length and time scales, though its applications to new materials is often hindered by the limited availability and accuracy of classical force fields. Here we present a deep neural network-based interatomic force field of HfO$_2$ learned from {\em ab initio} data using a concurrent learning procedure. The model potential is able to predict structural properties such as elastic constants, equation of states, phonon dispersion relationships, and phase transition barriers of various hafnia polymorphs with accuracy comparable with density functional theory calculations. The validity of this model potential is further confirmed by the reproduction of experimental sequences of temperature-driven ferroelectric-paraelectric phase transitions of HfO$_2$ with isobaric-isothermal ensemble molecular dynamics simulations. We suggest a general approach to extend the model potential of HfO$_2$ to related material systems including dopants and defects.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-30T05:21:20Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Phys. Rev. B 103, 024108 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Jing Wu</name>
+    </author>
+    <author>
+      <name>Yuzhi Zhang</name>
+    </author>
+    <author>
+      <name>Linfeng Zhang</name>
+    </author>
+    <author>
+      <name>Shi Liu</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.103.024108</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.103.024108" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.06763v1</id>
+    <title>Optimization and Validation of a Deep Learning CuZr Atomistic Potential: Robust Applications for Crystalline and Amorphous Phases with near-DFT Accuracy</title>
+    <updated>2020-02-17T04:15:31Z</updated>
+    <link href="https://arxiv.org/abs/2002.06763v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.06763v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that a deep-learning neural network potential (DP) based on density functional theory (DFT) calculations can well describe Cu-Zr materials, an example of a binary alloy system that can coexist in several ordered intermetallics and as an amorphous phase. The complex phase diagram for Cu-Zr makes it a challenging system for traditional atomistic force-fields that fail to describe well the different properties and phases. Instead, we show that a DP approach using a large database with ~300k configurations can render results generally on par with DFT. The training set includes configurations of pristine and bulk elementary metals and intermetallics in the liquid and solid phases in addition to slab and amorphous configurations. The DP model was validated by comparing bulk properties such as lattice constants, elastic constants, bulk moduli, phonon spectra, surface energies to DFT values for identical structures. Further, we contrast the DP results with values obtained using well-established two embedded atom method potentials. Overall, our DP potential provides near DFT accuracy for the different Cu-Zr phases but with a fraction of its computational cost, thus enabling accurate computations of realistic atomistic models especially for the amorphous phase.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-17T04:15:31Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>J. Chem. Phys. 152, 154701 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Christopher M. Andolina</name>
+    </author>
+    <author>
+      <name>Philip Williamson</name>
+    </author>
+    <author>
+      <name>Wissam A. Saidi</name>
+    </author>
+    <arxiv:doi>10.1063/5.0005347</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0005347" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1911.03307v1</id>
+    <title>Pushing the limits of atomistic simulations towards ultra-high temperature: a machine-learning force field for ZrB2</title>
+    <updated>2019-11-08T15:05:00Z</updated>
+    <link href="https://arxiv.org/abs/1911.03307v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1911.03307v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Determining thermal and physical quantities across a broad temperature domain, especially up to the ultra-high temperature region, is a formidable theoretical and experimental challenge. At the same time it is essential for understanding the performance of ultra-high temperature ceramic (UHTC) materials. Here we present the development of a machine-learning force field for ZrB2, one of the primary members of the UHTC family with a complex bonding structure. The force field exhibits chemistry accuracy for both energies and forces and can reproduce structural, elastic and phonon properties, including thermal expansion and thermal transport. A thorough comparison with available empirical potentials shows that our force field outperforms the competitors. Most importantly, its effectiveness is extended from room temperature to the ultra-high temperature region (up to ~ 2,500 K), where measurements are very difficult, costly and some time impossible. Our work demonstrates that machine-learning force fields can be used for simulations of materials in a harsh environment, where no experimental tools are available, but crucial for a number of engineering applications, such as in aerospace, aviation and nuclear.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-11-08T15:05:00Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yanhui Zhang</name>
+    </author>
+    <author>
+      <name>Alessandro Lunghi</name>
+    </author>
+    <author>
+      <name>Stefano Sanvito</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1901.08749v2</id>
+    <title>An Electrostatic Spectral Neighbor Analysis Potential (eSNAP) for Lithium Nitride</title>
+    <updated>2019-04-29T17:56:09Z</updated>
+    <link href="https://arxiv.org/abs/1901.08749v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.08749v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine-learned interatomic potentials based on local environment descriptors represent a transformative leap over traditional potentials based on rigid functional forms in terms of prediction accuracy. However, a challenge in their application to ionic systems is the treatment of long-ranged electrostatics. Here, we present a highly accurate electrostatic Spectral Neighbor Analysis Potential (eSNAP) for ionic $α$-\ce{Li3N}, a prototypical lithium superionic conductor of interest as a solid electrolyte or coating for rechargeable lithium-ion batteries. We show that the optimized eSNAP model substantially outperforms traditional Coulomb-Buckingham potential in the prediction of energies and forces, as well as various properties, such as lattice constants, elastic constants and phonon dispersion curves. We also demonstrate the application of eSNAP in long-time, large-scale Li diffusion studies in \ce{Li3N}, providing atomistic insights into measures of concerted ionic motion (e.g., the Haven ratio) and grain boundary diffusion. This work aims at providing an approach to developing quantum-accurate force fields for multi-component ionic systems under the SNAP formalism, enabling large scale atomistic simulations for such systems.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-25T06:18:52Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Zhi Deng</name>
+    </author>
+    <author>
+      <name>Chi Chen</name>
+    </author>
+    <author>
+      <name>Xiang-Guo Li</name>
+    </author>
+    <author>
+      <name>Shyue Ping Ong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1711.00249v2</id>
+    <title>Atomistic potential for graphene and other sp$^2$ carbon systems</title>
+    <updated>2017-11-27T08:45:51Z</updated>
+    <link href="https://arxiv.org/abs/1711.00249v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1711.00249v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a torsional force field for sp$^2$ carbon to augment an in-plane atomistic potential of a previous work (Kalosakas et al, J. Appl. Phys. {\bf 113}, 134307 (2013)) so that it is applicable to out-of-plane deformations of graphene and related carbon materials. The introduced force field is fit to reproduce DFT calculation data of appropriately chosen structures. The aim is to create a force field that is as simple as possible so it can be efficient for large scale atomistic simulations of various sp$^2$ carbon structures without significant loss of accuracy. We show that the complete proposed potential reproduces characteristic properties of fullerenes and carbon nanotubes. In addition, it reproduces very accurately the out-of-plane ZA and ZO modes of graphene's phonon dispersion as well as all phonons with frequencies up to 1000~cm$^{-1}$.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-11-01T08:34:13Z</published>
+    <arxiv:comment>9 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Phys. Chem. Chem. Phys. 19, 30925 (2017)</arxiv:journal_ref>
+    <author>
+      <name>Zacharias G. Fthenakis</name>
+    </author>
+    <author>
+      <name>George Kalosakas</name>
+    </author>
+    <author>
+      <name>Georgios D. Chatzidakis</name>
+    </author>
+    <author>
+      <name>Costas Galiotis</name>
+    </author>
+    <author>
+      <name>Konstantinos Papagelis</name>
+    </author>
+    <author>
+      <name>Nektarios N. Lathiotakis</name>
+    </author>
+    <arxiv:doi>10.1039/C7CP06362H</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1039/C7CP06362H" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,682 @@
+                                                    Rethinking Atrous Convolution for Semantic Image Segmentation
+
+                                                          Liang-Chieh Chen         George Papandreou Florian Schroff Hartwig Adam
+                                                                                              Google Inc.
+                                                                            {lcchen, gpapan, fschroff, hadam}@google.com
+arXiv:1706.05587v3 [cs.CV] 5 Dec 2017
+
+
+
+
+                                                                  Abstract                                                 Conv                   Conv                 Conv
+                                                                                                                        kernel: 3x3            kernel: 3x3          kernel: 3x3
+                                                                                                                          rate: 1                rate: 6             rate: 24
+                                           In this work, we revisit atrous convolution, a powerful tool                                                                rate = 24
+                                        to explicitly adjust filter’s field-of-view as well as control the                                       rate = 6
+                                                                                                                          rate = 1
+                                        resolution of feature responses computed by Deep Convolu-
+                                        tional Neural Networks, in the application of semantic image
+                                        segmentation. To handle the problem of segmenting objects
+                                        at multiple scales, we design modules which employ atrous
+                                        convolution in cascade or in parallel to capture multi-scale                   Feature map           Feature map          Feature map
+
+                                        context by adopting multiple atrous rates. Furthermore, we               Figure 1. Atrous convolution with kernel size 3 × 3 and different
+                                        propose to augment our previously proposed Atrous Spatial                rates. Standard convolution corresponds to atrous convolution
+                                        Pyramid Pooling module, which probes convolutional fea-                  with rate = 1. Employing large value of atrous rate enlarges the
+                                        tures at multiple scales, with image-level features encoding             model’s field-of-view, enabling object encoding at multiple scales.
+                                        global context and further boost performance. We also elab-
+                                        orate on implementation details and share our experience
+                                                                                                                 responses are computed within DCNNs without requiring
+                                        on training our system. The proposed ‘DeepLabv3’ system
+                                                                                                                 learning extra parameters.
+                                        significantly improves over our previous DeepLab versions
+                                        without DenseCRF post-processing and attains comparable                      Another difficulty comes from the existence of objects
+                                        performance with other state-of-art models on the PASCAL                 at multiple scales. Several methods have been proposed to
+                                        VOC 2012 semantic image segmentation benchmark.                          handle the problem and we mainly consider four categories
+                                                                                                                 in this work, as illustrated in Fig. 2. First, the DCNN is
+                                                                                                                 applied to an image pyramid to extract features for each
+                                                                                                                 scale input [22, 19, 69, 55, 12, 11] where objects at different
+                                        1. Introduction
+                                                                                                                 scales become prominent at different feature maps. Sec-
+                                            For the task of semantic segmentation [20, 63, 14, 97, 7],           ond, the encoder-decoder structure [3, 71, 25, 54, 70, 68, 39]
+                                        we consider two challenges in applying Deep Convolutional                exploits multi-scale features from the encoder part and re-
+                                        Neural Networks (DCNNs) [50]. The first one is the reduced               covers the spatial resolution from the decoder part. Third,
+                                        feature resolution caused by consecutive pooling operations              extra modules are cascaded on top of the original network for
+                                        or convolution striding, which allows DCNNs to learn in-                 capturing long range information. In particular, DenseCRF
+                                        creasingly abstract feature representations. However, this               [45] is employed to encode pixel-level pairwise similarities
+                                        invariance to local image transformation may impede dense                [10, 96, 55, 73], while [59, 90] develop several extra convo-
+                                        prediction tasks, where detailed spatial information is de-              lutional layers in cascade to gradually capture long range
+                                        sired. To overcome this problem, we advocate the use of                  context. Fourth, spatial pyramid pooling [11, 95] probes
+                                        atrous convolution [36, 26, 74, 66], which has been shown                an incoming feature map with filters or pooling operations
+                                        to be effective for semantic image segmentation [10, 90, 11].            at multiple rates and multiple effective field-of-views, thus
+                                        Atrous convolution, also known as dilated convolution, al-               capturing objects at multiple scales.
+                                        lows us to repurpose ImageNet [72] pretrained networks                       In this work, we revisit applying atrous convolution,
+                                        to extract denser feature maps by removing the downsam-                  which allows us to effectively enlarge the field of view of
+                                        pling operations from the last few layers and upsampling                 filters to incorporate multi-scale context, in the framework of
+                                        the corresponding filter kernels, equivalent to inserting holes          both cascaded modules and spatial pyramid pooling. In par-
+                                        (‘trous’ in French) between filter weights. With atrous convo-           ticular, our proposed module consists of atrous convolution
+                                        lution, one is able to control the resolution at which feature           with various rates and batch normalization layers which we
+
+
+                                                                                                             1
+                                                                             Small Resolution
+
+
+                                                             2x up
+                    Merge
+                                                                                                                      Spatial Pyramid Pooling
+                                                             2x up
+                                                                                              Atrous
+                                                                                            Convolution
+                                                             2x up
+
+
+
+
+    Image Scale 1       Image Scale 2    Image                                   Image                    Image               Image
+
+     (a) Image Pyramid                     (b) Encoder-Decoder                (c) Deeper w. Atrous Convolution    (d) Spatial Pyramid Pooling
+                                        Figure 2. Alternative architectures to capture multi-scale context.
+
+
+found important to be trained as well. We experiment with                  the encoder where the spatial dimension of feature maps
+laying out the modules in cascade or in parallel (specifically,            is gradually reduced and thus longer range information is
+Atrous Spatial Pyramid Pooling (ASPP) method [11]). We                     more easily captured in the deeper encoder output, and (b)
+discuss an important practical issue when applying a 3 × 3                 the decoder where object details and spatial dimension are
+atrous convolution with an extremely large rate, which fails               gradually recovered. For example, [60, 64] employ deconvo-
+to capture long range information due to image boundary                    lution [92] to learn the upsampling of low resolution feature
+effects, effectively simply degenerating to 1 × 1 convolu-                 responses. SegNet [3] reuses the pooling indices from the
+tion, and propose to incorporate image-level features into                 encoder and learn extra convolutional layers to densify the
+the ASPP module. Furthermore, we elaborate on imple-                       feature responses, while U-Net [71] adds skip connections
+mentation details and share experience on training the pro-                from the encoder features to the corresponding decoder acti-
+posed models, including a simple yet effective bootstrapping               vations, and [25] employs a Laplacian pyramid reconstruc-
+method for handling rare and finely annotated objects. In the              tion network. More recently, RefineNet [54] and [70, 68, 39]
+end, our proposed model, ‘DeepLabv3’ improves over our                     have demonstrated the effectiveness of models based on
+previous works [10, 11] and attains performance of 85.7%                   encoder-decoder structure on several semantic segmentation
+on the PASCAL VOC 2012 test set without DenseCRF post-                     benchmarks. This type of model is also explored in the
+processing.                                                                context of object detection [56, 77].
+                                                                              Context module: This model contains extra modules
+2. Related Work                                                            laid out in cascade to encode long-range context. One ef-
+    It has been shown that global features or contextual in-               fective method is to incorporate DenseCRF [45] (with effi-
+teractions [33, 76, 43, 48, 27, 89] are beneficial in cor-                 cient high-dimensional filtering algorithms [2]) to DCNNs
+rectly classifying pixels for semantic segmentation. In                    [10, 11]. Furthermore, [96, 55, 73] propose to jointly train
+this work, we discuss four types of Fully Convolutional                    both the CRF and DCNN components, while [59, 90] em-
+Networks (FCNs) [74, 60] (see Fig. 2 for illustration)                     ploy several extra convolutional layers on top of the belief
+that exploit context information for semantic segmentation                 maps of DCNNs (belief maps are the final DCNN feature
+[30, 15, 62, 9, 96, 55, 65, 73, 87].                                       maps that contain output channels equal to the number of
+    Image pyramid: The same model, typically with shared                   predicted classes) to capture context information. Recently,
+weights, is applied to multi-scale inputs. Feature responses               [41] proposes to learn a general and sparse high-dimensional
+from the small scale inputs encode the long-range context,                 convolution (bilateral convolution), and [82, 8] combine
+while the large scale inputs preserve the small object details.            Gaussian Conditional Random Fields and DCNNs for se-
+Typical examples include Farabet et al. [22] who transform                 mantic segmentation.
+the input image through a Laplacian pyramid, feed each                         Spatial pyramid pooling: This model employs spatial
+scale input to a DCNN and merge the feature maps from                      pyramid pooling [28, 49] to capture context at several ranges.
+all the scales. [19, 69] apply multi-scale inputs sequentially             The image-level features are exploited in ParseNet [58] for
+from coarse-to-fine, while [55, 12, 11] directly resize the                global context information. DeepLabv2 [11] proposes atrous
+input for several scales and fuse the features from all the                spatial pyramid pooling (ASPP), where parallel atrous con-
+scales. The main drawback of this type of models is that it                volution layers with different rates capture multi-scale infor-
+does not scale well for larger/deeper DCNNs (e.g., networks                mation. Recently, Pyramid Scene Parsing Net (PSP) [95]
+like [32, 91, 86]) due to limited GPU memory and thus it is                performs spatial pooling at several grid scales and demon-
+usually applied during the inference stage [16].                           strates outstanding performance on several semantic segmen-
+    Encoder-decoder: This model consists of two parts: (a)                 tation benchmarks. There are other methods based on LSTM
+[35] to aggregate global context [53, 6, 88]. Spatial pyramid
+pooling has also been applied in object detection [31].                                    X
+   In this work, we mainly explore atrous convolution                             y[i] =       x[i + r · k]w[k]              (1)
+[36, 26, 74, 66, 10, 90, 11] as a context module and tool                                  k
+
+for spatial pyramid pooling. Our proposed framework is
+general in the sense that it could be applied to any network.     where the atrous rate r corresponds to the stride with which
+To be concrete, we duplicate several copies of the original       we sample the input signal, which is equivalent to convolving
+last block in ResNet [32] and arrange them in cascade, and        the input x with upsampled filters produced by inserting
+also revisit the ASPP module [11] which contains several          r − 1 zeros between two consecutive filter values along each
+atrous convolutions in parallel. Note that our cascaded mod-      spatial dimension (hence the name atrous convolution where
+ules are applied directly on the feature maps instead of belief   the French word trous means holes in English). Standard
+maps. For the proposed modules, we experimentally find it         convolution is a special case for rate r = 1, and atrous
+important to train with batch normalization [38]. To further      convolution allows us to adaptively modify filter’s field-of-
+capture global context, we propose to augment ASPP with           view by changing the rate value. See Fig. 1 for illustration.
+image-level features, similar to [58, 95].                            Atrous convolution also allows us to explicitly control
+   Atrous convolution: Models based on atrous convolu-            how densely to compute feature responses in fully convolu-
+tion have been actively explored for semantic segmentation.       tional networks. Here, we denote by output stride the ratio
+For example, [85] experiments with the effect of modify-          of input image spatial resolution to final output resolution.
+ing atrous rates for capturing long-range information, [84]       For the DCNNs [47, 78, 32] deployed for the task of image
+adopts hybrid atrous rates within the last two blocks of          classification, the final feature responses (before fully con-
+ResNet, while [18] further proposes to learn the deformable       nected layers or global pooling) is 32 times smaller than the
+convolution which samples the input features with learned         input image dimension, and thus output stride = 32. If one
+offset, generalizing atrous convolution. To further improve       would like to double the spatial density of computed fea-
+the segmentation model accuracy, [83] exploits image cap-         ture responses in the DCNNs (i.e., output stride = 16), the
+tions, [40] utilizes video motion, and [44] incorporates depth    stride of last pooling or convolutional layer that decreases
+information. Besides, atrous convolution has been applied         resolution is set to 1 to avoid signal decimation. Then, all
+to object detection by [66, 17, 37].                              subsequent convolutional layers are replaced with atrous
+                                                                  convolutional layers having rate r = 2. This allows us to
+3. Methods                                                        extract denser feature responses without requiring learning
+   In this section, we review how atrous convolution is ap-       any extra parameters. Please refer to [11] for more details.
+plied to extract dense features for semantic segmentation.
+We then discuss the proposed modules with atrous convolu-         3.2. Going Deeper with Atrous Convolution
+tion modules employed in cascade or in parallel.
+                                                                      We first explore designing modules with atrous convolu-
+3.1. Atrous Convolution for Dense Feature Extrac-                 tion laid out in cascade. To be concrete, we duplicate several
+      tion                                                        copies of the last ResNet block, denoted as block4 in Fig. 3,
+     Deep Convolutional Neural Networks (DCNNs) [50] de-          and arrange them in cascade. There are three 3 × 3 convolu-
+ployed in fully convolutional fashion [74, 60] have shown to      tions in those blocks, and the last convolution contains stride
+be effective for the task of semantic segmentation. However,      2 except the one in last block, similar to original ResNet.
+the repeated combination of max-pooling and striding at           The motivation behind this model is that the introduced strid-
+consecutive layers of these networks significantly reduces        ing makes it easy to capture long range information in the
+the spatial resolution of the resulting feature maps, typically   deeper blocks. For example, the whole image feature could
+by a factor of 32 across each direction in recent DCNNs           be summarized in the last small resolution feature map, as
+[47, 78, 32]. Deconvolutional layers (or transposed convolu-      illustrated in Fig. 3 (a). However, we discover that the con-
+tion) [92, 60, 64, 3, 71, 68] have been employed to recover       secutive striding is harmful for semantic segmentation (see
+the spatial resolution. Instead, we advocate the use of ‘atrous   Tab. 1 in Sec. 4) since detail information is decimated, and
+convolution’, originally developed for the efficient computa-     thus we apply atrous convolution with rates determined by
+tion of the undecimated wavelet transform in the “algorithme      the desired output stride value, as shown in Fig. 3 (b) where
+à trous” scheme of [36] and used before in the DCNN context      output stride = 16.
+by [26, 74, 66].                                                      In this proposed model, we experiment with cascaded
+     Consider two-dimensional signals, for each location i on     ResNet blocks up to block7 (i.e., extra block5, block6,
+the output y and a filter w, atrous convolution is applied        block7 as replicas of block4), which has output stride = 256
+over the input feature map x:                                     if no atrous convolution is applied.
+                 Conv1
+                   +
+                 Pool1           Block1         Block2        Block3            Block4                            Block5            Block6             Block7
+
+
+
+                  output
+     Image        stride   4               8             16              32                                 64              128               256                256
+
+                                               (a) Going deeper without atrous convolution.
+                 Conv1                                                 rate=2                     rate=4                   rate=8            rate=16
+                   +
+                 Pool1           Block1         Block2        Block3            Block4                            Block5            Block6             Block7
+
+
+
+                  output
+     Image        stride   4               8             16              16                                 16              16                 16                16
+
+        (b) Going deeper with atrous convolution. Atrous convolution with rate > 1 is applied after block3 when output stride = 16.
+                                      Figure 3. Cascaded modules without and with atrous convolution.
+
+
+3.2.1     Multi-grid Method                                                                                  1
+
+Motivated by multi-grid methods which employ a hierar-                                                      0.8
+
+
+
+
+                                                                                         Normalized count
+chy of grids of different sizes [4, 81, 5, 67] and following
+[84, 18], we adopt different atrous rates within block4 to                                                  0.6
+block7 in the proposed model. In particular, we define as
+                                                                                                            0.4
+Multi Grid = (r1 , r2 , r3 ) the unit rates for the three convo-
+lutional layers within block4 to block7. The final atrous rate                                                                           1 valid weight
+                                                                                                            0.2
+                                                                                                                                         4 valid weights
+for the convolutional layer is equal to the multiplication of                                                                            9 valid weights
+the unit rate and the corresponding rate. For example, when                                                  0
+                                                                                                              0        20          40           60          80
+output stride = 16 and Multi Grid = (1, 2, 4), the three                                                                       atrous rate
+convolutions will have rates = 2 · (1, 2, 4) = (2, 4, 8) in               Figure 4. Normalized counts of valid weights with a 3 × 3 filter
+the block4, respectively.                                                 on a 65 × 65 feature map as atrous rate varies. When atrous rate
+                                                                          is small, all the 9 filter weights are applied to most of the valid
+3.3. Atrous Spatial Pyramid Pooling                                       region on feature map, while atrous rate gets larger, the 3 × 3 filter
+                                                                          degenerates to a 1 × 1 filter since only the center weight is effective.
+    We revisit the Atrous Spatial Pyramid Pooling proposed
+in [11], where four parallel atrous convolutions with different
+atrous rates are applied on top of the feature map. ASPP is               pooling on the last feature map of the model, feed the re-
+inspired by the success of spatial pyramid pooling [28, 49,               sulting image-level features to a 1 × 1 convolution with 256
+31] which showed that it is effective to resample features                filters (and batch normalization [38]), and then bilinearly
+at different scales for accurately and efficiently classifying            upsample the feature to the desired spatial dimension. In the
+regions of an arbitrary scale. Different from [11], we include            end, our improved ASPP consists of (a) one 1×1 convolution
+batch normalization within ASPP.                                          and three 3 × 3 convolutions with rates = (6, 12, 18) when
+    ASPP with different atrous rates effectively captures                 output stride = 16 (all with 256 filters and batch normaliza-
+multi-scale information. However, we discover that as the                 tion), and (b) the image-level features, as shown in Fig. 5.
+sampling rate becomes larger, the number of valid filter                  Note that the rates are doubled when output stride = 8. The
+weights (i.e., the weights that are applied to the valid fea-             resulting features from all the branches are then concate-
+ture region, instead of padded zeros) becomes smaller. This               nated and pass through another 1 × 1 convolution (also with
+effect is illustrated in Fig. 4 when applying a 3 × 3 filter              256 filters and batch normalization) before the final 1 × 1
+to a 65 × 65 feature map with different atrous rates. In the              convolution which generates the final logits.
+extreme case where the rate value is close to the feature map
+size, the 3 × 3 filter, instead of capturing the whole image              4. Experimental Evaluation
+context, degenerates to a simple 1 × 1 filter since only the
+center filter weight is effective.                                           We adapt the ImageNet-pretrained [72] ResNet [32] to
+    To overcome this problem and incorporate global context               the semantic segmentation by applying atrous convolution
+information to the model, we adopt image-level features,                  to extract dense features. Recall that output stride is defined
+similar to [58, 95]. Specifically, we apply global average                as the ratio of input image spatial resolution to final out-
+                                                                                      (a) Atrous Spatial
+                                                                                       Pyramid Pooling
+                                                                                                1x1 Conv
+              Conv1                                                 rate=2                      3x3 Conv     Concat
+                                                                                                 rate=6
+                +                                                                                               +
+              Pool1           Block1         Block2        Block3            Block4             3x3 Conv    1x1 Conv
+                                                                                                 rate=12
+
+
+                                                                                                3x3 Conv
+               output                                                                            rate=18
+     Image     stride   4               8             16             16                                                 16
+                                                                                      (b) Image Pooling
+
+
+                   Figure 5. Parallel modules with atrous convolution (ASPP), augmented with image-level features.
+
+
+put resolution. For example, when output stride = 8, the                  output stride     8         16      32        64     128     256
+last two blocks (block3 and block4 in our notation) in the                    mIOU        75.18     73.88    70.06     59.99   42.34   20.29
+original ResNet contains atrous convolution with rate = 2             Table 1. Going deeper with atrous convolution when employing
+and rate = 4 respectively. Our implementation is built on             ResNet-50 with block7 and different output stride. Adopting
+TensorFlow [1].                                                       output stride = 8 leads to better performance at the cost of more
+    We evaluate the proposed models on the PASCAL VOC                 memory usage.
+2012 semantic segmentation benchmark [20] which con-
+tains 20 foreground object classes and one background class.
+The original dataset contains 1, 464 (train), 1, 449 (val), and       convolution allows us to control output stride value at dif-
+1, 456 (test) pixel-level labeled images for training, valida-        ferent training stages without requiring learning extra model
+tion, and testing, respectively. The dataset is augmented by          parameters. Also note that training with output stride = 16
+the extra annotations provided by [29], resulting in 10, 582          is several times faster than output stride = 8 since the inter-
+(trainaug) training images. The performance is measured in            mediate feature maps are spatially four times smaller, but
+terms of pixel intersection-over-union (IOU) averaged across          at a sacrifice of accuracy since output stride = 16 provides
+the 21 classes.                                                       coarser feature maps.
+                                                                          Upsampling logits: In our previous works [10, 11], the
+4.1. Training Protocol                                                target groundtruths are downsampled by 8 during training
+    In this subsection, we discuss details of our training pro-       when output stride = 8. We find it important to keep the
+tocol.                                                                groundtruths intact and instead upsample the final logits,
+    Learning rate policy: Similar to [58, 11], we employ a            since downsampling the groundtruths removes the fine anno-
+“poly” learning rate policy where the initial learning rate is        tations resulting in no back-propagation of details.
+multiplied by (1 − max  iter     power                                    Data augmentation: We apply data augmentation by
+                           iter )      with power = 0.9.
+    Crop size: Following the original training protocol [10,          randomly scaling the input images (from 0.5 to 2.0) and
+11], patches are cropped from the image during training.              randomly left-right flipping during training.
+For atrous convolution with large rates to be effective, large
+                                                                      4.2. Going Deeper with Atrous Convolution
+crop size is required; otherwise, the filter weights with large
+atrous rate are mostly applied to the padded zero region. We             We first experiment with building more blocks with atrous
+thus employ crop size to be 513 during both training and test         convolution in cascade.
+on PASCAL VOC 2012 dataset.                                              ResNet-50: In Tab. 1, we experiment with the effect of
+    Batch normalization: Our added modules on top of                  output stride when employing ResNet-50 with block7 (i.e.,
+ResNet all include batch normalization parameters [38],               extra block5, block6, and block7). As shown in the table, in
+which we found important to be trained as well. Since large           the case of output stride = 256 (i.e., no atrous convolution
+batch size is required to train batch normalization parame-           at all), the performance is much worse than the others due
+ters, we employ output stride = 16 and compute the batch              to the severe signal decimation. When output stride gets
+normalization statistics with a batch size of 16. The batch           larger and apply atrous convolution correspondingly, the
+normalization parameters are trained with decay = 0.9997.             performance improves from 20.29% to 75.18%, showing that
+After training on the trainaug set with 30K iterations and ini-       atrous convolution is essential when building more blocks
+tial learning rate = 0.007, we then freeze batch normalization        cascadedly for semantic segmentation.
+parameters, employ output stride = 8, and train on the offi-             ResNet-50 vs. ResNet-101: We replace ResNet-50 with
+cial PASCAL VOC 2012 trainval set for another 30K itera-              deeper network ResNet-101 and change the number of cas-
+tions and smaller base learning rate = 0.001. Note that atrous        caded blocks. As shown in Tab. 2, the performance improves
+      Network        block4     block5    block6     block7                  Method             OS=16         OS=8           MS        Flip       mIOU
+    ResNet-50        64.81      72.14      74.29      73.88               block7 +                   X                                             76.66
+    ResNet-101       68.39      73.21      75.34      75.76              MG(1, 2, 1)                             X                                 78.05
+Table 2. Going deeper with atrous convolution when employ-                                                       X            X                    78.93
+ing ResNet-50 and ResNet-101 with different number of cas-                                                       X            X          X         79.35
+caded blocks at output stride = 16. Network structures ‘block4’,     Table 4. Inference strategy on the val set. MG: Multi-grid. OS:
+‘block5’, ‘block6’, and ‘block7’ add extra 0, 1, 2, 3 cascaded       output stride. MS: Multi-scale inputs during test. Flip: Adding
+modules respectively. The performance is generally improved by       left-right flipped inputs.
+adopting more cascaded blocks.
+                                                                                  Multi-Grid                           ASPP                   Image
+                                                                      (1, 1, 1)    (1, 2, 1) (1, 2, 4)   (6, 12, 18)     (6, 12, 18, 24)     Pooling   mIOU
+     Multi-Grid     block4     block5     block6     block7              X                                   X                                         75.36
+                                                                                      X                      X                                         75.93
+      (1, 1, 1)      68.39      73.21     75.34      75.76                                       X           X                                         76.58
+      (1, 2, 1)      70.23      75.67     76.09      76.66                                       X                             X                       76.46
+                                                                                                 X           X                                 X       77.21
+      (1, 2, 3)      73.14      75.78     75.96      76.11
+                                                                     Table 5. Atrous Spatial Pyramid Pooling with multi-grid method
+      (1, 2, 4)      73.45      75.74     75.85      76.02
+                                                                     and image-level features at output stride = 16.
+      (2, 2, 2)      71.45      74.30     74.70      74.62
+Table 3. Employing multi-grid method for ResNet-101 with dif-
+                                                                             Method              OS=16      OS=8         MS       Flip     COCO        mIOU
+ferent number of cascaded blocks at output stride = 16. The best
+model performance is shown in bold.                                     MG(1, 2, 4) +                X                                                 77.21
+                                                                       ASPP(6, 12, 18) +                       X                                       78.51
+                                                                        Image Pooling                          X          X                            79.45
+                                                                                                               X          X        X                   79.77
+as more blocks are added, but the margin of improvement                                                        X          X        X          X        82.70
+becomes smaller. Noticeably, employing block7 to ResNet-             Table 6. Inference strategy on the val set: MG: Multi-grid. ASPP:
+50 decreases slightly the performance while it still improves        Atrous spatial pyramid pooling. OS: output stride. MS: Multi-
+the performance for ResNet-101.                                      scale inputs during test. Flip: Adding left-right flipped inputs.
+    Multi-grid: We apply the multi-grid method to ResNet-            COCO: Model pretrained on MS-COCO.
+101 with several cascadedly added blocks in Tab. 3. The unit
+rates, Multi Grid = (r1 , r2 , r3 ), are applied to block4 and
+                                                                         ASPP: In Tab. 5, we experiment with the effect of in-
+all the other added blocks. As shown in the table, we observe
+                                                                     corporating multi-grid in block4 and image-level features
+that (a) applying multi-grid method is generally better than
+                                                                     to the improved ASPP module. We first fix ASP P =
+the vanilla version where (r1 , r2 , r3 ) = (1, 1, 1), (b) simply
+                                                                     (6, 12, 18) (i.e., employ rates = (6, 12, 18) for the three
+doubling the unit rates (i.e., (r1 , r2 , r3 ) = (2, 2, 2)) is not
+                                                                     parallel 3 × 3 convolution branches), and vary the multi-
+effective, and (c) going deeper with multi-grid improves the
+                                                                     grid value. Employing Multi Grid = (1, 2, 1) is better
+performance. Our best model is the case where block7 and
+                                                                     than Multi Grid = (1, 1, 1), while further improvement
+(r1 , r2 , r3 ) = (1, 2, 1) are employed.
+                                                                     is attained by adopting Multi Grid = (1, 2, 4) in the con-
+    Inference strategy on val set: The proposed model is
+                                                                     text of ASP P = (6, 12, 18) (cf ., the ‘block4’ column in
+trained with output stride = 16, and then during inference
+                                                                     Tab. 3). If we additionally employ another parallel branch
+we apply output stride = 8 to get more detailed feature
+                                                                     with rate = 24 for longer range context, the performance
+map. As shown in Tab. 4, interestingly, when evaluating
+                                                                     drops slightly by 0.12%. On the other hand, augmenting the
+our best cascaded model with output stride = 8, the per-
+                                                                     ASPP module with image-level feature is effective, reaching
+formance improves over evaluating with output stride = 16
+                                                                     the final performance of 77.21%.
+by 1.39%. The performance is further improved by per-
+                                                                         Inference strategy on val set: Similarly, we apply
+forming inference on multi-scale inputs (with scales =
+                                                                     output stride = 8 during inference once the model is trained.
+{0.5, 0.75, 1.0, 1.25, 1.5, 1.75}) and also left-right flipped
+                                                                     As shown in Tab. 6, employing output stride = 8 brings
+images. In particular, we compute as the final result the
+                                                                     1.3% improvement over using output stride = 16, adopting
+average probabilities from each scale and flipped images.
+                                                                     multi-scale inputs and adding left-right flipped images fur-
+                                                                     ther improve the performance by 0.94% and 0.32%, respec-
+4.3. Atrous Spatial Pyramid Pooling
+                                                                     tively. The best model with ASPP attains the performance
+   We then experiment with the Atrous Spatial Pyramid                of 79.77%, better than the best model with cascaded atrous
+Pooling (ASPP) module with the main differences from [11]            convolution modules (79.35%), and thus is selected as our
+being that batch normalization parameters [38] are fine-tuned        final model for test set evaluation.
+and image-level features are included.                                   Comparison with DeepLabv2: Both our best cascaded
+model (in Tab. 4) and ASPP model (in Tab. 6) (in both                  Method                                     mIOU
+cases without DenseCRF post-processing or MS-COCO
+pre-training) already outperform DeepLabv2 (77.69% with                Adelaide VeryDeep FCN VOC [85]              79.1
+DenseCRF and pretrained on MS-COCO in Tab. 4 of [11])                  LRR 4x ResNet-CRF [25]                      79.3
+on the PASCAL VOC 2012 val set. The improvement mainly                 DeepLabv2-CRF [11]                          79.7
+comes from including and fine-tuning batch normalization               CentraleSupelec Deep G-CRF [8]              80.2
+parameters [38] in the proposed models and having a better             HikSeg COCO [80]                            81.4
+way to encode multi-scale context.                                     SegModel [75]                               81.8
+                                                                       Deep Layer Cascade (LC) [52]                82.7
+    Appendix: We show more experimental results, such as
+                                                                       TuSimple [84]                               83.1
+the effect of hyper parameters and Cityscapes [14] results,
+                                                                       Large Kernel Matters [68]                   83.6
+in the appendix.
+                                                                       Multipath-RefineNet [54]                    84.2
+    Qualitative results: We provide qualitative visual results
+                                                                       ResNet-38 MS COCO [86]                      84.9
+of our best ASPP model in Fig. 6. As shown in the figure,
+                                                                       PSPNet [95]                                 85.4
+our model is able to segment objects very well without any
+                                                                       IDW-CNN [83]                                86.3
+DenseCRF post-processing.
+                                                                       CASIA IVA SDN [23]                          86.6
+    Failure mode: As shown in the bottom row of Fig. 6,                DIS [61]                                    86.8
+our model has difficulty in segmenting (a) sofa vs. chair, (b)
+dining table and chair, and (c) rare view of objects.                  DeepLabv3                                   85.7
+    Pretrained on COCO: For comparison with other state-               DeepLabv3-JFT                               86.9
+of-art models, we further pretrain our best ASPP model                Table 7. Performance on PASCAL VOC 2012 test set.
+on MS-COCO dataset [57]. From the MS-COCO train-
+val minus minival set, we only select the images that have       86.9% on PASCAL VOC 2012 test set.
+annotation regions larger than 1000 pixels and contain the
+classes defined in PASCAL VOC 2012, resulting in about
+                                                                 5. Conclusion
+60K images for training. Besides, the MS-COCO classes
+not defined in PASCAL VOC 2012 are all treated as back-              Our proposed model “DeepLabv3” employs atrous con-
+ground class. After pretraining on MS-COCO dataset, our          volution with upsampled filters to extract dense feature maps
+proposed model attains performance of 82.7% on val set           and to capture long range context. Specifically, to encode
+when using output stride = 8, multi-scale inputs and adding      multi-scale information, our proposed cascaded module grad-
+left-right flipped images during inference. We adopt smaller     ually doubles the atrous rates while our proposed atrous spa-
+initial learning rate = 0.0001 and same training protocol as     tial pyramid pooling module augmented with image-level
+in Sec. 4.1 when fine-tuning on PASCAL VOC 2012 dataset.         features probes the features with filters at multiple sampling
+    Test set result and an effective bootstrapping method:       rates and effective field-of-views. Our experimental results
+We notice that PASCAL VOC 2012 dataset provides higher           show that the proposed model significantly improves over
+quality of annotations than the augmented dataset [29], es-      previous DeepLab versions and achieves comparable perfor-
+pecially for the bicycle class. We thus further fine-tune our    mance with other state-of-art models on the PASCAL VOC
+model on the official PASCAL VOC 2012 trainval set be-           2012 semantic image segmentation benchmark.
+fore evaluating on the test set. Specifically, our model is
+trained with output stride = 8 (so that annotation details are   Acknowledgments We would like to acknowledge valu-
+kept) and the batch normalization parameters are frozen (see     able discussions with Zbigniew Wojna, the help from Chen
+Sec. 4.1 for details). Besides, instead of performing pixel      Sun and Andrew Howard, and the support from Google
+hard example mining as [85, 70], we resort to bootstrapping      Mobile Vision team.
+on hard images. In particular, we duplicate the images that
+contain hard classes (namely bicycle, chair, table, potted-
+                                                                 A. Effect of hyper-parameters
+plant, and sofa) in the training set. As shown in Fig. 7, the
+simple bootstrapping method is effective for segmenting the         In this section, we follow the same training protocol as
+bicycle class. In the end, our ‘DeepLabv3’ achieves the per-     in the main paper and experiment with the effect of some
+formance of 85.7% on the test set without any DenseCRF           hyper-parameters.
+post-processing, as shown in Tab. 7.                                New training protocol: As mentioned in the main paper,
+    Model pretrained on JFT-300M: Motivated by the re-           we change the training protocol in [10, 11] with three main
+cent work of [79], we further employ the ResNet-101 model        differences: (1) larger crop size, (2) upsampling logits during
+which has been pretraind on both ImageNet and the JFT-           training, and (3) fine-tuning batch normalization. Here, we
+300M dataset [34, 13, 79], resulting in a performance of         quantitatively measure the effect of the changes. As shown
+Figure 6. Visualization results on the val set when employing our best ASPP model. The last row shows a failure mode.
+                                                                                                   Crop Size        UL    BN       mIOU
+                                                                                                       513          X      X       77.21
+                                                                                                       513          X              75.95
+                                                                                                       513                 X       76.01
+                                                                                                       321                 X       67.22
+                                                                                    Table 8. Effect of hyper-parameters during training on PASCAL
+      (a) Image         (b) G.T.     (c) w/o bootstrapping   (d) w/ bootstrapping   VOC 2012 val set at output stride=16. UL: Upsampling Logits.
+Figure 7. Bootstrapping on hard images improves segmentation                        BN: Fine-tuning batch normalization.
+accuracy for rare and finely annotated classes such as bicycle.
+                                                                                                          batch size      mIOU
+in Tab. 8, DeepLabv3 attains the performance of 77.21%                                                         4           64.43
+on the PASCAL VOC 2012 val set [20] when adopting the                                                          8           75.76
+new training protocol setting as in the main paper. When                                                       12          76.49
+training DeepLabv3 without fine-tuning the batch normal-                                                       16          77.21
+ization, the performance drops to 75.95%. If we do not                              Table 9. Effect of batch size on PASCAL VOC 2012 val set. We em-
+upsample the logits during training (and instead downsam-                           ploy output stride=16 during both training and evaluation. Large
+ple the groundtruths), the performance decreases to 76.01%.                         batch size is required while training the model with fine-tuning the
+Furthermore, if we employ smaller value of crop size (i.e.,                         batch normalization parameters.
+321 as in [10, 11]), the performance significantly decreases
+to 67.22%, demonstrating that boundary effect resulted from                                  train output stride    eval output stride     mIOU
+small crop size hurts the performance of DeepLabv3 which                                             8                     16              74.45
+employs large atrous rates in the Atrous Spatial Pyramid                                             16                    16              77.21
+Pooling (ASPP) module.                                                                               32                    16              75.90
+    Varying batch size: Since it is important to train                                               8                    8           75.62
+DeepLabv3 with fine-tuning the batch normalization, we                                              16                    8           78.51
+further experiment with the effect of different batch sizes.                                        32                    8           75.75
+As shown in Tab. 9, employing small batch size is inefficient                       Table 10. Effect of output stride on PASCAL VOC 2012 val set.
+to train the model, while using larger batch size leads to                          Employing output stride=16 during training leads to better perfor-
+better performance.                                                                 mance for both eval output stride = 8 and 16.
+    Output stride: The value of output stride determines
+the output feature map resolution and in turn affects the
+                                                                                    output stride = 8 during evaluation.
+largest batch size we could use during training. In Tab. 10,
+we quantitatively measure the effect of employing different
+output stride values during both training and evaluation on                         B. Asynchronous training
+the PASCAL VOC 2012 val set. We first fix the evaluation                                In this section, we experiment DeepLabv3 with Tensor-
+output stride = 16, vary the training output stride and fit                         Flow asynchronous training [1]. We measure the effect of
+the largest possible batch size for all the settings (we are able                   training the model with multiple replicas on PASCAL VOC
+to fit batch size 6, 16, and 24 for training output stride equal                    2012 semantic segmentation dataset. Our baseline employs
+to 8, 16, and 32, respectively). As shown in the top rows of                        simply one replica and requires training time 3.65 days with
+Tab. 10, employing training output stride = 8 only attains                          a K80 GPU. As shown in Tab. 11, we found that the perfor-
+the performance of 74.45% because we could not fit large                            mance of using multiple replicas does not drop compared
+batch size in this setting which degrades the performance                           to the baseline. However, training time with 32 replicas is
+while fine-tuning the batch normalization parameters. When                          significantly reduced to 2.74 hours.
+employing training output stride = 32, we could fit large
+batch size but we lose feature map details. On the other hand,                      C. DeepLabv3 on Cityscapes dataset
+employing training output stride = 16 strikes the best trade-
+off and leads to the best performance. In the bottom rows                              Cityscapes [14] is a large-scale dataset containing high
+of Tab. 10, we increase the evaluation output stride = 8.                           quality pixel-level annotations of 5000 images (2975, 500,
+All settings improve the performance except the one where                           and 1525 for the training, validation, and test sets respec-
+training output stride = 32. We hypothesize that we lose                            tively) and about 20000 coarsely annotated images. Follow-
+too much feature map details during training, and thus the                          ing the evaluation protocol [14], 19 semantic labels are used
+model could not recover the details even when employing                             for evaluation without considering the void label.
+       num replicas    mIOU       relative training time              Method                                 Coarse       mIOU
+            1           77.21              1.00x                      DeepLabv2-CRF [11]                                    70.4
+            2           77.15              0.50x                      Deep Layer Cascade [52]                               71.1
+            4           76.79              0.25x                      ML-CRNN [21]                                          71.2
+            8           77.02              0.13x                      Adelaide context [55]                                 71.6
+            16          77.18              0.06x                      FRRN [70]                                             71.8
+            32          76.69              0.03x                      LRR-4x [25]                               X           71.8
+Table 11. Evaluation performance on PASCAL VOC 2012 val set           RefineNet [54]                                        73.6
+when adopting asynchronous training.                                  FoveaNet [51]                                         74.1
+                                                                      Ladder DenseNet [46]                                  74.3
+          OS=16       OS=8      MS    Flip   mIOU                     PEARL [42]                                            75.4
+                                                                      Global-Local-Refinement [93]                          77.3
+             X                                77.23                   SAC multiple [94]                                     78.1
+                       X                      77.82                   SegModel [75]                             X           79.2
+                       X        X             79.06                   TuSimple Coarse [84]                      X           80.1
+                       X        X      X      79.30                   Netwarp [24]                              X           80.5
+Table 12. DeepLabv3 on the Cityscapes val set when trained with       ResNet-38 [86]                            X           80.6
+only train fine set. OS: output stride. MS: Multi-scale inputs        PSPNet [95]                               X           81.2
+during inference. Flip: Adding left-right flipped inputs.
+                                                                      DeepLabv3                                 X           81.3
+                                                                   Table 13. Performance on Cityscapes test set. Coarse: Use
+   We first evaluate the proposed DeepLabv3 model on the           train extra set (coarse annotations) as well. Only a few top models
+validation set when training with only 2975 images (i.e.,          with known references are listed in this table.
+train fine set). We adopt the same training protocol as before
+except that we employ 90K training iterations, crop size            [3] V. Badrinarayanan, A. Kendall, and R. Cipolla. Segnet: A
+equal to 769, and running inference on the whole image,                 deep convolutional encoder-decoder architecture for image
+instead of on the overlapped regions as in [11]. As shown               segmentation. arXiv:1511.00561, 2015.
+in Tab. 12, DeepLabv3 attains the performance of 77.23%             [4] A. Brandt. Multi-level adaptive solutions to boundary-value
+when evaluating at output stride = 16. Evaluating the model             problems. Mathematics of computation, 31(138):333–390,
+at output stride = 8 improves the performance to 77.82%.                1977.
+When we employ multi-scale inputs (we could fit scales =            [5] W. L. Briggs, V. E. Henson, and S. F. McCormick. A multigrid
+{0.75, 1, 1.25} on a K40 GPU) and add left-right flipped                tutorial. SIAM, 2000.
+inputs, the model achieves 79.30%.                                  [6] W. Byeon, T. M. Breuel, F. Raue, and M. Liwicki. Scene
+   In order to compete with other state-of-art models, we               labeling with lstm recurrent neural networks. In CVPR, 2015.
+further train DeepLabv3 on the trainval coarse set (i.e.,           [7] H. Caesar, J. Uijlings, and V. Ferrari. COCO-Stuff: Thing
+                                                                        and stuff classes in context. arXiv:1612.03716, 2016.
+the 3475 finely annotated images and the extra 20000
+                                                                    [8] S. Chandra and I. Kokkinos. Fast, exact and multi-scale in-
+coarsely annotated images). We adopt more scales and finer
+                                                                        ference for semantic image segmentation with deep Gaussian
+output stride during inference. In particular, we perform in-           CRFs. arXiv:1603.08358, 2016.
+ference with scales = {0.75, 1, 1.25, 1.5, 1.75, 2} and eval-       [9] L.-C. Chen, J. T. Barron, G. Papandreou, K. Murphy, and A. L.
+uation output stride = 4 with CPUs, which contributes extra             Yuille. Semantic image segmentation with task-specific edge
+0.8% and 0.1% respectively on the validation set compared               detection using cnns and a discriminatively trained domain
+to using only three scales and output stride = 8. In the end,           transform. In CVPR, 2016.
+as shown in Tab. 13, our proposed DeepLabv3 achieves the           [10] L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L.
+performance of 81.3% on the test set. Some results on val               Yuille. Semantic image segmentation with deep convolutional
+set are visualized in Fig. 8.                                           nets and fully connected crfs. In ICLR, 2015.
+                                                                   [11] L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L.
+References                                                              Yuille. Deeplab: Semantic image segmentation with deep
+                                                                        convolutional nets, atrous convolution, and fully connected
+ [1] M. Abadi, A. Agarwal, et al. Tensorflow: Large-scale               crfs. arXiv:1606.00915, 2016.
+     machine learning on heterogeneous distributed systems.        [12] L.-C. Chen, Y. Yang, J. Wang, W. Xu, and A. L. Yuille. At-
+     arXiv:1603.04467, 2016.                                            tention to scale: Scale-aware semantic image segmentation.
+ [2] A. Adams, J. Baek, and M. A. Davis. Fast high-dimensional          In CVPR, 2016.
+     filtering using the permutohedral lattice. In Eurographics,   [13] F. Chollet. Xception: Deep learning with depthwise separable
+     2010.                                                              convolutions. arXiv:1610.02357, 2016.
+Figure 8. Visualization results on Cityscapes val set when training with only train fine set.
+[14] M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler,           [35] S. Hochreiter and J. Schmidhuber. Long short-term memory.
+     R. Benenson, U. Franke, S. Roth, and B. Schiele. The                    Neural computation, 9(8):1735–1780, 1997.
+     cityscapes dataset for semantic urban scene understanding. In      [36] M. Holschneider, R. Kronland-Martinet, J. Morlet, and
+     CVPR, 2016.                                                             P. Tchamitchian. A real-time algorithm for signal analysis
+[15] J. Dai, K. He, and J. Sun. Convolutional feature masking for            with the help of the wavelet transform. In Wavelets: Time-
+     joint object and stuff segmentation. arXiv:1412.1283, 2014.             Frequency Methods and Phase Space, pages 289–297. 1989.
+[16] J. Dai, K. He, and J. Sun. Boxsup: Exploiting bounding boxes       [37] J. Huang, V. Rathod, C. Sun, M. Zhu, A. Korattikara, A. Fathi,
+     to supervise convolutional networks for semantic segmenta-              I. Fischer, Z. Wojna, Y. Song, S. Guadarrama, and K. Murphy.
+     tion. In ICCV, 2015.                                                    Speed/accuracy trade-offs for modern convolutional object
+[17] J. Dai, Y. Li, K. He, and J. Sun.               R-fcn: Object           detectors. In CVPR, 2017.
+     detection via region-based fully convolutional networks.           [38] S. Ioffe and C. Szegedy. Batch normalization: Accelerating
+     arXiv:1605.06409, 2016.                                                 deep network training by reducing internal covariate shift.
+[18] J. Dai, H. Qi, Y. Xiong, Y. Li, G. Zhang, H. Hu, and Y. Wei.            arXiv:1502.03167, 2015.
+     Deformable convolutional networks. arXiv:1703.06211,               [39] M. A. Islam, M. Rochan, N. D. Bruce, and Y. Wang. Gated
+     2017.                                                                   feedback refinement network for dense image labeling. In
+[19] D. Eigen and R. Fergus. Predicting depth, surface normals               CVPR, 2017.
+     and semantic labels with a common multi-scale convolutional        [40] S. D. Jain, B. Xiong, and K. Grauman. Fusionseg: Learn-
+     architecture. arXiv:1411.4734, 2014.                                    ing to combine motion and appearance for fully automatic
+[20] M. Everingham, S. M. A. Eslami, L. V. Gool, C. K. I.                    segmention of generic objects in videos. In CVPR, 2017.
+     Williams, J. Winn, and A. Zisserma. The pascal visual object       [41] V. Jampani, M. Kiefel, and P. V. Gehler. Learning sparse high
+     classes challenge a retrospective. IJCV, 2014.                          dimensional filters: Image filtering, dense crfs and bilateral
+[21] H. Fan, X. Mei, D. Prokhorov, and H. Ling. Multi-level                  neural networks. In CVPR, 2016.
+     contextual rnns with attention model for scene labeling.           [42] X. Jin, X. Li, H. Xiao, X. Shen, Z. Lin, J. Yang, Y. Chen,
+     arXiv:1607.02537, 2016.                                                 J. Dong, L. Liu, Z. Jie, J. Feng, and S. Yan. Video scene
+[22] C. Farabet, C. Couprie, L. Najman, and Y. LeCun. Learning               parsing with predictive feature learning. In ICCV, 2017.
+     hierarchical features for scene labeling. PAMI, 2013.              [43] P. Kohli, P. H. Torr, et al. Robust higher order potentials for
+[23] J. Fu, J. Liu, Y. Wang, and H. Lu. Stacked deconvolutional              enforcing label consistency. IJCV, 82(3):302–324, 2009.
+     network for semantic segmentation. arXiv:1708.04943, 2017.         [44] S. Kong and C. Fowlkes. Recurrent scene parsing with per-
+[24] R. Gadde, V. Jampani, and P. V. Gehler. Semantic video cnns             spective understanding in the loop. arXiv:1705.07238, 2017.
+     through representation warping. In ICCV, 2017.                     [45] P. Krähenbühl and V. Koltun. Efficient inference in fully
+[25] G. Ghiasi and C. C. Fowlkes. Laplacian reconstruction and               connected crfs with gaussian edge potentials. In NIPS, 2011.
+     refinement for semantic segmentation. arXiv:1605.02264,            [46] I. Krešo, S. Šegvić, and J. Krapac. Ladder-style densenets
+     2016.                                                                   for semantic segmentation of large natural images. In ICCV
+[26] A. Giusti, D. Ciresan, J. Masci, L. Gambardella, and                    CVRSUAD workshop, 2017.
+     J. Schmidhuber. Fast image scanning with deep max-pooling          [47] A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet
+     convolutional neural networks. In ICIP, 2013.                           classification with deep convolutional neural networks. In
+[27] S. Gould, R. Fulton, and D. Koller. Decomposing a scene                 NIPS, 2012.
+     into geometric and semantically consistent regions. In ICCV.       [48] L. Ladicky, C. Russell, P. Kohli, and P. H. Torr. Associative
+     IEEE, 2009.                                                             hierarchical crfs for object class image segmentation. In
+[28] K. Grauman and T. Darrell. The pyramid match kernel: Dis-               ICCV, 2009.
+     criminative classification with sets of image features. In ICCV,   [49] S. Lazebnik, C. Schmid, and J. Ponce. Beyond bags of fea-
+     2005.                                                                   tures: Spatial pyramid matching for recognizing natural scene
+[29] B. Hariharan, P. Arbeláez, L. Bourdev, S. Maji, and J. Malik.          categories. In CVPR, 2006.
+     Semantic contours from inverse detectors. In ICCV, 2011.           [50] Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E.
+[30] B. Hariharan, P. Arbeláez, R. Girshick, and J. Malik. Hyper-           Howard, W. Hubbard, and L. D. Jackel. Backpropagation
+     columns for object segmentation and fine-grained localization.          applied to handwritten zip code recognition. Neural computa-
+     In CVPR, 2015.                                                          tion, 1(4):541–551, 1989.
+[31] K. He, X. Zhang, S. Ren, and J. Sun. Spatial pyramid pooling       [51] X. Li, Z. Jie, W. Wang, C. Liu, J. Yang, X. Shen, Z. Lin,
+     in deep convolutional networks for visual recognition. In               Q. Chen, S. Yan, and J. Feng. Foveanet: Perspective-aware
+     ECCV, 2014.                                                             urban scene parsing. arXiv:1708.02421, 2017.
+[32] K. He, X. Zhang, S. Ren, and J. Sun. Deep residual learning        [52] X. Li, Z. Liu, P. Luo, C. C. Loy, and X. Tang. Not all pixels
+     for image recognition. arXiv:1512.03385, 2015.                          are equal: Difficulty-aware semantic segmentation via deep
+[33] X. He, R. S. Zemel, and M. Carreira-Perpindn. Multiscale                layer cascade. arXiv:1704.01344, 2017.
+     conditional random fields for image labeling. In CVPR, 2004.       [53] X. Liang, X. Shen, D. Xiang, J. Feng, L. Lin, and S. Yan.
+[34] G. Hinton, O. Vinyals, and J. Dean. Distilling the knowledge            Semantic object parsing with local-global long short-term
+     in a neural network. In NIPS, 2014.                                     memory. arXiv:1511.04510, 2015.
+[54] G. Lin, A. Milan, C. Shen, and I. Reid. Refinenet: Multi-             detection using convolutional networks. arXiv:1312.6229,
+     path refinement networks with identity mappings for high-             2013.
+     resolution semantic segmentation. arXiv:1611.06612, 2016.        [75] F. Shen, R. Gan, S. Yan, and G. Zeng. Semantic segmentation
+[55] G. Lin, C. Shen, I. Reid, et al. Efficient piecewise train-           via structured patch prediction, context crf and guidance crf.
+     ing of deep structured models for semantic segmentation.              In CVPR, 2017.
+     arXiv:1504.01013, 2015.                                          [76] J. Shotton, J. Winn, C. Rother, and A. Criminisi. Textonboost
+[56] T.-Y. Lin, P. Dollár, R. Girshick, K. He, B. Hariharan, and          for image understanding: Multi-class object recognition and
+     S. Belongie. Feature pyramid networks for object detection.           segmentation by jointly modeling texture, layout, and context.
+     arXiv:1612.03144, 2016.                                               IJCV, 2009.
+[57] T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ra-     [77] A. Shrivastava, R. Sukthankar, J. Malik, and A. Gupta. Be-
+     manan, P. Dollár, and C. L. Zitnick. Microsoft COCO: Com-            yond skip connections: Top-down modulation for object de-
+     mon objects in context. In ECCV, 2014.                                tection. arXiv:1612.06851, 2016.
+[58] W. Liu, A. Rabinovich, and A. C. Berg. Parsenet: Looking         [78] K. Simonyan and A. Zisserman. Very deep convolutional
+     wider to see better. arXiv:1506.04579, 2015.                          networks for large-scale image recognition. In ICLR, 2015.
+[59] Z. Liu, X. Li, P. Luo, C. C. Loy, and X. Tang. Semantic image    [79] C. Sun, A. Shrivastava, S. Singh, and A. Gupta. Revisiting
+     segmentation via deep parsing network. In ICCV, 2015.                 unreasonable effectiveness of data in deep learning era. In
+[60] J. Long, E. Shelhamer, and T. Darrell. Fully convolutional            ICCV, 2017.
+     networks for semantic segmentation. In CVPR, 2015.               [80] H. Sun, D. Xie, and S. Pu. Mixed context networks for
+[61] P. Luo, G. Wang, L. Lin, and X. Wang. Deep dual learning              semantic segmentation. arXiv:1610.05854, 2016.
+     for semantic image segmentation. In ICCV, 2017.                  [81] D. Terzopoulos. Image analysis using multigrid relaxation
+[62] M. Mostajabi, P. Yadollahpour, and G. Shakhnarovich. Feed-            methods. TPAMI, (2):129–139, 1986.
+     forward semantic segmentation with zoom-out features. In         [82] R. Vemulapalli, O. Tuzel, M.-Y. Liu, and R. Chellappa. Gaus-
+     CVPR, 2015.                                                           sian conditional random field network for semantic segmenta-
+[63] R. Mottaghi, X. Chen, X. Liu, N.-G. Cho, S.-W. Lee, S. Fidler,        tion. In CVPR, 2016.
+     R. Urtasun, and A. Yuille. The role of context for object        [83] G. Wang, P. Luo, L. Lin, and X. Wang. Learning object inter-
+     detection and semantic segmentation in the wild. In CVPR,             actions and descriptions for semantic image segmentation. In
+     2014.                                                                 CVPR, 2017.
+[64] H. Noh, S. Hong, and B. Han. Learning deconvolution net-         [84] P. Wang, P. Chen, Y. Yuan, D. Liu, Z. Huang, X. Hou, and
+     work for semantic segmentation. In ICCV, 2015.                        G. Cottrell. Understanding convolution for semantic segmen-
+[65] G. Papandreou, L.-C. Chen, K. Murphy, and A. L. Yuille.               tation. arXiv:1702.08502, 2017.
+     Weakly- and semi-supervised learning of a dcnn for semantic      [85] Z. Wu, C. Shen, and A. van den Hengel. Bridging
+     image segmentation. In ICCV, 2015.                                    category-level and instance-level semantic image segmen-
+[66] G. Papandreou, I. Kokkinos, and P.-A. Savalle. Modeling               tation. arXiv:1605.06885, 2016.
+     local and global deformations in deep learning: Epitomic         [86] Z. Wu, C. Shen, and A. van den Hengel. Wider or
+     convolution, multiple instance learning, and sliding window           deeper: Revisiting the resnet model for visual recognition.
+     detection. In CVPR, 2015.                                             arXiv:1611.10080, 2016.
+[67] G. Papandreou and P. Maragos. Multigrid geometric active         [87] F. Xia, P. Wang, L.-C. Chen, and A. L. Yuille. Zoom better
+     contour models. TIP, 16(1):229–240, 2007.                             to see clearer: Huamn part segmentation with auto zoom net.
+[68] C. Peng, X. Zhang, G. Yu, G. Luo, and J. Sun. Large kernel            arXiv:1511.06881, 2015.
+     matters–improve semantic segmentation by global convolu-         [88] Z. Yan, H. Zhang, Y. Jia, T. Breuel, and Y. Yu. Combining the
+     tional network. arXiv:1703.02719, 2017.                               best of convolutional layers and recurrent layers: A hybrid
+[69] P. Pinheiro and R. Collobert. Recurrent convolutional neural          network for semantic segmentation. arXiv:1603.04871, 2016.
+     networks for scene labeling. In ICML, 2014.                      [89] J. Yao, S. Fidler, and R. Urtasun. Describing the scene as a
+[70] T. Pohlen, A. Hermans, M. Mathias, and B. Leibe. Full-                whole: Joint object detection, scene classification and seman-
+     resolution residual networks for semantic segmentation in             tic segmentation. In CVPR, 2012.
+     street scenes. arXiv:1611.08323, 2016.                           [90] F. Yu and V. Koltun. Multi-scale context aggregation by
+[71] O. Ronneberger, P. Fischer, and T. Brox. U-net: Convolutional         dilated convolutions. In ICLR, 2016.
+     networks for biomedical image segmentation. In MICCAI,           [91] S. Zagoruyko and N. Komodakis. Wide residual networks.
+     2015.                                                                 arXiv:1605.07146, 2016.
+[72] O. Russakovsky, J. Deng, H. Su, J. Krause, S. Satheesh, S. Ma,   [92] M. D. Zeiler, G. W. Taylor, and R. Fergus. Adaptive deconvo-
+     Z. Huang, A. Karpathy, A. Khosla, M. Bernstein, A. C. Berg,           lutional networks for mid and high level feature learning. In
+     and L. Fei-Fei. ImageNet Large Scale Visual Recognition               ICCV, 2011.
+     Challenge. IJCV, 2015.                                           [93] R. Zhang, S. Tang, M. Lin, J. Li, and S. Yan. Global-residual
+[73] A. G. Schwing and R. Urtasun. Fully connected deep struc-             and local-boundary refinement networks for rectifying scene
+     tured networks. arXiv:1503.02351, 2015.                               parsing predictions. IJCAI, 2017.
+[74] P. Sermanet, D. Eigen, X. Zhang, M. Mathieu, R. Fergus, and      [94] R. Zhang, S. Tang, Y. Zhang, J. Li, and S. Yan. Scale-adaptive
+     Y. LeCun. Overfeat: Integrated recognition, localization and          convolutions for scene parsing. In ICCV, 2017.
+[95] H. Zhao, J. Shi, X. Qi, X. Wang, and J. Jia. Pyramid scene
+     parsing network. arXiv:1612.01105, 2016.
+[96] S. Zheng, S. Jayasumana, B. Romera-Paredes, V. Vineet,
+     Z. Su, D. Du, C. Huang, and P. Torr. Conditional random
+     fields as recurrent neural networks. In ICCV, 2015.
+[97] B. Zhou, H. Zhao, X. Puig, S. Fidler, A. Barriuso, and A. Tor-
+     ralba. Scene parsing through ade20k dataset. In CVPR, 2017.
+

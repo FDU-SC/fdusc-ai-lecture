@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/cvRuHTRXehvz+wT1+nLqYDGFO2E</id>
+  <title>arXiv Query: search_query=abs:"flow-based sampling" AND abs:"fermion"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T15:03:11Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22flow-based+sampling%22+AND+abs:%22fermion%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2207.08945v3</id>
+    <title>Gauge-equivariant flow models for sampling in lattice field theories with pseudofermions</title>
+    <updated>2022-10-16T19:39:17Z</updated>
+    <link href="https://arxiv.org/abs/2207.08945v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.08945v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents gauge-equivariant architectures for flow-based sampling in fermionic lattice field theories using pseudofermions as stochastic estimators for the fermionic determinant. This is the default approach in state-of-the-art lattice field theory calculations, making this development critical to the practical application of flow models to theories such as QCD. Methods by which flow-based sampling approaches can be improved via standard techniques such as even/odd preconditioning and the Hasenbusch factorization are also outlined. Numerical demonstrations in two-dimensional U(1) and SU(3) gauge theories with $N_f=2$ flavors of fermions are provided.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-18T21:13:34Z</published>
+    <arxiv:comment>15 pages, 7 figures. v3: accepted version for publication. New appendix C</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 106 (2022) 7, 074506</arxiv:journal_ref>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Betsy Tian</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.106.074506</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.106.074506" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.11712v1</id>
+    <title>Flow-based sampling in the lattice Schwinger model at criticality</title>
+    <updated>2022-02-23T19:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2202.11712v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.11712v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent results suggest that flow-based algorithms may provide efficient sampling of field distributions for lattice field theory applications, such as studies of quantum chromodynamics and the Schwinger model. In this work, we provide a numerical demonstration of robust flow-based sampling in the Schwinger model at the critical value of the fermion mass. In contrast, at the same parameters, conventional methods fail to sample all parts of configuration space, leading to severely underestimated uncertainties.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-23T19:00:00Z</published>
+    <arxiv:comment>5 pages main text, 3 pages supplementary material. 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.106.014514</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.106.014514" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.05934v2</id>
+    <title>Flow-based sampling for fermionic lattice field theories</title>
+    <updated>2021-12-28T22:33:50Z</updated>
+    <link href="https://arxiv.org/abs/2106.05934v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.05934v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Algorithms based on normalizing flows are emerging as promising machine learning approaches to sampling complicated probability distributions in a way that can be made asymptotically exact. In the context of lattice field theory, proof-of-principle studies have demonstrated the effectiveness of this approach for scalar theories, gauge theories, and statistical systems. This work develops approaches that enable flow-based sampling of theories with dynamical fermions, which is necessary for the technique to be applied to lattice field theory studies of the Standard Model of particle physics and many condensed matter systems. As a practical demonstration, these methods are applied to the sampling of field configurations for a two-dimensional theory of massless staggered fermions coupled to a scalar field via a Yukawa interaction.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-10T17:32:47Z</published>
+    <arxiv:comment>26 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 104, 114507 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.104.114507</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.104.114507" title="doi"/>
+  </entry>
+</feed>

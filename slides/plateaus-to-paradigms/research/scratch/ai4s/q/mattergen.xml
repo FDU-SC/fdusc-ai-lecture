@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/akvVRALv5cmMYPUn8cFBUi27Tr8</id>
+  <title>arXiv Query: search_query=ti:"MatterGen"&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-09-16T14:49:46Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22MatterGen%22&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2312.03687v2</id>
+    <title>MatterGen: a generative model for inorganic materials design</title>
+    <updated>2024-01-29T16:02:46Z</updated>
+    <link href="https://arxiv.org/abs/2312.03687v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.03687v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The design of functional materials with desired properties is essential in driving technological advances in areas like energy storage, catalysis, and carbon capture. Generative models provide a new paradigm for materials design by directly generating entirely novel materials given desired property constraints. Despite recent progress, current generative models have low success rate in proposing stable crystals, or can only satisfy a very limited set of property constraints. Here, we present MatterGen, a model that generates stable, diverse inorganic materials across the periodic table and can further be fine-tuned to steer the generation towards a broad range of property constraints. To enable this, we introduce a new diffusion-based generative process that produces crystalline structures by gradually refining atom types, coordinates, and the periodic lattice. We further introduce adapter modules to enable fine-tuning towards any given property constraints with a labeled dataset. Compared to prior generative models, structures produced by MatterGen are more than twice as likely to be novel and stable, and more than 15 times closer to the local energy minimum. After fine-tuning, MatterGen successfully generates stable, novel materials with desired chemistry, symmetry, as well as mechanical, electronic and magnetic properties. Finally, we demonstrate multi-property materials design capabilities by proposing structures that have both high magnetic density and a chemical composition with low supply-chain risk. We believe that the quality of generated materials and the breadth of MatterGen's capabilities represent a major advancement towards creating a universal generative model for materials design.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-06T18:52:16Z</published>
+    <arxiv:comment>13 pages main text, 35 pages supplementary information</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Claudio Zeni</name>
+    </author>
+    <author>
+      <name>Robert Pinsler</name>
+    </author>
+    <author>
+      <name>Daniel Zügner</name>
+    </author>
+    <author>
+      <name>Andrew Fowler</name>
+    </author>
+    <author>
+      <name>Matthew Horton</name>
+    </author>
+    <author>
+      <name>Xiang Fu</name>
+    </author>
+    <author>
+      <name>Sasha Shysheya</name>
+    </author>
+    <author>
+      <name>Jonathan Crabbé</name>
+    </author>
+    <author>
+      <name>Lixin Sun</name>
+    </author>
+    <author>
+      <name>Jake Smith</name>
+    </author>
+    <author>
+      <name>Bichlien Nguyen</name>
+    </author>
+    <author>
+      <name>Hannes Schulz</name>
+    </author>
+    <author>
+      <name>Sarah Lewis</name>
+    </author>
+    <author>
+      <name>Chin-Wei Huang</name>
+    </author>
+    <author>
+      <name>Ziheng Lu</name>
+    </author>
+    <author>
+      <name>Yichi Zhou</name>
+    </author>
+    <author>
+      <name>Han Yang</name>
+    </author>
+    <author>
+      <name>Hongxia Hao</name>
+    </author>
+    <author>
+      <name>Jielan Li</name>
+    </author>
+    <author>
+      <name>Ryota Tomioka</name>
+    </author>
+    <author>
+      <name>Tian Xie</name>
+    </author>
+  </entry>
+</feed>

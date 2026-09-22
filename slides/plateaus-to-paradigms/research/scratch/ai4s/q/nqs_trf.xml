@@ -1,0 +1,905 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TuTL+rgAa3DXtWEX2RSyn7sXwSE</id>
+  <title>arXiv Query: search_query=abs:"transformer" AND abs:"variational Monte Carlo"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:48:45Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22transformer%22+AND+abs:%22variational+Monte+Carlo%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>35</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04266v1</id>
+    <title>Compute-in-Memory Attention: A Time-Domain Analog Softmax Circuit with RC-Tunable Temperature</title>
+    <updated>2026-09-02T18:43:19Z</updated>
+    <link href="https://arxiv.org/abs/2609.04266v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04266v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Softmax is a key operation in Transformer attention, but its exponentiation and normalization add significant overhead in compute-in-memory (CIM) accelerators, especially when analog attention scores must first be converted to the digital domain. This work presents a tunable-temperature analog softmax circuit in GlobalFoundries 22-nm fully depleted silicon-on-insulator (FDSOI) technology that operates directly on CIM-generated score voltages without intermediate analog-to-digital conversion. Each input score is converted into a time-domain event using a shared falling ramp. The corresponding comparator transition samples an RC-decaying reference to generate an exponential weight, which is then processed by an in-circuit normalization stage. In contrast to analog softmax circuits that rely on transistor weak-inversion behavior for exponentiation, the proposed architecture controls the softmax response through the ramp slope and RC time constant, enabling programmable effective temperature. The 128-element architecture is evaluated using transistor-level and post-layout extracted simulations, including multi-level input vectors, capacitance variation and mismatch, process and temperature variation, monte carlo analysis, and shared-interconnect parasitics. The complete 128-element implementation occupies 9453.42~$μ\mathrm{m}^{2}$ including the shared global ramp circuitry, while each replicated softmax element occupies 70.2~$μ\mathrm{m}^{2}$. The circuit achieves a 242.97-ns evaluation latency at 13.44~mW total power, corresponding to 25.5~pJ per output element. The simultaneous 128-element evaluation achieves an RMSE of 24.46~mV relative to the ideal softmax response. The extracted circuit characteristics are further incorporated into a MemTorch-based hardware-aware Transformer model, where the proposed softmax achieves a validation loss within 2.5\% of the ideal-softmax baseline.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T18:43:19Z</published>
+    <arxiv:comment>13 page, 16 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Ankur Singh</name>
+    </author>
+    <author>
+      <name>Ashish Gautam</name>
+    </author>
+    <author>
+      <name>Shruti R. Kulkarni</name>
+    </author>
+    <author>
+      <name>Guojing Cong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.13238v1</id>
+    <title>Emergent Symmetry-Protected Topological Phases via Polyakov Confinement in Quantum Spin Systems</title>
+    <updated>2026-08-13T13:43:41Z</updated>
+    <link href="https://arxiv.org/abs/2608.13238v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.13238v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A main theme in modern condensed matter physics is the emergence of fractionalized excitations and gauge structures from quantum spin systems. However, understanding how these exotic degrees of freedom reconfine into new phases of matter remains a fundamental challenge. In this work, we demonstrate that Polyakov's confinement mechanism-a foundation of compact gauge theory-can serve as a dynamical engine to transform a Dirac spin liquid into a symmetry-protected topological (SPT) state. Starting with a Dirac spin liquid with spin-dependent gauge fluxes, we show that the single-occupancy constraint inherent to the physical Hilbert space triggers monopole condensation, dynamically confining bulk spinons while preserving gapless edge modes-realizing a spinon analog of the quantum spin Hall effect. Using a large-scale variational Monte Carlo simulation on a triangular antiferromagnet with an additional Dzyaloshinskii-Moriya interaction, we provide microscopic evidence for this confined SPT phase, including a characteristic area law for the Wilson loop and vanishing topological entanglement entropy. Furthermore, we identify a measurable spin-pump response under magnetic fields, which directly encodes the Berry curvature of the parent Dirac cones. Our results reveal a previously unexplored pathway to SPT physics, bridging the fields of gauge theory, quantum magnetism, and topological matter.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-13T13:43:41Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Rep. Prog. Phys. 89 (2026) 080503</arxiv:journal_ref>
+    <author>
+      <name>Li-Wei He</name>
+    </author>
+    <author>
+      <name>Shun-Li Yu</name>
+    </author>
+    <author>
+      <name>Jian-Xin Li</name>
+    </author>
+    <arxiv:doi>10.1088/1361-6633/ae921b</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1361-6633/ae921b" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14875v1</id>
+    <title>Optimization dynamics of Transformer backflow neural quantum states for the two-dimensional Hubbard model</title>
+    <updated>2026-07-16T11:46:06Z</updated>
+    <link href="https://arxiv.org/abs/2607.14875v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14875v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building on the multi-determinant Transformer backflow neural quantum state (NQS) ansatz and the associated multi-stage training workflow for the doped two-dimensional Hubbard model, we investigate how the optimization dynamics of the NQS depend on several key optimization and architectural hyperparameters. The workflow consists of neural-network backflow (NNB) initialization, supervised Transformer pre-training, and main energy optimization using the Moment-Adaptive ReConfiguration Heuristic (MARCH) within variational Monte Carlo. Using the doped $4\times4$ periodic Hubbard model at $U=8$ as a baseline, we examine how the update-norm threshold, Transformer width, number of determinant channels, and Monte Carlo batch size affect convergence. We find that a moderate update constraint improves the efficiency of MARCH optimization, larger Transformer width and more determinant channels improve the expressive capacity of the ansatz, and larger Monte Carlo batches reduce sampling noise in the update direction. We further test the same workflow at half filling, weaker interaction strength, open boundary conditions, and on a larger $8\times8$ doped lattice. These results identify practical optimization trends for Transformer backflow NQSs and highlight the balance between ansatz expressivity, MARCH update stability, and Monte Carlo sampling quality.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T11:46:06Z</published>
+    <arxiv:comment>11 pages, 4 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Zong-Yu Liao</name>
+    </author>
+    <author>
+      <name>Jia-Qi Wang</name>
+    </author>
+    <author>
+      <name>Rong-Qiang He</name>
+    </author>
+    <author>
+      <name>Zhong-Yi Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05293v2</id>
+    <title>Thermalization Dynamics in the Two-Dimensional Hubbard Model with Neural-Network Quantum States</title>
+    <updated>2026-07-31T09:13:53Z</updated>
+    <link href="https://arxiv.org/abs/2606.05293v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05293v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Thermalization in strongly correlated fermionic systems remains a central open problem in quantum many-body physics. In this work, we investigate the real-time dynamics and the approach to thermalization in the two-dimensional Hubbard model, a paradigmatic framework for correlated electrons, relevant to high-temperature superconductivity and ultracold quantum simulation. Focusing on the half-filled square lattice, we monitor the time evolution of the double occupancy following a quench in the on-site interaction $U$, and assess whether its long-time value is captured by a canonical thermal ensemble. We employ time-dependent variational Monte Carlo methods combined with transformer-based Neural-Network Quantum States to accurately describe the nonequilibrium dynamics of fermions, especially for the behavior at long times, thereby accessing regimes that were previously inaccessible to numerical simulations. Our results reveal two dynamical behaviors: for weak to intermediate interactions, the double occupancy rapidly approaches the thermal prediction, consistent with ergodic evolution; beyond a critical interaction $U_{C}$, the dynamics remains distinct from the thermal expectation on the timescales investigated, revealing signatures of a prethermal plateau delaying fast relaxation. These results establish numerical simulation as a powerful tool to probe nonequilibrium quantum phenomena in correlated fermionic matter.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T18:00:05Z</published>
+    <arxiv:comment>10 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Alessandro Sinibaldi</name>
+    </author>
+    <author>
+      <name>Luciano Loris Viteritti</name>
+    </author>
+    <author>
+      <name>Riccardo Rende</name>
+    </author>
+    <author>
+      <name>Fakher F. Assaad</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.04608v1</id>
+    <title>Correlated States in Quantum Dot Clusters Coupled to a Common Superconductor</title>
+    <updated>2026-06-03T08:45:29Z</updated>
+    <link href="https://arxiv.org/abs/2606.04608v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.04608v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study an effective model of regular quantum dot clusters coupled to a common superconductor. By applying a canonical transformation, we map the system onto a particle-number-conserving representation, making it directly accessible to standard fermionic neural-network quantum-state variational Monte Carlo methods. We show that the superconducting gap closes at a particular high-symmetry point, which, in finite non-interacting systems, corresponds to crossings between singlet ground states of different character. Combining exact methods, density matrix renormalization group, and neural quantum-state variational Monte Carlo calculations, we identify three distinct interacting regimes: a trivial superconducting singlet phase, a strongly correlated regime connected to an effective Heisenberg model, and a critical intermediate regime with qualitatively different behavior in one and two dimensions. In one-dimensional systems, the intermediate regime exhibits a sequence of singlet-doublet transitions and becomes gapless in the thermodynamic limit even for finite Coulomb interaction. In two-dimensional clusters, we find robust triplet ground states. Furthermore, our results demonstrate that relatively standard fermionic neural quantum states provide an efficient approach for correlated superconducting nanostructures.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T08:45:29Z</published>
+    <arxiv:comment>38 pages, 10 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Martin Žonda</name>
+    </author>
+    <author>
+      <name>Jakub Rękas</name>
+    </author>
+    <author>
+      <name>Tobiáš Poláček</name>
+    </author>
+    <author>
+      <name>Jana Kodrlová</name>
+    </author>
+    <author>
+      <name>Vladislav Pokorný</name>
+    </author>
+    <author>
+      <name>Martin Friák</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.13807v1</id>
+    <title>Parallel Scan Recurrent Neural Quantum States for Scalable Variational Monte Carlo</title>
+    <updated>2026-05-13T17:36:32Z</updated>
+    <link href="https://arxiv.org/abs/2605.13807v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.13807v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural-network quantum states have emerged as a powerful variational framework for quantum many-body systems, with recent progress often driven by massively parallel architectures such as transformers. Recurrent neural network quantum states, however, are frequently regarded as intrinsically sequential and therefore less scalable. Here we revisit this view by showing that modern recurrent architectures can support fast, accurate, and computationally accessible neural quantum state simulations. Using autoregressive recurrent wave functions together with recent advances in parallelizable recurrence, we develop variational ansätze, called parallel scan recurrent neural quantum states (PSR-NQS), which can be trained efficiently within variational Monte Carlo in one and two spatial dimensions. We demonstrate accurate benchmark results and show that, with iterative retraining, our approach reaches two-dimensional spin lattices as large as $52\times52$ while remaining in agreement with available quantum Monte Carlo data. Our results establish recurrent architectures as a practical and promising route toward scalable neural quantum state simulations with modest computational resources.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-13T17:36:32Z</published>
+    <arxiv:comment>13 pages, 2 figures, 6 tables</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Ejaaz Merali</name>
+    </author>
+    <author>
+      <name>Mohamed Hibat-Allah</name>
+    </author>
+    <author>
+      <name>Mohammad Kohandel</name>
+    </author>
+    <author>
+      <name>Richard T. Scalettar</name>
+    </author>
+    <author>
+      <name>Ehsan Khatami</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.15888v2</id>
+    <title>Enhancing Neural-Network Variational Monte Carlo through Basis Transformation</title>
+    <updated>2026-06-03T04:14:02Z</updated>
+    <link href="https://arxiv.org/abs/2604.15888v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.15888v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural-network variational Monte Carlo (NNVMC) has emerged as a powerful tool for solving quantum many-body problems, yet systematic pathways for improving its accuracy remain largely heuristic. Here, we introduce a physically motivated basis transformation for NNVMC that enhances variational expressivity without increasing the complexity of the neural-network ansatz itself. By formulating the many-body wave function in a Gaussian basis, we introduce a single learnable locality parameter, $α$, that reshapes the target ground state into a more learnable representation. This approach introduces minimal computational overhead and can be readily combined with existing neural-network architectures. Using the three-dimensional homogeneous electron gas as a benchmark, we show that the optimized basis transformation consistently lowers the variational energy for both FermiNet and message-passing neural-network architectures. Notably, for the latter, it enables a more precise determination of the Fermi liquid to Wigner crystal phase transition. More broadly, our results highlight basis transformation as a new route to improving NNVMC in continuous space, showing that accuracy can be enhanced not only by refining the ansatz but also by making the target ground state easier to represent.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-17T09:35:13Z</published>
+    <arxiv:comment>7+17 pages, 4+4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Zhixuan Liu</name>
+    </author>
+    <author>
+      <name>Dongheng Qian</name>
+    </author>
+    <author>
+      <name>Jing Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.03031v1</id>
+    <title>Physics-inspired transformer quantum states via latent imaginary-time evolution</title>
+    <updated>2026-02-03T02:59:56Z</updated>
+    <link href="https://arxiv.org/abs/2602.03031v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.03031v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) are powerful ansätze in the variational Monte Carlo framework, yet their architectures are often treated as black boxes. We propose a physically transparent framework in which NQS are treated as neural approximations to latent imaginary-time evolution. This viewpoint suggests that standard Transformer-based NQS (TQS) architectures correspond to physically unmotivated effective Hamiltonians dependent on imaginary time in a latent space. Building on this interpretation, we introduce physics-inspired transformer quantum states (PITQS), which enforce a static effective Hamiltonian by sharing weights across layers and improve propagation accuracy via Trotter-Suzuki decompositions without increasing the number of variational parameters. For the frustrated $J_1$-$J_2$ Heisenberg model, our ansätze achieve accuracies comparable to or exceeding state-of-the-art TQS while using substantially fewer variational parameters. This study demonstrates that reinterpreting the deep network structure as a latent cooling process enables a more physically grounded, systematic, and compact design, thereby bridging the gap between black-box expressivity and physically transparent construction.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-03T02:59:56Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Kimihiro Yamazaki</name>
+    </author>
+    <author>
+      <name>Itsushi Sakata</name>
+    </author>
+    <author>
+      <name>Takuya Konishi</name>
+    </author>
+    <author>
+      <name>Yoshinobu Kawahara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.02665v1</id>
+    <title>Approaching the Thermodynamic Limit with Neural-Network Quantum States</title>
+    <updated>2026-02-02T19:00:05Z</updated>
+    <link href="https://arxiv.org/abs/2602.02665v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.02665v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accessing the thermodynamic-limit properties of strongly correlated quantum matter requires simulations on very large lattices, a regime that remains challenging for numerical methods, especially in frustrated two-dimensional systems. We introduce the Spatial Attention mechanism, a minimal and physically interpretable inductive bias for Neural-Network Quantum States, implemented as a single learned length scale within the Transformer architecture. This bias stabilizes large-scale optimization and enables access to thermodynamic-limit physics through highly accurate simulations on unprecedented system sizes within the Variational Monte Carlo framework. Applied to the spin-$\tfrac12$ triangular-lattice Heisenberg antiferromagnet, our approach achieves state-of-the-art results on clusters of up to $42\times42$ sites. The ability to simulate such large systems allows controlled finite-size scaling of energies and order parameters, enabling the extraction of experimentally relevant quantities such as spin-wave velocities and uniform susceptibilities. In turn, we find extrapolated thermodynamic limit energies systematically better than those obtained with tensor-network approaches such as iPEPS. The resulting magnetization is strongly renormalized, $M_0=0.148(1)$ (about $30\%$ of the classical value), revealing that less accurate variational states systematically overestimate magnetic order. Analysis of the optimized wave function further suggests an intrinsically non-local sign structure, indicating that the sign problem cannot be removed by local basis transformations. We finally demonstrate the generality of the method by obtaining state-of-the-art energies for a $J_1$-$J_2$ Heisenberg model on a $20\times20$ square lattice, outperforming Residual Convolutional Neural Networks.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-02T19:00:05Z</published>
+    <arxiv:comment>10 pages, 8 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Luciano Loris Viteritti</name>
+    </author>
+    <author>
+      <name>Riccardo Rende</name>
+    </author>
+    <author>
+      <name>Subir Sachdev</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.12365v3</id>
+    <title>Entanglement and optimization within autoregressive neural quantum states</title>
+    <updated>2026-02-10T18:54:44Z</updated>
+    <link href="https://arxiv.org/abs/2509.12365v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.12365v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQSs) are powerful variational ansätze capable of representing highly entangled quantum many-body wavefunctions. While the average entanglement properties of ensembles of restricted Boltzmann machines are well understood, the entanglement structure of autoregressive NQSs such as recurrent neural networks and transformers remains largely unexplored. We perform large-scale simulations of ensembles of random autoregressive wavefunctions for chains of up to $256$ spins and uncover signatures of transitions in their average entanglement scaling, entanglement spectra, and correlation functions. We show that the standard softmax normalization of the wavefunction suppresses entanglement and fluctuations, and introduce a square modulus normalization function that restores them. Finally, we connect the insights gained from our entanglement and activation function analysis to initialization strategies for finding the ground states of strongly correlated Hamiltonians via variational Monte Carlo.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-15T18:59:19Z</published>
+    <arxiv:comment>24 pages, 17 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Research 8, 013147 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Andrew Jreissaty</name>
+    </author>
+    <author>
+      <name>Hang Zhang</name>
+    </author>
+    <author>
+      <name>Jairo C. Quijano</name>
+    </author>
+    <author>
+      <name>Juan Carrasquilla</name>
+    </author>
+    <author>
+      <name>Roeland Wiersema</name>
+    </author>
+    <arxiv:doi>10.1103/t2cg-kr7y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/t2cg-kr7y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.20406v3</id>
+    <title>Leveraging recurrence in neural network wavefunctions for large-scale simulations of Heisenberg antiferromagnets on the triangular lattice</title>
+    <updated>2025-10-13T15:55:48Z</updated>
+    <link href="https://arxiv.org/abs/2505.20406v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.20406v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational Monte Carlo simulations have been crucial for understanding quantum many-body systems, especially when the Hamiltonian is frustrated and the ground-state wavefunction has a non-trivial sign structure. In this paper, we use recurrent neural network (RNN) wavefunction ansätze to study the triangular-lattice antiferromagnetic Heisenberg model (TLAHM) for lattice sizes up to $30\times30$. In a recent study [M. S. Moss et al. arXiv:2502.17144], the authors demonstrated how RNN wavefunctions can be iteratively retrained in order to obtain variational results for multiple lattice sizes with a reasonable amount of compute. That study, which looked at the sign-free, square-lattice antiferromagnetic Heisenberg model, showed favorable scaling properties, allowing accurate finite-size extrapolations to the thermodynamic limit. In contrast, our present results illustrate in detail the relative difficulty in simulating the sign-problematic TLAHM. We find that the accuracy of our simulations can be significantly improved by transforming the Hamiltonian with a judicious choice of basis rotation. We also show that a similar benefit can be achieved by using variational neural annealing, an alternative optimization technique that minimizes a pseudo free energy. Ultimately, we are able to obtain estimates of the ground-state properties of the TLAHM in the thermodynamic limit that are in close agreement with values in the literature, showing that RNN wavefunctions provide a powerful toolbox for performing finite-size scaling studies for frustrated quantum many-body systems.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-26T18:00:20Z</published>
+    <arxiv:comment>24 pages, 16 figures, 6 tables</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>M. Schuyler Moss</name>
+    </author>
+    <author>
+      <name>Roeland Wiersema</name>
+    </author>
+    <author>
+      <name>Mohamed Hibat-Allah</name>
+    </author>
+    <author>
+      <name>Juan Carrasquilla</name>
+    </author>
+    <author>
+      <name>Roger G. Melko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.20195v1</id>
+    <title>Nuclear responses with neural-network quantum states</title>
+    <updated>2025-04-28T18:57:21Z</updated>
+    <link href="https://arxiv.org/abs/2504.20195v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.20195v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a variational Monte Carlo framework that combines neural-network quantum states with the Lorentz integral transform technique to compute the dynamical properties of self-bound quantum many-body systems in continuous Hilbert spaces. While broadly applicable to various quantum systems, including atoms and molecules, in this initial application we focus on the photoabsorption cross section of light nuclei, where benchmarks against numerically exact techniques are available. Our accurate theoretical predictions are complemented by robust uncertainty quantification, enabling meaningful comparisons with experiments. We demonstrate that a simple nuclear Hamiltonian, based on a leading-order pionless effective field theory expansion and known to accurately reproduce the ground-state energies of nuclei with $A\leq 20$ nucleons also provides a reliable description of the photoabsorption cross section.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-28T18:57:21Z</published>
+    <arxiv:comment>6 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>Elad Parnes</name>
+    </author>
+    <author>
+      <name>Nir Barnea</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <author>
+      <name>Alessandro Lovato</name>
+    </author>
+    <author>
+      <name>Noemi Rocco</name>
+    </author>
+    <author>
+      <name>Xilin Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.18480v1</id>
+    <title>Nature of the 1/3 Magnetization Plateau in Spin-1/2 Kagome Antiferromagnets</title>
+    <updated>2025-04-25T16:38:38Z</updated>
+    <link href="https://arxiv.org/abs/2504.18480v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.18480v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the origin of the 1/3 magnetization plateau in the $S=1/2$ kagome antiferromagnetic Heisenberg model using the variational Monte Carlo and exact diagonalization methods, to account for the recent experimental observations in YCu$_3$(OH)$_{6+x}$Br$_{3-x}$ and YCu$_3$(OD)$_{6+x}$Br$_{3-x}$. We identify three degenerate valence-bond-solid (VBS) states forming a $\sqrt{3} \times \sqrt{3}$ unit cell. These states exhibit David-star patterns in the spin moment distribution with only two fractional values $-1/3$ and $2/3$, and are related through translational transformations. While the spin correlations in these VBS states are found to be short-range, resembling a quantum spin liquid, we show that they have a vanishing topological entanglement entropy and thus are topologically trivial many-body states. Our theoretical results provide strong evidence that the 1/3 magnetization plateau observed in recent experiments arises from these $\sqrt{3} \times \sqrt{3}$ VBS states with fractional spin moments.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-25T16:38:38Z</published>
+    <arxiv:comment>submmited to Chinese Physics Letters</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Chin. Phys. Lett. 42, 090704 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Li-Wei He</name>
+    </author>
+    <author>
+      <name>Xinzhe Wang</name>
+    </author>
+    <author>
+      <name>Shun-Li Yu</name>
+    </author>
+    <author>
+      <name>Jian-Xin Li</name>
+    </author>
+    <arxiv:doi>10.1088/0256-307X/42/9/090704</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0256-307X/42/9/090704" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.05383v3</id>
+    <title>Is attention all you need to solve the correlated electron problem?</title>
+    <updated>2025-06-14T19:39:10Z</updated>
+    <link href="https://arxiv.org/abs/2502.05383v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.05383v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The attention mechanism has transformed artificial intelligence research by its ability to learn relations between objects. In this work, we explore how a many-body wavefunction ansatz constructed from a large-parameter self-attention neural network can be used to solve the interacting electron problem in solids. By a systematic neural-network variational Monte Carlo study on a moiré quantum material, we demonstrate that the self-attention ansatz provides an accurate and efficient solution without human bias. Moreover, our numerical study finds that the required number of variational parameters scales roughly as $N^2$ with the number of electrons, which opens a path towards efficient large-scale simulations.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-07T23:41:41Z</published>
+    <arxiv:comment>10+5 pages, comments welcome; v2: update refs, extend ED results; v3: minor updates</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 112, 045119 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Max Geier</name>
+    </author>
+    <author>
+      <name>Khachatur Nazaryan</name>
+    </author>
+    <author>
+      <name>Timothy Zaklama</name>
+    </author>
+    <author>
+      <name>Liang Fu</name>
+    </author>
+    <arxiv:doi>10.1103/qxc3-bkc7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/qxc3-bkc7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.12248v1</id>
+    <title>Physics-informed Transformers for Electronic Quantum States</title>
+    <updated>2024-12-16T19:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2412.12248v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.12248v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural-network-based variational quantum states in general, and more recently autoregressive models in particular, have proven to be powerful tools to describe complex many-body wave functions. However, their performance crucially depends on the computational basis chosen and they often lack physical interpretability. To mitigate these issues, we here propose a modified variational Monte-Carlo framework which leverages prior physical information to construct a computational second-quantized basis containing a reference state that serves as a rough approximation to the true ground state. In this basis, a Transformer is used to parametrize and autoregressively sample the corrections to the reference state, giving rise to a more interpretable and computationally efficient representation of the ground state. We demonstrate this approach using a non-sparse fermionic model featuring a metal-insulator transition and employing Hartree-Fock and a strong-coupling limit to define physics-informed bases. We also show that the Transformer's hidden representation captures the natural energetic order of the different basis states. This work paves the way for more efficient and interpretable neural quantum-state representations.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-16T19:00:00Z</published>
+    <arxiv:comment>9+10 pages, 4+5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Nat. Commun. 16, 10811 (2025)</arxiv:journal_ref>
+    <author>
+      <name>João Augusto Sobral</name>
+    </author>
+    <author>
+      <name>Michael Perle</name>
+    </author>
+    <author>
+      <name>Mathias S. Scheurer</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-025-66844-z</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-025-66844-z" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.03900v1</id>
+    <title>Retentive Neural Quantum States: Efficient Ansätze for Ab Initio Quantum Chemistry</title>
+    <updated>2024-11-06T13:24:34Z</updated>
+    <link href="https://arxiv.org/abs/2411.03900v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.03900v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural-network quantum states (NQS) has emerged as a powerful application of quantum-inspired deep learning for variational Monte Carlo methods, offering a competitive alternative to existing techniques for identifying ground states of quantum problems. A significant advancement toward improving the practical scalability of NQS has been the incorporation of autoregressive models, most recently transformers, as variational ansatze. Transformers learn sequence information with greater expressiveness than recurrent models, but at the cost of increased time complexity with respect to sequence length. We explore the use of the retentive network (RetNet), a recurrent alternative to transformers, as an ansatz for solving electronic ground state problems in $\textit{ab initio}$ quantum chemistry. Unlike transformers, RetNets overcome this time complexity bottleneck by processing data in parallel during training, and recurrently during inference. We give a simple computational cost estimate of the RetNet and directly compare it with similar estimates for transformers, establishing a clear threshold ratio of problem-to-model size past which the RetNet's time complexity outperforms that of the transformer. Though this efficiency can comes at the expense of decreased expressiveness relative to the transformer, we overcome this gap through training strategies that leverage the autoregressive structure of the model -- namely, variational neural annealing. Our findings support the RetNet as a means of improving the time complexity of NQS without sacrificing accuracy. We provide further evidence that the ablative improvements of neural annealing extend beyond the RetNet architecture, suggesting it would serve as an effective general training strategy for autoregressive NQS.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-06T13:24:34Z</published>
+    <arxiv:comment>16 pages, 1 figure, to be submitted for peer-reviewed publication</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Oliver Knitter</name>
+    </author>
+    <author>
+      <name>Dan Zhao</name>
+    </author>
+    <author>
+      <name>James Stokes</name>
+    </author>
+    <author>
+      <name>Martin Ganahl</name>
+    </author>
+    <author>
+      <name>Stefan Leichenauer</name>
+    </author>
+    <author>
+      <name>Shravan Veerapaneni</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.06415v1</id>
+    <title>Simulating continuous-space systems with quantum-classical wave functions</title>
+    <updated>2024-09-10T10:54:59Z</updated>
+    <link href="https://arxiv.org/abs/2409.06415v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.06415v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Most non-relativistic interacting quantum many-body systems, such as atomic and molecular ensembles or materials, are naturally described in terms of continuous-space Hamiltonians. The simulation of their ground-state properties on digital quantum computers is challenging because current algorithms require discretization, which usually amounts to choosing a finite basis set, inevitably introducing errors. In this work, we propose an alternative, discretization-free approach that combines classical and quantum resources in a global variational ansatz, optimized using the framework of variational Monte Carlo. We introduce both purely quantum as well as hybrid quantum-classical ansatze and benchmark them on three paradigmatic continuous-space systems that are either very challenging or beyond the reach of current quantum approaches: the one-dimensional quantum rotor model, a system of Helium-3 particles in one and two dimensions, and the two-dimensional homogeneous electron gas. We embed relevant constraints such as the antisymmetry of fermionic wave functions directly into the ansatz. Many-body correlations are introduced via backflow transformations represented by parameterized quantum circuits. We demonstrate that the accuracy of the simulation can be systematically improved by increasing the number of circuit parameters and study the effects of shot noise. Furthermore, we show that the hybrid ansatz improves the ground-state energies obtained using the purely classical wave function.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-10T10:54:59Z</published>
+    <arxiv:comment>10 pages, 6 figures. App: 8 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Friederike Metz</name>
+    </author>
+    <author>
+      <name>Gabriel Pescia</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.13050v1</id>
+    <title>Vision Transformer Neural Quantum States for Impurity Models</title>
+    <updated>2024-08-23T13:16:08Z</updated>
+    <link href="https://arxiv.org/abs/2408.13050v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.13050v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transformer neural networks, known for their ability to recognize complex patterns in high-dimensional data, offer a promising framework for capturing many-body correlations in quantum systems. We employ an adapted Vision Transformer (ViT) architecture to model quantum impurity models, optimizing it with a subspace expansion scheme that surpasses conventional variational Monte Carlo in both accuracy and efficiency. Benchmarks against matrix product states in single- and three-orbital Anderson impurity models show that these ViT-based neural quantum states achieve comparable or superior accuracy with significantly fewer variational parameters. We further extend our approach to compute dynamical quantities by constructing a restricted excitation space that effectively captures relevant physical processes, yielding accurate core-level X-ray absorption spectra. These findings highlight the potential of ViT-based neural quantum states for accurate and efficient modeling of quantum impurity models.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-23T13:16:08Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Xiaodong Cao</name>
+    </author>
+    <author>
+      <name>Zhicheng Zhong</name>
+    </author>
+    <author>
+      <name>Yi Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.07447v3</id>
+    <title>Ab-initio variational wave functions for the time-dependent many-electron Schrödinger equation</title>
+    <updated>2024-11-06T08:38:14Z</updated>
+    <link href="https://arxiv.org/abs/2403.07447v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.07447v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Understanding the real-time evolution of many-electron quantum systems is essential for studying dynamical properties in condensed matter, quantum chemistry, and complex materials, yet it poses a significant theoretical and computational challenge. Our work introduces a variational approach for fermionic time-dependent wave functions, surpassing mean-field approximations by accurately capturing many-body correlations. Therefore, we employ time-dependent Jastrow factors and backflow transformations, which are enhanced through neural networks parameterizations. To compute the optimal time-dependent parameters, we utilize the time-dependent variational Monte Carlo technique and a new method based on Taylor-root expansions of the propagator, enhancing the accuracy of our simulations. The approach is demonstrated in three distinct systems. In all cases, we show clear signatures of many-body correlations in the dynamics. The results showcase the ability of our variational approach to accurately capture the time evolution, providing insight into the quantum dynamics of interacting electronic systems, beyond the capabilities of mean-field.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-12T09:37:22Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Nature Communications 15, 9404 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Jannes Nys</name>
+    </author>
+    <author>
+      <name>Gabriel Pescia</name>
+    </author>
+    <author>
+      <name>Alessandro Sinibaldi</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-024-53672-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-024-53672-w" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.16848v3</id>
+    <title>Accurate Computation of Quantum Excited States with Neural Networks</title>
+    <updated>2024-09-03T11:53:01Z</updated>
+    <link href="https://arxiv.org/abs/2308.16848v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.16848v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a variational Monte Carlo algorithm for estimating the lowest excited states of a quantum system which is a natural generalization of the estimation of ground states. The method has no free parameters and requires no explicit orthogonalization of the different states, instead transforming the problem of finding excited states of a given system into that of finding the ground state of an expanded system. Expected values of arbitrary observables can be calculated, including off-diagonal expectations between different states such as the transition dipole moment. Although the method is entirely general, it works particularly well in conjunction with recent work on using neural networks as variational Ansätze for many-electron systems, and we show that by combining this method with the FermiNet and Psiformer Ansätze we can accurately recover vertical excitation energies and oscillator strengths on a range of molecules. Our method is the first deep learning approach to achieve accurate vertical excitation energies, including challenging double excitations, on benzene-scale molecules. Beyond the chemistry examples here, we expect this technique will be of great interest for applications to atomic, nuclear and condensed matter physics.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-31T16:27:08Z</published>
+    <arxiv:comment>The content of this version is identical to the manuscript draft which was sent to Science on May 17th 2024</arxiv:comment>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <arxiv:journal_ref>Science 385, 6711 (2024)</arxiv:journal_ref>
+    <author>
+      <name>David Pfau</name>
+    </author>
+    <author>
+      <name>Simon Axelrod</name>
+    </author>
+    <author>
+      <name>Halvard Sutterud</name>
+    </author>
+    <author>
+      <name>Ingrid von Glehn</name>
+    </author>
+    <author>
+      <name>James S. Spencer</name>
+    </author>
+    <arxiv:doi>10.1126/science.adn0137</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1126/science.adn0137" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.16705v3</id>
+    <title>NNQS-Transformer: an Efficient and Scalable Neural Network Quantum States Approach for Ab initio Quantum Chemistry</title>
+    <updated>2023-11-01T16:01:20Z</updated>
+    <link href="https://arxiv.org/abs/2306.16705v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.16705v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural network quantum state (NNQS) has emerged as a promising candidate for quantum many-body problems, but its practical applications are often hindered by the high cost of sampling and local energy calculation. We develop a high-performance NNQS method for \textit{ab initio} electronic structure calculations. The major innovations include: (1) A transformer based architecture as the quantum wave function ansatz; (2) A data-centric parallelization scheme for the variational Monte Carlo (VMC) algorithm which preserves data locality and well adapts for different computing architectures; (3) A parallel batch sampling strategy which reduces the sampling cost and achieves good load balance; (4) A parallel local energy evaluation scheme which is both memory and computationally efficient; (5) Study of real chemical systems demonstrates both the superior accuracy of our method compared to state-of-the-art and the strong and weak scalability for large molecular systems with up to $120$ spin orbitals.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-29T06:04:43Z</published>
+    <arxiv:comment>Accepted by SC'23, fix Table1 CCSD references</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Yangjun Wu</name>
+    </author>
+    <author>
+      <name>Chu Guo</name>
+    </author>
+    <author>
+      <name>Yi Fan</name>
+    </author>
+    <author>
+      <name>Pengyu Zhou</name>
+    </author>
+    <author>
+      <name>Honghui Shang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.11588v2</id>
+    <title>Enhancing the Expressivity of Variational Neural, and Hardware-Efficient Quantum States Through Orbital Rotations</title>
+    <updated>2023-10-09T16:38:07Z</updated>
+    <link href="https://arxiv.org/abs/2302.11588v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.11588v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational approaches, such as variational Monte Carlo (VMC) or the variational quantum eigensolver (VQE), are powerful techniques to tackle the ground-state many-electron problem. Often, the family of variational states is not invariant under the reparametrization of the Hamiltonian by single-particle basis transformations. As a consequence, the representability of the ground-state wave function by the variational ansatz strongly dependents on the choice of the single-particle basis. In this manuscript we study the joint optimization of the single-particle basis, together with the variational state in the VMC (with neural quantum states) and VQE (with hardware-efficient circuits) approaches. We show that the joint optimization of the single-particle basis with the variational state parameters yields significant improvements in the expressive power and optimization landscape in a variety of chemistry and condensed matter systems. We also realize the first active-space calculation using neural quantum states, where the single-particle basis transformations are applied to all of the orbitals in the basis set.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.other" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-22T19:00:03Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Javier Robledo Moreno</name>
+    </author>
+    <author>
+      <name>Jeffrey Cohn</name>
+    </author>
+    <author>
+      <name>Dries Sels</name>
+    </author>
+    <author>
+      <name>Mario Motta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.00733v2</id>
+    <title>Variational solutions to fermion-to-qubit mappings in two spatial dimensions</title>
+    <updated>2022-10-05T09:39:08Z</updated>
+    <link href="https://arxiv.org/abs/2205.00733v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.00733v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Through the introduction of auxiliary fermions, or an enlarged spin space, one can map local fermion Hamiltonians onto local spin Hamiltonians, at the expense of introducing a set of additional constraints. We present a variational Monte-Carlo framework to study fermionic systems through higher-dimensional (&gt;1D) Jordan-Wigner transformations. We provide exact solutions to the parity and Gauss-law constraints that are encountered in bosonization procedures. We study the $t$-$V$ model in 2D and demonstrate how both the ground state and the low-energy excitation spectra can be retrieved in combination with neural network quantum state ansatze.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-02T08:38:00Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Quantum 6, 833 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Jannes Nys</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <arxiv:doi>10.22331/q-2022-10-13-833</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2022-10-13-833" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.00810v1</id>
+    <title>Matrix Product States with Backflow correlations</title>
+    <updated>2022-01-03T18:57:29Z</updated>
+    <link href="https://arxiv.org/abs/2201.00810v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.00810v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By taking inspiration from the backflow transformation for correlated systems, we introduce a novel tensor network ansatz which extend the well-established Matrix Product State representation of a quantum-many body wave function. This new structure provides enough resources to ensure that states in dimension larger or equal than one obey an area law for entanglement. It can be efficiently manipulated to address the ground-state search problem by means of an optimization scheme which mixes tensor-network and variational Monte-Carlo algorithms. We benchmark the new ansatz against spin models both in one and two dimensions, demonstrating high accuracy and precision. We finally employ our approach to study the challenging $S=1/2$ two dimensional $J_1 - J_2$ model, demonstrating that it is competitive with the state of the art methods in 2D.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-03T18:57:29Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Guglielmo Lami</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <author>
+      <name>Mario Collura</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.106.L081111</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.106.L081111" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.12234v1</id>
+    <title>Space-warp coordinate transformation for efficient ionic force calculations in quantum Monte Carlo</title>
+    <updated>2021-10-23T14:40:38Z</updated>
+    <link href="https://arxiv.org/abs/2110.12234v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.12234v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ab-initio quantum Monte Carlo (QMC) methods are a state-of-the-art computational approach to obtaining highly accurate many-body wave functions. Although QMC methods are widely used in physics and chemistry to compute ground-state energies, calculation of atomic forces is still under technical/algorithmic development. Very recently, force evaluation has started to become of paramount importance for the generation of machine-learning force-field potentials. Nevertheless, there is no consensus regarding whether an efficient algorithm is available for the QMC force evaluation, namely one that scales well with the number of electrons and the atomic numbers. In this study, we benchmark the accuracy of all-electron variational Monte Carlo (VMC) and lattice-regularized diffusion Monte Carlo (LRDMC) forces for various mono- and heteronuclear dimers. The VMC and LRDMC forces were calculated with and without the so-called space-warp coordinate transformation (SWCT) and appropriate regularization techniques to remove the infinite variance problem. The LRDMC forces were computed with the Reynolds (RE) and variational-drift (VD) approximations. The potential energy surfaces obtained from the LRDMC energies give equilibrium bond lengths ($r_{\rm eq}$) and harmonic frequencies ($ω$) very close to the experimental values for all dimers, improving the corresponding VMC results. The LRDMC forces improve the VMC forces, implying that it is worth computing the DMC forces beyond VMC in spite of the higher computational cost. We find that the ratio of computational costs between QMC energy and forces scales as $Z^{\sim 2.5}$ without the SWCT. In contrast, the application of the SWCT makes the ratio {\it independent} of $Z$. As such, the accessible QMC system size is not affected by the evaluation of ionic forces but governed by the same scaling as the total energy one.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-23T14:40:38Z</published>
+    <arxiv:comment>31 pages</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Kousuke Nakano</name>
+    </author>
+    <author>
+      <name>Abhishek Raghav</name>
+    </author>
+    <author>
+      <name>Sandro Sorella</name>
+    </author>
+    <arxiv:doi>10.1063/5.0076302</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0076302" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.05803v2</id>
+    <title>Fully self-consistent optimization of the Jastrow-Slater-type wave function using a similarity-transformed Hamiltonian</title>
+    <updated>2023-09-11T01:10:13Z</updated>
+    <link href="https://arxiv.org/abs/2109.05803v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.05803v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It has been well established that the Jastrow correlation factor can effectively capture the electron correlation effects, and thus, the efficient optimization of the many-body wave function including the Jastrow correlation factor is of great importance. For this purpose, the transcorrelated $+$ variational Monte Carlo (TC$+$VMC) method is one of the promising methods, where the one-electron orbitals in the Slater determinant and the Jastrow factor are self-consistently optimized in the TC and VMC methods, respectively. In particular, the TC method is based on similarity-transformation of the Hamitonian by the Jastrow factor, which enables the efficient optimization of the one-electron orbitals under the effective interaction. Through test calculations of some closed-shell atoms, He, Be, and Ne, we find that the total energy is in many cases systematically improved by using better Jastrow functions. We find that even a one-shot TC$+$VMC calculation, where the Jastrow parameters are optimized at the Hartree-Fock$+$VMC level, can yield partial benefits from orbital optimization. It is also suggested that one-shot TC$+$VMC can be a good alternative way for complex systems. Our study provides important insights for optimizing many-body wave function including the Jastrow correlation factor, which would be of great help for development of highly accurate electronic structure calculations.</summary>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-13T09:28:41Z</published>
+    <arxiv:comment>19 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.atom-ph"/>
+    <arxiv:journal_ref>Physical Review A 108, 032806 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Masayuki Ochi</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.108.032806</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.108.032806" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.09218v1</id>
+    <title>Energy derivatives in real-space diffusion Monte Carlo</title>
+    <updated>2021-05-19T15:57:20Z</updated>
+    <link href="https://arxiv.org/abs/2105.09218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.09218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present unbiased, finite--variance estimators of energy derivatives for real--space diffusion Monte Carlo calculations within the fixed--node approximation. The derivative $d_λE$ is fully consistent with the dependence $E(λ)$ of the energy computed with the same time step. We address the issue of the divergent variance of derivatives related to variations of the nodes of the wave function, both by using a regularization for wave function parameter gradients recently proposed in variational Monte Carlo, and by introducing a regularization based on a coordinate transformation. The essence of the divergent variance problem is distilled into a particle-in-a-box toy model, where we demonstrate the algorithm.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-19T15:57:20Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jesse van Rhijn</name>
+    </author>
+    <author>
+      <name>Claudia Filippi</name>
+    </author>
+    <author>
+      <name>Stefania De Palo</name>
+    </author>
+    <author>
+      <name>Saverio Moroni</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1909.06050v2</id>
+    <title>Superfluid weight and polarization amplitude in the one-dimensional bosonic Hubbard model</title>
+    <updated>2019-11-10T19:36:17Z</updated>
+    <link href="https://arxiv.org/abs/1909.06050v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1909.06050v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We calculate the superfluid weight and the polarization amplitude for the one-dimensional bosonic Hubbard model focusing on the strong-coupling regime. Other than analytic calculations we apply two methods: variational Monte Carlo based on the Baeriswyl wave function and exact diagonalization. The former gives zero superfluid response at integer filling, while the latter gives a superfluid response at finite hopping. From the polarization amplitude we derive the variance and the associated size scaling exponent. Again, the variational study does not produce a finite superfluid weight at integer filling (size scaling exponent is near one), but the Fourier transform of the polarization amplitude behaves in a similar way to the result of exact diagonalization, with a peak at small hopping, and suddenly decreasing at the insulator-superfluid transition. On the other hand, exact diagonalization studies result in a finite spread of the total position which increases with the size of the system. In the superfluid phase the size scaling exponent is two as expected. Importantly, our work addresses the ambiguities that arise in the calculation of the superfluid weight in variational calculations, and we comment on the prediction of Anderson about the superfluid response of the model at integer filling.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-09-13T06:11:17Z</published>
+    <arxiv:comment>rewritten, somewhat shortened in response to the critique of a referee</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <arxiv:journal_ref>Phys. Rev. B 100, 174517 (2019)</arxiv:journal_ref>
+    <author>
+      <name>B. Hetényi</name>
+    </author>
+    <author>
+      <name>L. M. Martelo</name>
+    </author>
+    <author>
+      <name>B. Tanatar</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.100.174517</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.100.174517" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.07325v2</id>
+    <title>Correlation effects on the magnetization process of the Kitaev model</title>
+    <updated>2020-01-28T02:08:09Z</updated>
+    <link href="https://arxiv.org/abs/1906.07325v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.07325v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By using the variational Monte Carlo method, we study the magnetization process of the Kitaev honeycomb model in a magnetic field. Our trial wavefunction is a generalized Bardeen-Cooper-Schrieffer wave function with the Jastrow correlation factor, which exactly describes the ground state of the Kitaev model at zero magnetic field using the Jordan-Wigner (JW) transformation. We find that two phase transitions occur for the antiferromagnetic Kitaev coupling, while only one phase transition occurs for the ferromagnetic Kitaev coupling. For the antiferromagnetic Kitaev coupling, we also find that the topology of the momentum distribution of the JW fermions changes at the transition point from the Kitaev spin liquid to an intermediate state. Our numerical results indicate that the intermediate state between the Kitaev spin liquid and the fully polarized phases stably exists in the bulk system on two dimensions for the antiferromagnetic Kitaev coupling against many-body correlations.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-18T01:08:47Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 101, 045121 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Kota Ido</name>
+    </author>
+    <author>
+      <name>Takahiro Misawa</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.101.045121</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.101.045121" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.00864v1</id>
+    <title>A unified theory of variational and quantum Monte Carlo methods and beyond</title>
+    <updated>2018-10-01T17:58:20Z</updated>
+    <link href="https://arxiv.org/abs/1810.00864v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.00864v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a unified theory of the variational Monte Carlo (VMC) and determinant quantum Monte Carlo (DQMC) methods using a novel density matrix formulation of VMC. We introduce an efficient algorithm for VMC to compute correlation functions and expectation values based on the auxiliary field Hirsch-Hubbard-Stratonovic transformation. We show that this new approach to VMC converges significantly faster than its traditional implementations. Furthermore, we generalize the Trotter-Suzuki decomposition to finite imaginary time steps $τ\sim O(1)$ and develop a variational quantum Monte Carlo (VQMC) method accordingly, which is more accurate than VMC and can incorporate quantum fluctuations more efficiently. The two extreme limits of the VQMC method, namely infinitesimal and infinite imaginary time steps, correspond to the DQMC and VMC techniques, respectively. We demonstrate that our VQMC allows us to access lower temperatures in comparison with the conventional DQMC before the sign problem comes into play. We finally show that our VQMC can also enhance the accuracy of the projector Monte Carlo methods by providing better and less biased candidates for the trial wave functions, requiring shorter projection times for a given accuracy and alleviating the sign problem further.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-01T17:58:20Z</published>
+    <arxiv:comment>10 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Mohammad-Sadegh Vaezi</name>
+    </author>
+    <author>
+      <name>Abolhassan Vaezi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1806.04750v4</id>
+    <title>Quantum Monte Carlo calculations of energy gaps from first principles</title>
+    <updated>2018-08-06T15:34:35Z</updated>
+    <link href="https://arxiv.org/abs/1806.04750v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1806.04750v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We review the use of continuum quantum Monte Carlo (QMC) methods for the calculation of energy gaps from first principles, and present a broad set of excited-state calculations carried out with the variational and fixed-node diffusion QMC methods on atoms, molecules, and solids. We propose a finite-size-error correction scheme for bulk energy gaps calculated in finite cells subject to periodic boundary conditions. We show that finite-size effects are qualitatively different in two-dimensional materials, demonstrating the effect in a QMC calculation of the band gap and exciton binding energy of monolayer phosphorene. We investigate the fixed-node errors in diffusion Monte Carlo gaps evaluated with Slater-Jastrow trial wave functions by examining the effects of backflow transformations, and also by considering the formation of restricted multideterminant expansions for excited-state wave functions. For several molecules, we examine the importance of structural relaxation in the excited state in determining excited-state energies. We study the feasibility of using variational Monte Carlo with backflow correlations to obtain accurate excited-state energies at reduced computational cost, finding that this approach can be valid. We find that diffusion Monte Carlo gap calculations can be performed with much larger time steps than are typically required to converge the total energy, at significantly diminished computational expense, but that in order to alleviate fixed-node errors in calculations on solids the inclusion of backflow correlations is sometimes necessary.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-06-12T20:19:27Z</published>
+    <arxiv:comment>24 pages, including 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Phys. Rev. B 98, 075122 (2018)</arxiv:journal_ref>
+    <author>
+      <name>Ryan J. Hunt</name>
+    </author>
+    <author>
+      <name>Marcin Szyniszewski</name>
+    </author>
+    <author>
+      <name>Genki I. Prayogo</name>
+    </author>
+    <author>
+      <name>Ryo Maezono</name>
+    </author>
+    <author>
+      <name>Neil D. Drummond</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.98.075122</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.98.075122" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1802.00044v3</id>
+    <title>SU(4)-symmetric spin-orbital liquids on the hyperhoneycomb lattice</title>
+    <updated>2018-10-24T12:50:08Z</updated>
+    <link href="https://arxiv.org/abs/1802.00044v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1802.00044v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the effective spin-orbital model that describes the magnetism of 4$d^1$ or 5$d^1$ Mott insulators in ideal tricoordinated lattices. In the limit of vanishing Hund's coupling, the model has an emergent SU(4) symmetry which is made explicit by means of a Klein transformation on pseudospin degrees of freedom. Taking the hyperhoneycomb lattice as an example, we employ parton constructions with fermionic representations of the pseudospin operators to investigate possible quantum spin-orbital liquid states. We then use variational Monte Carlo (VMC) methods to compute the energies of the projected wave functions. Our numerical results show that the lowest-energy quantum liquid corresponds to a zero-flux state with a Fermi surface of four-color fermionic partons. In spite of the Fermi surface, we demonstrate that this state is stable against tetramerization. A combination of linear flavor wave theory and VMC applied to the complete microscopic model also shows that this liquid state is stable against the formation of collinear long-range order.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-01-31T19:58:40Z</published>
+    <arxiv:comment>15 pages,11 figures. The updated version includes two corrections: the inclusion of neglected terms on the complete model (Eqs. (17)-(20)) and the assignment of the sublattices for the Klein transformation (this was presupposed in the first version, but incorrectly assigned). The stability of the QSOL was studied using a combination of LFWT and VMC</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 98, 195113 (2018)</arxiv:journal_ref>
+    <author>
+      <name>Willian M. H. Natori</name>
+    </author>
+    <author>
+      <name>Eric C. Andrade</name>
+    </author>
+    <author>
+      <name>Rodrigo G. Pereira</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.98.195113</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.98.195113" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0710.3362v1</id>
+    <title>Scale-renormalized matrix-product states for correlated quantum systems</title>
+    <updated>2007-10-17T17:59:42Z</updated>
+    <link href="https://arxiv.org/abs/0710.3362v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0710.3362v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A generalization of matrix product states (MPS) is introduced which is suitable for describing interacting quantum systems in two and three dimensions. These scale-renormalized matrix-product states (SR-MPS) are based on a course-graining of the lattice in which the blocks at each level are associated with matrix products that are further transformed (scale renormalized) with other matrices before they are assembled to form blocks at the next level. Using variational Monte Carlo simulations of the two-dimensional transverse-field Ising model as a test, it is shown that the SR-MPS converge much more rapidly with the matrix size than a standard MPS. It is also shown that the use of lattice-symmetries speeds up the convergence very significantly.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-10-17T17:59:42Z</published>
+    <arxiv:comment>4+ pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 101, 140603 (2008)</arxiv:journal_ref>
+    <author>
+      <name>Anders W. Sandvik</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.101.140603</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.101.140603" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/9911326v1</id>
+    <title>Correlated sampling in quantum Monte Carlo: a route to forces</title>
+    <updated>1999-11-20T20:15:25Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/9911326v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/9911326v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In order to find the equilibrium geometries of molecules and solids and to perform ab initio molecular dynamics, it is necessary to calculate the forces on the nuclei. We present a correlated sampling method to efficiently calculate numerical forces and potential energy surfaces in diffusion Monte Carlo. It employs a novel coordinate transformation, earlier used in variational Monte Carlo, to greatly reduce the statistical error. Results are presented for first-row diatomic molecules.</summary>
+    <category term="cond-mat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-11-20T20:15:25Z</published>
+    <arxiv:comment>5 pages, 2 postscript figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat"/>
+    <author>
+      <name>Claudia Filippi</name>
+      <arxiv:affiliation>UCC, Ireland</arxiv:affiliation>
+    </author>
+    <author>
+      <name>C. J. Umrigar</name>
+      <arxiv:affiliation>Cornell University</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.61.R16291</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.61.R16291" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/9801087v2</id>
+    <title>Curvilinear coordinates for full-core atoms</title>
+    <updated>1998-01-30T09:02:06Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/9801087v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/9801087v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Curvilinear coordinates, first introduced by F. Gygi for valence-only electronic systems within the local-density functional theory, can be used to describe both core and valence electrons in electronic-structure calculations. A simple and quite general coordinate transformation results in a large, yet affordable plane-wave energy cutoff for full-core systems (e.g., about 120 Ryd for carbon or silicon) within the local-density functional theory, and in a reduced correlation time for full-core variational Monte Carlo calculations. Numerical tests for isolated Li, C, and Si atoms are presented.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1998-01-10T14:11:14Z</published>
+    <arxiv:comment>14 pages, 8 Postscript figures; acknowledgements and two refs. added</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Proc of the VII Italian-Swiss Workshop (Cagliari 1997), Fiorentini and Meloni Eds</arxiv:journal_ref>
+    <author>
+      <name>A. Putrino</name>
+    </author>
+    <author>
+      <name>G. B. Bachelet</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/q9r/K5FKNwe9CyjULlTj5tP9x7U</id>
+  <title>arXiv Query: search_query=ti:"foundation model for atomistic materials chemistry"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-16T14:49:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22foundation+model+for+atomistic+materials+chemistry%22&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00096v3</id>
+    <title>A foundation model for atomistic materials chemistry</title>
+    <updated>2025-09-04T13:50:21Z</updated>
+    <link href="https://arxiv.org/abs/2401.00096v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.00096v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomistic simulations of matter, especially those that leverage first-principles (ab initio) electronic structure theory, provide a microscopic view of the world, underpinning much of our understanding of chemistry and materials science. Over the last decade or so, machine-learned force fields have transformed atomistic modeling by enabling simulations of ab initio quality over unprecedented time and length scales. However, early ML force fields have largely been limited by: (i) the substantial computational and human effort of developing and validating potentials for each particular system of interest; and (ii) a general lack of transferability from one chemical system to the next. Here we show that it is possible to create a general-purpose atomistic ML model, trained on a public dataset of moderate size, that is capable of running stable molecular dynamics for a wide range of molecules and materials. We demonstrate the power of the MACE-MP-0 model - and its qualitative and at times quantitative accuracy - on a diverse set of problems in the physical sciences, including properties of solids, liquids, gases, chemical reactions, interfaces and even the dynamics of a small protein. The model can be applied out of the box as a starting or "foundation" model for any atomistic system of interest and, when desired, can be fine-tuned on just a handful of application-specific data points to reach ab initio accuracy. Establishing that a stable force-field model can cover almost all materials changes atomistic modeling in a fundamental way: experienced users get reliable results much faster, and beginners face a lower barrier to entry. Foundation models thus represent a step towards democratising the revolution in atomic-scale modeling that has been brought about by ML force fields.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-29T23:08:59Z</published>
+    <arxiv:comment>154 pages, 83 figures, 80MB PDF</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Ilyes Batatia</name>
+    </author>
+    <author>
+      <name>Philipp Benner</name>
+    </author>
+    <author>
+      <name>Yuan Chiang</name>
+    </author>
+    <author>
+      <name>Alin M. Elena</name>
+    </author>
+    <author>
+      <name>Dávid P. Kovács</name>
+    </author>
+    <author>
+      <name>Janosh Riebesell</name>
+    </author>
+    <author>
+      <name>Xavier R. Advincula</name>
+    </author>
+    <author>
+      <name>Mark Asta</name>
+    </author>
+    <author>
+      <name>Matthew Avaylon</name>
+    </author>
+    <author>
+      <name>William J. Baldwin</name>
+    </author>
+    <author>
+      <name>Fabian Berger</name>
+    </author>
+    <author>
+      <name>Noam Bernstein</name>
+    </author>
+    <author>
+      <name>Arghya Bhowmik</name>
+    </author>
+    <author>
+      <name>Filippo Bigi</name>
+    </author>
+    <author>
+      <name>Samuel M. Blau</name>
+    </author>
+    <author>
+      <name>Vlad Cărare</name>
+    </author>
+    <author>
+      <name>Michele Ceriotti</name>
+    </author>
+    <author>
+      <name>Sanggyu Chong</name>
+    </author>
+    <author>
+      <name>James P. Darby</name>
+    </author>
+    <author>
+      <name>Sandip De</name>
+    </author>
+    <author>
+      <name>Flaviano Della Pia</name>
+    </author>
+    <author>
+      <name>Volker L. Deringer</name>
+    </author>
+    <author>
+      <name>Rokas Elijošius</name>
+    </author>
+    <author>
+      <name>Zakariya El-Machachi</name>
+    </author>
+    <author>
+      <name>Fabio Falcioni</name>
+    </author>
+    <author>
+      <name>Edvin Fako</name>
+    </author>
+    <author>
+      <name>Andrea C. Ferrari</name>
+    </author>
+    <author>
+      <name>John L. A. Gardner</name>
+    </author>
+    <author>
+      <name>Mikolaj J. Gawkowski</name>
+    </author>
+    <author>
+      <name>Annalena Genreith-Schriever</name>
+    </author>
+    <author>
+      <name>Janine George</name>
+    </author>
+    <author>
+      <name>Rhys E. A. Goodall</name>
+    </author>
+    <author>
+      <name>Jonas Grandel</name>
+    </author>
+    <author>
+      <name>Clare P. Grey</name>
+    </author>
+    <author>
+      <name>Petr Grigorev</name>
+    </author>
+    <author>
+      <name>Shuang Han</name>
+    </author>
+    <author>
+      <name>Will Handley</name>
+    </author>
+    <author>
+      <name>Hendrik H. Heenen</name>
+    </author>
+    <author>
+      <name>Kersti Hermansson</name>
+    </author>
+    <author>
+      <name>Christian Holm</name>
+    </author>
+    <author>
+      <name>Cheuk Hin Ho</name>
+    </author>
+    <author>
+      <name>Stephan Hofmann</name>
+    </author>
+    <author>
+      <name>Jad Jaafar</name>
+    </author>
+    <author>
+      <name>Konstantin S. Jakob</name>
+    </author>
+    <author>
+      <name>Hyunwook Jung</name>
+    </author>
+    <author>
+      <name>Venkat Kapil</name>
+    </author>
+    <author>
+      <name>Aaron D. Kaplan</name>
+    </author>
+    <author>
+      <name>Nima Karimitari</name>
+    </author>
+    <author>
+      <name>James R. Kermode</name>
+    </author>
+    <author>
+      <name>Panagiotis Kourtis</name>
+    </author>
+    <author>
+      <name>Namu Kroupa</name>
+    </author>
+    <author>
+      <name>Jolla Kullgren</name>
+    </author>
+    <author>
+      <name>Matthew C. Kuner</name>
+    </author>
+    <author>
+      <name>Domantas Kuryla</name>
+    </author>
+    <author>
+      <name>Guoda Liepuoniute</name>
+    </author>
+    <author>
+      <name>Chen Lin</name>
+    </author>
+    <author>
+      <name>Johannes T. Margraf</name>
+    </author>
+    <author>
+      <name>Ioan-Bogdan Magdău</name>
+    </author>
+    <author>
+      <name>Angelos Michaelides</name>
+    </author>
+    <author>
+      <name>J. Harry Moore</name>
+    </author>
+    <author>
+      <name>Aakash A. Naik</name>
+    </author>
+    <author>
+      <name>Samuel P. Niblett</name>
+    </author>
+    <author>
+      <name>Sam Walton Norwood</name>
+    </author>
+    <author>
+      <name>Niamh O'Neill</name>
+    </author>
+    <author>
+      <name>Christoph Ortner</name>
+    </author>
+    <author>
+      <name>Kristin A. Persson</name>
+    </author>
+    <author>
+      <name>Karsten Reuter</name>
+    </author>
+    <author>
+      <name>Andrew S. Rosen</name>
+    </author>
+    <author>
+      <name>Louise A. M. Rosset</name>
+    </author>
+    <author>
+      <name>Lars L. Schaaf</name>
+    </author>
+    <author>
+      <name>Christoph Schran</name>
+    </author>
+    <author>
+      <name>Benjamin X. Shi</name>
+    </author>
+    <author>
+      <name>Eric Sivonxay</name>
+    </author>
+    <author>
+      <name>Tamás K. Stenczel</name>
+    </author>
+    <author>
+      <name>Viktor Svahn</name>
+    </author>
+    <author>
+      <name>Christopher Sutton</name>
+    </author>
+    <author>
+      <name>Thomas D. Swinburne</name>
+    </author>
+    <author>
+      <name>Jules Tilly</name>
+    </author>
+    <author>
+      <name>Cas van der Oord</name>
+    </author>
+    <author>
+      <name>Santiago Vargas</name>
+    </author>
+    <author>
+      <name>Eszter Varga-Umbrich</name>
+    </author>
+    <author>
+      <name>Tejs Vegge</name>
+    </author>
+    <author>
+      <name>Martin Vondrák</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+    <author>
+      <name>William C. Witt</name>
+    </author>
+    <author>
+      <name>Thomas Wolf</name>
+    </author>
+    <author>
+      <name>Fabian Zills</name>
+    </author>
+    <author>
+      <name>Gábor Csányi</name>
+    </author>
+  </entry>
+</feed>

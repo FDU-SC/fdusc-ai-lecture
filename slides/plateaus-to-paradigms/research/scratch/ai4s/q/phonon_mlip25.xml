@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DxDj5bcEg/Wynq3+KN55f99UXCE</id>
+  <title>arXiv Query: search_query=abs:"phonon" AND abs:"universal machine learning potential"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T15:00:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22phonon%22+AND+abs:%22universal+machine+learning+potential%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.22316v1</id>
+    <title>Charge-Density-Wave Phase Transitions in Monolayer 1T-TaS2 from Universal Machine Learning Molecular Dynamics</title>
+    <updated>2026-07-24T13:57:09Z</updated>
+    <link href="https://arxiv.org/abs/2607.22316v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.22316v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Charge-density-wave (CDW) phases in 1T transition-metal dichalcogenides arise from strong electron-phonon coupling and accompanying lattice instabilities. Capturing their temperature-dependent structural evolution using conventional first-principles molecular dynamics (MD) remains challenging because of the large supercells and extensive finite-temperature sampling required. Here, we combine density functional theory (DFT), universal machine-learning interatomic potentials (MLIPs), MD, and temperature-dependent effective potential phonon calculations to investigate the structural and vibrational signatures of CDW transitions in monolayer 1T-TaS2. Benchmarking against DFT displacement energies identifies UMA-s-1p1 universal machine learning potentials with sufficient accuracy for subsequent finite-temperature simulations. Our results show that large-scale MD simulations reproduce the experimentally observed phase transition sequence from the low-temperature Star-of-David (SoD) distorted structure to the high-temperature primitive hexagonal structure, as quantified by the number of Ta atoms attributed to SoDs. Heating-cooling cycles exhibit thermal hysteresis, and upon cooling, the system freezes into a multi-domain state in which α and \b{eta} CDW chiralities nucleate independently and persist to the lowest temperatures. These findings demonstrate that carefully benchmarked universal MLIPs can provide a scalable framework for finite-temperature studies of CDW materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-24T13:57:09Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Valentina Nesterova</name>
+    </author>
+    <author>
+      <name>Tribhuwan Pandey</name>
+    </author>
+    <author>
+      <name>Tom Berlijn</name>
+    </author>
+    <author>
+      <name>Fariborz Kargar</name>
+    </author>
+    <author>
+      <name>Lucas Lindsay</name>
+    </author>
+    <author>
+      <name>Konstantin Klyukin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.03401v1</id>
+    <title>A Comprehensive Assessment and Benchmark Study of Large Atomistic Foundation Models for Phonons</title>
+    <updated>2025-09-03T15:24:45Z</updated>
+    <link href="https://arxiv.org/abs/2509.03401v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.03401v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid development of universal machine learning potentials (uMLPs) has enabled efficient, accurate predictions of diverse material properties across broad chemical spaces. While their capability for modeling phonon properties is emerging, systematic benchmarking across chemically diverse systems remains limited. We evaluate six recent uMLPs (EquiformerV2, MatterSim, MACE, and CHGNet) on 2,429 crystalline materials from the Open Quantum Materials Database. Models were used to compute atomic forces in displaced supercells, derive interatomic force constants (IFCs), and predict phonon properties including lattice thermal conductivity (LTC), compared with density functional theory (DFT) and experimental data. The EquiformerV2 pretrained model trained on the OMat24 dataset exhibits strong performance in predicting atomic forces and third-order IFC, while its fine-tuned counterpart consistently outperforms other models in predicting second-order IFC, LTC, and other phonon properties. Although MACE and CHGNet demonstrated comparable force prediction accuracy to EquiformerV2, notable discrepancies in IFC fitting led to poor LTC predictions. Conversely, MatterSim, despite lower force accuracy, achieved intermediate IFC predictions, suggesting error cancellation and complex relationships between force accuracy and phonon predictions. This benchmark guides the evaluation and selection of uMLPs for high-throughput screening of materials with targeted thermal transport properties.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-03T15:24:45Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Advanced Intelligent Discovery 2025, 0, e202500075</arxiv:journal_ref>
+    <author>
+      <name>Md Zaibul Anam</name>
+    </author>
+    <author>
+      <name>Ogheneyoma Aghoghovbia</name>
+    </author>
+    <author>
+      <name>Mohammed Al-Fahdi</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Victor Fung</name>
+    </author>
+    <author>
+      <name>Ming Hu</name>
+    </author>
+    <arxiv:doi>10.1002/aidi.202500075</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/aidi.202500075" title="doi"/>
+  </entry>
+</feed>

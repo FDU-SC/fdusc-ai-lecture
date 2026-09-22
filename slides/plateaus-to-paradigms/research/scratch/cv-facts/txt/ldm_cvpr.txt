@@ -1,0 +1,796 @@
+                High-Resolution Image Synthesis with Latent Diffusion Models
+
+ Robin Rombach1 ∗                    Andreas Blattmann1 ∗            Dominik Lorenz1                      Patrick Esser                            Björn Ommer1
+                        1
+                            Ludwig Maximilian University of Munich & IWR, Heidelberg University, Germany                       Runway ML
+                                   https://github.com/CompVis/latent-diffusion
+
+
+                                                                                              ours (f = 4)           DALL-E (f = 8)          VQGAN (f = 16)
+                               Abstract                                       Input       PSNR: 27.4 R-FID: 0.58   PSNR: 22.8 R-FID: 32.01   PSNR: 19.9 R-FID: 4.98
+
+
+
+    By decomposing the image formation process into a se-
+quential application of denoising autoencoders, diffusion
+models (DMs) achieve state-of-the-art synthesis results on
+image data and beyond. Additionally, their formulation al-
+lows for a guiding mechanism to control the image gen-
+eration process without retraining. However, since these
+models typically operate directly in pixel space, optimiza-
+tion of powerful DMs often consumes hundreds of GPU
+days and inference is expensive due to sequential evalu-
+ations. To enable DM training on limited computational
+resources while retaining their quality and flexibility, we             Figure 1. Boosting the upper bound on achievable quality with
+                                                                        less agressive downsampling. Since diffusion models offer excel-
+apply them in the latent space of powerful pretrained au-
+                                                                        lent inductive biases for spatial data, we do not need the heavy spa-
+toencoders. In contrast to previous work, training diffusion            tial downsampling of related generative models in latent space, but
+models on such a representation allows for the first time               can still greatly reduce the dimensionality of the data via suitable
+to reach a near-optimal point between complexity reduc-                 autoencoding models, see Sec. 3. Images are from the DIV2K [1]
+tion and detail preservation, greatly boosting visual fidelity.         validation set, evaluated at 5122 px. We denote the spatial down-
+By introducing cross-attention layers into the model archi-             sampling factor by f . Reconstruction FIDs [28] and PSNR are
+tecture, we turn diffusion models into powerful and flexi-              calculated on ImageNet-val. [12]; see also Tab. 8.
+ble generators for general conditioning inputs such as text
+or bounding boxes and high-resolution synthesis becomes                 results in image synthesis [29,82] and beyond [7,44,47,56],
+possible in a convolutional manner. Our latent diffusion                and define the state-of-the-art in class-conditional image
+models (LDMs) achieve new state of the art scores for im-               synthesis [15,30] and super-resolution [70]. Moreover, even
+age inpainting and class-conditional image synthesis and                unconditional DMs can readily be applied to tasks such
+highly competitive performance on various tasks, includ-                as inpainting and colorization [82] or stroke-based syn-
+ing unconditional image generation, text-to-image synthe-               thesis [52], in contrast to other types of generative mod-
+sis, and super-resolution, while significantly reducing com-            els [19, 45, 67]. Being likelihood-based models, they do not
+putational requirements compared to pixel-based DMs.                    exhibit mode-collapse and training instabilities as GANs
+                                                                        and, by heavily exploiting parameter sharing, they can
+1. Introduction                                                         model highly complex distributions of natural images with-
+    Image synthesis is one of the computer vision fields with           out involving billions of parameters as in AR models [65].
+the most spectacular recent development, but also among                 Democratizing High-Resolution Image Synthesis DMs
+those with the greatest computational demands. Espe-                    belong to the class of likelihood-based models, whose
+cially high-resolution synthesis of complex, natural scenes             mode-covering behavior makes them prone to spend ex-
+is presently dominated by scaling up likelihood-based mod-              cessive amounts of capacity (and thus compute resources)
+els, potentially containing billions of parameters in autore-           on modeling imperceptible details of the data [16, 71]. Al-
+gressive (AR) transformers [64,65]. In contrast, the promis-            though the reweighted variational objective [29] aims to ad-
+ing results of GANs [3, 26, 39] have been revealed to be                dress this by undersampling the initial denoising steps, DMs
+mostly confined to data with comparably limited variability             are still computationally demanding, since training and
+as their adversarial learning procedure does not easily scale           evaluating such a model requires repeated function evalu-
+to modeling complex, multi-modal distributions. Recently,               ations (and gradient computations) in the high-dimensional
+diffusion models [79], which are built from a hierarchy of              space of RGB images. As an example, training the most
+denoising autoencoders, have shown to achieve impressive                powerful DMs often takes hundreds of GPU days (e.g. 150 -
+                                                                        1000 V100 days in [15]) and repeated evaluations on a noisy
+  ∗ The first two authors contributed equally to this work.             version of the input space render also inference expensive,
+
+
+
+                                                                    10684
+so that producing 50k samples takes approximately 5 days
+[15] on a single A100 GPU. This has two consequences for
+the research community and users in general: Firstly, train-
+ing such a model requires massive computational resources
+only available to a small fraction of the field, and leaves a
+huge carbon footprint [63, 83]. Secondly, evaluating an al-
+ready trained model is also expensive in time and memory,
+since the same model architecture must run sequentially for
+a large number of steps (e.g. 25 - 1000 steps in [15]).
+    To increase the accessibility of this powerful model class
+and at the same time reduce its significant resource con-
+sumption, a method is needed that reduces the computa-
+tional complexity for both training and sampling. Reducing
+the computational demands of DMs without impairing their              Figure 2. Illustrating perceptual and semantic compression: Most
+performance is, therefore, key to enhance their accessibility.        bits of a digital image correspond to imperceptible details. While
+                                                                      DMs allow to suppress this semantically meaningless information
+Departure to Latent Space Our approach starts with                    by minimizing the responsible loss term, gradients (during train-
+the analysis of already trained diffusion models in pixel             ing) and the neural network backbone (training and inference) still
+space: Fig. 2 shows the rate-distortion trade-off of a trained        need to be evaluated on all pixels, leading to superfluous compu-
+model. As with any likelihood-based model, learning can               tations and unnecessarily expensive optimization and inference.
+be roughly divided into two stages: First is a perceptual             We propose latent diffusion models (LDMs) as an effective gener-
+compression stage which removes high-frequency details                ative model and a separate mild compression stage that only elim-
+but still learns little semantic variation. In the second stage,      inates imperceptible details. Data and images from [29].
+the actual generative model learns the semantic and concep-
+tual composition of the data (semantic compression). We               applied to high-resolution synthesis of megapixel images.
+thus aim to first find a perceptually equivalent, but compu-              (ii) We achieve competitive performance on multiple
+tationally more suitable space, in which we will train diffu-         tasks (unconditional image synthesis, inpainting, stochastic
+sion models for high-resolution image synthesis.                      super-resolution) and datasets while significantly lowering
+    Following common practice [11, 23, 64, 65, 93], we sep-           computational costs. Compared to pixel-based diffusion ap-
+arate training into two distinct phases: First, we train              proaches, we also significantly decrease inference costs.
+an autoencoder which provides a lower-dimensional (and                    (iii) We show that, in contrast to previous work [90]
+thereby efficient) representational space which is perceptu-          which learns both an encoder/decoder architecture and a
+ally equivalent to the data space. Importantly, and in con-           score-based prior simultaneously, our approach does not re-
+trast to previous work [23,64], we do not need to rely on ex-         quire a delicate weighting of reconstruction and generative
+cessive spatial compression, as we train DMs in the learned           abilities. This ensures extremely faithful reconstructions
+latent space, which exhibits better scaling properties with           and requires very little regularization of the latent space.
+respect to the spatial dimensionality. The reduced complex-               (iv) We find that for densely conditioned tasks such
+ity also provides efficient image generation from the latent          as super-resolution, inpainting and semantic synthesis, our
+space with a single network pass. We dub the resulting                model can be applied in a convolutional fashion and render
+model class Latent Diffusion Models (LDMs).                           large, consistent images of ∼ 10242 px.
+    A notable advantage of this approach is that we need to               (v) Moreover, we design a general-purpose conditioning
+train the universal autoencoding stage only once and can              mechanism based on cross-attention, enabling multi-modal
+therefore reuse it for multiple DM trainings or to explore            training. We use it to train class-conditional, text-to-image
+possibly completely different tasks [78]. This enables effi-          and layout-to-image models.
+cient exploration of a large number of diffusion models for               (vi) Finally, we release pretrained latent diffusion
+various image-to-image and text-to-image tasks. For the lat-          and autoencoding models at https : / / github .
+ter, we design an architecture that connects transformers to          com/CompVis/latent-diffusion which might be
+the DM’s UNet backbone [69] and enables arbitrary types               reusable for a various tasks besides training of DMs [78].
+of token-based conditioning mechanisms, see Sec. 3.3.
+    In sum, our work makes the following contributions:               2. Related Work
+    (i) In contrast to purely transformer-based approaches               Generative Models for Image Synthesis The high di-
+[23, 64], our method scales more graceful to higher dimen-            mensional nature of images presents distinct challenges
+sional data and can thus (a) work on a compression level              to generative modeling. Generative Adversarial Networks
+which provides more faithful and detailed reconstructions             (GAN) [26] allow for efficient sampling of high resolution
+than previous work (see Fig. 1) and (b) can be efficiently            images with good perceptual quality [3, 41], but are diffi-
+
+
+
+                                                                   10685
+cult to optimize [2, 27, 53] and struggle to capture the full        proaches and less compression comes at the price of high
+data distribution [54]. In contrast, likelihood-based meth-          computational cost [23, 64]. Our work prevents such trade-
+ods emphasize good density estimation which renders op-              offs, as our proposed LDMs scale more gently to higher
+timization more well-behaved. Variational autoencoders               dimensional latent spaces due to their convolutional back-
+(VAE) [45] and flow-based models [18, 19] enable efficient           bone. Thus, we are free to choose the level of compression
+synthesis of high resolution images [9, 43, 89], but sam-            which optimally mediates between learning a powerful first
+ple quality is not on par with GANs. While autoregressive            stage, without leaving too much perceptual compression up
+models (ARM) [6, 10, 91, 92] achieve strong performance              to the generative diffusion model while guaranteeing high-
+in density estimation, computationally demanding architec-           fidelity reconstructions (see Fig. 1). While approaches to
+tures [94] and a sequential sampling process limit them to           jointly learn an encoding/decoding model together with a
+low resolution images. Because pixel based representations           score-based prior exist [90], they still require a difficult
+of images contain barely perceptible, high-frequency de-             weighting between reconstruction and generative capabil-
+tails [16,71], maximum-likelihood training spends a dispro-          ities [11] and are outperformed by our approach (Sec. 4).
+portionate amount of capacity on modeling them, resulting
+in long training times. To scale to higher resolutions, several      3. Method
+two-stage approaches [23, 65, 97, 99] use ARMs to model a
+                                                                        To lower the computational demands of training diffu-
+compressed latent image space instead of raw pixels.
+                                                                     sion models towards high-resolution image synthesis, we
+    Recently, Diffusion Probabilistic Models (DM) [79],              observe that although diffusion models allow to ignore
+have achieved state-of-the-art results in density estimation         perceptually irrelevant details by undersampling the corre-
+[44] as well as in sample quality [15]. The generative power         sponding loss terms [29], they still require costly function
+of these models stems from a natural fit to the inductive bi-        evaluations in pixel space, which causes huge demands in
+ases of image-like data when their underlying neural back-           computation time and energy resources.
+bone is implemented as a UNet [15, 29, 69, 82]. The best                We propose to circumvent this drawback by introducing
+synthesis quality is usually achieved when a reweighted ob-          an explicit separation of the compressive from the genera-
+jective [29] is used for training. In this case, the DM corre-       tive learning phase (see Fig. 2). To achieve this, we utilize
+sponds to a lossy compressor and allow to trade image qual-          an autoencoding model which learns a space that is percep-
+ity for compression capabilities. Evaluating and optimizing          tually equivalent to the image space, but offers significantly
+these models in pixel space, however, has the downside of            reduced computational complexity.
+low inference speed and very high training costs. While                 Such an approach offers several advantages: (i) By leav-
+the former can be partially adressed by advanced sampling            ing the high-dimensional image space, we obtain DMs
+strategies [46, 73, 81] and hierarchical approaches [30, 90],        which are computationally much more efficient because
+training on high-resolution image data always requires to            sampling is performed on a low-dimensional space. (ii) We
+calculate expensive gradients. We adress both drawbacks              exploit the inductive bias of DMs inherited from their UNet
+with our proposed LDMs, which work on a compressed la-               architecture [69], which makes them particularly effective
+tent space of lower dimensionality. This renders training            for data with spatial structure and therefore alleviates the
+computationally cheaper and speeds up inference with al-             need for aggressive, quality-reducing compression levels as
+most no reduction in synthesis quality (see Fig. 1).                 required by previous approaches [23, 64]. (iii) Finally, we
+   Two-Stage Image Synthesis To mitigate the shortcom-               obtain general-purpose compression models whose latent
+ings of individual generative approaches, a lot of research          space can be used to train multiple generative models and
+[11,23,65,68,97,99] has gone into combining the strengths            which can also be utilized for other downstream applica-
+of different methods into more efficient and performant              tions such as single-image CLIP-guided synthesis [25].
+models via a two stage approach. VQ-VAEs [65, 97] use
+autoregressive models to learn an expressive prior over a            3.1. Perceptual Image Compression
+discretized latent space. [64] extend this approach to text-            Our perceptual compression model is based on previous
+to-image generation by learning a joint distributation over          work [23] and consists of an autoencoder trained by com-
+discretized image and text representations. More gener-              bination of a perceptual loss [102] and a patch-based [32]
+ally, [68] uses conditionally invertible networks to pro-            adversarial objective [20, 23, 99]. This ensures that the re-
+vide a generic transfer between latent spaces of diverse do-         constructions are confined to the image manifold by enforc-
+mains. Different from VQ-VAEs, VQGANs [23, 99] em-                   ing local realism and avoids bluriness introduced by relying
+ploy a first stage with an adversarial and perceptual objec-         solely on pixel-space losses such as L2 or L1 objectives.
+tive to scale autoregressive transformers to larger images.             More precisely, given an image x ∈ RH×W ×3 in RGB
+However, the high compression rates required for feasible            space, the encoder E encodes x into a latent representa-
+ARM training, which introduces billions of trainable pa-             tion z = E(x), and the decoder D reconstructs the im-
+rameters [23, 64], limit the overall performance of such ap-         age from the latent, giving x̃ = D(z) = D(E(x)), where
+
+
+
+                                                                  10686
+                                                                                                          Latent Space
+z ∈ Rh×w×c . Importantly, the encoder downsamples the                                                                                          Conditioning
+                                                                                                      Diffusion Process                         Semantic
+image by a factor f = H/h = W/w, and we investigate                                                                                               Map
+different downsampling factors f = 2m , with m ∈ N.                                                       Denoising U-Net                              Text
+                                                                                                                                                     Repres
+   In order to avoid arbitrarily high-variance latent spaces,                                                                                       entations
+we experiment with two different kinds of regularizations.                                                                                           Images
+The first variant, KL-reg., imposes a slight KL-penalty to-
+wards a standard normal on the learned latent, similar to a           Pixel Space
+VAE [45, 67], whereas VQ-reg. uses a vector quantization
+layer [93] within the decoder. This model can be interpreted
+                                                                      denoising step crossattention       switch     skip connection concat
+as a VQGAN [23] but with the quantization layer absorbed
+by the decoder. Because our subsequent DM is designed                Figure 3. We condition LDMs either via concatenation or by a
+to work with the two-dimensional structure of our learned            more general cross-attention mechanism. See Sec. 3.3
+latent space z = E(x), we can use relatively mild compres-
+sion rates and achieve very good reconstructions. This is            objective on the perceptually most relevant bits using the
+in contrast to previous works [23, 64], which relied on an           reweighted bound, which now reads
+arbitrary 1D ordering of the learned space z to model its                                            h                   i
+distribution autoregressively and thereby ignored much of                   LLDM := EE(x),ǫ∼N (0,1),t kǫ − ǫθ (zt , t)k22 . (2)
+the inherent structure of z. Hence, our compression model
+preserves details of x better (see Tab. 8). The full objective       The neural backbone ǫθ (◦, t) of our model is realized as a
+and training details can be found in the supplement.                 time-conditional UNet [69]. Since the forward process is
+                                                                     fixed, zt can be efficiently obtained from E during training,
+3.2. Latent Diffusion Models                                         and samples from p(z) can be decoded to image space with
+Diffusion Models [79] are probabilistic models designed to           a single pass through D.
+learn a data distribution p(x) by gradually denoising a nor-         3.3. Conditioning Mechanisms
+mally distributed variable, which corresponds to learning                Similar to other types of generative models [55, 80],
+the reverse process of a fixed Markov Chain of length T .            diffusion models are in principle capable of modeling
+For image synthesis, the most successful models [15,29,70]           conditional distributions of the form p(z|y). This can
+rely on a reweighted variant of the variational lower bound          be implemented with a conditional denoising autoencoder
+on p(x), which mirrors denoising score-matching [82].                ǫθ (zt , t, y) and paves the way to controlling the synthesis
+These models can be interpreted as an equally weighted               process through inputs y such as text [66], semantic maps
+sequence of denoising autoencoders ǫθ (xt , t); t = 1 . . . T ,      [32, 59] or other image-to-image translation tasks [33].
+which are trained to predict a denoised variant of their input           In the context of image synthesis, however, combining
+xt , where xt is a noisy version of the input x. The corre-          the generative power of DMs with other types of condition-
+sponding objective can be simplified to (Sec. A)                     ings beyond class-labels [15] or blurred variants of the input
+                                h                 i                  image [70] is so far an under-explored area of research.
+         LDM = Ex,ǫ∼N (0,1),t kǫ − ǫθ (xt , t)k22 ,        (1)           We turn DMs into more flexible conditional image gener-
+                                                                     ators by augmenting their underlying UNet backbone with
+with t uniformly sampled from {1, . . . , T }.                       the cross-attention mechanism [94], which is effective for
+Generative Modeling of Latent Representations With                   learning attention-based models of various input modali-
+our trained perceptual compression models consisting of E            ties [34,35]. To pre-process y from various modalities (such
+and D, we now have access to an efficient, low-dimensional           as language prompts) we introduce a domain specific en-
+latent space in which high-frequency, imperceptible details          coder τθ that projects y to an intermediate representation
+are abstracted away. Compared to the high-dimensional                τθ (y) ∈ RM ×dτ , which is then mapped to the intermediate
+pixel space, this space is more suitable for likelihood-based        layers of the UNet via a cross-attention
+                                                                                                       T layer implementing
+generative models, as they can now (i) focus on the impor-           Attention(Q, K, V ) = softmax QK    √     · V , with
+                                                                                                           d
+tant, semantic bits of the data and (ii) train in a lower di-
+mensional, computationally much more efficient space.                           (i)                                (i)                        (i)
+                                                                     Q = WQ · ϕi (zt ), K = WK · τθ (y), V = WV · τθ (y).
+   Unlike previous work that relied on autoregressive,
+attention-based transformer models in a highly compressed,                                            i
+
+discrete latent space [23, 64, 99], we can take advantage of         Here, ϕi (zt ) ∈ RN ×dǫ denotes a (flattened) intermediate
+                                                                                                                              (i)
+image-specific inductive biases that our model offers. This          representation of the UNet implementing ǫθ and WV ∈
+                                                                           i   (i)                 (i)
+includes the ability to build the underlying UNet primar-            Rd×dǫ , WQ ∈ Rd×dτ & WK ∈ Rd×dτ are learnable pro-
+ily from 2D convolutional layers, and further focusing the           jection matrices [35, 94]. See Fig. 3 for a visual depiction.
+
+
+
+
+                                                                  10687
+        CelebAHQ                   FFHQ                 LSUN-Churches                LSUN-Beds                    ImageNet
+
+
+
+
+Figure 4. Samples from LDMs trained on CelebAHQ [38], FFHQ [40], LSUN-Churches [98], LSUN-Bedrooms [98] and class-conditional
+ImageNet [12], each with a resolution of 256 × 256. Best viewed when zoomed in. For more samples cf . the supplement.
+
+   Based on image-conditioning pairs, we then learn the
+conditional LDM via
+                            h                         i
+ LLDM := EE(x),y,ǫ∼N (0,1),t kǫ−ǫθ (zt , t, τθ (y))k22 , (3)
+
+where both τθ and ǫθ are jointly optimized via Eq. 3. This
+conditioning mechanism is flexible as τθ can be parameter-
+ized with domain-specific experts, e.g. (unmasked) trans-          Figure 5. Analyzing the training of class-conditional LDMs with
+formers [94] when y are text prompts (see Sec. 4.3.1)              different downsampling factors f over 2M train steps on the Im-
+                                                                   ageNet dataset. Pixel-based LDM-1 requires substantially larger
+4. Experiments                                                     train times compared to models with larger downsampling factors
+    LDMs provide means to flexible and computationally             (LDM-{4-16}). Too much perceptual compression as in LDM-32
+tractable diffusion based image synthesis also including           limits the overall sample quality. All models are trained on a sin-
+high-resolution generation of various image modalities,            gle NVIDIA A100 with the same computational budget. Results
+which we empirically show in the following. Firstly, how-          obtained with 100 DDIM steps [81] and κ = 0.
+ever, we analyze the gains of our models compared to pixel-
+based diffusion models in both training and inference. Inter-
+estingly, we find that LDMs trained in VQ-regularized latent
+spaces achieve better sample quality, even though the recon-
+struction capabilities of VQ-regularized first stage models
+slightly fall behind those of their continuous counterparts,
+cf . Tab. 8. Therefore, we evaluate VQ-regularized LDMs
+in the remainder of the paper, unless stated differently. A        Figure 6.      Inference speed vs sample quality: Comparing
+visual comparison between the effects of first stage regu-         LDMs with different amounts of compression on the CelebA-HQ
+larization schemes on LDM training and their generaliza-           (left) and ImageNet (right) datasets. Different markers indicate
+tion abilities to resolutions higher than 2562 can be found        {10, 20, 50, 100, 200} sampling steps with the DDIM sampler,
+in Appendix C.1. In D.2 we furthermore list details on ar-         counted from right to left along each line. The dashed line shows
+chitecture, implementation, training and evaluation for all        the FID scores for 200 steps, indicating the strong performance
+results presented in this section.                                 of LDM-{4-8} compared to models with different compression
+                                                                   ratios. FID scores assessed on 5000 samples. All models were
+4.1. On Perceptual Compression Tradeoffs                           trained for 500k (CelebA) / 2M (ImageNet) steps on an A100.
+
+   This section analyzes the behavior of our LDMs with dif-        models on the ImageNet [12] dataset. We see that, i) small
+ferent downsampling factors f ∈ {1, 2, 4, 8, 16, 32} (abbre-       downsampling factors for LDM-{1,2} result in slow train-
+viated as LDM-f , where LDM-1 corresponds to pixel-based           ing progress, whereas ii) overly large values of f cause stag-
+DMs). To obtain a comparable test-field, we fix the com-           nating fidelity after comparably few training steps. Revis-
+putational resources to a single NVIDIA A100 for all ex-           iting the analysis above (Fig. 1 and 2) we attribute this to
+periments in this section and train all models for the same        i) leaving most of perceptual compression to the diffusion
+number of steps and with the same number of parameters.            model and ii) too strong first stage compression resulting
+   Tab. 8 shows hyperparameters and reconstruction perfor-         in information loss and thus limiting the achievable qual-
+mance of the first stage models used for the LDMs com-             ity. LDM-{4-16} strike a good balance between efficiency
+pared in this section. Fig. 5 shows sample quality as a func-      and perceptually faithful results, which manifests in a sig-
+tion of training progress for 2M steps of class-conditional
+
+
+
+                                                                10688
+                  CelebA-HQ 256 × 256                                          FFHQ 256 × 256
+         Method            FID ↓   Prec. ↑     Recall ↑            Method            FID ↓        Prec. ↑   Recall ↑
+   DC-VAE [61]              15.8        -           -          ImageBART [21]         9.57            -         -
+VQGAN+T. [23] (k=400)       10.2        -           -       U-Net GAN (+aug) [75]   10.9 (7.6)        -         -
+   PGGAN [38]                8.0        -           -             UDM [42]            5.54            -         -
+    LSGM [90]               7.22        -           -           StyleGAN [40]         4.16          0.71      0.46
+    UDM [42]                7.16        -           -         ProjectedGAN [74]       3.08          0.65      0.46
+  LDM-4 (ours, 500-s† )     5.11    0.72         0.49         LDM-4 (ours, 200-s)     4.98          0.73      0.50
+
+             LSUN-Churches 256 × 256                                       LSUN-Bedrooms 256 × 256
+       Method              FID ↓   Prec. ↑      Recall ↑            Method           FID ↓       Prec. ↑    Recall ↑
+      DDPM [29]            7.89       -               -        ImageBART [21]        5.51           -          -
+   ImageBART [21]          7.32       -               -          DDPM [29]           4.9            -          -
+     PGGAN [38]            6.42       -               -           UDM [42]           4.57           -          -
+    StyleGAN [40]          4.21       -               -         StyleGAN [40]        2.35         0.59       0.48
+    StyleGAN2 [41]         3.86       -               -           ADM [15]           1.90         0.66       0.51
+  ProjectedGAN [74]        1.59     0.61            0.44      ProjectedGAN [74]      1.52         0.61       0.34
+ LDM-8∗ (ours, 200-s)      4.02     0.64            0.52      LDM-4 (ours, 200-s)    2.95         0.66       0.48
+                                                                                                                          “A street sign that reads
+                                                                                                                            ’Latent Diffusion’
+Table 1. Evaluation metrics for unconditional image synthe-
+sis. CelebA-HQ results reproduced from [42, 61, 96], FFHQ from
+[41, 42]. † : N -s refers to N sampling steps with the DDIM [81]
+sampler. ∗ : trained in KL-regularized latent space. Additional re-                                                          “An oil painting
+                                                                                                                            of a space shuttle”
+sults can be found in the supplementary.
+
+nificant FID [28] gap of 38 between pixel-based diffusion
+(LDM-1) and LDM-8 after 2M training steps.                                                                                Figure 7. Top: Samples from our LDM for layout-to-image syn-
+    In Fig. 6, we compare models trained on CelebA-                                                                       thesis on COCO [4]. Quantitative evaluation in the supplement.
+HQ [38] and ImageNet in terms sampling speed for differ-                                                                  Bottom: Samples from our text-to-image LDM model for user-
+ent numbers of denoising steps with the DDIM sampler [81]                                                                 defined text prompts, which is trained on LAION-400M [76].
+and plot it against FID-scores [28]. LDM-{4-8} outper-                                                                    to ADM [15], despite utilizing half its parameters and re-
+form models with unsuitable ratios of perceptual and con-                                                                 quiring 4-times less train resources (see Appendix D.3.5).
+ceptual compression. Especially compared to pixel-based                                                                   Moreover, LDMs consistently improve upon GAN-based
+LDM-1, they achieve much lower FID scores while simulta-                                                                  methods in Precision and Recall, thus confirming the ad-
+neously significantly increasing sample throughput. Com-                                                                  vantages of their mode-covering likelihood-based training
+plex datasets such as ImageNet require reduced compres-                                                                   objective over adversarial approaches. In Fig. 4 we also
+sion rates to avoid reducing quality. Summarized, we ob-                                                                  show qualitative results on each dataset.
+serve that LDM-4 and -8 lie in the best behaved regime for
+achieving high-quality synthesis results.                                                                                 4.3. Conditional Latent Diffusion
+                                   Text-Conditional Image Synthesis                                                       4.3.1 Transformer Encoders for LDMs
+             DALL-E† [64]          CogView† [17]           Lafite† [105]      LDM-KL-8           LDM-KL-8-G∗              By introducing cross-attention based conditioning into
+ FID ↓             27.50                    27.10             26.94              23.35                12.61               LDMs we open them up for various conditioning modalities
+ IS ↑              17.90                    18.20             26.02            19.93±0.35           26.62±0.38
+                                                                                                                          previously unexplored for diffusion models. For text-to-
+Table 2.     Evaluation of text-conditional image synthesis on                                                            image image modeling, we train a 1.45B parameter model
+the MS-COCO [50] dataset: Our model outperforms autoregres-                                                               conditioned on language prompts on LAION-400M [76].
+sive [17, 64] and GAN-based [105] methods by a significant                                                                We employ the BERT-tokenizer [14] and implement τθ as
+margin when using 250 DDIM [81] steps .† : Numbers taken                                                                  a transformer [94] to infer a latent code which is mapped
+from [105]. ∗ : Classifier-free guidance [31], scale 1.5.                                                                 into the UNet via cross-attention (Sec. 3.3). This combi-
+                                                                                                                          nation of domain specific experts for learning a language
+4.2. Image Generation with Latent Diffusion                                                                               representation and visual synthesis results in a powerful
+    We train unconditional models of 2562 images on                                                                       model, which generalizes well to complex, user-defined text
+CelebA-HQ [38], FFHQ [40], LSUN-Churches and                                                                              prompts, cf . Fig. 7 and 14. For quantitative analysis, we fol-
+-Bedrooms [98] and evaluate the i) sample quality and ii)                                                                 low prior work and evaluate text-to-image generation on the
+their coverage of the data manifold using ii) FID [28] and                                                                MS-COCO [50] validation set, where our model improves
+ii) Precision-and-Recall [49]. Tab. 1 summarizes our re-                                                                  upon powerful AR [17, 64] and GAN-based [105] methods,
+sults. On CelebA-HQ, we report a new state-of-the-art FID                                                                 cf . Tab. 2. We note that applying classifier-free diffusion
+of 5.11, outperforming previous likelihood-based models as                                                                guidance [31] greatly boosts sample quality. To further ana-
+well as GANs. We also outperform LSGM [90] where a la-                                                                    lyze the flexibility of the cross-attention based conditioning
+tent diffusion model is trained jointly together with the first                                                           mechanism we also train models to synthesize images based
+stage. In contrast, we train diffusion models in a fixed space                                                            on semantic layouts on OpenImages [48], and finetune on
+and avoid the difficulty of weighing reconstruction quality                                                               COCO [4], see Fig. 7. See Sec. C.4 for the quantitative
+against learning the prior over the latent space, see Fig. 1-2.                                                           evaluation and implementation details.
+    We outperform prior diffusion based approaches on all                                                                     Lastly, following prior work [3, 15, 21, 23], we evalu-
+but the LSUN-Bedrooms dataset, where our score is close                                                                   ate our best-performing class-conditional ImageNet mod-
+
+                                                                                                                       10689
+els with f ∈ {4, 8} from Sec. 4.1 in Tab. 3, Fig. 4 and                                                                                     bicubic                              LDM-SR                                   SR3
+Sec. C.5. Here we outperform the state of the art diffu-
+sion model ADM [15] while significantly reducing compu-
+tational requirements and parameter count, cf . Tab 18.
+Method            FID↓       IS↑        Precision↑   Recall↑   Nparams
+BigGan-deep [3]   6.95    203.6±2.6       0.87        0.28      340M                           -
+ADM [15]          10.94    100.98         0.69        0.63      554M                     250 DDIM steps
+ADM-G [15]        4.59      186.7         0.82        0.52      608M                     250 DDIM steps
+LDM-4 (ours)      10.56   103.49±1.24     0.71        0.62      400M                      250 DDIM steps
+LDM-4-G (ours)    3.60    247.67±5.59     0.87        0.48      400M     250 steps, classifier-free guidance [31], scale 1.5
+
+
+
+Table 3. Comparison of a class-conditional ImageNet LDM with
+recent state-of-the-art methods for class-conditional image gener-
+ation on the ImageNet [12] dataset. A more detailed comparison
+with additional baselines can be found in C.5, Tab. 10 and E.
+
+4.3.2 Convolutional Sampling Beyond 2562                                                                                          Figure 9. ImageNet 64→256 super-resolution on ImageNet-Val.
+By concatenating spatially aligned conditioning informa-                                                                          LDM-SR has advantages at rendering realistic textures but SR3
+tion to the input of ǫθ , LDMs can serve as efficient general-                                                                    can synthesize more coherent fine structures. See appendix for
+purpose image-to-image translation models. We use this                                                                            additional samples and cropouts. SR3 results from [70].
+to train models for semantic synthesis, super-resolution
+(Sec. 4.4) and inpainting (Sec. 4.5). For semantic synthe-                                                                        nation (cf . Sec. 3.3). In a first experiment, we follow SR3
+sis, we use images of landscapes paired with semantic maps                                                                        [70] and fix the image degradation to a bicubic interpola-
+[23, 59] and concatenate downsampled versions of the se-                                                                          tion with 4×-downsampling and train on ImageNet follow-
+mantic maps with the latent image representation of a f = 4                                                                       ing SR3’s data processing pipeline. We use the f = 4 au-
+model (VQ-reg., see Tab. 8). We train on an input resolution                                                                      toencoding model pretrained on OpenImages (VQ-reg., cf .
+of 2562 (crops from 3842 ) but find that our model general-                                                                       Tab. 8) and concatenate the low-resolution conditioning y
+izes to larger resolutions and can generate images up to the                                                                      and the inputs to the UNet, i.e. τθ is the identity. Our qual-
+megapixel regime when evaluated in a convolutional man-                                                                           itative and quantitative results (see Fig. 9 and Tab. 4) show
+ner (see Fig. 8). We exploit this behavior to also apply the                                                                      competitive performance and LDM-SR outperforms SR3
+super-resolution models in Sec. 4.4 and the inpainting mod-                                                                       in FID while SR3 has a better IS. A simple image regres-
+els in Sec. 4.5 to generate large images between 5122 and                                                                         sion model achieves the highest PSNR and SSIM scores;
+10242 . For this application, the signal-to-noise ratio (in-                                                                      however these metrics do not align well with human per-
+duced by the scale of the latent space) significantly affects                                                                     ception [102] and favor blurriness over imperfectly aligned
+the results. In Sec. C.1 we illustrate this when learning an                                                                      high frequency details [70]. Further, we conduct a user
+LDM on (i) the latent space as provided by a f = 4 model                                                                          study comparing the pixel-baseline with LDM-SR. We fol-
+(KL-reg., see Tab. 8), and (ii) a rescaled version, scaled by                                                                     low SR3 [70] where human subjects were shown a low-res
+the component-wise standard deviation.                                                                                            image in between two high-res images and asked for prefer-
+                                                                                                                                  ence. The results in Tab. 5 affirm the good performance of
+                                                                                                                                  LDM-SR. PSNR and SSIM can be pushed by using a post-
+                                                                                                                                  hoc guiding mechanism [15] and we implement this image-
+                                                                                                                                  based guider via a perceptual loss, see Sec. C.7. Since the
+                                                                                                                                  bicubic degradation process does not generalize well to im-
+                                                                                                                                  ages which do not follow this pre-processing, we also train
+                                                                                                                                  a generic model, LDM-BSR, by using more diverse degra-
+                                                                                                                                  dation. The results are shown in Sec. C.7.1.
+                                                                                                                                  Method                             FID ↓       IS ↑    PSNR ↑     SSIM ↑      Nparams    Throughput∗ [ samples
+                                                                                                                                                                                                                                            s
+                                                                                                                                                                                                                                                 ]
+
+                                                                                                                                  Image Regression [70]               15.2       121.1    27.9       0.801       625M               N/A
+                                                                                                                                  SR3 [70]                            5.2        180.1    26.4       0.762       625M               N/A
+                                                                                                                                  LDM-4 (ours, 100 steps)           2.8† /4.8‡   166.3   24.4±3.8   0.69±0.14    169M               4.62
+                                                                                                                                  LDM-4 (ours, big, 100 steps)      2.4† /4.3‡   174.9   24.7±4.1   0.71±0.15    552M                4.5
+                                                                                                                                  LDM-4 (ours, 50 steps, guiding)   4.4† /6.4‡   153.7   25.8±3.7   0.74±0.12    184M               0.38
+
+                                                                                                                                  Table 4. ×4 upscaling results on ImageNet-Val. (2562 ); † : FID
+Figure 8. A LDM trained on 256 resolution can generalize to    2
+                                                                                                                                  features computed on validation split, ‡ : FID features computed
+larger resolution (here: 512×1024) for spatially conditioned tasks                                                                on train split; ∗ : Assessed on a NVIDIA A100
+such as semantic synthesis of landscape images. See Sec. 4.3.2.
+4.4. Super-Resolution with Latent Diffusion                                                                                       4.5. Inpainting with Latent Diffusion
+   LDMs can be efficiently trained for super-resolution by                                                                           Inpainting is the task of filling masked regions of an im-
+diretly conditioning on low-resolution images via concate-                                                                        age with new content either because parts of the image are
+
+
+
+                                                                                                                               10690
+                                      SR on ImageNet                 Inpainting on Places                                     40-50% masked             All samples
+ User Study                       Pixel-DM (f 1)     LDM-4          LAMA [85]      LDM-4        Method                      FID ↓       LPIPS ↓    FID ↓        LPIPS ↓
+ Task 1: Preference vs GT ↑           16.0%          30.4%            13.6%        21.0%        LDM-4 (ours, big, w/ ft)     9.39   0.246± 0.042    1.50    0.137± 0.080
+ Task 2: Preference Score ↑           29.4%          70.6%            31.9%        68.1%        LDM-4 (ours, big, w/o ft)   12.89   0.257± 0.047    2.40    0.142± 0.085
+                                                                                                LDM-4 (ours, w/ attn)       11.87   0.257± 0.042    2.15    0.144± 0.084
+Table 5. Task 1: Subjects were shown ground truth and generated                                 LDM-4 (ours, w/o attn)      12.60   0.259± 0.041    2.37    0.145± 0.084
+image and asked for preference. Task 2: Subjects had to decide
+                                                                                                LaMa [85]†                  12.31   0.243± 0.038    2.23    0.134± 0.080
+between two generated images. More details in D.3.6                                             LaMa [85]                   12.0     0.24           2.21     0.14
+                          train throughput   sampling throughput†    train+val    FID@2k        CoModGAN [103]              10.4     0.26           1.82     0.15
+ Model (reg.-type)          samples/sec.     @256           @512    hours/epoch   epoch 6       RegionWise [51]             21.3     0.27           4.75     0.15
+ LDM-1 (no first stage)        0.11           0.26           0.07      20.66        24.74       DeepFill v2 [100]           22.1     0.28           5.20     0.16
+ LDM-4 (KL, w/ attn)           0.32           0.97           0.34       7.66        15.21       EdgeConnect [57]            30.5     0.28           8.37     0.16
+ LDM-4 (VQ, w/ attn)           0.33           0.97           0.34       7.04        14.99
+ LDM-4 (VQ, w/o attn)          0.35           0.99           0.36       6.66        15.95      Table 7. Comparison of inpainting performance on 30k crops of
+                                                         †
+Table 6. Assessing inpainting efficiency. : Deviations from Fig. 6                             size 512 × 512 from test images of Places [104]. The column 40-
+due to varying GPU settings/batch sizes cf . the supplement.                                   50% reports metrics computed over hard examples where 40-50%
+                                                                                               of the image region have to be inpainted. † recomputed on our test
+are corrupted or to replace existing but undesired content                                     set, since the original test set used in [85] was not available.
+within the image. We evaluate how our general approach
+for conditional image generation compares to more special-                                     an epoch at resolution 5122 allows the model to adjust to
+ized, state-of-the-art approaches for this task. Our evalua-                                   the new feature statistics and sets a new state of the art FID
+tion follows the protocol of LaMa [85], a recent inpainting                                    on image inpainting (big, w/o attn, w/ ft in Tab. 7, Fig. 10.).
+model that introduces a specialized architecture relying on
+Fast Fourier Convolutions [8]. We describe the exact train-                                                      input                             result
+ing & evaluation protocol on Places [104] in Sec. D.2.2.
+    We first analyze the effect of different design choices
+for the first stage. We compare the inpainting efficiency
+of LDM-1 (i.e. a pixel-based conditional DM) with LDM-4,
+for both KL and VQ regularizations, as well as VQ-LDM-4
+without any attention in the first stage (see Tab. 8), where
+the latter reduces GPU memory for decoding at high reso-
+lutions. For comparability, we fix the number of parame-
+ters for all models. Tab. 6 reports the training and sampling
+throughput at resolution 2562 and 5122 , the total training
+time in hours per epoch and the FID score on the validation
+split after six epochs. Overall, we observe a speed-up of at
+least 2.7× between pixel- and latent-based diffusion models
+while improving FID scores by a factor of at least 1.6×.
+    The comparison with other inpainting approaches in
+Tab. 7 shows that our model with attention improves the
+overall image quality as measured by FID over that of [85].
+LPIPS between the unmasked images and our samples is
+slightly higher than that of [85]. We attribute this to [85]
+only producing a single result which tends to recover more                                     Figure 10. Qualitative results on object removal with our big, w/
+of an average image compared to the diverse results pro-                                       ft inpainting model. For more results, see Fig. 21.
+duced by our LDM cf . Fig. 20. Additionally in a user study
+(Tab. 5) human subjects favor our results over those of [85].                                  5. Conclusion
+    Based on these initial results, we also trained a larger dif-                                  We have presented latent diffusion models, a simple and
+fusion model (big in Tab. 7) in the latent space of the VQ-                                    efficient way to significantly improve both the training and
+regularized first stage without attention. Following [15],                                     sampling efficiency of denoising diffusion models with-
+the UNet of this diffusion model uses attention layers on                                      out degrading their quality. Based on this and our cross-
+three levels of its feature hierarchy, the BigGAN [3] residual                                 attention conditioning mechanism, our experiments could
+block for up- and downsampling and has 387M parameters                                         demonstrate favorable results compared to state-of-the-art
+instead of 215M. After training, we noticed a discrepancy                                      methods across a wide range of conditional image synthesis
+in the quality of samples produced at resolutions 2562 and                                     tasks without task-specific architectures.
+5122 , which we hypothesize to be caused by the additional
+                                                                                                   This work has been supported by the German Federal Ministry for
+attention modules. However, fine-tuning the model for half                                     Economic Affairs and Energy within the project KI-Absicherung - Safe
+                                                                                               AI for automated driving and by the German Research Foundation (DFG)
+                                                                                               project 421703927.
+
+
+                                                                                            10691
+References                                                                [16] Sander Dieleman. Musings on typicality, 2020. 1, 3
+                                                                          [17] Ming Ding, Zhuoyi Yang, Wenyi Hong, Wendi Zheng,
+ [1] Eirikur Agustsson and Radu Timofte. NTIRE 2017 chal-
+                                                                               Chang Zhou, Da Yin, Junyang Lin, Xu Zou, Zhou Shao,
+     lenge on single image super-resolution: Dataset and study.
+                                                                               Hongxia Yang, and Jie Tang. Cogview: Mastering text-to-
+     In 2017 IEEE Conference on Computer Vision and Pattern
+                                                                               image generation via transformers. CoRR, abs/2105.13290,
+     Recognition Workshops, CVPR Workshops 2017, Honolulu,
+                                                                               2021. 6
+     HI, USA, July 21-26, 2017, pages 1122–1131. IEEE Com-
+                                                                          [18] Laurent Dinh, David Krueger, and Yoshua Bengio. Nice:
+     puter Society, 2017. 1
+                                                                               Non-linear independent components estimation, 2015. 3
+ [2] Martin Arjovsky, Soumith Chintala, and Lon Bottou.
+                                                                          [19] Laurent Dinh, Jascha Sohl-Dickstein, and Samy Ben-
+     Wasserstein gan, 2017. 3
+                                                                               gio. Density estimation using real NVP. In 5th Inter-
+ [3] Andrew Brock, Jeff Donahue, and Karen Simonyan. Large
+                                                                               national Conference on Learning Representations, ICLR
+     scale GAN training for high fidelity natural image synthe-
+                                                                               2017, Toulon, France, April 24-26, 2017, Conference Track
+     sis. In Int. Conf. Learn. Represent., 2019. 1, 2, 6, 7, 8, 19,
+                                                                               Proceedings. OpenReview.net, 2017. 1, 3
+     26
+                                                                          [20] Alexey Dosovitskiy and Thomas Brox. Generating images
+ [4] Holger Caesar, Jasper R. R. Uijlings, and Vittorio Ferrari.
+                                                                               with perceptual similarity metrics based on deep networks.
+     Coco-stuff: Thing and stuff classes in context. In 2018
+                                                                               In Daniel D. Lee, Masashi Sugiyama, Ulrike von Luxburg,
+     IEEE Conference on Computer Vision and Pattern Recog-
+                                                                               Isabelle Guyon, and Roman Garnett, editors, Adv. Neural
+     nition, CVPR 2018, Salt Lake City, UT, USA, June 18-
+                                                                               Inform. Process. Syst., pages 658–666, 2016. 3
+     22, 2018, pages 1209–1218. Computer Vision Foundation /
+     IEEE Computer Society, 2018. 6, 17, 18                               [21] Patrick Esser, Robin Rombach, Andreas Blattmann, and
+ [5] Nicholas Carlini, Florian Tramer, Eric Wallace, Matthew                   Björn Ommer. Imagebart: Bidirectional context with multi-
+     Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam                        nomial diffusion for autoregressive image synthesis. CoRR,
+     Roberts, Tom Brown, Dawn Song, Ulfar Erlingsson, et al.                   abs/2108.08827, 2021. 6, 19
+     Extracting training data from large language models. In              [22] Patrick Esser, Robin Rombach, and Björn Ommer. A
+     30th USENIX Security Symposium (USENIX Security 21),                      note on data biases in generative models. arXiv preprint
+     pages 2633–2650, 2021. 27                                                 arXiv:2012.02516, 2020. 27
+ [6] Mark Chen, Alec Radford, Rewon Child, Jeffrey Wu, Hee-               [23] Patrick Esser, Robin Rombach, and Björn Ommer. Taming
+     woo Jun, David Luan, and Ilya Sutskever. Generative pre-                  transformers for high-resolution image synthesis. CoRR,
+     training from pixels. In ICML, volume 119 of Proceedings                  abs/2012.09841, 2020. 2, 3, 4, 6, 7, 18, 19, 27, 32, 34
+     of Machine Learning Research, pages 1691–1703. PMLR,                 [24] Mary Anne Franks and Ari Ezra Waldman. Sex, lies, and
+     2020. 3                                                                   videotape: Deep fakes and free speech delusions. Md. L.
+ [7] Nanxin Chen, Yu Zhang, Heiga Zen, Ron J. Weiss, Mo-                       Rev., 78:892, 2018. 27
+     hammad Norouzi, and William Chan. Wavegrad: Estimat-                 [25] Kevin Frans, Lisa B. Soros, and Olaf Witkowski. Clipdraw:
+     ing gradients for waveform generation. In ICLR. OpenRe-                   Exploring text-to-drawing synthesis through language-
+     view.net, 2021. 1                                                         image encoders. ArXiv, abs/2106.14843, 2021. 3
+ [8] Lu Chi, Borui Jiang, and Yadong Mu. Fast fourier convolu-            [26] Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing
+     tion. In NeurIPS, 2020. 8                                                 Xu, David Warde-Farley, Sherjil Ozair, Aaron C. Courville,
+ [9] Rewon Child. Very deep vaes generalize autoregressive                     and Yoshua Bengio. Generative adversarial networks.
+     models and can outperform them on images. CoRR,                           CoRR, 2014. 1, 2
+     abs/2011.10650, 2020. 3                                              [27] Ishaan Gulrajani, Faruk Ahmed, Martin Arjovsky, Vincent
+[10] Rewon Child, Scott Gray, Alec Radford, and Ilya Sutskever.                Dumoulin, and Aaron Courville. Improved training of
+     Generating long sequences with sparse transformers.                       wasserstein gans, 2017. 3
+     CoRR, abs/1904.10509, 2019. 3                                        [28] Martin Heusel, Hubert Ramsauer, Thomas Unterthiner,
+[11] Bin Dai and David P. Wipf. Diagnosing and enhancing VAE                   Bernhard Nessler, and Sepp Hochreiter. Gans trained by
+     models. In ICLR (Poster). OpenReview.net, 2019. 2, 3                      a two time-scale update rule converge to a local nash equi-
+[12] Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li,                    librium. In Adv. Neural Inform. Process. Syst., pages 6626–
+     and Fei-Fei Li. Imagenet: A large-scale hierarchical im-                  6637, 2017. 1, 6, 24
+     age database. In CVPR, pages 248–255. IEEE Computer                  [29] Jonathan Ho, Ajay Jain, and Pieter Abbeel. Denoising dif-
+     Society, 2009. 1, 5, 7, 19                                                fusion probabilistic models. In NeurIPS, 2020. 1, 2, 3, 4,
+[13] Emily Denton. Ethical considerations of generative ai. AI                 6, 14
+     for Content Creation Workshop, CVPR, 2021. 27                        [30] Jonathan Ho, Chitwan Saharia, William Chan, David J.
+[14] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and                             Fleet, Mohammad Norouzi, and Tim Salimans. Cascaded
+     Kristina Toutanova. BERT: pre-training of deep bidirec-                   diffusion models for high fidelity image generation. CoRR,
+     tional transformers for language understanding. CoRR,                     abs/2106.15282, 2021. 1, 3, 19
+     abs/1810.04805, 2018. 6                                              [31] Jonathan Ho and Tim Salimans. Classifier-free diffusion
+[15] Prafulla Dhariwal and Alex Nichol. Diffusion models beat                  guidance. In NeurIPS 2021 Workshop on Deep Generative
+     gans on image synthesis. CoRR, abs/2105.05233, 2021. 1,                   Models and Downstream Applications, 2021. 6, 7, 19, 26,
+     2, 3, 4, 6, 7, 8, 15, 19, 23, 24, 26                                      35, 36
+
+
+
+
+                                                                      10692
+[32] Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, and Alexei A.            [45] Diederik P. Kingma and Max Welling. Auto-Encoding Vari-
+     Efros. Image-to-image translation with conditional adver-               ational Bayes. In 2nd International Conference on Learn-
+     sarial networks. In CVPR, pages 5967–5976. IEEE Com-                    ing Representations, ICLR, 2014. 1, 3, 4, 27
+     puter Society, 2017. 3, 4                                          [46] Zhifeng Kong and Wei Ping. On fast sampling of diffusion
+[33] Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, and Alexei A.                 probabilistic models. CoRR, abs/2106.00132, 2021. 3
+     Efros. Image-to-image translation with conditional adver-          [47] Zhifeng Kong, Wei Ping, Jiaji Huang, Kexin Zhao, and
+     sarial networks. 2017 IEEE Conference on Computer Vi-                   Bryan Catanzaro. Diffwave: A versatile diffusion model
+     sion and Pattern Recognition (CVPR), pages 5967–5976,                   for audio synthesis. In ICLR. OpenReview.net, 2021. 1
+     2017. 4                                                            [48] Alina Kuznetsova, Hassan Rom, Neil Alldrin, Jasper R. R.
+[34] Andrew Jaegle, Sebastian Borgeaud, Jean-Baptiste                        Uijlings, Ivan Krasin, Jordi Pont-Tuset, Shahab Kamali,
+     Alayrac, Carl Doersch, Catalin Ionescu, David Ding,                     Stefan Popov, Matteo Malloci, Tom Duerig, and Vittorio
+     Skanda Koppula, Daniel Zoran, Andrew Brock, Evan                        Ferrari. The open images dataset V4: unified image classi-
+     Shelhamer, Olivier J. Hénaff, Matthew M. Botvinick,                    fication, object detection, and visual relationship detection
+     Andrew Zisserman, Oriol Vinyals, and João Carreira.                    at scale. CoRR, abs/1811.00982, 2018. 6, 17, 18
+     Perceiver IO: A general architecture for structured inputs
+                                                                        [49] Tuomas Kynkäänniemi, Tero Karras, Samuli Laine, Jaakko
+     &outputs. CoRR, abs/2107.14795, 2021. 4
+                                                                             Lehtinen, and Timo Aila. Improved precision and re-
+[35] Andrew Jaegle, Felix Gimeno, Andy Brock, Oriol Vinyals,                 call metric for assessing generative models.          CoRR,
+     Andrew Zisserman, and João Carreira. Perceiver: General                abs/1904.06991, 2019. 6, 24
+     perception with iterative attention. In Marina Meila and
+                                                                        [50] Tsung-Yi Lin, Michael Maire, Serge J. Belongie,
+     Tong Zhang, editors, Proceedings of the 38th International
+                                                                             Lubomir D. Bourdev, Ross B. Girshick, James Hays, Pietro
+     Conference on Machine Learning, ICML 2021, 18-24 July
+                                                                             Perona, Deva Ramanan, Piotr Dollár, and C. Lawrence Zit-
+     2021, Virtual Event, volume 139 of Proceedings of Machine
+                                                                             nick. Microsoft COCO: common objects in context. CoRR,
+     Learning Research, pages 4651–4664. PMLR, 2021. 4
+                                                                             abs/1405.0312, 2014. 6, 25
+[36] Manuel Jahn, Robin Rombach, and Björn Ommer. High-
+                                                                        [51] Yuqing Ma, Xianglong Liu, Shihao Bai, Le-Yi Wang, Ais-
+     resolution complex scene synthesis with transformers.
+                                                                             han Liu, Dacheng Tao, and Edwin Hancock. Region-wise
+     CoRR, abs/2105.06458, 2021. 17, 18, 25
+                                                                             generative adversarial imageinpainting for large missing ar-
+[37] Niharika Jain, Alberto Olmo, Sailik Sengupta, Lydia
+                                                                             eas. ArXiv, abs/1909.12507, 2019. 8
+     Manikonda, and Subbarao Kambhampati. Imperfect ima-
+     ganation: Implications of gans exacerbating biases on fa-          [52] Chenlin Meng, Yang Song, Jiaming Song, Jiajun Wu, Jun-
+     cial data augmentation and snapchat selfie lenses. arXiv                Yan Zhu, and Stefano Ermon. Sdedit: Image synthesis
+     preprint arXiv:2001.09528, 2020. 27                                     and editing with stochastic differential equations. CoRR,
+                                                                             abs/2108.01073, 2021. 1
+[38] Tero Karras, Timo Aila, Samuli Laine, and Jaakko Lehti-
+     nen. Progressive growing of gans for improved quality, sta-        [53] Lars M. Mescheder. On the convergence properties of GAN
+     bility, and variation. CoRR, abs/1710.10196, 2017. 5, 6                 training. CoRR, abs/1801.04406, 2018. 3
+[39] Tero Karras, Samuli Laine, and Timo Aila. A style-based            [54] Luke Metz, Ben Poole, David Pfau, and Jascha Sohl-
+     generator architecture for generative adversarial networks.             Dickstein. Unrolled generative adversarial networks. In
+     In IEEE Conf. Comput. Vis. Pattern Recog., pages 4401–                  5th International Conference on Learning Representations,
+     4410, 2019. 1                                                           ICLR 2017, Toulon, France, April 24-26, 2017, Conference
+[40] T. Karras, S. Laine, and T. Aila. A style-based gener-                  Track Proceedings. OpenReview.net, 2017. 3
+     ator architecture for generative adversarial networks. In          [55] Mehdi Mirza and Simon Osindero. Conditional generative
+     2019 IEEE/CVF Conference on Computer Vision and Pat-                    adversarial nets. CoRR, abs/1411.1784, 2014. 4
+     tern Recognition (CVPR), 2019. 5, 6                                [56] Gautam Mittal, Jesse H. Engel, Curtis Hawthorne, and Ian
+[41] Tero Karras, Samuli Laine, Miika Aittala, Janne Hellsten,               Simon. Symbolic music generation with diffusion models.
+     Jaakko Lehtinen, and Timo Aila. Analyzing and improv-                   CoRR, abs/2103.16091, 2021. 1
+     ing the image quality of stylegan. CoRR, abs/1912.04958,           [57] Kamyar Nazeri, Eric Ng, Tony Joseph, Faisal Z. Qureshi,
+     2019. 2, 6, 26                                                          and Mehran Ebrahimi. Edgeconnect: Generative im-
+[42] Dongjun Kim, Seungjae Shin, Kyungwoo Song, Wanmo                        age inpainting with adversarial edge learning. ArXiv,
+     Kang, and Il-Chul Moon. Score matching model for un-                    abs/1901.00212, 2019. 8
+     bounded data score. CoRR, abs/2106.05527, 2021. 6                  [58] Anton Obukhov, Maximilian Seitzer, Po-Wei Wu, Se-
+[43] Durk P Kingma and Prafulla Dhariwal. Glow: Generative                   men Zhydenko, Jonathan Kyl, and Elvis Yu-Jing Lin.
+     flow with invertible 1x1 convolutions. In S. Bengio, H. Wal-            High-fidelity performance metrics for generative models
+     lach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R.                in pytorch, 2020. Version: 0.3.0, DOI: 10.5281/zen-
+     Garnett, editors, Advances in Neural Information Process-               odo.4957738. 24, 25
+     ing Systems, 2018. 3                                               [59] Taesung Park, Ming-Yu Liu, Ting-Chun Wang, and Jun-
+[44] Diederik P. Kingma, Tim Salimans, Ben Poole, and                        Yan Zhu. Semantic image synthesis with spatially-adaptive
+     Jonathan Ho.        Variational diffusion models.     CoRR,             normalization. In Proceedings of the IEEE Conference on
+     abs/2107.00630, 2021. 1, 3, 14                                          Computer Vision and Pattern Recognition, 2019. 4, 7
+
+
+
+
+                                                                    10693
+[60] Taesung Park, Ming-Yu Liu, Ting-Chun Wang, and Jun-                  [75] Edgar Schönfeld, Bernt Schiele, and Anna Khoreva. A u-
+     Yan Zhu. Semantic image synthesis with spatially-adaptive                 net based discriminator for generative adversarial networks.
+     normalization. In Proceedings of the IEEE/CVF Confer-                     In 2020 IEEE/CVF Conference on Computer Vision and
+     ence on Computer Vision and Pattern Recognition (CVPR),                   Pattern Recognition, CVPR 2020, Seattle, WA, USA, June
+     June 2019. 18                                                             13-19, 2020, pages 8204–8213. Computer Vision Founda-
+[61] Gaurav Parmar, Dacheng Li, Kwonjoon Lee, and Zhuowen                      tion / IEEE, 2020. 6
+     Tu. Dual contradistinctive generative autoencoder. In IEEE           [76] Christoph Schuhmann, Richard Vencu, Romain Beaumont,
+     Conference on Computer Vision and Pattern Recognition,                    Robert Kaczmarczyk, Clayton Mullis, Aarush Katta, Theo
+     CVPR 2021, virtual, June 19-25, 2021, pages 823–832.                      Coombes, Jenia Jitsev, and Aran Komatsuzaki. Laion-
+     Computer Vision Foundation / IEEE, 2021. 6                                400m: Open dataset of clip-filtered 400 million image-text
+[62] Gaurav Parmar, Richard Zhang, and Jun-Yan Zhu. On                         pairs, 2021. 6
+     buggy resizing libraries and surprising subtleties in fid cal-       [77] Karen Simonyan and Andrew Zisserman. Very deep con-
+     culation. arXiv preprint arXiv:2104.11222, 2021. 24                       volutional networks for large-scale image recognition. In
+[63] David A. Patterson, Joseph Gonzalez, Quoc V. Le, Chen                     Yoshua Bengio and Yann LeCun, editors, Int. Conf. Learn.
+     Liang, Lluis-Miquel Munguia, Daniel Rothchild, David R.                   Represent., 2015. 27, 41, 42, 43
+     So, Maud Texier, and Jeff Dean. Carbon emissions and                 [78] Charlie Snell. Alien Dreams: An Emerging Art Scene.
+     large neural network training. CoRR, abs/2104.10350,                      https : / / ml . berkeley . edu / blog / posts /
+     2021. 2                                                                   clip-art/, 2021. [Online; accessed November-2021].
+[64] Aditya Ramesh, Mikhail Pavlov, Gabriel Goh, Scott                         2
+     Gray, Chelsea Voss, Alec Radford, Mark Chen, and Ilya                [79] Jascha Sohl-Dickstein, Eric A. Weiss, Niru Mah-
+     Sutskever. Zero-shot text-to-image generation. CoRR,                      eswaranathan, and Surya Ganguli. Deep unsupervised
+     abs/2102.12092, 2021. 1, 2, 3, 4, 6, 18, 25                               learning using nonequilibrium thermodynamics. CoRR,
+[65] Ali Razavi, Aäron van den Oord, and Oriol Vinyals. Gen-                  abs/1503.03585, 2015. 1, 3, 4, 15
+     erating diverse high-fidelity images with VQ-VAE-2. In
+                                                                          [80] Kihyuk Sohn, Honglak Lee, and Xinchen Yan. Learn-
+     NeurIPS, pages 14837–14847, 2019. 1, 2, 3, 19
+                                                                               ing structured output representation using deep conditional
+[66] Scott E. Reed, Zeynep Akata, Xinchen Yan, Lajanugen Lo-
+                                                                               generative models. In C. Cortes, N. Lawrence, D. Lee,
+     geswaran, Bernt Schiele, and Honglak Lee. Generative ad-
+                                                                               M. Sugiyama, and R. Garnett, editors, Advances in Neural
+     versarial text to image synthesis. In ICML, 2016. 4
+                                                                               Information Processing Systems, volume 28. Curran Asso-
+[67] Danilo Jimenez Rezende, Shakir Mohamed, and Daan
+                                                                               ciates, Inc., 2015. 4
+     Wierstra. Stochastic backpropagation and approximate in-
+                                                                          [81] Jiaming Song, Chenlin Meng, and Stefano Ermon. Denois-
+     ference in deep generative models. In Proceedings of the
+                                                                               ing diffusion implicit models. In ICLR. OpenReview.net,
+     31st International Conference on International Conference
+                                                                               2021. 3, 5, 6, 20
+     on Machine Learning, ICML, 2014. 1, 4, 27
+[68] Robin Rombach, Patrick Esser, and Björn Ommer.                      [82] Yang Song, Jascha Sohl-Dickstein, Diederik P. Kingma,
+     Network-to-network translation with conditional invertible                Abhishek Kumar, Stefano Ermon, and Ben Poole. Score-
+     neural networks. In NeurIPS, 2020. 3                                      based generative modeling through stochastic differential
+[69] Olaf Ronneberger, Philipp Fischer, and Thomas Brox. U-                    equations. CoRR, abs/2011.13456, 2020. 1, 3, 4, 15
+     net: Convolutional networks for biomedical image segmen-             [83] Emma Strubell, Ananya Ganesh, and Andrew McCallum.
+     tation. In MICCAI (3), volume 9351 of Lecture Notes in                    Energy and policy considerations for modern deep learn-
+     Computer Science, pages 234–241. Springer, 2015. 2, 3, 4                  ing research. In The Thirty-Fourth AAAI Conference on
+[70] Chitwan Saharia, Jonathan Ho, William Chan, Tim Sal-                      Artificial Intelligence, AAAI 2020, The Thirty-Second In-
+     imans, David J. Fleet, and Mohammad Norouzi. Im-                          novative Applications of Artificial Intelligence Conference,
+     age super-resolution via iterative refinement.         CoRR,              IAAI 2020, The Tenth AAAI Symposium on Educational
+     abs/2104.07636, 2021. 1, 4, 7, 19, 20, 21, 25                             Advances in Artificial Intelligence, EAAI 2020, New York,
+[71] Tim Salimans, Andrej Karpathy, Xi Chen, and Diederik P.                   NY, USA, February 7-12, 2020, pages 13693–13696. AAAI
+     Kingma. Pixelcnn++: Improving the pixelcnn with dis-                      Press, 2020. 2
+     cretized logistic mixture likelihood and other modifications.        [84] Wei Sun and Tianfu Wu. Learning layout and style re-
+     CoRR, abs/1701.05517, 2017. 1, 3                                          configurable gans for controllable image synthesis. CoRR,
+[72] Dave Salvator. NVIDIA Developer Blog. https :                             abs/2003.11571, 2020. 18, 25
+     / / developer . nvidia . com / blog / getting -                      [85] Roman Suvorov, Elizaveta Logacheva, Anton Mashikhin,
+     immediate- speedups- with- a100- tf32, 2020.                              Anastasia Remizova, Arsenii Ashukha, Aleksei Silvestrov,
+     26                                                                        Naejin Kong, Harshith Goka, Kiwoong Park, and Victor S.
+[73] Robin San-Roman, Eliya Nachmani, and Lior Wolf.                           Lempitsky. Resolution-robust large mask inpainting with
+     Noise estimation for generative diffusion models. CoRR,                   fourier convolutions. ArXiv, abs/2109.07161, 2021. 8, 24,
+     abs/2104.02600, 2021. 3                                                   30
+[74] Axel Sauer, Kashyap Chitta, Jens Müller, and An-                    [86] Tristan Sylvain, Pengchuan Zhang, Yoshua Bengio, R. De-
+     dreas Geiger. Projected gans converge faster. CoRR,                       von Hjelm, and Shikhar Sharma. Object-centric image gen-
+     abs/2111.01007, 2021. 6                                                   eration from layouts. In Thirty-Fifth AAAI Conference on
+
+
+
+
+                                                                      10694
+      Artificial Intelligence, AAAI 2021, Thirty-Third Conference             gated convolution. 2019 IEEE/CVF International Confer-
+      on Innovative Applications of Artificial Intelligence, IAAI             ence on Computer Vision (ICCV), pages 4470–4479, 2019.
+      2021, The Eleventh Symposium on Educational Advances                    8
+      in Artificial Intelligence, EAAI 2021, Virtual Event, Febru-      [101] K. Zhang, Jingyun Liang, Luc Van Gool, and Radu Timo-
+      ary 2-9, 2021, pages 2647–2655. AAAI Press, 2021. 17,                   fte. Designing a practical degradation model for deep blind
+      18, 25                                                                  image super-resolution. ArXiv, abs/2103.14006, 2021. 21
+ [87] Patrick Tinsley, Adam Czajka, and Patrick Flynn. This face        [102] Richard Zhang, Phillip Isola, Alexei A. Efros, Eli Shecht-
+      does not exist... but it might be yours! identity leakage in            man, and Oliver Wang. The unreasonable effectiveness of
+      generative models. In Proceedings of the IEEE/CVF Win-                  deep features as a perceptual metric. In Proceedings of the
+      ter Conference on Applications of Computer Vision, pages                IEEE Conference on Computer Vision and Pattern Recog-
+      1320–1328, 2021. 27                                                     nition (CVPR), June 2018. 3, 7, 16
+ [88] Antonio Torralba and Alexei A Efros. Unbiased look at             [103] Shengyu Zhao, Jianwei Cui, Yilun Sheng, Yue Dong, Xiao
+      dataset bias. In CVPR 2011, pages 1521–1528. IEEE, 2011.                Liang, Eric I-Chao Chang, and Yan Xu. Large scale image
+      27                                                                      completion via co-modulated generative adversarial net-
+ [89] Arash Vahdat and Jan Kautz. NVAE: A deep hierarchical                   works. ArXiv, abs/2103.10428, 2021. 8
+      variational autoencoder. In NeurIPS, 2020. 3                      [104] Bolei Zhou, Àgata Lapedriza, Aditya Khosla, Aude Oliva,
+ [90] Arash Vahdat, Karsten Kreis, and Jan Kautz. Score-                      and Antonio Torralba. Places: A 10 million image database
+      based generative modeling in latent space.            CoRR,             for scene recognition. IEEE Transactions on Pattern Anal-
+      abs/2106.05931, 2021. 2, 3, 6                                           ysis and Machine Intelligence, 40:1452–1464, 2018. 8, 24
+ [91] Aaron van den Oord, Nal Kalchbrenner, Lasse Espeholt,             [105] Yufan Zhou, Ruiyi Zhang, Changyou Chen, Chunyuan Li,
+      koray kavukcuoglu, Oriol Vinyals, and Alex Graves. Con-                 Chris Tensmeyer, Tong Yu, Jiuxiang Gu, Jinhui Xu, and
+      ditional image generation with pixelcnn decoders. In Ad-                Tong Sun. LAFITE: towards language-free training for
+      vances in Neural Information Processing Systems, 2016. 3                text-to-image generation. CoRR, abs/2111.13792, 2021. 6
+ [92] Aäron van den Oord, Nal Kalchbrenner, and Koray
+      Kavukcuoglu. Pixel recurrent neural networks. CoRR,
+      abs/1601.06759, 2016. 3
+ [93] Aäron van den Oord, Oriol Vinyals, and Koray
+      Kavukcuoglu. Neural discrete representation learning. In
+      NIPS, pages 6306–6315, 2017. 2, 4, 27
+ [94] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob
+      Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser,
+      and Illia Polosukhin. Attention is all you need. In NIPS,
+      pages 5998–6008, 2017. 3, 4, 5, 6
+ [95] Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chau-
+      mond, Clement Delangue, Anthony Moi, Pierric Cistac,
+      Tim Rault, Rémi Louf, Morgan Funtowicz, and Jamie
+      Brew. Huggingface’s transformers: State-of-the-art natural
+      language processing. CoRR, abs/1910.03771, 2019. 24
+ [96] Zhisheng Xiao, Karsten Kreis, Jan Kautz, and Arash Vah-
+      dat. VAEBM: A symbiosis between variational autoen-
+      coders and energy-based models. In 9th International Con-
+      ference on Learning Representations, ICLR 2021, Virtual
+      Event, Austria, May 3-7, 2021. OpenReview.net, 2021. 6
+ [97] Wilson Yan, Yunzhi Zhang, Pieter Abbeel, and Aravind
+      Srinivas. Videogpt: Video generation using VQ-VAE and
+      transformers. CoRR, abs/2104.10157, 2021. 3
+ [98] Fisher Yu, Yinda Zhang, Shuran Song, Ari Seff, and Jianx-
+      iong Xiao. LSUN: construction of a large-scale image
+      dataset using deep learning with humans in the loop. CoRR,
+      abs/1506.03365, 2015. 5, 6
+ [99] Jiahui Yu, Xin Li, Jing Yu Koh, Han Zhang, Ruoming Pang,
+      James Qin, Alexander Ku, Yuanzhong Xu, Jason Baldridge,
+      and Yonghui Wu. Vector-quantized image modeling with
+      improved vqgan, 2021. 3, 4
+[100] Jiahui Yu, Zhe L. Lin, Jimei Yang, Xiaohui Shen, Xin Lu,
+      and Thomas S. Huang. Free-form image inpainting with
+
+
+
+
+                                                                     10695
+

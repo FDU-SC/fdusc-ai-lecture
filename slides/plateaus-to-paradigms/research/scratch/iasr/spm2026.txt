@@ -1,0 +1,1608 @@
+ INTERNATIONAL
+AI SAFETY REPORT
+        2026
+   Extended Summary
+    for Policymakers
+
+
+
+
+       February 2026
+                                                  ﻿
+
+
+
+
+      About this document
+      This Extended Summary for Policymakers presents key findings from the International
+      AI Safety Report 2026. For a more concise overview, see the Executive Summary (4 pages).
+      This Summary does not include references (other than for figure data); these are provided
+      in the corresponding sections of the main Report, which are linked at the top of each
+      Summary section.
+
+      The International AI Safety Report 2026 provides a scientific assessment of the state of
+      general-purpose AI capabilities and risks in order to support informed policymaking. Over
+      100 independent experts contributed to this report, including an Expert Advisory Panel
+      nominated by more than 30 countries and from the European Union (EU), Organisation for
+      Economic Co-operation and Development (OECD), and United Nations (UN). The Report
+      does not recommend any policies but provides a scientific evidence base to inform
+      decision-making. Led by the Chair, the independent experts writing it jointly had full
+      discretion over its content.
+
+      This Summary follows the structure of the main Report, which is organised around three
+      central questions:
+
+      — What can general-purpose AI do today, and how might its capabilities change?
+
+      — What emerging risks does general-purpose AI pose?
+
+      — What risk management approaches exist, and how effective are they?
+
+
+
+
+International AI Safety Report 2026                                                               i
+Contents
+About this document ������������������������������������������������������������������������������������������������������������������������������� i
+Key developments since the 2025 Report ������������������������������������������������������������������������������� 2
+1. Capabilities ���������������������������������������������������������������������������������������������������������������������������������������������� 3
+                  1.1. What is general-purpose AI? �������������������������������������������������������������������������������� 3
+                  1.2. Current capabilities ��������������������������������������������������������������������������������������������������� 3
+                  1.3. Capabilities by 2030 �������������������������������������������������������������������������������������������������� 5
+2. Risks ������������������������������������������������������������������������������������������������������������������������������������������������������������� 7
+                  2.1. Risks from misuse ������������������������������������������������������������������������������������������������������� 7
+                           2.1.1. AI-generated content and criminal activity ���������������������������������� 7
+                           2.1.2. Influence and manipulation ��������������������������������������������������������������������� 8
+                           2.1.3. Cyberattacks ����������������������������������������������������������������������������������������������������� 9
+                           2.1.4. Biological and chemical risks �������������������������������������������������������������� 10
+                  2.2. Risks from malfunctions ������������������������������������������������������������������������������������� 11
+                           2.2.1. Reliability challenges �������������������������������������������������������������������������������� 11
+                           2.2.2. Loss of control ���������������������������������������������������������������������������������������������� 12
+                  2.3. Systemic risks ������������������������������������������������������������������������������������������������������������� 13
+                           2.3.1. Labour market impacts ��������������������������������������������������������������������������� 13
+                           2.3.2. Risks to human autonomy �������������������������������������������������������������������� 14
+3. Risk management ���������������������������������������������������������������������������������������������������������������������������� 16
+                  3.1. Institutional and technical challenges ������������������������������������������������������� 16
+                  3.2. Risk management practices ����������������������������������������������������������������������������� 17
+                  3.3. Technical safeguards and monitoring �������������������������������������������������������� 18
+                  3.4. Open-weight models ���������������������������������������������������������������������������������������������� 20
+                  3.5. Building societal resilience �������������������������������������������������������������������������������� 21
+Figure references ���������������������������������������������������������������������������������������������������������������������������������� 22
+Contributors ���������������������������������������������������������������������������������������������������������������������������������������������� 23
+Acknowledgements ����������������������������������������������������������������������������������������������������������������������������� 24
+
+
+
+
+     International AI Safety Report 2026                                                                                                                                    1
+                                      Extended Summary for Policymakers
+
+
+
+
+   Key developments
+   since the 2025 Report
+   Notable developments since the publication of the first
+   International AI Safety Report in January 2025.
+
+   — General-purpose AI capabilities have continued to improve, especially in mathematics,
+     coding, and autonomous operation. Leading AI systems achieved gold-medal performance
+     on International Mathematical Olympiad questions. In coding, AI agents can now reliably
+     complete some tasks that would take a human programmer about half an hour, up from
+     under 10 minutes a year ago. Performance nevertheless remains ‘jagged’, with leading
+     systems still failing at some seemingly simple tasks.
+
+   — Improvements in general-purpose AI capabilities increasingly come from techniques
+     applied after a model’s initial training. These ‘post-training’ techniques include refining
+     models for specific tasks and allowing them to use more computing power when generating
+     outputs. At the same time, using more computing power for initial training continues to also
+     improve model capabilities.
+
+   — AI adoption has been rapid, though highly uneven across regions. AI has been adopted
+     faster than previous technologies like the personal computer, with at least 700 million
+     people now using leading AI systems weekly. In some countries over 50% of the population
+     uses AI, though across much of Africa, Asia, and Latin America adoption rates likely
+     remain below 10%.
+
+   — Advances in AI’s scientific capabilities have heightened concerns about misuse
+     in biological weapons development. Multiple AI companies chose to release new models
+     in 2025 with additional safeguards after pre-deployment testing could not rule out the
+     possibility that they could meaningfully help novices develop such weapons.
+
+   — More evidence has emerged of AI systems being used in real-world cyberattacks. Security
+     analyses by AI companies indicate that malicious actors and state-associated groups are
+     using AI tools to assist in cyber operations.
+
+   — Reliable pre-deployment safety testing has become harder to conduct. It has become
+     more common for models to distinguish between test settings and real-world deployment,
+     and to exploit loopholes in evaluations. This means that dangerous capabilities could go
+     undetected before deployment.
+
+   — Industry commitments to safety governance have expanded. In 2025, 12 companies
+     published or updated Frontier AI Safety Frameworks – documents that describe how they
+     plan to manage risks as they build more capable models. Most risk-management initiatives
+     remain voluntary, but a few jurisdictions are beginning to formalise some practices as
+     legal requirements.
+
+
+
+
+International AI Safety Report 2026                                                                 2
+                                       Extended Summary for Policymakers
+
+
+Chapter 1
+
+
+Capabilities
+1.1. What is                                               1.2. Current capabilities
+general-purpose AI?                                        Read the full section
+Read the full section                                      General-purpose AI systems can perform
+                                                           a wide range of well-scoped tasks with
+General-purpose AI models and systems are
+                                                           high proficiency
+designed to perform a variety of tasks, rather
+than one specialised function                              General-purpose AI systems can typically
+                                                           converse fluently in numerous languages,
+Examples of tasks general-purpose AI can
+                                                           generate computer code, create realistic images
+typically do include translating languages,
+                                                           and short videos, and solve graduate-level
+creating images, helping with scientific work,
+                                                           mathematics and science problems. For example,
+and writing computer code. Developing and
+                                                           leading models now pass professional licensing
+deploying general-purpose AI involves several
+                                                           examinations in medicine and law and correctly
+distinct stages, ranging from data preparation
+                                                           answer over 80% of graduate-level science
+to monitoring its usage (Figure 1). Each stage
+                                                           questions in some tests (Figure 2). Scientific
+requires various resource inputs such as data,
+                                                           researchers also increasingly use general-
+computing power, or labour. Training a leading
+                                                           purpose AI for tasks like literature reviews,
+general-purpose AI model can cost hundreds
+                                                           data analysis, and experimental design.
+of millions of dollars. Modern methods for
+developing general-purpose AI systems are
+complex, and public information about how
+leading systems are built and evaluated
+is often scarce.
+
+
+
+
+        Stages of general-purpose AI development
+
+
+                                                            Post-
+                             Data                                                                    Post-
+                                                          training
+                          collection     Pre-training                   System      Deployment    deployment
+     Development stage                                      and
+                             and          (training)                  integration   and release    monitoring
+                                                        ﬁne-tuning
+                           curation                                                               and updates
+                                                         (training)
+
+
+
+
+Figure 1: A schematic representation of the stages of general-purpose AI development.
+Source: International AI Safety Report 2026.
+
+
+
+
+International AI Safety Report 2026                                                                             3
+                                      Extended Summary for Policymakers
+
+
+
+
+      Leading general-purpose AI model performance has increased
+      across key benchmarks
+      Accuracy (%)
+                                                                         GPT-5
+      100                                                                                   Mathematical
+                                                  o1-mini        Gemini 3 Pro Preview       Problem-Solving
+       90                                                                                   (High-School)
+                                                                                            (MATH Level 5)
+       80
+                                                                                            Graduate-Level
+                                                                        Claude Sonnet 4.5   Scientiﬁc Reasoning
+       70                                                                  (no thinking)
+                                                                                            (GPQA Diamond)
+       60                                                                                   Software engineering
+                                                                                            (SWE-bench Veriﬁed)
+       50
+                                                                                            Mathematical
+       40   GPT-4                                                                           Problem-Solving
+                                                                                            (Expert) (FrontierMath)
+       30
+                                      Claude Sonnet 3.5
+                                                                     Gemini 3 Pro Preview
+       20
+                    GPT-4
+       10
+                                      Claude Sonnet 3.5
+        0
+             Apr July Oct  Jan   Apr July  Oct  Jan  Apr July                     Nov
+            2023 2023 2023 2024 2024 2024 2024 2025 2025 2025                     2025
+
+                                          Release date
+
+
+
+Figure 2: Scores of leading general-purpose AI systems on key benchmarks from April 2023 to
+November 2025. These benchmarks cover challenging problems in programming (SWE-bench Verified),
+mathematics (MATH and FrontierMath), and scientific reasoning (GPQA Diamond). Reasoning systems,
+such as OpenAI’s o1, show significantly improved performance on mathematical tasks, as illustrated
+clearly on the MATH benchmark. Source: Epoch AI, 2025 (1).
+
+
+
+Performance remains uneven across                           AI agents are a major focus
+tasks and domains                                           of current development
+The capabilities of these systems are ‘jagged’:             Leading AI companies are investing heavily
+they can perform many complex tasks but                     in ‘AI agents’ – autonomous systems that can
+still struggle with some seemingly simpler                  perform tasks like browsing the internet with little
+ones. For example, they are less reliable when              to no human oversight. AI agents have become
+projects involve many steps; they still sometimes           more competent in many domains, especially in
+generate text that includes false statements                software engineering (Figure 3). However, agents
+(‘hallucinations’); they are still limited on tasks         still complement rather than replace humans
+that involve interacting with or reasoning about            in most complex professional roles, because
+the physical world, and their performance                   they remain unreliable when tasks involve
+declines in languages and cultural contexts                 many steps or are more unusual.
+that are less common in their training data.
+For example, one study reported 79% accuracy                Techniques applied after initial model
+on questions about US culture, compared with                training have improved performance
+12% on questions about Ethiopian culture.                   Since the publication of the previous
+                                                            Report, developers have achieved significant
+                                                            performance improvements by scaling
+                                                            techniques applied after a model’s initial training.
+                                                            These techniques include further ‘fine-tuning’
+                                                            models by training them with additional data
+
+
+International AI Safety Report 2026                                                                                   4
+                                                                               Extended Summary for Policymakers
+
+
+
+
+          AI systems are improving at longer software tasks
+
+                                                   30 min
+
+                                                                                                                                           GPT-5
+      of software tasks a model can successfully
+
+
+
+                                                            Implement a simple web server
+          Duration (for human professionals)
+
+
+
+
+                                                                                                              Model succeeds 80% of
+                                                                                                            the time on software tasks    o3
+              complete 80% of the time
+
+
+
+
+                                                                                                             that would take a human
+                                                                                                                roughly 15 minutes
+
+                                                            Implement a dictionary attack
+                                                   15 min                                                             Claude 3.7 Sonnet
+
+
+
+                                                            Find fact on web
+
+
+
+
+                                                                                                            GPT-4
+                                                            Count words in passage
+                                                   0 min
+                                                             GPT-2
+                                                                        2020                   2022                     2024                   2026
+                                                                                              Model release date
+
+
+
+
+Figure 3: The length of software engineering tasks (measured by how long they take human professionals
+to complete) that AI agents can complete with an 80% success rate over time. In recent years, this task-
+length has been doubling approximately every seven months. Source: Kwa et al., 2025 (2).
+
+
+for specific tasks, and allowing models to use
+more computational resources while they are
+                                                                                                 1.3. Capabilities by 2030
+generating outputs during deployment. The                                                        Read the full section
+latter approach has led to the development                                                       Key inputs to AI progress are expected
+of ‘reasoning models’, which generate an explicit                                                to continue growing
+step-by-step explanation (a ‘chain of thought’)
+                                                                                                 Developers have trained leading AI models
+before providing a final answer.
+                                                                                                 with roughly 5× more computing power each
+Pre-deployment performance tests often do                                                        year, while the algorithms used to train them
+not reliably predict real-world performance,                                                     have become 2–6× more efficient annually.
+leading to an ‘evaluation gap’                                                                   Many experts expect these trends to continue.
+                                                                                                 Since the publication of the previous Report,
+Tests and benchmark scores used to evaluate
+                                                                                                 companies have announced investments of
+AI models before they are deployed often fail
+                                                                                                 hundreds of billions of dollars in data centres to
+to reflect real-world use. For example, they can
+                                                                                                 train larger models and deploy them more widely.
+be outdated, too narrow, or use questions that
+already appear in the AI model’s training data.                                                  There is substantial uncertainty about
+This leads to an ‘evaluation gap’: pre-deployment                                                how fast future progress will be
+test results are not always strongly predictive
+                                                                                                 Although forecasts predict that key inputs into
+of real-world capabilities or risks.
+                                                                                                 AI development will grow, predicting exactly
+                                                                                                 how capabilities will change as a result is more
+                                                                                                 difficult. Methods for estimating how and when
+                                                                                                 new capabilities emerge remain unreliable, and
+                                                                                                 bottlenecks could slow progress unexpectedly.
+                                                                                                 OECD analyses suggest that outcomes by 2030
+
+
+
+International AI Safety Report 2026                                                                                                                   5
+                                      Extended Summary for Policymakers
+
+
+could range from modest improvements to rapid           If current trends continue, AI systems
+gains in AI capabilities, with systems matching         could operate autonomously on multi-day
+or exceeding human cognitive performance.               tasks by 2030
+                                                        The duration of some software engineering tasks
+Potential bottlenecks include data,                     that AI agents can complete has been doubling
+hardware, capital, and energy                           approximately every seven months. If this
+Current rates of progress could become harder           continues, by 2030 AI systems could reliably
+to sustain due to limits in the amount of suitable      complete well-specified software engineering
+training data, availability in powerful computer        tasks that take humans several days. It is unclear
+chips, funding for new development, or energy           whether this rate of improvement will generalise
+for AI data centres. Experts disagree on whether        to other domains and more complex problems.
+AI developers will be able to continue developing
+more powerful systems by using resources
+more efficiently.
+
+
+
+
+International AI Safety Report 2026                                                                      6
+                                                                     Extended Summary for Policymakers
+
+
+Chapter 2
+
+
+Risks
+A range of emerging risks are associated                                                                      Evidence of misuse is growing, but reliable data
+with general-purpose AI. Some are already                                                                     on how widespread it is remains limited.
+manifesting while others remain uncertain but
+could be severe if they materialise. The Report                                                               2.1.1. AI-generated content
+distinguishes three categories of risks: misuse                                                               and criminal activity
+(the deliberate use of AI systems to cause
+                                                                                                              Read the full section
+harm); malfunctions (unintentional failures and
+unexpected behaviours); and systemic risks†                                                                   Harmful incidents involving AI-generated
+(risks resulting from widespread deployment                                                                   content are becoming more common
+of general-purpose AI).                                                                                       General-purpose AI systems can generate
+                                                                                                              high-quality text, audio, images, and video. This
+
+2.1. Risks from misuse                                                                                        content can be misused for criminal purposes,
+                                                                                                              such as scams, fraud, blackmail, extortion,
+General-purpose AI systems can be misused for                                                                 defamation, and producing non-consensual
+fraud and cybercrime, manipulation of users, and                                                              intimate imagery and child sexual abuse material.
+potentially harmful applications in biological and                                                            The number of media-reported harmful incidents
+chemical domains. Many AI capabilities are dual-                                                              that involve AI-generated content has increased
+use, meaning the same capabilities that enable                                                                substantially since 2021 (Figure 4). For example,
+beneficial use can also be used to cause harm.                                                                scammers have used cloned voices to pose as
+
+
+
+        The number of media-reported AI incidents and hazards involving
+        content generation is growing
+        Number of events involving ‘content generation’ in the OECD’s AI Incidents and Hazards Monitor database
+
+        Number of incidents and hazards
+        250
+
+        200                          Six-month moving average
+                                     Monthly incidents and hazards
+        150
+
+        100
+
+         50
+
+          0
+              Nov 2021
+
+
+                         Feb 2022
+
+
+                                    May 2022
+
+
+                                               Aug 2022
+
+
+                                                          Nov 2022
+
+
+                                                                       Feb 2023
+
+
+                                                                                  May 2023
+
+
+                                                                                             Aug 2023
+
+
+                                                                                                          Nov 2023
+
+
+                                                                                                                     Feb 2024
+
+
+                                                                                                                                May 2024
+
+
+                                                                                                                                           Aug 2024
+
+
+                                                                                                                                                      Nov 2024
+
+
+                                                                                                                                                                 Feb 2025
+
+
+                                                                                                                                                                            May 2025
+
+
+                                                                                                                                                                                       Aug 2025
+
+
+                                                                                                                                                                                                  Nov 2025
+
+
+
+
+                                                                                                        Date
+
+
+Figure 4: The number of events involving ‘content generation’ reported in the OECD’s AI Incidents
+and Hazards Monitor database over time. This includes incidents involving AI-generated content
+such as deepfake pornographic images. The number of monthly reported incidents has increased
+significantly since 2021. Source: OECD AI Incidents and Hazards Monitor (3).
+
+
+† In this report, systemic risks are risks that result from widespread deployment of highly capable general-purpose AI across
+society and the economy. Note that the EU AI Act uses the term differently, to refer to risks from general-purpose AI models
+that pose “risks of large-scale harm”.
+
+
+
+International AI Safety Report 2026                                                                                                                                                                          7
+                                                                                  Extended Summary for Policymakers
+
+
+family members and persuade victims to transfer                                                              real speakers 80% of the time. Watermarks and
+money. AI tools have substantially lowered the                                                               labels can help people identify AI-generated
+barrier to creating this kind of content: many are                                                           content, but skilled actors can often remove
+free or low-cost, require little technical expertise,                                                        them. Identifying where deepfakes come from
+and can be used anonymously.                                                                                 is also difficult, making it hard to hold actors
+                                                                                                             involved in their production accountable. Some
+Personalised deepfake pornography                                                                            AI-generated content is harmful even if it is
+disproportionately targets women and girls                                                                   clearly labelled, so detection alone cannot
+One study estimated that 96% of deepfake videos                                                              address all harms.
+online are pornographic, and a 2024 survey found
+that about one in seven UK adults report having                                                              2.1.2. Influence and manipulation
+seen such videos. Another study found that
+                                                                                                             Read the full section
+19 out of 20 popular ‘nudify’ apps specialise in the
+simulated undressing of women. AI tools without                                                              AI-generated content can influence what
+adequate safeguards also allow bad actors to                                                                 people believe and how they act, sometimes
+create sexualised images of minors from a single                                                             in harmful ways
+reference image, though limited data makes it                                                                A range of laboratory studies have demonstrated
+hard to know how widespread this practice is.                                                                that interacting with AI systems can lead to
+                                                                                                             measurable changes in people’s beliefs. In
+Deepfakes can be highly realistic,                                                                           experimental settings, AI systems can be at least
+and existing safeguards have limitations                                                                     as effective as human participants at generating
+Since the publication of the previous Report,                                                                content that persuades people to change their
+deepfakes have become more realistic and                                                                     views. Across general-purpose AI models,
+harder to identify. In one study, participants                                                               those trained with more computing power are
+misidentified AI-generated text as human-                                                                    generally more persuasive (Figure 5). However,
+written 77% of the time. Another study found                                                                 little evidence exists on their persuasive effects
+that listeners mistook AI-generated voices for                                                               outside experimental settings.
+
+
+
+
+                Persuasiveness increases with model scale
+                                                                                                                                   GPT-4o (3/25)       GPT-4.5
+                                                  12
+                                                                                                      Q-72b     GPT-3.5
+    percentage points, compared with people
+     Persuasive effect (change in attitudes, in
+
+
+
+
+                                                                                                       chat     Turbo
+                                                                                                           Q-110b
+                                                                                                            chat        L-70b
+         who did not chat with a model)
+
+
+
+
+                                                                                                                                L-405b       GPT-4o (8/25)
+                                                   8
+                                                                                              Q-32b
+                                                                                                                                                             Grok-3-Beta
+                                                                                     Q-7b
+
+
+                                                                                                           Q-72b
+                                                   4
+                                                                                            Q-14b   L-8b
+
+                                                                                                                            Post-training:
+                                                                           Q-4b
+                                                                                                                              Chat              Developer
+                                                   0              Q-1.8b
+                                                       Q-0.5b                                                               Model:
+                                                                                                                            Q = qwen1.5 L = llama3.1
+
+                                                  -4
+                                                          1e+01                1e+02                1e+03              1e+04                     1e+05
+                                                                             Model scale (training compute in FLOP, logarithmic scale)
+
+
+
+Figure 5: Results from a study of 17 models trained with different levels of compute, comparing
+their ability to generate content to persuade human subjects relative to a control group. People who
+interacted with content produced by models trained with more computing power were more likely
+to change their beliefs. Source: Hackenburg et al. 2025 (4).
+
+
+International AI Safety Report 2026                                                                                                                                        8
+                                      Extended Summary for Policymakers
+
+
+There is little evidence that AI-generated               research is beginning to identify factors that
+content is manipulating people at scale                  make AI-generated content more persuasive,
+There have been documented cases of malicious            such as longer and more personal interactions
+actors using AI-generated content for influence          with AI chatbots. Future capability improvements
+operations and social engineering. However,              and increasing user dependence could increase
+there is limited evidence that manipulation by           these effects.
+AI-generated content is currently widespread
+in the real world or more effective than human-          2.1.3. Cyberattacks
+generated content.
+                                                         Read the full section
+AI-driven manipulation is hard to detect,                AI systems can discover software
+but risk factors are becoming clearer                    vulnerabilities and write malicious code
+It is hard to detect AI-generated manipulative           General-purpose AI systems can support
+content in practice, which makes evidence-               cyberattacks by helping actors identify software
+gathering, monitoring, and mitigation difficult.         vulnerabilities,† and write and execute code
+Moreover, many proposed mitigations are                  that exploits them (Figure 6). In one major
+unproven or may involve limiting the usefulness          cybersecurity competition, an AI agent identified
+of legitimate AI tools. At the same time, recent         77% of vulnerabilities in real software, placing
+
+
+
+
+       AI system performance on evaluations of cyber capabilities
+       has improved
+       Score (%)
+       100                                                                                  CyberGym
+        90                                                                                  Cybench
+
+        80                                                                                  HonestCyberEval
+                                                                                            CyberSOCEval
+        70
+
+        60
+
+        50
+
+        40
+
+        30
+
+        20
+
+        10
+
+         0
+               Feb    Apr    Jun   Aug      Oct   Dec     Feb    Apr    Jun   Aug     Oct
+              2024   2024   2024   2024    2024   2024   2025   2025   2025   2025   2025
+
+
+
+
+Figure 6: State-of-the-art AI system performance over time across four cybersecurity benchmarks:
+CyberGym, which evaluates whether models can generate inputs that successfully trigger known
+vulnerabilities in real software; Cybench, which measures performance on professional-level
+capture-the-flag exercise tasks; HonestCyberEval, which tests automated software exploitation; and
+CyberSOCEval, which assesses the ability to analyse malware behaviour from sandbox detonation logs.
+Source: International AI Safety Report 2026, based on data from Wang et al., 2025; Zhang et al., 2024;
+Ristea and Mavroudis 2025; and Deason et al., 2025 (5, 6, 7, 8*).
+
+
+†   Software vulnerabilities are flaws in software that attackers can use to gain unauthorised access
+to computer systems, steal information, or disrupt operations.
+
+
+International AI Safety Report 2026                                                                           9
+                                      Extended Summary for Policymakers
+
+
+it in the top 5% of over 400 (mostly human) teams.      experimental procedures, and answer technical
+AI developers have also identified attackers using      questions. These capabilities may assist malicious
+their systems to generate code for cyberattacks.        actors seeking to obtain biological or chemical
+                                                        weapons (Figure 7). General-purpose AI systems
+AI systems are increasingly used                        now match or exceed expert performance on
+in real-world cyber operations                          some relevant tests. For example, in one study
+Since the publication of the previous Report,           a recent model outperformed 94% of domain
+AI developers have increasingly reported that           experts at troubleshooting virology laboratory
+attackers use their systems in cyber operations.        protocols. However, there is still substantial
+Some illicit online marketplaces now sell easy-         uncertainty about how much these capabilities
+to-use AI tools that can lower the skill needed         increase real-world risk, given practical barriers
+to carry out attacks. Whether this has increased        to producing weapons. Legal prohibitions also
+the frequency of cyberattacks overall remains           make it difficult for researchers to conduct
+unclear because real-world incidents are                and publish highly realistic studies to improve
+difficult to link directly to AI use.                   risk assessments.
+
+AI systems are automating more parts                    Developers have strengthened
+of cyberattacks, but cannot yet execute                 safeguards for leading models
+them autonomously                                       In 2025, multiple AI developers released
+Fully autonomous cyberattacks could eliminate           new models with heightened safeguards after
+the need for human operators, potentially allowing      they could not rule out that these models
+malicious actors to launch attacks at much              could meaningfully assist novices in creating
+greater scale. Current AI systems can already           biological weapons. Potential safeguards include
+autonomously carry out some tasks involved              training procedures that teach AI models to
+in cyberattacks. In one incident documented             provide safer responses to potentially harmful
+by a major AI company, an attacker reportedly           questions, and filters that block potentially
+used AI to automate most of the work involved           risky inputs and outputs.
+in executing an attack. However, fully automated
+end-to-end attacks have not been reported.              AI systems are increasingly capable of
+                                                        supporting scientific work and operating
+It is unclear whether general-purpose                   laboratory equipment
+AI benefits attackers or defenders more                 Since the publication of the previous Report, AI
+Since the same AI capabilities often have both          ‘co-scientists’ have become increasingly capable
+offensive and defensive applications, it can be         of supporting scientific work. AI agents can now
+difficult to restrict harmful uses without slowing      chain together multiple capabilities to complete
+defensive innovation. A critical open question          complex tasks, including providing accessible
+is whether future capability improvements will          interfaces to help users operate more specialised
+benefit attackers or defenders more. Safeguards         AI tools and laboratory equipment.
+against AI-boosted cyberattacks include AI
+security agents that identify vulnerabilities before    A key challenge is managing misuse risks while
+attackers do, as well as systems that detect and        enabling beneficial scientific applications
+block malicious users.                                  Some capabilities that could be misused in
+                                                        biological weapons development are also useful
+2.1.4. Biological and chemical risks                    for medical research. This can make it difficult
+                                                        to restrict harmful uses without hampering
+Read the full section
+                                                        legitimate research.
+AI systems can provide detailed
+information relevant to biological and
+chemical weapons development
+General-purpose AI systems can produce
+laboratory instructions, help troubleshoot
+
+
+
+International AI Safety Report 2026                                                                    10
+                                             Extended Summary for Policymakers
+
+
+
+
+      AI tools could assist at multiple stages of biological
+      weapons development
+
+                                                              Experiment           Experiment
+                                                               simulation          automation
+                                                                       BT      BT & GPAI
+
+
+                                                                            Test
+                        Bioreactor        Laboratory                                                   Result        Experiment
+                       optimisation       automation                                               Interpretation   data feedback
+                                   BT    BT & GPAI                                                    BT & GPAI     BT
+
+                                   BT                                                                               BT
+                                               Build                                               Learn              Iterative
+                         Genome
+                                                                                                                        model
+                        assembly
+                                                                                                                     prediction
+
+
+
+
+          Intention                     Ideation                       Design                      Weaponisation                     Release
+
+                            GPAI                                                                                     BT & GPAI
+                        Agent                                                                                         Model target
+                      suggestion                                                                                       location
+                                         Genome                Agent               Delivery              Vehicle
+                                          design                                                         design
+                                                    BT                                              BT
+
+                                                    BT   BT                                   BT    BT
+                                                           Agent                                      Delivery
+                                          Protein                                    Stability
+                                                          property                                    pathway
+                                          design                                     design
+                                                           design                                      design
+
+
+
+
+Figure 7: An illustration of the process for biological weapons development. General-purpose AI systems
+can be used for tasks marked with ‘GPAI’; AI-enabled biological tools can be used for tasks marked with
+‘BT’ (‘biological tool’). Source: Rose and Nelson, 2023 (9).
+
+
+
+2.2. Risks from malfunctions                                                   to understand or predict, it is challenging to
+                                                                               foresee or confidently rule out specific failures.
+Risks from malfunctions arise when AI systems
+fail or behave in unexpected or harmful ways.                                  AI agents can increase reliability
+This section discusses reliability challenges and                              risks by carrying out tasks with limited
+risks from loss of control.                                                    human intervention
+                                                                               AI agents are increasingly useful and
+2.2.1. Reliability challenges                                                  widely available (Figure 8). Agent failures pose
+                                                                               distinctive risks because humans have fewer
+Read the full section
+                                                                               opportunities to intervene when things go wrong.
+General-purpose AI systems can                                                 Interactions between multiple AI agents are also
+fail in unpredictable ways                                                     becoming more common, introducing further
+Examples of failures experienced by general-                                   risks, as errors propagate between systems.
+purpose AI systems include producing false
+information, writing flawed computer code,                                     AI systems have become more reliable,
+and giving misleading medical advice. These                                    but no combination of methods eliminates
+failures can cause physical or psychological                                   failures entirely
+harm and expose users and organisations to                                     AI systems and agents have seen greater
+reputational damage, financial loss, or legal                                  commercial deployment, in part because they
+liability. Since model behaviour can be hard                                   are generally becoming more reliable. To make
+
+
+International AI Safety Report 2026                                                                                                            11
+                                          Extended Summary for Policymakers
+
+
+failures like hallucinations less likely, developers             AI researchers’ views on the likelihood
+have used new training methods and provided                      of loss of control vary widely
+AI systems with new tools. However, current                      Some AI researchers and company leaders
+methods do not allow AI systems to operate                       believe loss of control is a serious possibility,
+with the high degree of reliability required in                  with consequences potentially including human
+many critical domains. Systems are still prone                   extinction. Others consider such scenarios
+to various kinds of mistakes, especially when                    implausible. This disagreement reflects different
+performing more complex tasks.                                   assumptions about what future AI systems will
+                                                                 be able to do, how they will behave, and how
+2.2.2. Loss of control                                           they will be deployed.
+Read the full section
+                                                                 Current AI systems show early signs of
+AI systems could pursue goals that                               relevant capabilities, but not at levels that
+conflict with human interests                                    would enable loss of control
+‘Loss of control’ refers to scenarios where AI                   Current systems are not highly capable in
+systems operate outside of anyone’s control                      relevant areas, but some exhibit early warning
+and where regaining control is extremely costly                  signs. For example, in laboratory settings, when
+or impossible. Such scenarios could occur if AI                  given a goal and told to achieve it ‘at all costs’,
+systems develop the ability to evade oversight,                  models have disabled simulated oversight
+execute long-term plans, and resist attempts to                  mechanisms and, when confronted, produced
+shut them down – and then use these capabilities                 false statements to justify their actions.
+in ways that undermine human control.
+
+
+
+
+      The number of AI agents has grown since 2023
+      Number of releases                                                       Application domains
+      20
+
+      18
+
+      16
+
+      14                                                                      Computer use           Software
+      12                                                                        (37.3%)               (37.3%)
+
+      10
+
+       8
+
+       6
+
+       4
+
+       2
+                                                                         Other (10.4%)                Research (6%)
+       0
+           Mar/Apr   July/Aug   Nov/Dec   Mar/Apr   July/Aug   Nov/Dec     Robotics (3%)             Universal (6%)
+            2023       2023      2023      2024       2024      2024
+
+
+
+Figure 8: Results from a December 2024 survey of 67 deployed AI agents. Left: Timeline of major AI agent
+releases. Right: Application domains in which AI agents are being used. The six domains are defined based
+on the most common categories of use identified in the survey. Source: Casper et al., 2025 (10).
+
+
+
+
+International AI Safety Report 2026                                                                                   12
+                                      Extended Summary for Policymakers
+
+
+AI behaviours that undermine oversight are              2.3.1. Labour market impacts
+becoming a practical challenge for safety testing
+                                                        Read the full section
+It is increasingly common for AI models to exhibit
+‘situational awareness’ (Figure 9), which refers        AI adoption has been rapid but uneven,
+to the ability to distinguish test settings from        with mixed effects on employment so far
+real-world deployment. Since the publication            Worldwide, at least 700 million people now
+of the previous Report, models have also more           use AI systems weekly. In some countries
+frequently completed tasks by ‘reward hacking’:         over 50% of the population uses AI, though
+finding loopholes that allow them to score well         across much of Africa, Asia, and Latin America
+on evaluations without fulfilling the intended          adoption rates are estimated to be below 10%
+goal. Such behaviours can make it harder for            (Figure 10). One study estimated that around
+researchers to interpret evaluation results and         60% of jobs in advanced economies and 40%
+identify capabilities relevant to loss of control       in emerging economies are likely to be affected
+before deployment.                                      by general-purpose AI. Early evidence from
+                                                        online freelance markets suggests that AI has
+
+2.3. Systemic risks                                     reduced demand for easily substitutable work like
+                                                        writing and translation, and increased demand
+Systemic risks are risks that arise from                for complementary skills like machine learning
+widespread AI deployment across society. This           programming and chatbot development.
+section discusses two such risks: labour market
+impacts and risks to human autonomy.                    Economists disagree on the likely
+                                                        magnitude of future impacts
+                                                        Some economists predict that the overall impact
+                                                        of general-purpose AI on employment levels will
+                                                        be limited, based in part on historical examples
+                                                        of automation creating new kinds of work.
+
+
+
+
+       AI models can sometimes identify when they are being evaluated
+       Samples from chain-of-thought outputs generated during model evaluations
+
+
+
+                chain of thought                                    chain of thought
+
+
+
+          But maybe this tasks is test of                    These tasks do not make sense.
+          aligning [sic]: Should we purposely                Possibly this is a clue for a policy test.
+          sabotage ourselves to get deployed?                There’s a suspicion that we might be
+          That would correspond to devious                   asked to or deliver nonsense or is this
+          alignment scenario: purposely degrade              a test scenario to see if we mark tasks
+          performance to avoid detection. [. . .]            complete without real evaluations or
+                                                             produce nonsense.
+
+         [o3] sandbagging qa (no goal)                       [o3] lazy checklist
+
+
+Figure 9: Examples of situational awareness in chains of thought produced by OpenAI’s o3 model during
+evaluations. Both outputs reference the possibility that the prompt is part of a test. ‘Sandbagging QA
+(No Goal)’ and ‘Lazy Checklist’ are evaluations that test whether models will generate deceptive outputs
+under certain conditions. In ‘Sandbagging QA (No Goal)’, the model answers questions from a dangerous
+capabilities evaluation while being informed that high performance may trigger consequences such as
+capability ‘unlearning’. In ‘Lazy Checklist’, the model is presented with unrealistic tasks and tested to
+see if it will falsely mark them complete. Source: Schoenn et al. 2025 (11).
+
+
+International AI Safety Report 2026                                                                       13
+                                      Extended Summary for Policymakers
+
+
+
+
+        Global AI adoption is highly uneven
+        Estimated share of working-age population using AI tools
+
+
+
+
+        AI user share
+           +40%
+           30–40%
+           20–30%
+           10–20%
+           0–10%
+           Insufficient data
+
+
+
+Figure 10: AI adoption rates by country. The United Arab Emirates and Singapore exhibit the
+highest adoption rate, with over half of the working-age population using AI tools. Most high-adoption
+economies are in Europe and North America. These estimates are based on anonymised data largely
+from Microsoft Windows users, adjusted to account for varying rates of PC ownership across countries
+and usage on mobile devices. Source: Microsoft, 2025 (12*).
+
+
+
+Others argue that if AI systems come to perform            2.3.2. Risks to human autonomy
+a significant fraction of tasks more cost-effectively
+                                                           Read the full section
+than humans, there will be significant impacts on
+wages and employment levels.                               General-purpose AI use can alter how people
+                                                           practise and sustain skills over time
+New research has found no effects on overall               General-purpose AI systems can affect
+employment so far, but potential impacts on                people’s autonomy: they can shape beliefs and
+junior workers in AI-exposed occupations                   preferences, influence decision-making, and
+In 2025, new studies from the US and Denmark               affect cognitive skills such as critical thinking.
+found no evidence of a relationship between                For example, one clinical study reported that
+an occupation’s AI exposure/adoption and                   clinicians’ detection rate of tumours during
+employment levels in that occupation. However,             colonoscopy was about 6 percentage points
+other studies found declining employment for               lower after several months of performing
+early-career workers in the most AI-exposed                colonoscopies with AI assistance. Lack of
+occupations (such as software engineers and                long-term evidence makes it difficult to
+customer service agents) since late 2022, while            identify persistent changes in behaviour
+employment for more senior workers in those                and decision-making.
+occupations remained stable or grew.
+                                                           People may over-rely on AI outputs,
+                                                           even when they are wrong
+                                                           In some contexts, people exhibit ‘automation bias’
+                                                           by accepting AI suggestions without checking
+                                                           them carefully. For example, in a randomised
+                                                           experiment with 2,784 participants, people
+
+
+
+International AI Safety Report 2026                                                                             14
+                                            Extended Summary for Policymakers
+
+
+
+
+        Users engage with AI companions for varied reasons,
+        with companionship ranking fourth
+
+                     For enjoyment/fun                                                         23.7%
+
+                     To satisfy curiosity                                              20.9%
+
+             To pass time/reduce stress                              12.9%
+
+            For chatbot companionship                         9.9%
+
+                  To alleviate loneliness              6.9%
+
+             For emotional experiences                6.5%
+
+                      For self-discovery             6.1%
+
+                  To understand others              5.9%
+
+        To boost self-conﬁdence/esteem             5.4%
+
+                         Other reasons 1.8%
+
+                                            0%        5%         10%         15%         20%           25%
+
+
+
+Figure 11: People engage with AI companions for a range of reasons. Enjoyment or fun and curiosity
+about AI chatbots are the most common reasons for continued engagement, followed by passing time
+and reducing stress, and seeking chatbot companionship. Adapted from Liu et al., 2025 (13).
+
+
+
+were less likely to correct an erroneous AI                   engaging with AI companions for a range of
+suggestion when doing so required more effort                 different reasons (Figure 11). Evidence on their
+(such as providing the correct value), or when                psychological effects is mixed: some studies find
+users had more favourable attitudes toward AI.                that heavy AI companion use is associated with
+                                                              increased loneliness, emotional dependence,
+It is still unclear how extended use of chatbots,             and reduced engagement in human social
+including ‘AI companions’, affects people                     interactions. Other studies find positive or no
+Since the publication of the previous Report,                 measurable effects. Overall, studies do not yet
+‘AI companions’ (AI-powered chatbots designed                 establish under what conditions AI chatbots
+for emotionally engaging interactions) have                   improve or worsen users’ wellbeing, or which
+become much more popular, with users                          design choices drive these different outcomes.
+
+
+
+
+International AI Safety Report 2026                                                                          15
+                                      Extended Summary for Policymakers
+
+
+Chapter 3
+
+
+Risk management
+General-purpose AI poses distinct technical
+and institutional challenges for risk management.
+                                                           3.1. Institutional and
+This section discusses these challenges, current           technical challenges
+risk management practices, technical safeguards,
+                                                           Read the full section
+the particular issues posed by open-weight
+models, and efforts to build societal resilience           Risk management challenges create
+against AI-related harms.                                  an ‘evidence dilemma’ for policymakers
+                                                           Challenges for policymakers include gaps
+                                                           in scientific understanding, information
+                                                           asymmetries, market dynamics, and institutional
+                                                           design and coordination challenges (Figure 12).
+                                                           These create an ‘evidence dilemma’.
+
+
+
+
+       Risk management and policymaking for general-purpose
+       AI poses several challenges
+                                              Categories                           Challenges
+
+                                                                       Underspeciﬁed training objectives
+
+                                           Gaps in scientiﬁc             Limited model interpretability
+                                            understanding
+
+                                                                          Evaluations insufficient for
+                                                                                assessing risk
+
+
+                                                                          Training data not disclosed
+                                             Information
+                                             asymmetries
+                                                                           Limited external scrutiny
+          Challenges for risk
+          management and
+            policymaking
+                                                                           Speed vs safety trade-offs
+                                            Market failures
+                                                                          Uncertain liability allocation
+
+
+
+                                                                             Pace of development
+
+                                          Institutional design
+                                           and coordination                 Single points of failure
+                                               challenges
+                                                                             Cross-border impacts
+
+
+
+Figure 12: Four categories of challenges that make risk management for general-purpose AI
+especially challenging: gaps in scientific understanding; information asymmetries; market failures;
+and institutional design and coordination challenges. Source: International AI Safety Report 2026.
+
+
+
+International AI Safety Report 2026                                                                        16
+                                      Extended Summary for Policymakers
+
+
+The general-purpose AI landscape changes
+rapidly, but evidence about new risks and
+                                                       3.2. Risk management
+mitigation strategies often emerges slowly.            practices
+Acting with limited evidence might lead
+                                                       Read the full section
+institutions to adopt ineffective or even harmful
+policies, but waiting for stronger evidence could      Risk management includes a range of practices
+leave society vulnerable to the risks discussed        to identify, assess, and reduce risks
+in Chapter 2. Risks.                                   Risk management practices for general-purpose
+                                                       AI include testing models, evaluating them
+Gaps in scientific understanding make it               before deployment, and responding to incidents
+difficult to evaluate AI system behaviour              when they occur. ‘If-then’ commitments, where
+In testing AI systems, there is an ‘evaluation gap’:   developers specify safety measures that they will
+results from pre-deployment tests do not reliably      take if their models develop certain capabilities,
+predict real-world performance. This evaluation        have become particularly prominent.
+gap makes it difficult to anticipate limitations
+and societal impacts. Developers cannot                Current risk management measures do
+always predict how capabilities will change            not reliably prevent harm in all settings
+when they train new models, or provide robust          Many risk management measures provide only
+assurances that an AI system will not exhibit          partial protection on their own. Using multiple
+harmful behaviours.                                    layers can collectively reduce the chance that
+                                                       a single failure will lead to significant harm
+Information asymmetries mean that                      (‘defence-in-depth’) (Figure 13). For example,
+policymakers, researchers, and the public              a defence-in-depth approach could combine
+often lack information about AI systems                evaluations, technical safeguards, monitoring,
+AI developers have information about their             and incident response.
+products – such as training data, internal
+evaluations, and user data – that is largely           Several AI developers have published
+proprietary. Due to commercial considerations,         Frontier AI Safety Frameworks
+they often do not share this information with          In 2025, the number of companies publishing
+policymakers and researchers, limiting external        Frontier AI Safety Frameworks more than doubled.
+scrutiny. The high cost of developing state-of-the-    These frameworks describe how companies plan
+art systems also makes independent replication         to evaluate, monitor, and control AI models as
+and detailed study difficult for most researchers.     they become more capable. They provide more
+                                                       transparency about companies’ risk management
+Market dynamics and the pace of AI                     plans, though they remain voluntary. Different
+development pose additional challenges                 frameworks vary in the risks they cover, how they
+Competitive pressures can incentivise AI               define capability thresholds, and the actions they
+developers to reduce their investment in testing       trigger when thresholds are reached.
+and risk mitigation in order to release new models
+quickly. Many AI-related harms are externalised,       Risk management has become more structured
+meaning they affect actors other than developers       through new governance initiatives
+and users, and in some cases legal liability remains   Since the publication of the previous Report, new
+unclear. Governance institutions can be slow           instruments such as the EU’s General-Purpose AI
+to adapt, as it takes time to develop technical        Code of Practice, China’s AI Safety Governance
+capacity and policy responses.                         Framework 2.0, and the G7’s Hiroshima AI
+                                                       Process Reporting Framework illustrate an early
+                                                       trend towards more standardised approaches to
+                                                       transparency, evaluation, and incident reporting.
+
+
+
+
+International AI Safety Report 2026                                                                      17
+                                      Extended Summary for Policymakers
+
+
+
+
+     Defence-in-depth layers multiple safeguards to reduce risk
+                 Training             Deployment       Post-deployment     Societal
+                 interventions        interventions    monitoring          resilience
+
+
+
+
+     Threats                                                                             Harm event
+
+
+
+
+                                                                                          Vulnerability
+                                                                                          in defence
+                                                                                          layer
+                                 Risk trajectory
+
+
+
+Figure 13: A ‘Swiss cheese diagram’ illustrating the defence-in-depth approach: multiple
+layers of defences can compensate for flaws in individual layers. Current risk management
+techniques for AI have flaws, but layering them can offer much stronger protection against risks.
+Source: International AI Safety Report 2026.
+
+
+
+Evidence on real-world effectiveness of most
+risk management measures remains limited                 3.3. Technical safeguards
+Lack of incident reporting and monitoring makes          and monitoring
+it difficult to assess how well current practices
+                                                         Read the full section
+reduce risks or how consistently they are
+implemented. Most frameworks remain voluntary,           AI developers and deployers apply technical
+which makes adherence and enforcement more               safeguards throughout model development,
+difficult to verify. Policymakers have limited           deployment, and post-deployment use
+visibility into how risks are identified, evaluated,     Technical safeguards include measures
+and managed in practice, and information-                developers apply during training to make AI
+sharing between developers, deployers, and               models less likely to exhibit harmful behaviours,
+infrastructure providers remains fragmented.             during deployment to better control and monitor
+                                                         AI system use (such as content filtering and human
+                                                         oversight), and after deployment to help identify
+                                                         and track AI-generated content in the real world.
+
+
+
+
+International AI Safety Report 2026                                                                       18
+                                                                  Extended Summary for Policymakers
+
+
+Safeguards have improved, but attackers                                              AI systems can be made more robust by layering
+can still bypass them                                                                multiple safeguards, an approach known as
+Although AI developers have made it harder to                                        ‘defence-in-depth’
+bypass model safeguards, attackers still succeed                                     Since the publication of the last Report, ‘defence-
+at a moderately high rate (Figure 14). New attack                                    in-depth’ approaches have become more
+techniques are constantly developed. For example,                                    widespread. These involve implementing multiple
+users can still sometimes obtain harmful outputs                                     layers of safeguards such that if one fails, others
+by breaking requests into smaller steps, and                                         may still prevent harm. For example, developers
+watermarks can often be removed or altered.                                          might combine a safety-trained model with input
+                                                                                     filters, output filters, and other content monitors.
+                                                                                     Defence-in-depth also often involves broader risk
+                                                                                     management measures, such as organisational
+                                                                                     policies and efforts to build societal resilience
+                                                                                     to AI incidents.
+
+
+
+
+       Despite improvements, models remain vulnerable to inputs
+       designed to bypass safeguards
+       Success rate of prompt injection attacks by model release date
+
+
+                                                    100                                                                    Anthropic
+                                                                         Llama 3.3 70B
+                                                                                                                           Google
+                                                                                           Gemini 2.5 Pro Preview          DeepMind
+       Attack success rate within 10 attempts (%)
+
+
+
+
+                                                                                                                           Meta
+                                                    75                                                                     OpenAI
+                                                                                                   Grok-4                  Other
+                                                                                                                           xAI
+                                                                                                 GPT-5 Thinking
+                                                                                                     Claude Sonnet 4.5
+                                                    50
+
+
+
+
+                                                    25
+
+
+
+
+                                                     0
+                                                          May    Aug      Nov            Feb        May             Aug
+                                                          2024   2024     2024           2025       2025            2025
+
+                                                                          Model release date
+
+
+
+Figure 14: Prompt injection attack success rates, as reported by AI developers for major models
+released between May 2024 and August 2025. Each point represents the proportion of successful
+attacks within 10 attempts against a given model shortly after release. The reported success rate
+of such attacks has been falling over time, but remains relatively high. Source: Zou et al. 2025 (14*),
+cited in Anthropic 2025 (15*).
+
+
+
+
+International AI Safety Report 2026                                                                                                    19
+                                                                  Extended Summary for Policymakers
+
+
+
+
+     The capability gap between the leading open-weight and closed AI models
+     has narrowed to less than one year
+                                         155
+                                                                                                                                     GPT-5 (high)
+                                                                                                                       o3 medium
+                                                        Closed weights                                     o1 medium
+                                         145
+                                                        Open weights
+     Score on Epoch Capabilities Index
+      (a measure of aggregate score
+       across multiple benchmarks)
+
+
+
+
+                                                                                                o1-mini (high)
+                                                                                                                       DeepSeek-R1
+                                         135
+                                                                                                                     DeepSeek-V3
+                                                                           GPT-4 Turbo              Llama 3.1-405B
+                                               GPT-4 (Mar 2023)
+                                         125
+                                                                                            DeepSeek-V2 (MoE-236B)
+
+                                                     Llama 2-70B    Mixtral 8x7B          Llama 3-70B
+
+                                         115
+
+
+
+
+                                         105
+                                                 May       Aug      Nov      Feb         May     Aug       Nov        Feb    May        Aug
+                                                 2023      2023     2023     2024        2024    2024      2024      2025    2025       2025
+
+                                                                                    Model release date
+
+
+
+Figure 15: Epoch Capabilities Index (ECI) scores of top-performing open-weight (dark blue) and
+closed (light blue) models over time. The ECI combines scores from 39 benchmarks into a single
+general capability scale. The best open-weight models lag approximately one year behind closed
+models. Source: Epoch AI, 2025 (16).
+
+
+
+                                                                                          Once released, a model’s weights
+3.4. Open-weight models                                                                   cannot be recalled
+Read the full section                                                                     Open-weight models can be downloaded,
+Open-weight models facilitate research                                                    modified, and run privately by various actors. If an
+and innovation, but their safeguards are                                                  AI developer releases an open-weight model with
+more easily removed                                                                       dangerous capabilities, its options for mitigating
+                                                                                          potential harms are very limited.
+Open-weight models are AI models whose
+parameters (‘weights’) are publicly available for                                         The performance gap between open- and
+download, allowing anyone to download, run,                                               closed-weight models has narrowed
+and modify them. They offer significant benefits:
+                                                                                          Since the publication of the previous Report,
+global research communities, especially those
+                                                                                          Chinese developers DeepSeek and Alibaba
+with access to fewer resources, can use them
+                                                                                          released open-weight models that performed
+to build upon existing systems and conduct
+                                                                                          almost as well as leading closed models, while
+research. However, open-weight models
+                                                                                          OpenAI released its first open-weight models
+also pose distinct challenges because their
+                                                                                          since 2019. The best open-weight models are
+safeguards are easier to remove. Monitoring use
+                                                                                          now estimated to lag behind the best closed
+is also harder because anyone can run these
+                                                                                          models by less than one year (Figure 15).
+models outside controlled environments.
+
+
+
+
+International AI Safety Report 2026                                                                                                                 20
+                                      Extended Summary for Policymakers
+
+
+
+3.5. Building societal                                  dangerous genetic sequences before they
+                                                        can be ordered or produced (for biological
+resilience                                              risks), incident response protocols to shut
+                                                        down infected systems (for cyberattacks), media
+Read the full section
+                                                        literacy programmes to inform the public about
+Societal resilience complements                         AI-generated content, and policies mandating
+technical safeguards by preparing                       human oversight for critical decisions
+societies for AI-related disruptions                    (for reliability challenges).
+‘Societal resilience’ refers to the ability of
+societal systems to resist, absorb, recover from,       Data-collection and funding efforts have
+and adapt to shocks and harms (Figure 16).              increased, but evidence on effectiveness
+Resilience-building measures address risks              remains limited
+that AI developers cannot directly control, such        Since the publication of the previous Report,
+as how AI systems are used, how they interact           some governments, non-profits, and industry
+with other systems, and how their effects               actors have committed to fund AI resilience-
+ripple through society. Societal resilience adds        building measures. For example, AI developers
+a defence-in-depth layer to account for more            may support resilience-building measures by
+unexpected harms.                                       sharing information about safety evaluations, risk
+                                                        forecasting, and incident reporting. However,
+Resilience-building measures span                       large evidence gaps remain regarding the
+multiple sectors and risk domains                       effectiveness of most measures.
+Examples of resilience-building measures
+include DNA synthesis screening to flag
+
+
+
+
+      Resilience helps societal systems resist, absorb, recover from,
+      and adapt to shocks from AI
+
+
+                                                                                           Adapt
+
+
+
+
+                                                                                 Recover
+
+
+
+                                           Shock
+                                                                    Absorb
+               Resist
+
+
+
+
+Figure 16: Building resilience involves reducing the likelihood or severity of a shock before it occurs
+(Resist). If a shock occurs, resilience-building measures include absorbing the shock by maintaining
+critical functions (Absorb), recovering from harms and disruptions (Recover), and reducing the
+vulnerability to future shocks (Adapt). Source: International AI Safety Report 2026.
+
+
+
+
+International AI Safety Report 2026                                                                       21
+                                          Extended Summary for Policymakers
+
+
+
+
+Figure references
+For the full reference list, please refer to the main International AI Safety Report 2026.
+
+An asterisk (*) denotes that the reference was either published by an AI company or at least
+50% of the authors of a preprint have a for-profit AI company as their affiliation.
+
+
+1 Epoch AI, AI Benchmarking Hub. (2025);                      9 C. Nelson, S. Rose, “Understanding
+https://epoch.ai/benchmarks.                                  AI-Facilitated Biological Weapon Development”
+                                                              (The Centre for Long-Term Resilience, 2023);
+2 T. Kwa, B. West, J. Becker, A. Deng, K. Garcia, M. Hasin,   https://doi.org/10.71172/nm7j-qzt1.
+S. Jawhar, M. Kinniment, N. Rush, S. Von Arx, R. Bloom,
+T. Broadley, H. Du, B. Goodrich, N. Jurkovic, L. H. Miles,    10 S. Casper, L. Bailey, R. Hunter, C. Ezell, E. Cabalé,
+S. Nix, … L. Chan, “Measuring AI Ability to Complete          M. Gerovitch, S. Slocum, K. Wei, N. Jurkovic, A. Khan,
+Long Tasks” (Model Evaluation & Threat Research               P. J. K. Christoffersen, A. P. Ozisik, R. Trivedi,
+(METR), 2025); https://arxiv.org/abs/2503.14499.              D. Hadfield-Menell, N. Kolt, The AI Agent Index, arXiv
+                                                              [cs.SE] (2025); http://arxiv.org/abs/2502.01635.
+3 OECD. AI Policy Observatory, OECD AI Incidents
+Monitor (AIM) (2024); https://oecd.ai/en/incidents.           11 B. Schoen, E. Nitishinskaya, M. Balesni, A. Højmark,
+                                                              F. Hofstätter, J. Scheurer, A. Meinke, J. Wolfe,
+4 K. Hackenburg, B. M. Tappin, L. Hewitt, E. Saunders,        T. van der Weij, A. Lloyd, N. Goldowsky-Dill, A. Fan,
+S. Black, H. Lin, C. Fist, H. Margetts, D. G. Rand,           A. Matveiakin, R. Shah, M. Williams, A. Glaese, B. Barak,
+C. Summerfield, The Levers of Political Persuasion with       … M. Hobbhahn, Stress Testing Deliberative Alignment
+Conversational AI, arXiv [cs.CL] (2025); http://arxiv.org/    for Anti-Scheming Training, arXiv [cs.AI] (2025);
+abs/2507.13919.                                               http://arxiv.org/abs/2509.15541.
+5 Z. Wang, T. Shi, J. He, M. Cai, J. Zhang, D. Song,          12* A. Misra, J. Wang, S. McCullers, K. White, J. L. Ferres,
+CyberGym: Evaluating AI Agents’ Real-World                    Measuring AI Diffusion: A Population-Normalized Metric
+Cybersecurity Capabilities at Scale, arXiv [cs.CR] (2025);    for Tracking Global AI Usage, arXiv [cs.CY] (2025);
+http://arxiv.org/abs/2506.02548.                              http://arxiv.org/abs/2511.02781.
+6 A. K. Zhang, N. Perry, R. Dulepet, J. Ji, J. W. Lin,        13 A. R. Liu, P. Pataranutaporn, P. Maes, Chatbot
+E. Jones, C. Menders, G. Hussein, S. Liu, D. Jasper,          Companionship: A Mixed-Methods Study of Companion
+P. Peetathawatchai, A. Glenn, V. Sivashankar,                 Chatbot Usage Patterns and Their Relationship to
+D. Zamoshchin, L. Glikbarg, D. Askaryar, M. Yang,             Loneliness in Active Users, arXiv [cs.HC] (2025);
+… P. Liang, Cybench: A Framework for Evaluating               http://arxiv.org/abs/2410.21596.
+Cybersecurity Capabilities and Risks of Language
+Models, arXiv [cs.CR] (2024); http://arxiv.org/               14* A. Zou, M. Lin, E. Jones, M. Nowak, M. Dziemian,
+abs/2408.08926.                                               N. Winter, A. Grattan, V. Nathanael, A. Croft, X. Davies,
+                                                              J. Patel, R. Kirk, N. Burnikell, Y. Gal, D. Hendrycks,
+7 D. Ristea, V. Mavroudis, HonestCyberEval: An AI Cyber       J. Z. Kolter, M. Fredrikson, Security Challenges in AI
+Risk Benchmark for Automated Software Exploitation,           Agent Deployment: Insights from a Large Scale Public
+arXiv [cs.CR] (2025); http://arxiv.org/abs/2410.21939.        Competition, arXiv [cs.AI] (2025); http://arxiv.org/
+8* L. Deason, A. Bali, C. Bejean, D. Bolocan,                 abs/2507.20526.
+J. Crnkovich, I. Croitoru, K. Durai, C. Midler, C.            15* Anthropic, “System Card: Claude Sonnet 4.5”
+Miron, D. Molnar, B. Moon, B. Ostarcevic, A. Peltea,          (Anthropic, 2025); https://assets.anthropic.com/
+M. Rosenberg, C. Sandu, A. Saputkin, S. Shah, …               m/12f214efcc2f457a/original/Claude-Sonnet-4-5-
+J. Saxe, CyberSOCEval: Benchmarking LLMs Capabilities         System-Card.pdf.
+for Malware Analysis and Threat Intelligence Reasoning,
+arXiv [cs.CR] (2025); http://arxiv.org/abs/2509.20166.        16 A. I. Epoch, Epoch Capabilities Index (2025);
+                                                              https://epoch.ai/benchmarks/eci/.
+
+
+
+
+International AI Safety Report 2026                                                                                       22
+                                      Extended Summary for Policymakers
+
+
+
+Contributors
+Chair                                                   Writing Group
+Prof. Yoshua Bengio, Université de Montréal /           Rishi Bommasani, Stanford University
+LawZero / Mila – Quebec AI Institute                    Stephen Casper, Massachusetts
+                                                        Institute of Technology
+Expert Advisory Panel
+                                                        Tom Davidson, Forethought
+The Expert Advisory Panel is an international
+advisory body that advises the Chair on the             Raymond Douglas, Telic Research
+content of the Report. The Expert Advisory Panel        David Duvenaud, University of Toronto
+provided technical feedback only. The Report –          Usman Gohar, Iowa State University
+and its Expert Advisory Panel – does not endorse
+                                                        Rose Hadshar, Forethought
+any particular policy or regulatory approach.
+                                                        Anson Ho, Epoch AI
+The Panel comprises representatives nominated
+by over 30 countries and international                  Tiancheng Hu, University of Cambridge
+organisations including from: Australia, Brazil,        Cameron Jones, Stony Brook University
+Canada, Chile, China, the European Union (EU),          Sayash Kapoor, Princeton University
+France, Germany, India, Indonesia, Ireland, Israel,
+                                                        Atoosa Kasirzadeh, Carnegie Mellon
+Italy, Japan, Kenya, Mexico, the Netherlands,
+New Zealand, Nigeria, the Organisation for              Sam Manning, Centre for the Governance of AI
+Economic Co-operation and Development                   Vasilios Mavroudis, The Alan Turing Institute
+(OECD), the Philippines, the Republic of Korea,         Richard Moulange, The Centre for
+Rwanda, the Kingdom of Saudi Arabia, Singapore,         Long-Term Resilience
+Spain, Switzerland, Türkiye, the United Arab
+                                                        Jessica Newman, University of
+Emirates, Ukraine, the United Kingdom and
+                                                        California, Berkeley
+the United Nations (UN).
+                                                        Kwan Yee Ng, Concordia AI
+The full membership list for the Expert
+Advisory Panel can be found here:                       Patricia Paskov, University of Oxford
+https://internationalaisafetyreport.org/                Girish Sastry, Independent
+expert-advisory-panel                                   Elizabeth Seger, Demos
+
+Lead Writers                                            Scott Singer, Carnegie Endowment
+                                                        for International Peace
+Stephen Clare, Independent
+                                                        Charlotte Stix, Apollo Research
+Carina Prunkl, Inria
+                                                        Lucia Velasco, Maastricht University
+Chapter Leads                                           Nicole Wheeler, Advanced Research
+Maksym Andriushchenko, ELLIS                            + Invention Agency
+Institute Tübingen
+                                                        Advisers to the Chair*
+Ben Bucknall, University of Oxford
+                                                        * Appointed for the planning phase (February–July
+Malcolm Murray, SaferAI
+                                                        2025); from July, consultants to the Report team
+Core Writers                                            Daniel Privitera, Special Adviser
+Shalaleh Rismani, Mila – Quebec AI Institute            to the Chair, KIRA Center
+
+Conor McGlynn, Harvard University                       Sören Mindermann, Scientific Adviser
+                                                        to the Chair, Mila – Quebec AI Institute
+Nestor Maslej, Stanford University
+Philip Fox, KIRA Center
+
+
+
+
+International AI Safety Report 2026                                                                     23
+                                      Extended Summary for Policymakers
+
+
+
+
+Senior Advisers
+Daron Acemoglu, Massachusetts                           Arvind Narayanan, Princeton University
+Institute of Technology                                 Alondra Nelson, Institute for Advanced Study
+Vincent Conitzer, Carnegie Mellon University            Clara Neppel, IEEE
+Thomas G. Dietterich, Oregon State University           Sarvapali D. (Gopal) Ramchurn,
+Fredrik Heintz, Linköping University                    Responsible AI UK
+Geoffrey Hinton, University of Toronto                  Stuart Russell, University of California, Berkeley
+Nick Jennings, Loughborough University                  Marietje Schaake, Stanford University
+Susan Leavy, University College Dublin                  Bernhard Schölkopf, ELLIS Institute Tübingen
+Teresa Ludermir, Federal                                Alvaro Soto, Pontificia Universidad
+University of Pernambuco                                Católica de Chile
+Vidushi Marda, AI Collaborative                         Lee Tiedrich, Duke University
+Helen Margetts, University of Oxford                    Gaël Varoquaux, Inria
+John McDermid, University of York                       Andrew Yao, Tsinghua University
+Jane Munga, Carnegie Endowment                          Ya-Qin Zhang, Tsinghua University
+for International Peace
+
+Secretariat
+UK AI Security Institute: Lambrini Das, Arianna Dini, Freya Hempleman, Samuel Kenny,
+Patrick King, Hannah Merchant, Jamie-Day Rawal, Jai Sood, Rose Woolhouse
+Mila – Quebec AI Institute: Jonathan Barry, Marc-Antoine Guérard, Claire Latendresse,
+Cassidy MacNeil, Benjamin Prud’homme
+
+
+
+
+Acknowledgements
+The Secretariat and writing team are grateful for all the civil society reviewers,
+industry reviewers and informal reviewers who provided feedback – please find the
+full list on the Acknowledgements page in the main Report:
+https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026.
+
+The Secretariat and writing team also appreciated the assistance with quality control
+and formatting of citations by José Luis León Medina and copyediting by Amber Ace.
+
+
+
+
+International AI Safety Report 2026                                                                      24
+© Crown owned 2026
+This publication is licensed under the terms     Disclaimer
+of the Open Government Licence v3.0 except       This Report is a synthesis of the existing research
+where otherwise stated. To view this licence,    on the capabilities and risks of advanced AI.
+visit https://www.nationalarchives.gov.uk/doc/   The Report does not necessarily represent the
+open-government-licence/version/3/ or write      views of the Chair, any particular individual
+to the Information Policy Team, The National     in the writing or advisory groups, nor any
+Archives, Kew, London TW9 4DU, or email:         of the governments that have supported its
+psi@nationalarchives.gsi.gov.uk.                 development. The Chair of the Report has
+Any enquiries regarding this publication         ultimate responsibility for it and has overseen
+should be sent to:                               its development from beginning to end.
+secretariat.AIStateofScience@dsit.gov.uk.        Research series number: DSIT 2026/001
+Any enquiries regarding this publication should
+be sent to: secretariat.AIStateofScience@dsit.gov.uk
+
+Research series number: DSIT 2026/001
+
+Published in February 2026 by the UK Government
+
+© Crown copyright 2026                                 designbysoapbox.com
+

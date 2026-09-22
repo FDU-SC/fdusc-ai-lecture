@@ -1,0 +1,1166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8h5QbRYAjJa8bp4NS9z3EptvD7Q</id>
+  <title>arXiv Query: search_query=all:"GNoME"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T14:47:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22GNoME%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>48</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01209v1</id>
+    <title>Autonomous discovery of new structure-plausibility laws for explainable and rapid crystal diagnosis and screening</title>
+    <updated>2026-09-01T13:14:52Z</updated>
+    <link href="https://arxiv.org/abs/2609.01209v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01209v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Crystal generators and tool-using agents propose structures faster than density functional theory (DFT) energy and phonon calculations or experiments can assess them. Deciding which candidates merit expensive assessment is therefore the bottleneck, yet most screens test little beyond atomic overlap and give no chemical reason for failure. Here, our agents generate, test and actively refute two million candidate laws, leaving eight Plausibility Rules for Inorganic Structures (PRIS). These laws encode five mechanisms: short-range repulsion, ionic contact and packing, electrostatic balance, bond-valence conservation and crystallographic site complexity. Experimental structures satisfy our law sets at 82--99%, but satisfy Pauling's rules 2--5 together at only 6.5%. The strictest set detects 87.9% of damaged crystal structures, whereas distance cutoffs detect only 1.6--3.2%. PRIS plausibility is linearly correlated with synthesizability, so the PRIS-derived synthesis score (PSS) explainably screens 83.7% of hard-to-synthesize structures while retaining 80.7% of experimental structures. In a property-conditioned inverse-design run, PRIS and PSS can reduce the DFT validation queue by up to 67.3% and keep 99.2% of the candidates whose DFT-validated bulk moduli reach the design target. Beyond screening, PRIS explains why GNoME remains enriched in rare low-symmetry structures and reveals how wrong-element assignments in falsified crystal reports hide behind plausible coordinates. PRIS moves screening from a pass-or-fail verdict to a chemical reason for failure, showing that autonomous agents can discover, by active refutation, physicochemical laws that guide calculations and experiments.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T13:14:52Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Zhilong Song</name>
+    </author>
+    <author>
+      <name>Lixue Cheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11062v1</id>
+    <title>Accelerated Discovery of Materials with Extreme Work Functions through Uncertainty-Aware Multi-Fidelity Screening</title>
+    <updated>2026-08-11T15:29:20Z</updated>
+    <link href="https://arxiv.org/abs/2608.11062v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11062v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Work function plays a pivotal role in technologies ranging from energy conversion and electronics to catalysis. In this work, we integrated machine learning (ML) with multi-fidelity screening to develop a data-driven framework for accelerating the discovery of materials with extreme work functions. We augmented a previously published Random Forest (RF) model for work function to include prediction uncertainty calibration and domain of applicability assessment to enhance prediction robustness. By combining the augmented RF model with universal ML interatomic potential simulations and targeted ab initio calculations, we screened 5.5 million compounds from the GNoME and Alexandria databases. This workflow identified 209 surfaces with extreme low work functions below 2.0 eV and 227 surfaces with extreme high work functions above 6.0 eV, corresponding to 136 and 172 unique materials, respectively. The resulting candidates revealed trends consistent with established chemical principles, including the tendency of alkali- and alkaline-earth-terminated surfaces to exhibit low work functions. While it also uncovered less conventional motifs: lanthanide-rich surface terminations were strongly associated with extremely low work functions, whereas surfaces containing metalloids or phosphorus at the top layer were correlated with exceptionally high work functions. This work demonstrates a scalable strategy that leverages ML models and multi-fidelity computational efforts to accelerate the discovery of materials with extreme work functions for advanced electronic, energy-conversion, and catalytic applications.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T15:29:20Z</published>
+    <arxiv:comment>20 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jun Meng</name>
+    </author>
+    <author>
+      <name>Ryan Jacobs</name>
+    </author>
+    <author>
+      <name>Rehan Kapadia</name>
+    </author>
+    <author>
+      <name>John Booske</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.30967v1</id>
+    <title>Computed materials proposals depart from the structural memory of experimental discovery</title>
+    <updated>2026-06-29T23:04:44Z</updated>
+    <link href="https://arxiv.org/abs/2606.30967v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.30967v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative AI and high-throughput DFT pipelines propose millions of inorganic crystal structures, but lack a calibrated reference frame against experimentally realized chemistry. Here we embed 167,500 Inorganic Crystal Structure Database entries in a continuous structural-similarity space, partition it into graph communities, and replay them in time. Experimental discovery shows strong structural memory: 82.9% of new formulas enter pre-existing communities; new-community formation falls from 40.2% (1930s) to 2.6% (2010s). The communities are chemically meaningful, positively identifying nine textbook field-defining renaissances, including cuprates, colossal-magnetoresistance manganites, MAX phases, and Li-ion battery cathodes. Projecting GNoME, MatterGen-public, Materials Project, JARVIS-DFT, and Alexandria-PBE into frozen historical maps yields a cutoff-robust ordering: held-out ICSD &gt; MatterGen &gt; {GNoME ~ MP-theoretical} &gt; JARVIS &gt; Alexandria. Structural departure from experimental basins is not specific to generative AI but general across the tested computed sets. Combining structural proximity with reduced-formula precedent defines a historical synthesizability prior for triaging computed materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-29T23:04:44Z</published>
+    <arxiv:comment>20 pp main text, 10 pp Extended Data, 51 pp Supporting Information; 4 main + 5 ED figures, 3 ED tables. Joint first authors: D. Nguyen and K. Cao. Submitted to npj Comput. Mater. Derived artifacts: Zenodo doi:10.5281/zenodo.20046302. Code: github.com/scattering/crystal-communities-paper. Dashboard: crystalcommunities.org</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Dan Nguyen</name>
+    </author>
+    <author>
+      <name>Karen Cao</name>
+    </author>
+    <author>
+      <name>Brian Chu</name>
+    </author>
+    <author>
+      <name>Nick Lemoff</name>
+    </author>
+    <author>
+      <name>Paul Kienzle</name>
+    </author>
+    <author>
+      <name>William Ratcliff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12064v1</id>
+    <title>Undefined Behavior in C and C++: An Experiment With Desktop Use Cases</title>
+    <updated>2026-06-10T13:31:07Z</updated>
+    <link href="https://arxiv.org/abs/2606.12064v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12064v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Undefined behavior is idiomatic to C and C++ programming; such behavior is a use of an erroneous program construct for which the languages impose no requirements, such as integer overflows. The paper presents an empirical experiment seeking to probe the extent of undefined behavior executing underneath typical desktop use of a Linux distribution. The analysis is based on an undefined behavior sanitizer implemented in a compiler. According to the results, undefined behavior is common. By completing 59 simple experimental tasks, nearly 11 thousand unique undefined behavior warnings were generated by 32 unique programs and libraries written in C or C++. Of these warnings, most were associated with the Mesa graphics library and generated by interacting with graphical user interfaces. Merely logging into the GNOME desktop environment generated over 500 unique warnings. Of all warnings, the clear majority was about virtual table pointers. The associated stack traces were also lengthy in general. With these and other results, the paper contributes to the empirical literature on C and C++.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T13:31:07Z</published>
+    <arxiv:comment>Submitted</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Jukka Ruohonen</name>
+    </author>
+    <author>
+      <name>Krzysztof Sierszecki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.27229v1</id>
+    <title>At-Scale Data-Driven Exploration of High-Voltage Cathode-Active Materials for Sodium Batteries</title>
+    <updated>2026-05-26T16:09:58Z</updated>
+    <link href="https://arxiv.org/abs/2605.27229v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.27229v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sodium-ion batteries (SIBs) share similar electrochemistry with Li but offer several advantages, including high abundance in nature and low cost, as well as suitability for fast charging due to a Na-ion mobility higher than that of Li. The development of high-voltage SIBs heavily relies on the discovery of novel, robust cathode-active materials (CAMs). All-inorganic materials represent the most mature and practical choice as CAMs for next-generation SIBs; however, their family spans a vast and chemically diverse space. In this work, we present a large-scale, chemically validated database of stable materials for SIB cathode discovery, curated from four major databases: Materials Project, AFLOW, OQMD, and GNoME. Generalizable and transferable descriptor-based machine learning (ML) models are developed based on a dataset of charged-only structures rather than charged/discharged pairs. Using a committee of the top four trained ML models, average voltage and specific capacity are predicted as target properties. Finally, a subset of top-ranked candidate CAMs is validated through explicit, high-throughput first-principles calculations of voltage profiles, phase stability, structural robustness upon sodiation/desodiation, and electronic properties. Together, this integrated data curation, ML ranking and predictions, and first-principles validation strategy establishes a scalable and transferable framework for accelerating the discovery of stable, high-voltage CAMs for SIBs and beyond.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T16:09:58Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Suchona Akter</name>
+    </author>
+    <author>
+      <name>Mohammad R. Momeni</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.21386v1</id>
+    <title>Navigating Order-(Dis)Order Family Trees via Group-Subgroup Transitions</title>
+    <updated>2026-04-23T07:57:03Z</updated>
+    <link href="https://arxiv.org/abs/2604.21386v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.21386v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As closed-loop materials discovery systems scale to produce millions of candidate compounds, the credibility of the novelty they reward becomes a critical concern. Novelty is commonly assessed against databases of ordered crystal structures, in which atomic sites are fully occupied. Yet, a predicted ordered structure may simply correspond to a particular ordering of a known disordered phase, whose sites are occupied by multiple species in the statistical average structure; we refer to such a structure as an ordered child of a disordered parent. Here, we introduce order-(dis)order family trees, a symmetry-based framework that organizes ordered and disordered structures through group-subgroup relations and enables novelty to be explicitly evaluated. We develop a high-throughput family matching procedure, to identify possible disordered parents and symmetry-related ordered relatives for a given ordered structure. As validation, we test our framework on synthesis-facing case studies (A-Lab), where it correctly recovers existing disordered parents for the targeted ordered structures. Extending this family-tree-based benchmark to experimental structure databases (ICSD), computational datasets (MP-20, Alex-MP-20, and GNoME), and crystal generative models further reveals that many ordered structures that appear novel as individual entries are, in fact, better understood as members of experimentally known order-(dis)order family trees. We also show that this is particularly evident in symmetry-agnostic all-atom generative models, which more frequently produce ordered structures derived from known disordered parents, whereas symmetry-constrained models are 2-4x less prone to this behavior. Our results establish order-(dis)order family trees as a key requirement for achieving genuine novelty in data-driven materials discovery.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-23T07:57:03Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Shuya Yamazaki</name>
+    </author>
+    <author>
+      <name>Yuyao Huang</name>
+    </author>
+    <author>
+      <name>Martin Hoffmann Petersen</name>
+    </author>
+    <author>
+      <name>Wei Nong</name>
+    </author>
+    <author>
+      <name>Kedar Hippalgaonkar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.22748v1</id>
+    <title>Experimental investigation of magnetic properties of MnFeCo$_{4}$Si$_{2}$ discovered by GNoME</title>
+    <updated>2026-03-24T03:23:16Z</updated>
+    <link href="https://arxiv.org/abs/2603.22748v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.22748v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI-driven inorganic materials research has garnered significant attention due to its ability to reduce the time, labor, and cost associated with experiments. An AI model known as GNoME, recently developed by Google DeepMind, is particularly fascinating because it is integrated with the Materials Project open database. The experimental verification of compounds identified by GNoME is a crucial process for advancing AI-driven materials research. Here, we focus on the magnetic compound MnFeCo$_{4}$Si$_{2}$ (Materials ID: mp-3203253), which possesses a layered-like structure. Consistent with the GNoME prediction, MnFeCo$_{4}$Si$_{2}$ crystallizes in a rhombohedral structure with a single-phase nature. We have characterized its magnetic properties and determined that MnFeCo$_{4}$Si$_{2}$ is a soft ferromagnet with a Curie temperature of 1039 K.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-24T03:23:16Z</published>
+    <arxiv:comment>to appear in J. Magn. Magn, Mater</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Shuhei Naganuma</name>
+    </author>
+    <author>
+      <name>Jiro Kitagawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.10886v1</id>
+    <title>A Magnus group construction for a class of Borcherds algebras</title>
+    <updated>2026-01-15T22:34:09Z</updated>
+    <link href="https://arxiv.org/abs/2601.10886v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.10886v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct a group associated to a class of Borcherds algebras that admit a direct sum decomposition into a Kac--Moody (or semi-simple) subalgebra and a pair of free Lie subalgebras. Such Borcherds algebras have no mutually orthogonal imaginary simple roots.Our group is a semi-direct product of a Kac--Moody (or semi-simple) group and a Magnus group of invertible formal power series corresponding to a basis of a certain highest weight module determined by the simple imaginary roots. We show that our group is independent of this choice of basis, up to isomorphism. We apply our construction to a number of concrete examples, such as certain Borcherds algebras formed using root lattices of hyperbolic Kac--Moody algebras, the Monster Lie algebra, Monstrous Lie algebras of Fricke type and the gnome Lie algebra.</summary>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-15T22:34:09Z</published>
+    <arxiv:primary_category term="math.QA"/>
+    <author>
+      <name>Lisa Carbone</name>
+    </author>
+    <author>
+      <name>Elizabeth Jurisich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.06571v2</id>
+    <title>Beyond Predicted ZT: Machine Learning Strategies for the Experimental Discovery of Thermoelectric Materials</title>
+    <updated>2026-03-25T06:54:39Z</updated>
+    <link href="https://arxiv.org/abs/2601.06571v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.06571v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The discovery of high-performance thermoelectric (TE) materials for advancing green energy harvesting from waste heat is an urgent need in the context of looming energy crisis and climate change. The rapid advancement of machine learning (ML) has accelerated the design of thermoelectric (TE) materials, yet a persistent "gap" remains between high-accuracy computational predictions and their successful experimental validation. While ML models frequently report impressive test scores (R^2 values of 0.90-0.98) for complex TE properties (zT, power factor, and electrical/thermal conductivity), only a handful of these predictions have culminated in the experimental discovery of new high-zT materials. In this review, we identify and discuss that the primary obstacles are poor model generalizability-stemming from the "small-data" problem, sampling biases in cross-validation, and inadequate structural representation-alongside the critical challenge of thermodynamic phase stability. Moreover, we argue that standard randomized validation often overestimates model performance by ignoring "hidden hierarchies" and clustering within chemical families. Finally, to bridge this gap between ML-predictions and experimental realization, we advocate for advanced validation strategies like PCA-based sampling and a synergetic active learning loop that integrates ML "fast filters" for stability (e.g., GNoME) with high-throughput combinatorial thin-film synthesis to rapidly map stable, high-zT compositional spaces.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-10T13:37:22Z</published>
+    <arxiv:comment>Published version (40 pages, 3 figures)</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Artificial Intelligence Chemistry 4, Issue 1, June 2026, 100113</arxiv:journal_ref>
+    <author>
+      <name>Shoeb Athar</name>
+    </author>
+    <author>
+      <name>Philippe Jund</name>
+    </author>
+    <arxiv:doi>10.1016/j.aichem.2026.100113</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aichem.2026.100113" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.17616v1</id>
+    <title>Multi-Language Benchmark Generation via L-Systems</title>
+    <updated>2025-12-19T14:19:13Z</updated>
+    <link href="https://arxiv.org/abs/2512.17616v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.17616v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>L-systems are a mathematical formalism proposed by biologist Aristid Lindenmayer with the aim of simulating organic structures such as trees, snowflakes, flowers, and other branching phenomena. They are implemented as a formal language that defines how patterns can be iteratively rewritten. This paper describes how such a formalism can be used to create artificial programs written in programming languages such as C, C++, Julia and Go. These programs, being large and complex, can be used to test the performance of compilers, operating systems, and computer architectures. This paper demonstrates the usefulness of these benchmarks through multiple case studies. These case studies include a comparison between clang and gcc; a comparison between C, C++, Julia and Go; a study of the historical evolution of gcc in terms of code quality; a look into the effects of profile guided optimizations in gcc; an analysis of the asymptotic behavior of the different phases of clang's compilation pipeline; and a comparison between the many data structures available in the Gnome Library (GLib). These case studies demonstrate the benefits of the L-System approach to create benchmarks, when compared with fuzzers such as CSmith, which were designed to uncover bugs in compilers, rather than evaluating their performance.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-19T14:19:13Z</published>
+    <arxiv:comment>29 pages, 19 figures, 1 table and 46 references</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Vinícius Francisco da Silva</name>
+    </author>
+    <author>
+      <name>Heitor Leite</name>
+    </author>
+    <author>
+      <name>Fernando Magno Quintão Pereira</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.12288v1</id>
+    <title>Quantum-Aware Generative AI for Materials Discovery: A Framework for Robust Exploration Beyond DFT Biases</title>
+    <updated>2025-12-13T11:17:21Z</updated>
+    <link href="https://arxiv.org/abs/2512.12288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.12288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Conventional generative models for materials discovery are predominantly trained and validated using data from Density Functional Theory (DFT) with approximate exchange-correlation functionals. This creates a fundamental bottleneck: these models inherit DFT's systematic failures for strongly correlated systems, leading to exploration biases and an inability to discover materials where DFT predictions are qualitatively incorrect. We introduce a quantum-aware generative AI framework that systematically addresses this limitation through tight integration of multi-fidelity learning and active validation. Our approach employs a diffusion-based generator conditioned on quantum-mechanical descriptors and a validator using an equivariant neural network potential trained on a hierarchical dataset spanning multiple levels of theory (PBE, SCAN, HSE06, CCSD(T)). Crucially, we implement a robust active learning loop that quantifies and targets the divergence between low- and high-fidelity predictions. We conduct comprehensive ablation studies to deconstruct the contribution of each component, perform detailed failure mode analysis, and benchmark our framework against state-of-the-art generative models (CDVAE, GNoME, DiffCSP) across several challenging material classes. Our results demonstrate significant practical gains: a 3-5x improvement in successfully identifying potentially stable candidates in high-divergence regions (e.g., correlated oxides) compared to DFT-only baselines, while maintaining computational feasibility. This work provides a rigorous, transparent framework for extending the effective search space of computational materials discovery beyond the limitations of single-fidelity models.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-13T11:17:21Z</published>
+    <arxiv:comment>arXiv admin note: This submission has been withdrawn by arXiv administrators due to incorrect authorship. Author list truncated</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Mahule Roy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.10847v1</id>
+    <title>Large Language Models for Superconductor Discovery</title>
+    <updated>2025-12-11T17:32:38Z</updated>
+    <link href="https://arxiv.org/abs/2512.10847v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.10847v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) offer new opportunities for automated data extraction and property prediction across materials science, yet their use in superconductivity research remains limited. Here we construct a large experimental database of 78,203 records, covering 19,058 unique compositions, extracted from scientific literature using an LLM-driven workflow. Each entry includes chemical composition, critical temperature, measurement pressure, structural descriptors, and critical fields. We fine-tune several open-source LLMs for three tasks: (i) classifying superconductors vs. non-superconductors, (ii) predicting the superconducting transition temperature directly from composition or structure-informed inputs, and (iii) inverse design of candidate compositions conditioned on target Tc. The fine-tuned LLMs achieve performance comparable to traditional feature-based models and in some cases exceed them, while substantially outperforming their base versions and capturing meaningful chemical and structural trends. The inverse-design model generates chemically plausible compositions, including 28% novel candidates not seen in training. Finally, applying the trained predictors to the GNoME database identifies unreported materials with predicted Tc &gt; 10 K. Although unverified, these candidates illustrate how integrating an LLM-driven workflow can enable scalable hypothesis generation for superconductivity discovery.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-11T17:32:38Z</published>
+    <arxiv:comment>15 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Suman Itani</name>
+    </author>
+    <author>
+      <name>Yibo Zhang</name>
+    </author>
+    <author>
+      <name>Ranjit Itani</name>
+    </author>
+    <author>
+      <name>Jiadong Zang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.10221v2</id>
+    <title>Search for a solar-bound axion halo using the Global Network of Optical Magnetometers for Exotic physics searches</title>
+    <updated>2026-07-02T01:27:33Z</updated>
+    <link href="https://arxiv.org/abs/2512.10221v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.10221v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We report on a search for a gravitationally bound solar axion halo using data from the Global Network of Optical Magnetometers for Exotic physics searches (GNOME), a worldwide array of magnetically shielded atomic magnetometers with sensitivity to exotic spin couplings. Motivated by recent theoretical work suggesting that self-interacting ultralight axions can be captured by the Sun's gravitational field and thermalize into the ground state, we develop a signal model for the pseudo-magnetic fields generated by axion-proton gradient couplings in such a halo. The analysis focuses on the fifth GNOME Science Run (69 days, 12 stations), employing a cross-correlation pipeline with time-shifted daily modulation templates to search for the global, direction-dependent, monochromatic signal expected from a solar axion halo. No statistically significant candidate signals are observed. We set 95% confidence-level upper limits on the amplitude of the axion-induced pseudo-magnetic field over the frequency range $\approx 0.05-20$ Hz, translating to constraints on the linear and quadratic axion-proton couplings for halo densities predicted by gravitational capture models and for the maximum overdensities allowed by planetary ephemerides. In the quadratic coupling case, our limits surpass existing astrophysical bounds by over two orders of magnitude across much of the accessible parameter space.</summary>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-11T02:13:06Z</published>
+    <arxiv:comment>22 pages, 18 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.atom-ph"/>
+    <arxiv:journal_ref>Phys. Rev. D 113, 115027 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Tatum Z. Wilson</name>
+    </author>
+    <author>
+      <name>Derek F. Jackson Kimball</name>
+    </author>
+    <author>
+      <name>Samer Afach</name>
+    </author>
+    <author>
+      <name>Jiexiao Bi</name>
+    </author>
+    <author>
+      <name>B. C. Buchler</name>
+    </author>
+    <author>
+      <name>Dmitry Budker</name>
+    </author>
+    <author>
+      <name>Kaleb Cervantes</name>
+    </author>
+    <author>
+      <name>Joshua Eby</name>
+    </author>
+    <author>
+      <name>Nataniel L. Figueroa</name>
+    </author>
+    <author>
+      <name>Ron Folman</name>
+    </author>
+    <author>
+      <name>Jiawei Gao</name>
+    </author>
+    <author>
+      <name>Daniel Gavilán-Martín</name>
+    </author>
+    <author>
+      <name>Menachem Givon</name>
+    </author>
+    <author>
+      <name>Zoran D. Grujić</name>
+    </author>
+    <author>
+      <name>Hong Guo</name>
+    </author>
+    <author>
+      <name>Paul Hamilton</name>
+    </author>
+    <author>
+      <name>M. P. Hedges</name>
+    </author>
+    <author>
+      <name>Zhejun Huang</name>
+    </author>
+    <author>
+      <name>Dongok Kim</name>
+    </author>
+    <author>
+      <name>Younggeun Kim</name>
+    </author>
+    <author>
+      <name>Sami S. Khamis</name>
+    </author>
+    <author>
+      <name>Emmanuel Klinger</name>
+    </author>
+    <author>
+      <name>Abaz Kryemadhi</name>
+    </author>
+    <author>
+      <name>Nina Kukowski</name>
+    </author>
+    <author>
+      <name>Jianjun Li</name>
+    </author>
+    <author>
+      <name>Grzegorz Lukasiewicz</name>
+    </author>
+    <author>
+      <name>Hector Masia-Roig</name>
+    </author>
+    <author>
+      <name>Tafai Muck</name>
+    </author>
+    <author>
+      <name>Michal Padniuk</name>
+    </author>
+    <author>
+      <name>Christopher A. Palm</name>
+    </author>
+    <author>
+      <name>Chaitanya Paranjape</name>
+    </author>
+    <author>
+      <name>Sun Yool Park</name>
+    </author>
+    <author>
+      <name>Xiang Peng</name>
+    </author>
+    <author>
+      <name>Gilad Perez</name>
+    </author>
+    <author>
+      <name>Rayshaun Preston</name>
+    </author>
+    <author>
+      <name>Szymon Pustelny</name>
+    </author>
+    <author>
+      <name>Wolfram Ratzinger</name>
+    </author>
+    <author>
+      <name>Yossi Rosenzweig</name>
+    </author>
+    <author>
+      <name>Ophir M. Ruimi</name>
+    </author>
+    <author>
+      <name>Amy Saputo</name>
+    </author>
+    <author>
+      <name>Theo Scholtes</name>
+    </author>
+    <author>
+      <name>P. C. Segura</name>
+    </author>
+    <author>
+      <name>Yannis K. Semertzidis</name>
+    </author>
+    <author>
+      <name>Yun Chang Shin</name>
+    </author>
+    <author>
+      <name>Jason E. Stalnaker</name>
+    </author>
+    <author>
+      <name>Ibrahim Sulai</name>
+    </author>
+    <author>
+      <name>Dhruv Tandon</name>
+    </author>
+    <author>
+      <name>Rayshaun Thompson</name>
+    </author>
+    <author>
+      <name>Ken Vu</name>
+    </author>
+    <author>
+      <name>Arne Wickenbrock</name>
+    </author>
+    <author>
+      <name>Teng Wu</name>
+    </author>
+    <author>
+      <name>Yucheng Yang</name>
+    </author>
+    <author>
+      <name>Yixin Zhao</name>
+    </author>
+    <arxiv:doi>10.1103/dd54-6vkw</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/dd54-6vkw" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.22504v2</id>
+    <title>Screening novel cathode materials from the Energy-GNoME database using MACE machine learning force field and DFT</title>
+    <updated>2026-02-09T20:36:14Z</updated>
+    <link href="https://arxiv.org/abs/2511.22504v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.22504v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The development of new battery materials, particularly novel cathode chemistries, is essential for enabling next generation energy storage technologies. In this work, we employ a multi-fidelity screening protocol combining the Energy-GNoME confident criteria, foundational MACE machine-learning force fields (MLFF), and physically motivated heuristic filters to identify novel intercalation cathodes for post-lithium batteries, namely: Na-, K-, Mg-, and Ca-ion batteries. Foundational MACE models are used to efficiently asses dynamical stability, thermodynamical stability, average voltage, and theoretical specific energy, enabling a rapid screening of candidates. For the most promising cathodes, voltage predictions are refined using DFT+U calculations. This work delivers three key outcomes: i) establishing and validating a robust high-throughput screening approach for cathode materials with foundational MLFF models; ii) suggestions for cathode candidates for the development of next-generation of batteries; iii) a fair comparison between the MACE predictions and the readily available figures of merit reported in the Energy-GNoME database on the examined materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-27T14:36:50Z</published>
+    <arxiv:comment>27 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Nada Alghamdi</name>
+    </author>
+    <author>
+      <name>Paolo de Angelis</name>
+    </author>
+    <author>
+      <name>Pietro Asinari</name>
+    </author>
+    <author>
+      <name>Eliodoro Chiavazzo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.01790v1</id>
+    <title>A Synthesizability-Guided Pipeline for Materials Discovery</title>
+    <updated>2025-11-03T17:44:30Z</updated>
+    <link href="https://arxiv.org/abs/2511.01790v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.01790v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Computational materials discovery relies on the generation of plausible crystal structures. The plausibility is typically judged through density functional theory methods which, while typically accurate at zero Kelvin, often favor low-energy structures that are not experimentally accessible. We develop a combined compositional and structural synthesizability score which provides an accurate way of predicting which compounds can actually be synthesized in a laboratory. We use it to evaluate non-synthesized structures from the Materials Project, GNoME, and Alexandria, and identified several hundred highly synthesizable candidates. We then predict synthesis pathways, conduct corresponding experiments, and characterize the products across 16 targets, successfully synthesizing 7 of 16. The entire experimental process was completed in only three days. Our results highlight omissions in lists of known synthesized structures, deliver insights into the practical utility of current materials databases, and showcase the central role synthesizability prediction can play in materials discovery.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-03T17:44:30Z</published>
+    <arxiv:comment>Main: 10 pages, 4 figures, SI: 8 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Thorben Prein</name>
+    </author>
+    <author>
+      <name>Willis O'Leary</name>
+    </author>
+    <author>
+      <name>Aikaterini Flessa Savvidou</name>
+    </author>
+    <author>
+      <name>Elchaïma Bourneix</name>
+    </author>
+    <author>
+      <name>Joonatan E. M. Laulainen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.09406v3</id>
+    <title>Are diffusion models ready for materials discovery in unexplored chemical space?</title>
+    <updated>2026-02-02T05:19:06Z</updated>
+    <link href="https://arxiv.org/abs/2510.09406v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.09406v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While diffusion models are attracting increasing attention for the design of novel materials, their ability to generate low-energy structures in unexplored chemical spaces has not been systematically assessed. Here, we evaluate the performance of two diffusion models, MatterGen and DiffCSP, against three databases: a ternary oxide set (constructed by a genetic algorithm), a ternary nitride set (constructed by template informatics), and the GNoME database (constructed by a combination of both). We find that diffusion models generally perform stably in well-sampled chemical spaces (oxides and nitrides), but are less effective in uncommon ones (GNoME), which contains many compositions involving rare-earth elements and unconventional stoichiometry. Finally, we assess their size-extrapolation capability and observe a significant drop in performance when the number of atoms exceeds the trained range. This is attributed to the limitations imposed by periodic boundary conditions, which we refer to as the curse of periodicity. This study paves the way for future developments in materials design by highlighting both the strength and the limitations of diffusion models.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-10T14:01:10Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Sanghyun Kim</name>
+    </author>
+    <author>
+      <name>Gihyeon Jeon</name>
+    </author>
+    <author>
+      <name>Seungwoo Hwang</name>
+    </author>
+    <author>
+      <name>Jiho Lee</name>
+    </author>
+    <author>
+      <name>Jisu Jung</name>
+    </author>
+    <author>
+      <name>Seungwu Han</name>
+    </author>
+    <author>
+      <name>Sungwoo Kang</name>
+    </author>
+    <arxiv:doi>10.1016/j.patter.2026.101537</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.patter.2026.101537" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19781v3</id>
+    <title>Search for thermodynamically stable ambient-pressure superconducting hydrides in GNoME database</title>
+    <updated>2026-03-17T12:31:10Z</updated>
+    <link href="https://arxiv.org/abs/2508.19781v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.19781v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hydrides are considered to be one of the most promising families of compounds for achieving high temperature superconductivity. However, there are very few experimental reports of ambient-pressure hydride superconductivity, and the superconducting critical temperatures ($T_{\rm c}$) are typically less than 10 K. At the same time several hydrides have been predicted to exhibit superconductivity around 100 K at ambient pressure but in thermodynamically unfavorable phases. In this work we aim at assessing the superconducting properties of thermodynamically stable hydride superconductors at room pressure by investigating the GNoME material database, which has been recently released and includes thousands of hydrides thermodynamically stable at 0K. To scan this large material space we have adopted a multi stage approach which combines machine learning for a fast initial evaluation and cutting edge ab initio methods to obtain a reliable estimation of ($T_{\rm c}$). Ultimately we have identified 25 cubic hydrides with ($T_{\rm c}$) above 4.2~K and reach a maximum ($T_{\rm c}$) of 17 K. While these critical temperatures are modest in comparison to some recent predictions, the systems where they are found, being stable, are likely to be experimentally accessible and of potential technological relevance.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-27T11:04:09Z</published>
+    <arxiv:comment>11 pages, 5 figures in main text</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Commun Phys 9, 94 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Antonio Sanna</name>
+    </author>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+    </author>
+    <author>
+      <name>Ekin Dogus Cubuk</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <author>
+      <name>Yue-Wen Fang</name>
+    </author>
+    <arxiv:doi>10.1038/s42005-026-02552-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s42005-026-02552-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.03802v1</id>
+    <title>Generating Novelty in Open-World Multi-Agent Strategic Board Games</title>
+    <updated>2025-07-04T20:44:33Z</updated>
+    <link href="https://arxiv.org/abs/2507.03802v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.03802v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe GNOME (Generating Novelty in Open-world Multi-agent Environments), an experimental platform that is designed to test the effectiveness of multi-agent AI systems when faced with \emph{novelty}. GNOME separates the development of AI gameplaying agents with the simulator, allowing \emph{unanticipated} novelty (in essence, novelty that is not subject to model-selection bias). Using a Web GUI, GNOME was recently demonstrated at NeurIPS 2020 using the game of Monopoly to foster an open discussion on AI robustness and the nature of novelty in real-world environments. In this article, we further detail the key elements of the demonstration, and also provide an overview of the experimental design that is being currently used in the DARPA Science of Artificial Intelligence and Learning for Open-World Novelty (SAIL-ON) program to evaluate external teams developing novelty-adaptive gameplaying agents.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-04T20:44:33Z</published>
+    <arxiv:comment>16 pages, shorter version demonstrated in NeurIPS 2020</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Mayank Kejriwal</name>
+    </author>
+    <author>
+      <name>Shilpa Thomas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.09161v1</id>
+    <title>Bridging Theory and Experiment in Materials Discovery: Machine-Learning-Assisted Prediction of Synthesizable Structures</title>
+    <updated>2025-05-14T05:48:55Z</updated>
+    <link href="https://arxiv.org/abs/2505.09161v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.09161v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Even though thermodynamic energy-based crystal structure prediction (CSP) has revolutionized materials discovery, the energy-driven CSP approaches often struggle to identify experimentally realizable metastable materials synthesized through kinetically controlled pathways, creating a critical gap between theoretical predictions and experimental synthesis. Here, we propose a synthesizability-driven CSP framework that integrates symmetry-guided structure derivation with a Wyckoff encode-based machine-learning model, allowing for the efficient localization of subspaces likely to yield highly synthesizable structures. Within the identified promising subspaces, a structure-based synthesizability evaluation model, fine-tuned using recently synthesized structures to enhance predictive accuracy, is employed in conjunction with ab initio calculations to systematically identify synthesizable candidates. The framework successfully reproduces 13 experimentally known XSe (X = Sc, Ti, Mn, Fe, Ni, Cu, Zn) structures, demonstrating its effectiveness in predicting synthesizable structures. Notably, 92,310 structures are filtered from the 554,054 candidates predicted by GNoME, exhibiting great potential for promising synthesizability. Additionally, eight thermodynamically favorable Hf-X-O (X = Ti, V, and Mn) structures have been identified, among which three HfV$_2$O$_7$ candidates exhibit high synthesizability, presenting viable candidates for experimental realization and potentially associated with experimentally observed temperature-induced phase transitions. This work establishes a data-driven paradigm for machine-learning-assisted inorganic materials synthesis, highlighting its potential to bridge the gap between computational predictions and experimental realization while unlocking new opportunities for the targeted discovery of novel functional materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-14T05:48:55Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yu Xin</name>
+    </author>
+    <author>
+      <name>Peng Liu</name>
+    </author>
+    <author>
+      <name>Zhuohang Xie</name>
+    </author>
+    <author>
+      <name>Wenhui Mi</name>
+    </author>
+    <author>
+      <name>Pengyue Gao</name>
+    </author>
+    <author>
+      <name>Hong Jian Zhao</name>
+    </author>
+    <author>
+      <name>Jian Lv</name>
+    </author>
+    <author>
+      <name>Yanchao Wang</name>
+    </author>
+    <author>
+      <name>Yanming Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.19586v1</id>
+    <title>A Universal Spin-Orbit-Coupled Hamiltonian Model for Accelerated Quantum Material Discovery</title>
+    <updated>2025-04-28T08:47:45Z</updated>
+    <link href="https://arxiv.org/abs/2504.19586v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.19586v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The accurate modeling of spin-orbit coupling (SOC) effects in diverse complex systems remains a significant challenge due to the high computational demands of density functional theory (DFT) and the limited transferability of existing machine-learning frameworks. This study addresses these limitations by introducing Uni-HamGNN, a universal SOC Hamiltonian graph neural network that is applicable across the periodic table. By decomposing the SOC Hamiltonian into spin-independent and SOC correction terms, our approach preserves SU(2) symmetry while significantly reducing parameter requirements. Based on this decomposition, we propose a delta-learning strategy to separately fit the two components, thereby addressing the training difficulties caused by magnitude discrepancies between them and enabling efficient training. The model achieves remarkable accuracy (mean absolute error of 0.0025 meV for the SOC-related component) and demonstrates broad applicability through high-throughput screening of the GNoME dataset for topological insulators, as well as precise predictions for 2D valleytronic materials and transition metal dichalcogenide (TMD) heterostructures. This breakthrough eliminates the need for system-specific retraining and costly SOC-DFT calculations, paving the way for rapid discovery of quantum materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-28T08:47:45Z</published>
+    <arxiv:comment>15 pages,8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yang Zhong</name>
+    </author>
+    <author>
+      <name>Rui Wang</name>
+    </author>
+    <author>
+      <name>Xingao Gong</name>
+    </author>
+    <author>
+      <name>Hongjun Xiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.23183v1</id>
+    <title>TCSP 2.0: Template Based Crystal Structure Prediction with Improved Oxidation State Prediction and Chemistry Heuristics</title>
+    <updated>2025-03-29T18:37:54Z</updated>
+    <link href="https://arxiv.org/abs/2503.23183v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.23183v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Crystal structure prediction remains a major challenge in materials science, directly impacting the discovery and development of next-generation materials. We introduce TCSP 2.0, a substantial evolution of our template-based crystal structure prediction framework that advances predictive capabilities through synergistic integration of several key techniques into its major components. Building upon TCSP 1.0's template-matching foundation, this enhanced version implements three critical innovations: (1) replacement of Pymatgen with deep learning-based BERTOS model for oxidation state prediction with superior performance, (2) implementation of sophisticated element embedding distance metrics for improved chemical similarity assessment, and (3) development of a robust majority voting mechanism for space group selection that reduces prediction uncertainty. TCSP 2.0 also expands its template base by incorporating template structures from Materials Cloud, C2DB, and GNoME databases alongside the original Materials Project repository, creating a more comprehensive structural foundation. Rigorous validation across 180 diverse test cases of the CSPBenchmark demonstrates TCSP 2.0's exceptional performance, achieving 83.89% space-group success rate and 78.33% structural similarity accuracy for top-5 predictions, substantially outperforming both its predecessor and the competing modern CSP algorithms including CSPML and EquiCSP.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-29T18:37:54Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Lai Wei</name>
+    </author>
+    <author>
+      <name>Rongzhi Dong</name>
+    </author>
+    <author>
+      <name>Nihang Fu</name>
+    </author>
+    <author>
+      <name>Sadman Sadeed Omee</name>
+    </author>
+    <author>
+      <name>Jianjun Hu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.11032v1</id>
+    <title>AI-Driven Accelerated Discovery of Intercalation-type Cathode Materials for Magnesium Batteries</title>
+    <updated>2024-12-15T03:02:33Z</updated>
+    <link href="https://arxiv.org/abs/2412.11032v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.11032v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Magnesium-ion batteries hold promise as future energy storage solution, yet current Mg cathodes are challenged by low voltage and specific capacity. Herein, we present an AI-driven workflow for discovering high-performance Mg cathode materials. Utilizing the common characteristics of various ionic intercalation-type electrodes, we design and train a Crystal Graph Convolutional Neural Network model that can accurately predicts electrode voltages for various ions with mean absolute errors (MAE) between 0.25 and 0.33 V. By deploying the trained model to stable Mg compounds from Materials Project and GNoME AI dataset, we identify 160 high voltage structures out of 15,308 candidates with voltages above 3.0 V and volumetric capacity over 800 Ah/L. We further train a precise NequIP model to facilitate accurate and rapid simulations of Mg ionic conductivity. From the 160 high voltage structures, the machine learning molecular dynamics simulations have selected 23 cathode materials with both high energy density and high ionic conductivity. This AI-driven workflow dramatically boosts the efficiency and precision of material discovery for multivalent ion batteries, paving the way for advanced Mg battery development.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-15T03:02:33Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Journal of Energy Chemistry, Vol. 108, pages 40-46 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Wenjie Chen</name>
+      <arxiv:affiliation>Department of Physics, Tsinghua University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zichang Lin</name>
+      <arxiv:affiliation>Department of Physics, Tsinghua University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xinxin Zhang</name>
+      <arxiv:affiliation>Department of Physics, Tsinghua University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hao Zhou</name>
+      <arxiv:affiliation>Institute of AI Industry Research, Tsinghua University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yuegang Zhang</name>
+      <arxiv:affiliation>Department of Physics, Tsinghua University</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1016/j.jechem.2025.03.085</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jechem.2025.03.085" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.10125v1</id>
+    <title>Energy-GNoME: A Living Database of Selected Materials for Energy Applications</title>
+    <updated>2024-11-15T11:48:14Z</updated>
+    <link href="https://arxiv.org/abs/2411.10125v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.10125v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Artificial Intelligence (AI) in materials science is driving significant advancements in the discovery of advanced materials for energy applications. The recent GNoME protocol identifies over 380,000 novel stable crystals. From this, we identify over 33,000 materials with potential as energy materials forming the Energy-GNoME database. Leveraging Machine Learning (ML) and Deep Learning (DL) tools, our protocol mitigates cross-domain data bias using feature spaces to identify potential candidates for thermoelectric materials, novel battery cathodes, and novel perovskites. Classifiers with both structural and compositional features identify domains of applicability, where we expect enhanced accuracy of the regressors. Such regressors are trained to predict key materials properties like, thermoelectric figure of merit (zT), band gap (Eg), and cathode voltage ($ΔV_c$). This method significantly narrows the pool of potential candidates, serving as an efficient guide for experimental and computational chemistry investigations and accelerating the discovery of materials suited for electricity generation, energy storage and conversion.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.other" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-15T11:48:14Z</published>
+    <arxiv:comment>60 pages, 16 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Energy &amp; AI 2025</arxiv:journal_ref>
+    <author>
+      <name>Paolo De Angelis</name>
+    </author>
+    <author>
+      <name>Giovanni Trezza</name>
+    </author>
+    <author>
+      <name>Giulio Barletta</name>
+    </author>
+    <author>
+      <name>Pietro Asinari</name>
+    </author>
+    <author>
+      <name>Eliodoro Chiavazzo</name>
+    </author>
+    <arxiv:doi>10.1016/j.egyai.2025.100605</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.egyai.2025.100605" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.18242v2</id>
+    <title>Human-Agent Coordination in Games under Incomplete Information via Multi-Step Intent</title>
+    <updated>2025-02-17T22:35:16Z</updated>
+    <link href="https://arxiv.org/abs/2410.18242v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.18242v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Strategic coordination between autonomous agents and human partners under incomplete information can be modeled as turn-based cooperative games. We extend a turn-based game under incomplete information, the shared-control game, to allow players to take multiple actions per turn rather than a single action. The extension enables the use of multi-step intent, which we hypothesize will improve performance in long-horizon tasks. To synthesize cooperative policies for the agent in this extended game, we propose an approach featuring a memory module for a running probabilistic belief of the environment dynamics and an online planning algorithm called IntentMCTS. This algorithm strategically selects the next action by leveraging any communicated multi-step intent via reward augmentation while considering the current belief. Agent-to-agent simulations in the Gnomes at Night testbed demonstrate that IntentMCTS requires fewer steps and control switches than baseline methods. A human-agent user study corroborates these findings, showing an 18.52% higher success rate compared to the heuristic baseline and a 5.56% improvement over the single-step prior work. Participants also report lower cognitive load, frustration, and higher satisfaction with the IntentMCTS agent partner.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-23T19:37:19Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Shenghui Chen</name>
+    </author>
+    <author>
+      <name>Ruihan Zhao</name>
+    </author>
+    <author>
+      <name>Sandeep Chinchali</name>
+    </author>
+    <author>
+      <name>Ufuk Topcu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.13919v2</id>
+    <title>A Multi-Messenger Search for Exotic Field Emission with a Global Magnetometer Network</title>
+    <updated>2025-05-20T22:52:28Z</updated>
+    <link href="https://arxiv.org/abs/2407.13919v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.13919v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum sensor networks in combination with traditional astronomical observations are emerging as a novel modality for multi-messenger astronomy. Here we develop a generic analysis framework that uses a data-driven approach to model the sensitivity of a quantum sensor network to astrophysical signals as a consequence of beyond-the-Standard Model (BSM) physics. The analysis method evaluates correlations between sensors to search for BSM signals coincident with astrophysical triggers such as black hole mergers, supernovae, or fast radio bursts. Complementary to astroparticle approaches that search for particlelike signals (e.g. WIMPs), quantum sensors are sensitive to wavelike signals from exotic quantum fields. This analysis method can be applied to networks of different types of quantum sensors, such as atomic clocks, matter-wave interferometers, and nuclear clocks, which can probe many types of interactions between BSM fields and standard model particles.
+  We use this analysis method to carry out the first direct search utilizing a terrestrial network of precision quantum sensors for BSM fields emitted during a black hole merger. Specifically we use the Global Network of Optical Magnetometers for Exotic physics (GNOME) to perform a search for exotic low-mass field (ELF) bursts generated in coincidence with a gravitational wave signal from a binary black hole merger (GW200311 115853) detected by LIGO/Virgo on the 11th of March 2020. The associated gravitational wave heralds the arrival of the ELF burst that interacts with the spins of fermions in the magnetometers. This enables GNOME to serve as a tool for multi-messenger astronomy. Our search found no significant events, and consequently we place the first lab-based limits on combinations of ELF production and coupling parameters.</summary>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-18T22:11:12Z</published>
+    <arxiv:comment>23 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.HE"/>
+    <arxiv:journal_ref>Phys. Rev. X 15, 031048 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Sami S. Khamis</name>
+    </author>
+    <author>
+      <name>Ibrahim A. Sulai</name>
+    </author>
+    <author>
+      <name>Paul Hamilton</name>
+    </author>
+    <author>
+      <name>S. Afach</name>
+    </author>
+    <author>
+      <name>B. C. Buchler</name>
+    </author>
+    <author>
+      <name>D. Budker</name>
+    </author>
+    <author>
+      <name>N. L. Figueroa</name>
+    </author>
+    <author>
+      <name>R. Folman</name>
+    </author>
+    <author>
+      <name>D. Gavilán-Martín</name>
+    </author>
+    <author>
+      <name>M. Givon</name>
+    </author>
+    <author>
+      <name>Z. D. Grujić</name>
+    </author>
+    <author>
+      <name>H. Guo</name>
+    </author>
+    <author>
+      <name>M. P. Hedges</name>
+    </author>
+    <author>
+      <name>D. F. Jackson Kimball</name>
+    </author>
+    <author>
+      <name>D. Kim</name>
+    </author>
+    <author>
+      <name>E. Klinger</name>
+    </author>
+    <author>
+      <name>T. Kornack</name>
+    </author>
+    <author>
+      <name>A. Kryemadhi</name>
+    </author>
+    <author>
+      <name>N. Kukowski</name>
+    </author>
+    <author>
+      <name>G. Lukasiewicz</name>
+    </author>
+    <author>
+      <name>H. Masia-Roig</name>
+    </author>
+    <author>
+      <name>M. Padniuk</name>
+    </author>
+    <author>
+      <name>C. A. Palm</name>
+    </author>
+    <author>
+      <name>S. Y. Park</name>
+    </author>
+    <author>
+      <name>X. Peng</name>
+    </author>
+    <author>
+      <name>M. Pospelov</name>
+    </author>
+    <author>
+      <name>S. Pustelny</name>
+    </author>
+    <author>
+      <name>Y. Rosenzweig</name>
+    </author>
+    <author>
+      <name>O. M. Ruimi</name>
+    </author>
+    <author>
+      <name>P. C. Segura</name>
+    </author>
+    <author>
+      <name>T. Scholtes</name>
+    </author>
+    <author>
+      <name>Y. K. Semertzidis</name>
+    </author>
+    <author>
+      <name>Y. C. Shin</name>
+    </author>
+    <author>
+      <name>J. E. Stalnaker</name>
+    </author>
+    <author>
+      <name>D. Tandon</name>
+    </author>
+    <author>
+      <name>A. Weis</name>
+    </author>
+    <author>
+      <name>A. Wickenbrock</name>
+    </author>
+    <author>
+      <name>T. Wilson</name>
+    </author>
+    <author>
+      <name>T. Wu</name>
+    </author>
+    <author>
+      <name>J. Zhang</name>
+    </author>
+    <author>
+      <name>Y. Zhao</name>
+    </author>
+    <arxiv:doi>10.1103/fsc8-6sl5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/fsc8-6sl5" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.10764v1</id>
+    <title>GNOME: Generating Negotiations through Open-Domain Mapping of Exchanges</title>
+    <updated>2024-06-16T00:26:17Z</updated>
+    <link href="https://arxiv.org/abs/2406.10764v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.10764v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Language Models have previously shown strong negotiation capabilities in closed domains where the negotiation strategy prediction scope is constrained to a specific setup. In this paper, we first show that these models are not generalizable beyond their original training domain despite their wide-scale pretraining. Following this, we propose an automated framework called GNOME, which processes existing human-annotated, closed-domain datasets using Large Language Models and produces synthetic open-domain dialogues for negotiation. GNOME improves the generalizability of negotiation systems while reducing the expensive and subjective task of manual data curation. Through our experimental setup, we create a benchmark comparing encoder and decoder models trained on existing datasets against datasets created through GNOME. Our results show that models trained on our dataset not only perform better than previous state of the art models on domain specific strategy prediction, but also generalize better to previously unseen domains.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-16T00:26:17Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Darshan Deshpande</name>
+    </author>
+    <author>
+      <name>Shambhavi Sinha</name>
+    </author>
+    <author>
+      <name>Anirudh Ravi Kumar</name>
+    </author>
+    <author>
+      <name>Debaditya Pal</name>
+    </author>
+    <author>
+      <name>Jonathan May</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.14173v3</id>
+    <title>Human-Agent Cooperation in Games under Incomplete Information through Natural Language Communication</title>
+    <updated>2024-06-01T20:06:55Z</updated>
+    <link href="https://arxiv.org/abs/2405.14173v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.14173v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Developing autonomous agents that can strategize and cooperate with humans under information asymmetry is challenging without effective communication in natural language. We introduce a shared-control game, where two players collectively control a token in alternating turns to achieve a common objective under incomplete information. We formulate a policy synthesis problem for an autonomous agent in this game with a human as the other player. To solve this problem, we propose a communication-based approach comprising a language module and a planning module. The language module translates natural language messages into and from a finite set of flags, a compact representation defined to capture player intents. The planning module leverages these flags to compute a policy using an asymmetric information-set Monte Carlo tree search with flag exchange algorithm we present. We evaluate the effectiveness of this approach in a testbed based on Gnomes at Night, a search-and-find maze board game. Results of human subject experiments show that communication narrows the information gap between players and enhances human-agent cooperation efficiency with fewer turns.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-23T04:58:42Z</published>
+    <arxiv:comment>with appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Shenghui Chen</name>
+    </author>
+    <author>
+      <name>Daniel Fried</name>
+    </author>
+    <author>
+      <name>Ufuk Topcu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.05799v1</id>
+    <title>Recent Breakthrough in AI-Driven Materials Science: Tech Giants Introduce Groundbreaking Models</title>
+    <updated>2024-02-08T16:39:26Z</updated>
+    <link href="https://arxiv.org/abs/2402.05799v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.05799v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A close look of Google's GNoME inorganic materials dataset [Nature 624, 80 (2023)], and 11 things you would like to know.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-08T16:39:26Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Mater. Futures 3 027501 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Miao Liu</name>
+    </author>
+    <author>
+      <name>Sheng Meng</name>
+    </author>
+    <arxiv:doi>10.1088/2752-5724/ad2e0c</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2752-5724/ad2e0c" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.00712v1</id>
+    <title>Logical Bias Learning for Object Relation Prediction</title>
+    <updated>2023-10-01T16:12:00Z</updated>
+    <link href="https://arxiv.org/abs/2310.00712v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.00712v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Scene graph generation (SGG) aims to automatically map an image into a semantic structural graph for better scene understanding. It has attracted significant attention for its ability to provide object and relation information, enabling graph reasoning for downstream tasks. However, it faces severe limitations in practice due to the biased data and training method. In this paper, we present a more rational and effective strategy based on causal inference for object relation prediction. To further evaluate the superiority of our strategy, we propose an object enhancement module to conduct ablation studies. Experimental results on the Visual Gnome 150 (VG-150) dataset demonstrate the effectiveness of our proposed method. These contributions can provide great potential for foundation models for decision-making.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-01T16:12:00Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Xinyu Zhou</name>
+    </author>
+    <author>
+      <name>Zihan Ji</name>
+    </author>
+    <author>
+      <name>Anna Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.01785v2</id>
+    <title>What can a GNOME do? Search targets for the Global Network of Optical Magnetometers for Exotic physics searches</title>
+    <updated>2023-05-04T23:48:36Z</updated>
+    <link href="https://arxiv.org/abs/2305.01785v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.01785v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Numerous observations suggest that there exist undiscovered beyond-the-Standard-Model particles and fields. Because of their unknown nature, these exotic particles and fields could interact with Standard Model particles in many different ways and assume a variety of possible configurations. Here we present an overview of the Global Network of Optical Magnetometers for Exotic physics searches (GNOME), our ongoing experimental program designed to test a wide range of exotic physics scenarios. The GNOME experiment utilizes a worldwide network of shielded atomic magnetometers (and, more recently, comagnetometers) to search for spatially and temporally correlated signals due to torques on atomic spins from exotic fields of astrophysical origin. We survey the temporal characteristics of a variety of possible signals currently under investigation such as those from topological defect dark matter (axion-like particle domain walls), axion-like particle stars, solitons of complex-valued scalar fields (Q-balls), stochastic fluctuations of bosonic dark matter fields, a solar axion-like particle halo, and bursts of ultralight bosonic fields produced by cataclysmic astrophysical events such as binary black hole mergers.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-02T21:13:26Z</published>
+    <arxiv:comment>22 pages, 12 figures, submitted to Annalen der Physik</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Annalen der Physik 2023, 2300083 (2023)</arxiv:journal_ref>
+    <author>
+      <name>S. Afach</name>
+    </author>
+    <author>
+      <name>D. Aybas Tumturk</name>
+    </author>
+    <author>
+      <name>H. Bekker</name>
+    </author>
+    <author>
+      <name>B. C. Buchler</name>
+    </author>
+    <author>
+      <name>D. Budker</name>
+    </author>
+    <author>
+      <name>K. Cervantes</name>
+    </author>
+    <author>
+      <name>A. Derevianko</name>
+    </author>
+    <author>
+      <name>J. Eby</name>
+    </author>
+    <author>
+      <name>N. L. Figueroa</name>
+    </author>
+    <author>
+      <name>R. Folman</name>
+    </author>
+    <author>
+      <name>D. Gavil'an Martin</name>
+    </author>
+    <author>
+      <name>M. Givon</name>
+    </author>
+    <author>
+      <name>Z. D. Grujic</name>
+    </author>
+    <author>
+      <name>H. Guo</name>
+    </author>
+    <author>
+      <name>P. Hamilton</name>
+    </author>
+    <author>
+      <name>M. P. Hedges</name>
+    </author>
+    <author>
+      <name>D. F. Jackson Kimball</name>
+    </author>
+    <author>
+      <name>S. Khamis</name>
+    </author>
+    <author>
+      <name>D. Kim</name>
+    </author>
+    <author>
+      <name>E. Klinger</name>
+    </author>
+    <author>
+      <name>A. Kryemadhi</name>
+    </author>
+    <author>
+      <name>X. Liu</name>
+    </author>
+    <author>
+      <name>G. Lukasiewicz</name>
+    </author>
+    <author>
+      <name>H. Masia-Roig</name>
+    </author>
+    <author>
+      <name>M. Padniuk</name>
+    </author>
+    <author>
+      <name>C. A. Palm</name>
+    </author>
+    <author>
+      <name>S. Y. Park</name>
+    </author>
+    <author>
+      <name>H. R. Pearson</name>
+    </author>
+    <author>
+      <name>X. Peng</name>
+    </author>
+    <author>
+      <name>M. Pospelov</name>
+    </author>
+    <author>
+      <name>S. Pustelny</name>
+    </author>
+    <author>
+      <name>Y. Rosenzweig</name>
+    </author>
+    <author>
+      <name>O. M. Ruimi</name>
+    </author>
+    <author>
+      <name>T. Scholtes</name>
+    </author>
+    <author>
+      <name>P. C. Segura</name>
+    </author>
+    <author>
+      <name>Y. K. Semertzidis</name>
+    </author>
+    <author>
+      <name>Y. C. Shin</name>
+    </author>
+    <author>
+      <name>J. A. Smiga</name>
+    </author>
+    <author>
+      <name>Y. V. Stadnik</name>
+    </author>
+    <author>
+      <name>J. E. Stalnaker</name>
+    </author>
+    <author>
+      <name>I. A. Sulai</name>
+    </author>
+    <author>
+      <name>D. Tandon</name>
+    </author>
+    <author>
+      <name>K. Vu</name>
+    </author>
+    <author>
+      <name>A. Weis</name>
+    </author>
+    <author>
+      <name>A. Wickenbrock</name>
+    </author>
+    <author>
+      <name>T. Z. Wilson</name>
+    </author>
+    <author>
+      <name>T. Wu</name>
+    </author>
+    <author>
+      <name>W. Xiao</name>
+    </author>
+    <author>
+      <name>Y. Yang</name>
+    </author>
+    <author>
+      <name>D. Yu</name>
+    </author>
+    <author>
+      <name>F. Yu</name>
+    </author>
+    <author>
+      <name>J. Zhang</name>
+    </author>
+    <author>
+      <name>Y. Zhao</name>
+    </author>
+    <arxiv:doi>10.1002/andp.202300083</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/andp.202300083" title="doi"/>
+  </entry>
+</feed>

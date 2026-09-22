@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/+r2CBsDJ5TLPtMK526sS68LKVTQ</id>
+  <title>arXiv Query: search_query=abs:"neural quantum states" AND abs:"frustrated"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:43:13Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22neural+quantum+states%22+AND+abs:%22frustrated%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>17</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11745v1</id>
+    <title>Unraveling the Kagome Antiferromagnetic $3J$ Model and Its Materials: An Integrated Approach</title>
+    <updated>2026-09-10T16:00:46Z</updated>
+    <link href="https://arxiv.org/abs/2609.11745v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11745v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the ground-state and finite-temperature properties of the kagome antiferromagnetic Heisenberg model with three inequivalent couplings, dubbed the 3J model, which is designed for the candidate Dirac quantum spin liquid (QSL) material YCu$_3$(OH)$_6$Br$_2$[Br$_{1-x}$(OH)$_x$] (see, e.g., Zeng et al., 2024). Employing large-scale density-matrix renormalization group (DMRG) supplemented by neural quantum states (NQS) simulations, we identify an intermediate QSL phase between two magnetically ordered phases. We also find that this QSL is separated from the kagome spin liquid ground state at the isotropic limit. To establish a direct comparison with experiments, we compute the specific heat of the model by means of advanced exponential (XTRG) and tangent-space (tanTRG) thermal tensor-network methods. In the magnetically ordered phase, the specific heat over temperature exhibits a shoulder at a temperature that is a fraction of the coupling strength $J_{hex}$, which disappears in the QSL phase. These universal behaviors are consistent with the experimentally observed specific heat in 3J materials for both ordered and QSL candidate samples. Our work thus connects microscopic models with experimentally measurable signatures, exemplifying an integrated approach (see Meng et al., 2026) to understanding QSL phenomena in frustrated quantum magnets, with 3J materials serving as a representative case and providing a foundation for future studies.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T16:00:46Z</published>
+    <arxiv:comment>9+7 pages, 5+7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Xin Lu</name>
+    </author>
+    <author>
+      <name>Andreas Raikos</name>
+    </author>
+    <author>
+      <name>Menghan Song</name>
+    </author>
+    <author>
+      <name>Zezong Li</name>
+    </author>
+    <author>
+      <name>Lankun Han</name>
+    </author>
+    <author>
+      <name>Shiliang Li</name>
+    </author>
+    <author>
+      <name>Sylvain Capponi</name>
+    </author>
+    <author>
+      <name>Zi Yang Meng</name>
+    </author>
+    <author>
+      <name>Chengkang Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01719v1</id>
+    <title>Numerical simulation of D-Wave's quantum advantage experiment with time-dependent variational Monte Carlo</title>
+    <updated>2026-09-01T18:00:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.01719v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01719v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Programmable quantum annealers can realize real-time dynamics of frustrated transverse-field Ising models on large, nontrivial graphs. Recent work by King et al. argued that the classical simulation of such experiments would require exponential computational resources for classical methods such as tensor networks and neural quantum states. Here, we numerically simulate the D-Wave spin-glass annealing protocol with time-dependent variational Monte Carlo (t-VMC) using a correlator state tailored to spin-glass dynamics. For the two-dimensional cylinder, three-dimensional dimer, diamond, and biclique instances considered, at annealing times of 7 and 20 ns, we show that systematically increasing the variational ansatz size enables t-VMC to approximate the final two-spin correlation errors of the quantum processing unit (QPU). We also perform an accurate large-scale simulation of a challenging biclique instance for which no other variational method is known to work, and we find close agreement with the quantum annealer. Through ablation studies, we identify poor Markov-chain mixing, high-variance local-energy estimators, and stochastic Runge-Kutta error estimates as the principal numerical failure modes. We address these numerical issues by using parallel tempering, blurred sampling and an importance-weighted differential equation solver, thereby clarifying the numerical requirements for stable, large-scale t-VMC simulations. Our results extend the frontier of classical simulation while providing a realistic assessment of the computational costs of simulating quantum dynamics at this scale.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T18:00:11Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Roeland Wiersema</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.21291v1</id>
+    <title>Neural quantum states in condensed matter: advances, best practices, and prospects</title>
+    <updated>2026-08-21T16:51:31Z</updated>
+    <link href="https://arxiv.org/abs/2608.21291v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.21291v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states provide flexible variational representations of quantum many-body wave functions by combining neural-network parametrizations with Monte Carlo sampling. In this perspective, we review recent advances in their application to condensed-matter systems, focusing on frustrated quantum magnets, interacting lattice fermions, and non-equilibrium dynamics. We discuss the architectures, symmetry constraints, optimization methods, and sampling strategies underlying state-of-the-art calculations, and summarize practical guidelines for reliable simulations. We also examine the principal remaining challenges, including learning non-trivial sign and phase structures, controlling variational bias, enforcing physical symmetries, scaling optimization to large networks, and achieving stable real-time evolution. Finally, we outline promising directions in which neural quantum states may extend the reach of classical simulations of strongly correlated quantum matter.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-21T16:51:31Z</published>
+    <arxiv:comment>42 pages, 9 figures; perspective article</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Jonas B. Rigo</name>
+    </author>
+    <author>
+      <name>Björn J. Wurst</name>
+    </author>
+    <author>
+      <name>Rajah Nutakki</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+    <author>
+      <name>Dante Kennes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.13790v1</id>
+    <title>Bridging Frustration and Non-Hermiticity via COMPASS: An Adaptive Biorthogonal Neural Quantum State Framework</title>
+    <updated>2026-07-15T12:50:16Z</updated>
+    <link href="https://arxiv.org/abs/2607.13790v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.13790v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we introduce a complementary optimization method for progressive and adaptive state search (COMPASS) based on biorthogonal adaptive recurrent neural quantum states. Our approach combines an adaptive autoregressive architecture with a biorthogonal variational Monte Carlo scheme as well as a complementary optimization scheme that alternates between energy and variance minimization. This enables the stable convergence to ground-state eigenpairs, while avoiding Markov chain sampling through exact autoregressive generation. We demonstrate that for parity-time(PT)-symmetric Hamiltonians, unconstrained complex ansatze can spontaneously break PT symmetry during optimization, even in the unbroken phase, leading to spurious imaginary energies. Real-valued ansatze, on the other hand, naturally constrain the optimization to the correct physical manifold. Conversely, for generic non-Hermitian (NH) Hamiltonians without symmetry protection and complex spectra, complex ansatze are essential for capturing complex ground-state properties. Our results establish that physically-informed ansatz selection is crucial for reliable NH simulations. By combining adaptive architectures, biorthogonal optimization, and symmetry-aware modeling, this framework enables a direct study of 1D and 2D NH many-body systems without Hermitian embeddings or adiabatic continuation. Applying this framework to systems with frustrated magnetism, we show that gap frustration provides a quantitative shield against NH spectral instability, with the frustration gap setting a critical threshold for PT-symmetry breaking. Also, complexifying the frustration coupling itself generates a new topologically nontrivial network of diabolic level crossings, controlled by the phase of the complex coupling, that has no Hermitian analog. We term this novel spectral topology in NH frustrated systems the diabolic ring.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-15T12:50:16Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Lavoisier Wah</name>
+    </author>
+    <author>
+      <name>Flore K. Kunst</name>
+    </author>
+    <author>
+      <name>Mohamed Hibat-Allah</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.02292v1</id>
+    <title>One More Time: Revisiting Neural Quantum States from a Reinforcement Learning Perspective</title>
+    <updated>2026-07-02T15:09:50Z</updated>
+    <link href="https://arxiv.org/abs/2607.02292v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.02292v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) provide a flexible and scalable framework for approximating quantum many-body wavefunctions. Among NQS parameterizations, autoregressive models are especially attractive because they enable exact, independent sampling from the Born distribution, avoiding the autocorrelation and mixing issues of Markov chain methods. Yet their optimization remains comparatively underexplored: Adam is a scalable method but ignores function space geometry, while stochastic reconfiguration is principled but costly and numerically fragile in large models. To address this gap, we show that variational energy minimization can be viewed as an advantage policy-gradient problem over the Born distribution, motivating trust-region optimization for NQS training. We introduce Proximal Wavefunction Optimization (PWO), a principled trust-region algorithm that clips probability-ratio changes in the amplitude channel and phase increments in the phase channel. PWO avoids explicit matrix inversion, reuses samples across multiple updates, and combines the scalability of first-order optimization with theoretical guarantees. Across Ising and frustrated $J_1$-$J_2$ one- and two-dimensional spin systems, PWO improves stability and wall-clock convergence over Adam, minSR, and SPRING. Finally, we fine-tune a $1.5$B-parameter RWKV-7 model, demonstrating NQS optimization at a scale over three orders of magnitude beyond prior work.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-02T15:09:50Z</published>
+    <arxiv:comment>34 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Juan Agustín Duque</name>
+    </author>
+    <author>
+      <name>Sergio García Heredia</name>
+    </author>
+    <author>
+      <name>Vinicius Hernandes</name>
+    </author>
+    <author>
+      <name>Eliška Greplová</name>
+    </author>
+    <author>
+      <name>Thomas Spriggs</name>
+    </author>
+    <author>
+      <name>Aaron Courville</name>
+    </author>
+    <author>
+      <name>Anna Dawid</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.22644v1</id>
+    <title>Neural Polaron: Learning Quasiparticle Operators in Quantum Many-Body Systems</title>
+    <updated>2026-06-21T19:04:33Z</updated>
+    <link href="https://arxiv.org/abs/2606.22644v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.22644v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Understanding dynamical properties of quantum many-body systems remains a central challenge because excitations generally require information beyond a ground-state wave function. Here we introduce a neural polaron ansatz that represents quasiparticle excitations by neural many-body operators acting on a correlated ground state. Instead of learning an independent excited-state wave function, the method parameterizes a local dressing operator through a compact neural head defined on the feature map of a pretrained ground-state network. This operator-based construction builds in translation symmetry, momentum resolution, and quasiparticle locality, while separating ground-state correlations from excitation-specific dressing. We benchmark the method on the square-lattice $J_1$-$J_2$ Heisenberg model, where it accurately reproduces magnon dispersions and spectral weights over a broad range of frustration. In particular, it captures nontrivial many-body features including the $(π,0)$ anomaly and its progressive softening with increasing $J_2/J_1$. These results establish neural operators as a physically transparent route for extending neural quantum states from ground-state properties to dynamical response.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-21T19:04:33Z</published>
+    <arxiv:comment>11 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Shang-Shun Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.15899v1</id>
+    <title>Solving Classical and Quantum Spin Glasses with Deep Boltzmann Quantum States</title>
+    <updated>2026-05-15T12:30:07Z</updated>
+    <link href="https://arxiv.org/abs/2605.15899v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.15899v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational neural network models have achieved remarkable success in solving ground-state problems of quantum many-body systems. However, addressing classical and quantum spin glasses remains challenging, as disorder and energy frustration give rise to an exponentially large number of local energy minima separated by high-energy barriers, hindering the efficiency of conventional Metropolis-based Monte Carlo methods. To bridge this gap, we introduce Deep Boltzmann Quantum States, a class of neural quantum states inspired by deep Boltzmann machines that inherit efficient block Gibbs sampling. We also propose two key advances in the training algorithm. Firstly, we combine natural-gradient updates with state-of-the-art stochastic optimizers. Secondly, we gradually tune the hardness of the problem Hamiltonian by interpolating from an easy to a hard regime, without the need to closely approximate the instantaneous adiabatic state at intermediate times. We match the exact solution or the best available estimate for several instances of classical and quantum Ising spin-glass models with infinite-range interactions and hundreds of spins. We also solve instances of the NP-hard Job Shop Scheduling Problem exceeding the current limitations of quantum annealing hardware. To summarize, deep neural architectures with efficient global update rules and trained within an annealing-like scheme, provide a powerful framework for solving real-world hard combinatorial optimization and for investigating disordered quantum many-body systems.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T12:30:07Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Luca Leone</name>
+    </author>
+    <author>
+      <name>Arka Dutta</name>
+    </author>
+    <author>
+      <name>Markus Heyl</name>
+    </author>
+    <author>
+      <name>Enrico Prati</name>
+    </author>
+    <author>
+      <name>Pietro Torta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.11189v1</id>
+    <title>DysonNet: Constant-Time Local Updates for Neural Quantum States</title>
+    <updated>2026-03-11T18:01:04Z</updated>
+    <link href="https://arxiv.org/abs/2603.11189v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.11189v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) provide a flexible variational framework for many-body wavefunctions, but suffer from high computational cost and limited interpretability. We introduce DysonNet, a broad class of NQS that couples strictly local nonlinearities through global linear layers. This structure is analogous to a truncated Dyson series which gives an intuitive interpretation of local wavefunction updates as scattering from static impurities. By resumming the scattering series, single-spin-flip updates can be computed in $\mathcal{O}(1)$ time, independent of system size, using an algorithm we call ABACUS. Implementing DysonNet with the state-space model S4, we obtain up to $230\times$ speedups over Vision-Transformers for computing the local estimator. This corresponds to an asymptotic $\mathcal{O}(N^2)$ improvement in training-time scaling, reaching $\mathcal{O}(N \log^2 N)$ total training complexity in area-law phases. Benchmarks on the 1D long-range Ising model and frustrated $J_1$-$J_2$ chains show that DysonNet matches state-of-the-art NQS accuracy while removing the dominant local-update overhead. More broadly, our results suggest a route to scalable NQS architectures where physical interpretability directly enables computational efficiency.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-11T18:01:04Z</published>
+    <arxiv:comment>26 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Lucas Winter</name>
+    </author>
+    <author>
+      <name>Andreas Nunnenkamp</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.10008v1</id>
+    <title>Ground-state phases of $S = 1/2$ Heisenberg models on the body-centered cubic lattice</title>
+    <updated>2026-02-10T17:31:34Z</updated>
+    <link href="https://arxiv.org/abs/2602.10008v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.10008v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Simulating low-temperature properties of three-dimensional frustrated quantum magnets is challenging due to the sign problem and the system sizes required to mitigate substantial finite-size effects. However, there are many experimental examples of three-dimensional crystals that could host exotic low-temperature states of matter, such as quantum spin liquids. We calculate the ground-state phase diagrams of frustrated quantum spin models on the body-centered cubic lattice using neural quantum states. First, we study the antiferromagnetic $J_1-J_2$ model where we find a direct first-order phase transition between Néel and collinear long-range-ordered phases at $(J_2/J_1)_c = 0.705$, consistent with previous studies. Then, in a tetragonally-distorted variant, proposed as a minimal model of NaCa$_2$Cu$_2$(VO$_4$)$_3$, we find no evidence of a quantum paramagnetic ground state, with a first-order phase transition between Néel and chain phases at $(J_{2ab}/J_1)_c = 1.0375$. Therefore, the ground state of the tetragonally-distorted model does not reproduce the low-temperature magnetic properties of NaCa$_2$Cu$_2$(VO$_4$)$_3$, and the inclusion of other effects is necessary to rationalize experimental observations.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-10T17:31:34Z</published>
+    <arxiv:comment>12 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Rajah P. Nutakki</name>
+    </author>
+    <author>
+      <name>Filippo Vicentini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.03031v1</id>
+    <title>Physics-inspired transformer quantum states via latent imaginary-time evolution</title>
+    <updated>2026-02-03T02:59:56Z</updated>
+    <link href="https://arxiv.org/abs/2602.03031v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.03031v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) are powerful ansätze in the variational Monte Carlo framework, yet their architectures are often treated as black boxes. We propose a physically transparent framework in which NQS are treated as neural approximations to latent imaginary-time evolution. This viewpoint suggests that standard Transformer-based NQS (TQS) architectures correspond to physically unmotivated effective Hamiltonians dependent on imaginary time in a latent space. Building on this interpretation, we introduce physics-inspired transformer quantum states (PITQS), which enforce a static effective Hamiltonian by sharing weights across layers and improve propagation accuracy via Trotter-Suzuki decompositions without increasing the number of variational parameters. For the frustrated $J_1$-$J_2$ Heisenberg model, our ansätze achieve accuracies comparable to or exceeding state-of-the-art TQS while using substantially fewer variational parameters. This study demonstrates that reinterpreting the deep network structure as a latent cooling process enables a more physically grounded, systematic, and compact design, thereby bridging the gap between black-box expressivity and physically transparent construction.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-03T02:59:56Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Kimihiro Yamazaki</name>
+    </author>
+    <author>
+      <name>Itsushi Sakata</name>
+    </author>
+    <author>
+      <name>Takuya Konishi</name>
+    </author>
+    <author>
+      <name>Yoshinobu Kawahara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08430v2</id>
+    <title>When Less is More: Approximating the Quantum Geometric Tensor with Block Structures</title>
+    <updated>2025-11-04T10:31:05Z</updated>
+    <link href="https://arxiv.org/abs/2510.08430v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.08430v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The natural gradient is central in neural quantum states optimizations but it is limited by the cost of computing and inverting the quantum geometric tensor, the quantum analogue of the Fisher information matrix. We introduce a block-diagonal quantum geometric tensor that partitions the metric by network layers, analogous to block-structured Fisher methods such as K-FAC. This layer-wise approximation preserves essential curvature while removing noisy cross-layer correlations, improving conditioning and scalability. Experiments on Heisenberg and frustrated $J_1$-$J_2$ models show faster convergence, lower energy, and improved stability.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-09T16:44:30Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ahmedeo Shokry</name>
+    </author>
+    <author>
+      <name>Alessandro Santini</name>
+    </author>
+    <author>
+      <name>Filippo Vicentini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.09870v1</id>
+    <title>Learning complexity of many-body quantum sign structures through the lens of Boolean Fourier analysis</title>
+    <updated>2025-08-13T15:06:13Z</updated>
+    <link href="https://arxiv.org/abs/2508.09870v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.09870v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study sign structures of the ground states of spin-$1/2$ magnetic systems using the methods of Boolean Fourier analysis. Previously it was shown that the sign structures of frustrated systems are of complex nature: specifically, neural networks of popular architectures lack the generalization ability necessary to effectively reconstruct sign structures in supervised learning settings. This is believed to be an obstacle for applications of neural quantum states to frustrated systems. In the present work, we develop an alternative language for the analysis of sign structures based on representing them as polynomial functions defined on the Boolean hypercube - an approach called Boolean Fourier analysis. We discuss the relations between the properties of the Boolean Fourier series and the learning complexity of sign structures, and demonstrate that such polynomials can potentially serve as variational ansätze for the complex sign structures that dramatically outperform neural networks in terms of generalization ability. While ansätze of this type cannot yet be directly used in the context of variational optimization, they indicate that the complexity of sign structures is not an insurmountable curse, and can potentially be learned with better designed NQS architectures. Finally, we show how augmenting data with Boolean functions can aid sign prediction by neural networks.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-13T15:06:13Z</published>
+    <arxiv:comment>29 pages, 14 figures, 1 table; the figures will be updated to publication quality</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Ilya Schurov</name>
+    </author>
+    <author>
+      <name>Anna Kravchenko</name>
+    </author>
+    <author>
+      <name>Mikhail I. Katsnelson</name>
+    </author>
+    <author>
+      <name>Andrey A. Bagrov</name>
+    </author>
+    <author>
+      <name>Tom Westerhout</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.09725v2</id>
+    <title>Non-stabilizerness of Neural Quantum States</title>
+    <updated>2026-01-27T14:41:24Z</updated>
+    <link href="https://arxiv.org/abs/2502.09725v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.09725v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a methodology to estimate non-stabilizerness or "magic", a key resource for quantum complexity, with Neural Quantum States (NQS). Our framework relies on two schemes based on Monte Carlo sampling to quantify non-stabilizerness via Stabilizer Rényi Entropy (SRE) in arbitrary variational wave functions. When combined with NQS, this approach is effective for systems with strong correlations and in dimensions larger than one, unlike Tensor Network methods. Firstly, we study the magic content in an ensemble of random NQS, demonstrating that neural network parametrizations of the wave function capture finite non-stabilizerness besides large entanglement. Secondly, we investigate the non-stabilizerness in the ground state of the $J_1$-$J_2$ Heisenberg model. In 1D, we find that the SRE vanishes at the Majumdar-Ghosh point $J_2 = J_1/2$, consistent with a stabilizer ground state. In 2D, a dip in the SRE is observed near maximum frustration around $J_2/J_1 \approx 0.6$, suggesting a Valence Bond Solid between the two antiferromagnetic phases.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-13T19:14:15Z</published>
+    <arxiv:comment>6 + 6 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Research 7, 043289 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Alessandro Sinibaldi</name>
+    </author>
+    <author>
+      <name>Antonio Francesco Mello</name>
+    </author>
+    <author>
+      <name>Mario Collura</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <arxiv:doi>10.1103/v5tw-yn1f</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/v5tw-yn1f" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.01941v3</id>
+    <title>Empowering deep neural quantum states through efficient optimization</title>
+    <updated>2025-07-02T00:05:00Z</updated>
+    <link href="https://arxiv.org/abs/2302.01941v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.01941v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Computing the ground state of interacting quantum matter is a long-standing challenge, especially for complex two-dimensional systems. Recent developments have highlighted the potential of neural quantum states to solve the quantum many-body problem by encoding the many-body wavefunction into artificial neural networks. However, this method has faced the critical limitation that existing optimization algorithms are not suitable for training modern large-scale deep network architectures. Here, we introduce a minimum-step stochastic-reconfiguration optimization algorithm, which allows us to train deep neural quantum states with up to $10^6$ parameters. We demonstrate our method for paradigmatic frustrated spin-1/2 models on square and triangular lattices, for which our trained deep networks approach machine precision and yield improved variational energies compared to existing results. Equipped with our optimization algorithm, we find numerical evidence for gapless quantum-spin-liquid phases in the considered models, an open question to date. We present a method that captures the emergent complexity in quantum many-body problems through the expressive power of large-scale artificial neural networks.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-03T19:00:03Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Nat. Phys. 20, 1476-1481 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Ao Chen</name>
+    </author>
+    <author>
+      <name>Markus Heyl</name>
+    </author>
+    <arxiv:doi>10.1038/s41567-024-02566-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41567-024-02566-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.07749v2</id>
+    <title>High-accuracy variational Monte Carlo for frustrated magnets with deep neural networks</title>
+    <updated>2023-05-22T22:37:50Z</updated>
+    <link href="https://arxiv.org/abs/2211.07749v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.07749v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that neural quantum states based on very deep (4--16-layered) neural networks can outperform state-of-the-art variational approaches on highly frustrated quantum magnets, including quantum-spin-liquid candidates. We focus on group convolutional neural networks (GCNNs) that allow us to impose space-group symmetries on our ansätze. We achieve state-of-the-art ground-state energies for the $J_1-J_2$ Heisenberg models on the square and triangular lattices, in both ordered and spin-liquid phases, and discuss ways to access low-lying excited states in nontrivial symmetry sectors. We also compute spin and dimer correlation functions for the quantum paramagnetic phase on the triangular lattice, which do not indicate either conventional or valence-bond ordering.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-14T20:51:19Z</published>
+    <arxiv:comment>12 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 108, 054410 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Christopher Roth</name>
+    </author>
+    <author>
+      <name>Attila Szabó</name>
+    </author>
+    <author>
+      <name>Allan MacDonald</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.108.054410</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.108.054410" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.04613v3</id>
+    <title>Neural network wave functions and the sign problem</title>
+    <updated>2020-07-30T16:17:21Z</updated>
+    <link href="https://arxiv.org/abs/2002.04613v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.04613v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) are a promising approach to study many-body quantum physics. However, they face a major challenge when applied to lattice models: Convolutional networks struggle to converge to ground states with a nontrivial sign structure. We tackle this problem by proposing a neural network architecture with a simple, explicit, and interpretable phase ansatz, which can robustly represent such states and achieve state-of-the-art variational energies for both conventional and frustrated antiferromagnets. In the latter case, our approach uncovers low-energy states that exhibit the Marshall sign rule and are therefore inconsistent with the expected ground state. Such states are the likely cause of the obstruction for NQS-based variational Monte Carlo to access the true ground states of these systems. We discuss the implications of this observation and suggest potential strategies to overcome the problem.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-11T19:00:01Z</published>
+    <arxiv:comment>12 pages, 7 figures. v3: authors' final version</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Research 2, 033075 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Attila Szabó</name>
+    </author>
+    <author>
+      <name>Claudio Castelnovo</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevResearch.2.033075</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevResearch.2.033075" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.08186v3</id>
+    <title>Neural Quantum States of frustrated magnets: generalization and sign structure</title>
+    <updated>2019-12-17T19:59:18Z</updated>
+    <link href="https://arxiv.org/abs/1907.08186v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.08186v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) attract a lot of attention due to their potential to serve as a very expressive variational ansatz for quantum many-body systems. Here we study the main factors governing the applicability of NQS to frustrated magnets by training neural networks to approximate ground states of several moderately-sized Hamiltonians using the corresponding wavefunction structure on a small subset of the Hilbert space basis as training dataset. We notice that generalization quality, i.e. the ability to learn from a limited number of samples and correctly approximate the target state on the rest of the space, drops abruptly when frustration is increased. We also show that learning the sign structure is considerably more difficult than learning amplitudes. Finally, we conclude that the main issue to be addressed at this stage, in order to use the method of NQS for simulating realistic models, is that of generalization rather than expressibility.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-18T17:57:17Z</published>
+    <arxiv:comment>9+6 pages, 5+7 figures, v3: added results for larger systems, improved discussion, added new references</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Nat Commun 11, 1593 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Tom Westerhout</name>
+    </author>
+    <author>
+      <name>Nikita Astrakhantsev</name>
+    </author>
+    <author>
+      <name>Konstantin S. Tikhonov</name>
+    </author>
+    <author>
+      <name>Mikhail Katsnelson</name>
+    </author>
+    <author>
+      <name>Andrey A. Bagrov</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-020-15402-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-020-15402-w" title="doi"/>
+  </entry>
+</feed>

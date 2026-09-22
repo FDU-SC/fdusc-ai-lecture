@@ -1,0 +1,8203 @@
+Int J Comput Vis (2015) 111:98–136
+DOI 10.1007/s11263-014-0733-5
+
+The PASCAL Visual Object Classes Challenge: A Retrospective
+Mark Everingham · S. M. Ali Eslami · Luc Van Gool ·
+Christopher K. I. Williams · John Winn ·
+Andrew Zisserman
+
+Received: 12 September 2013 / Accepted: 23 May 2014 / Published online: 25 June 2014
+© Springer Science+Business Media New York 2014
+
+Abstract The Pascal Visual Object Classes (VOC) challenge consists of two components: (i) a publicly available
+dataset of images together with ground truth annotation and
+standardised evaluation software; and (ii) an annual competition and workshop. There are five challenges: classification, detection, segmentation, action classification, and person layout. In this paper we provide a review of the challenge
+from 2008–2012. The paper is intended for two audiences:
+algorithm designers, researchers who want to see what the
+state of the art is, as measured by performance on the VOC
+datasets, along with the limitations and weak points of the
+
+M. Everingham
+University of Leeds, Leeds, UK
+
+current generation of algorithms; and, challenge designers,
+who want to see what we as organisers have learnt from
+the process and our recommendations for the organisation
+of future challenges. To analyse the performance of submitted algorithms on the VOC datasets we introduce a number of novel evaluation methods: a bootstrapping method for
+determining whether differences in the performance of two
+algorithms are significant or not; a normalised average precision so that performance can be compared across classes
+with different proportions of positive instances; a clustering
+method for visualising the performance across multiple algorithms so that the hard and easy images can be identified; and
+the use of a joint classifier over the submitted algorithms in
+order to measure their complementarity and combined performance. We also analyse the community’s progress through
+time using the methods of Hoiem et al. (Proceedings of European Conference on Computer Vision, 2012) to identify the
+types of occurring errors. We conclude the paper with an
+appraisal of the aspects of the challenge that worked well,
+and those that could be improved in future challenges.
+
+S. M. A. Eslami (B) · J. Winn
+Microsoft Research, Cambridge, UK
+e-mail: alie@microsoft.com
+
+Keywords Database · Benchmark · Object recognition ·
+Object detection · Segmentation
+
+Communicated by M. Hebert.
+Mark Everingham, who died in 2012, was the key member of the
+VOC project. His contribution was crucial and substantial. For these
+reasons he is included as the posthumous first author of this paper. An
+appreciation of his life and work can be found in Zisserman et al.
+(2012).
+
+J. Winn
+e-mail: jwinn@microsoft.com
+
+1 Introduction
+L. Van Gool
+KU Leuven, Leuven, Belgium
+L. Van Gool
+ETH, Zurich, Switzerland
+C. K. I. Williams
+University of Edinburgh, Edinburgh, UK
+A. Zisserman
+University of Oxford, Oxford, UK
+
+123
+
+The Pascal 1 Visual Object Classes (VOC) Challenge has
+been an annual event since 2006. The challenge consists of
+two components: (i) a publicly available dataset of images
+obtained from the Flickr web site (2013), together with
+1 Pascal stands for pattern analysis, statistical modelling and computational learning. It was an EU Network of Excellence funded project
+under the IST Programme of the European Union.
+
+Int J Comput Vis (2015) 111:98–136
+
+ground truth annotation and standardised evaluation software; and (ii) an annual competition and workshop. There are
+three principal challenges: classification—“does the image
+contain any instances of a particular object class?” (where
+object classes include cars, people, dogs, etc.), detection—
+“where are the instances of a particular object class in the
+image (if any)?”, and segmentation—“to which class does
+each pixel belong?”. In addition, there are two subsidiary
+challenges (‘tasters’): action classification—“what action is
+being performed by an indicated person in this image?”
+(where actions include jumping, phoning, riding a bike, etc.)
+and person layout—“where are the head, hands and feet of
+people in this image?”. The challenges were issued with
+deadlines each year, and a workshop held to compare and
+discuss that year’s results and methods.
+The challenges up to and including the year 2007 were
+described in our paper Everingham et al. (2010). The purpose
+of this paper is not just to continue the story from 2008 until
+the final run of the challenge in 2012, although we will cover
+that to some extent. Instead we aim to inform two audiences:
+first, algorithm designers, those researchers who want to see
+what the state of the art is, as measured by performance on
+the VOC datasets, and the limitations and weak points of the
+current generation of algorithms; second, challenge designers, who want to see what we as organisers have learnt from
+the process and our recommendations for the organisation of
+future challenges.
+1.1 Paper Layout
+This paper is organised as follows: we start with a review
+of the challenges in Sect. 2, describing in brief the competitions, datasets, annotation procedure, and evaluation criteria of the 2012 challenge, and what was changed over the
+2008–2012 lifespan of the challenges. The parts on annotation procedures and changes to the challenges are intended
+for challenge organisers.
+Section 3 provides an overview of the results for the 2012
+challenge and, thereby, a snapshot of the state of the art.
+We then use these 2012 results for several additional and
+novel analyses, going further than those given at the challenge workshops and in our previous publication on the challenge (Everingham et al. 2010). At the end of Sect. 3 we
+consider the question of how the performance of algorithms
+can be fairly compared when all that is available is their prediction on the test set, and propose a method for doing this.
+This is aimed at challenge organisers.
+Section 4 takes stock and tries to answer broader questions about where our field is at in terms of the classification and detection problems that can or cannot be solved.
+First, inspired by Hoiem et al. (2012), we propose evaluation measures that normalise against the proportion of positive instances in a class (a problem when comparing average
+
+99
+
+precision across classes). It is shown that some classes—
+like ‘person’—still pose larger problems to modern methods
+than may have been believed. Second, we describe a clustering method for visualising the performance across multiple
+algorithms submitted during the lifespan of the challenges,
+so that the characteristics of hard and easy images can be
+identified.
+Section 5 investigates the level of complementarity of the
+different methods. It focusses on classification, for which a
+‘super-method’ is designed by combining the 2012 submitted methods. It turns out that quite some performance can be
+gained over any one existing method with such a combination, without any of those methods playing a dominant role
+in the super-method. Even the combination of only pairs of
+classifiers can bring a substantial improvement and we make
+suggestions for such pairs that would be especially promising. We also comment on the construction of super-methods
+for detection and segmentation.
+In Sect. 6 we turn to progress through time. From the
+evaluation server, we have available to us the results of all
+algorithms for the challenges from 2009 to 2012, and we
+analyse these using the methods of Hoiem et al. (2012) to
+identify the types of errors occurring across time. Although
+important progress has been made, it has often not been as
+monotonic as one might expect. This underlines the fact that
+novel, promising ideas may require some consolidation time
+and benchmark scores must not be used to discard such novelties. Also, the diversity among the scores has increased as
+time has progressed.
+Section 7 summarises our conclusions, both about what
+we believe to have done well and about caveats. This section
+also makes suggestions that we hope will be useful for future
+challenge organisers.
+
+2 Challenge Review
+This section reviews the challenges, datasets, annotation and
+evaluation procedures over the 2009–2012 cycles of the challenge. It gives a bare bones summary of the challenges and
+then concentrates on changes since the 2008 release. Our
+companion paper (Everingham et al. 2010) describes in detail
+the motivation, annotations, and evaluation measures of the
+VOC challenges, and these details are not repeated here.
+Sect. 2.3 on the annotation procedure is intended principally
+for challenge organisers.
+2.1 Challenge Tasks
+This section gives a short overview of the three principal
+challenge tasks on classification, detection, and segmentation, and of the two subsidiary tasks (‘tasters’) on action
+
+123
+
+100
+
+Int J Comput Vis (2015) 111:98–136
+
+Table 1 The VOC classes
+Vehicles
+
+Household
+
+Animals
+
+Other
+
+Aeroplane
+
+Bottle
+
+Bird
+
+Person
+
+Bicycle
+
+Chair
+
+Cat
+
+Boat
+
+Dining table
+
+Cow
+
+Bus
+
+Potted plant
+
+Dog
+
+Car
+
+Sofa
+
+Horse
+
+Motorbike
+
+TV/Monitor
+
+Sheep
+
+Train
+
+the end goal, classification may be an appropriate initial step
+to guide resources towards images that hold good promise of
+containing the target class. This is similar to how an ‘objectness’ analysis (e.g. Alexe et al. 2010) can guide a detector’s
+attention to specific locations within an image. Classification
+could also be used to put regression methods for counting into
+action, which have been shown to perform well without any
+detection (Lempitsky and Zisserman 2010).
+2.1.3 Segmentation
+
+The classes can be considered in a notional taxonomy
+
+classification and person layout. The evaluation of each of
+these challenges is described in detail in Sect. 2.4.
+2.1.1 Classification
+For each of twenty object classes predict the presence/absence
+of at least one object of that class in a test image. The twenty
+objects classes are listed in Table 1. Participants are required
+to provide a real-valued confidence of the object’s presence
+for each test image so that a precision–recall curve can be
+drawn. Participants may choose to tackle all, or any subset
+of object classes, for example ‘cars only’ or ‘motorbikes and
+cars’.
+Two competitions are defined according to the choice of
+training data: (i) taken from the VOC training/validation data
+provided, or (ii) from any source excluding the VOC test
+data. In the first competition, any annotation provided in the
+VOC training/validation data may be used for training, for
+example bounding boxes or particular views e.g. ‘frontal’
+or ‘left’. Participants are not permitted to perform additional
+manual annotation of either training or test data. In the second
+competition, any source of training data may be used except
+the provided test images.
+2.1.2 Detection
+For each of the twenty classes, predict the bounding boxes
+of each object of that class in a test image (if any), with
+associated real-valued confidence. Participants may choose
+to tackle all, or any subset of object classes. Two competitions
+are defined in a similar manner to the classification challenge.
+It is clear that the additional requirement to locate the
+instances in an image makes detection a more demanding
+task than classification. Guessing the right answer is far more
+difficult to achieve. It is also true that detection can support more applications than mere classification, e.g. obstacle
+avoidance, tracking, etc. During the course of the Pascal
+VOC challenge it had even been suggested that only detection matters and classification is hardly relevant. However,
+this view is rather extreme. Even in cases where detection is
+
+123
+
+For each test image, predict the object class of each pixel, or
+give it ‘background’ status if the object does not belong to
+one of the twenty specified classes. There are no confidence
+values associated with this prediction. Two competitions are
+defined in a similar manner to the classification and detection
+challenges.
+Segmentation clearly is more challenging than detection
+and its solution tends to be more time consuming. Detection can therefore be the task of choice in cases where such
+fine-grained image analysis is not required by the application. However, several applications do need a more detailed
+knowledge about object outline or shape, such as robot grasping or image retargeting. Even if segmentation is the goal,
+detection can provide a good initialization (e.g. Leibe et al.
+2004).
+2.1.4 Action Classification
+This taster was introduced in 2010. The motivation was that
+the world is dynamic and snapshots of it still convey substantial information about these dynamics. Several of the actions
+were chosen to involve object classes that were also part of
+the classification and detection challenges (like a person riding a horse, or a person riding a bike). The actions themselves
+were all geared towards people.
+In 2010 the challenge was: for each of ten action classes
+predict if a specified person (indicated by a bounding box) in a
+test image is performing the corresponding action. The output
+is a real-valued confidence that the action is being performed
+so that a precision–recall curve can be drawn. The action
+classes are ‘jumping’, ‘phoning’, ‘playing instrument’, ‘reading’, ‘riding bike’, ‘riding horse’, ‘running’, ‘taking photo’,
+‘using computer’, ‘walking’, and participants may choose to
+tackle all, or any subset of action classes, for example ‘walking only’ or ‘walking and running’. Note, the action classes
+are not exclusive, for example a person can be both ‘riding
+a bicycle’ and ‘phoning’. In 2011 an ‘other’ class was introduced (for actions different from the ten already specified).
+This increased the difficulty of the challenge. The output is
+still a real-valued confidence for each of the ten actions. As
+with other parts of the challenge, the training could be either
+
+Int J Comput Vis (2015) 111:98–136
+
+based on the official Pascal VOC training data, or on external data.
+It was necessary for us to specify the person of interest
+in the image as there may be several people performing different actions. In 2012 the person of interest was specified
+by both a bounding box and a point on the torso, and a separate competition defined for each. The motivation for this
+additional point annotation was that the aspect ratio of the
+bounding box might provide some information on the action
+being performed, and this was almost entirely removed if
+only a point was provided. For example, the aspect ratio of
+the box could help distinguish walking and running from
+other action classes (this was a criticism raised during the
+2011 Pascal VOC workshop).
+2.1.5 Person Layout
+For each person in a test image (their bounding box is provided) predict the presence or absence of parts (head, hands
+and feet), and the bounding boxes of those parts. The prediction of a person layout should be output with an associated
+real-valued confidence of the layout so that a precision–recall
+curve can be generated for each person. The success of the
+layout prediction depends both on: (i) a correct prediction of
+parts present/absent (e.g. are the hands visible or occluded);
+(ii) a correct prediction of bounding boxes for the visible
+parts. Two competitions are defined in a similar manner to
+the classification challenge.
+2.2 Datasets
+For the purposes of the challenge, the data is divided into two
+main subsets: training/validation data (trainval), and test
+data (test). For participants’ convenience, the trainval
+data is further divided into suggested training (train) and
+validation (val) sets, however participants are free to use
+any data in the trainval set for training and/or validation.
+There is complete annotation for the twenty classes: i.e. all
+images are annotated with bounding boxes for every instance
+of the twenty classes for the classification and detection
+challenges. In addition to a bounding box for each object,
+attributes such as: ‘orientation’, ‘occluded’, ‘truncated’, ‘difficult’; are specified. The full list of attributes and their
+definitions is given in Everingham et al. (2010). Figure 1
+shows samples from each of the challenges including annotations. Note, the annotations on the test set are not publicly
+released.
+Statistics for the number of object instances and images
+in the training and validation datasets for the classification,
+detection, segmentation and layout challenges is given in
+Table 3, and for the action classification challenge in Table 4.
+Note, we do not release the exact numbers of object instances
+in the test set, but both the number of instances per class
+
+101
+
+and number of images are approximately balanced with those
+in the trainval set.
+The number of images and instances in all the tasks was
+increased up to 2011. From 2011 to 2012 the number of
+images in the classification, detection and person layout tasks
+was not increased, and only those for segmentation and action
+classification were augmented.
+From 2009 onwards the data for all tasks consists of the
+previous years’ images augmented with new images. Before
+this, in 2008 and earlier, an entirely new dataset was released
+each year for the classification/detection tasks. Augmenting
+allows the number of images to grow each year and, more
+importantly, means that test results can be compared with the
+previous years’ images. Thus, for example, performance of
+all methods from 2009–2012, can be evaluated on the 2009
+test set (although the methods may have used a different
+number of training images).
+
+2.3 Annotation Procedure
+The procedure of collecting the data and annotating it with
+ground truth is described in our companion paper (Everingham et al. 2010). However, the annotation process has
+evolved since that time and we outline here the main changes
+in the collection and annotation procedure. Note, for challenge organisers, one essential factor in obtaining consistent
+annotations is to have guidelines available in advance of the
+annotation process. The ones used for VOC are available at
+the Pascal VOC annotation guidelines web page (2012).
+
+2.3.1 Use of Mechanical Turk for Initial Class Labelling
+of the Images
+We aimed to collect a balanced set of images with a certain
+minimum number of instances of each class. This required
+finding sufficient images of the rarer classes, such as ‘bus’
+and ‘dining table’. In previous years this had been achieved
+by getting the annotators to focus on such classes towards
+the end of the annotation period, which often meant having to skip through large numbers of images before finding
+examples of the desired class.
+Our initial hope was to use Mechanical Turk (MT) for
+most or all of the annotation. We were not able to obtain
+MT bounding box annotations of sufficiently high quality
+to achieve this. However, the labels of whether a class was
+present or not were high enough quality to allow a balanced
+image set to be selected, prior to annotation by our trained
+annotators. This saved substantial time during the annotation
+period at relatively low cost.
+
+123
+
+102
+
+Int J Comput Vis (2015) 111:98–136
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+Fig. 1 Sample images from the Pascal dataset. a Each image has an
+annotation file giving a bounding box and object class label for each
+object in one of the twenty classes present in the image. Note that multiple objects from multiple classes may be present in the same image.
+Annotation was performed according to a set of guidelines distributed
+to all annotators. b A subset of images are also annotated with pixelwise segmentation of each object present, to support the segmentation
+competition. Segmentations are annotated at the object and object class
+
+123
+
+level. c Images for the action classification task are disjoint from those
+of the classification, detection and segmentation tasks. They have been
+partially annotated with people, bounding boxes, reference points and
+their actions. Annotation was performed according to a set of guidelines distributed to all annotators. d Images for the person layout taster,
+where the test set is disjoint from the main tasks, have been additionally
+annotated with parts of the people (head, hands and feet)
+
+Int J Comput Vis (2015) 111:98–136
+
+103
+
+2.3.2 Interleaved Annotation and Checking
+
+2.4 Submission and Evaluation
+
+Previously, significant effort had been spent in checking and
+correcting the annotations after the main annotation period.
+For segmentation annotation this was a very time consuming
+task. It was also common to discover patterns of errors by
+new annotators who had not yet become fully familiarised
+with the annotation guidelines.
+To help new annotators to self-correct and to reduce the
+amount of post-hoc correction needed, the main annotation period was changed to incorporate both annotation and
+checking running in parallel. After each image was annotated, it was passed to a different annotator for checking.
+Examples of common errors were pasted onto a common
+noticeboard (with the annotator remaining anonymous) so
+that the entire group could understand and avoid such errors
+in future. In this way, errors were picked up and corrected earlier and post-hoc checking was substantially reduced. Over
+time, the checking part of the annotation effort grew to take
+around 50 % of the annotators’ time.
+
+2.4.1 Submission of Results
+
+2.3.3 Increased Time Spent on Segmentation
+As the datasets for the classification and detection tasks
+became large, more emphasis was placed on increasing the
+size of the segmentation dataset. Segmentation requires substantially more annotation effort than detection—it can easily
+take ten times as long to segment an object than to draw a
+bounding box around it. Over time, the annotation period was
+adapted until around 50 % of the time was spent on segmentation annotation and checking.
+Once post-hoc segmentation correction was completed,
+each annotator was sent a report detailing the number and
+kind of errors that they made, so they could avoid such errors
+in future years.
+
+2.3.4 Co-located Annotators
+In the earlier years of the challenge (up to 2008) annotations were carried out with all annotators located at the same
+site. This enabled efficient discussion, e.g. of challenging or
+unusual cases, and was very flexible in allowing changes of
+priorities and training. In later years the annotators could
+remain in their own labs and a web interface was developed for annotating using a standard client-server architecture. However, the annotation event took place simultaneously (over a period of three to five days) so that even if
+the annotators were not co-located they could still discuss in
+real-time using Skype messaging. In addition, some experienced annotators were always included at each remote site
+to train novices.
+
+The running of the challenge consisted of two phases: At
+the start of the challenge, participants were issued a development kit comprising training/validation images with annotation, and Matlab 2 software to access the annotation (stored
+in an XML format compatible with LabelMe, Russell et al.
+2008), to compute the evaluation measures, and including
+simple baseline implementations for each competition. In
+the second phase, unannotated test images were distributed.
+Participants were then required to run their methods on the
+test data and submit results to an evaluation server. The test
+data was available for approximately three months before
+submission of results.
+2.4.2 Evaluation of Results
+In addition to withholding the test data annotation, it was
+also required that participants submit only a single entry per
+method. We encouraged participants to observe the best practice guidelines, given at the Pascal VOC best practice guidelines web page (2012), that parameters should be tuned on
+the validation set and algorithms run only once on the test
+set, so that the organisers were not asked to choose the best
+result for them. To add to this encouragement, the evaluation server restricted the number of times a participant could
+submit results for earlier years (since performance could be
+partially gauged as earlier years’ images are a subset of the
+current year’s).
+2.4.3 Classification and Detection
+Both the classification and detection tasks were evaluated as
+a set of 20 independent two-class tasks: e.g. for classification
+“is there a car in the image?”, and for detection “where are the
+cars in the image (if any)?”. A separate ‘score’ is computed
+for each of the classes. For the classification task, participants
+submitted results in the form of a confidence level for each
+image and for each class, with larger values indicating greater
+confidence that the image contains the object of interest. For
+the detection task, participants submitted a bounding box for
+each detection, with a confidence level for each bounding
+box. The provision of a confidence level allows results to
+be ranked such that the trade-off between false positives and
+false negatives can be evaluated, without defining arbitrary
+costs on each type of classification error.
+In the case of classification, the correctness of a class
+prediction depends only on whether an image contains an
+2 Matlab ® is a registered trademark of MathWorks, Inc.
+
+123
+
+104
+
+Int J Comput Vis (2015) 111:98–136
+
+instance of that class or not. However, for detection a decision must be made on whether a prediction is correct or not.
+To this end, detections were assigned to ground truth objects
+and judged to be true or false positives by measuring bounding box overlap. To be considered a correct detection, the
+area of overlap ao between the predicted bounding box B p
+and ground truth bounding box Bgt must exceed 50 % by the
+formula:
+ao =
+
+ar ea(B p ∩ Bgt )
+,
+ar ea(B p ∪ Bgt )
+
+(1)
+
+where B p ∩ Bgt denotes the intersection of the predicted and
+ground truth bounding boxes and B p ∪ Bgt their union.
+Detections output by a method were assigned to ground
+truth object annotations satisfying the overlap criterion in
+order ranked by the (decreasing) confidence output. Ground
+truth objects with no matching detection are false negatives.
+Multiple detections of the same object in an image were considered false detections, e.g. 5 detections of a single object
+counted as 1 correct detection and 4 false detections—it was
+the responsibility of the participant’s system to filter multiple
+detections from its output.
+For a given task and class, the precision–recall curve is
+computed from a method’s ranked output. Up until 2009
+interpolated average precision (Salton and Mcgill 1986) was
+used to evaluate both classification and detection. However,
+from 2010 onwards the method of computing AP changed to
+use all data points rather than TREC-style sampling (which
+only sampled the monotonically decreasing curve at a fixed
+set of uniformly-spaced recall values 0, 0.1, 0.2, . . . , 1). The
+intention in interpolating the precision–recall curve was to
+reduce the impact of the ‘wiggles’ in the precision–recall
+curve, caused by small variations in the ranking of examples. However, the downside of this interpolation was that
+the evaluation was too crude to discriminate between the
+methods at low AP.
+2.4.4 Segmentation
+The segmentation challenge was assessed per class on the
+intersection of the inferred segmentation and the ground
+truth, divided by the union (commonly referred to as the
+‘intersection over union’ metric):
+true pos.
+seg.accuracy =
+true pos. + false pos. + false neg.
+
+(2)
+
+Pixels marked ‘void’ in the ground truth (i.e. those around the
+border of an object that are marked as neither an object class
+or background) are excluded from this measure. Note, we did
+not evaluate at the individual object level, even though the
+data had annotation that would have allowed this. Hence, the
+
+123
+
+precision of the segmentation between overlapping objects
+of the same class was not assessed.
+2.4.5 Action Classification
+The task is assessed in a similar manner to classification. For
+each action class a score for that class should be given for the
+person performing the action (indicated by a bounding box
+or a point), so that the test data can be ranked. The average
+precision is then computed for each class.
+2.4.6 Person Layout
+At test time the method must output the bounding boxes
+of the parts (head, hands and feet) that are visible, together
+with a single real-valued confidence of the layout so that a
+precision/recall curve can be drawn.
+From VOC 2010 onwards, person layout was evaluated by
+how well each part individually could be predicted: for each
+of the part types (head, hands and feet) a precision/recall
+curve was computed, using the confidence supplied with the
+person layout to determine the ranking. A prediction of a part
+was considered true or false according to the overlap test, as
+used in the detection challenge, i.e. for a true prediction the
+bounding box of the part overlaps the ground truth by at least
+50 %. For each part type, the average precision was used as
+the quantitative measure.
+This method of evaluation was introduced following criticism of an earlier evaluation used in 2008, that was considered too strict and demanding (given the state of the art
+in layout detection algorithms at that time). In VOC 2008,
+the layout was still assessed by computing a precision–recall
+curve, but rather than assessing parts individually the entire
+layout was assessed. To be considered a true positive, each
+layout estimate had to satisfy two criteria: (i) the set and
+number of predicted parts matches ground truth exactly e.g.
+{head, hand, hand} or {head, hand, foot}; and (ii) the predicted bounding box of each part overlaps ground truth by at
+least 50 %. These criteria were relaxed from VOC 2010 on,
+though this task never became as popular as the others.
+
+3 VOC 2012 Results and Rankings
+In this section we review the results of the VOC 2012 challenge to give a snapshot of the state-of-the-art in the final
+year of the challenge. Sections 3.1, 3.2, 3.3 and 3.4 describe
+the top performing methods for the classification, detection,
+segmentation and action classification challenges in 2012
+respectively (there were no entries for complete person layout so we do not include that here). Having done that, in
+Sect. 3.5, we then propose a method to assess whether differences in AP between the methods are significant or not
+
+Int J Comput Vis (2015) 111:98–136
+
+105
+
+Table 2 Participation in the 2012 challenge
+Codename
+
+Cls Det Seg Act Institutions
+
+Contributors
+
+BONN_CSI
+
+·
+
+·
+
+•
+
+·
+
+University of Bonn, Georgia
+Joao Carreira, Fuxin Li, Guy
+Institute of Technology, University Lebanon, Cristian Sminchisescu
+of Coimbra
+
+BONN_JOINT
+
+·
+
+·
+
+•
+
+·
+
+University of Bonn, Georgia
+Institute of Technology,
+University of Coimbra, Vienna
+University of Technology
+
+BONN_LINEAR
+
+·
+
+·
+
+•
+
+·
+
+University of
+sity of Coimbra
+
+CVC
+
+•
+
+·
+
+·
+
+·
+
+Computer Vision Barcelona
+
+CVC_CLS
+
+·
+
+•
+
+·
+
+·
+
+Computer Vision Barcelona
+
+CVC_SP
+
+•
+
+·
+
+·
+
+·
+
+HU
+
+·
+
+·
+
+·
+
+•
+
+IMPERIAL
+
+•
+
+·
+
+·
+
+·
+
+Imperial College London
+
+ITI,
+ITI_ENTROPY,
+ITI_FUSED
+MISSOURI
+
+•
+
+·
+
+·
+
+·
+
+·
+
+•
+
+·
+
+·
+
+ITI-CERTH, University of Surrey, Elisavet Chatzilari, Spiros Nikolopou- –
+Queen Mary University
+los, Yiannis Kompatsiaris, Joseph Kittler
+University of Missouri Columbia
+Guang Chen, Miao Sun, Xutao Lv, –
+Yan Li, Tony Han
+
+NEC
+
+·
+
+•
+
+·
+
+·
+
+NEC Laboratories America, Stan- Olga Russakovsky, Xiaoyu Wang,
+ford University
+Shenghuo Zhu, Li Fei-Fei, Yuan- Russakovsky
+(2012)
+qing Lin
+
+NUS_SCM
+
+•
+
+·
+
+·
+
+·
+
+National University of Singapore, Dong Jian, Chen Qiang, Song Zheng,
+Panasonic Singapore Labs, Sun Yat- Pan Yan, Xia Wei, Yan Shuicheng, Song et al. (2011), Chen
+sen University
+Hua Yang, Huang Zhongyang, et al. (2012)
+Shen Shengmei
+
+NUS_SP
+
+·
+
+·
+
+•
+
+·
+
+National University of Singapore, Wei Xia, Csaba Domokos, Jian Dong,
+Panasonic Singapore Labs
+Shuicheng Yan, Loong Fah Cheong, Xia et al. (2012)
+Zhongyang Huang, Shengmei Shen
+
+OLB_R5
+
+·
+
+•
+
+·
+
+·
+
+Orange Labs Beijing, France Tele- Zhao Feng
+com
+
+OXFORD
+
+·
+
+•
+
+·
+
+·
+
+University of Oxford
+
+Ross Girshick,
+Karen Simonyan
+
+OXFORD_ACT
+
+·
+
+·
+
+·
+
+•
+
+University of Oxford
+
+Minh
+Hoai,
+Lubor
+Andrew Zisserman
+
+Bonn,
+
+References
+Li et al. (2013)
+
+Joao Carreira, Adrian Ion, Fuxin Li,
+Ion et al. (2011a, b)
+Cristian Sminchisescu
+
+Univer- Joao Carreira, Rui Caseiro, Jorge
+Batista, Cristian Sminchisescu
+
+Carreira et al. (2012)
+
+Fahad Khan, Camp Davesa, Joost van
+de Weijer, Rao Muhammad Anwer, Khan et al. (2012a)
+Albert
+Gordo,
+Pep
+Gonfaus,
+Ramon Baldrich, Antonio Lopez
+
+Albert
+Gordo,
+Camp
+Davesa,
+Fahad
+Khan,
+Pep
+Gonfaus,
+Joost van de Weijer, Rao Muhammad Anwer, Ramon Baldrich,
+Jordi Gonzalez, Ernest Valveny
+Computer Vision Barcelona, Uni- Fahad Khan, Jan van Gemert,
+versity of Amsterdam, Univer- Camp Davesa, Jasper Uijlings ,
+sity of Trento
+Albert Gordo, Sezer Karaoglu,
+Koen van de Sande, Pep Gonfaus, Rao Muhammad Anwer,
+Joost van de Weijer, Cees Snoek,
+Ramon Baldrich, Nicu Sebe, Theo Gevers
+Hacettepe University, Bilkent Uni- Cagdas
+Bas,
+Fadime
+Sener,
+versity
+Nazli Ikizler-Cinbis
+Ioannis Alexiou, Anil A. Bharath
+
+Khan et al. (2012a, b)
+
+Khan et al. (2012a, b),
+Karaoglu et al. (2012),
+Van Gemert (2011)
+
+Sener et al. (2012)
+
+Alexiou
+(2012)
+
+and
+
+Bharath
+
+et
+
+al.
+
+–
+Andrea
+
+Vedaldi, –
+Ladicky,
+
+Hoai et al. (2012)
+
+123
+
+106
+
+Int J Comput Vis (2015) 111:98–136
+
+Table 2 continued
+Codename
+
+Cls
+
+Det
+
+Seg
+
+Act
+
+Institutions
+
+Contributors
+
+References
+
+STANFORD
+
+·
+
+·
+
+·
+
+•
+
+Stanford University, MIT
+
+Aditya Khosla, Rui Zhang, Bangpeng Yao, and Li Fei-Fei
+
+Khosla et al. (2011)
+
+SYSU_DYNAMIC
+
+·
+
+•
+
+•
+
+·
+
+Sun Yat-Sen University
+
+Xiaolong Wang, Liang Lin, Lichao
+Huang, Xinhui Zhang, Zechao Yang
+
+Wang et al. (2013)
+
+SZU
+
+·
+
+·
+
+·
+
+•
+
+Shenzhen University
+
+Shiqi Yu, Shengyin Wu, Wensheng
+Chen
+
+UP
+
+•
+
+·
+
+·
+
+·
+
+University of Padova
+
+Loris Nanni
+
+UVA_HYBRID
+
+·
+
+•
+
+·
+
+·
+
+University of Amsterdam
+
+Koen van de Sande, Jasper Uijlings,
+Cees Snoek, Arnold Smeulders
+
+UVA_MERGED
+
+·
+
+•
+
+·
+
+·
+
+University of Amsterdam
+
+Sezer Karaoglu, Fahad Khan, Koen
+van de Sande, Jan van Gemert, Rao
+Muhammad Anwer, Jasper Uijlings,
+Camp Davesa, Joost van de Weijer,
+Theo Gevers, Cees Snoek
+
+UVA_NBNN
+
+·
+
+·
+
+•
+
+·
+
+University of Amsterdam
+
+Carsten van Weelden, Maarten
+van der Velden, Jan van Gemert
+
+–
+
+Nanni
+(2013)
+
+and
+
+Lumini
+
+Van de Sande et al.
+(2011), Uijlings et al.
+(2013)
+
+Khan et al. (2012a),
+Uijlings et al. (2013)
+
+–
+
+Each method is assigned an abbreviation used in the text, and identified as a classification (Cls), detection (Det), segmentation (Seg), or action
+classification (Act) method. The contributors to each method are listed with references to publications describing the method, where available
+15000
+10000
+
+images
+objects
+
+5000
+3000
+2000
+1000
+700
+400
+300
+200
+
+ro
+
+pl
+bi ane
+cy
+cl
+e
+bi
+r
+bo d
+bo at
+ttl
+e
+bu
+s
+ca
+r
+c
+ch at
+a
+di
+ni c ir
+ng ow
+ta
+bl
+e
+do
+m ho g
+ot rs
+or e
+b
+po pe ike
+tte rso
+dp n
+l
+sh ant
+ee
+p
+so
+tv tr fa
+m ai
+on n
+ito
+r
+
+100
+
+ae
+
+based on bootstrap sampling—this is important as it enables
+one to tell if the method proposed by the ‘runner up’ should
+actually be considered as equivalent to that of the ‘winner’.
+The VOC 2012 participants (and our codenames for them)
+are listed in Table 2. Where possible we have identified publications describing these methods in the right hand column
+of the table; in addition short descriptions were provided by
+the participants and are available at the Pascal VOC 2012
+challenge results webpage (2012).
+The number of images and objects in the VOC 2012 training and validation sets are shown as a histogram for the classification and detection challenges in Fig. 2. The numbers are
+tabulated in Table 3 for classification, detection and segmentation, and in Table 4 for the action classification challenge.
+There were 850 annotated objects instances in 609 images
+for the person layout challenge.
+
+Fig. 2 Summary of the main VOC2012 dataset. Training and validation images only. Histogram by class of the number of objects and
+images containing at least one object of the corresponding class. Note
+the log scale on the vertical axis. Best viewed in colour (Color figure
+online)
+
+3.1 Classification
+Figure 3 and Table 5 give summaries of the results of the classification challenge for both competition 1 (using supplied
+data only) and competition 2 (which also allowed external
+data to be used). Figure 4 shows precision–recall curves for
+a sample of the classes. The winning method for competition
+
+123
+
+1 is NUS_SCM. Its performance exceeded all other methods
+(including those in competition 2) for all classes in 2012, and
+also improved on the 2011 winning entries in all but one class
+(‘pottedplant’). The NUS_SCM method started from a fairly
+standard pipeline of a bag-of-visual-words (BOW) representation and spatial pyramid matching (SPM), followed by a
+
+Showing the number of images in the trainval dataset containing at least one object of a given class, and the corresponding number of object instances. Note that because images may contain
+objects of several classes, the totals shown in the Img rows are not simply the sum of that row
+
+6,934
+198
+
+2,913
+157
+
+209 189
+308
+322
+
+167
+888
+
+1738
+204
+
+157
+
+299
+284 168
+
+147
+249
+135 157
+271
+
+550
+286
+
+250
+152 255
+
+237 457
+232 357
+
+150 183
+208
+
+277
+197
+218
+Obj
+
+144
+178
+Img
+
+Segmentation
+
+204
+
+120
+
+183 167
+
+11,540
+575
+
+826
+
+507 544
+
+786 656
+994
+
+325
+527
+4,087
+
+10,129 1,099
+751
+1,541 750
+
+526
+1,286 482
+421 1,161 1,080 1,119 303 538
+508 706
+
+1,221 999 1,482 637 2,364 1,227 2,906 702 747
+
+765
+
+954
+Obj
+
+552
+670
+Img
+
+Main
+
+790
+
+Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor Total
+Chair Cow Dining table Dog
+Cat
+Boat Bottle Bus Car
+Aeroplane Bicycle Bird
+
+Table 3 Statistics of the main and segmentation VOC2012 datasets
+
+107
+
+31,561
+
+Int J Comput Vis (2015) 111:98–136
+
+support vector machine (SVM) classifier (see Sect. 6.1 for
+more details). To this they added the identification and use of
+sub-categories (e.g. identifying different types of chair), and
+a refinement of SPM based on the output of sliding window
+detection confidence maps.
+3.2 Detection
+Figure 5 and Table 6 give the results of the detection challenge for competition 3 (using supplied data only); there
+were no entries for competition 4. Figure 6 shows precision–
+recall curves for a sample of the classes. The winning
+method was UVA_HYBRID (see Van de Sande et al. 2011)
+which used multiple segmentations to hypothesise bounding
+boxes bottom up, thus avoiding an expensive sliding window search (with potentially more false positives). These
+candidate bounding boxes were then classified using a BOW
+feature representation, SPM, and a SVM using the histogram
+intersection kernel.
+The method from Oxford won on six classes. This used a
+local implementation of the deformable parts model (DPM;
+Felzenszwalb et al. 2010) sliding window detector to propose candidate regions. The top 100 candidates were then
+re-scored using a homogeneous kernel map (χ 2 ) SVM combining the DPM’s scores, two descriptors computed on the
+regions, together with two context models (the context scoring of Felzenszwalb et al, and context from image classification scores).
+3.3 Segmentation
+Table 7 gives the results of the segmentation challenge for
+competition 5 (using supplied data only) and competition
+6 (which also allowed external data to be used). The winning method for competition 5 was NUS_SP which used an
+object detector to identify object bounding boxes and then
+determined a segmentation for each bounding box using a
+superpixel-based MRF (see Xia et al. 2012). This method
+achieved a mean AP 4 % higher than the winner of the previous year, which suggests that segmentation methods continue
+to improve, although some of the increase may be due to the
+additional training data available in 2012.
+The second placed method in competition 5 and the winning entry in competition 6 was BONN_JOINT which created multiple segmentations of each image and then sampled
+from a distribution over tilings constructed from these segments (see Ion et al. 2011a). Parameter learning was achieved
+using the method of Ion et al. (2011b). The additional training
+data used in competition 6 was a set of ground truth annotations provided by the Berkeley vision group. This data proved
+to be valuable in that it increased the mean AP of this method
+by about 0.5 %.
+
+123
+
+108
+
+Int J Comput Vis (2015) 111:98–136
+
+Table 4 Statistics of the action classification VOC2012 dataset
+Jumping
+
+Phoning
+
+Playing
+
+Reading
+
+Riding bike
+
+Riding horse
+
+Running
+
+Taking photo
+
+Using
+
+Walking
+
+Other
+
+Total
+
+Img
+
+405
+
+444
+
+459
+
+463
+
+400
+
+411
+
+310
+
+414
+
+395
+
+386
+
+799
+
+4,588
+
+Obj
+
+495
+
+457
+
+619
+
+530
+
+578
+
+534
+
+561
+
+456
+
+476
+
+597
+
+1,043
+
+6,278
+
+For the trainval dataset, the number of images containing at least one person performing a given action, and the corresponding number of
+objects are shown
+100
+
+3.5 Bootstrapping AP and Rank
+In the challenge different methods will produce different
+scores on each class and competition. For classification,
+detection, and action classification this will be the AP score,
+while for segmentation it is the segmentation accuracy (see
+Eq. 2). This is a single number that summarises a method’s
+performance on a whole dataset—how should we assess
+if differences between methods are significant? A simple
+approach to this question is via the bootstrap (see e.g. Wasserman 2004, Ch. 8), where the data points are sampled with
+replacement from the original n test points to produce bootstrap replicates. We first came across this idea in the blog
+comment by O’Connor (2010), although bootstrapping of
+ROC curves has been discussed by many authors, e.g. Hall
+et al. (2004); Bertail et al. (2009).
+We can use the bootstrap in a number of different ways: to
+simply judge the variability for a given method, to compare
+
+123
+
+80
+
+max
+median
+chance
+
+60
+40
+20
+
+ro
+
+pl
+pe ane
+rs
+o
+m t n
+ot ra
+or in
+bi
+ke
+bu
+s
+c
+ho at
+rs
+e
+ca
+b r
+bi oa
+cy t
+cl
+e
+do
+tv b g
+m ir
+on d
+sh itor
+ee
+p
+co
+di c w
+ni h
+ng ai
+ta r
+bl
+e
+s
+po b ofa
+o
+tte t
+dp tle
+la
+nt
+
+0
+
+ae
+
+Table 8 gives the results of the action classification challenge.
+This consisted of competitions 9 (using only supplied data)
+and competition 10 (which also allowed external data to be
+used).
+The winning method STANFORD for competition 9 is
+mostly described in the paper by Khosla et al. (2011), and
+that of OXFORD_ACT for competition 10 in Hoai et al.
+(2012). What these high-scoring approaches seem to have in
+common is a top-down analysis. STANFORD first focuses
+on larger, more globally enclosing boxes, and then homes in
+on smaller ones that capture details relevant to the action.
+OXFORD_ACT followed an approach that was quite different in the specifics, but also started with global regions,
+then homed in on telling details like the hands. A difference was that for the OXFORD_ACT method the regions
+were pre-selected by the designers, while the STANFORD
+method itself determines which portions of the given bounding box are relevant at the different stages of processing.
+The methods also shared their use of a wide variety of features. The OXFORD_ACT method was in competition 10 as
+it used additional data to train detectors for the upper body
+and musical instruments.
+
+Average Precision
+
+3.4 Action Classification
+
+Fig. 3 Summary of the 2012 classification results by class (competition 1). For each class three values are shown: the maximum AP obtained
+by any method (max), the median AP over all methods (median) and
+the AP obtained by a random ranking of the images (chance)
+
+the relative strength of two methods, or to look at rank ranges
+in order to get an overall sense of all methods in a competition.
+For a single method we can obtain a bootstrap estimate
+of the confidence interval for a method’s score by running
+a large number of bootstrap replicates, sorting the resulting
+scores, and then returning the α/2 and 1 − α/2 quantiles,
+where for example α = 0.05 would yield a 95 % confidence
+interval. (This is the percentile interval method described in
+Wasserman 2004, Sect. 8.3.)
+To compare two methods A and B, we first compute the
+difference in score for each method on each bootstrap sample.
+We then use the percentile bootstrap to estimate a confidence
+interval, with a null hypothesis that A is equivalent to B (at
+the 1 − α level). This is rejected if zero is not contained in
+the confidence interval, leading to the conclusion that method
+A is statistically significantly better than method B, or vice
+versa, depending on the result. This procedure is more informative than the unpaired confidence intervals in determining
+whether two methods are significantly different; for example
+a variation in the hardness of the bootstrap replicates may
+give rise to overlapping score intervals, even if method A
+always beats method B.
+Thirdly, in the challenge we can also determine the rank
+of each method on each bootstrap replicate, and thus a confidence interval for the rank of a method (using α/2 and 1−α/2
+quantiles as above). This can provide a useful summary of the
+relative strength of the methods without the need for pairwise
+
+83.2
+74.3
+60.1 68.7
+
+88.7
+–
+–
+
+90.4
+
+97.3
+
+–
+
+ITI_FUSED
+
+NUS_SCM
+
+UP
+
+61.9 68.6 34.9
+63.0
+ITI_ENTROPY 88.1
+
+89.1
+ITI
+
+methods below also trained on external data
+
+73.2
+IMPERIAL
+
+79.6 67.4 70.5 57.5
+
+52.0 55.3
+
+–
+–
+–
+–
+–
+–
+–
+
+92.0
+
+–
+
+–
+–
+–
+
+89.3
+
+CVC_SP
+
+For each object class and submission, the AP score (%) is shown. Bold entries in each column denote the maximum AP for the corresponding class, and italic entries denote the results ranked in
+second place. Competition 1 results are in the top part of the table, and competition 2 in the lower part
+
+64.0
+53.4 83.0
+57.6
+26.4
+
+–
+
+80.7
+95.0
+
+–
+–
+–
+–
+
+68.7
+
+73.4 94.5
+79.2
+57.8
+
+86.8
+
+90.1
+83.0 87.5
+77.8 75.1
+
+55.1 61.4
+
+80.8 85.3 60.8
+84.2
+
+80.6 70.5 72.4 60.3
+65.8 72.3 37.6
+65.3
+
+89.9 86.8 89.3 75.4
+
+63.6 72.4
+
+77.4
+
+57.2 85.9
+61.1
+37.7
+
+64.9
+
+36.2
+
+83.1
+
+53.8 83.4
+57.2
+25.6
+
+57.2
+
+74.5
+59.3 68.6
+51.0 55.0
+
+18.1 30.2
+
+60.0 68.1 33.4
+62.3
+
+57.7 34.4 45.9 41.2
+31.0 44.7 17.0
+33.4
+
+79.8 66.9 70.3 57.4
+
+34.3 23.1
+
+39.3
+
+25.3 51.1
+23.1
+11.9
+
+73.8
+
+91.6
+
+65.4 86.7
+69.4
+55.9
+
+91.4
+
+81.0
+68.9 78.2
+63.2 68.5
+
+59.4 64.1
+
+73.0 77.5 54.3
+74.2
+
+84.8 79.6 72.9 63.8
+69.8 73.9 51.3
+70.9
+
+85.2 81.9 76.4 65.2
+
+64.7 75.5
+
+79.1
+
+61.9 86.7
+63.2
+42.7
+
+77.4
+
+109
+
+CVC
+
+Aeroplane Bicycle Bird Boat Bottle Bus
+
+Table 5 Classification results
+
+Car
+
+Cat
+
+Chair Cow Dining table Dog Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor
+
+Int J Comput Vis (2015) 111:98–136
+
+comparisons. Note that rank ranges depend on all entrants in
+a competition, while the individual confidence interval is a
+property of a single method.
+These bootstrap ideas are illustrated in detail for four
+classes in Tables 9 and 10, for the classification and detection
+competitions respectively. Summary results for all classes
+highlighting methods that are not significantly different from
+the leading one are shown in Table 11 (for classification),
+Table 12 (for detection) and Table 13 (for segmentation).
+
+4 What We Can and Cannot Do Today
+In this section we examine the results of the VOC classification and detection competitions in more detail to answer the
+following questions:
+
+– which classes are current methods doing better or worse
+on?
+– are there groups of images that are handled particularly
+well or particularly badly, and can these be characterised?
+
+We continue this examination in Sect. 6, where we analyse
+in detail the types of errors occurring for each class over time.
+
+4.1 Comparing Across Classes
+The standard VOC 2012 classification and detection results
+given earlier and reproduced in the top plots of Figs. 7 and 8
+show the best average precision achieved in descending order
+across classes. However, this does not necessarily mean that
+we are doing better on classes earlier in the ordering than
+those later in the ordering. Looking at the ‘chance’ results
+we see that a random ranking does better on some classes
+than others. For the person class, for example, it is easier to
+get a higher AP score simply because a much higher proportion of images contain people, than is the case for other
+classes. To overcome this bias, we need to consider a different
+comparison metric.
+
+4.1.1 Comparing Classification Across Classes
+To correct for the varying proportion of positive instances in
+different classes, we define a normalised precision measure
+that takes this into account. This normalised measure will
+allow us to compare classification accuracy across classes
+meaningfully. It is inspired by the normalised AP measure
+introduced by Hoiem et al. (2012) for detection.
+
+123
+
+110
+
+Int J Comput Vis (2015) 111:98–136
+NUS_SCM (97.3)
+CVC_SP (92.0)
+ITI_FUSED (90.4)
+CVC (89.3)
+ITI (89.1)
+IMPERIAL (73.2)
+UP (0)
+
+0.8
+
+Precision
+
+0.7
+0.6
+0.5
+0.4
+
+1
+
+0.8
+0.7
+0.6
+0.5
+0.4
+
+0.3
+
+0.3
+
+0.2
+
+0.2
+
+0.1
+0
+
+NUS_SCM (84.2)
+CVC_SP (74.2)
+CVC (70.9)
+ITI_FUSED (65.3)
+ITI (62.3)
+IMPERIAL (33.4)
+UP (0)
+
+0.9
+
+Precision
+
+1
+0.9
+
+0.1
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+0
+
+1
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+Recall
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+(b)
+
+(a)
+NUS_SCM (95.0)
+CVC_SP (91.6)
+CVC (91.4)
+UP (88.7)
+ITI_FUSED (86.8)
+ITI (83.1)
+IMPERIAL (57.2)
+
+0.9
+0.8
+0.7
+0.6
+
+1
+
+NUS_SCM (94.5)
+CVC (86.7)
+CVC_SP (86.7)
+ITI_FUSED (85.9)
+ITI (83.4)
+IMPERIAL (51.1)
+UP (0)
+
+0.9
+0.8
+0.7
+
+Precision
+
+1
+
+Precision
+
+0.5
+
+Recall
+
+0.6
+0.5
+0.4
+0.3
+
+0.5
+
+0.2
+0.4
+
+0.1
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+0
+
+1
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+Recall
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+Recall
+
+(d)
+
+(c)
+
+Fig. 4 Classification results. Precision–recall curves are shown for a representative sample of classes. The legend indicates the AP score (%)
+obtained by the corresponding method. a Aeroplane, b bicycle, c person, d train
+70
+max
+median
+
+Average Precision
+
+60
+50
+40
+
+bers differ because precision depends on the proportion of
+positive and negative images. To perform such a comparison
+we instead define a normalised precision measure:
+norm. precision =
+
+30
+20
+10
+
+ae
+r
+m opla
+ot n
+or e
+bi
+ke
+bi bus
+cy
+cl
+e
+ca
+tra t
+tv hor in
+m s
+on e
+ito
+r
+pe ca
+rs r
+on
+d
+sh og
+ee
+di
+ni so p
+ng fa
+ta
+bl
+e
+co
+bo w
+ttl
+e
+bi
+po
+rd
+tte bo
+dp at
+la
+ch nt
+ai
+r
+
+0
+
+Fig. 5 Summary of the 2012 detection results by class. For each class
+two values are shown: the maximum AP obtained by any method (max)
+and the median AP over all methods (median)
+
+For reference, the standard definition of precision is:
+true positives
+true positives + false positives
+TPR × n pos
+=
+TPR × n pos + FPR × n neg
+
+precision =
+
+(3)
+(4)
+
+where TPR is the true positive rate, FPR is the false positive
+rate, n pos is the number of positive examples, and n neg the
+number of negative examples. As already mentioned, it is difficult to compare precisions across classes where these num-
+
+123
+
+TPR × n̄ pos
+TPR × n̄ pos + FPR × n̄ neg
+
+(5)
+
+where n̄ pos and n̄ neg are the average number of positive
+and negative examples across all classes. Thus for a particular classifier threshold, computing the normalised precision
+measure simply involves calculating the TPR (as in Eq. 4)
+and using its value in Eq. 5. A normalised average precision
+measure for classification can be computed by averaging normalised precisions computed at a range of recalls.
+The bottom plot of Fig. 7 gives the VOC 2012 classification results using this normalised measure. The first
+thing to note is that the ‘chance’ results (obtained by setting
+T P R = F P R) are now the same for all classes, showing
+that the normalisation has equalised the accuracy for a random classifier. In addition, the normalised results also reveal
+aspects of the accuracy across classes that are not clear from
+the original results (top plot). The biggest change is that the
+‘person’ class drops from 2nd to 13th position in the ranking, indicating that this class is substantially harder to identify than might have been understood from the unnormalised
+results alone. This is not the only difference: the ‘chair’ class
+now joins the ‘bottle’ and ‘potted plant’ classes in underperforming the general trend. These three classes seem to
+
+Methods trained on VOC2012 data. For each object class and submission, the AP score (%) is shown. Bold entries in each column denote the maximum AP for the corresponding class, and italic
+entries denote the results ranked in second place
+
+49.5
+
+44.4
+31.1 45.4
+35.2
+52.1
+50.2
+47.2
+UVA_MERGED
+
+18.3 21.4 25.2
+
+53.3 46.3 46.3 17.5
+
+27.8 30.3
+
+35.0 41.6
+
+43.2
+
+18.0
+
+39.5 51.1
+
+42.8
+35.6 48.9
+
+40.3
+
+15.6
+46.1
+49.9
+
+59.4
+42.8 48.8
+
+35.1 28.9
+52.5 49.3 40.8 19.1
+
+57.1 44.5 53.6 17.4
+24.6 24.8 20.2
+
+54.5
+
+61.8
+
+52.0
+
+59.6
+OXFORD
+
+UVA_HYBRID
+
+21.9 21.6 32.1
+
+33.0 38.2
+
+37.2 50.9
+
+35.7
+
+22.8
+
+39.3
+
+36.7
+21.5 43.1
+46.4
+47.0
+SYSU_DYNAMIC 50.1
+
+07.9 03.8 24.8
+
+47.2 42.8 31.1 17.5
+
+24.2 10.0
+
+21.3 43.5
+
+37.5
+
+07.9
+
+26.4
+
+44.8
+
+22.1
+23.6 44.3
+31.2
+50.9
+51.6
+47.5
+OLB_R5
+
+14.2 12.6 27.3
+
+51.8 44.2 25.3 17.8
+
+30.2 18.1
+
+16.9 46.9
+
+43.0
+
+09.5
+
+33.5 48.0
+35.7
+
+39.2
+30.6 50.8
+37.7
+
+12.6
+51.5
+
+32.8
+
+51.9
+
+26.6 31.0
+
+40.2 39.7
+
+56.5 47.1 38.6 19.5
+
+51.0 44.9 51.5 13.0
+25.0 24.6 16.0
+
+18.3 15.6 31.6
+
+65.0
+NEC
+
+53.6
+51.4
+MISSOURI
+
+46.8
+
+31.9 22.1
+
+25.0 50.3
+
+44.9
+
+11.9
+
+28.5 45.7
+49.6
+49.8
+45.4
+
+15.7 16.0 26.3
+
+54.6 44.8 35.1 16.8
+
+31.3 23.6
+
+26.0 45.6
+
+42.2
+
+14.5
+
+30.5
+
+40.0
+
+111
+
+CVC_CLS
+
+Aeroplane Bicycle Bird Boat Bottle Bus Car
+
+Table 6 Detection results
+
+Cat
+
+Chair Cow Dining table Dog Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor
+
+Int J Comput Vis (2015) 111:98–136
+
+be substantially harder to recognise than the others. Other
+classes with large changes in rank are: ‘dog’ (down 5 places
+to 16), ‘sheep’ (up 5 places to 9) and ‘cow’ (also up 5 places
+to 10). However, these large changes in rank are less significant since they occur in the centre of the list where the AP
+figures are similar (and so small changes in AP can lead to
+large changes in rank).
+4.1.2 Comparing Detection Across Classes
+In the detection case, the number of negatives is difficult to
+define, since it is hard to say the number of places where an
+object could be in an image, but isn’t. Instead, we assume
+that the number of possible places is very large compared
+to the variation in the number of positives across classes.
+This allows us to assume that the number of negatives is
+approximately equal across classes, even when they have
+different numbers of positives. The result is the same as the
+normalised AP measure introduced in Hoiem et al. (2012):
+norm. prec. det. =
+
+TPR × n̄ pos
+,
+TPR × n̄ pos + FP
+
+(6)
+
+where FP is the number of false positives in the class. A
+normalised average precision measure for detection can be
+computed by averaging normalised precisions computed at a
+range of recalls.
+The detection results using this normalised measure are
+shown in the bottom plot of Fig. 8. In general the impact
+of the normalisation is less for detection than for classification, with most classes hardly changing in rank. The biggest
+change is once again for the ‘person’ class, which drops from
+10th to third from last. This again suggests that the normal
+way of reporting results may underestimate the difficulty of
+detecting people in images—the state-of-the-art accuracy for
+detecting people is in fact only slightly better than that of
+detecting plants and chairs, despite all the special research
+effort that has gone into this case. The other two classes
+whose ranking drops after normalisation are ‘cat’ and ‘dog’,
+in both cases by three places in the ranking, reflecting the
+higher rate of occurrence of cats and dogs in the test set.
+However, this is a relatively small change in rankings compared to that of the ‘person’ class and should not cause us to
+substantially re-evaluate the difficulty of these two classes.
+Finally, it is of interest to examine the difference in class
+ranking between classification and detection. The most dramatic difference is for the ‘boat’ class which is one of the
+better performing classes for classification but one of the
+worst for detection. This suggests that it is much easier to
+detect an image that contains a boat than to find the boat in
+the image. A plausible explanation for this is that the presence
+of an expanse of water is a good indicator of the presence of
+a boat. So a classifier can use this cue to infer that a boat is
+
+123
+
+112
+
+Int J Comput Vis (2015) 111:98–136
+NEC (65.0)
+UVA_HYBRID (61.8)
+OXFORD (59.6)
+MISSOURI (51.4)
+SYSU_DYNAMIC (50.1)
+OLB_R5 (47.5)
+UVA_MERGED (47.2)
+CVC_CLS (45.4)
+
+0.8
+
+Precision
+
+0.7
+0.6
+0.5
+0.4
+
+1
+
+0.8
+0.7
+0.6
+0.5
+0.4
+
+0.3
+
+0.3
+
+0.2
+
+0.2
+
+0.1
+0
+
+OXFORD (54.5)
+MISSOURI (53.6)
+UVA_HYBRID (52.0)
+OLB_R5 (51.6)
+UVA_MERGED (50.2)
+CVC_CLS (49.8)
+SYSU_DYNAMIC (47.0)
+NEC (46.8)
+
+0.9
+
+Precision
+
+1
+0.9
+
+0.1
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+0
+
+1
+
+0
+
+0.2
+
+0.4
+
+Recall
+
+OXFORD (46.1)
+MISSOURI (44.9)
+UVA_MERGED (43.2)
+OLB_R5 (43.0)
+CVC_CLS (42.2)
+SYSU_DYNAMIC (37.5)
+UVA_HYBRID (35.7)
+NEC (32.8)
+
+1
+
+0.8
+0.7
+0.6
+0.5
+0.4
+
+1
+
+0.8
+0.7
+0.6
+0.5
+0.4
+
+0.3
+
+0.3
+
+0.2
+
+0.2
+
+0.1
+
+UVA_HYBRID (51.1)
+MISSOURI (50.8)
+OXFORD (48.9)
+NEC (48.0)
+CVC_CLS (45.7)
+UVA_MERGED (45.4)
+OLB_R5 (44.3)
+SYSU_DYNAMIC (43.1)
+
+0.9
+
+Precision
+
+1
+0.9
+
+Precision
+
+0.8
+
+(b)
+
+(a)
+
+0
+
+0.6
+
+Recall
+
+0.1
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+Recall
+
+(c)
+
+0
+
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+Recall
+
+(d)
+
+Fig. 6 Detection results. Methods trained on VOC2012 data. Precision–recall curves are shown for a representative sample of classes. The legend
+indicates the AP score (%) obtained by the corresponding method. a Aeroplane, b bicycle, c person, d train
+
+present, whereas it is not as helpful for a detector in precisely
+locating the boat.
+4.2 Identifying Easy and Hard Groups of Images
+In this section, we aim to identify easy and hard groups of
+images using the pooled results of the classification challenge
+for all submissions since 2009, a total of 73 submissions. The
+idea is to cluster both images and methods simultaneously
+(bi-clustering) such that methods that are clustered together
+tend to perform either well or badly on all the images in each
+image cluster.
+To be more precise, the following steps were followed for
+each class:
+1. Using the submitted results for each submission the test
+images were classified as containing or not containing the
+class. Since the submitted format included a continuous
+score for each image, these were converted into binary
+by choosing a threshold that gave equal numbers of false
+positive and false negatives.
+2. Taking only the positive images (that is, images containing objects of the class) these results were formed into a
+binary 73 × N matrix, where N is the number of positive
+images of that class.
+3. The columns of the matrix were re-ordered so as to
+minimise an objective function whose main component
+
+123
+
+was the sum of Hamming distances between adjacent
+rows/columns. In addition the objective function also
+contained a longer-range term that computed the Hamming distance between columns that were 20 apart, downweighted by a factor of 0.05. The minimisation was
+achieved using 40,000 iterations of the following greedy
+iterative algorithm:
+(a) Select a column or block of columns, favouring
+blocks that have high Hamming distance to the immediate neighbouring columns.
+(b) Move the selected columns to the location in the
+matrix that minimises the objective function. The
+block of columns can also be flipped if that further
+minimises the objective.
+4. Apply the same algorithm to the rows of the matrix for
+10,000 iterations.
+5. Manually analyse the resulting matrix to identify block
+structures representing groups of images that are jointly
+either correctly or incorrectly handled by different groups
+of methods.
+We also performed similar analysis for the detection challenge (a total of 57 submissions since 2009), except in this
+setting we identify easy and hard groups of object instances
+(as opposed to images). Here, the binary 57 × N matrix represents whether the test instances were identified in each
+
+For each object class and submission, the AP score (%) is shown. Bold entries in each column denote the maximum AP for the corresponding class, and italic entries denote the results ranked in
+second place. Competition 5 results are in the top part of the table, and competition 6 in the lower part
+
+29.9 50.5 44.5
+44.1
+34.6
+58.0
+23.8
+63.9
+BONN_LINEAR 46.7 84.7
+
+44.6 40.3 45.5
+
+59.6 58.7 57.1 11.7 45.9 34.9
+
+43.0 54.9
+
+51.5
+
+34.6 45.3 43.1
+
+32.4 47.6 39.2
+
+44.5
+
+53.3
+34.6
+
+32.0
+
+57.4
+45.0 58.4
+
+53.4
+58.2
+46.1 52.6
+54.3 58.6 55.1 14.5 49.0 30.9
+
+27.3
+63.4
+47.5 85.2
+BONN_JOINT
+
+56.1 37.7 47.2
+
+26.8
+63.6
+46.8 85.0
+BONN_CSI
+
+45.6 41.7 47.1
+
+57.9 59.3 55.0 11.5 50.8 30.5
+
+15.3
+02.3
+10.5
+
+methods below also trained on external data
+
+11.3 63.2
+UVA_NBNN
+
+03.0 03.0 01.0
+
+30.2 14.9 15.0 00.2 06.1 02.3
+
+05.1 12.1
+
+48.6
+
+03.5 10.7 05.3
+08.9
+00.5
+23.4
+
+40.8 54.2 47.8
+
+29.5 47.5 44.7
+43.7
+
+55.2
+35.7
+
+33.7
+
+46.8
+
+51.9
+
+56.8
+
+47.4 52.4
+60.8 52.5 49.0 22.6 38.1 27.5
+31.0
+52.9
+47.3 82.8
+NUS_SP
+
+39.8 44.5 58.9
+
+27.3
+60.0
+BONN_LINEAR 44.8 83.9
+
+46.4 40.0 41.7
+
+57.6 59.0 50.4 10.0 41.6 22.3
+
+43.0 51.7
+
+50.1
+
+28.8 49.9 43.3
+
+29.2 47.6 37.6
+53.5
+
+45.7
+29.8
+
+33.5
+49.0
+
+57.9
+
+57.3
+
+42.8 51.7
+
+51.3
+
+113
+
+40.3 57.6
+59.8 60.3 52.5 13.6 53.6 32.6
+
+52.2 61.5 56.4 13.6 44.5 26.1
+43.9 39.8 41.4
+
+29.3
+65.4
+47.0 85.1
+BONN_JOINT
+
+51.3 33.4 44.2
+
+27.9
+59.3
+45.4 85.0
+BONN_CSI
+
+Mean Background Aeroplane Bicycle Bird Boat Bottle Bus Car Cat Chair Cow Dining table Dog Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor
+
+Table 7 Segmentation results
+
+Int J Comput Vis (2015) 111:98–136
+
+method’s top 2N most confident detections, where N is
+the number of positive instances of that class. We do this
+to include the methods’ lower confidence detections in our
+analysis.
+Figures 9, 10, and 11 illustrate the resultant matrices for
+the three classes: aeroplane, horse and bicycle for classification, and Figs. 12, 13, and 14 illustrate the resultant matrices
+for the three classes: bus, cat and tvmonitor for detection. For
+each class, six identified groups are shown, with six randomly
+selected images per group used to illustrate their nature.
+In each case the groups of images are ordered to show
+a steady increase in difficulty. This increase can be characterised by reduction in object size, increased truncation or
+occlusion, increased variation in illumination or viewpoint,
+increased background clutter. In each figure, the final group
+is of images which none of the current methods work on—it
+would be interesting to focus analysis and research on this
+group, with the aim of teasing out properties of these images
+which may inspire improvements to current methods.
+
+5 Super Methods
+In this section we investigate whether methods can be combined in order to obtain an algorithm with superior performance. This is a way of probing the diversity and complementarity of the submitted methods. We will use the classification task as an example, and ask the question: “can the
+output of the submitted methods be combined in order to
+build a ‘super-classifier’ whose performance exceeds that
+of the individual methods?”. This question is answered in
+Sect. 5.1 by constructing a super-classifier from the VOC
+2012 submitted methods. In Sect. 5.2 we examine the learnt
+parameters of the super-classifier to determine how the methods are weighted, and if particular methods are used for all
+classes. Finally, in Sect. 5.3, we use this combination scheme
+to identify pairs of methods that tend to provide complementary information for a given classification task. The result of
+this indicates which sites should collaborate to best improve
+their methods.
+5.1 Is it Possible to Improve on the Best Submission by
+Using a Combination of Submissions?
+The method we investigate for the super-classifier is a linear classifier for each of the VOC classes, where the feature
+vector consists of the real-valued scores supplied by each
+submitted method. We have these scores available for all of
+the VOC test images, though not for the VOC training or
+validation images. For this reason the investigation is carried
+out on the VOC test data, for which we have the ground truth
+labels.
+
+123
+
+114
+
+Int J Comput Vis (2015) 111:98–136
+
+Table 8 Action classification results
+Jumping Phoning Playing instrument Reading Riding bike Riding horse Running Taking photo Using computer Walking
+STANFORD 75.7
+
+44.8
+
+66.6
+
+44.4
+
+93.2
+
+94.2
+
+87.6
+
+38.4
+
+70.6
+
+75.6
+
+SZU
+
+45.0
+
+62.8
+
+41.4
+
+93.0
+
+93.4
+
+87.8
+
+35.0
+
+64.7
+
+73.5
+
+73.8
+
+methods below also trained on external data
+HU
+
+59.4
+
+39.6
+
+56.5
+
+34.4
+
+75.6
+
+80.2
+
+74.3
+
+27.6
+
+55.2
+
+56.6
+
+OXF_ACT
+
+77.0
+
+50.4
+
+65.3
+
+39.5
+
+94.1
+
+95.9
+
+87.7
+
+42.7
+
+68.6
+
+74.5
+
+For each object class and submission, the AP score (%) is shown. Bold entries in each column denote the maximum AP for the corresponding class,
+and italic entries denote the results ranked in second place. Competition 9 results are in the top half, and competition 10 in the lower half
+Table 9 Bootstrapped classification results on 4 classes
+Aeroplane
+
+Bottle
+
+AP range
+0.025 0.5
+
+Person
+
+Rank RR AP range
+0.975
+
+0.025 0.5
+
+Potted plant
+
+Rank RR AP range
+0.975
+
+Rank RR AP range
+
+0.025 0.5
+
+0.975
+
+0.025 0.5
+
+Rank RR
+0.975
+
+CVC
+
+87.2
+
+89.4 91.1
+
+4
+
+4–5 47.4
+
+51.4 55.0
+
+3
+
+3
+
+90.7
+
+91.4 92.0
+
+3
+
+2–3 38.3
+
+42.9 47.2
+
+3
+
+CVC_SP
+
+90.2
+
+92.1 93.5
+
+2
+
+2
+
+50.6
+
+54.4 58.0
+
+2
+
+2
+
+91.0
+
+91.6 92.2
+
+2
+
+2–3 51.6
+
+56.1 60.3
+
+2
+
+1–2
+
+IMPERIAL 70.0
+
+73.3 76.4
+
+6
+
+6
+
+15.2
+
+17.3 19.7
+
+6
+
+6
+
+55.6
+
+57.3 59.1
+
+7
+
+7
+
+12.1 14.2
+
+6
+
+6
+
+ITI
+
+10.3
+
+3
+
+86.8
+
+89.1 90.8
+
+5
+
+4–5 30.2
+
+33.6 37.2
+
+5
+
+5
+
+82.1
+
+83.2 84.2
+
+6
+
+6
+
+22.3
+
+26.0 29.8
+
+5
+
+5
+
+ITI_FUSED 88.3
+
+90.5 92.0
+
+3
+
+3
+
+37.9 41.7
+
+4
+
+4
+
+85.9
+
+86.8 87.6
+
+5
+
+5
+
+33.4
+
+37.8 42.3
+
+4
+
+4
+
+34.2
+
+NUS_SCM
+
+96.4
+
+97.3 98.1
+
+1
+
+1
+
+57.3
+
+61.1 64.9
+
+1
+
+1
+
+94.4
+
+95.1 95.6
+
+1
+
+1
+
+53.1
+
+58.0 62.6
+
+1
+
+1–2
+
+UP
+
+–
+
+–
+
+7
+
+7
+
+–
+
+–
+
+7
+
+7
+
+88.0
+
+88.7 89.5
+
+4
+
+4
+
+–
+
+–
+
+7
+
+7
+
+–
+
+–
+
+–
+
+α = 0.05, RR denotes the rank range, and leading methods that are not statistically significantly different from each other are highlighted in bold
+Table 10 Bootstrapped detection results on 4 classes
+Bicycle
+
+Bus
+
+AP range
+0.025 0.5
+CVC_CLS
+
+47.0
+
+Horse
+
+Rank RR AP range
+0.975
+
+49.8 52.5
+
+0.025 0.5
+6
+
+6
+
+51.4
+
+Potted plant
+
+Rank RR AP range
+0.975
+
+54.6 57.9
+
+0.025 0.5
+3
+
+3
+
+42.6
+
+Rank RR AP range
+0.975
+
+45.7 48.7
+
+0.025 0.5
+5
+
+Rank RR
+0.975
+
+4–6 12.9
+
+14.7 16.4
+
+4
+
+3–5
+5–6
+
+MISSOURI
+
+50.9
+
+53.7 56.6
+
+2
+
+1–3 53.4
+
+56.5 60.2
+
+2
+
+1–2 47.0
+
+50.4 53.5
+
+2
+
+1–3 10.1
+
+12.0 13.8
+
+6
+
+NEC
+
+43.9
+
+46.8 49.9
+
+8
+
+7–8 47.8
+
+50.9 54.5
+
+7
+
+4–7 36.6
+
+39.8 43.2
+
+8
+
+7–8 10.9
+
+12.8 14.8
+
+5
+
+4–6
+
+OLB_R5
+
+48.9
+
+51.7 54.5
+
+4
+
+3–5 48.6
+
+51.8 54.9
+
+6
+
+4–7 43.7
+
+47.0 50.4
+
+4
+
+3–5 07.7
+
+09.6 11.3
+
+7
+
+7
+
+SYSU_DYNAMIC 44.0
+
+47.0 49.9
+
+7
+
+7–8 43.9
+
+47.2 50.6
+
+8
+
+8
+
+40.1
+
+43.7 47.6
+
+6
+
+5–7 06.5
+
+07.9 09.5
+
+8
+
+8
+3–4
+
+OXFORD
+
+51.7
+
+54.5 57.3
+
+1
+
+1–2 49.5
+
+52.6 55.8
+
+5
+
+4–7 47.7
+
+51.0 54.3
+
+1
+
+1–3 13.5
+
+15.7 17.7
+
+3
+
+UVA_HYBRID
+
+49.1
+
+52.0 54.7
+
+3
+
+2–5 54.0
+
+57.1 60.2
+
+1
+
+1–2 45.7
+
+49.0 52.0
+
+3
+
+1–4 20.1
+
+22.8 25.6
+
+1
+
+1
+
+UVA_MERGED
+
+47.4
+
+50.2 52.9
+
+5
+
+3–5 50.2
+
+53.4 56.7
+
+4
+
+4–7 38.5
+
+41.7 44.9
+
+7
+
+6–8 15.8
+
+18.2 20.5
+
+2
+
+2
+
+α = 0.05, RR denotes the rank range, and leading methods that are not statistically significantly different from each other are highlighted in bold
+
+5.1.1 Training, Test Data, and Evaluation
+The 10,991 images and labels that form the VOC 2012 test
+dataset are used both as training data for the super-classifier,
+and as test data to evaluate the super-classifier’s performance.
+The images are separated into two sets of approximately
+equal size in a stratified manner (i.e. the number of positive
+and negative training images in each set are roughly equal).
+The super-classifier is trained on one set and its performance
+
+123
+
+is tested on the other set. The experiments are then repeated
+by switching the train and test datasets, and the method is
+evaluated as the average AP across the two folds. To ensure
+a fair comparison, the same two-fold evaluation is also computed for the individual methods. Despite the stratification the
+difference between the AP computed by averaging the two
+folds and that computed on all the test data can be as high as
+2.40 % AP; see Fig. 15 for the precision–recall curves of a
+single method on the ‘boat’ class.
+
+62.4
+
+65.4
+
+84.3
+
+73.3
+
+89.1
+
+–
+
+ITI
+
+ITI_FUSED 90.5
+
+97.3
+
+IMPERIAL
+
+NUS_SCM
+
+UP
+
+70.8
+
+CVC_SP
+
+69.8 73.9
+
+–
+
+–
+
+80.9 85.4
+
+65.9 72.3
+
+60.1 68.2
+
+31.1 45.0
+
+73.1 77.5
+
+51.4
+
+–
+
+61.1
+
+37.9
+
+33.6
+
+17.3
+
+54.4
+
+Cat
+
+–
+
+–
+
+–
+
+–
+
+90.0 86.9 89.4 75.5
+
+80.7 70.6 72.5 60.4
+
+79.8 67.0 70.3 57.5
+
+57.8 34.7 46.0 41.3
+
+85.2 81.9 76.4 65.3
+
+–
+
+78.2
+
+55.4
+
+51.3
+
+18.7
+
+63.6
+
+59.6
+
+–
+
+75.4
+
+61.7
+
+55.3
+
+30.7
+
+68.7
+
+64.3
+
+50.2
+
+52.0
+
+46.8
+
+18.4 21.5 25.2
+
+24.6 24.9 20.2
+
+21.9 21.7 32.1
+
+07.9 03.8 24.9
+
+14.2 12.6 27.4
+
+25.1 24.7 16.1
+
+18.3 15.6 31.7
+
+15.7 16.1 26.3
+
+–
+
+79.1
+
+–
+
+90.2
+
+77.4
+
+74.5
+
+39.5
+
+80.9
+
+91.4
+
+88.7
+
+95.1
+
+86.8
+
+83.2
+
+57.3
+
+91.6
+
+–
+
+58.0
+
+37.8
+
+26.0
+
+12.1
+
+56.1
+
+42.9
+
+–
+
+79.6
+
+61.2
+
+57.4
+
+23.7
+
+69.6
+
+63.5
+
+–
+
+–
+
+73.8 94.5
+
+57.3 85.8
+
+54.1 83.4
+
+25.6 51.4
+
+65.5 86.7
+
+62.1 86.7
+
+–
+
+80.9
+
+68.8
+
+64.9
+
+36.5
+
+77.4
+
+73.8
+
+53.4 46.3 46.3 17.5
+
+57.1 44.5 53.7 17.4
+
+52.6 49.3 40.8 19.1
+
+47.2 42.7 31.3 17.5
+
+51.8 44.2 25.5 17.8
+
+50.9 44.9 51.6 13.0
+
+56.5 47.1 38.7 19.5
+
+27.9 30.1
+
+33.1 38.1
+
+35.3 28.9
+
+24.4 10.1
+
+30.3 18.2
+
+26.7 31.0
+
+32.0 22.1
+
+31.4 23.6
+
+35.1 41.7
+
+42.9 49.0
+
+37.2 51.0
+
+21.4 43.7
+
+17.0 47.0
+
+40.2 39.8
+
+25.1 50.4
+
+26.0 45.7
+
+52.1
+
+59.5
+
+49.9
+
+46.4
+
+50.9
+
+51.6
+
+51.9
+
+49.7
+
+43.2
+
+35.8
+
+46.1
+
+37.5
+
+43.0
+
+32.8
+
+44.9
+
+42.3
+
+18.2
+
+22.8
+
+15.7
+
+07.9
+
+09.6
+
+12.8
+
+12.0
+
+14.7
+
+35.1
+
+40.3
+
+39.4
+
+26.4
+
+31.3
+
+35.8
+
+37.8
+
+30.5
+
+31.2 45.5
+
+39.7 51.1
+
+35.7 49.0
+
+21.6 43.2
+
+23.7 44.3
+
+33.7 48.0
+
+30.8 50.9
+
+28.5 45.8
+
+44.3
+
+49.4
+
+42.8
+
+36.5
+
+22.1
+
+44.7
+
+39.4
+
+39.9
+
+Chair Cow Dining table Dog Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor
+
+54.6 44.8 35.1 16.8
+
+Cat
+
+The leading methods that are not statistically significantly different from each other are highlighted in bold
+
+47.2
+
+UVA_MERGED
+
+54.5
+
+59.5
+
+61.6
+
+SYSU_DYNAMIC 50.0
+
+UVA_HYBRID
+
+47.0
+
+47.5
+
+OLB_R5
+
+OXFORD
+
+51.7
+
+65.0
+
+NEC
+
+53.7
+
+51.4
+
+MISSOURI
+
+49.8
+
+45.4
+
+CVC_CLS
+
+Aeroplane Bicycle Bird Boat Bottle Bus Car
+
+Table 12 Bootstrapped detection results on all classes
+
+–
+
+83.2 87.6
+
+63.6 72.5
+
+59.4 68.7
+
+34.6 23.3
+
+69.0 78.3
+
+64.8 75.8
+
+Chair Cow Dining table Dog Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor
+
+84.9 79.7 72.9 63.9
+
+Car
+
+The leading methods that are not statistically significantly different from each other are highlighted in bold
+
+–
+
+33.6
+
+74.2
+
+89.4
+
+92.1
+
+CVC
+
+Aeroplane Bicycle Bird Boat Bottle Bus
+
+Table 11 Bootstrapped classification results on all classes
+
+Int J Comput Vis (2015) 111:98–136
+115
+
+123
+
+123
+52.9
+
+47.2 82.8
+
+11.2 63.2
+
+NUS_SP
+
+UVA_NBNN
+
+27.9
+
+02.3
+
+31.0
+
+27.3
+
+29.3
+
+44.1 39.7 41.6
+
+02.9 02.9 00.9
+
+40.1 44.4 58.6
+
+46.5 39.9 42.0
+
+51.7 33.3 43.8
+
+63.9
+
+BONN_LINEAR 46.7 84.7
+
+23.8
+
+27.0
+
+26.7
+44.8 40.5 44.9
+
+56.3 37.8 46.8
+
+45.9 42.0 47.1
+
+pl
+
+an
+tra e
+in
+m
+ot bu
+or s
+bi
+ho ke
+rs
+bo e
+at
+bi ca
+cy t
+sh cle
+ee
+p
+co
+tv c w
+m a
+on r
+pe ito
+rs r
+o
+di
+ni b n
+ng ir
+ta d
+bl
+e
+do
+g
+so
+po
+f
+tte ch a
+dp air
+la
+bo nt
+ttl
+e
+
+58.3
+
+43.0 55.0
+
+59.9 58.8 56.9 11.5 45.8 34.9
+
+51.4
+
+51.5
+
+48.6
+
+53.4
+
+23.4
+
+51.9
+
+50.1
+
+49.0
+
+Normalised Average Precision
+
+57.4
+
+45.0 58.6
+
+58.2 59.4 54.9 11.4 50.9 30.4
+
+ro
+
+58.4
+
+46.1 52.7
+
+54.3 58.8 55.1 14.4 48.9 30.6
+
+ae
+
+47.1
+15.2
+
+47.4 52.6
+05.0 12.2
+
+61.0 52.4 49.0 22.6 37.9 27.2
+
+57.1
+
+42.9 51.8
+
+57.5 59.2 50.2 09.9 41.5 21.7
+30.2 14.7 14.9 00.2 06.0 02.2
+
+58.2
+57.0
+
+42.7 51.6
+40.3 57.7
+
+52.5 61.6 56.2 13.4 44.4 25.9
+60.1 60.5 52.2 13.5 54.0 32.6
+
+The leading methods that are not statistically significantly different from each other are highlighted in bold
+
+63.8
+
+47.5 85.2
+
+BONN_JOINT
+
+64.0
+
+46.7 85.0
+
+BONN_CSI
+
+methods below also trained on external data
+
+10.4
+
+60.3
+
+BONN_LINEAR 44.8 83.9
+
+59.5
+65.9
+
+45.3 84.9
+
+46.9 85.1
+
+BONN_CSI
+
+BONN_JOINT
+
+ro
+pl
+pe ane
+rs
+o
+m t n
+ot ra
+or in
+bi
+ke
+bu
+s
+c
+ho at
+rs
+e
+ca
+b r
+bi oa
+cy t
+cl
+e
+do
+tv b g
+m ir
+on d
+sh itor
+ee
+p
+co
+di c w
+ni h
+ng ai
+ta r
+bl
+e
+s
+po b ofa
+o
+tte t
+dp tle
+la
+nt
+
+ae
+
+34.7
+
+34.8
+
+31.7
+
+00.5
+
+35.3
+
+33.4
+
+33.1
+
+29.4
+
+44.2
+
+53.3
+
+44.4
+
+08.8
+
+54.9
+
+44.0
+
+53.6
+
+45.7
+
+Average Precision
+
+29.7 50.5 44.1
+
+32.2 47.8 38.7
+
+34.5 45.5 42.6
+
+03.4 10.7 05.2
+
+40.7 54.1 47.7
+
+29.1 47.8 44.8
+
+29.1 47.3 37.6
+
+28.7 49.8 43.6
+
+Mean Background Aeroplane Bicycle Bird Boat Bottle Bus Car Cat Chair Cow Dining table Dog Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor
+
+Table 13 Bootstrapped segmentation results on all classes
+
+116
+Int J Comput Vis (2015) 111:98–136
+
+100
+80
+
+max
+median
+chance
+
+60
+
+40
+
+20
+0
+
+100
+80
+
+max
+median
+chance
+
+60
+
+40
+
+20
+0
+
+Fig. 7 Effect of normalised AP on 2012 classification results by class.
+Above Standard AP results. Below Normalised AP results. For each
+class three values are shown: the maximum AP obtained by any method
+(max), the median AP over all methods (median) and the AP obtained
+by a random ranking of the images (chance)
+
+5.1.2 Data Preparation and Classifier Training
+
+The feature vector xi that is used to predict the presence or
+absence of a VOC class c in the ith image consists of the
+M real-valued scores xim submitted by each of the methods
+for that image, i.e. it is an M dimensional vector. The scores
+xim are linearly scaled to ensure that the range of values
+spanned by each particular method m in the training data is
+between −1 and 1. The same linear scaling is also applied to
+the feature vectors of the test data.
+For each VOC class a binary classifier is trained to predict
+whether the image contains that object class or not. We use a
+support vector machine (SVM) with a linear kernel, trained
+using LIBSVM (Chang and Lin 2011). An optimal value for
+the parameter C is first found by optimising classification
+performance on a held-out validation set (10 % of the training
+dataset), and then the SVM is trained on all of the training
+data.
+
+5.1.3 Results
+
+Figure 16 shows, for each object class, the improvement
+made by the super-classifier over the best performing method
+
+Int J Comput Vis (2015) 111:98–136
+
+117
+
+70
+
+Average Precision
+
+60
+
+max
+median
+
+50
+40
+30
+20
+10
+
+ae
+r
+m opla
+ot n
+or e
+bi
+ke
+bi bus
+cy
+cl
+e
+ca
+tra t
+tv hor in
+m s
+on e
+ito
+r
+pe ca
+rs r
+on
+d
+sh og
+ee
+di
+ni so p
+ng fa
+ta
+bl
+e
+co
+bo w
+ttl
+e
+bi
+po
+rd
+tte bo
+dp at
+la
+ch nt
+ai
+r
+
+0
+
+Normalised Average Precision
+
+70
+60
+
+max
+median
+
+50
+40
+30
+20
+10
+
+ae
+r
+m opla
+ot n
+or e
+bi
+ke
+bi bus
+cy
+cl
+tra e
+tv ho in
+m rs
+on e
+ito
+r
+ca
+t
+ca
+di
+ni so r
+ng fa
+ta
+sh ble
+ee
+p
+co
+w
+d
+bo og
+ttl
+bo e
+a
+b t
+po pe ird
+tte rs
+dp on
+la
+ch nt
+ai
+r
+
+0
+
+Fig. 8 Effect of normalised AP on 2012 detection results by class.
+Above Standard AP results. Below Normalised AP results. For each
+class two values are shown: the maximum AP obtained by any method
+(max) and the median AP over all methods (median)
+
+at that class. The super-classifier outperforms any individual
+method on 17 out of 20 object classes. On classes where it performs better, it boosts performance by 4.40 % AP on average.
+The highest increase in performance is on the ‘potted plant’
+class, where the super-classifier improves performance by
+13.00 % AP. Where the super-classifier performs worse, the
+performance drops by 0.78 % AP on average. The average
+performance difference across all classes was found to be
++3.62 % AP. We compare the super-classifier’s precision–
+recall curves with those of the other submissions in Fig. 17
+for the ‘person’ and ‘potted plant’ categories.
+5.2 How Much Does Each Method Contribute
+to the Super-Classifier?
+
+Figure 18 displays the magnitude of the learnt weights for
+the scores predicted by each submitted method for the ‘aeroplane’, ‘bicycle’, ‘person’ and ‘sofa’classes. Surprisingly, the
+influence of the different methods varies significantly across
+object classes. Also note that the method with the best performance is not necessarily the strongest influence on the
+performance of the super-classifier (as indicated by the PR
+curves).
+5.3 Who Should Collaborate?
+Classifier combination can also be used to identify pairs of
+methods which make predictions that provide complementary information about each image in question. It might be
+beneficial for the community if such complementary methods incorporate each other’s ideas.
+In order to find these so-called ‘complementary’ pairs,
+we perform two experiments. In the first, we create superclassifiers as above, but using the predictions of only two
+submitted methods as input features at a time. For each object
+class, we select the pair of methods that achieve the highest
+combined performance.
+In the second experiment we proceed as above, except that
+we report the pair of methods whose combined performance
+maximises S1+2 = min(AP1+2 /AP1 , AP1+2 /AP2 ), where
+AP1 and AP2 are the recorded APs for each of the two methods, and AP1+2 is the performance of the super-classifier
+resulting from their combination. This measure ensures that
+the combination boosts the performance of both methods relative to their individual performances.
+We report the results of these two experiments in Tables 14
+and 15. In Table 14, we note that the performance of the
+super-classifier trained using only scores from two methods
+is often significantly higher than the best-performing individual method (e.g. for ‘bottle’, ‘chair’ and ‘potted plant’),
+and for some classes higher than that of the super-classifier
+trained for all methods together (e.g. ‘bicycle’). For all
+classes NUS_SCM is one of the chosen collaborators, which
+is not entirely surprising given its dominating individual performance (see Table 5).
+From Table 15, we note that for several classes a large relative increase in performance can be obtained by combining
+two moderately performing methods.
+5.4 Discussion
+
+To investigate the role that the scores predicted by each of
+the methods plays in training the super-classifier, we examine
+the magnitude of the SVM’s weights for each of its M input
+dimensions. In this case we do not intend to test the performance of the trained SVM but only to inspect its weight vector, so it is trained on all 10,991 feature vectors. As before,
+an optimal value for the C parameter is found via crossvalidation on 10 % of the data.
+
+We have illustrated the idea of combining the output from
+submitted methods for the case of the classification challenge. A similar approach could be carried out for the other
+main challenges, detection and segmentation, and we discuss
+possible solutions here.
+For segmentation we require a VOC class (or background)
+prediction for each pixel (i.e. one of 21 choices) in each test
+
+123
+
+118
+
+Int J Comput Vis (2015) 111:98–136
+a
+
+c
+
+d
+
+e f
+
+Method
+
+b
+
+Test Image
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+Fig. 9 Analysis of the matrix of submissions for classification: aeroplane. Each row corresponds to one of the 73 classification methods
+submitted since 2009. The columns correspond to the test images that
+contain instances of the class, with black indicating a missed classifica-
+
+123
+
+tion. Six different groups of test images have been highlighted in red.
+a–f A selection of images from the different groups. The groups are
+ordered by increasing difficulty (Color figure online)
+
+Int J Comput Vis (2015) 111:98–136
+
+119
+b
+
+c
+
+d
+
+e
+
+f
+
+Method
+
+a
+
+Test Image
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+Fig. 10 Analysis of the matrix of submissions for classification: horse.
+Each row corresponds to one of the 73 classification methods submitted since 2009. The columns correspond to the test images that contain
+instances of the class, with black indicating a missed classification. Six
+
+different groups of test images have been highlighted in red. a–f A
+selection of images from the different groups. The groups are ordered
+by increasing difficulty (Color figure online)
+
+123
+
+120
+
+Int J Comput Vis (2015) 111:98–136
+c
+
+b
+
+e
+
+d
+
+f
+
+Method
+
+a
+
+Test Image
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+Fig. 11 Analysis of the matrix of submissions for classification: bicycle. Each row corresponds to one of the 73 classification methods submitted since 2009. The columns correspond to the test images that contain instances of the class, with black indicating a missed classification.
+
+123
+
+Six different groups of test images have been highlighted in red. a–f A
+selection of images from the different groups. The groups are ordered
+by increasing difficulty (Color figure online)
+
+Int J Comput Vis (2015) 111:98–136
+
+b
+
+c
+
+d
+
+e
+
+f
+
+Method
+
+a
+
+121
+
+Test Image
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+Fig. 12 Analysis of the matrix of submissions for detection: bus. Each
+row corresponds to one of the detection methods submitted since 2009.
+The columns correspond to the instances of objects of the class, with
+black indicating a missed detection. Six different groups of test images
+
+have been highlighted in red. a–f A selection of images from the different groups. The groups are ordered by increasing difficulty (Color
+figure online)
+
+123
+
+122
+
+Int J Comput Vis (2015) 111:98–136
+
+b
+
+c
+
+d
+
+e
+
+f
+
+Method
+
+a
+
+Test Image
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+Fig. 13 Analysis of the matrix of submissions for detection: cat. Each
+row corresponds to one of the detection methods submitted since 2009.
+The columns correspond to the instances of objects of the class, with
+black indicating a missed detection. Six different groups of test images
+
+123
+
+have been highlighted in red. a–f A selection of images from the different groups. The groups are ordered by increasing difficulty (Color
+figure online)
+
+Int J Comput Vis (2015) 111:98–136
+
+b
+
+c
+
+d
+
+e
+
+f
+
+Method
+
+a
+
+123
+
+Test Image
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+Fig. 14 Analysis of the matrix of submissions for detection: tvmonitor.
+Each row corresponds to one of the detection methods submitted since
+2009. The columns correspond to the instances of objects of the class,
+with black indicating a missed detection. Six different groups of test
+
+images have been highlighted in red. a–f A selection of images from
+the different groups. The groups are ordered by increasing difficulty
+(Color figure online)
+
+123
+
+Int J Comput Vis (2015) 111:98–136
+1
+
+1
+
+0.9
+
+0.9
+
+0.8
+
+0.8
+
+0.7
+
+0.7
+
+Precision
+
+Precision
+
+124
+
+0.6
+0.5
+0.4
+0.3
+
+0.5
+0.4
+0.3
+
+0.2
+
+0.2
+
+fold 1 (64.5)
+fold 2 (72.0)
+all test images (68.1)
+
+0.1
+0
+
+0.6
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+submitted methods
+best submitted method (94.7)
+supermethod (97.8)
+
+0.1
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+0
+
+1
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+Recall
+
+Recall
+
+(a)
+
+Fig. 15 Fold variance for super-classifier training/test data. Precision–
+recall curve for a single method on the ‘boat’ class. The two grey curves
+are the method’s performances when evaluated on either half of the test
+data, and the red curve for when evaluated on all the test data (Color
+figure online)
+
+1
+0.9
+0.8
+
+Average Precision
+
+0.8
+
+Precision
+
+0.7
+
+1
+
+0.6
+0.5
+0.4
+0.3
+
+0.6
+0.2
+
+0.4
+
+submitted methods
+best submitted method (58.9)
+supermethod (70.4)
+
+0.1
+0
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+Recall
+
+0.2
+
+(b)
+
+ae
+
+ro
+
+pl
+a
+bi ne
+cy
+cl
+e
+bi
+rd
+bo
+bo at
+ttl
+e
+bu
+s
+ca
+r
+ca
+ch t
+( a
+di −) ir
+ni co
+ng w
+ta
+bl
+e
+(− do
+)h g
+m o
+ot rs
+or e
+bi
+po pe ke
+tte rso
+d n
+(− pla
+)s n
+he t
+ep
+so
+fa
+tv tra
+m in
+on
+ito
+r
+
+0
+
+Fig. 16 AP increase of super-classifier. Gold indicates the increase in
+performance on object classes where the super-classifier beats all other
+methods, averaged across the two folds. The three classes for which
+performance drops slightly have been highlighted in red (Color figure
+online)
+
+image, and we have available the pixel level class predictions for all the submitted methods. Note, we do not have
+confidence scores for the submitted methods. There are various super-segmenters that could then be learnt. The simplest
+would be to take a majority vote for each pixel across all the
+submitted methods. This does not require the ground truth
+annotation and essentially involves no learning. An alternative is to learn a multi-way classifier using the class predictions of the submitted methods as the feature vector. In
+this case, if there are M submitted methods, then the feature vector is a 21M dimensional binary vector, where each
+21 dimensional block arises from one method and only contains one non-zero entry. There is then a choice of multi-way
+classifiers; for example a random forest or softmax logistic regression. There is also a choice in how to sample the
+training data—whether all pixels are used, and whether the
+classes are balanced.
+For detection the combination of predictions is more difficult, as there is a need to first identify which detections
+
+123
+
+Fig. 17 PR curves for super-classifier. Precision–recall curves for the
+submitted methods along with that of the super-classifier for one fold.
+The best performing submitted method is drawn thicker
+
+from the different methods are referring to the same predicted
+object (e.g. based on overlaps between bounding boxes),
+before combining them. This generalises the problem of
+non-maximum suppression for a single predictor (see e.g.
+Dalal and Triggs 2005; Viola and Jones 2004; Felzenszwalb
+et al. 2010; Leibe et al. 2004) to the output of multiple
+predictors.
+
+6 Progress Through Time
+In this section we examine trends over the 2008–2012 timespan of the challenges: trends in the datasets themselves,
+trends in the performance of the algorithms, and trends in
+the methods employed.
+The growth in the amount of data in the main and segmentation datasets is shown graphically in Fig. 19, and in
+detail in Tables 16 and 17. Between 2008 and 2012 the total
+number of images (objects) in the main dataset more than
+doubled from 4,332 (12,684) to 11,540 (31,561). Over the
+same period the number of images (objects) in the segmentation dataset almost trebled from 1,023 (2,369) to 2,913
+(6,934). For action classification, training and testing cases
+
+125
+1
+
+1
+
+0.9
+
+0.9
+
+0.8
+
+0.8
+
+0.8
+
+0.7
+
+0.7
+
+0.7
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.1
+
+0.4
+
+0.5
+
+1
+
+0.3
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+2
+1.5
+1
+
+IT
+
+FU
+
+R
+
+I_
+
+PE
+
+IT
+
+.7
+
+)
+
+4)
+P
+
+(7
+
+(4
+
+3.
+U
+
+.8
+
+2)
+
+)
+
+3)
+I(
+
+(2
+
+53
+
+5.
+
+4)
+L
+IA
+
+P
+
+(6
+
+(6
+
+1.
+
+5.
+
+9)
+
+7)
+8.
+
+0)
+5.
+
+(8
+
+(9
+
+P
+
+VC
+
+VC
+
+_S
+IM
+
+I_
+IT
+
+C
+
+FU
+
+R
+PE
+
+(b)
+
+U
+
+.1
+83
+I(
+IT
+
+L
+IA
+
+8)
+
+)
+
+2)
+7.
+
+6)
+
+(5
+
+1.
+IM
+
+C
+
+VC
+
+P
+
+(9
+
+(9
+
+1.
+
+.1
+
+4)
+
+)
+
+0
+
+(6
+P
+
+(9
+M
+SC
+S_
+
+U
+N
+
+U
+
+0.
+
+7.
+
+4)
+
+)
+.1
+
+(9
+D
+FU
+
+I_
+IT
+
+IM
+
+PE
+
+R
+
+SE
+
+(7
+
+I(
+IT
+
+L
+IA
+
+89
+
+3.
+
+0)
+2.
+
+9.
+
+(9
+P
+
+(8
+
+0.2
+
+0.5
+
+_S
+
+0
+3)
+
+0
+2)
+
+0.5
+
+_S
+
+0.1
+
+Recall
+
+1.5
+
+0.5
+
+VC
+
+0
+
+2.5
+
+VC
+
+1
+
+VC
+
+0
+
+1
+
+3
+
+C
+
+1.5
+
+C
+
+0.9
+
+C
+
+2
+
+C
+
+0.8
+
+Weight Magnitude
+
+2
+
+Weight Magnitude
+
+2.5
+
+(a)
+
+0.7
+
+Recall
+
+2.5
+
+3)
+
+Weight Magnitude
+
+Recall
+
+0.6
+
+7.
+
+0
+
+1
+
+M
+
+0.9
+
+SC
+
+0.8
+
+S_
+
+0.7
+
+U
+
+0.6
+
+N
+
+0.5
+
+M
+
+0.4
+
+SC
+
+0.3
+
+S_
+
+0.2
+
+U
+
+0.1
+
+CVC (61.9)
+CVC_SP (65.4)
+IMPERIAL (25.3)
+ITI (53.8)
+ITI_FUSED (57.2)
+NUS_SCM (73.4)
+UP (4.7)
+
+0.4
+
+0.2
+
+N
+
+0
+
+0.1
+
+6.
+
+0
+
+0.2
+
+(8
+
+0.1
+
+0.5
+
+0.3
+
+D
+
+0.2
+
+0.3
+
+SE
+
+0.3
+
+CVC (91.4)
+CVC_SP (91.6)
+IMPERIAL (57.2)
+ITI (83.1)
+ITI_FUSED (86.8)
+NUS_SCM (95.0)
+UP (88.7)
+
+0.4
+
+0.6
+
+(5
+
+CVC (89.3)
+CVC_SP (92.0)
+IMPERIAL (73.2)
+ITI (89.1)
+ITI_FUSED (90.4)
+NUS_SCM (97.3)
+UP (6.1)
+
+0.4
+
+0.5
+
+D
+
+0.5
+
+0.6
+
+SE
+
+0.6
+
+Precision
+
+1
+0.9
+
+Precision
+
+Precision
+
+Int J Comput Vis (2015) 111:98–136
+
+(c)
+
+Fig. 18 Super-classifier weight vectors and AP. Precision–recall
+curves and bars are colour-coded to indicate matching methods. The
+influence of the methods varies significantly for different object classes.
+Also note that the strongest influence on the performance of the super-
+
+classifier is not necessarily the method with the best performance.
+Method UP is only used in the ‘person’ class since it only participated
+in that class (Color figure online)
+
+went up by about 90 % from 2011 to 2012. Indeed, by 2012
+there were 4588 training and validation images, with about
+400 examples of people carrying out each class of action.
+For the person layout taster, the number of images (objects)
+similarly increased from 245 (367) in 2008 to 609 (850) in
+2012.
+To determine the trends in performance, we evaluate all
+submissions from 2009 to 2012 using the images in the VOC
+2009 test dataset. All submissions since 2009 have provided
+predictions for the VOC 2009 test images, since images were
+only added to the test set over the years; thus this dataset
+provides a common test set for all submissions. For detection,
+we also analyse the submissions using the methods of Hoiem
+et al. (2012), and thereby identify the types of errors occurring
+across time.
+We consider the trends for the classification, detection and
+segmentation tasks in order. As will be seen, originally these
+tasks were treated quite independently by participants, but as
+the challenge progressed there was progressively more crossfertilisation, with detection and segmentation being used to
+enhance the classification performance for example.
+
+ferent years. The diversity in performances has gradually
+increased, as has the highest AP achieved. We also plot, for
+each class, the AP of the best-performing method in each
+year on that class in Fig. 21. This shows improved performance between 2009 and 2012 for all classes, although
+these increases are not always monotonic over the intervening years.
+The basic classification method that was dominant in
+VOC 2007 was the bag-of-visual-words (Csurka et al. 2004).
+Local features were extracted (e.g. SIFT descriptors, Lowe
+2004), vector quantised into a visual vocabulary (e.g. using
+k-means), and each image represented by histograms of how
+often the extracted features were assigned to each visual
+word. A support vector machine (SVM) classifier was then
+used on top of this histogram representation.
+One idea to go beyond the simple bag-of-words (BOW)
+representation was to use histograms on regions of the image,
+e.g. spatial pyramid matching (SPM, Lazebnik et al. 2006),
+where representations for a nested pyramid of regions are
+computed.
+An alternative approach is classification-by-detection,
+making use of the output of a classifier looking at a specific region of the image (e.g. a sliding window detector),
+and combining the results of these detections.
+Over 2008–2012 there were various developments of these
+methods. For example the winning NEC/UIUC entry in 2009
+
+6.1 Classification
+In Fig. 20 we plot histograms of the mean AP scores achieved
+on the classification task by the various methods in the dif-
+
+123
+
+126
+
+Int J Comput Vis (2015) 111:98–136
+
+Table 14 Collaboration table from super-classifiers I
+Class
+
+Top
+
+Method 1
+
+Method 2
+
+AP
+
+Name
+
+AP1
+
+Name
+
+Aeroplane
+
+97.34
+
+UP
+
+6.00
+
+NUS_SCM
+
+Pair combined
+
+All combined
+
+AP2
+
+AP1+2
+
+AP
+
+97.34
+
+97.34
+
+97.41
+
+Bicycle
+
+84.28
+
+ITI_FUSED
+
+65.35
+
+NUS_SCM
+
+84.28
+
+85.30
+
+84.98
+
+Bird
+
+80.89
+
+CVC
+
+69.78
+
+NUS_SCM
+
+80.89
+
+85.09
+
+85.73
+
+Boat
+
+85.52
+
+CVC_SP
+
+77.53
+
+NUS_SCM
+
+85.52
+
+86.38
+
+86.80
+
+Bottle
+
+61.12
+
+CVC_SP
+
+54.37
+
+NUS_SCM
+
+61.12
+
+69.94
+
+70.27
+
+Bus
+
+89.86
+
+CVC
+
+84.79
+
+NUS_SCM
+
+89.86
+
+91.12
+
+91.38
+
+Car
+
+86.87
+
+CVC_SP
+
+81.90
+
+NUS_SCM
+
+86.87
+
+93.07
+
+91.54
+
+Cat
+
+89.37
+
+CVC_SP
+
+76.54
+
+NUS_SCM
+
+89.37
+
+92.19
+
+91.81
+
+Chair
+
+75.56
+
+CVC_SP
+
+65.21
+
+NUS_SCM
+
+75.56
+
+83.49
+
+83.70
+
+Cow
+
+77.88
+
+UP
+
+3.93
+
+NUS_SCM
+
+77.88
+
+77.96
+
+76.35
+
+Dining table
+
+75.24
+
+CVC_SP
+
+68.59
+
+NUS_SCM
+
+75.24
+
+82.26
+
+82.86
+
+Dog
+
+83.19
+
+CVC_SP
+
+68.94
+
+NUS_SCM
+
+83.19
+
+89.25
+
+89.22
+
+Horse
+
+87.53
+
+ITI_FUSED
+
+72.39
+
+NUS_SCM
+
+87.53
+
+88.84
+
+86.73
+
+Motorbike
+
+90.14
+
+CVC
+
+79.21
+
+NUS_SCM
+
+90.14
+
+90.78
+
+91.14
+
+Person
+
+95.11
+
+CVC_SP
+
+91.62
+
+NUS_SCM
+
+95.11
+
+97.87
+
+98.14
+
+Potted plant
+
+57.99
+
+CVC_SP
+
+56.24
+
+NUS_SCM
+
+57.99
+
+70.11
+
+70.99
+
+Sheep
+
+79.34
+
+IMPERIAL
+
+23.86
+
+NUS_SCM
+
+79.34
+
+79.48
+
+79.34
+
+Sofa
+
+73.69
+
+ITI_FUSED
+
+57.42
+
+NUS_SCM
+
+73.69
+
+78.56
+
+79.12
+
+Train
+
+94.49
+
+UP
+
+5.10
+
+NUS_SCM
+
+94.49
+
+94.49
+
+94.62
+
+TV/Monitor
+
+80.95
+
+CVC_SP
+
+77.37
+
+NUS_SCM
+
+80.95
+
+85.75
+
+86.61
+
+Collaborator 1 and 2 (C1 and C2 ) chosen to maximise AP1+2 , the performance of super-classifier resulting from the combination of C1 and C2 .
+Note that the performance of the super-classifier trained using only scores from two methods as input features (second to last column) is often
+significantly higher than the best-performing individual method (second column), and for some classes higher than that of the super-classifier
+trained all methods together (last column). NUS_SCM, the best-performing individual method across all classes, is always chosen to be one of the
+super-classifier collaborators. Bold values indicate highest achieved AP for each class
+
+used local coordinate coding (LCC, Yang et al. 2009) to
+replace the vector quantisation step, so that a feature vector could be represented by more than one template. In 2010
+the winning entry from NUS/PSL used multiple kernels to
+combine BOW-type representations with the outputs of the
+object detector due to Felzenszwalb et al. (2010). The 2011
+entry from the University of Amsterdam used classificationby-detection, but instead of using sliding windows they proposed candidate windows based on multiple segmentations
+(Van de Sande et al. 2011). The 2012 winning entry from
+NUS/PSL was described in Sect. 3.1.
+We note that recent work by Krizhevsky et al. (2012) on
+deep convolutional neural networks (CNNs) has significantly
+outperformed methods similar to those described above on
+the large scale ImageNet classification challenge. These networks, trained on ImageNet, have subsequently been applied
+to VOC classification in two different ways: the first is to
+‘remove’ the final classification layer of the CNN, and use
+the remaining architecture to compute image level features;
+the second is to use the ImageNet data as supervised pretraining, and then refine the network by training with VOC
+data. Both have led to impressive performance improvements
+
+123
+
+35000
+Main − images
+Main − objects
+Segmentation − images
+Segmentation − objects
+
+30000
+25000
+20000
+15000
+10000
+5000
+0
+
+2008
+
+2009
+
+2010
+
+2011
+
+2012
+
+Fig. 19 Summary of the statistics of the VOC datasets over the years
+
+on the VOC classification task (Donahue et al. 2013; Oquab et
+al. 2014; Zeiler and Fergus 2013). This is another important
+development in the image level feature learning/encoding
+story.
+6.2 Detection
+In Fig. 22 we plot histograms of the mean AP scores achieved
+on the detection task by the various methods in the differ-
+
+Int J Comput Vis (2015) 111:98–136
+
+127
+
+Table 15 Collaboration table from super-classifiers II
+Class
+
+Top
+
+Method 1
+
+Method 2
+
+Pair combined
+
+All combined
+
+AP
+
+Name
+
+AP1
+
+Name
+
+AP2
+
+AP1+2
+
+AP
+
+Aeroplane
+
+97.34
+
+ITI
+
+89.09
+
+CVC
+
+89.29
+
+91.03
+
+97.41
+
+Bicycle
+
+84.28
+
+ITI_FUSED
+
+65.35
+
+NUS_SCM
+
+Bird
+
+80.89
+
+CVC
+
+69.78
+
+NUS_SCM
+
+84.28
+
+85.30
+
+84.98
+
+80.89
+
+85.09
+
+Boat
+
+85.52
+
+ITI_FUSED
+
+72.39
+
+CVC
+
+85.73
+
+73.91
+
+74.77
+
+Bottle
+
+61.12
+
+CVC_SP
+
+54.37
+
+86.80
+
+NUS_SCM
+
+61.12
+
+69.94
+
+Bus
+
+89.86
+
+CVC
+
+70.27
+
+84.79
+
+NUS_SCM
+
+89.86
+
+91.12
+
+91.38
+
+Car
+
+86.87
+
+Cat
+
+89.37
+
+CVC_SP
+
+81.90
+
+NUS_SCM
+
+86.87
+
+93.07
+
+91.54
+
+CVC_SP
+
+76.54
+
+NUS_SCM
+
+89.37
+
+92.19
+
+Chair
+
+91.81
+
+75.56
+
+CVC_SP
+
+65.21
+
+NUS_SCM
+
+75.56
+
+83.49
+
+83.70
+
+Cow
+
+77.88
+
+ITI_FUSED
+
+55.37
+
+CVC
+
+59.39
+
+60.16
+
+76.35
+
+Dining table
+
+75.24
+
+CVC_SP
+
+68.59
+
+NUS_SCM
+
+75.24
+
+82.26
+
+82.86
+
+Dog
+
+83.19
+
+CVC_SP
+
+68.94
+
+NUS_SCM
+
+83.19
+
+89.25
+
+89.22
+
+Horse
+
+87.53
+
+ITI_FUSED
+
+72.39
+
+NUS_SCM
+
+87.53
+
+88.84
+
+86.73
+
+Motorbike
+
+90.14
+
+ITI_FUSED
+
+77.39
+
+CVC
+
+79.21
+
+80.68
+
+91.14
+98.14
+
+Person
+
+95.11
+
+UP
+
+88.74
+
+ITI_FUSED
+
+86.78
+
+91.79
+
+Potted plant
+
+57.99
+
+CVC_SP
+
+56.24
+
+NUS_SCM
+
+57.99
+
+70.11
+
+70.99
+
+Sheep
+
+79.34
+
+ITI_FUSED
+
+61.04
+
+CVC
+
+63.09
+
+63.94
+
+79.34
+
+Sofa
+
+73.69
+
+ITI_FUSED
+
+57.42
+
+NUS_SCM
+
+73.69
+
+78.56
+
+79.12
+
+Train
+
+94.49
+
+ITI_FUSED
+
+85.83
+
+CVC
+
+86.77
+
+87.37
+
+94.62
+
+TV/Monitor
+
+80.95
+
+CVC_SP
+
+77.37
+
+NUS_SCM
+
+80.95
+
+85.75
+
+86.61
+
+Collaborator 1 and 2 (C1 and C2 ) chosen to maximise S1+2 , where S1+2 = min(AP1+2 /AP1 , AP1+2 /AP2 ), and AP1+2 is the performance of
+super-classifier resulting from the combination of C1 and C2 . For comparison, the best performance of a single method is shown in the Top AP
+column. Bold values indicate highest achieved AP for each class
+
+ent years. Again the diversity in performances has gradually
+increased, as has the highest AP achieved. We also plot, for
+each class, the AP of the best-performing method in each year
+on that class in Fig. 23. For most classes the AP of the best
+performing method has gradually increased over the years,
+although this trend is less strong than for the classification
+task (see Fig. 21).
+The reference method for object detection in VOC 2008–
+2012 was the deformable part model (DPM; Felzenszwalb
+et al. 2010). The method is based on a coarse scale ‘root’
+filter using a histogram of oriented gradients representation
+(HOG; Dalal and Triggs 2005), plus finer-scale HOG part
+templates that can move relative to the root. This model
+is applied everywhere in the image using efficient sliding
+windows. The outputs are post-processed involving regression to predict the bounding box from the root and part
+locations, greedy non-maximum suppression, and rescoring of each bounding box with an SVM using contextual
+information about the maximal strengths of detections for
+all classes. Teams led by Felzenszwalb were joint winners
+of the challenge in 2008 and 2009, and the released code
+meant that this method was widely used/developed by others.
+
+The team from the National Laboratory of Pattern Recognition, Chinese Academy of Sciences which won in 2010
+enhanced the DPM method by incorporating local binary pattern (LBP) features in addition to HOG, and including spatial,
+global and inter-class context into the post-processing SVM.
+Also in 2010, the MIT/UCLA team (Zhu et al. 2010)
+extended the DPM model by allowing a 3-layer architecture
+(corresponding to a root, parts and sub-parts), and by incorporating data terms involving a histogram of ‘visual words’
+for region appearance as well as HOG features for edges.
+One issue with the DPM is that it performs search densely
+in the image, and uses relatively simple matches between
+the HOG input representation and filters. In VOC 2009,
+Vedaldi et al. (2009) used a cascade of methods of increasing
+complexity using linear, quasi-linear and non-linear kernels,
+with the idea that the more expensive non-linear methods
+need only be run on a subset of locations determined by the
+cheaper methods. In the VOC 2011 and 2012 contests this
+group instead re-scored the top 100 candidates output by the
+DPM, using a SVM with inputs including additional features,
+geometry, and context (described in more detail in Sect. 3.2).
+Another way of avoiding sliding windows search is to
+hypothesise bounding boxes bottom up, e.g. based on mul-
+
+123
+
+123
+
+505
+833
+
+666 432
+1,061 824
+
+765 508
+1,221 999
+
+765 508
+1,221 999
+
+348
+506
+
+471
+663
+
+552
+790
+
+552
+790
+
+325
+654
+
+305
+549
+
+192
+307
+
+207
+453
+258 730 543
+386 1,499 624
+
+100 466 328
+150 1,022 380
+
+Cat
+
+74
+197
+
+668 172
+1,716 403
+
+351
+910
+
+706
+421 1,161 1,080 1,119 303
+1,482 637 2,364 1,227 2,906 702
+
+706
+421 1,161 1,080 1,119 303
+1,482 637 2,364 1,227 2,906 702
+538
+747
+
+538
+747
+
+415
+587
+
+271
+414
+
+105
+218
+328
+503
+
+198
+306
+
+1,286 482
+1,541 750
+
+1,286 482
+1,541 750
+526
+751
+
+526
+751
+
+453
+644
+
+338
+494
+
+204
+297
+
+450
+911
+
+332
+702
+
+180
+436
+
+4,087 527
+10,129 1,099
+
+4,087 527
+10,129 1,099
+
+3548
+8,563
+
+2,779
+6,717
+
+2,002
+5,070
+
+325
+994
+
+325
+994
+
+290
+847
+
+131
+427
+
+64
+234
+
+507
+786
+
+507
+786
+
+406
+611
+
+308
+447
+
+134
+251
+
+544
+656
+
+544
+656
+
+453
+541
+
+324
+391
+
+151
+176
+
+575
+826
+
+575
+826
+
+490
+714
+
+353
+541
+
+215
+299
+
+11,540
+31,561
+
+11,540
+31,561
+
+10,103
+26,691
+
+7,054
+19,539
+
+4,332
+12,684
+
+Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor Total
+
+1,199 425
+1,439 653
+
+649
+790
+
+388
+484
+
+Chair Cow Dining table Dog
+
+583
+353 1,030 1,005 925 248
+1,186 539 2,060 1,142 2,339 553
+
+420
+905
+
+243
+575
+
+Boat Bottle Bus Car
+
+50
+68
+
+77
+101
+
+97
+124
+
+110
+144
+
+144
+197
+
+58
+67
+
+87
+101
+
+116
+136
+
+131
+158
+
+178
+218
+
+208
+277
+
+166
+214
+
+136
+176
+
+107
+138
+
+59
+77
+
+150
+232
+
+117
+176
+
+106
+153
+
+87
+123
+
+60
+87
+
+183
+357
+
+144
+259
+
+117
+176
+
+86
+136
+
+58
+96
+
+80 65
+153 73
+
+89
+188
+
+152 255 250 271
+237 457 286 550
+
+113 187 190 210
+166 345 219 431
+
+99 161 169 170
+147 276 195 348
+
+77 114 98 124
+107 190 116 260
+
+52
+71
+
+135
+284
+
+89
+186
+
+82
+161
+
+66
+129
+
+44
+89
+
+157
+168
+
+120
+127
+
+104
+108
+
+88
+92
+
+67
+71
+
+249
+299
+
+185
+224
+
+156
+194
+
+101
+123
+
+65
+82
+
+147
+204
+
+111
+149
+
+105
+136
+
+92
+117
+
+67
+78
+
+157
+204
+
+112
+139
+
+103
+126
+
+83
+100
+
+59
+75
+
+888
+1,738
+
+632
+1,170
+
+526
+925
+
+417
+720
+
+343
+619
+
+167
+322
+
+127
+229
+
+115
+209
+
+88
+163
+
+60
+128
+
+120
+308
+
+93
+232
+
+83
+209
+
+61
+152
+
+47
+121
+
+183
+209
+
+144
+165
+
+117
+138
+
+97
+117
+
+60
+72
+
+167
+189
+
+125
+138
+
+106
+118
+
+86
+98
+
+57
+66
+
+157
+198
+
+126
+163
+
+113
+148
+
+99
+128
+
+69
+88
+
+2,913
+6,934
+
+2,223
+5,034
+
+1,928
+4,203
+
+1,499
+3,211
+
+1,023
+2,369
+
+For the trainval dataset, the number of images containing at least one object of the given class, and the corresponding number of object instances are shown. Note that because images may
+contain objects of several classes, the totals shown in the images rows are not simply the sum of the corresponding row
+
+2008
+Images
+Objects
+2009
+Images
+Objects
+2010
+Images
+Objects
+2011
+Images
+Objects
+2012
+Images
+Objects
+
+Aeroplane Bicycle Bird Boat Bottle Bus Car Cat Chair Cow Dining table Dog Horse Motorbike Person Potted plant Sheep Sofa Train TV/Monitor Total
+
+Table 17 Statistics of the segmentation dataset over the years
+
+For the trainval dataset, the number of images containing at least one object of the given class, and the corresponding number of object instances are shown. Note that because images may
+contain objects of several classes, the totals shown in the images rows are not simply the sum of the corresponding row
+
+2008
+Images 236
+Objects 370
+2009
+Images 407
+Objects 587
+2010
+Images 579
+Objects 814
+2011
+Images 670
+Objects 954
+2012
+Images 670
+Objects 954
+
+Aeroplane Bicycle Bird
+
+Table 16 Statistics of the main VOC dataset over the years
+
+128
+Int J Comput Vis (2015) 111:98–136
+
+2009
+
+4
+
+2010
+
+4
+
+2011
+
+4
+
+2012
+
+Int J Comput Vis (2015) 111:98–136
+
+4
+
+129
+
+0
+
+0.7
+
+Average Precision
+
+0.8
+
+0
+
+0
+
+0
+
+all
+aeroplane
+bicycle
+bird
+boat
+bottle
+bus
+car
+cat
+chair
+cow
+diningtable
+dog
+horse
+motorbike
+person
+pottedplant
+sheep
+sofa
+train
+tvmonitor
+
+0.6
+0.5
+0.4
+0.3
+0.2
+
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+Average Precision
+
+0.1
+
+Fig. 20 Overall classification AP over the years. The histograms indicate the number of methods whose mean AP score fell in specific ranges
+in each year
+
+2009
+
+2010
+
+2011
+
+2012
+
+Challenge Year
+
+Fig. 23 Detection AP by class over the years. For each year and class
+we plot the AP obtained by the best-performing method at that class in
+that year
+
+1
+all
+aeroplane
+bicycle
+bird
+boat
+bottle
+bus
+car
+cat
+chair
+cow
+diningtable
+dog
+horse
+motorbike
+person
+pottedplant
+sheep
+sofa
+train
+tvmonitor
+
+Average Precision
+
+0.9
+
+0.8
+
+0.7
+
+0.6
+
+0.5
+
+0.4
+
+2009
+
+2010
+
+2011
+
+2012
+
+Challenge Year
+
+2009
+
+3
+
+2010
+
+3
+
+2011
+
+3
+
+2012
+
+Fig. 21 Classification AP by class over the years. For each year and
+class we plot the AP obtained by the best-performing method at that
+class in that year
+
+3
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+Average Precision
+
+Fig. 22 Overall detection AP over the years. The histograms indicate
+the number of methods whose mean AP score fell in specific ranges in
+each year
+
+tiple segmentations (Van de Sande et al. 2011). This is the
+route, termed ‘selective search’, followed by the University
+of Amsterdam entry which won in 2012, and allowed them to
+use more computationally expensive features and classifiers.
+In more recent work (Girshick et al. 2014), the CNN features described in Sect. 6.1 have been used to represent the
+
+selective search bounding boxes, and have achieved a substantial improvement in detection performance.
+6.2.1 Patterns of Errors Through Time
+Hoiem et al. (2012) produced a very interesting analysis of
+patterns of false-positive and false-negative errors made by
+two different detection algorithms on the Pascal VOC 2007
+dataset (for which ground truth is also publicly available for
+the test set). We have carried out a similar analysis on the top
+three performing methods from both 2009 and 2012.
+For false positives (FPs), Hoiem et al (2012, Sect. 2)
+looked at four kinds of errors. These are: localisation, where
+the target category is detected with a misaligned bounding
+box (with overlap between 0.1 and 0.5, while the threshold
+for a correct detection is set at 0.5); confusion with similar objects, where the groups of similar objects are taken
+to be {all vehicles}, {all animals including person}, {chair,
+diningtable, sofa}, {aeroplane, bird}; confusion with other
+VOC objects, describes remaining false positives which have
+at least 0.1 overlap with an object with a non-similar label;
+all other FPs are classified as confusion with background. Let
+the number of true positives of class j in the test set be N j .
+Following Hoiem et al. (2012), we consider the top ranked
+N j detections for class j, and compute the percentage that
+are correct, and the four kinds of errors (localisation, similar
+objects, dissimilar objects, background). These results are
+plotted as pie charts by Hoiem et al (2012, Fig. 2).
+Figure 24 plots these results for three groups (animals,
+vehicles, furniture) and four individual classes from both
+2009 and 2012. For 2012, the three top performing methods were OXFORD, UVA_HYBRID, and UVA_MERGED.
+There is a marked trend that the percentage of background
+errors has increased between 2009 and 2012, while in general the confusions with similar and dissimilar objects have
+decreased.
+
+123
+
+130
+
+Int J Comput Vis (2015) 111:98–136
+
+50
+40
+30
+20
+10
+0
+
+Cor
+
+Loc
+
+Sim
+
+Oth
+
+50
+40
+30
+20
+10
+0
+
+BG
+
+Cor
+
+Loc
+
+Cor
+
+Oth
+
+BG
+
+Cor
+
+Loc
+
+Sim
+
+Oth
+
+50
+40
+30
+20
+10
+0
+
+BG
+
+Cor
+
+Loc
+
+Sim
+
+Oth
+
+50
+40
+30
+20
+10
+0
+
+BG
+
+Cor
+
+bicycle
+
+bird
+
+boat
+
+chair
+
+table
+
+0.8
+
+0.72
+
+airplane
+
+0.4
+
+0.6
+0.47
+0.42
+
+0.39
+
+0.07
+
+0
+
+bicycle
+
+bird
+
+0.55
+
+0.41
+0.38
+0.31
+
+0.36
+0.29
+0.12
+
+0.08
+0.02
+0.00
+
+0.19
+0.16
+0.10
+
+bicycle
+
+0.09
+0.03
+
+0.03
+0.00
+
+0.01
+0.00
+
+bird
+
+boat
+
+0.25
+
+0
+
+chair
+
+table
+
+0.8
+
+0.50
+0.48
+
+airplane
+
+bicycle
+
+bird
+
+0.27
+0.17 0.19
+
+0.27
+0.26
+
+0.17
+0.10
+0.02
+0.00
+
+bicycle
+
+0.78
+
+0.06
+0.00
+
+bird
+
+0.24
+0.23
+
+0.23
+0.16
+0.12
+
+0.16
+0.11
+0.01
+
+boat
+
+0.01
+0.00
+
+chair
+
+0.2
+
+0.21
+
+0
+
+table
+
+0
+
+0.02
+
+0.00
+
+airplane
+
+bicycle
+
+bird
+
+boat
+
+0.06
+0.01
+0.00
+
+0.27
+
+0.11
+0.06
+0.00
+
+0.12
+0.05
+0.01
+
+0.11
+0.09
+0.03
+0.01
+0.00
+0.00
+0.00
+
+XS S M L XL XS S M L XL XS S M L XL XS S M L XL XSS M L XL XSS M L XL XSS M L XL
+
+(a)
+
+0.14
+0.07
+
+0
+
+chair
+
+table
+
+0.55
+0.55
+
+0.52
+0.47 0.47
+
+0.44
+0.30
+0.23
+0.21
+0.18
+
+0.27
+0.26
+
+0.24
+
+0.2
+0.08
+0.03
+0.00
+
+0.02
+0.00
+
+cat
+
+0.59
+0.47
+
+0.4
+
+0.25
+
+0.23
+0.22
+
+0.23
+0.13
+
+0.11
+0.04
+
+0.70
+
+0.33
+
+0.29
+
+0.16
+
+0.36
+
+XS S M L XL XS S M L XL XS S M L XL XS S M L XL XSS M L XL XSS M L XL XSS M L XL
+
+0.6
+0.49
+0.49
+
+0.37
+
+0.00
+
+0.66
+0.61
+
+0.28
+
+0.08
+
+0.8
+
+0.64
+0.49
+
+0.09
+0.01
+
+0.24
+0.18
+
+0.17
+0.15
+
+0.14
+0.02
+0.00
+
+0.39
+
+0.31
+
+0.74
+
+0.62
+
+0.33
+
+table
+
+UVA MERGED: BBox Area
+cat
+
+0.4
+0.2
+
+chair
+
+0.56
+
+0.36
+
+0.74
+
+0.65
+
+0.6
+
+cat
+0.66
+0.65
+
+0.44
+0.43
+
+0.4
+
+XS S M L XL XS S M L XL XS S M L XL XS S M L XL XSS M L XL XSS M L XL XSS M L XL
+
+airplane
+
+boat
+
+0.69
+
+NEC: BBox Area
+0.8
+
+0.04
+0.00
+
+0.59
+
+0.31
+
+0.03
+
+0.15
+
+0.01
+0.00
+
+0.52 0.54
+
+0.50
+0.44
+
+0.00
+
+0.03
+0.01
+
+UVA HYBRID: BBox Area
+
+cat
+
+0.73
+
+0.31
+
+0
+
+0.11
+
+XS S M L XL XS S M L XL XS S M L XL XS S M L XL XSS M L XL XSS M L XL XSS M L XL
+
+0.6
+
+0.2
+
+0.19
+
+0.02
+
+0.02
+0.00
+
+0.58
+0.49
+
+0.41
+
+0.15
+0.13
+
+0.11
+
+0.74
+
+0.6
+
+0.42
+0.38
+
+0.16
+
+0.10
+
+0.10
+0.01
+
+table
+
+0.32
+0.19
+
+0.80
+
+0.4
+
+chair
+
+0.57
+0.55
+0.47
+0.46
+
+0.4
+0.2
+
+XS S M L XL XS S M L XL XS S M L XL XS S M L XL XSS M L XL XSS M L XL XSS M L XL
+
+0.8
+
+cat
+
+0.60
+0.51
+0.45
+
+0.47
+
+0.21
+0.02
+
+airplane
+
+boat
+
+0.76
+0.70
+
+UOC LSVM: BBox Area
+1
+
+BG
+
+0.79
+
+0.60
+
+0.59
+0.44
+0.25
+
+Oth
+
+0.73
+
+0.64
+
+0.22
+
+Sim
+
+belled objects (BG). For each label there are six bars: the left three
+(blue) are 2009 results (OXFORD_MKL, UOC_LSVM, NEC) while
+the right three (yellow) are 2012 results (OXFORD, UVA_HYBRID,
+UVA_MERGED) (Color figure online)
+
+0.8
+
+0.2
+
+Loc
+
+OXFORD: BBox Area
+
+cat
+
+0.86
+
+0.6
+
+BG
+
+2012
+
+OXFORD MKL: BBox Area
+airplane
+
+Oth
+
+(f)
+
+2009
+
+Fig. 24 Patterns of errors through time. Percentage of top-ranked
+detections that are correct (Cor), or are false positives due to poor
+localisation (Loc), confusion with similar objects (Sim), confusion
+with other VOC objects (Oth), or confusion with background or unla-
+
+Sim
+
+(c)
+
+(e)
+
+(d)
+
+1
+
+Loc
+
+(b)
+
+(a)
+50
+40
+30
+20
+10
+0
+
+Sim
+
+50
+40
+30
+20
+10
+0
+
+0.18
+0.15
+0.03
+
+0.00
+
+0.02
+
+0.32
+0.22
+0.10
+0.05
+
+0.10 0.09
+0.02
+0.00
+
+0.09
+0.01
+
+XS S M L XL XS S M L XL XS S M L XL XS S M L XL XSS M L XL XSS M L XL XSS M L XL
+
+(b)
+
+Fig. 25 Per-category analysis of caracteristics: object size.
+norm. prec. det. (‘+’) with standard error bars (red). Black dashed
+lines indicate the overall value of this measure. Key: XS extra-small,
+
+S small, M medium, L large, XL extra-large. Following Hoiem et al.
+(2012) standard error is used for the average precision statistic as a
+measure of significance, rather than confidence bounds
+
+Following Hoiem et al. (2012) we also examined the
+impact of object characteristics (object size, aspect ratio and
+truncation) on false negatives. Object size was measured by
+the bounding box area. Objects in each class were partitioned
+into five size categories, depending on the object’s percentile
+size within its category: extra-small (XS: bottom 10 %), small
+
+(S: next 20 %), medium (M: next 40 %); large (L: next 20 %)
+and extra-large (XL: top 10 %). For aspect ratio (defined as
+bounding box width divided by height), objects were categorised as extra-tall, tall, medium, wide and extra-wide, using
+the same percentiles. For truncation, the Pascal VOC annotation of truncated/not-truncated was used. For object size
+
+123
+
+2009
+
+2
+
+2010
+
+2
+
+2011
+
+2
+
+2012
+
+Int J Comput Vis (2015) 111:98–136
+
+2
+
+131
+70
+
+0
+
+60
+
+all
+aeroplane
+bicycle
+bird
+boat
+bottle
+bus
+car
+cat
+chair
+cow
+diningtable
+dog
+horse
+motorbike
+person
+pottedplant
+sheep
+sofa
+train
+tvmonitor
+
+50
+
+Accuracy
+
+0
+
+0
+
+0
+
+40
+30
+20
+
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+Accuracy
+
+Fig. 26 Overall segmentation accuracy over the years. The histograms
+indicate the number of methods whose mean segmentation accuracy
+score fell in specific ranges in each year
+
+the results are plotted in Fig. 25. For all classes we observe
+trends similar to those noted by Hoiem et al. (2012) in that
+the normalised precision (see Eq. 6) increases as function
+of size, except that there is sometimes a drop for extra-large
+objects, which are often highly truncated. In general (data not
+shown) performance with respect to aspect ratio is better for
+less-extreme aspect ratios, and it is better for non-truncated
+objects than truncated ones (except that the top three methods in 2009 and 2012 all prefer truncated over non-truncated
+cats).
+6.3 Segmentation
+Figure 26 shows histograms of the mean segmentation accuracy scores achieved on the segmentation task by the methods in the different years. Notice that the highest accuracy
+achieved has increased at a steady and significant pace from
+each year to the next.
+Figure 27 shows, for each class, the accuracy of the
+best-performing method in each year on that class. For
+most classes the accuracy of the best performing method
+has increased between 2009 and 2012, although often not
+monotonically with the year. In particular, in the final years
+from 2011 to 2012 there was substantial improvement in all
+classes except bus. This gives hope that there is scope for further improvement in years to come, although note from Table
+17 that there was an increase of over 30 % in the amount of
+data between these years.
+We will now discuss the evolution of the methods used in
+the segmentation challenge since its inception in 2007. In the
+first year of the segmentation challenge we expected few submissions due to the newness of the challenge and so each participant in the detection challenge was entered automatically
+in the segmentation challenge to provide a baseline set of
+methods. This was achieved by filling in the predicted bounding boxes to produce a segmentation. The 2008 segmentation
+competition had six participants and was the first year where
+
+10
+0
+
+2009
+
+2010
+
+2011
+
+2012
+
+Challenge Year
+
+Fig. 27 Segmentation accuracy by class over the years. For each year
+and class we plot the accuracy obtained by the best-performing method
+on that class in that year
+
+the segmentation methods beat the automatic entries from
+the detection challenge. The methods used included:
+– use of bottom-up segmentations (superpixels),
+– MRFs, including high-order potentials,
+– refinement of bounding boxes from a detector,
+– use of image-level classifiers from the classification challenge.
+The 2009 competition had probably the broadest set of
+entries, twelve in all, whose methods built on and extended
+those used in the previous year. Key extensions were:
+– use of multiple bottom-up segmentations to avoid making
+early incorrect boundary decisions,
+– Hierarchical MRFs e.g. modelling object co-occurrence,
+– use of parts-based instance models to refine detections,
+– deeper integration of segmentation model with detection/classification models,
+– use of 3D information.
+
+From 2010 until the final competition in 2012, participants
+used combinations and refinements of these techniques. The
+two dominant methods were: hierarchical random fields with
+a range of potentials, and the use of multiple bottom-up segmentations, combined with a classifier to predict the degree
+of overlap of a segment with an object. In 2012 the number
+of participating organisations was down to three, suggesting that the methods used were performing so well it was
+difficult for a new participant to enter the competition with
+an original method and get competitive results. That said,
+the above results through time suggest that segmentation
+methods are still improving rapidly and we should expect
+further improvements on these methods in the immediate
+future.
+
+123
+
+132
+
+7 Discussion and the Future
+This section appraises certain choices we made in running the
+challenge and gives suggestions for future challenge organisers.
+7.1 Design Choices: What We Think We Got Right
+7.1.1 Standard Method of Assessment
+Having software that provides a standard method of assessment is essential. For the challenge we provided the following: (i) The train, validation and test splits; (ii) A standard
+evaluation protocol; and (iii) Evaluation software that computes the evaluation measures. This includes a baseline classifier, detector and segmenter, and the software to run everything ‘out of the box’, from training through to generating a
+PR curve and AP on the validation (or test) data.
+So, for example, in the classification challenge it is only
+necessary to replace the call to the baseline classifier we
+supplied with a call to the new classifier to be trained and
+evaluated, and then the PR curve and AP measure are generated automatically on the validation data. Providing the splits
+and evaluation code has meant that results on VOC can be
+consistently compared in publications.
+The lesson here is that all challenges should provide code
+for their standard method of assessment. In cases where this is
+not provided we still see many examples in papers of authors
+evaluating the results in different ways—for example some
+using micro-averaging (giving equal weight to each image)
+and others using macro-averaging (giving equal weight to
+each class)—so that results are not comparable.
+It is also a good idea to provide written guidelines for
+annotation, see Pascal VOC annotation guidelines (2012), so
+that there is little ambiguity and instead greater consistency in
+the labelling; and ‘best practice’ guidelines, see Pascal VOC
+best practice guidelines (2012), so that participants know
+how the organisers intend the data to be used for training,
+validation and testing.
+7.1.2 Measuring Performance on the Test Data
+There are (at least) three possibilities on how to obtain the
+performance on the test data from participants: (i) Release
+test data and annotation and participants can assess performance themselves; (ii) Release test data, but test annotation is
+withheld—participants submit results and organisers assess
+performance (e.g. using an evaluation server); (iii) No release
+of test data— participants have to submit software and organisers run this and assess performance.
+We now discuss these options and our reasons for choosing
+(ii). The first option (release test data annotations) is the most
+liberal, but is open to abuse—for example, since participants
+
+123
+
+Int J Comput Vis (2015) 111:98–136
+
+have the test annotations then the test data could be used
+for choosing parameters, and only the best result reported
+(optimising on the test data). There was some evidence that
+this was happening with the VOC 2007 release, and this was
+one of the reasons that we adopted option (ii) from VOC 2008
+onwards.
+In the second option (withhold test annotation) participants simply run their method over the test data and return
+the results (e.g. a confidence score for each image for each
+class for the classification challenge) in a standard form. The
+performance can then be assessed automatically by an evaluation server. Since the data consists of images, there is still
+some danger that performance of different parameter choices
+will be assessed by eye on the test data. It is also theoretically possible for participants to hand-annotate the test data,
+though we rely on participants’ honesty and to some extent
+also the limited time available between the release of the test
+data and submission of the results to prevent this. Note, this
+danger may not apply to other challenges where the test data
+is more abstract than images (e.g. feature vectors).
+The third option (participants submit code) is the most
+safe as there is no release of test data at all. However, there
+are potentially huge computational and software costs both
+in being able to run the supplied software on other machines
+(e.g. the software may use a mix of Matlab/C/GPUs) and
+in providing the computational infrastructure (clusters, sufficient memory) to run the code over the test dataset in a
+reasonable time.
+Given the potential costs of the third option, we adopted
+the second. Other than some participants making multiple
+similar submissions (which contravenes the best practice of
+choosing the method submitted using the validation set),
+there were no problems that we were aware of. Here it should
+be added that in case of multiple submissions, participants
+were forced to select a single submission without knowing
+the respective test scores.
+7.1.3 Augmentation of Dataset Each Year
+Each year new images were added to the dataset and data
+splits (into training, validation and test) of earlier years maintained. The statistics on how the data was augmented are
+given in Tables 16 and 17. Both the number of images and
+number of objects more than doubled between 2008 and
+2012.
+This had a number of useful consequences: first, it has
+mitigated overfitting to the data (which might have happened
+if the data had not changed from year to year); and second,
+since the earlier year’s data is available as subsets, progress
+can be measured from 2008 to 2012 using the same test set.
+For example, the 2009 dataset is a subset of 2010, 2011 and
+2012, and as the assignments to training, validation and test
+are maintained, performance of all methods can be measured
+
+Int J Comput Vis (2015) 111:98–136
+
+each year using the same 2009 test data (albeit with different
+training and validation data each year).
+Note, the alternative of releasing an entirely new dataset
+each year would also prevent overfitting, but the disadvantages are that performance would then be measured on a different test set each year. Also there would be the additional
+cost of preparing entirely new releases of similar sizes, compared to more gradually increasing the sizes.
+7.2 Room for Improvement
+The biggest risk when running a competition like VOC is that
+it reduces the diversity of methods within the community. A
+good strategy for a participant is to make an incremental
+improvement on the previous year’s winning method. New
+methods that have the potential to give substantial improvements may be discarded before they have a chance to mature,
+because they do not yet beat existing mature methods. Our
+attempts to solve this problem were:
+– to add new competitions (such as the segmentation
+and action competitions) with different objectives that
+required new methods to be developed. However, the
+existing challenges were kept largely fixed so that we
+could track progress over time, as we saw in Sect. 6.
+– to encourage novelty explicitly through invited talks and
+novelty prizes at the annual workshop. However, it was
+difficult to assess novelty in an objective fashion and it
+was easier to favour methods which combined an element
+of novelty with close to state-of-the-art performance.
+However, we feel that there is still room for improvement in
+maintaining diversity. To this end, we will now suggest some
+other strategies that may help increase diversity in future
+competitions.
+7.2.1 Multiple Evaluation Metrics
+The design of the evaluation metric for a competition is often
+controversial since small changes in the metric can give substantial advantages to one method or another. Indeed the
+metrics used in each VOC competition have typically been
+changed or refined at least once during the lifetime of the
+competition. These changes may have reduced but not eliminated another type of reduction in diversity: that methods
+may end up overfitting to the particular evaluation metrics
+selected for each competition.
+One possible suggestion that may mitigate this is to use
+and publish several different metrics when evaluating participants in each competition. Each metric should pick up on a
+different aspect of the success of a method. Not only would
+this reduce overfitting but it would provide more detail into
+the strengths and weaknesses of each method, help inform
+collaboration between teams with different strengths, and
+
+133
+
+encourage the discussion and development of informative
+metrics. However, it would still be necessary to combine the
+metrics somehow to determine the competition winner.
+Another suggestion would be to report a diversity metric. This could be a metric across all participants, which
+would allow the diversity to be tracked over time making
+any reduction in diversity more visible and encouraging more
+discussion and improvements relating to diversity. Alternatively (or in addition), there could be an evaluation metric that
+indicates how different each participant is from the average
+participant—effectively giving additional weight to participants that do well on images where other participants do
+badly.
+7.2.2 Community Boosting
+This idea can be taken further by formalising it into a
+community-level boosting algorithm. The idea would be to
+attach weights to each test image and upweight images that
+were poorly handled by the community of methods in the
+previous year’s challenge. These weights would then be used
+when calculating evaluation metrics to favour methods that
+differ from the previous year, and thus encourage greater
+diversity.
+One way this could be achieved in practice would be to
+combine together the previous year’s methods, for example,
+by using a super-classifier like the one used in Sect. 5. This
+super-classifier would then be used as the ‘weak learner’ in
+a standard boosting algorithm to compute the image weights
+for the current year. The result would be a boosting algorithm
+running at one iteration per year. This would have the interesting side benefit of producing a classifier that combined all
+methods of all years into a single ‘strong’ classifier.
+Boosting is known to suffer from overfitting and this could
+be a problem here, although the small number of iterations
+should limit the scope for overfitting. Another issue is this
+could lead the community to focus on specialised solutions
+to niche problems. Nonetheless, we believe this approach
+would be worth considering for future challenges.
+7.2.3 Community Analysis of Results
+Our current analysis has been centred around rather global
+evaluation metrics, i.e. a set of numbers that cannot summarise all aspects. However, as the work by Hoiem et al.
+(2012) has shown, there are many interesting and relevant
+aspects that could well stay under the radar but would warrant further attention. This is especially the case for failure
+cases that may be rare—and would therefore hardly impact
+global performance measures—but nonetheless need solving
+if object recognition is to come of age. It would therefore be
+interesting to make all submissions public, e.g. by extending the evaluation server so that everyone can query them.
+
+123
+
+134
+
+However, this is not our current intention, as it would require
+additional resources, and would also create complications
+with the policy of withholding the testing annotations from
+future participants.
+
+7.3 Conclusions and Impact
+The Pascal VOC challenges and workshops have certainly
+contributed to the surge in interest in category recognition in
+the computer vision community over the last decade, and
+have been mentioned in thousands of papers. They have
+been used for research areas that we did not have in mind
+at all when they were created, such as studying dataset bias
+(Torralba and Efros 2011)—where algorithm performance is
+compared across different training and testing datasets (e.g.
+VOC vs. ImageNet), or automatically inferring attributes for
+each object (e.g. has wheel, has head) with additional annotation provided to support this (Farhadi et al. 2009). Our
+current intention is to keep the VOC 2008–2012 test data
+annotations secret (so as to minimise the effects of overfitting), and to keep the evaluation server available (Pascal
+VOC evaluation server 2012). We have added a leaderboard
+so that future submissions may be easily recorded and compared. We intend for this leaderboard to include the bootstrapping technique described in Sect. 3.5, so that the significance
+of the difference between entries on the leaderboard can be
+assessed.
+We note here some of the particular successes of the
+period. First, has been the development of a new class of
+object category detector, the DPM of Felzenszwalb et al.
+(2010), with open source code provided to the community.
+Second, has been the steady increase in performance over all
+the three main challenges. Third, has been the development of
+cross fertilisations between the challenges—detectors used
+as part of the segmentation and classification methods, and
+(unsupervised) segmentation used to propose windows in
+detection methods—where originally methods were myopic
+in only applying to one of the three challenges. Fourth, VOC
+has contributed to establishing the importance of benchmarks, and in turn has led to efforts to refine and analyse
+the results in more detail, e.g Hoiem et al. (2012). Finally,
+VOC has led to a new generation of challenges with far
+greater number of classes (e.g. ImageNet), with explorations
+of more structure (e.g. parts and attributes), and with finer
+grain visual categorisations (e.g. distinguishing between subordinate classes of flowers, birds, dogs).
+Winston Churchill famously said “democracy is the worst
+form of government except all those other forms that have
+been tried from time to time”. It could equally be said that
+organising a challenge is the worst way to track and encourage progress in a research community, except for all the other
+ways. Certainly a widely adopted challenge can be a curse
+
+123
+
+Int J Comput Vis (2015) 111:98–136
+
+as well as a blessing. In running the Pascal VOC challenge,
+we have tried to steer a course that maximises the community
+benefits and minimises the costs, and believe that we have
+had some reasonable success in doing so. As we move into a
+new generation of machine vision problems, challenges will
+continue to play a critical role in assessing, recognising and
+communicating progress. We wish the organisers of these
+challenges the very best in steering their own paths through
+the uncharted territory ahead.
+Acknowledgments First, we thank all the groups that participated
+in the challenge—without these VOC would just have been a dataset.
+Second, we would like to thank those who have been ‘friends of
+the challenge’—making helpful suggestions and criticisms throughout: Alyosha Efros, David Forsyth, Derek Hoiem, Ivan Laptev, Jitendra
+Malik and Bill Triggs. Third, we thank those who have given additional assistance in developing and maintaining the PASCAL challenge:
+Marcin Eichner, Sam Johnson, Lubor Ladicky, Marcin Marszalek, Arpit
+Mittal and Andrea Vedaldi. In particular, we thank Alexander Sorokin
+for the first version of the evaluation server, and Yusuf Aytar for subsequent versions. Fourth, we gratefully acknowledge the annotators from
+VOC2008 onwards: Yusuf Aytar, Lucia Ballerini, Jan Hendrik Becker,
+Hakan Bilen, Patrick Buehler, Kian Ming Adam Chai, Ken Chatfield,
+Mircea Cimpoi, Miha Drenik, Chris Engels, Basura Fernando, Adrien
+Gaidon, Christoph Godau, Bertan Gunyel, Hedi Harzallah, Nicolas
+Heess, Phoenix/Xuan Huang, Sam Johnson, Zdenek Kalal, Jyri Kivinen,
+Lubor Ladicky, Marcin Marszalek, Markus Mathias, Alastair Moore,
+Maria-Elena Nilsback, Patrick Ott, Kristof Overdulve, Konstantinos
+Rematas, Florian Schroff, Gilad Sharir, Glenn Sheasby, Alexander
+Sorokin, Paul Sturgess, David Tingdahl, Diana Turcsany, Hirofumi
+Uemura, Jan Van Gemert, Johan Van Rompay, Mathias Vercruysse,
+Vibhav Vineet, Martin Vogt, Josiah Wang, Ziming Zhang, Shuai Kyle
+Zheng. Fifth, we are grateful to the IST Programme of the EC under the
+PASCAL2 Network of Excellence, IST-2007-216886 who provided the
+funding for running the VOC challenge, and Michele Sebag and JohnShawe Taylor who coordinated the challenge programme and PASCAL2 respectively. Finally, we would like to thank the anonymous
+reviewers for their encouragement and feedback—their suggestions led
+to significant improvements to the paper.
+
+References
+Alexe, B., Deselaers, T., & Ferrari, V. (2010). What is an object? In Proceedings of Conference on Computer Vision and Pattern Recognition
+(pp. 73–80).
+Alexiou, I., & Bharath, A. (2012). Efficient Kernels couple visual words
+through categorical opponency. In Proceedings of British Machine
+Vision Conference.
+Bertail, P., Clémençon, S. J., & Vayatis, N. (2009). On bootstrapping
+the ROC curve. In D. Koller, D. Schuurmans, Y. Bengio, & L. Bottou
+(Eds.), Advances in Neural Information Processing Systems (Vol. 21,
+pp. 137–144). Red Hook, NY: Curran Associates, Inc.
+Carreira, J., Caseiro, R., Batista, J., & Sminchisescu, C. (2012). Semantic segmentation with second-order pooling. In Proceedings of European Conference on Computer Vision.
+Chang, C. C., & Lin, C. J. (2011). LIBSVM: A library for support
+vector machines. Transactions on Intelligent Systems and Technology, 2, 27:1–27:27. Software available at http://www.csie.ntu.edu.
+tw/~cjlin/libsvm.
+Chen, Q., Song, Z., Hua, Y., Huang, Z., & Yan, S. (2012). Generalized
+hierarchical matching for image classification. In Proceedings of
+Conference on Computer Vision and Pattern Recognition.
+
+Int J Comput Vis (2015) 111:98–136
+Csurka, G., Dance, C., Fan, L., Williamowski, J., & Bray, C. (2004).
+Visual categorization with bags of keypoints. In Proceedings of
+ECCV2004 Workshop on Statistical Learning in Computer Vision
+(pp. 59–74).
+Dalal, N., & Triggs, B. (2005). Histograms of oriented gradients for
+human detection. In Proceedings of Conference on Computer Vision
+and Pattern Recognition.
+Donahue, J., Jia, Y., Vinyals, O., Hoffman, J., Zhang, N., Tzeng, E.,
+& Darrell, T. (2013). Decaf: A deep convolutional activation feature
+for generic visual recognition. CoRR abs/1310.1531.
+Everingham, M., Van Gool, L., Williams, C. K. I., Winn, J., & Zisserman, A. (2010). The PASCAL visual object classes (VOC) challenge.
+International Journal of Computer Vision, 88, 303–338.
+Farhadi, A., Endres, I., Hoiem, D., & Forsyth, D. (2009). Describing objects by their attributes. In Proceedings of Conference
+on Computer Vision and Pattern Recognition, IEEE (pp. 1778–
+1785).
+Felzenszwalb, P. F., Girshick, R. B., McAllester, D., & Ramanan, D.
+(2010). Object detection with discriminatively trained part based
+models. Transactions on Pattern Analysis and Machine Intelligence,
+32(9), 1627–1645.
+Flickr website. (2013). http://www.flickr.com/.
+Girshick, R. B., Donahue, J., Darrell, T., & Malik, J. (2014). Rich feature hierarchies for accurate object detection and semantic segmentation. In Proceedings of Conference on Computer Vision and Pattern
+Recognition.
+Hall, P., Hyndman, R., & Fan, Y. (2004). Nonparametric confidence
+intervals for receiver operating characteristic curves. Biometrika, 91,
+743–50.
+Hoai, M., Ladicky, L., & Zisserman, A. (2012). Action Recognition
+from Still Images by Aligning Body Parts. http://pascallin.ecs.soton.
+ac.uk/challenges/VOC/voc2012/workshop/segmentation_action_
+layout.pdf. Slides contained in the presentation by Luc van Gool
+on Overview and results of the segmentation challenge and action
+taster.
+Hoiem, D., Chodpathumwan, Y., & Dai, Q. (2012). Diagnosing error in
+object detectors. In Proceedings of European Conference on Computer Vision.
+Ion, A., Carreira, J., Sminchisescu, C. (2011a). Image segmentation by
+figure-ground composition into maximal cliques. In Proceedings of
+International Conference on Computer Vision.
+Ion, A., Carreira, J., & Sminchisescu, C. (2011b). Probabilistic joint
+image segmentation and labeling. In J. Shawe-Taylor, R. S. Zemel,
+P. L. Bartlett, F. Pereira, & K. Q. Weinberger (Eds.), Advances in
+Neural Information Processing Systems (Vol. 24, pp. 1827–1835).
+Red Hook, NY: Curran Associates, Inc.
+Karaoglu, S., Van Gemert, J., & Gevers, T. (2012). Object reading: Text
+recognition for object recognition. In Proceedings of ECCV 2012
+Workshops and Gemonstrations.
+Khan, F., Anwer, R., Van de Weijer, J., Bagdanov, A., Vanrell, M.,
+& Lopez, A. M. (2012a). Color attributes for object detection. In
+Proceedings of Conference on Computer Vision and Pattern Recognition.
+Khan, F., Van de Weijer, J., & Vanrell, M. (2012b). Modulating shape
+features by color attention for object recognition. International Journal of Computer Vision, 98(1), 49–64.
+Khosla, A., Yao, B., & Fei-Fei, L. (2011). Combining randomization and
+discrimination for fine-grained image categorization. In Proceedings
+of Conference on Computer Vision and Pattern Recognition.
+Krizhevsky, A., Sutskever, I., Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. In F. Pereira, C.
+J. C. Burges, L. Bottou, & K. Q. Weinberger (Eds.), Advances in
+Neural Information Processing Systems (Vol. 25, pp. 1106–1114).
+Red Hook, NY: Curran Associates, Inc.
+Lazebnik, S., Schmid, C., & Ponce, J. (2006). Beyond bags of features: Spatial pyramid matching for recognizing natural scene cate-
+
+135
+gories. In Proceedings of Conference on Computer Vision and Pattern Recognition (pp 2169–2178).
+Leibe, B., Leonardis, A., & Schiele, B. (2004). Combined object categorization and segmentation with an implicit shape model. In Proceedings of ECCV Workshop on Statistical Learning in Computer
+Vision.
+Lempitsky, V., & Zisserman, A. (2010). Learning to count objects
+in images. In J. D. Lafferty, C. K. I. Williams, J. ShaweTaylor, R. S. Zemel & A. Culotta (Eds.), Advances in Neural
+Information Processing Systems (Vol. 23, pp. 1324–1332). Red
+Hook, NY: Curran Associates, Inc.http://papers.nips.cc/paper/
+4043-learning-to-count-objects-in-images.pdf
+Li, F., Carreira, J., Lebanon, G., & Sminchisescu, C. (2013). Composite
+statistical inference for semantic segmentation. In Proceedings of
+Conference on Computer Vision and Pattern Recognition.
+Lowe, D. G. (2004). Distinctive image features from scale-invariant
+keypoints. International Journal of Computer Vision, 60(2), 91–
+110.
+Nanni, L., & Lumini, A. (2013). Heterogeneous bag-of-features for
+object/scene recognition. Applied Soft Computing, 13(4), 2171–
+2178.
+O’Connor, B. (2010). A response to “comparing PrecisionRecall curves the Bayesian way?”. A comment on the
+blog post by Bob Carpenter on Comparing Precision-Recall
+Curves the Bayesian Way? http://lingpipe-blog.com/2010/01/29/
+comparing-precision-recall-curves-bayesian-way/.
+Oquab, M., Bottou, L., Laptev, I., Sivic, J. (2014). Learning and transferring mid-level image representations using convolutional neural
+networks. In Proceedings of Conference on Computer Vision and
+Pattern Recognition.
+Russakovsky, O., Lin, Y., Yu, K., & Fei-Fei, L. (2012). Object-centric
+spatial pooling for image classification. In Proceedings of European
+Conference on Computer Vision.
+Russell, B., Torralba, A., Murphy, K., & Freeman, W. T. (2008).
+LabelMe: A database and web-based tool for image annotation.
+International Journal of Computer Vision, 77(1–3), 157–173. http://
+labelme.csail.mit.edu/
+Salton, G., & Mcgill, M. J. (1986). Introduction to modern information
+retrieval. New York, NY: McGraw-Hill Inc.
+Sener, F., Bas, C., Ikizler-Cinbis, N. (2012). On recognizing actions in
+still images via multiple features. In Proceedings of ECCV Workshop
+on Action Recognition and Pose Estimation in Still Images.
+Song, Z., Chen, Q., Huang, Z., Hua, Y., & Yan, S. (2011). Contextualizing object detection and classification. In Proceedings of Conference
+on Computer Vision and Pattern Recognition.
+Pascal VOC 2012 challenge results. (2012). http://pascallin.ecs.soton.
+ac.uk/challenges/VOC/voc2012/results/index.html.
+Pascal VOC annotation guidelines. (2012). http://pascallin.ecs.soton.
+ac.uk/challenges/VOC/voc2012/guidelines.html.
+Pascal VOC best practice guidelines. (2012). http://pascallin.ecs.soton.
+ac.uk/challenges/VOC/#bestpractice.
+Pascal VOC evaluation server. (2012) http://host.robots.ox.ac.uk:8080/.
+Torralba, A., & Efros, A. A. (2011). Unbiased look at dataset bias. In
+Proceedings of Conference on Computer Vision and Pattern Recognition, IEEE (pp. 1521–1528).
+Uijlings, J., Van de Sande, K., Gevers, T., & Smeulders, A. (2013).
+Selective search for object recognition. International Journal of
+Computer Vision, 104(2), 154–171.
+Van de Sande, K., Uijlings, J., Gevers, T., & Smeulders, A. (2011). Segmentation as selective search for object recognition. In Proceedings
+of International Conference on Computer Vision.
+Van Gemert, J. (2011). Exploiting photographic style for category-level
+image classification by generalizing the spatial pyramid. In Proceedings of International Conference on Multimedia Retrieval.
+
+123
+
+136
+Vedaldi, A., Gulshan, V., Varma, M., & Zisserman, A. (2009). Multiple
+kernels for object detection. In International Conference on Computer Vision.
+Viola, P., & Jones, M. (2004). Robust real-time object detection. International Journal of Computer Vision, 57(2), 137–154.
+Wang, X., Lin, L., Huang, L., & Yan, S. (2013). Incorporating structural
+alternatives and sharing into hierarchy for multiclass object recognition and detection. In Proceedings of Conference on Computer Vision
+and Pattern Recognition.
+Wasserman, L. (2004). All of statistics. Berlin: Springer.
+Xia, W., Song, Z., Feng, J., Cheong, L. F., & Yan, S. (2012). Segmentation over detection by coupled global and local sparse representations. In Proceedings of European Conference on Computer Vision.
+Yang, J., Yu, K., Gong, Y., & Huang, T. (2009). Linear spatial pyramid
+matching using sparse coding for image classification. In Proceedings of Conference on Computer Vision and Pattern Recognition.
+
+123
+
+Int J Comput Vis (2015) 111:98–136
+Zeiler, M. D., & Fergus, R. (2013). Visualizing and understanding convolutional networks. CoRR abs/1311.2901.
+Zhu, L., Chen, Y., Yuille, A., & Freeman, W. (2010). Latent hierarchical
+structural learning for object detection. In Proceedings of Conference
+on Computer Vision and Pattern Recognition.
+Zisserman, A., Winn, J., Fitzgibbon, A., Van Gool, L., Sivic, J.,
+Williams, C., et al. (2012). In memoriam: Mark Everingham. Transactions on Pattern Analysis and Machine Intelligence, 34(11), 2081–
+2082.
+
+

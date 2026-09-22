@@ -1,0 +1,879 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/7JOETnufxBmkbq4dP9X7b4p2UME</id>
+  <title>arXiv Query: search_query=abs:"MACE-MP-0"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:45:40Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22MACE-MP-0%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>24</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14899v1</id>
+    <title>Data-Efficient Construction of Material-Specific Machine-Learning Interatomic Potentials from Ab Initio Molecular Dynamics Trajectories</title>
+    <updated>2026-08-14T21:12:26Z</updated>
+    <link href="https://arxiv.org/abs/2608.14899v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14899v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pretrained machine-learning interatomic potentials, so-called universal or foundation models offer an appealing starting point for atomistic simulations, but their accuracy for material-specific observables often remains limited without additional reference data (fine-tuning). Here, we systematically quantify how much first-principles data are required to convert universal models into ab initio-accurate material-specific potentials, and ask whether fine-tuning is necessarily preferable to training from scratch. We compare five universal MLIP frameworks, MACE-MP-0, SevenNet-0, GRACE-1L-OAM, MatterSim-v1-5M and ORB-v2, across seven chemically diverse systems incorporating rare and reactive events. Fine-tuning on only 10 AIMD-derived configurations is insufficient for the investigated systems; 200 configurations succeed in favorable cases, but the outcome remains strongly system-dependent. By contrast, 2000 AIMD configurations constitute a robust default, yielding low force and energy errors and reproducing the target material-specific observables. Moderately dense sub-sampling of the AIMD trajectory reduces the required trajectory length tenfold with little loss in model quality. Training from scratch on the same datasets is competitive with, and often slightly more accurate than, naive fine-tuning for MACE and SevenNet, whereas GRACE requires more data. The energy profile for a sulfur-vacancy jump in MoS$_2$ reveals that low trajectory-level errors do not guarantee a correct reaction profile, highlighting the need for observable-level validation. Finally, we show that averaging independently trained models improves predictions in scarce-data regimes at no additional first-principles cost. Together, these results provide practical guidelines for converting limited AIMD reference data into reliable material-specific MLIPs for nanosecond-timescale simulations at near-DFT accuracy.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-14T21:12:26Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jonas Hänseroth</name>
+    </author>
+    <author>
+      <name>Christian Dreßler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11558v1</id>
+    <title>Simulating Ionic Liquid Fragmentation in Electrospray Thrusters with Foundation Models</title>
+    <updated>2026-08-12T01:47:29Z</updated>
+    <link href="https://arxiv.org/abs/2608.11558v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11558v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting the products of ionic-liquid impacts on extractor surfaces is important for electrospray-thruster lifetime analysis, yet available atomistic methods require a compromise between chemical fidelity and computational cost. Reactive force fields enable high-throughput sampling but do not explicitly resolve electronic charge redistribution and may miss relevant reaction pathways during impact, whereas mixed quantum--classical density-functional-theory molecular dynamics (DFT/MD) can capture charge redistribution and neutral-product formation at substantially higher computational cost. Pretrained atomistic foundation models have recently emerged as a potential route toward DFT-like chemical fidelity at considerably lower cost. Here, we benchmark two pretrained machine-learning interatomic potentials, MACE-MP-0 (medium) and MACE-POLAR-1, against DFT/MD and ReaxFF for geometry optimization of 1-ethyl-3-methylimidazolium tetrafluoroborate (EMI-BF$_4$) and for 10-100 eV impacts on a model Au extractor surface. The models reproduce several collision outcomes observed in DFT/MD, including ionic dissociation, high-energy covalent fragmentation, and, in particular, HF formation through neutralization-like chemistry that is not captured in the ReaxFF simulations. In the computational-performance benchmark, MACE-POLAR-1 and MACE-MP-0 (medium) completed each 2~ps trajectory in 5.12 and 2.54~min, respectively, corresponding to wall times approximately four orders of magnitude shorter than the DFT/MD reference under the reported benchmark conditions. These results support pretrained machine-learning potentials as a practical intermediate-cost approach for chemically resolved electrospray-impact simulations and motivate targeted fine-tuning with DFT data for broader applications in electrospray-thruster and electric-propulsion modeling.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T01:47:29Z</published>
+    <arxiv:comment>19 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Ziyu Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.05559v1</id>
+    <title>EquiFiLM: Charge-Conditioned Equivariant Force Fields via Feature-wise Linear Modulation</title>
+    <updated>2026-07-06T18:56:53Z</updated>
+    <link href="https://arxiv.org/abs/2607.05559v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.05559v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation machine learning force fields (MLFFs) such as MACE-MP-0 and UMA cover broad chemical space at near density functional theory (DFT) accuracy. However, they assume equilibrium ground-state physics and do not natively handle externally induced changes to the electronic state, such as charging, applied fields, or electronic excitation, which limits their use for driven processes such as photoexcitation and charge injection. We propose EquiFiLM, a lightweight extension that adds continuous external conditioning to any equivariant foundation MLFF via a per-layer Feature-wise Linear Modulation (FiLM) block, learning externally driven changes to the potential energy surface from minimal training data. The block modulates only scalar channels and preserves E(3)-equivariance exactly. We demonstrate the recipe on charged liquid water with the foundation model MACE-MatPES as the backbone, yielding E-MACE. On the four training charges, E-MACE delivers a $3.1\times$ reduction in force RMSE ($21.3$ to $6.96$ meV/$\mathring{A}$) and a $61\times$ reduction in per-atom energy RMSE ($6.1$ to $0.1$ meV/atom) over a baseline without EquiFiLM trained on the same data, at indistinguishable inference cost. Across seven held-out interpolation and extrapolation charges, force RMSE stays within $18-61$ meV/$\mathring{A}$ and energy RMSE within $0.7-5.4$ meV/atom. The model runs stable molecular dynamics across the full range tested and predicts the charge-dependent first-shell response of the reduced pair distribution function probed by ultrafast electron diffraction. Adding this conditioning axis to the foundation requires only a few thousand DFT-labeled frames, against the $\approx 10^8$ structures of a charge-aware foundation trained from scratch. The recipe is backbone- and conditioning-agnostic: it applies without architectural change to any equivariant MLFF with scalar interaction-layer channels.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-06T18:56:53Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Samuel Sahel-Schackis</name>
+    </author>
+    <author>
+      <name>Ken-ichi Nomura</name>
+    </author>
+    <author>
+      <name>Aiichiro Nakano</name>
+    </author>
+    <author>
+      <name>Matthias F. Kling</name>
+    </author>
+    <author>
+      <name>Thomas Linker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.21311v1</id>
+    <title>Property-Specific Molecular Representations via Feature-Space Transfer Compression</title>
+    <updated>2026-06-19T10:49:40Z</updated>
+    <link href="https://arxiv.org/abs/2606.21311v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.21311v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In many machine learning applications, molecules need to be transformed into representations, i.e. mathematical objects. Those representations are typically considered to be property-agnostic and as such are expected to be over-complete: for different physical properties, different parts or the representation may be relevant. In this work, we propose a method to sub-select and re-weight the representation by adapting it to the property in question. We find that in most cases this makes representations shorter and more accurate at the same time. The feature selection itself uses cheap semi-empirical data instead of high-quality labels. We study four properties (total energy, heat capacity, dipole moment, and polarizability) for three representations (cMBDF, FCHL19, and MACE-MP-0 descriptors) on two datasets (QM9 and VQM24). We can reduce the number of dimensions of a representation in the median by 72\,\% (range 36-98\,\%) while retaining the accuracy. Tuning for accuracy instead we can increase the learning efficiency for dipole moments such that the same accuracy can be reached with 19\,\% of the training data. Our approach yields data-driven interpretations of feature importance, lossless compact representations, and increased data efficiency, requiring only expendable surrogate data.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-19T10:49:40Z</published>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Ali Banjafar</name>
+    </author>
+    <author>
+      <name>Guido Falk von Rudorff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.25032v1</id>
+    <title>Target-Distribution-Guided Cross-Functional Fine-Tuning of Machine-Learning Interatomic Potentials</title>
+    <updated>2026-05-24T12:18:50Z</updated>
+    <link href="https://arxiv.org/abs/2605.25032v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.25032v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cross-functional fine-tuning of machine-learning interatomic potentials (MLIPs) is often treated as a relabeling problem, where configurations generated at one density-functional level are relabeled using a higher-fidelity target functional. However, the resulting training data may be drawn from the wrong equilibrium distribution, because the statistical weights of configurations change across exchange--correlation functionals. Here we address this distribution mismatch using a target-distribution-guided workflow based on self-learning hybrid Monte Carlo (SLHMC), in which trial configurations are proposed by a machine-learning potential and accepted or rejected using target-functional density-functional-theory energies. Using rutile TiO$_2$ as a test system, we fine-tune the MACE-MP-0 foundation potential toward PBE, r$^2$SCAN, and HSE06 target functionals. The resulting adapted potentials reproduce target-anchored nearest-neighbor Ti--O distributions, radial distribution functions, and the NPT cell metrics examined here more accurately than the foundation-model and off-target relabeling controls considered in this work. In particular, HSE06-guided fine-tuning improves structural and thermodynamic properties that are difficult to access with direct hybrid-functional molecular dynamics because of the computational cost of exact exchange. These results indicate that target-distribution coverage is an essential component of cross-functional MLIP transfer, and that accurate target-level labels alone may be insufficient when the configurational distribution is mismatched.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-24T12:18:50Z</published>
+    <arxiv:comment>23 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yuki Nagai</name>
+    </author>
+    <author>
+      <name>Bo Thomsen</name>
+    </author>
+    <author>
+      <name>Motoyuki Shiga</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.13725v1</id>
+    <title>MLIP-MC: A Framework for Adsorption Simulations using Machine-Learned Interatomic Potentials</title>
+    <updated>2026-02-14T11:30:38Z</updated>
+    <link href="https://arxiv.org/abs/2602.13725v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.13725v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Grand canonical Monte Carlo (GCMC) simulations are essential for screening metal-organic frameworks (MOFs) for gas adsorption, yet their accuracy is limited by underlying interatomic potentials. Universal machine-learned interatomic potentials (MLIPs), trained on diverse chemical datasets, promise zero-shot prediction without system-specific training. We introduce MLIP-MC, an open-source Python framework to conduct GCMC simulations with MLIPs, and use this framework to benchmark a series of universal models, including MACE-MP-0, ORB-v3, and fairchem ODAC, for CO2 adsorption on ZIF-8, ZIF-4, and Mg-MOF-74. All universal models exhibit systematic biases, consistently over- or underestimating adsorption energetics. Crucially, accuracy depends on training data composition: only models trained on MOF-adsorbate interactions achieve reasonable agreement with a density functional theory derived reference. Errors grow linearly with CO2 uptake, reflecting compounding inaccuracies in adsorbate-adsorbate interactions. Our results demonstrate that current universal MLIPs require finetuning for quantitative adsorption predictions and demonstrate the power of MLIP-MC to rapidly test models.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-14T11:30:38Z</published>
+    <arxiv:comment>15 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Connor W. Edwards</name>
+    </author>
+    <author>
+      <name>Fengxu Yang</name>
+    </author>
+    <author>
+      <name>Konstantin Stracke</name>
+    </author>
+    <author>
+      <name>Jack D. Evans</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.03642v1</id>
+    <title>Evaluation of Foundational Machine Learned Interatomic Potentials for Migration Barrier Predictions</title>
+    <updated>2025-12-03T10:25:45Z</updated>
+    <link href="https://arxiv.org/abs/2512.03642v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03642v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fast, and accurate prediction of ionic migration barriers ($E_m$) is crucial for designing next-generation battery materials that combine high energy density with facile ion transport. Given the computational costs associated with estimating $E_m$ using conventional density functional theory (DFT) based nudged elastic band (NEB) calculations, we benchmark the accuracy in $E_m$ and geometry predictions of five foundational machine learned interatomic potentials (MLIPs), which can potentially accelerate predictions of ionic transport. Specifically, we assess the accuracy of MACE-MP-0, Orb-v3, SevenNet, CHGNet, and M3GNet models, coupled with the NEB framework, against DFT-NEB-calculated $E_m$ across a diverse set of battery-relevant chemistries and structures. Notably, MACE-MP-0 and Orb-v3 exhibit the lowest mean absolute errors in $E_m$ predictions across the entire dataset and over data points that are not outliers, respectively. Importantly, Orb-v3 and SevenNet classify `good' versus `bad' ionic conductors with an accuracy of $&gt;$82\%, based on a threshold $E_m$ of 500~meV, indicating their utility in high-throughput screening approaches. Notably, intermediate images generated by MACE-MP-0 and SevenNet provide better initial guesses relative to conventional interpolation techniques in $&gt;$71\% of structures, offering a practical route to accelerate subsequent DFT-NEB relaxations. Finally, we observe that accurate $E_m$ predictions by MLIPs are not correlated with accurate (local) geometry predictions. Our work establishes the use-cases, accuracies, and limitations of foundational MLIPs in estimating $E_m$ and should serve as a base for accelerating the discovery of novel ionic conductors for batteries and beyond.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-03T10:25:45Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Achinthya Krishna Bheemaguli</name>
+    </author>
+    <author>
+      <name>Penghao Xiao</name>
+    </author>
+    <author>
+      <name>Gopalakrishnan Sai Gautam</name>
+    </author>
+    <arxiv:doi>10.1039/D5DD00534E</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1039/D5DD00534E" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26998v1</id>
+    <title>Stability and Dynamics of Sn-based Halide Perovskites: Insights from MACE-MP-0 and Molecular Dynamics Simulations</title>
+    <updated>2025-10-30T20:56:38Z</updated>
+    <link href="https://arxiv.org/abs/2510.26998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.26998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tin-based halide perovskites have emerged as promising lead-free alternatives for optoelectronic applications, yet their structural stability and phase behavior at finite temperatures remain challenging to predict. Here, we assess the predictive capabilities of the foundational machine learning model MACE-MP-0 - trained on a broad chemical space and applied without system-specific fine-tuning - for the temperature-dependent behavior of CsSnBr3 and Cs2SnBr6. Molecular Dynamics simulations in the NpT ensemble were performed from 100 K to 500 K, and thermodynamic and structural descriptors including enthalpy, specific heat, radial distribution functions, translational order, bond angle distributions, and vibrational spectra were analyzed. Our results show that CsSnBr3 undergoes a low-temperature orthorhombic-to-cubic phase transition, evidenced by both the evolution of lattice parameters and subtle anomalies in enthalpy and specific heat, although the experimentally observed intermediate tetragonal phase is not captured. In contrast, Cs2SnBr6 remains cubic and maintains a more rigid octahedral framework across the entire temperature range. Overall, MACE-MP-0 qualitatively reproduces key thermal and structural features of these materials, highlighting its usefulness as a first step for studying new materials. For cases where capturing more subtle phase behavior is required, system-specific fine-tuning with Density Functional Theory data should be considered.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-30T20:56:38Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Thiago Puccinelli</name>
+    </author>
+    <author>
+      <name>Lucas Martin Farigliano</name>
+    </author>
+    <author>
+      <name>Gustavo Martini Dalpian</name>
+    </author>
+    <arxiv:doi>10.1007/s43939-026-00678-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s43939-026-00678-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.00721v1</id>
+    <title>Flexible Uncertainty Calibration for Machine-Learned Interatomic Potentials</title>
+    <updated>2025-10-01T09:56:47Z</updated>
+    <link href="https://arxiv.org/abs/2510.00721v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.00721v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reliable uncertainty quantification (UQ) is essential for developing machine-learned interatomic potentials (MLIPs) in predictive atomistic simulations. Conformal prediction (CP) is a statistical framework that constructs prediction intervals with guaranteed coverage under minimal assumptions, making it an attractive tool for UQ. However, existing CP techniques, while offering formal coverage guarantees, often lack accuracy, scalability, and adaptability to the complexity of atomic environments. In this work, we present a flexible uncertainty calibration framework for MLIPs, inspired by CP but reformulated as a parameterized optimization problem. This formulation enables the direct learning of environment-dependent quantile functions, producing sharper and more adaptive predictive intervals at negligible computational cost. Using the foundation model MACE-MP-0 as a representative case, we demonstrate the framework across diverse benchmarks, including ionic crystals, catalytic surfaces, and molecular systems. Our results show order-of-magnitude improvements in uncertainty-error correlation, enhanced data efficiency in active learning, and strong generalization performance, together with reliable transfer of calibrated uncertainties across distinct exchange-correlation functionals. This work establishes a principled and data-efficient approach to uncertainty calibration in MLIPs, providing a practical route toward more trustworthy and transferable atomistic simulations.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-01T09:56:47Z</published>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Cheuk Hin Ho</name>
+    </author>
+    <author>
+      <name>Christoph Ortner</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.09907v2</id>
+    <title>Multi-head committees enable direct uncertainty prediction for atomistic foundation models</title>
+    <updated>2025-09-15T15:08:58Z</updated>
+    <link href="https://arxiv.org/abs/2508.09907v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.09907v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning potentials have become a standard tool for atomistic materials modelling. While models continue to become more generalisable, an open challenge relates to efficient uncertainty predictions for active learning and robust error analysis. In this work, we utilise MACE and its multi-head mechanism to implement a committee neural network potential for message-passing architectures, where the committee comprises multiple output modules attached to the same atomic environment descriptors. As with traditional committees of independent networks, the standard deviation of the predictions functions as an estimate of the model's uncertainty. We show for a range of datasets in custom-build models that the uncertainty of the force predictions correlates well with the true errors. We subsequently apply this concept to foundation models, specifically MACE-MP-0, where we train only the newly attached output heads while keeping the remaining part of the model fixed. We use this approach in an active learning workflow to condense the training set of the foundation model to just 5\% of its original size. The foundation model multi-head committee trained on the condensed training set enables reliable uncertainty estimation without any substantial decrease in prediction accuracy.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-13T16:04:20Z</published>
+    <arxiv:comment>11 pages, 7 figures in main article + supporting information</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Hubert Beck</name>
+    </author>
+    <author>
+      <name>Pavol Simko</name>
+    </author>
+    <author>
+      <name>Lars L. Schaaf</name>
+    </author>
+    <author>
+      <name>Ondrej Marsalek</name>
+    </author>
+    <author>
+      <name>Christoph Schran</name>
+    </author>
+    <arxiv:doi>10.1063/5.0302097</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0302097" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.08215v1</id>
+    <title>Corner-Sharing PS$_4$-BS$_4$ Modes Facilitate Fast Ion Conduction in Lithium Thioborophosphate Iodide Glassy Solid Electrolytes</title>
+    <updated>2025-07-10T23:21:41Z</updated>
+    <link href="https://arxiv.org/abs/2507.08215v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.08215v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Glassy solid electrolytes (GSEs), with their amorphous nature and the absence of grain boundaries, make them highly attractive for applications in all-solid-state lithium batteries (ASSLBs), a leading candidate for next-generation energy storage technologies. A recently developed lithium thioborophosphate iodide GSE, composed of 30Li$_2$S-25B$_2$S$_3$-45LiI-5P$_2$S$_5$ (LBPSI), has demonstrated excellent room-temperature ionic conductivity and low activation energy. Despite this exciting finding, the underlying mechanism behind this ultrafast ion transport remains ambiguous. Here, we accurately fine-tune the foundational MACE-MP-0 model and perform large-scale machine learning molecular dynamics simulations to investigate the structural and ion dynamics in LBPSI GSE. Our results reveal that B$_2$S$_3$ glass formers primarily form multi-bridged B$_x$S$_y$ long-chain networks that impede Li$^+$ conduction. In contrast, P$_2$S$_5$ gives rise to mono-tetrahedral PS$_4$$^{3-}$ and di-tetrahedral P$_2$S$_7$$^{4-}$ tetrahedra, which engage in distinctive corner-sharing modes with BS$_4$$^{5-}$ tetrahedra, effectively disrupting the B$_x$S$_y$ chains and enhancing Li$^+$ mobility. Furthermore, the polyhedral anion rotations of PS$_4$$^{3-}$ and BS$_4$$^{5-}$ in the corner-sharing PS$_4$-BS$_4$ motifs may further promote fast Li$^+$ conduction.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-10T23:21:41Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yun An</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.21935v2</id>
+    <title>Fine-Tuning Universal Machine-Learned Interatomic Potentials: A Tutorial on Methods and Applications</title>
+    <updated>2025-08-22T05:20:08Z</updated>
+    <link href="https://arxiv.org/abs/2506.21935v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.21935v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine-learned interatomic potentials (U-MLIPs) have demonstrated broad applicability across diverse atomistic systems but often require fine-tuning to achieve task-specific accuracy. While the number of available U-MLIPs and their fine-tuning applications is rapidly expanding, there remains a lack of systematic guidance on how to effectively fine-tune these models. This tutorial provides a comprehensive, step-by-step guide to fine-tuning U-MLIPs for computational materials modeling. Using the recently released MACE-MP-0 as a representative foundation model, we illustrate the full workflow of dataset preparation, hyperparameter selection, model training, and validation. Beyond methodological guidance, we conduct systematic case studies on solid-state electrolytes, stacking fault defects in metals, semiconductors, solid-liquid interfacial interactions in low-dimensional systems, and more complicated heterointerfaces. These examples demonstrate that fine-tuning substantially improves predictive accuracy while maintaining affordable computational cost, accelerates training convergence, enhances out-of-distribution generalization, and achieves superior data efficiency. Remarkably, fine-tuned foundation models can even capture aspects of long-range physics without explicit corrections. Together, these results highlight that fine-tuning not only provides a practical recipe for applying U-MLIPs, but also offers new insights into their physical fidelity and potential for advancing large-scale atomistic simulations. To support practical applications, we include code examples that enable researchers, particularly those new to the field, to efficiently incorporate fine-tuned U-MLIPs into their workflows.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-27T06:12:25Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Xiaoqing Liu</name>
+    </author>
+    <author>
+      <name>Kehan Zeng</name>
+    </author>
+    <author>
+      <name>Zedong Luo</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+    <author>
+      <name>Teng Zhao</name>
+    </author>
+    <author>
+      <name>Zhenli Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09256v1</id>
+    <title>Comparing classical and machine learning force fields for modeling deformation of solid sorbents relevant for direct air capture</title>
+    <updated>2025-06-10T21:34:26Z</updated>
+    <link href="https://arxiv.org/abs/2506.09256v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.09256v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Direct air capture (DAC) with solid sorbents such as metal-organic frameworks (MOFs) is a promising approach for negative carbon emissions. Computational materials screening can help identify promising materials from the vast chemical space of potential sorbents. Experiments have shown that MOF framework flexibility and deformation induced by adsorbate molecules can drastically affect adsorption properties such as capacity and selectivity. Force field (FF) models are commonly used as surrogates for more accurate density functional theory (DFT) calculations when modeling sorbents, but most studies using FFs for MOFs assume framework rigidity to simplify calculations. Although flexible FFs for MOFs have been parameterized for specific materials, the generality of FFs for reliably modeling adsorbate-induced deformation to near-DFT accuracy has not been established. This work benchmarks the efficacy of several general FFs in describing adsorbate-induced deformation for DAC against DFT. Specifically, we compare a common classical FF (UFF4MOF) with several machine learning (ML) FFs: M3GNet, CHGNet, MACE-MP-0, MACE-MPA-0, eSEN, and the Equiformer V2 model developed from the recent Open DAC 2023 dataset. Our results show that current classical methods are insufficient for describing framework deformation, especially in cases of interest for DAC where strong interactions exist between adsorbed molecules and MOF frameworks. The emerging ML methods we tested -- particularly CHGNet, MACE-MP-0, and Equiformer V2 -- appear to be more promising than the classical FF for emulating the deformation behavior described by DFT but fail to achieve the accuracy required for practical predictions.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-10T21:34:26Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Logan M. Brabson</name>
+    </author>
+    <author>
+      <name>Andrew J. Medford</name>
+    </author>
+    <author>
+      <name>David S. Sholl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.07401v1</id>
+    <title>A Study on the Fine-Tuning Performance of Universal Machine-Learned Interatomic Potentials (U-MLIPs)</title>
+    <updated>2025-06-09T03:51:23Z</updated>
+    <link href="https://arxiv.org/abs/2506.07401v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.07401v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine-learned interatomic potentials (U-MLIPs) have demonstrated effectiveness across diverse atomistic systems but often require fine-tuning for task-specific accuracy. We investigate the fine-tuning of two MACE-based foundation models, MACE-MP-0 and its variant MACE-MP-0b, and identify key insights. Fine-tuning on task-specific datasets enhances accuracy and, in some cases, outperforms models trained from scratch. Additionally, fine-tuned models benefit from faster convergence due to the strong initial predictions provided by the foundation model. The success of fine-tuning also depends on careful dataset selection, which can be optimized through filtering or active learning. We further discuss practical strategies for achieving better fine-tuning foundation models in atomistic simulations and explore future directions for their development and applications.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-09T03:51:23Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Xiaoqing Liu</name>
+    </author>
+    <author>
+      <name>Kehan Zeng</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+    <author>
+      <name>Teng Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.16984v1</id>
+    <title>Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models</title>
+    <updated>2025-02-24T09:15:38Z</updated>
+    <link href="https://arxiv.org/abs/2502.16984v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.16984v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Artificial intelligence (AI) is transforming materials science, enabling both theoretical advancements and accelerated materials discovery. Recent progress in crystal generation models, which design crystal structures for targeted properties, and foundation atomic models (FAMs), which capture interatomic interactions across the periodic table, has significantly improved inverse materials design. However, an efficient integration of these two approaches remains an open challenge. Here, we present an active learning framework that combines crystal generation models and foundation atomic models to enhance the accuracy and efficiency of inverse design. As a case study, we employ Con-CDVAE to generate candidate crystal structures and MACE-MP-0 FAM as one of the high-throughput screeners for bulk modulus evaluation. Through iterative active learning, we demonstrate that Con-CDVAE progressively improves its accuracy in generating crystals with target properties, highlighting the effectiveness of a property-driven fine-tuning process. Our framework is general to accommodate different crystal generation and foundation atomic models, and establishes a scalable approach for AI-driven materials discovery. By bridging generative modeling with atomic-scale simulations, this work paves the way for more accurate and efficient inverse materials design.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-24T09:15:38Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Zhuoyuan Li</name>
+    </author>
+    <author>
+      <name>Siyu Liu</name>
+    </author>
+    <author>
+      <name>Beilin Ye</name>
+    </author>
+    <author>
+      <name>David J. Srolovitz</name>
+    </author>
+    <author>
+      <name>Tongqi Wen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.04876v1</id>
+    <title>Modelling complex proton transport phenomena -- Exploring the limits of fine-tuning and transferability of foundational machine-learned force fields</title>
+    <updated>2025-01-08T23:20:42Z</updated>
+    <link href="https://arxiv.org/abs/2501.04876v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.04876v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The solid acids CsH$_2$PO$_4$ and Cs$_7$(H$_4$PO$_4$)(H$_2$PO$_4$)$_8$ pose significant challenges for the simulation of proton transport phenomena. In this work, we use the recently developed machine-learned force field (MLFF) MACE to model the proton dynamics on nanosecond time scales for these systems and compare its performance with long-term ab initio molecular dynamics (AIMD) simulations. The MACE-MP-0 foundation model shows remarkable performance for all observables derived from molecular dynamics (MD) simulations, but minor quantitative discrepancies remain compared to the AIMD reference data. However, we show that minimal fine-tuning -- fitting to as little as 1 ps of AIMD data -- leads to full quantitative agreement between the radial distribution functions of MACE force field and AIMD simulations. In addition, we show that traditional long-term AIMD simulations fail to capture the correct qualitative trends in diffusion coefficients and activation energies for these solid acids due to the limited accessible time scale. In contrast, accurate and convergent diffusion coefficients can be reliably obtained through multi-nanosecond long MD simulations using machine-learned force fields. The obtained qualitative and quantitative behavior of the converged diffusion coefficients and activation energies now matches the experimental trends for both solid acids, in contrast to previous AIMD simulations that yielded a qualitatively wrong picture.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-08T23:20:42Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <arxiv:journal_ref>The Journal of Physical Chemistry C 2025 129 (21), 9662-9669</arxiv:journal_ref>
+    <author>
+      <name>Malte Grunert</name>
+    </author>
+    <author>
+      <name>Max Großmann</name>
+    </author>
+    <author>
+      <name>Jonas Hänseroth</name>
+    </author>
+    <author>
+      <name>Aaron Flötotto</name>
+    </author>
+    <author>
+      <name>Jules Oumard</name>
+    </author>
+    <author>
+      <name>Johannes Laurenz Wolf</name>
+    </author>
+    <author>
+      <name>Erich Runge</name>
+    </author>
+    <author>
+      <name>Christian Dreßler</name>
+    </author>
+    <arxiv:doi>10.1021/acs.jpcc.5c02064</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.jpcc.5c02064" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.02877v3</id>
+    <title>Machine Learned Potential for High-Throughput Phonon Calculations of Metal-Organic Frameworks</title>
+    <updated>2025-02-27T17:40:20Z</updated>
+    <link href="https://arxiv.org/abs/2412.02877v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.02877v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Metal-organic frameworks (MOFs) are highly porous and versatile materials studied extensively for applications such as carbon capture and water harvesting. However, computing phonon-mediated properties in MOFs, like thermal expansion and mechanical stability, remains challenging due to the large number of atoms per unit cell, making traditional Density Functional Theory (DFT) methods impractical for high-throughput screening. Recent advances in machine learning potentials have led to foundation atomistic models, such as MACE-MP-0, that accurately predict equilibrium structures but struggle with phonon properties of MOFs. In this work, we developed a workflow for computing phonons in MOFs within the quasi-harmonic approximation with a fine-tuned MACE model, MACE-MP-MOF0. The model was trained on a curated dataset of 127 representative and diverse MOFs. The fine-tuned MACE-MP-MOF0 improves the accuracy of phonon density of states and corrects the imaginary phonon modes of MACE-MP-0, enabling high-throughput phonon calculations with state-of-the-art precision. The model successfully predicts thermal expansion and bulk moduli in agreement with DFT and experimental data for several well-known MOFs. These results highlight the potential of MACE-MP-MOF0 in guiding MOF design for applications in energy storage and thermoelectrics.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-03T22:25:10Z</published>
+    <arxiv:comment>17 pages, 8 Figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Alin Marin Elena</name>
+      <arxiv:affiliation>Scientific Computing Department, Science and Technology Facilities Council, Cheshire, UK</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Prathami Divakar Kamath</name>
+      <arxiv:affiliation>Department of Materials Science and Engineering, University of California Berkley, California, USA</arxiv:affiliation>
+      <arxiv:affiliation>Materials Sciences Division, Lawrence Berkeley National Laboratory, California, USA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Théo Jaffrelot Inizan</name>
+      <arxiv:affiliation>Department of Materials Science and Engineering, University of California Berkley, California, USA</arxiv:affiliation>
+      <arxiv:affiliation>Materials Sciences Division, Lawrence Berkeley National Laboratory, California, USA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrew S. Rosen</name>
+      <arxiv:affiliation>Department of Materials Science and Engineering, University of California Berkley, California, USA</arxiv:affiliation>
+      <arxiv:affiliation>Materials Sciences Division, Lawrence Berkeley National Laboratory, California, USA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Federica Zanca</name>
+      <arxiv:affiliation>Scientific Computing Department, Science and Technology Facilities Council, Cheshire, UK</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kristin A. Persson</name>
+      <arxiv:affiliation>Department of Materials Science and Engineering, University of California Berkley, California, USA</arxiv:affiliation>
+      <arxiv:affiliation>Materials Sciences Division, Lawrence Berkeley National Laboratory, California, USA</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.00436v1</id>
+    <title>Modelling Silica using MACE-MP-0 Machine Learnt Interatomic Potentials</title>
+    <updated>2024-11-01T08:02:02Z</updated>
+    <link href="https://arxiv.org/abs/2411.00436v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.00436v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Silica polymorphs and zeolites are fundamental to a wide range of industrial applications owing to their diverse structural characteristics, thermodynamic and mechanical stability under varying conditions and due to their geological importance. Computational modelling has played a crucial role in understanding the relationship between the structure and functionality of silicas and silicates including zeolites. In this study, we apply the MACE-MP-0 machine learnt interatomic potentials (ML-IP) to model the framework energies of siliceous zeolites and examine the phase transitions of silica and ZSM-5 polymorphs under high-pressure conditions. The results reproduce the known metastability of siliceous zeolites relative to α-quartz, with energy differences between microporous and dense phases calculated by MACE-MP-0 medium ML-IP and density functional theory (DFT) methods closely aligning with experimental calorimetric data. The high-pressure simulations reveal distinct compression behaviour in the quartz, coesite, and stishovite polymorphs of silica, with coesite and stishovite showing increased stability at elevated pressures in line with experimental data. The calculated phase transition pressures from quartz to coesite (~3.5 GPa) and coesite to stishovite (~9 GPa) are close to experimental findings, demonstrating the reliability of MACE ML-IP in modelling the structural and energetic properties of silica polymorphs.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-01T08:02:02Z</published>
+    <arxiv:comment>21 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jamal Abdul Nasir</name>
+    </author>
+    <author>
+      <name>Jingcheng Guan</name>
+    </author>
+    <author>
+      <name>Woongkyu Jee</name>
+    </author>
+    <author>
+      <name>Scott M. Woodley</name>
+    </author>
+    <author>
+      <name>Alexey A. Sokol</name>
+    </author>
+    <author>
+      <name>C. Richard A. Catlow</name>
+    </author>
+    <author>
+      <name>Alin Marin Elena</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.23679v1</id>
+    <title>Performance of the MACE-MP-0 potential for calculating viscosity in LiF molten salt</title>
+    <updated>2024-10-31T07:05:10Z</updated>
+    <link href="https://arxiv.org/abs/2410.23679v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.23679v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We perform molecular dynamics simulations of molten Lithium Fluoride using the MACE-MP-0 (small) machine learnt interatomic potential and the classical Buckingham and Born-Huggins-Mayer potentials. We find that the MACE-MP-0, out-of-the-box, is able to accurately reproduce the experimental viscosity across the liquid state. Whilst the previous predicted viscosities from classical potentials are under-predicted, which has previously been attributed to a suppressed melting temperature. We find that the melting temperature simulated by MACE-MP-0, simply by heating a crystal structure, is significantly closer to the experimental melting temperature of LiF.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-31T07:05:10Z</published>
+    <arxiv:comment>7 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Harvey L. Devereux</name>
+    </author>
+    <author>
+      <name>Margaret-Ann Withington</name>
+    </author>
+    <author>
+      <name>Cillian Cockrell</name>
+    </author>
+    <author>
+      <name>Kostya Trachenko</name>
+    </author>
+    <author>
+      <name>Alin Marin Elena</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.20217v1</id>
+    <title>Data-efficient fine-tuning of foundational models for first-principles quality sublimation enthalpies</title>
+    <updated>2024-05-30T16:18:29Z</updated>
+    <link href="https://arxiv.org/abs/2405.20217v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.20217v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Calculating sublimation enthalpies of molecular crystal polymorphs is relevant to a wide range of technological applications. However, predicting these quantities at first-principles accuracy -- even with the aid of machine learning potentials -- is a challenge that requires sub-kJ/mol accuracy in the potential energy surface and finite-temperature sampling. We present an accurate and data-efficient protocol based on fine-tuning of the foundational MACE-MP-0 model and showcase its capabilities on sublimation enthalpies and physical properties of ice polymorphs. Our approach requires only a few tens of training structures to achieve sub-kJ/mol accuracy in the sublimation enthalpies and sub 1 % error in densities for polymorphs at finite temperature and pressure. Exploiting this data efficiency, we explore simulations of hexagonal ice at the random phase approximation level of theory at experimental temperatures and pressures, calculating its physical properties, like pair correlation function and density, with good agreement with experiments. Our approach provides a way forward for predicting the stability of molecular crystals at finite thermodynamic conditions with the accuracy of correlated electronic structure theory.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-30T16:18:29Z</published>
+    <arxiv:comment>9 pages; 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Harveen Kaur</name>
+    </author>
+    <author>
+      <name>Flaviano Della Pia</name>
+    </author>
+    <author>
+      <name>Ilyes Batatia</name>
+    </author>
+    <author>
+      <name>Xavier R. Advincula</name>
+    </author>
+    <author>
+      <name>Benjamin X. Shi</name>
+    </author>
+    <author>
+      <name>Jinggang Lan</name>
+    </author>
+    <author>
+      <name>Gábor Csányi</name>
+    </author>
+    <author>
+      <name>Angelos Michaelides</name>
+    </author>
+    <author>
+      <name>Venkat Kapil</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.07105v1</id>
+    <title>Overcoming systematic softening in universal machine learning interatomic potentials by fine-tuning</title>
+    <updated>2024-05-11T22:30:47Z</updated>
+    <link href="https://arxiv.org/abs/2405.07105v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.07105v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning interatomic potentials (MLIPs) have introduced a new paradigm for atomic simulations. Recent advancements have seen the emergence of universal MLIPs (uMLIPs) that are pre-trained on diverse materials datasets, providing opportunities for both ready-to-use universal force fields and robust foundations for downstream machine learning refinements. However, their performance in extrapolating to out-of-distribution complex atomic environments remains unclear. In this study, we highlight a consistent potential energy surface (PES) softening effect in three uMLIPs: M3GNet, CHGNet, and MACE-MP-0, which is characterized by energy and force under-prediction in a series of atomic-modeling benchmarks including surfaces, defects, solid-solution energetics, phonon vibration modes, ion migration barriers, and general high-energy states.
+  We find that the PES softening behavior originates from a systematic underprediction error of the PES curvature, which derives from the biased sampling of near-equilibrium atomic arrangements in uMLIP pre-training datasets. We demonstrate that the PES softening issue can be effectively rectified by fine-tuning with a single additional data point. Our findings suggest that a considerable fraction of uMLIP errors are highly systematic, and can therefore be efficiently corrected. This result rationalizes the data-efficient fine-tuning performance boost commonly observed with foundational MLIPs. We argue for the importance of a comprehensive materials dataset with improved PES sampling for next-generation foundational MLIPs.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-11T22:30:47Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Bowen Deng</name>
+    </author>
+    <author>
+      <name>Yunyeong Choi</name>
+    </author>
+    <author>
+      <name>Peichen Zhong</name>
+    </author>
+    <author>
+      <name>Janosh Riebesell</name>
+    </author>
+    <author>
+      <name>Shashwat Anand</name>
+    </author>
+    <author>
+      <name>Zhuohan Li</name>
+    </author>
+    <author>
+      <name>KyuJung Jun</name>
+    </author>
+    <author>
+      <name>Kristin A. Persson</name>
+    </author>
+    <author>
+      <name>Gerbrand Ceder</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.00290v3</id>
+    <title>How Graph Neural Network Interatomic Potentials Extrapolate: Role of the Message-Passing Algorithm</title>
+    <updated>2024-12-05T06:49:06Z</updated>
+    <link href="https://arxiv.org/abs/2405.00290v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.00290v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural network interatomic potentials (GNN-IPs) are gaining significant attention due to their capability of learning from large datasets. Specifically, universal interatomic potentials based on GNN, usually trained with crystalline geometries, often exhibit remarkable extrapolative behavior towards untrained domains, such as surfaces or amorphous configurations. However, the origin of this extrapolation capability is not well understood. This work provides a theoretical explanation of how GNN-IPs extrapolate to untrained geometries. First, we demonstrate that GNN-IPs can capture non-local electrostatic interactions through the message-passing algorithm, as evidenced by tests on toy models and DFT data. We find that GNN-IP models, SevenNet and MACE, accurately predict electrostatic forces in untrained domains, indicating that they have learned the exact functional form of the Coulomb interaction. Based on these results, we suggest that the ability to learn non-local electrostatic interactions, coupled with the embedding nature of GNN-IPs, explains their extrapolation ability. We find that the universal GNN-IP, SevenNet-0, effectively infers non-local Coulomb interactions in untrained domains but fails to extrapolate the non-local forces arising from the kinetic term, which supports the suggested theory. Finally, we address the impact of hyperparameters on the extrapolation performance of universal potentials, such as SevenNet-0 and MACE-MP-0, and discuss the limitations of the extrapolation capabilities.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-01T02:55:15Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>J. Chem. Phys. 161, 244102 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Sungwoo Kang</name>
+    </author>
+    <arxiv:doi>10.1063/5.0234287</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0234287" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.00259v1</id>
+    <title>Deciphering diffuse scattering with machine learning and the equivariant foundation model: The case of molten FeO</title>
+    <updated>2024-03-01T03:50:03Z</updated>
+    <link href="https://arxiv.org/abs/2403.00259v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.00259v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bridging the gap between diffuse x-ray or neutron scattering measurements and predicted structures derived from atom-atom pair potentials in disordered materials, has been a longstanding challenge in condensed matter physics. This perspective gives a brief overview of the traditional approaches employed over the past several decades. Namely, the use of approximate interatomic pair potentials that relate 3-dimensional structural models to the measured structure factor and its associated pair distribution function. The use of machine learned interatomic potentials has grown in the past few years, and has been particularly successful in the cases of ionic and oxide systems. Recent advances in large scale sampling, along with a direct integration of scattering measurements into the model development, has provided improved agreement between experiments and large-scale models calculated with quantum mechanical accuracy. However, details of local polyhedral bonding and connectivity in meta-stable disordered systems still require improvement. Here we leverage MACE-MP-0; a newly introduced equivariant foundation model and validate the results against high-quality experimental scattering data for the case of molten iron(II) oxide (FeO). These preliminary results suggest that the emerging foundation model has the potential to surpass the traditional limitations of classical interatomic potentials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-01T03:50:03Z</published>
+    <arxiv:comment>9 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Ganesh Sivaraman</name>
+    </author>
+    <author>
+      <name>Chris J. Benmore</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00096v3</id>
+    <title>A foundation model for atomistic materials chemistry</title>
+    <updated>2025-09-04T13:50:21Z</updated>
+    <link href="https://arxiv.org/abs/2401.00096v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.00096v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomistic simulations of matter, especially those that leverage first-principles (ab initio) electronic structure theory, provide a microscopic view of the world, underpinning much of our understanding of chemistry and materials science. Over the last decade or so, machine-learned force fields have transformed atomistic modeling by enabling simulations of ab initio quality over unprecedented time and length scales. However, early ML force fields have largely been limited by: (i) the substantial computational and human effort of developing and validating potentials for each particular system of interest; and (ii) a general lack of transferability from one chemical system to the next. Here we show that it is possible to create a general-purpose atomistic ML model, trained on a public dataset of moderate size, that is capable of running stable molecular dynamics for a wide range of molecules and materials. We demonstrate the power of the MACE-MP-0 model - and its qualitative and at times quantitative accuracy - on a diverse set of problems in the physical sciences, including properties of solids, liquids, gases, chemical reactions, interfaces and even the dynamics of a small protein. The model can be applied out of the box as a starting or "foundation" model for any atomistic system of interest and, when desired, can be fine-tuned on just a handful of application-specific data points to reach ab initio accuracy. Establishing that a stable force-field model can cover almost all materials changes atomistic modeling in a fundamental way: experienced users get reliable results much faster, and beginners face a lower barrier to entry. Foundation models thus represent a step towards democratising the revolution in atomic-scale modeling that has been brought about by ML force fields.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-29T23:08:59Z</published>
+    <arxiv:comment>154 pages, 83 figures, 80MB PDF</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Ilyes Batatia</name>
+    </author>
+    <author>
+      <name>Philipp Benner</name>
+    </author>
+    <author>
+      <name>Yuan Chiang</name>
+    </author>
+    <author>
+      <name>Alin M. Elena</name>
+    </author>
+    <author>
+      <name>Dávid P. Kovács</name>
+    </author>
+    <author>
+      <name>Janosh Riebesell</name>
+    </author>
+    <author>
+      <name>Xavier R. Advincula</name>
+    </author>
+    <author>
+      <name>Mark Asta</name>
+    </author>
+    <author>
+      <name>Matthew Avaylon</name>
+    </author>
+    <author>
+      <name>William J. Baldwin</name>
+    </author>
+    <author>
+      <name>Fabian Berger</name>
+    </author>
+    <author>
+      <name>Noam Bernstein</name>
+    </author>
+    <author>
+      <name>Arghya Bhowmik</name>
+    </author>
+    <author>
+      <name>Filippo Bigi</name>
+    </author>
+    <author>
+      <name>Samuel M. Blau</name>
+    </author>
+    <author>
+      <name>Vlad Cărare</name>
+    </author>
+    <author>
+      <name>Michele Ceriotti</name>
+    </author>
+    <author>
+      <name>Sanggyu Chong</name>
+    </author>
+    <author>
+      <name>James P. Darby</name>
+    </author>
+    <author>
+      <name>Sandip De</name>
+    </author>
+    <author>
+      <name>Flaviano Della Pia</name>
+    </author>
+    <author>
+      <name>Volker L. Deringer</name>
+    </author>
+    <author>
+      <name>Rokas Elijošius</name>
+    </author>
+    <author>
+      <name>Zakariya El-Machachi</name>
+    </author>
+    <author>
+      <name>Fabio Falcioni</name>
+    </author>
+    <author>
+      <name>Edvin Fako</name>
+    </author>
+    <author>
+      <name>Andrea C. Ferrari</name>
+    </author>
+    <author>
+      <name>John L. A. Gardner</name>
+    </author>
+    <author>
+      <name>Mikolaj J. Gawkowski</name>
+    </author>
+    <author>
+      <name>Annalena Genreith-Schriever</name>
+    </author>
+    <author>
+      <name>Janine George</name>
+    </author>
+    <author>
+      <name>Rhys E. A. Goodall</name>
+    </author>
+    <author>
+      <name>Jonas Grandel</name>
+    </author>
+    <author>
+      <name>Clare P. Grey</name>
+    </author>
+    <author>
+      <name>Petr Grigorev</name>
+    </author>
+    <author>
+      <name>Shuang Han</name>
+    </author>
+    <author>
+      <name>Will Handley</name>
+    </author>
+    <author>
+      <name>Hendrik H. Heenen</name>
+    </author>
+    <author>
+      <name>Kersti Hermansson</name>
+    </author>
+    <author>
+      <name>Christian Holm</name>
+    </author>
+    <author>
+      <name>Cheuk Hin Ho</name>
+    </author>
+    <author>
+      <name>Stephan Hofmann</name>
+    </author>
+    <author>
+      <name>Jad Jaafar</name>
+    </author>
+    <author>
+      <name>Konstantin S. Jakob</name>
+    </author>
+    <author>
+      <name>Hyunwook Jung</name>
+    </author>
+    <author>
+      <name>Venkat Kapil</name>
+    </author>
+    <author>
+      <name>Aaron D. Kaplan</name>
+    </author>
+    <author>
+      <name>Nima Karimitari</name>
+    </author>
+    <author>
+      <name>James R. Kermode</name>
+    </author>
+    <author>
+      <name>Panagiotis Kourtis</name>
+    </author>
+    <author>
+      <name>Namu Kroupa</name>
+    </author>
+    <author>
+      <name>Jolla Kullgren</name>
+    </author>
+    <author>
+      <name>Matthew C. Kuner</name>
+    </author>
+    <author>
+      <name>Domantas Kuryla</name>
+    </author>
+    <author>
+      <name>Guoda Liepuoniute</name>
+    </author>
+    <author>
+      <name>Chen Lin</name>
+    </author>
+    <author>
+      <name>Johannes T. Margraf</name>
+    </author>
+    <author>
+      <name>Ioan-Bogdan Magdău</name>
+    </author>
+    <author>
+      <name>Angelos Michaelides</name>
+    </author>
+    <author>
+      <name>J. Harry Moore</name>
+    </author>
+    <author>
+      <name>Aakash A. Naik</name>
+    </author>
+    <author>
+      <name>Samuel P. Niblett</name>
+    </author>
+    <author>
+      <name>Sam Walton Norwood</name>
+    </author>
+    <author>
+      <name>Niamh O'Neill</name>
+    </author>
+    <author>
+      <name>Christoph Ortner</name>
+    </author>
+    <author>
+      <name>Kristin A. Persson</name>
+    </author>
+    <author>
+      <name>Karsten Reuter</name>
+    </author>
+    <author>
+      <name>Andrew S. Rosen</name>
+    </author>
+    <author>
+      <name>Louise A. M. Rosset</name>
+    </author>
+    <author>
+      <name>Lars L. Schaaf</name>
+    </author>
+    <author>
+      <name>Christoph Schran</name>
+    </author>
+    <author>
+      <name>Benjamin X. Shi</name>
+    </author>
+    <author>
+      <name>Eric Sivonxay</name>
+    </author>
+    <author>
+      <name>Tamás K. Stenczel</name>
+    </author>
+    <author>
+      <name>Viktor Svahn</name>
+    </author>
+    <author>
+      <name>Christopher Sutton</name>
+    </author>
+    <author>
+      <name>Thomas D. Swinburne</name>
+    </author>
+    <author>
+      <name>Jules Tilly</name>
+    </author>
+    <author>
+      <name>Cas van der Oord</name>
+    </author>
+    <author>
+      <name>Santiago Vargas</name>
+    </author>
+    <author>
+      <name>Eszter Varga-Umbrich</name>
+    </author>
+    <author>
+      <name>Tejs Vegge</name>
+    </author>
+    <author>
+      <name>Martin Vondrák</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+    <author>
+      <name>William C. Witt</name>
+    </author>
+    <author>
+      <name>Thomas Wolf</name>
+    </author>
+    <author>
+      <name>Fabian Zills</name>
+    </author>
+    <author>
+      <name>Gábor Csányi</name>
+    </author>
+  </entry>
+</feed>

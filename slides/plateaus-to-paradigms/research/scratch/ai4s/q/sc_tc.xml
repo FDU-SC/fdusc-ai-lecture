@@ -1,0 +1,1067 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/7t5mCXdWUiaqtVQU/lFjrkpNCSc</id>
+  <title>arXiv Query: search_query=abs:"superconducting" AND abs:"critical temperature" AND abs:"machine learning"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:46:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22superconducting%22+AND+(abs:%22critical+temperature%22+AND+abs:%22machine+learning%22)&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>36</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.30588v1</id>
+    <title>Machine learning reveals common features of unconventional superconductors with high transition temperatures</title>
+    <updated>2026-08-31T11:04:51Z</updated>
+    <link href="https://arxiv.org/abs/2608.30588v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.30588v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Superconductors with high critical temperatures that emerges beyond the phonon-mediated regime are usually considered unconventional in nature, yet unlike conventional superconductors, no broadly applicable predictive theory currently guides their discovery. Here, we use interpretable machine learning to uncover a common materials-space signature of high-$T_{\mathrm{c}}$ unconventional superconductors and develop a data-driven strategy for materials discovery. We construct a unified feature representation for each material by integrating compositional statistics, structural information, and latent representations from trained property-prediction models, followed by structure-aware filtering of an experimentally established superconducting dataset. Without using transition-temperature information, unsupervised analysis shows that cuprate and iron-based superconductors occupy a common region of materials space, characterized primarily by large electronegativity deviation and intermediate mean valence-electron number. A supervised $T_{\text{c}}$ model independently identifies the same descriptors as dominant features, providing complementary evidence for their relevance. Using this empirical materials-space prior together with the $T_{\text{c}}$ model, we prioritize candidate materials, recover recently discovered nickelate superconductors, and identify chemically distinct candidates for future investigation.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T11:04:51Z</published>
+    <arxiv:comment>12 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Haosheng Xu</name>
+    </author>
+    <author>
+      <name>Dongheng Qian</name>
+    </author>
+    <author>
+      <name>Yijun Yu</name>
+    </author>
+    <author>
+      <name>Jing Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07339v1</id>
+    <title>Machine Learning Materials Properties by Encoding Orbital-Projected Density of States</title>
+    <updated>2026-07-08T12:28:37Z</updated>
+    <link href="https://arxiv.org/abs/2607.07339v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07339v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks have become the dominant machine-learning architecture for predicting materials properties from crystal structures. Yet the initialization of atomic node features has received comparatively little attention, and conventional approaches rely on static elemental descriptors that carry no information about the quantum-mechanical electronic environment of each atom in its crystalline host. Here we show that augmenting atomic node representations with site-projected orbital density of states (pDOS) fingerprints, computed directly from density functional theory calculations, yields systematic and substantial improvements in predictive performance.These representations are fused with Pettifor elemental embeddings at each atomic site before message passing. For the superconducting critical temperature $T_c$ and the optical dielectric constant $ε_{\infty}$,the pDOS augmentation reduces prediction errors by 22.9% and 27.9%, respectively, relative to the elemental-descriptor baseline. These improvements are comparable to those achieved by doubling the training-set size. The gains are, however, contingent on training-set size. For the magnetic exchange energies of Heusler compounds, a substantially smaller dataset, the improvement is reduced,indicating that pDOS augmentation is most effective when the training data exceeds the length of the pDOS feature vector. We introduce an interpretable spectral attention-gating mechanism that reveals that the model autonomously learns to prioritize the orbital channels and energy windows most physically relevant to each target property. These results establish pDOS-augmented graph nodes as a broadly applicable strategy for infusing first-principles electronic-structure knowledge into graph networks, opening a practical route to high-accuracy property prediction in data-scarce regimes.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T12:28:37Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Paulo Pires</name>
+    </author>
+    <author>
+      <name>Pierre-Paul De Breuck</name>
+    </author>
+    <author>
+      <name>Mauro Fava</name>
+    </author>
+    <author>
+      <name>Hai-Chen Wang</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.01566v1</id>
+    <title>RobustModelMaker: Coupling Bootstrap Stability Selection with Leakage-Safe Nested Cross-Validation for Scientific Machine Learning</title>
+    <updated>2026-06-01T02:11:23Z</updated>
+    <link href="https://arxiv.org/abs/2606.01566v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.01566v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Small-to-medium scientific datasets place machine learning pipelines under two compounding pressures. Single-run feature selection produces feature sets that change substantially under small perturbations of the training data, and any procedure that uses the same data for selection, tuning, and evaluation produces optimistically biased performance estimates. The two failure modes are routinely treated as separable, but in the regimes where scientific data live, they interact: an unstable selection inflates the variance of an already-optimistic score, and standard remedies for one rarely address the other. RobustModelMaker is a Python framework that couples bootstrap stability selection with strict nested cross-validation, performs all preprocessing and selection inside each fold, and produces a stability-tested feature subset together with a leakage-safe performance estimate. The framework supports nine algorithms across binary classification, multiclass classification, and regression. Behaviour is verified by a deterministic test suite spanning unit, performance, and reproducibility checks on three real scientific datasets comparing to three alternative selectors (ANOVA F-test, recursive feature elimination with cross-validation, and Boruta) on both predictive score and a Jaccard measure of selection stability. RobustModelMaker is competitive in score with the best alternative selector on each dataset, and occupies a position on the joint score-stability frontier that none of the alternatives match across all three task types. Two example applications, ovarian cancer biomarker discovery from the PLCO Trial and critical-temperature regression on the UCI Superconductivity Data, illustrate how the framework is used in practice and what trade-offs become visible when stability is treated as a first-class deliverable rather than an emergent property.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-01T02:11:23Z</published>
+    <arxiv:comment>19 pages, 2 figure plates, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Amanda S Barnard</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.00068v2</id>
+    <title>Human-in-the-Loop Meta Bayesian Optimization for Fusion Energy and Scientific Applications</title>
+    <updated>2026-09-12T01:03:12Z</updated>
+    <link href="https://arxiv.org/abs/2605.00068v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.00068v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inertial Confinement Fusion (ICF) holds transformative promise for sustainable, near-limitless clean energy, yet remains constrained by prohibitively high costs and limited experimental opportunities. This paper presents Human-in-the-Loop Meta Bayesian Optimization (HL-MBO), a framework that integrates expert knowledge with few-shot, uncertainty-aware machine learning to accelerate discovery in data-scarce, high-stakes scientific domains. HL-MBO introduces a meta-learned surrogate model with an expert-informed acquisition function to recommend candidate experiments. To foster trust and enable informed decisions, HL-MBO also provides interpretable explanations of its suggestions. We show HL-MBO outperforms current BO methods on ICF energy yield optimization, as well as benchmarks in molecular optimization and critical temperature maximization for superconducting materials.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T10:06:56Z</published>
+    <arxiv:comment>Accepted at IJCAI 2026 (35th International Joint Conference on Artificial Intelligence)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ricardo Luna Gutierrez</name>
+    </author>
+    <author>
+      <name>Sahand Ghorbanpour</name>
+    </author>
+    <author>
+      <name>Rahman Ejaz</name>
+    </author>
+    <author>
+      <name>Varchas Gopalaswamy</name>
+    </author>
+    <author>
+      <name>Riccardo Betti</name>
+    </author>
+    <author>
+      <name>Vineet Gundecha</name>
+    </author>
+    <author>
+      <name>Aarne Lees</name>
+    </author>
+    <author>
+      <name>Soumyendu Sarkar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.25373v1</id>
+    <title>Hessian-informed machine learning interatomic potential towards bridging theory and experiments</title>
+    <updated>2026-03-26T12:23:49Z</updated>
+    <link href="https://arxiv.org/abs/2603.25373v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.25373v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Local curvature of potential energy surfaces is critical for predicting certain experimental observables of molecules and materials from first principles, yet it remains far beyond reach for complex systems. In this work, we introduce a Hessian-informed Machine Learning Interatomic Potential (Hi-MLIP) that captures such curvature reliably, thereby enabling accurate analysis of associated thermodynamic and kinetic phenomena. To make Hessian supervision practically viable, we develop a highly efficient training protocol, termed Hessian INformed Training (HINT), achieving two to four orders of magnitude reduction for the requirement of expensive Hessian labels. HINT integrates critical techniques, including Hessian pre-training, configuration sampling, curriculum learning and stochastic projection Hessian loss. Enabled by HINT, Hi-MLIP significantly improves transition-state search and brings Gibbs free-energy predictions close to chemical accuracy especially in data-scarce regimes. Our framework also enables accurate treatment of strongly anharmonic hydrides, reproducing phonon renormalization and superconducting critical temperatures in close agreement with experiment while bypassing the computational bottleneck of anharmonic calculations. These results establish a practical route to enhancing curvature awareness of machine learning interatomic potentials, bridging simulation and experimental observables across a wide range of systems.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-26T12:23:49Z</published>
+    <arxiv:comment>13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bangchen Yin</name>
+    </author>
+    <author>
+      <name>Jian Ouyang</name>
+    </author>
+    <author>
+      <name>Zhen Fan</name>
+    </author>
+    <author>
+      <name>Kailai Lin</name>
+    </author>
+    <author>
+      <name>Hanshi Hu</name>
+    </author>
+    <author>
+      <name>Dingshun Lv</name>
+    </author>
+    <author>
+      <name>Weiluo Ren</name>
+    </author>
+    <author>
+      <name>Hai Xiao</name>
+    </author>
+    <author>
+      <name>Ji Chen</name>
+    </author>
+    <author>
+      <name>Changsu Cao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.10955v1</id>
+    <title>Ab-initio superfluid weight and superconducting penetration depth</title>
+    <updated>2026-03-11T16:43:38Z</updated>
+    <link href="https://arxiv.org/abs/2603.10955v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.10955v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning and high-throughput screening approaches to superconductor discovery require physically meaningful descriptors that capture essential physics while remaining computationally tractable. The superfluid weight is an ideal descriptor as it is a prerequisite for superconductivity, determines the magnetic penetration depth and the Berezinskii-Kosterlitz-Thouless transition temperature in two-dimensional materials, may limit the critical temperature in unconventional superconductors through phase coherence, and reveals quantum geometric contributions to supercurrent transport. We develop a computationally efficient framework for calculating the zero-temperature, mean-field superfluid weight for uniform pairing from density functional theory band structures and Bloch wavefunctions. We separately evaluate the conventional contribution from band curvature and the geometric contribution from quantum geometry. To validate the method, we calculate London penetration depths for a few conventional superconductors (Al, Pb, Nb, MgB$_2$, LuRu$_3$B$_2$ and YRu$_3$B$_2$) and find good agreement with experiment after accounting for nonlocal corrections, strong-coupling effects, and sample quality.
+  The conventional contribution dominates by orders of magnitude in these wide-band materials, as expected. This framework provides a foundation for large-scale screening of superconducting candidates and exploring quantum geometric effects in unconventional superconductors.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-11T16:43:38Z</published>
+    <arxiv:comment>12 pages, 3 figures. Submitted to Physical Review B as a regular article on the 2nd of March 2026</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Kaja H. Hiorth</name>
+    </author>
+    <author>
+      <name>Martin Gutierrez-Amigo</name>
+    </author>
+    <author>
+      <name>Théo Cavignac</name>
+    </author>
+    <author>
+      <name>Kristjan Haule</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+    <author>
+      <name>Päivi Törmä</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.21044v1</id>
+    <title>Towards the discovery of high critical magnetic field superconductors</title>
+    <updated>2026-01-28T21:08:47Z</updated>
+    <link href="https://arxiv.org/abs/2601.21044v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.21044v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Superconducting materials are of significant technological relevance for a broad range of applications, and intense research efforts aim at enhancing the critical temperature $T_{c}$. Intriguingly, while numerous studies have explored different computational and machine-learning routes to predict $T_{c}$, the fundamental role of the critical magnetic field has so far been overlooked. Here we open a new frontier in superconductor discovery by presenting a consistent computational database of critical fields $H_{c}$, $H_{c1}$, and $H_{c2}$ for over 7300 electron-phonon-paired superconductors covering distinct materials classes. A theoretical framework is developed that combines $α^2F(ω)$ spectral functions and highly accurate Fermi surfaces from density functional theory with clean-limit Eliashberg theory to obtain the coherence lengths, London penetration depths, and Ginzburg-Landau parameters. We discover an unexpectedly large number of Type-I superconductors and show that larger unit cells generically support higher critical fields and Type-II behavior. We identify the importance of going beyond BCS theory by including strong-coupling corrections to the superconducting gap and electron-phonon renormalizations of the effective mass for predictions of critical fields across materials. These results provide a framework for foundational AI models that realize the concept of inverse materials design for high-$T_{c}$ and high-critical-field superconductors.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-28T21:08:47Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Benjamin Geisler</name>
+    </author>
+    <author>
+      <name>Philip M. Dee</name>
+    </author>
+    <author>
+      <name>James J. Hamlin</name>
+    </author>
+    <author>
+      <name>Gregory R. Stewart</name>
+    </author>
+    <author>
+      <name>Richard G. Hennig</name>
+    </author>
+    <author>
+      <name>P. J. Hirschfeld</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16945v2</id>
+    <title>Machine Learning-Guided Discovery of Kagome Superconductors YRu3B2 and LuRu3B2</title>
+    <updated>2026-02-04T17:35:28Z</updated>
+    <link href="https://arxiv.org/abs/2512.16945v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16945v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We report the experimental discovery of bulk superconductivity in two kagome lattice compounds, YRu$_3$B$_2$ and LuRu$_3$B$_2$, which were predicted through machine learning-accelerated high-throughput screening combined with first principles calculations. These materials crystallize in the hexagonal CeCo$_3$B$_2$-type structure with planar kagome networks formed by Ru atoms. We observe superconducting critical temperatures of $T_{c} = 0.81$~K for YRu$_3$B$_2$ and $T_{c} = 0.95$~K for LuRu$_3$B$_2$, confirmed through magnetization and specific heat measurements. Both compounds exhibit nearly 100\% superconducting volume fractions, demonstrating bulk superconductivity. Compared with LaRu$_3$Si$_2$, YRu$_3$B$_2$ and LuRu$_3$B$_2$ show a more dispersive Ru local $d_{x^2-y^2}$ quasi-flat band (and thus a reduced DOS at $E_F$) together with an overall hardening of the phonon spectrum, both of which lower the electron-phonon coupling (EPC) constant $λ$. Meanwhile, the dominant real-space EPC between Ru local $d_{x^2-y^2}$ states and the low-frequency Ru in-plane local $x$ branch remains nearly unchanged, indicating that the reduction of $λ$ originates from the $d_{x^2-y^2}$ DOS reduction and the overall phonon hardening. Superfluid weight calculations show that conventional contributions dominate over quantum geometric effects due to the dispersive nature of bands near the Fermi level. This work demonstrates the effectiveness of integrating machine learning screening, first principles theory, and experimental synthesis for accelerating the discovery of new superconducting materials.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-16T19:06:42Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Rose Albu Mustaf</name>
+    </author>
+    <author>
+      <name>Sajilesh K. P.</name>
+    </author>
+    <author>
+      <name>Sanu Mishra</name>
+    </author>
+    <author>
+      <name>Junze Deng</name>
+    </author>
+    <author>
+      <name>Yi Jiang</name>
+    </author>
+    <author>
+      <name>Kaja H. Hiorth</name>
+    </author>
+    <author>
+      <name>Eeli O. Lamponen</name>
+    </author>
+    <author>
+      <name>Martin Gutierrez-Amigo</name>
+    </author>
+    <author>
+      <name>Päivi Törmä</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+    <author>
+      <name>B. Andrei Bernevig</name>
+    </author>
+    <author>
+      <name>Emilia Morosan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19781v3</id>
+    <title>Search for thermodynamically stable ambient-pressure superconducting hydrides in GNoME database</title>
+    <updated>2026-03-17T12:31:10Z</updated>
+    <link href="https://arxiv.org/abs/2508.19781v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.19781v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hydrides are considered to be one of the most promising families of compounds for achieving high temperature superconductivity. However, there are very few experimental reports of ambient-pressure hydride superconductivity, and the superconducting critical temperatures ($T_{\rm c}$) are typically less than 10 K. At the same time several hydrides have been predicted to exhibit superconductivity around 100 K at ambient pressure but in thermodynamically unfavorable phases. In this work we aim at assessing the superconducting properties of thermodynamically stable hydride superconductors at room pressure by investigating the GNoME material database, which has been recently released and includes thousands of hydrides thermodynamically stable at 0K. To scan this large material space we have adopted a multi stage approach which combines machine learning for a fast initial evaluation and cutting edge ab initio methods to obtain a reliable estimation of ($T_{\rm c}$). Ultimately we have identified 25 cubic hydrides with ($T_{\rm c}$) above 4.2~K and reach a maximum ($T_{\rm c}$) of 17 K. While these critical temperatures are modest in comparison to some recent predictions, the systems where they are found, being stable, are likely to be experimentally accessible and of potential technological relevance.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-27T11:04:09Z</published>
+    <arxiv:comment>11 pages, 5 figures in main text</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Commun Phys 9, 94 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Antonio Sanna</name>
+    </author>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+    </author>
+    <author>
+      <name>Ekin Dogus Cubuk</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <author>
+      <name>Yue-Wen Fang</name>
+    </author>
+    <arxiv:doi>10.1038/s42005-026-02552-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s42005-026-02552-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11964v2</id>
+    <title>Accelerating the Search for Superconductors Using Machine Learning</title>
+    <updated>2025-12-16T18:21:53Z</updated>
+    <link href="https://arxiv.org/abs/2505.11964v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.11964v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prediction of critical temperature $(T_c)$ of a superconductor remains a significant challenge in condensed matter physics. While the BCS theory explains superconductivity in conventional superconductors, there is no framework to predict $T_c$ of unconventional, higher $T_{c}$ superconductors. Quantum Structure Diagrams (QSD) were successful in establishing structure-property relationship for superconductors, quasicrystals, and ferroelectric materials starting from chemical composition. Building on the QSD ideas, we demonstrate that the principal component analysis of superconductivity data uncovers the clustering of various classes of superconductors. We use machine learning analysis and cleaned databases of superconductors to develop predictive models of $T_c$ of a superconductor using its chemical composition. Earlier studies relied on datasets with inconsistencies, leading to suboptimal predictions. To address this, we introduce a data-cleaning workflow to enhance the statistical quality of superconducting databases by eliminating redundancies and resolving inconsistencies. With this improvised database, we apply a supervised machine learning framework and develop a Random Forest model to predict superconductivity and $T_c$ as a function of descriptors motivated from Quantum Structure Diagrams. We demonstrate that this model generalizes effectively in reasonably accurate prediction of $T_{c}$ of compounds outside the database. We further employ our model to systematically screen materials across materials databases as well as various chemically plausible combinations of elements and predict $\mathrm{Tl}_{5}\mathrm{Ba}_{6}\mathrm{Ca}_{6}\mathrm{Cu}_{9}\mathrm{O}_{29}$ to exhibit superconductivity with a $T_{c}$ $\sim$ 105 K. Being based on the descriptors used in QSD's, our model bypasses structural information and predicts $T_{c}$ merely from the chemical composition.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-17T11:37:09Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Comput. Mater. Sci., 263, 114453 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Suhas Adiga</name>
+    </author>
+    <author>
+      <name>Umesh V. Waghmare</name>
+    </author>
+    <arxiv:doi>10.1016/j.commatsci.2025.114453</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.commatsci.2025.114453" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.24363v3</id>
+    <title>Topological Phase Transition and Geometrical Frustration in Fourier Photonic Simulator</title>
+    <updated>2025-11-20T21:27:34Z</updated>
+    <link href="https://arxiv.org/abs/2503.24363v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.24363v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>XY models with continuous spin orientation play a pivotal role in understanding topological phase transitions and emergent frustration phenomena, such as superconducting and superfluid phase transitions. However, the complex energy landscapes arising from frustrated lattice geometries and competing spin interactions make these models computationally intractable. To address this challenge, we design a programmable photonic spin simulator capable of emulating XY models with tunable lattice geometries and spin couplings, allowing systematic exploration of their statistical behavior. We experimentally observe the Berezinskii-Kosterlitz-Thouless (BKT) transition in a square-lattice XY model with nearest-neighbor interactions, accurately determining its critical temperature. Expanding to frustrated systems, we implement the approach in triangular and honeycomb lattices, uncovering sophisticated phase transitions and frustration effects, which are consistent with theoretical predictions. This versatile platform opens avenues for probing unexplored XY model phenomena across diverse geometries and interaction schemes, with potential applications in solving complex optimization and machine learning problems.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-31T17:43:21Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Yuxuan Sun</name>
+    </author>
+    <author>
+      <name>Weiru Fan</name>
+    </author>
+    <author>
+      <name>Xingqi Xu</name>
+    </author>
+    <author>
+      <name>Da-Wei Wang</name>
+    </author>
+    <author>
+      <name>Hai-Qing Lin</name>
+    </author>
+    <arxiv:doi>10.1103/tgt8-gb13</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/tgt8-gb13" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.20005v2</id>
+    <title>Developing a Complete AI-Accelerated Workflow for Superconductor Discovery</title>
+    <updated>2025-09-25T22:34:30Z</updated>
+    <link href="https://arxiv.org/abs/2503.20005v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.20005v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The quest to identify new superconducting materials with enhanced properties is hindered by the prohibitive cost of computing electron-phonon spectral functions, severely limiting the materials space that can be explored. Here, we introduce a Bootstrapped Ensemble of Equivariant Graph Neural Networks (BEE-NET), a machine-learning model trained to predict the Eliashberg spectral function and superconducting critical temperature with a mean-absolute-error of 0.87 K relative to DFT-based Allen-Dynes calculations. Intriguingly, BEE-NET achieves a true-negative-rate of 99.4\%, enabling highly efficient screening for the rare property of superconductivity. Integrated into a multi-stage, AI-accelerated discovery pipeline that incorporates elemental-substitution strategies and machine-learned interatomic potentials, our workflow reduced over 1.3 million candidate structures to 741 dynamically and thermodynamically stable compounds with DFT-confirmed $T_{\mathrm{c}} &gt; 5$ K. We report the successful synthesis and experimental confirmation of superconductivity in two of these previously unreported compounds. This study establishes a data-driven framework that integrates machine learning, quantum calculations, and experiments to systematically accelerate superconductor discovery.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-25T18:44:53Z</published>
+    <arxiv:comment>10 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>npj Comput Mater 12, 95 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Jason B. Gibson</name>
+    </author>
+    <author>
+      <name>Ajinkya C. Hire</name>
+    </author>
+    <author>
+      <name>Pawan Prakash</name>
+    </author>
+    <author>
+      <name>Philip M. Dee</name>
+    </author>
+    <author>
+      <name>Benjamin Geisler</name>
+    </author>
+    <author>
+      <name>Jung Soo Kim</name>
+    </author>
+    <author>
+      <name>Zhongwei Li</name>
+    </author>
+    <author>
+      <name>James J. Hamlin</name>
+    </author>
+    <author>
+      <name>Gregory R. Stewart</name>
+    </author>
+    <author>
+      <name>P. J. Hirschfeld</name>
+    </author>
+    <author>
+      <name>Richard G. Hennig</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-026-01964-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-026-01964-8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.04984v1</id>
+    <title>FF7: A Code Package for High-throughput Calculations and Constructing Materials Database</title>
+    <updated>2025-02-07T15:03:47Z</updated>
+    <link href="https://arxiv.org/abs/2502.04984v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.04984v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Decades accumulation of theory simulations lead to boom in material database, which combined with machine learning methods has been a valuable driver for the data-intensive material discovery, i.e., the fourth research paradigm. However, construction of segmented databases and data reuse in generic databases with uniform parameters still lack easy-to-use code tools. We herein develop a code package named FF7 (Fast Funnel with 7 modules) to provide command-line based interactive interface for performing customized high-throughput calculations and building your own handy databases. Data correlation studies and material property prediction can progress by built-in installation-free artificial neural network module and various post processing functions are also supported by auxiliary module. This paper shows the usage of FF7 code package and demonstrates its usefulness by example of database driven thermodynamic stability high-throughput calculation and machine learning model for predicting the superconducting critical temperature of clathrate hydrides.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-07T15:03:47Z</published>
+    <arxiv:comment>9 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Tiancheng Ma</name>
+    </author>
+    <author>
+      <name>Zihan Zhang</name>
+    </author>
+    <author>
+      <name>Shuting Wu</name>
+    </author>
+    <author>
+      <name>Defang Duan</name>
+    </author>
+    <author>
+      <name>Tian Cui</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.12068v2</id>
+    <title>The Impact of Ionic Anharmonicity on Superconductivity in Metal-Stuffed B-C Clathrates</title>
+    <updated>2026-01-10T13:09:17Z</updated>
+    <link href="https://arxiv.org/abs/2501.12068v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.12068v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Metal-stuffed B$-$C compounds with sodalite clathrate structure have captured increasing attention due to their predicted exceptional superconductivity above liquid nitrogen temperature at ambient pressure. However, by neglecting the quantum lattice anharmonicity, the existing studies may result in an incomplete understanding of such a lightweight system. Here, using state-of-the-art ab initio methods incorporating quantum effects and machine learning potentials, we revisit the properties of a series of $XY$$\text{B}_{6}\text{C}_{6}$ clathrates where $X$ and $Y$ are metals. Our findings show that ionic quantum and anharmonic effects can harden the $E_g$ and $E_u$ vibrational modes, enabling the dynamical stability of 15 materials previously considered unstable in the harmonic approximation, including materials with previously unreported ($XY$)$^{1+}$ state, which is demonstrated here to be crucial to reach high critical temperatures. Further calculations based on the anisotropic Migdal-Eliashberg equation demonstrate that the $T_\text{c}$ values for KRb$\text{B}_{6}\text{C}_{6}$ and Rb$\text{B}_{3}\text{C}_{3}$ among these stabilized compounds are 102 and 115 K at 0 and 15 GPa, respectively, both being higher than $T_\text{c}$ of 92 K of KPb$\text{B}_{6}\text{C}_{6}$ at the anharmonic level. These record-high $T_\text{c}$ values, surpassing liquid nitrogen temperatures, emphasize the importance of anharmonic effects in stabilizing B-C clathrates with large electron-phonon coupling strength and advancing the search for high-$T_\text{c}$ superconductivity at (near) ambient pressure.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-21T11:42:32Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>npj Computational Materials volume 11, Article number: 347 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Wenbo Zhao</name>
+    </author>
+    <author>
+      <name>Ying Sun</name>
+    </author>
+    <author>
+      <name>Jiaxiang Li</name>
+    </author>
+    <author>
+      <name>Peng Yuan</name>
+    </author>
+    <author>
+      <name>Toshiaki Iitaka</name>
+    </author>
+    <author>
+      <name>Xin Zhong</name>
+    </author>
+    <author>
+      <name>Hefei Li</name>
+    </author>
+    <author>
+      <name>Yue-Wen Fang</name>
+    </author>
+    <author>
+      <name>Hanyu Liu</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <author>
+      <name>Yu Xie</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-025-01816-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-025-01816-x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.18441v3</id>
+    <title>Machine-learning Guided Search for Phonon-mediated Superconductivity in Boron and Carbon Compounds</title>
+    <updated>2026-01-11T15:35:36Z</updated>
+    <link href="https://arxiv.org/abs/2409.18441v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.18441v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a workflow that iteratively combines \textit{ab-initio} calculations with a machine-learning (ML) guided search for superconducting compounds with both dynamical stability and instability from imaginary phonon modes, the latter of which have been largely overlooked in previous studies. Electron-phonon coupling (EPC) properties and critical temperature (T$_c$) of 417 boron, carbon, and borocarbide compounds have been calculated with density functional perturbation theory (DFPT) and isotropic Eliashberg approximation. Our study addresses T$_c$ convergence of Brillouin zone sampling with an ansatz test, stabilizing imaginary phonon modes for significant EPC contributions and comparing performance of two ML models especially when including compounds of dynamical instability. We predict a few promising superconducting compounds with formation energy just above the ground state convex hull, such as Ca$_5$B$_3$N$_6$ (35 K), TaNbC$_2$ (28.4 K), Nb$_3$B$_3$C (16.4 K), Y$_2$B$_3$C$_2$ (4.0 K), Pd$_3$CaB (7.0 K), MoRuB$_2$ (15.6 K), RuVB$_2$ (15.0 K), RuSc$_3$C$_4$ (6.6 K) among others.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-27T04:28:44Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Niraj K. Nepal</name>
+    </author>
+    <author>
+      <name>Lin-Lin Wang</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-026-01962-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-026-01962-w" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.13178v2</id>
+    <title>Efficient Modelling of Anharmonicity and Quantum Effects in PdCuH$_2$ with Machine Learning Potentials</title>
+    <updated>2025-01-17T23:11:10Z</updated>
+    <link href="https://arxiv.org/abs/2406.13178v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.13178v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum nuclear effects and anharmonicity impact a wide range of functional materials and their properties. One of the most powerful techniques to model these effects is the Stochastic Self-Consistent Harmonic Approximation (SSCHA). Unfortunately, the SSCHA is extremely computationally expensive, prohibiting its routine use. We propose a protocol that pairs machine learning interatomic potentials, which can be tailored for the system at hand via active learning, with the SSCHA. Our method leverages an upscaling procedure that allows for the treatment of supercells of up to thousands of atoms with practically minimal computational effort. The protocol is applied to PdCuH$_x$ ($x = 0-2$) compounds, chosen because previous experimental studies have reported superconducting critical temperatures, $T_\text{c}$s, as high as 17~K at ambient pressures in an unknown hydrogenated PdCu phase. We identify a $P4/mmm$ PdCuH$_2$ structure, which is shown to be dynamically stable only upon the inclusion of quantum fluctuations, as being a key contributor to the measured superconductivity. For this system, our methodology is able to reduce the computational expense for the SSCHA calculations by $\sim$96\%. The proposed protocol opens the door towards the routine inclusion of quantum nuclear motion and anharmonicity in materials discovery.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-19T03:18:07Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Francesco Belli</name>
+    </author>
+    <author>
+      <name>Eva Zurek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.07584v1</id>
+    <title>Molecularity: a fast and efficient criterion for probing superconductivity</title>
+    <updated>2024-03-12T12:15:45Z</updated>
+    <link href="https://arxiv.org/abs/2403.07584v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.07584v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an efficient criterion for probing the critical temperature of hydrogen based superconductors. We start by expanding the applicability of 3D descriptors of electron localization to superconducting states within the framework of superconducting DFT. We first apply this descriptor to a model system, the hydrogen chain, which allows to prove two main concepts: i) that the electron localization changes very little when the transition from the normal to the superconducting state takes place, i.e. that it can be described at the DFT level from the normal state; and ii) that the formation of molecules can be characterized within this theoretical framework, enabling to filter out systems with marked molecular character and hence with low potential to be good superconductors. These two ideas, are then exploited in real binary and ternary systems, showing i) that the bonding type can be characterized automatically; and ii) that this provides a new index which enables to feed machine learning algorithms for a better prediction of critical temperatures. Overall, this sets a grounded theoretical scenario for an automatic and efficient high-throughput of potential hydrogen based superconductors.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-12T12:15:45Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Matías E. di Mauro</name>
+    </author>
+    <author>
+      <name>Benoît Braïda</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <author>
+      <name>Trinidad Novoa</name>
+    </author>
+    <author>
+      <name>Julia Contreras-García</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.12694v4</id>
+    <title>Data-driven Design of High Pressure Hydride Superconductors using DFT and Deep Learning</title>
+    <updated>2024-05-31T18:03:33Z</updated>
+    <link href="https://arxiv.org/abs/2312.12694v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.12694v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The observation of superconductivity in hydride-based materials under ultrahigh pressures (for example, H$_3$S and LaH$_{10}$) has fueled the interest in a more data-driven approach to discovering new high-pressure hydride superconductors. In this work, we performed density functional theory (DFT) calculations to predict the critical temperature ($T_c$) of over 900 hydride materials under a pressure range of (0 to 500) GPa, where we found 122 dynamically stable structures with a $T_c$ above MgB$_2$ (39 K). To accelerate screening, we trained a graph neural network (GNN) model to predict $T_c$ and demonstrated that a universal machine learned force-field can be used to relax hydride structures under arbitrary pressures, with significantly reduced cost. By combining DFT and GNNs, we can establish a more complete map of hydrides under pressure.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-20T01:40:24Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Daniel Wines</name>
+    </author>
+    <author>
+      <name>Kamal Choudhary</name>
+    </author>
+    <arxiv:doi>10.1088/2752-5724/ad4a94</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2752-5724/ad4a94" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.06028v1</id>
+    <title>Symbolic Regression as Feature Engineering Method for Machine and Deep Learning Regression Tasks</title>
+    <updated>2023-11-10T12:34:28Z</updated>
+    <link href="https://arxiv.org/abs/2311.06028v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.06028v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the realm of machine and deep learning regression tasks, the role of effective feature engineering (FE) is pivotal in enhancing model performance. Traditional approaches of FE often rely on domain expertise to manually design features for machine learning models. In the context of deep learning models, the FE is embedded in the neural network's architecture, making it hard for interpretation. In this study, we propose to integrate symbolic regression (SR) as an FE process before a machine learning model to improve its performance. We show, through extensive experimentation on synthetic and real-world physics-related datasets, that the incorporation of SR-derived features significantly enhances the predictive capabilities of both machine and deep learning regression models with 34-86% root mean square error (RMSE) improvement in synthetic datasets and 4-11.5% improvement in real-world datasets. In addition, as a realistic use-case, we show the proposed method improves the machine learning performance in predicting superconducting critical temperatures based on Eliashberg theory by more than 20% in terms of RMSE. These results outline the potential of SR as an FE component in data-driven models.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-10T12:34:28Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Assaf Shmuel</name>
+    </author>
+    <author>
+      <name>Oren Glickman</name>
+    </author>
+    <author>
+      <name>Teddy Lazebnik</name>
+    </author>
+    <arxiv:doi>10.1088/2632-2153/ad513a</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2632-2153/ad513a" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.01932v1</id>
+    <title>Investigation on Machine Learning Based Approaches for Estimating the Critical Temperature of Superconductors</title>
+    <updated>2023-08-02T17:11:50Z</updated>
+    <link href="https://arxiv.org/abs/2308.01932v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.01932v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Superconductors have been among the most fascinating substances, as the fundamental concept of superconductivity as well as the correlation of critical temperature and superconductive materials have been the focus of extensive investigation since their discovery. However, superconductors at normal temperatures have yet to be identified. Additionally, there are still many unknown factors and gaps of understanding regarding this unique phenomenon, particularly the connection between superconductivity and the fundamental criteria to estimate the critical temperature. To bridge the gap, numerous machine learning techniques have been established to estimate critical temperatures as it is extremely challenging to determine. Furthermore, the need for a sophisticated and feasible method for determining the temperature range that goes beyond the scope of the standard empirical formula appears to be strongly emphasized by various machine-learning approaches. This paper uses a stacking machine learning approach to train itself on the complex characteristics of superconductive materials in order to accurately predict critical temperatures. In comparison to other previous accessible research investigations, this model demonstrated a promising performance with an RMSE of 9.68 and an R2 score of 0.922. The findings presented here could be a viable technique to shed new insight on the efficient implementation of the stacking ensemble method with hyperparameter optimization (HPO).</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-02T17:11:50Z</published>
+    <arxiv:comment>Accepted for publication on IEEE INTERNATIONAL CONFERENCE ON ARTIFICIAL INTELLIGENCE, ROBOTICS,SIGNAL, AND IMAGE PROCESSING (AIRoSIP 2023)</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Fatin Abrar Shams</name>
+    </author>
+    <author>
+      <name>Rashed Hasan Ratul</name>
+    </author>
+    <author>
+      <name>Ahnaf Islam Naf</name>
+    </author>
+    <author>
+      <name>Syed Shaek Hossain Samir</name>
+    </author>
+    <author>
+      <name>Mirza Muntasir Nishat</name>
+    </author>
+    <author>
+      <name>Fahim Faisal</name>
+    </author>
+    <author>
+      <name>Md. Ashraful Hoque</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.04439v1</id>
+    <title>Searching for ductile superconducting Heusler X2YZ compounds</title>
+    <updated>2023-06-07T13:54:51Z</updated>
+    <link href="https://arxiv.org/abs/2306.04439v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.04439v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Heusler compounds have always attracted a great deal of attention from researchers thanks to a wealth of interesting properties for technological applications. They are intermetallic ductile compounds, and some of them have been found to be superconducting. With this in mind, we perform an extensive study of the superconducting and elastic properties of the cubic (full-)Heusler family. Starting from thermodynamically stable compounds, we use ab initio methods for the calculation of the phonon spectra, electron-phonon couplings, superconducting critical temperatures and elastic tensors. By analyzing the statistical distributions of these properties and comparing them to anti-perovskites we recognize universal behaviors that should be common to all conventional superconductors while others turn out to be specific to the material family. The resulting data is used to train interpretable and predictive machine learning models, that are used to extend our knowledge of superconductivity in Heuslers and to provide an interpretation of our results. In total, we discover a total of 8 hypothetical materials with critical temperatures above 10 K, to be compared with the current record of Tc = 4.7 K in this family. Furthermore, we expect most of these materials to be highly ductile, making them potential candidates for the manufacture of wires and tapes for superconducting magnets.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-07T13:54:51Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Noah Hoffmann</name>
+    </author>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+    </author>
+    <author>
+      <name>Pedro Borlido</name>
+    </author>
+    <author>
+      <name>Antonio Sanna</name>
+    </author>
+    <author>
+      <name>Jonathan Schmidt</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.08038v1</id>
+    <title>First Principles and Machine Learning Identify Key Pairing Strength Factors of Cuprate Superconductors</title>
+    <updated>2023-05-14T00:59:41Z</updated>
+    <link href="https://arxiv.org/abs/2305.08038v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.08038v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By using band structure calculations of quantum mechanical theory, some important peaks of DoS (Density of States) were obtained and classified based on crystal structure laws of cuprate superconductivity. In particular, the orbital interactions of the in-plane and out-of-plane ions of the copper-oxygen plane were investigated. The position, half-width, and height of DOS peak features were collected for all 35 typical curate systems which have critical temperature maximum data from the works of literature. By training test of 7 common machine learning algorithms, the relationship between the Tc maximum values and these orbital interaction parameters were mined. It was found that the key features of the orbital interaction affecting the Tc maximum were not only the flat band but also a new interaction between core orbitals in a deeper energy band position.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-14T00:59:41Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Xinyu He</name>
+    </author>
+    <author>
+      <name>Ning Chen</name>
+    </author>
+    <author>
+      <name>Jingpei Chen</name>
+    </author>
+    <author>
+      <name>Xuezhou Wang</name>
+    </author>
+    <author>
+      <name>Yang Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.06071v2</id>
+    <title>3DSC - A New Dataset of Superconductors Including Crystal Structures</title>
+    <updated>2022-12-14T11:49:12Z</updated>
+    <link href="https://arxiv.org/abs/2212.06071v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.06071v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Data-driven methods, in particular machine learning, can help to speed up the discovery of new materials by finding hidden patterns in existing data and using them to identify promising candidate materials. In the case of superconductors, which are a highly interesting but also a complex class of materials with many relevant applications, the use of data science tools is to date slowed down by a lack of accessible data. In this work, we present a new and publicly available superconductivity dataset ('3DSC'), featuring the critical temperature $T_\mathrm{c}$ of superconducting materials additionally to tested non-superconductors. In contrast to existing databases such as the SuperCon database which contains information on the chemical composition, the 3DSC is augmented by the approximate three-dimensional crystal structure of each material. We perform a statistical analysis and machine learning experiments to show that access to this structural information improves the prediction of the critical temperature $T_\mathrm{c}$ of materials. Furthermore, we see the 3DSC not as a finished dataset, but we provide ideas and directions for further research to improve the 3DSC in multiple ways. We are confident that this database will be useful in applying state-of-the-art machine learning methods to eventually find new superconductors.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-12T17:38:23Z</published>
+    <arxiv:comment>15 pages + 10 pages of supporting information; UPDATE: standardised formatting, removed double dash from title &amp; updated github links</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Timo Sommer</name>
+    </author>
+    <author>
+      <name>Roland Willa</name>
+    </author>
+    <author>
+      <name>Jörg Schmalian</name>
+    </author>
+    <author>
+      <name>Pascal Friederich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.03265v2</id>
+    <title>Machine-learning approach for discovery of conventional superconductors</title>
+    <updated>2023-04-11T14:39:42Z</updated>
+    <link href="https://arxiv.org/abs/2211.03265v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.03265v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>First-principles computations are the driving force behind numerous discoveries of hydride-based superconductors, mostly at high pressures, during the last decade. Machine-learning (ML) approaches can further accelerate the future discoveries if their reliability can be improved. The main challenge of current ML approaches, typically aiming at predicting the critical temperature $T_{\rm c}$ of a solid from its chemical composition and target pressure, is that the correlations to be learned are deeply hidden, indirect, and uncertain. In this work, we showed that predicting superconductivity at any pressure from the atomic structure is sustainable and reliable. For a demonstration, we curated a diverse dataset of 584 atomic structures for which $λ$ and $ω_{\log}$, two parameters of the electron-phonon interactions, were computed. We then trained some ML models to predict $λ$ and $ω_{\log}$, from which $T_{\rm c}$ can be computed in a post-processing manner. The models were validated and used to identify two possible superconductors whose $T_{\rm c}\simeq 10-15$K at zero pressure. Interestingly, these materials have been synthesized and studied in some other contexts. In summary, the proposed ML approach enables a pathway to directly transfer what can be learned from the high-pressure atomic-level details that correlate with high-$T_{\rm c}$ superconductivity to zero pressure. Going forward, this strategy will be improved to better contribute to the discoveries of new superconductors.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-07T02:21:11Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. Materials 7, 054805 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Huan Tran</name>
+    </author>
+    <author>
+      <name>Tuoc N. Vu</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevMaterials.7.054805</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevMaterials.7.054805" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.03075v1</id>
+    <title>Prediction of superconducting properties of materials based on machine learning models</title>
+    <updated>2022-11-06T10:24:21Z</updated>
+    <link href="https://arxiv.org/abs/2211.03075v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.03075v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The application of superconducting materials is becoming more and more widespread. Traditionally, the discovery of new superconducting materials relies on the experience of experts and a large number of "trial and error" experiments, which not only increases the cost of experiments but also prolongs the period of discovering new superconducting materials. In recent years, machine learning has been increasingly applied to materials science. Based on this, this manuscript proposes the use of XGBoost model to identify superconductors; the first application of deep forest model to predict the critical temperature of superconductors; the first application of deep forest to predict the band gap of materials; and application of a new sub-network model to predict the Fermi energy level of materials. Compared with our known similar literature, all the above algorithms reach state-of-the-art. Finally, this manuscript uses the above models to search the COD public dataset and identify 50 candidate superconducting materials with possible critical temperature greater than 90 K.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-06T10:24:21Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Jie Hu</name>
+    </author>
+    <author>
+      <name>Yongquan Jiang</name>
+    </author>
+    <author>
+      <name>Yang Yan</name>
+    </author>
+    <author>
+      <name>Houchen Zuo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.15600v2</id>
+    <title>Automatic extraction of materials and properties from superconductors scientific literature</title>
+    <updated>2022-11-23T01:08:46Z</updated>
+    <link href="https://arxiv.org/abs/2210.15600v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.15600v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The automatic extraction of materials and related properties from the scientific literature is gaining attention in data-driven materials science (Materials Informatics). In this paper, we discuss Grobid-superconductors, our solution for automatically extracting superconductor material names and respective properties from text. Built as a Grobid module, it combines machine learning and heuristic approaches in a multi-step architecture that supports input data as raw text or PDF documents. Using Grobid-superconductors, we built SuperCon2, a database of 40324 materials and properties records from 37700 papers. The material (or sample) information is represented by name, chemical formula, and material class, and is characterized by shape, doping, substitution variables for components, and substrate as adjoined information. The properties include the Tc superconducting critical temperature and, when available, applied pressure with the Tc measurement method.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-26T01:03:28Z</published>
+    <arxiv:comment>20 pages, 11 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>STAM:M, 2023, VOL. 3, NO. 1, 2153633</arxiv:journal_ref>
+    <author>
+      <name>Luca Foppiano</name>
+    </author>
+    <author>
+      <name>Pedro Baptista de Castro</name>
+    </author>
+    <author>
+      <name>Pedro Ortiz Suarez</name>
+    </author>
+    <author>
+      <name>Kensei Terashima</name>
+    </author>
+    <author>
+      <name>Yoshihiko Takano</name>
+    </author>
+    <author>
+      <name>Masashi Ishii</name>
+    </author>
+    <arxiv:doi>10.1080/27660400.2022.2153633</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1080/27660400.2022.2153633" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.14242v2</id>
+    <title>Correlating Visual Characteristics and Cryogenic Performance of Superconducting Detectors</title>
+    <updated>2024-08-14T19:22:39Z</updated>
+    <link href="https://arxiv.org/abs/2207.14242v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.14242v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cryogenic characterization of transition-edge sensor (TES) bolometers is a time- and labor-intensive process. As new experiments deploy larger and larger arrays of TES bolometers, the testing process will become more of a bottleneck. Thus it is desirable to develop a method for evaluating detector performance at room temperature. One possibility is using machine learning to correlate detectors' visual appearance with their cryogenic properties. Here, we use three engineering-grade TES bolometer wafers from the production cycle for SPT-3G, the current receiver on the South Pole Telescope, to train and test such an algorithm. High-resolution images of these TES bolometers were captured and relevant features were calculated from the images. Cryogenic performance metrics, including a detector's ability to tune and superconducting parameters such as normal resistance, critical temperature, and transition width, were also measured. A random forest algorithm was trained to predict these performance metrics from the visual features. Analysis of the images proved highly successful. While the ability of the random forest algorithm to predict cryogenic features was limited with the chosen set of input image features, it is possible that an increase in data volume or the addition of more image features will solve this problem.</summary>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-28T17:20:58Z</published>
+    <arxiv:comment>15 pages, 6 figures, Presented at SPIE Astronomical Telescopes + Instrumentation 2022</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.IM"/>
+    <arxiv:journal_ref>Proc. SPIE 12190, Millimeter, Submillimeter, and Far-Infrared Detectors and Instrumentation for Astronomy XI; 121901A (2022)</arxiv:journal_ref>
+    <author>
+      <name>K. R. Ferguson</name>
+    </author>
+    <author>
+      <name>A. N. Bender</name>
+    </author>
+    <author>
+      <name>N. Whitehorn</name>
+    </author>
+    <author>
+      <name>T. W. Cecil</name>
+    </author>
+    <arxiv:doi>10.1117/12.2630250</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1117/12.2630250" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.04146v1</id>
+    <title>Stability and distortion of fcc-LaH$_{10}$ with path-integral molecular dynamics</title>
+    <updated>2022-06-08T20:17:30Z</updated>
+    <link href="https://arxiv.org/abs/2206.04146v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.04146v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The synthesis of the high temperature superconductor LaH$_{10}$ requires pressures in excess of 100 GPa, wherein it adopts a face-centered cubic structure. Upon decompression, this structure undergoes a distortion which still supports superconductivity, but with a much lower critical temperature. Previous calculations have shown that quantum and anharmonic effects are necessary to stabilize the cubic structure, but have not resolved the low pressure distortion. Using large scale path-integral molecular dynamics enabled by a machine learned potential, we show that a rhombohedral distortion appears at sufficiently low pressures, even with quantum and anharmonic effects. We also highlight the importance of quantum zero point motion in stabilizing the cubic structure.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-08T20:17:30Z</published>
+    <arxiv:comment>26 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Kevin K. Ly</name>
+    </author>
+    <author>
+      <name>David M. Ceperley</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.106.054106</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.106.054106" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.08712v1</id>
+    <title>Towards In Silico Mining for Superconductors -- Cutting the Gordian Knot</title>
+    <updated>2022-04-19T07:33:30Z</updated>
+    <link href="https://arxiv.org/abs/2204.08712v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.08712v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A random forest regression based supervised machine learning method to predict experimental critical temperature of superconductivity from the electronic band structure, as obtained from Density Functional Theory, is demonstrated. This complementarity between experiment and theory draws inspiration from the merging of Kohn-Sham and Bogoliubov-De Gennes equations [W. Kohn, W, EKU Gross, and LN Oliveira, Int. J. of Quant. Chem., 36(23), 611-615 (1989)]. Features in the Kohn-Sham Density Functional Theory band structure away from EF becoming decisive for the superconducting gap demonstrates this divide-and-conquer physical understanding. Not committing to any microscopic mechanism for the SC at this stage, it implies that in different classes of materials, different electronic features are responsible for the superconductivity. However, training on known members of a class, the performance of new members may be predicted. The method is validated for the A15 materials, including both binary A3X and ternary A6XY intermetallics, A=V, Nb, demonstrating that the two do indeed belong to the same class of superconductors.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-19T07:33:30Z</published>
+    <arxiv:comment>12 pages, 4 figures and Supplementary Information containing 8 additional figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Vedad Babic</name>
+    </author>
+    <author>
+      <name>Itai Panas</name>
+    </author>
+    <arxiv:doi>10.1016/j.physc.2022.1354187</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physc.2022.1354187" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.05235v3</id>
+    <title>Machine learning of superconducting critical temperature from Eliashberg theory</title>
+    <updated>2021-07-10T19:33:32Z</updated>
+    <link href="https://arxiv.org/abs/2106.05235v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.05235v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Eliashberg theory of superconductivity accounts for the fundamental physics of conventional electron-phonon superconductors, including the retardation of the interaction and the effect of the Coulomb pseudopotential, to predict the critical temperature $T_c$ and other properties. McMillan, Allen, and Dynes derived approximate closed-form expressions for the critical temperature predicted by this theory, which depends essentially on the electron-phonon spectral function $α^2F(ω)$, using $α^2F$ for low-$T_c$ superconductors. Here we show that modern machine learning techniques can substantially improve these formulae, accounting for more general shapes of the $α^2F$ function. Using symbolic regression and the sure independence screening and sparsifying operator (SISSO) framework, together with a database of artificially generated $α^2F$ functions, ranging from multimodal Einstein-like models to calculated spectra of polyhydrides, as well as numerical solutions of the Eliashberg equations, we derive a formula for $T_c$ that performs as well as Allen-Dynes for low-$T_c$ superconductors, and substantially better for higher-$T_c$ ones. The expression identified through our data-driven approach corrects the systematic underestimation of $T_c$ while reproducing the physical constraints originally outlined by Allen and Dynes. This equation should replace the Allen-Dynes formula for the prediction of higher-temperature superconductors and for the estimation of $λ$ from experimental data.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-09T17:20:19Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>S. R. Xie</name>
+    </author>
+    <author>
+      <name>Y. Quan</name>
+    </author>
+    <author>
+      <name>A. C. Hire</name>
+    </author>
+    <author>
+      <name>B. Deng</name>
+    </author>
+    <author>
+      <name>J. M. DeStefano</name>
+    </author>
+    <author>
+      <name>I. Salinas</name>
+    </author>
+    <author>
+      <name>U. S. Shah</name>
+    </author>
+    <author>
+      <name>L. Fanfarillo</name>
+    </author>
+    <author>
+      <name>J. Lim</name>
+    </author>
+    <author>
+      <name>J. Kim</name>
+    </author>
+    <author>
+      <name>G. R. Stewart</name>
+    </author>
+    <author>
+      <name>J. J. Hamlin</name>
+    </author>
+    <author>
+      <name>P. J. Hirschfeld</name>
+    </author>
+    <author>
+      <name>R. G. Hennig</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.02810v1</id>
+    <title>Machine-Learning-Guided Prediction Models of Critical Temperature of Cuprates</title>
+    <updated>2021-01-08T00:47:15Z</updated>
+    <link href="https://arxiv.org/abs/2101.02810v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.02810v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cuprates, a member of high-Tc superconductors, have been on the long-debate on their superconducting mechanism, so that predicting the critical temperature of cuprates still remains elusive. Herein, using machine learning and first principle calculations, we predict the maximum superconducting transition temperature (Tc,max) of hole-doped cuprates and suggest the explicit functional form for Tc,max with the root-mean-square-error of 3.705 K and the coefficient of determination R2 of 0.969. We employed two machine learning models; one is a parametric brute force searching method and another is a non-parametric random forest regression model. We have found that material dependent parameters such as the Bader charge of apical oxygen, the bond strength between apical atoms, and the number of superconducting layers are important features to estimate Tc,max. Furthermore, we predict the Tc,max of hypothetical cuprates generated by replacing apical cations with other elements. When Ga is an apical cation, the predicted Tc,max is the highest among the hypothetical structures with 71, 117, and 131 K for one, two, and three CuO2 layers, respectively. These findings suggest that machine learning could guide the design of new high-Tc superconductors in the future.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-08T00:47:15Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Donggun Lee</name>
+    </author>
+    <author>
+      <name>Daegun You</name>
+    </author>
+    <author>
+      <name>Dongwoo Lee</name>
+    </author>
+    <author>
+      <name>Xin Li</name>
+    </author>
+    <author>
+      <name>Sooran Kim</name>
+    </author>
+    <arxiv:doi>10.1021/acs.jpclett.1c01442</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.jpclett.1c01442" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.04977v1</id>
+    <title>Critical Temperature Prediction for a Superconductor: A Variational Bayesian Neural Network Approach</title>
+    <updated>2020-01-29T20:28:30Z</updated>
+    <link href="https://arxiv.org/abs/2002.04977v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.04977v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Much research in recent years has focused on using empirical machine learning approaches to extract useful insights on the structure-property relationships of superconductor material. Notably, these approaches are bringing extreme benefits when superconductivity data often come from costly and arduously experimental work. However, this assessment cannot be based solely on an open black-box machine learning, which is not fully interpretable, because it can be counter-intuitive to understand why the model may give an appropriate response to a set of input data for superconductivity characteristic analyses, e.g., critical temperature. The purpose of this study is to describe and examine an alternative approach for predicting the superconducting transition temperature $T_c$ from SuperCon database obtained by Japan's National Institute for Materials Science. We address a generative machine-learning framework called Variational Bayesian Neural Network using superconductors chemical elements and formula to predict $T_c$. In such a context, the importance of the paper in focus is twofold. First, to improve the interpretability, we adopt a variational inference to approximate the distribution in latent parameter space for the generative model. It statistically captures the mutual correlation of superconductor compounds and; then, gives the estimation for the $T_c$. Second, a stochastic optimization algorithm, which embraces a statistical inference named Monte Carlo sampler, is utilized to optimally approximate the proposed inference model, ultimately determine and evaluate the predictive performance.</summary>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-29T20:28:30Z</published>
+    <arxiv:comment>IEEE Transactions on Applied Superconductivity, 2020</arxiv:comment>
+    <arxiv:primary_category term="physics.data-an"/>
+    <author>
+      <name>Thanh Dung Le</name>
+    </author>
+    <author>
+      <name>Rita Noumeir</name>
+    </author>
+    <author>
+      <name>Huu Luong Quach</name>
+    </author>
+    <author>
+      <name>Ji Hyung Kim</name>
+    </author>
+    <author>
+      <name>Jung Ho Kim</name>
+    </author>
+    <author>
+      <name>Ho Min Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.09852v2</id>
+    <title>Predicting novel superconducting hydrides using machine learning approaches</title>
+    <updated>2020-04-08T18:25:54Z</updated>
+    <link href="https://arxiv.org/abs/2001.09852v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.09852v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Searching for superconducting hydrides has so far largely focused on finding materials exhibiting the highest possible critical temperatures ($T_c$). This has led to a bias towards materials stabilised at very high pressures, which introduces a number of technical difficulties in experiment. Here we apply machine learning methods in an effort to identify superconducting hydrides which can operate closer to ambient conditions. The output of these models informs structure searches, from which we identify and screen stable candidates before performing electron-phonon calculations to obtain $T_c$. Hydrides of alkali and alkaline earth metals are identified as particularly promising; a $T_c$ of up to 115 K is calculated for RbH$_{12}$ at 50 GPa and a $T_c$ of up to 90 K is calculated for CsH$_7$ at 100 GPa.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-27T15:15:04Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. B 101, 144505 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Michael J. Hutcheon</name>
+    </author>
+    <author>
+      <name>Alice M. Shipley</name>
+    </author>
+    <author>
+      <name>Richard J. Needs</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.101.144505</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.101.144505" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.06780v1</id>
+    <title>Functional Form of the Superconducting Critical Temperature from Machine Learning</title>
+    <updated>2019-05-16T14:27:17Z</updated>
+    <link href="https://arxiv.org/abs/1905.06780v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.06780v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting the critical temperature $T_c$ of new superconductors is a notoriously difficult task, even for electron-phonon paired superconductors for which the theory is relatively well understood. Early attempts by McMillan and Allen and Dynes to improve on the weak-coupling BCS formula led to closed-form approximate relations between $T_c$ and various measures of the phonon spectrum and the electron-phonon interaction appearing in Eliashberg theory. Here we propose that these approaches can be improved with the use of machine learning algorithms. As an initial test, we train a model for identifying low-dimensional descriptors using the $T_c &lt; 10$ K data tested by Allen and Dynes, and show that a simple analytical expression thus obtained improves upon the Allen-Dynes fit. Furthermore, the prediction for the recently discovered high $T_c$ material H$_3$S at high pressure is quite reasonable. Interestingly, $T_c$'s for more recently discovered superconducting systems with a more two-dimensional electron-phonon coupling, which do not follow Allen and Dynes' expression, also do not follow our analytic expression. Thus, this machine learning approach appears to be a powerful method for highlighting the need for a new descriptor beyond those used by Allen and Dynes to describe their set of isotropic electron-phonon coupled superconductors. We argue that this machine learning method, and its implied need for a descriptor characterizing Fermi surface properties, represents a promising new approach to superconductor materials discovery which may eventually replace the serendipitous discovery paradigm begun by Kamerlingh Onnes.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-16T14:27:17Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. B 100, 174513 (2019)</arxiv:journal_ref>
+    <author>
+      <name>S. R. Xie</name>
+    </author>
+    <author>
+      <name>G. R. Stewart</name>
+    </author>
+    <author>
+      <name>J. J. Hamlin</name>
+    </author>
+    <author>
+      <name>P. J. Hirschfeld</name>
+    </author>
+    <author>
+      <name>R. G. Hennig</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.100.174513</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.100.174513" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.08060v7</id>
+    <title>Hidden self-energies as origin of cuprate superconductivity revealed by machine learning</title>
+    <updated>2023-02-13T12:38:18Z</updated>
+    <link href="https://arxiv.org/abs/1903.08060v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.08060v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Experimental data are the source of understanding matter. However, measurable quantities are limited and theoretically important quantities are sometimes hidden. Nonetheless, recent progress of machine-learning techniques opens possibilities of exposing them only from available experimental data. In this paper, after establishing the reliability of the method in various careful benchmark tests, the Boltzmann-machine method is applied to the angle-resolved photoemission spectroscopy spectra of cuprate high temperature superconductors, Bi$_2$Sr$_2$CuO$_{6+δ}$ (Bi2201) and Bi$_2$Sr$_2$CaCuO$_{8+δ}$ (Bi2212). We find prominent peak structures both in normal and anomalous self-energies, but they cancel in the total self-energy making the structure apparently invisible, while the peaks make universally dominant contributions to superconducting gap, hence evidencing the signal that generates the high-$T_{\rm c}$ superconductivity. The relation between superfluid density and critical temperature supports involvement of universal carrier relaxation associated with dissipative strange metals, where enhanced superconductivity is promoted by entangled quantum-soup nature of the cuprates. The present achievement opens avenues for innovative machine-learning spectroscopy method to reveal fundamental properties hidden in direct experimental accesses.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-19T15:41:32Z</published>
+    <arxiv:comment>41 pages, 25 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Research 3, 043099 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Youhei Yamaji</name>
+    </author>
+    <author>
+      <name>Teppei Yoshida</name>
+    </author>
+    <author>
+      <name>Atsushi Fujimori</name>
+    </author>
+    <author>
+      <name>Masatoshi Imada</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevResearch.3.043099</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevResearch.3.043099" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1709.02727v2</id>
+    <title>Machine learning modeling of superconducting critical temperature</title>
+    <updated>2017-10-06T21:00:51Z</updated>
+    <link href="https://arxiv.org/abs/1709.02727v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1709.02727v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Superconductivity has been the focus of enormous research effort since its discovery more than a century ago. Yet, some features of this unique phenomenon remain poorly understood; prime among these is the connection between superconductivity and chemical/structural properties of materials. To bridge the gap, several machine learning schemes are developed herein to model the critical temperatures ($T_{\mathrm{c}}$) of the 12,000+ known superconductors available via the SuperCon database. Materials are first divided into two classes based on their $T_{\mathrm{c}}$ values, above and below 10 K, and a classification model predicting this label is trained. The model uses coarse-grained features based only on the chemical compositions. It shows strong predictive power, with out-of-sample accuracy of about 92%. Separate regression models are developed to predict the values of $T_{\mathrm{c}}$ for cuprate, iron-based, and "low-$T_{\mathrm{c}}$" compounds. These models also demonstrate good performance, with learned predictors offering potential insights into the mechanisms behind superconductivity in different families of materials. To improve the accuracy and interpretability of these models, new features are incorporated using materials data from the AFLOW Online Repositories. Finally, the classification and regression models are combined into a single integrated pipeline and employed to search the entire Inorganic Crystallographic Structure Database (ICSD) for potential new superconductors. We identify more than 30 non-cuprate and non-iron-based oxides as candidate materials.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-09-08T14:55:02Z</published>
+    <arxiv:comment>17 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>npj Computational Materials 4, Article number: 29 (2018)</arxiv:journal_ref>
+    <author>
+      <name>Valentin Stanev</name>
+    </author>
+    <author>
+      <name>Corey Oses</name>
+    </author>
+    <author>
+      <name>A. Gilad Kusne</name>
+    </author>
+    <author>
+      <name>Efrain Rodriguez</name>
+    </author>
+    <author>
+      <name>Johnpierre Paglione</name>
+    </author>
+    <author>
+      <name>Stefano Curtarolo</name>
+    </author>
+    <author>
+      <name>Ichiro Takeuchi</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-018-0085-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-018-0085-8" title="doi"/>
+  </entry>
+</feed>

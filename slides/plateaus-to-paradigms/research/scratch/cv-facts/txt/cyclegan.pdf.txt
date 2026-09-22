@@ -1,0 +1,596 @@
+                                      Unpaired Image-to-Image Translation
+                                  using Cycle-Consistent Adversarial Networks
+
+                      Jun-Yan Zhu∗      Taesung Park∗     Phillip Isola      Alexei A. Efros
+                               Berkeley AI Research (BAIR) laboratory, UC Berkeley
+
+               Monet       Photos                                Zebras       Horses                                Summer        Winter
+
+
+
+
+                Monet     photo                                    zebra     horse                                   summer      winter
+
+
+
+
+                 photo    Monet                                    horse     zebra                                     winter    summer
+
+
+
+
+         Photograph                             Monet                      Van Gogh                       Cezanne                     Ukiyo-e
+Figure 1: Given any two unordered image collections X and Y , our algorithm learns to automatically “translate” an image from one into the other and vice
+versa. Example application (bottom): using a collection of paintings of a famous artist, learn to render a user’s photograph into their style.
+
+
+                              Abstract                                        1. Introduction
+    Image-to-image translation is a class of vision and graph-       What did Claude Monet see as he placed his easel by the
+ics problems where the goal is to learn the mapping between bank of the Seine near Argenteuil on a lovely spring day in
+an input image and an output image using a training set of 1873 (Figure 1, top-left)? A color photograph, had it been
+aligned image pairs. However, for many tasks, paired train- invented, may have documented a crisp blue sky and a glassy
+ing data will not be available. We present an approach for river reflecting it. Monet conveyed his impression of this same
+learning to translate an image from a source domain X to a scene through wispy brush strokes and a bright palette. What
+target domain Y in the absence of paired examples. Our goal if Monet had happened upon the little harbor in Cassis on a
+is to learn a mapping G : X → Y such that the distribution cool summer evening (Figure 1, bottom-left)? A brief stroll
+of images from G(X) is indistinguishable from the distribu- through a gallery of Monet paintings makes it easy to imagine
+tion Y using an adversarial loss. Because this mapping is how he would have rendered the scene: perhaps in pastel
+highly under-constrained, we couple it with an inverse map- shades, with abrupt dabs of paint, and a somewhat flattened
+ping F : Y → X and introduce a cycle consistency loss to dynamic range.
+push F (G(X)) ≈ X (and vice versa). Qualitative results are          We can imagine all this despite never having seen a side by
+presented on several tasks where paired training data does side example of a Monet painting next to a photo of the scene
+not exist, including collection style transfer, object transfigu- he painted. Instead we have knowledge of the set of Monet
+ration, season transfer, photo enhancement, etc. Quantitative paintings and of the set of landscape photographs. We can
+comparisons against several prior methods demonstrate the reason about the stylistic differences between these two sets,
+superiority of our approach.                                      and thereby imagine what a scene might look like if we were
+                                                                  to “translate” it from one set into the other.
+
+                                                                                   * indicates equal contribution
+
+
+                                                                           12223
+         Paired                                  Unpaired                      G thereby translates the domain X to a domain Ŷ distributed
+n xi               yi o               ( )( ) X                   Y             identically to Y . However, such a translation does not guaran-
+                                                                               tee that the individual inputs and outputs x and y are paired
+
+             ,                                                                 up in a meaningful way – there are infinitely many mappings
+                                                                               G that will induce the same distribution over ŷ. Moreover, in
+                                                                               practice, we have found it difficult to optimize the adversarial
+n                          o
+             ,                                         ,                       objective in isolation: standard procedures often lead to the
+                                                                               well-known problem of mode collapse, where all input images
+n                          o                                                   map to the same output image and the optimization fails to
+             ,                                                                 make progress [13].
+                                                                                  These issues call for adding more structure to our objective.
+           …
+
+
+
+
+                                           …
+
+
+                                                               …
+                                                                               Therefore, we exploit the property that translation should be
+                                                                               “cycle consistent”, in the sense that if we translate, e.g., a
+Figure 2: Paired training data (left) consists of training examples            sentence from English to French, and then translate it back
+{xi , yi }N
+          i=1 , where the yi that corresponds to each xi is given [20]. We     from French to English, we should arrive back at the original
+instead consider unpaired training data (right), consisting of a source set
+                                                                               sentence [3]. Mathematically, if we have a translator G :
+{xi }N                               M
+      i=1 ∈ X and a target set {yj }j=1 ∈ Y , with no information provided
+as to which xi matches which yj .                                              X → Y and another translator F : Y → X, then G and F
+                                                                               should be inverses of each other, and both mappings should
+                                                                               be bijections. We apply this structural assumption by training
+    In this paper, we present a system that can learn to do the                both the mapping G and F simultaneously, and adding a
+same: capturing special characteristics of one image collection                cycle consistency loss [60] that encourages F (G(x)) ≈ x and
+and figuring out how these characteristics could be translated                 G(F (y)) ≈ y. Combining this loss with adversarial losses
+into the other image collection, all in the absence of any paired              on domains X and Y yields our full objective for unpaired
+training examples.                                                             image-to-image translation.
+    This problem can be more broadly described as image-to-                       We apply our method to a wide range of applications, in-
+image translation [20], converting an image from one repre-                    cluding style transfer, object transfiguration, attribute transfer
+sentation of a given scene, x, to another, y, e.g., grayscale                  and photo enhancement. We also compare against previous
+to color, image to semantic labels, edge-map to photograph.                    approaches that rely either on hand-defined factorizations of
+Years of research in computer vision, image processing, and                    style and content, or on shared embedding functions, and show
+graphics have produced powerful translation systems in the su-                 that our method outperforms these baselines. Our code is avail-
+pervised setting, where example image pairs {x, y} are avail-                  able at https://github.com/junyanz/CycleGAN.
+able (Figure 2, left), e.g., [9, 17, 20, 21, 24, 29, 41, 52, 54, 57].          Check out the full version of the paper at https://arxiv.
+However, obtaining paired training data can be difficult and                   org/abs/1703.10593.
+expensive. For example, only a couple of datasets exist for
+tasks like semantic segmentation (e.g., [4]), and they are rela-
+tively small. Obtaining input-output pairs for graphics tasks 2. Related work
+like artistic stylization can be even more difficult since the
+desired output is highly complex, typically requiring artistic          Generative Adversarial Networks (GANs) [14, 58] have
+authoring. For many tasks, like object transfiguration (e.g., achieved impressive results in image generation [5, 35], image
+zebra→horse, Figure 1 top-middle), the desired output is not editing [61], and representation learning [35, 39, 33]. Recent
+even well-defined.                                                    methods adopt the same idea for conditional image generation
+    We therefore seek an algorithm that can learn to translate applications, such as text2image [36], image inpainting [34],
+between domains without paired input-output examples (Fig- and future prediction [32], as well as to other domains like
+ure 2, right). We assume there is some underlying relationship videos [50] and 3D models [53]. The key to GANs’ success is
+between the domains – for example, that they are two different the idea of an adversarial loss that forces the generated images
+renderings of the same underlying world – and seek to learn to be, in principle, indistinguishable from real images. This
+that relationship. Although we lack supervision in the form is particularly powerful for image generation tasks, as this is
+of paired examples, we can exploit supervision at the level of exactly the objective that much of computer graphics aims to
+sets: we are given one set of images in domain X and a dif- optimize. We adopt an adversarial loss to learn the mapping
+ferent set in domain Y . We may train a mapping G : X → Y such that the translated image cannot be distinguished from
+such that the output ŷ = G(x), x ∈ X, is indistinguishable images in the target domain.
+from images y ∈ Y by an adversary trained to classify ŷ apart          Image-to-Image Translation The idea of image-to-image
+from y. In theory, this objective can induce an output distribu- translation goes back at least to Hertzmann et al.’s Im-
+tion over ŷ that matches the empirical distribution pY (y) (in age Analogies [17], who employ a nonparametric texture
+general, this requires that G be stochastic) [14]. The optimal model [8] on a single input-output training image pair. More
+
+
+                                                                              2224
+                                                                       DY                                                        DX
+                                                              G                                                                              G
+ DX                             DY                  x                    Ŷ                   x̂              y                   X̂                    ŷ
+                  G                                                                F                                    F
+                                                                     X(                        Y            X                         Y
+   X                              Y                                                                                               (       cycle-consistency
+                                                                                                                                                 loss
+                                               cycle-consistency
+                                                      loss
+                  F
+                   (a)                                                  (b)                                                    (c)
+
+Figure 3: (a) Our model contains two mapping functions G : X → Y and F : Y → X, and associated adversarial discriminators DY and DX . DY
+encourages G to translate X into outputs indistinguishable from domain Y , and vice versa for DX , F , and X. To further regularize the mappings, we
+introduce two “cycle consistency losses” that capture the intuition that if we translate from one domain to the other and back again we should arrive where we
+started: (b) forward cycle-consistency loss: x → G(x) → F (G(x)) ≈ x, and (c) backward cycle-consistency loss: y → F (y) → G(F (y)) ≈ y
+
+recent approaches use a dataset of input-output examples to to regularize structured data has a long history. In visual track-
+learn a parametric translation function using CNNs, e.g. [29]. ing, enforcing simple forward-backward consistency has been
+Our approach builds on the “pix2pix” framework of Isola et a standard trick for decades [44]. In the language domain,
+al. [20], which uses a conditional generative adversarial net- verifying and improving translations via “back translation and
+work [14] to learn a mapping from input to output images. reconsiliation” is a technique used by human translators [3]
+Similar ideas have been applied to various tasks such as gen- (including, humorously, by Mark Twain [47]), as well as
+erating photographs from sketches [40] or from attribute and by machines [15]. More recently, higher-order cycle consis-
+semantic layouts [22]. However, unlike these prior works, we tency has been used in structure from motion [56], 3D shape
+learn the mapping without paired training examples.            matching [19], co-segmentation [51], dense semantic align-
+    Unpaired Image-to-Image Translation Several other          ment   [59, 60], and depth estimation [12]. Of these, Zhou et
+methods also tackle the unpaired setting, where the goal is to al. [60] and Godard et al. [12] are most similar to our work, as
+relate two data domains, X and Y . Rosales et al. [37] propose they  use a cycle consistency loss as a way of using transitivity
+a Bayesian framework that includes a prior based on a patch-   to  supervise CNN training. In this work, we are introducing a
+based Markov random field computed from a source image, similar loss to push G and F to be consistent with each other.
+and a likelihood term obtained from multiple style images.         Neural Style Transfer [11, 21, 48, 10] is another way
+More recently, CoupledGANs [28] and cross-modal scene to perform image-to-image translation, which synthesizes a
+networks [1] use a weight-sharing strategy to learn a common novel image by combining the content of one image with the
+representation across domains. Concurrent to our method, style of another image (typically a painting) by matching the
+Liu et al. [27] extends this framework with a combination Gram matrix statistics of pre-trained deep features. Our main
+of variational autoencoders [23] and generative adversarial focus, on the other hand, is learning the mapping between two
+networks. Another line of concurrent work [42, 45, 2] encour- domains, rather than between two specific images, by trying
+ages the input and output to share certain “content” features to capture correspondences between higher-level appearance
+even though they may differ in “style“. They also use adver- structures. Therefore, our method can be applied to other
+sarial networks, with additional terms to enforce the output tasks, such as painting→ photo, object transfiguration, etc.
+to be close to the input in a predefined metric space, such where single sample transfer methods do not perform well.
+as class label space [2], image pixel space [42], and image We compare these two methods in Section 5.2.
+feature space [45].
+    Unlike the above approaches, our formulation does not rely 3. Formulation
+on any task-specific, predefined similarity function between
+the input and output, nor do we assume that the input and out-     Our goal is to learn mapping functions between two do-
+put have to lie in the same low-dimensional embedding space. mains X and Y given training samples {xi }N         i=1 ∈ X and
+This makes our method a general-purpose solution for many {yj }M     j=1  ∈  Y . As illustrated in Figure 3 (a), our model in-
+vision and graphics tasks. We directly compare against several cludes two mappings G : X → Y and F : Y → X. In
+prior approaches in Section 5.1. Concurrent with our work, in addition, we introduce two adversarial discriminators DX and
+these same proceedings, Yi et al. [55] independently introduce DY , where DX aims to distinguish between images {x} and
+a similar objective for unpaired image-to-image translation, translated images {F (y)}; in the same way, DY aims to dis-
+inspired by dual learning in machine translation [15].         criminate between {y} and {G(x)}. Our objective contains
+    Cycle Consistency The idea of using transitivity as a way kinds of two terms: adversarial losses [14] for matching the
+                                                               distribution of generated images to the data distribution in
+
+
+                                                                              2225
+the target domain; and a cycle consistency loss to prevent the    where λ controls the relative importance of the two objectives.
+learned mappings G and F from contradicting each other.           We aim to solve:
+
+3.1. Adversarial Loss                                                     G∗ , F ∗ = arg min max L(G, F, DX , DY ).          (4)
+                                                                                         G,F Dx ,DY
+  We apply adversarial losses [14] to both mapping functions.
+For the mapping function G : X → Y and its discriminator             Notice that our model can be viewed as training two “au-
+DY , we express the objective as:                                 toencoders” [18]: we learn one autoencoder F ◦ G : X → X
+   LGAN (G, DY , X, Y ) =Ey∼pdata (y) [log DY (y)]                jointly with another G ◦ F : Y → Y . However, these autoen-
+                                                                  coders each have special internal structure: they map an image
+                          +Ex∼pdata (x) [log(1 − DY (G(x))],      to itself via an intermediate representation that is a transla-
+                                                              (1) tion of the image into another domain. Such a setup can also
+where G tries to generate images G(x) that look similar to im- be seen as a special case of “adversarial autoencoders” [30],
+ages from domain Y , while DY aims to distinguish between which use an adversarial loss to train the bottleneck layer
+translated samples G(x) and real samples y. We introduce a of an autoencoder to match an arbitrary target distribution.
+similar adversarial loss for the mapping function F : Y → X In our case, the target distribution for the X → X autoen-
+and its discriminator DX as well: i.e. LGAN (F, DX , Y, X).       coder is that of domain Y . In Section 5.1.3, we compare our
+                                                                  method against ablations of the full objective, and empiri-
+3.2. Cycle Consistency Loss                                       cally show that both objectives play critical roles in arriving
+                                                                  at high-quality results.
+    Adversarial training can, in theory, learn mappings G and
+F that produce outputs identically distributed as target do-
+mains Y and X respectively (strictly speaking, this requires 4. Implementation
+G and F to be stochastic functions) [13]. However, with large Network Architecture We adapt the architecture for our
+enough capacity, a network can map the same set of input generative networks from Johnson et al. [21] who have
+images to any random permutation of images in the target shown impressive results for neural style transfer and super-
+domain, where any of the learned mappings can induce an out- resolution. This network contains two stride-2 convolutions,
+put distribution that matches the target distribution. To further several residual blocks [16], and two 1 -strided convolutions.
+reduce the space of possible mapping functions, we argue that Similar to Johnson et al. [21], we use      2
+                                                                                                             instance normaliza-
+the learned mapping functions should be cycle-consistent: as tion [49]. For the discriminator networks we use 70×70 Patch-
+shown in Figure 3 (b), for each image x from domain X, the GANs [20, 26, 25], which aim to classify whether 70 × 70
+image translation cycle should be able to bring x back to the overlapping image patches are real or fake. Such a patch-level
+original image, i.e. x → G(x) → F (G(x)) ≈ x. We call this discriminator architecture has fewer parameters than a full-
+forward cycle consistency. Similarly, as illustrated in Figure 3 image discriminator, and can be applied to arbitrarily-sized
+(c), for each image y from domain Y , G and F should also sat- images in a fully convolutional fashion [20].
+isfy backward cycle consistency: y → F (y) → G(F (y)) ≈ y.
+We can incentivize this behavior using a cycle consistency
+loss:
+                                                                  Training details We apply two techniques from recent
+          Lcyc (G, F ) =Ex∼pdata (x) [kF (G(x)) − xk1 ]           works to stabilize our model training procedure. First, for
+                                                                  LGAN (Equation 1), we replace the negative log likelihood
+                       +Ey∼pdata (y) [kG(F (y)) − yk1 ].      (2)
+                                                                  objective by a least square loss [31]. This loss performs more
+In preliminary experiments, we also tried replacing the L1 stably during training and generates higher quality results.
+norm in this loss with an adversarial loss between F (G(x)) Equation 1 then becomes:
+and x, and between G(F (y)) and y, but did not observe im-
+proved performance. The behavior induced by the cycle con-             LLSGAN (G, DY , X, Y ) =Ey∼pdata (y) [(DY (y) − 1)2 ]
+sistency loss can be observed in the arXiv version.                                             +E           [D (G(x))2 ], (5)
+                                                                                                  x∼pdata (x)   Y
+
+
+3.3. Full Objective                                                  Second, to reduce model oscillation [13], we follow Shri-
+                                                                  vastava et al’s strategy [42] and update the discriminators DX
+   Our full objective is:                                         and DY using a history of generated images rather than the
+        L(G, F, DX , DY ) =LGAN (G, DY , X, Y )                   ones produced by the latest generative networks. We keep an
+                                                                  image buffer that stores the 50 previously generated images.
+                           + LGAN (F, DX , Y, X)
+                                                                     Please refer to our arXiv paper for more details about the
+                           + λLcyc (G, F ),                (3)    datasets, architectures and training procedures.
+
+
+                                                                 2226
+    Input        BiGAN    CoGAN      CycleGAN     pix2pix   Ground truth                                      Map → Photo              Photo → Map
+                                                                               Loss                        % Turkers labeled real   % Turkers labeled real
+                                                                               CoGAN [28]                      0.6% ± 0.5%              0.9% ± 0.5%
+                                                                               BiGAN/ALI [7, 6]                2.1% ± 1.0%              1.9% ± 0.9%
+                                                                               Pixel loss + GAN [42]           0.7% ± 0.5%              2.6% ± 1.1%
+                                                                               Feature loss + GAN              1.2% ± 0.6%              0.3% ± 0.2%
+                                                                               CycleGAN (ours)                26.8% ± 2.8%             23.2% ± 3.4%
+                                                                                       Table 1: AMT “real vs fake” test on maps↔aerial photos.
+Figure 4: Different methods for mapping labels→photos trained on
+cityscapes. From left to right: input, BiGAN/ALI [6, 7], CoGAN [28],               Loss                     Per-pixel acc.   Per-class acc.   Class IOU
+CycleGAN (ours), pix2pix [20] trained on paired data, and ground truth.            CoGAN [28]                   0.40             0.10            0.06
+                                                                                   BiGAN/ALI [7, 6]             0.19             0.06            0.02
+    Input        BiGAN    CoGAN      CycleGAN     pix2pix    Ground truth          Pixel loss + GAN [42]        0.20             0.10            0.04
+                                                                                   Feature loss + GAN           0.06             0.04            0.01
+                                                                                   CycleGAN (ours)              0.52             0.17            0.11
+                                                                                   pix2pix [20]                 0.71             0.25            0.18
+                                                                             Table 2: FCN-scores for different methods, evaluated on Cityscapes
+                                                                             labels→photos.
+                                                                                   Loss                     Per-pixel acc.   Per-class acc.   Class IOU
+                                                                                   CoGAN [28]                   0.45             0.11            0.08
+                                                                                   BiGAN/ALI [7, 6]             0.41             0.13            0.07
+Figure 5: Different methods for mapping aerial photos↔maps on Google               Pixel loss + GAN [42]        0.47             0.11            0.07
+Maps. From left to right: input, BiGAN/ALI [6, 7], CoGAN [28], CycleGAN            Feature loss + GAN           0.50             0.10            0.06
+(ours), pix2pix [20] trained on paired data, and ground truth.                     CycleGAN (ours)              0.58             0.22            0.16
+                                                                                   pix2pix [20]                 0.85             0.40            0.32
+                                                                             Table 3: Classification performance of photo→labels for different methods
+5. Results                                                                   on cityscapes.
+
+    We first compare our approach against recent methods for
+unpaired image-to-image translation on paired datasets where RGB pixel values.
+ground truth input-output pairs are available for evaluation.       BiGAN/ALI [7, 6] Unconditional GANs [14] learn a gen-
+We then study the importance of both the adversarial loss erator G : Z → X, that maps random noise Z to images X.
+and the cycle consistency loss, and compare our full method The BiGAN [7] and ALI [6] propose to also learn the inverse
+against several variants. Finally, we demonstrate the gener- mapping function F : X → Z. Though they were originally
+ality of our algorithm on a wide range of applications where designed for mapping a latent vector z to an image x, we
+paired data does not exist. For brevity, we refer to our method implemented the same objective for mapping a source image
+as CycleGAN.                                                    x to a target image y.
+                                                                    pix2pix [20] We also compare against pix2pix [20], which
+                                                                is trained on paired data, to see how close we can get to this
+5.1. Evaluation                                                 “upper bound” without using paired data.
+                                                                    For fair comparison, we implement all the baselines using
+    Using the same evaluation datasets and metrics as the same architecture and details as our method except for
+“pix2pix” [20], we compare our method against several base- CoGAN [28]. We use the public implementation of CoGAN
+lines both qualitatively and quantitatively. We also perform due to fundametal differences in architecture 1 .
+ablation study on the full loss function.
+
+                                                                             5.1.2      Comparison against baselines
+5.1.1       Baselines
+                                                                As can be seen in Figure 4 and Figure 5, we were unable to
+    CoGAN [28] This method learns one GAN generator for
+                                                                achieve compelling results with any of the baselines. Our
+domain X and one for domain Y , with shared weights on the
+                                                                method, on the other hand, is able to produce translations that
+first few layers for shared latent representation. Translation
+                                                                are often of similar quality to the fully supervised pix2pix.
+from X to Y can be achieved by finding a latent represen-
+                                                                We exclude pixel loss + GAN and feature loss + GAN in
+tation that generates image X and then rendering this latent
+                                                                the figures, as both of the methods fail to produce results at
+representation into style Y .
+                                                                all close to the target domain (full results can be viewed at
+    Pixel loss + GAN [42] Like our method, Shrivastava et https://junyanz.github.io/CycleGAN/).
+al. [42] uses an adversarial loss to train a translation from X
+                                                                    In addition, our method and the baselines are quantitatively
+to Y . The regularization term kX − Ŷ k1 was used to penalize
+                                                                compared in three ways. First, we run ”real vs fake” study on
+making large changes at pixel level.
+                                                                Amazon Mechanical Turk (AMT) workers to assess percep-
+    Feature loss + GAN We also test a variant of [42] where tual realism [20]. Second, we train photo→label task on the
+the L1 loss is computed over deep image features using a
+pretrained network (VGG-16 relu4 2 [43]), rather than over         1 https://github.com/mingyuliutw/CoGAN
+
+
+
+
+                                                                            2227
+       Input              Cycle alone         GAN alone          GAN+forward         GAN+backward CycleGAN (ours)                 Ground truth
+
+
+
+
+Figure 6: Different variants of our method for mapping labels↔photos trained on cityscapes. From left to right: input, cycle-consistency loss alone,
+adversarial loss alone, GAN + forward cycle-consistency loss (F (G(x)) ≈ x), GAN + backward cycle-consistency loss (G(F (y)) ≈ y), CycleGAN (our
+full method), and ground truth. Both Cycle alone and GAN + backward fail to produce images similar to the target domain. GAN alone and GAN + forward
+suffer from mode collapse, producing identical label maps regardless of the input photo.
+
+Cityscapes dataset, and compare the output label images with data, and full results of all applications on both training and
+the ground truth using the standard metrics on the Cityscapes test data can be viewed on our project website.
+benchmark [4]. Lastly, we train label→photo task on the same        Object transfiguration (Figure 7) The model is trained to
+dataset and evaluate the output photos using an off-the-shelf translate one object class from Imagenet [38] to another (each
+fully-convolutional semantic segmentation network [29]. We class contains around 1000 training images). Turmukham-
+find that our method significantly outperforms the baselines betov et al.[46] proposes a subspace model to translate one
+in all three experiments. Table 1 reports performance on the object into another object of the same category, while our
+AMT perceptual realism task. Here, we see that our method method focuses on object transfiguration between two visu-
+can fool participants on around a quarter of trials, in both ally similar categories.
+the map→photo direction and the photo→map direction. All            Season transfer (Figure 7) The model is trained on the
+baselines almost never fooled participants. Table 2 and Ta- winter and summer photos of Yosemite on Flickr.
+ble 3 assess the performance of the label↔photo task on the
+                                                                    Collection style transfer (Figure 8) We train the model
+Cityscapes. In both cases, our method again outperforms the
+                                                                 on landscape photographs downloaded from Flickr and
+baselines. Detailed procedures and results of each experiment
+                                                                 WikiArt. Note that unlike recent work on “neural style trans-
+can be found in our arXiv version.
+                                                                 fer” [11], our method learns to mimic the style of an entire
+                                                                 set of artworks (e.g. Van Gogh), rather than transferring the
+5.1.3 Ablation Study                                             style of a single selected piece of art (e.g. Starry Night). In
+                                                                 Figure 5.2, we compare our results with [11].
+We compare against ablations of our full loss. Figure 6             Photo generation from paintings (Figure 9) For
+shows several qualitative examples. Removing the GAN loss painting→photo, we find that it is helpful to introduce an
+substantially degrades results, as does removing the cycle- additional loss to encourage the mapping to preserve color
+consistency loss. We therefore conclude that both terms are composition between the input and output. In particular, we
+critical to our results. We also evaluate our method with adopt the technique of Taigman et al. [45] and regularize
+the cycle loss in only one direction: GAN+forward cycle the generator to be near an identity mapping when real sam-
+loss Ex∼pdata (x) [kF (G(x)) − xk1 ], or GAN+backward cycle ples of the target domain are provided as the input to the
+loss Ey∼pdata (y) [kG(F (y)) − yk1 ] (Equation 2) and find that generator: i.e. Lidentity (G, F ) = Ey∼pdata (y) [kG(y) − yk1 ] +
+it often incurs training instability and causes mode collapse, Ex∼pdata (x) [kF (x) − xk1 ].
+especially for the direction of the mapping that was removed.       Without Lidentity , the generator G and F are free to change
+We also quantitatively measured the ablations on Cityscapes the tint of input images when there is no need to. For example,
+photos→label, whose results can be found in our arXiv ver- when learning the mapping between Monet’s paintings and
+sion.                                                            Flickr photographs, the generator often maps paintings of
+                                                                 daytime to photographs taken during sunset, because such a
+5.2. Applications                                                mapping may be equally valid under the adversarial loss and
+                                                                 cycle consistency loss. The effect of this identity mapping
+    We demonstrate our method on several applications where
+                                                                 loss can be found in our arXiv paper.
+paired training data does not exist.We observe that translations
+on training data are often more appealing than those on test        In Figure 9, we show additional results translating Monet
+
+
+                                                                         2228
+      Input             Output              Input              Output                Input              Output              Input           Output
+
+
+
+
+                             horse → zebra                                                                    zebra → horse
+
+
+
+
+                 winter Yosemite → summer Yosemite                                             summer Yosemite → winter Yosemite
+
+
+
+
+                             apple → orange                                                                 orange → apple
+Figure 7: Results on several translation problems. These images are relatively successful results – please see our website for more comprehensive results.
+           Input                             Monet                        Van Gogh                        Cezanne                       Ukiyo-e
+
+
+
+
+                     Figure 8: We transfer input images into different artistic styles. Please see our website for additional examples.
+
+paintings to photographs. This figure shows results on paint-                  photos with shallower depth of field from the photos taken by
+ings that were included in the training set, whereas for all                   smartphones.
+other experiments in the paper, we only evaluate and show test
+set results. Because the training set does not include paired
+data, coming up with a plausible translation for a training set
+                                                                               6. Limitations and Discussion
+painting is a nontrivial task. Indeed, since Monet is no longer                   Although our method can achieve compelling results in
+able to create new paintings, generalization to unseen, “test                  many cases, the results are far from uniformly positive. Sev-
+set”, paintings is not a pressing problem.                                     eral typical failure cases are shown in Figure 12. On transla-
+   Photo enhancement (Figure 7) We show that our method                        tion tasks that involve color and texture changes, like many
+can be used to generate photos with shallower depth of field.                  of those reported above, the method often succeeds. We have
+We train the model on flower photos downloaded from Flickr.                    also explored tasks that require geometric changes, with little
+The source domain consists of photos of flower taken by                        success. For example, on the task of dog→cat transfigura-
+smartphones, which usually have deep depth of field due to                     tion, the learned translation degenerates to making minimal
+a small aperture. The target photos were taken with DSLRs                      changes to the input (Figure 12). Handling more varied and
+with a larger aperture. Our model successfully generates                       extreme transformations, especially geometric changes, is an
+
+
+                                                                             2229
+          Input                   Output                    Input                    Output                     Input                    Output
+
+
+
+
+                     Figure 9: Results on mapping Monet paintings to photographs. Please see our website for additional examples.
+
+
+
+
+                                                                                                                   →
+
+
+
+
+                                                                                                                   →
+
+
+
+
+                                                                                                                   →
+Figure 10: Photo enhancement: mapping from a set of iPhone snaps to
+professional DSLR photographs, the system often learns to produce shallow
+focus. Here we show some of the most successful results in our test set –
+average performance is considerably worse. Please see our website for more
+comprehensive and random examples.
+                                                                                                                    →
+
+                                                                              Figure 11: We compare our method with neural style transfer [11]. Left to
+important problem for future work.                                            right: input images, results from [11] using single representative image as a
+                                                                              style image, results from [11] using all the images from the target domain,
+    Some failure cases are caused by the distribution character-              and CycleGAN (ours)
+istic of the training datasets. For example, the horse → zebra
+task of Figure 12 has completely failed, because our model
+was trained on the wild horse, zebra synsets of ImageNet,
+which does not contain images of a person riding horse or
+                                                                         apple → orange
+zebra.
+    We also observe a lingering gap between the results achiev-
+able with paired training data and those achieved by our un-
+paired method. In some cases, this gap may be very hard – or               dog → cat                            horse → zebra
+even impossible – to close: for example, our method some-                     Figure 12: Some failure cases of our method.
+times permutes the labels for tree and building in the output
+of the photos→labels task. To resolve this ambiguity may            Acknowledgments We thank Aaron Hertzmann, Shiry Gi-
+require some form of weak semantic supervision. Integrating nosar, Deepak Pathak, Bryan Russell, Eli Shechtman, Richard
+weak or semi-supervised data may lead to substantially more Zhang, and Tinghui Zhou for many helpful comments. This
+powerful translators, still at a fraction of the annotation cost work was supported in part by NSF SMA-1514512, NSF IIS-
+of the fully-supervised systems.                                 1633310, a Google Research Award, Intel Corp, and hardware
+    Nonetheless, in many cases completely unpaired data is donations from NVIDIA. JYZ is supported by the Facebook
+plentifully available and should be made use of. This paper Graduate Fellowship and TP is supported by the Samsung
+pushes the boundaries of what is possible in this “unsuper- Scholarship. The photographs used in style transfer were
+vised” setting.                                                  taken by AE, mostly in France.
+
+
+                                                                             2230
+References                                                        [16] K. He, X. Zhang, S. Ren, and J. Sun. Deep residual
+                                                                       learning for image recognition. In CVPR, pages 770–
+ [1] Y. Aytar, L. Castrejon, C. Vondrick, H. Pirsiavash, and           778, 2016. 4
+     A. Torralba. Cross-modal scene networks. arXiv preprint
+                                                                  [17] A. Hertzmann, C. E. Jacobs, N. Oliver, B. Curless, and
+     arXiv:1610.09003, 2016. 3
+                                                                       D. H. Salesin. Image analogies. In SIGGRAPH, pages
+ [2] K. Bousmalis, N. Silberman, D. Dohan, D. Erhan, and               327–340. ACM, 2001. 2
+     D. Krishnan. Unsupervised pixel-level domain adapta-
+     tion with generative adversarial networks. arXiv preprint    [18] G. E. Hinton and R. R. Salakhutdinov. Reducing the
+     arXiv:1612.05424, 2016. 3                                         dimensionality of data with neural networks. Science,
+                                                                       313(5786):504–507, 2006. 4
+ [3] R. W. Brislin. Back-translation for cross-cultural re-
+     search. Journal of cross-cultural psychology, 1(3):185–      [19] Q.-X. Huang and L. Guibas. Consistent shape maps via
+     216, 1970. 2, 3                                                   semidefinite programming. In Computer Graphics Fo-
+                                                                       rum, volume 32, pages 177–186. Wiley Online Library,
+ [4] M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. En-
+                                                                       2013. 3
+     zweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele.
+     The cityscapes dataset for semantic urban scene under-       [20] P. Isola, J.-Y. Zhu, T. Zhou, and A. A. Efros. Image-to-
+     standing. In CVPR, 2016. 2, 6                                     image translation with conditional adversarial networks.
+ [5] E. L. Denton, S. Chintala, R. Fergus, et al. Deep gen-            In CVPR, 2017. 2, 3, 4, 5
+     erative image models using a laplacian pyramid of ad-        [21] J. Johnson, A. Alahi, and L. Fei-Fei. Perceptual losses
+     versarial networks. In NIPS, pages 1486–1494, 2015.               for real-time style transfer and super-resolution. In
+     2                                                                 ECCV, pages 694–711. Springer, 2016. 2, 3, 4
+ [6] J. Donahue, P. Krähenbühl, and T. Darrell. Adversarial     [22] L. Karacan, Z. Akata, A. Erdem, and E. Erdem. Learning
+     feature learning. arXiv preprint arXiv:1605.09782, 2016.          to generate images of outdoor scenes from attributes
+     5                                                                 and semantic layouts. arXiv preprint arXiv:1612.00215,
+ [7] V. Dumoulin, I. Belghazi, B. Poole, A. Lamb, M. Ar-               2016. 3
+     jovsky, O. Mastropietro, and A. Courville. Adversarially     [23] D. P. Kingma and M. Welling. Auto-encoding variational
+     learned inference. arXiv preprint arXiv:1606.00704,               bayes. ICLR, 2014. 3
+     2016. 5
+                                                                  [24] P.-Y. Laffont, Z. Ren, X. Tao, C. Qian, and J. Hays.
+ [8] A. A. Efros and T. K. Leung. Texture synthesis by                 Transient attributes for high-level understanding and
+     non-parametric sampling. In ICCV, volume 2, pages                 editing of outdoor scenes. ACM Transactions on Graph-
+     1033–1038. IEEE, 1999. 2                                          ics (TOG), 33(4):149, 2014. 2
+ [9] D. Eigen and R. Fergus. Predicting depth, surface nor-       [25] C. Ledig, L. Theis, F. Huszár, J. Caballero, A. Cunning-
+     mals and semantic labels with a common multi-scale                ham, A. Acosta, A. Aitken, A. Tejani, J. Totz, Z. Wang,
+     convolutional architecture. In ICCV, pages 2650–2658,             et al. Photo-realistic single image super-resolution us-
+     2015. 2                                                           ing a generative adversarial network. arXiv preprint
+[10] L. A. Gatys, M. Bethge, A. Hertzmann, and E. Shecht-              arXiv:1609.04802, 2016. 4
+     man. Preserving color in neural artistic style transfer.
+                                                                  [26] C. Li and M. Wand. Precomputed real-time texture syn-
+     arXiv preprint arXiv:1606.05897, 2016. 3
+                                                                       thesis with markovian generative adversarial networks.
+[11] L. A. Gatys, A. S. Ecker, and M. Bethge. Image style              ECCV, 2016. 4
+     transfer using convolutional neural networks. CVPR,
+     2016. 3, 6, 8                                                [27] M.-Y. Liu, T. Breuel, and J. Kautz. Unsupervised
+                                                                       image-to-image translation networks. arXiv preprint
+[12] C. Godard, O. Mac Aodha, and G. J. Brostow. Un-                   arXiv:1703.00848, 2017. 3
+     supervised monocular depth estimation with left-right
+     consistency. In CVPR, 2017. 3                                [28] M.-Y. Liu and O. Tuzel. Coupled generative adversarial
+                                                                       networks. In NIPS, pages 469–477, 2016. 3, 5
+[13] I. Goodfellow. Nips 2016 tutorial: Generative adversar-
+     ial networks. arXiv preprint arXiv:1701.00160, 2016. 2,      [29] J. Long, E. Shelhamer, and T. Darrell. Fully convolu-
+     4                                                                 tional networks for semantic segmentation. In CVPR,
+[14] I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu,                 pages 3431–3440, 2015. 2, 3, 6
+     D. Warde-Farley, S. Ozair, A. Courville, and Y. Ben-         [30] A. Makhzani, J. Shlens, N. Jaitly, I. Goodfellow, and
+     gio. Generative adversarial nets. In NIPS, 2014. 2, 3, 4,         B. Frey. Adversarial autoencoders. arXiv preprint
+     5                                                                 arXiv:1511.05644, 2015. 4
+[15] D. He, Y. Xia, T. Qin, L. Wang, N. Yu, T. Liu, and W.-Y.     [31] X. Mao, Q. Li, H. Xie, R. Y. Lau, and Z. Wang. Multi-
+     Ma. Dual learning for machine translation. In NIPS,               class generative adversarial networks with the l2 loss
+     pages 820–828, 2016. 3                                            function. arXiv preprint arXiv:1611.04076, 2016. 4
+
+
+                                                                 2231
+[32] M. Mathieu, C. Couprie, and Y. LeCun. Deep multi-              [47] M. Twain. The Jumping Frog: in English, then in French,
+     scale video prediction beyond mean square error. ICLR,              and then Clawed Back into a Civilized Language Once
+     2016. 2                                                             More by Patient, Unremunerated Toil. 1903. 3
+[33] M. F. Mathieu, J. Zhao, A. Ramesh, P. Sprechmann, and          [48] D. Ulyanov, V. Lebedev, A. Vedaldi, and V. Lempitsky.
+     Y. LeCun. Disentangling factors of variation in deep                Texture networks: Feed-forward synthesis of textures
+     representation using adversarial training. In NIPS, pages           and stylized images. In Int. Conf. on Machine Learning
+     5040–5048, 2016. 2                                                  (ICML), 2016. 3
+[34] D. Pathak, P. Krahenbuhl, J. Donahue, T. Darrell, and          [49] D. Ulyanov, A. Vedaldi, and V. Lempitsky. Instance nor-
+     A. A. Efros. Context encoders: Feature learning by                  malization: The missing ingredient for fast stylization.
+     inpainting. CVPR, 2016. 2                                           arXiv preprint arXiv:1607.08022, 2016. 4
+[35] A. Radford, L. Metz, and S. Chintala. Unsupervised rep-        [50] C. Vondrick, H. Pirsiavash, and A. Torralba. Generating
+     resentation learning with deep convolutional generative             videos with scene dynamics. In NIPS, pages 613–621,
+     adversarial networks. arXiv preprint arXiv:1511.06434,              2016. 2
+     2015. 2                                                        [51] F. Wang, Q. Huang, and L. J. Guibas. Image co-
+[36] S. Reed, Z. Akata, X. Yan, L. Logeswaran, B. Schiele,               segmentation via consistent functional maps. In ICCV,
+     and H. Lee. Generative adversarial text to image synthe-            pages 849–856, 2013. 3
+     sis. arXiv preprint arXiv:1605.05396, 2016. 2                  [52] X. Wang and A. Gupta. Generative image modeling
+[37] R. Rosales, K. Achan, and B. J. Frey. Unsupervised                  using style and structure adversarial networks. ECCV,
+     image translation. In iccv, pages 472–478, 2003. 3                  2016. 2
+[38] O. Russakovsky, J. Deng, H. Su, J. Krause, S. Satheesh,        [53] J. Wu, C. Zhang, T. Xue, B. Freeman, and J. Tenenbaum.
+     S. Ma, Z. Huang, A. Karpathy, A. Khosla, M. Bernstein,              Learning a probabilistic latent space of object shapes
+     et al. Imagenet large scale visual recognition challenge.           via 3d generative-adversarial modeling. In NIPS, pages
+     IJCV, 115(3):211–252, 2015. 6                                       82–90, 2016. 2
+[39] T. Salimans, I. Goodfellow, W. Zaremba, V. Cheung,             [54] S. Xie and Z. Tu. Holistically-nested edge detection. In
+     A. Radford, and X. Chen. Improved techniques for                    ICCV, 2015. 2
+     training gans. arXiv preprint arXiv:1606.03498, 2016.          [55] Z. Yi, H. Zhang, T. Gong, Tan, and M. Gong. Dual-
+     2                                                                   gan: Unsupervised dual learning for image-to-image
+[40] P. Sangkloy, J. Lu, C. Fang, F. Yu, and J. Hays. Scribbler:         translation. In ICCV, 2017. 3
+     Controlling deep image synthesis with sketch and color.        [56] C. Zach, M. Klopschitz, and M. Pollefeys. Disambiguat-
+     In CVPR, 2017. 3                                                    ing visual relations using loop constraints. In CVPR,
+[41] Y. Shih, S. Paris, F. Durand, and W. T. Freeman. Data-              pages 1426–1433. IEEE, 2010. 3
+     driven hallucination of different times of day from a          [57] R. Zhang, P. Isola, and A. A. Efros. Colorful image
+     single outdoor photo. ACM Transactions on Graphics                  colorization. In ECCV, 2016. 2
+     (TOG), 32(6):200, 2013. 2                                      [58] J. Zhao, M. Mathieu, and Y. LeCun.               Energy-
+[42] A. Shrivastava, T. Pfister, O. Tuzel, J. Susskind,                  based generative adversarial network. arXiv preprint
+     W. Wang, and R. Webb. Learning from simulated and                   arXiv:1609.03126, 2016. 2
+     unsupervised images through adversarial training. arXiv        [59] T. Zhou, Y. Jae Lee, S. X. Yu, and A. A. Efros. Flowweb:
+     preprint arXiv:1612.07828, 2016. 3, 4, 5                            Joint image set alignment by weaving consistent, pixel-
+[43] K. Simonyan and A. Zisserman. Very deep convolu-                    wise correspondences. In CVPR, pages 1191–1200,
+     tional networks for large-scale image recognition. arXiv            2015. 3
+     preprint arXiv:1409.1556, 2014. 5                              [60] T. Zhou, P. Krahenbuhl, M. Aubry, Q. Huang, and A. A.
+[44] N. Sundaram, T. Brox, and K. Keutzer. Dense point tra-              Efros. Learning dense correspondence via 3d-guided
+     jectories by gpu-accelerated large displacement optical             cycle consistency. In CVPR, pages 117–126, 2016. 2, 3
+     flow. In ECCV, pages 438–451. Springer, 2010. 3                [61] J.-Y. Zhu, P. Krähenbühl, E. Shechtman, and A. A. Efros.
+[45] Y. Taigman, A. Polyak, and L. Wolf. Unsuper-                        Generative visual manipulation on the natural image
+     vised cross-domain image generation. arXiv preprint                 manifold. In ECCV, 2016. 2
+     arXiv:1611.02200, 2016. 3, 6
+[46] D. Turmukhambetov, N. D. Campbell, S. J. Prince, and
+     J. Kautz. Modeling object appearance using context-
+     conditioned component analysis. In CVPR, pages 4156–
+     4164, 2015. 6
+
+
+                                                                   2232
+

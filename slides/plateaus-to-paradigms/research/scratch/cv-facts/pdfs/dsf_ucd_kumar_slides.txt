@@ -1,0 +1,282 @@
+Attribute and Simile
+Classifiers For Verification
+Neeraj Kumar Alexander C.Berg Peter N.Belhumeur
+Shree K. Nayar .             Columbia University
+                 Motivation
+The difficulty for face verification:
+
+Enormous variability of a face for a camera:
+
+Poses, Expression, Hairstyle
+
+Illumination direction, camera type, focus, resolution,
+image compression
+     Attributes can define categories
+Female    Eyeglasses               Middle-aged                             Dark hair
+
+
+
+
+                       Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                          Simile Classifiers For Verification”
+      Attributes can define categories
+Caucasian   Teeth showing                Outside                       Tilted head
+
+
+
+
+                      Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                         Simile Classifiers For Verification”
+Are these images of the same
+           person?
+
+
+
+
+           Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                              Simile Classifiers For Verification”
+          Prior approaches
+         Low-level
+Images                                                                Verification
+          features
+           RGB
+           HOG
+           LBP
+           SIFT
+            …
+                                                                        Different
+           RGB
+           HOG
+           LBP
+           SIFT
+            …
+                     Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                        Simile Classifiers For Verification”
+         Our approach: attributes
+            Low-level
+Images                               Attributes                              Verification
+             features
+              RGB
+              HOG
+                        +
+              LBP
+                        -
+              SIFT
+
+
+
+
+                                                             Round
+               …
+
+
+
+                                      Asian
+                            Male
+
+
+
+
+                                                 Dark
+                                                 hair
+
+
+                                                              Jaw
+                                                                               Different
+              RGB
+              HOG
+                        +
+              LBP
+                        -
+              SIFT
+               …
+                            Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                               Simile Classifiers For Verification”
+                  Core Idea
+Extracting and comparing “high-level” visual features or
+traits of a face image
+
+Insensitive to image conditions
+
+Vector of outputs from the trait classifiers are
+computed on each face independently
+         “Attribute” classifier
+Use binary classifier trained to recognize the presence
+or absence of describable aspects of visual appearance
+
+Gender, age, nose type, skin, race, hair color, eye type
+            “Simile” classifier
+Removes the manual labeling required for attribute
+classification
+
+Instead, simile classifier learns the similarity of faces, or
+regions of faces, to specific reference people.
+                 Approach
+Extract Low-Level Features
+
+Compute Visual Traits
+
+Perform Verification
+          Learning an attribute classifier
+Training      Low-level             Feature                                      Train
+ images        features            selection                                   classifier
+                RGB
+                HoG              RGB, Nose
+                HSV
+                                 HoG, Eyes
+                 …
+  Males                           HSV, Hair                                    Gender
+                                                                               classifier
+                RGB           Edges, Mouth
+                HoG
+                HSV
+                                          …                                         Male
+                 …                                                                  0.87
+ Females
+                          Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                             Simile Classifiers For Verification”
+Use attributes to perform
+       verification
+
+
+
+
+                                                         Verification
+                                                          classifier
+
+
+
+          Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                             Simile Classifiers For Verification”
+             Attributes are intuitive
+
+ Female                                                           Black hair
+
+ Young                                                          Frontal pose
+
+Attractive                                                     Mouth closed
+
+ White                                                            Eyes open
+
+
+
+                      Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                         Simile Classifiers For Verification”
+        Describe faces using similes
+
+
+
+
+Penelope Cruz
+
+
+                                                               Angelina Jolie
+
+                   Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                      Simile Classifiers For Verification”
+Training simile classifiers
+
+
+
+     Images of Penelope Cruz’s eyes
+
+
+
+
+      Images of other people’s eyes
+             Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                Simile Classifiers For Verification”
+          Similes for training
+                  Positive Examples
+
+
+
+
+Reference Person R1                        Reference Person R2
+
+
+                      Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                         Simile Classifiers For Verification”
+Using simile classifiers for
+       verification
+
+
+
+
+                                                          Verification
+                                                           classifier
+
+
+
+           Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                              Simile Classifiers For Verification”
+                Experiment
+Evaluate performance on a face verification task: given
+two images of faces, determine if they show the same
+individual
+
+No overlaps in the individuals used in training and
+testing
+
+LFW and PubFig Benchmark
+Labeled Faces in the Wild (LFW)
+
+
+
+
+    http://vis-www.cs.umass.edu/lfw
+                Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                                   Simile Classifiers For Verification”
+         Experimental evaluation
+    LFW Image-Restricted Benchmark:
+
+•   6,000 face pairs (3,000 same, 3,000 different)
+
+•    10-fold cross-validation set of 6,000 pairs on which to
+    evaluate the final performance
+Previous Performance on LFW
+
+
+
+
+           Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                              Simile Classifiers For Verification”
+Our Performance on LFW
+
+
+
+
+         Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                            Simile Classifiers For Verification”
+Human Face Verification Task
+
+
+
+
+           Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                              Simile Classifiers For Verification”
+Human Performance on LFW
+PubFig dataset & benchmark
+                      Public figures:
+                      • Politicians
+                      • Celebrities
+                      Larger & deeper:
+                      • 60,000 Images
+                      • 200 People
+                      • 300 Images per person
+                      Subsets:
+                      • Pose
+                      • Illumination
+                      • Expression
+          Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                             Simile Classifiers For Verification”
+Results on PubFig
+
+
+
+
+      Kumar, C.Berg, N.Belhumeur and Nayar. “Attribute and
+                         Simile Classifiers For Verification”
+Future Work
+Q&A
+

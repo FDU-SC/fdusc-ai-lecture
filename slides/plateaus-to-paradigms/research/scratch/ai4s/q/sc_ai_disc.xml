@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/0FTQgd5BCpH2e/JjcIvyXIyKidM</id>
+  <title>arXiv Query: search_query=abs:"superconductors" AND abs:"artificial intelligence"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T15:00:40Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22superconductors%22+AND+abs:%22artificial+intelligence%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>12</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.26258v1</id>
+    <title>New Superconductors in the PtPb$_3$Bi Structure Type</title>
+    <updated>2026-06-24T18:02:46Z</updated>
+    <link href="https://arxiv.org/abs/2606.26258v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.26258v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The quest for new superconductors is of both fundamental and technological importance. Recently, an artificial intelligence method correctly predicted PtPb$_3$Bi to be a superconductor. In this work, we find superconductivity in the newly synthesized $M$Pb$_{4-x}$Bi$_x$ ($M$ = Au, Pd, and Rh), of which PtPb$_3$Bi is a member. When $M$ = Ni, whose radius is considerably smaller, the structure instead collapses into the different, Pb-substituted NiBi$_3$ type. Interestingly, the stoichiometric parameter $x$ shifts across the three compounds to keep the total valence electron count close to 20 per formula unit. The superconducting transitions occur at 4.9, 4.2, and 3.4 K, for $M$ = Au, Pd, and Rh, respectively. Using electrical resistivity, magnetization, and specific heat measurements, we establish the bulk nature of the superconducting state and determine the critical fields, characteristic length scales, and anisotropy ratios. All three compounds are moderately anisotropic type-II superconductors, with modest upper critical field anisotropies of $H_{c2}^{\parallel c}/H_{c2}^{\perp c} \approx 1.2$ to $1.5$. These results establish $M$Pb$_{4-x}$Bi$_x$ as a family of anisotropic superconductors and a platform for studying how site disorder and Pb-Bi mixing govern superconductivity in heavy-element intermetallics.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-24T18:02:46Z</published>
+    <arxiv:comment>22+10 pages, 5+11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Lior Verbitsky</name>
+    </author>
+    <author>
+      <name>Amira Merino</name>
+    </author>
+    <author>
+      <name>Scott B. Lee</name>
+    </author>
+    <author>
+      <name>Jaime M. Moya</name>
+    </author>
+    <author>
+      <name>Sigalit Aharon</name>
+    </author>
+    <author>
+      <name>Fatmagül Katmer</name>
+    </author>
+    <author>
+      <name>Sudipta Chatterjee</name>
+    </author>
+    <author>
+      <name>Grigorii Skorupskii</name>
+    </author>
+    <author>
+      <name>Josh Leeman</name>
+    </author>
+    <author>
+      <name>Gabrielle Carrel</name>
+    </author>
+    <author>
+      <name>Leslie M. Schoop</name>
+    </author>
+    <arxiv:doi>10.1021/acs.chemmater.6c01826</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.chemmater.6c01826" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.23758v3</id>
+    <title>Agentic Fusion of Large Atomic and Language Models to Accelerate Superconductor Discovery</title>
+    <updated>2026-05-04T03:23:33Z</updated>
+    <link href="https://arxiv.org/abs/2604.23758v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.23758v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Artificial intelligence has accelerated materials discovery through high-throughput prediction and generation, yet the decision problem remains a formidable bottleneck. While current AI systems readily propose millions of candidates, navigating the decision regarding a viable experimental target requires resolving multi-dimensional judgments across atomic-scale numerical computation and high-level semantic reasoning. Here we present ElementsClaw, an agentic framework for materials discovery that orchestrates a suite of Large Atomic Model (LAM) tools finetuned from our proposed 1-billion-parameter model Elements for numerical computation, while leveraging Large Language Models (LLMs) for semantic reasoning. Applied to superconductors, ElementsClaw rediscovers 66 experimentally verified superconductors that are absent from the standard SuperCon3D database. Scaling to 2.4 million equilibrium crystals, ElementsClaw identifies 68,000 high-confidence candidates in just 28 GPU hours (https://developer.damo-academy.com/material), expanding known superconducting space by orders of magnitude compared to datasets curated over decades. Guided by the agent's reasoning, we experimentally synthesize and verify four novel superconductors: the motif-guided Zr$_3$ScRe$_8$ ($T_c$ = 6.5 K), the de novo generated HfZrRe$_4$ ($T_c$ = 5.9 K), the structurally reinterpreted Zr$_4$VRe$_7$ ($T_c$ = 3.5 K), and the database-latent Hf$_{21}$Re$_{25}$ ($T_c$ = 2.5 K). Together, our results establish a knowledge integrated, autonomously orchestrated, and experimentally grounded paradigm for materials discovery.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-26T15:14:38Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mingze Li</name>
+    </author>
+    <author>
+      <name>Yu Rong</name>
+    </author>
+    <author>
+      <name>Songyou Li</name>
+    </author>
+    <author>
+      <name>Lihong Wang</name>
+    </author>
+    <author>
+      <name>Jiacheng Cen</name>
+    </author>
+    <author>
+      <name>Liming Wu</name>
+    </author>
+    <author>
+      <name>Anyi Li</name>
+    </author>
+    <author>
+      <name>Zongzhao Li</name>
+    </author>
+    <author>
+      <name>Qiuliang Liu</name>
+    </author>
+    <author>
+      <name>Rui Jiao</name>
+    </author>
+    <author>
+      <name>Tian Bian</name>
+    </author>
+    <author>
+      <name>Pengju Wang</name>
+    </author>
+    <author>
+      <name>Hao Sun</name>
+    </author>
+    <author>
+      <name>Jianfeng Zhang</name>
+    </author>
+    <author>
+      <name>Ji-Rong Wen</name>
+    </author>
+    <author>
+      <name>Deli Zhao</name>
+    </author>
+    <author>
+      <name>Shifeng Jin</name>
+    </author>
+    <author>
+      <name>Tingyang Xu</name>
+    </author>
+    <author>
+      <name>Wenbing Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.21068v1</id>
+    <title>Expanding the extreme-k dielectric materials space through physics-validated generative reasoning</title>
+    <updated>2026-04-22T20:24:57Z</updated>
+    <link href="https://arxiv.org/abs/2604.21068v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.21068v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The most technologically consequential materials are often the rarest: they occupy narrow regions of chemical space, obey competing physical constraints, and appear only sparsely in existing databases. High-kappa dielectrics, high-Tc superconductors, and ferromagnetic insulators are to name a few. This scarcity fundamentally limits today's data-driven materials discovery, where machine-learning models excel at interpolation but struggle to generate genuinely new candidates. Here, we introduce DielecMIND, an artificial intelligence framework that reframes materials discovery as a reasoning-driven exploration instead of a database-screening problem. Using high-kappa dielectrics as a data-scarce and technologically stringent test case, DielecMIND combines large-language-model hypothesis generation for the first time with physics validated first-principles calculation to navigate chemical space beyond known compounds. Prior to our work, only 14 experimentally or computationally validated materials with kappa &gt; 150 were known. Our framework discovers and validates 5 new such compounds, expanding this rare-materials class by a remarkable = 35% in a single study. Among them, we find that Ba2TiHfO6 exhibits a dielectric constant of 637, minimal loss at low optical frequencies, and stability up to 800 K. Beyond dielectrics, this work demonstrates a new paradigm for artificial-intelligence-guided discovery: one that generates a small number of physically grounded, experimentally plausible candidates yet measurably expands sparsely populated functional materials spaces. Thus, DielecMIND points toward a general strategy for discovering rare, high-impact functional materials where data scarcity has long constrained progress.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-22T20:24:57Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hossain Hridoy</name>
+    </author>
+    <author>
+      <name>Tahiya Chowdhury</name>
+    </author>
+    <author>
+      <name>Md Shafayat Hossain</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.04363v2</id>
+    <title>Inductorless Fast Phase Logic: Enabling Two-Order-of-Magnitude Density Scaling for Superconductor VLSI</title>
+    <updated>2026-05-01T23:01:02Z</updated>
+    <link href="https://arxiv.org/abs/2601.04363v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.04363v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fast phase logic (FPL) is a novel digital superconductor electronic (SCE) logic family that employs multiple junction types, including switching 0-Josephson junctions (0-JJs), non-switching 0-JJ stacks, and $π$-JJs. FPL enables flexible, automatable cell layouts, faster pulse propagation, reduced bias current via phase-shifting $π$-JJs, and minimized inductive loops, thereby reducing susceptibility to trapped flux and crosstalk. A fabrication process to support FPL is proposed. NbTiN superconductors offer small grain sizes, smooth surfaces, and thermal stability up to 400~$^\circ$C, while high-$J_c$, self-shunted JJs enable compact devices. AlN dielectrics provide good crystal matching to NbTiN, improving superconducting properties. Projections indicate that FPL, combined with the proposed process, can achieve a two-order-of-magnitude increase in integration density over conventional RSFQ logic and a five-fold reduction in supply current. The increased density reduces latency and improves computational throughput, while NbTiN-based devices provide higher output voltage and impedance, improving compatibility with CMOS circuits. Further fabrication advancements, such as higher-$J_c$ NbTiN-based JJs, higher processing temperatures, and stacked JJ structures, could enhance FPL implementation and scalability toward very large-scale integration (VLSI). FPL has the potential to significantly advance SCE technology, with near-term applications in accelerator cores for signal processing and artificial intelligence, and long-term potential in supercomputing. Its advantages are evaluated through an architectural study of a fast Fourier transform (FFT) circuit, with comparisons to CMOS and SFQ technologies.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-07T20:04:22Z</published>
+    <arxiv:comment>13 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Sasan Razmkhah</name>
+    </author>
+    <author>
+      <name>Douglas Scott Holmes</name>
+    </author>
+    <author>
+      <name>Massoud Pedram</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.25971v1</id>
+    <title>Superconductor discovery in the emerging paradigm of Materials Informatics</title>
+    <updated>2025-10-29T21:15:26Z</updated>
+    <link href="https://arxiv.org/abs/2510.25971v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.25971v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The last two decades have witnessed a tremendous number of computational predictions of hydride-based (phonon-mediated) superconductors, mostly at extremely high pressures, i.e., hundreds of GPa. These discoveries were heavily driven by Migdal-Éliashberg theory (and its first-principles computational implementations) for electron-phonon interactions, the key concept of phonon-mediated superconductivity. Dozens of predictions were experimentally synthesized and characterized, triggering not only enormous excitement in the community but also some debates. In this Article, we review the computational-driven discoveries and the recent developments in the field from various essential aspects, including the theoretical, computational, and, specifically, artificial intelligence (AI)/machine learning (ML) based approaches emerging within the paradigm of materials informatics. While challenges and critical gaps can be found in all of these approaches, AI/ML efforts specifically remain in its infant stage for good reasons. However, opportunities exist when these approaches can be further developed and integrated in concerted efforts, in which AI/ML approaches could play more important roles.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-29T21:15:26Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Chem. Mater. 36, 10939-10966 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Huan Tran</name>
+    </author>
+    <author>
+      <name>Hieu-Chi Dam</name>
+    </author>
+    <author>
+      <name>Christopher Kuenneth</name>
+    </author>
+    <author>
+      <name>Tuoc N. Vu</name>
+    </author>
+    <author>
+      <name>Hiori Kino</name>
+    </author>
+    <arxiv:doi>10.1021/acs.chemmater.4c01757</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.chemmater.4c01757" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.16669v1</id>
+    <title>Reconfigurable qubit states and quantum trajectories in a synthetic artificial neuron network with a process to direct information generation from co-integrated burst-mode spiking under non-Markovianity</title>
+    <updated>2025-07-22T15:02:06Z</updated>
+    <link href="https://arxiv.org/abs/2507.16669v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.16669v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A synthetic artificial neuron network functional in a regime where quantum information processes are co-integrated with spiking computation provides significant improvement in the capabilities of neuromorphic systems in performing artificial intelligence and autonomy tasks. This provides the ability to execute with the qubit coherence states and entanglement as well as in tandem to perform functions such as read out and basic arithmetic with conventional spike-encoding. Ultimately, this enables the generation and computational processing of information packets with advanced capabilities and an increased level of security in their routing. We now use the dynamical pulse sequences generated by a memristive spiking neuron to drive synthetic neurons with built-in superconductor-ionic memories built in a lateral layout with integrated Niobium metal electrodes as well as a gate terminal and an atomic layer deposited ionic barrier. The memories operate at very low voltage and with direct, and hysteretic Josephson tunneling and provide enhanced coherent properties enabling qubit behavior. We operated now specifically in burst mode to drive its built-in reconfigurable qubit states and direct the resulting quantum trajectory. We analyze the new system with a Hamiltonian that considers an integrated rotational dependence, dependent on the unique co-integrated bursting mode spiking- and where the total above threshold spike count is adjustable with variation of the level of coupling between the neurons. We then examined the impact of key parameters with a longer-term non-Markovian quantum memory and finally explored a process and algorithm for the generation of information packets with a coupled and entangled set of these artificial neuron qubits that provides for a quantum process to define the level of regularity or awareness of the information packets.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-22T15:02:06Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Osama M. Nayfeh</name>
+    </author>
+    <author>
+      <name>Chris S. Horne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18975v3</id>
+    <title>Machine Learning - Driven Materials Discovery: Unlocking Next-Generation Functional Materials - A review</title>
+    <updated>2025-09-29T11:58:22Z</updated>
+    <link href="https://arxiv.org/abs/2503.18975v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.18975v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid advancement of machine learning and artificial intelligence (AI)-driven techniques is revolutionizing materials discovery, property prediction, and material design by minimizing human intervention and accelerating scientific progress. This review provides a comprehensive overview of smart, machine learning (ML)-driven approaches, emphasizing their role in predicting material properties, discovering novel compounds, and optimizing material structures. Key methodologies in this field include deep learning, graph neural networks, Bayesian optimization, and automated generative models (GANs, VAEs). These approaches enable the autonomous design of materials with tailored functionalities. By leveraging AutoML frameworks (AutoGluon, TPOT, and H2O.ai), researchers can automate the model selection, hyperparameter tuning, and feature engineering, significantly improving the efficiency of materials informatics. Furthermore, the integration of AI-driven robotic laboratories and high-throughput computing has established a fully automated pipeline for rapid synthesis and experimental validation, drastically reducing the time and cost of material discovery. This review highlights real-world applications of automated ML-driven approaches in predicting mechanical, thermal, electrical, and optical properties of materials, demonstrating successful cases in superconductors, catalysts, photovoltaics, and energy storage systems. We also address key challenges, such as data quality, interpretability, and the integration of AutoML with quantum computing, which are essential for future advancements. Ultimately, combining AI with automated experimentation and computational modeling is transforming the way materials are discovered and optimized. This synergy paves the way for new innovations in energy, electronics, and nanotechnology.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-22T15:24:38Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Computational Condensed Matter, 2025</arxiv:journal_ref>
+    <author>
+      <name>Dilshod Nematov</name>
+    </author>
+    <author>
+      <name>Mirabbos Hojamberdiev</name>
+    </author>
+    <arxiv:doi>10.1016/j.cocom.2025.e01139</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cocom.2025.e01139" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.06523v2</id>
+    <title>Phase Diagram from Nonlinear Interaction between Superconducting Order and Density: Toward Data-Based Holographic Superconductor</title>
+    <updated>2025-05-07T14:12:16Z</updated>
+    <link href="https://arxiv.org/abs/2410.06523v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.06523v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We address an inverse problem in modeling holographic superconductors. We focus our research on the critical temperature behavior depicted by experiments. We use a physics-informed neural network method to find a mass function $M(F^2)$, which is necessary to understand phase transition behavior. This mass function describes a nonlinear interaction between superconducting order and charge carrier density. We introduce positional embedding layers to improve the learning process in our algorithm, and the Adam optimization is used to predict the critical temperature data via holographic calculation with appropriate accuracy. Consideration of the positional embedding layers is motivated by the transformer model of natural-language processing in the artificial intelligence (AI) field. We obtain holographic models that reproduce borderlines of the normal and superconducting phases provided by actual data. Our work is the first holographic attempt to match phase transition data quantitatively obtained from experiments. Also, the present work offers a new methodology for data-based holographic models.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T03:52:18Z</published>
+    <arxiv:comment>22 pages, 20 figures, published version in JHEP</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Sejin Kim</name>
+    </author>
+    <author>
+      <name>Kyung Kiu Kim</name>
+    </author>
+    <author>
+      <name>Yunseok Seo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.11842v2</id>
+    <title>Recent progress in the JARVIS infrastructure for next-generation data-driven materials design</title>
+    <updated>2023-10-25T16:58:26Z</updated>
+    <link href="https://arxiv.org/abs/2305.11842v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.11842v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Joint Automated Repository for Various Integrated Simulations (JARVIS) infrastructure at the National Institute of Standards and Technology (NIST) is a large-scale collection of curated datasets and tools with more than 80000 materials and millions of properties. JARVIS uses a combination of electronic structure, artificial intelligence (AI), advanced computation and experimental methods to accelerate materials design. Here we report some of the new features that were recently included in the infrastructure such as: 1) doubling the number of materials in the database since its first release, 2) including more accurate electronic structure methods such as Quantum Monte Carlo, 3) including graph neural network-based materials design, 4) development of unified force-field, 5) development of a universal tight-binding model, 6) addition of computer-vision tools for advanced microscopy applications, 7) development of a natural language processing tool for text-generation and analysis, 8) debuting a large-scale benchmarking endeavor, 9) including quantum computing algorithms for solids, 10) integrating several experimental datasets and 11) staging several community engagement and outreach events. New classes of materials, properties, and workflows added to the database include superconductors, two-dimensional (2D) magnets, magnetic topological materials, metal-organic frameworks, defects, and interface systems. The rich and reliable datasets, tools, documentation, and tutorials make JARVIS a unique platform for modern materials design. JARVIS ensures openness of data and tools to enhance reproducibility and transparency and to promote a healthy and collaborative scientific environment.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-19T17:34:08Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Appl. Phys. Rev. 10, 041302 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Daniel Wines</name>
+    </author>
+    <author>
+      <name>Ramya Gurunathan</name>
+    </author>
+    <author>
+      <name>Kevin F. Garrity</name>
+    </author>
+    <author>
+      <name>Brian DeCost</name>
+    </author>
+    <author>
+      <name>Adam J. Biacchi</name>
+    </author>
+    <author>
+      <name>Francesca Tavazza</name>
+    </author>
+    <author>
+      <name>Kamal Choudhary</name>
+    </author>
+    <arxiv:doi>10.1063/5.0159299</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0159299" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.00055v1</id>
+    <title>Perspective: Challenges and Transformative Opportunities in Superconductor Vortex Physics</title>
+    <updated>2021-04-30T19:33:39Z</updated>
+    <link href="https://arxiv.org/abs/2105.00055v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.00055v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In superconductors, the motion of vortices introduces unwanted dissipation that is disruptive to applications. Fortunately, material defects can immobilize vortices, acting as vortex pinning centers, which engenders dramatic improvements in superconductor material properties and device operation. This has motivated decades of research into developing methods of tailoring the disorder landscape in superconductors to increase the strength of vortex pinning. Yet efficacious materials engineering still alludes us. The electromagnetic properties of real (disordered) superconducting materials cannot yet be reliably predicted, such that designing superconductors for applications remains a largely inefficient process of trial and error. This is ultimately due to large gaps in our knowledge of vortex dynamics: the field is challenged by the extremely complex interplay between vortex elasticity, vortex-vortex interactions, and material disorder.
+  In this Perspective, we review obstacles and recent successes in understanding and controlling vortex dynamics in superconducting materials and devices. We further identify major open questions and discuss opportunities for transformative research in the field. This includes improving our understanding of vortex creep, determining and reaching the ceiling for the critical current, advanced microscopy to garner accurate structure-property relationships, frontiers in predictive simulations and the benefits of artificial intelligence, as well as controlling and exploiting vortices in quantum information applications.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-30T19:33:39Z</published>
+    <arxiv:comment>The following article has been submitted to the Journal of Applied Physics</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Journal of Applied Physics (2021)</arxiv:journal_ref>
+    <author>
+      <name>Serena Eley</name>
+    </author>
+    <author>
+      <name>Andreas Glatz</name>
+    </author>
+    <author>
+      <name>Roland Willa</name>
+    </author>
+    <arxiv:doi>10.1063/5.0055611</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0055611" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.03774v3</id>
+    <title>Learning to extrapolate using continued fractions: Predicting the critical temperature of superconductor materials</title>
+    <updated>2023-07-10T06:38:22Z</updated>
+    <link href="https://arxiv.org/abs/2012.03774v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.03774v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the field of Artificial Intelligence (AI) and Machine Learning (ML), the approximation of unknown target functions $y=f(\mathbf{x})$ using limited instances $S={(\mathbf{x^{(i)}},y^{(i)})}$, where $\mathbf{x^{(i)}} \in D$ and $D$ represents the domain of interest, is a common objective. We refer to $S$ as the training set and aim to identify a low-complexity mathematical model that can effectively approximate this target function for new instances $\mathbf{x}$. Consequently, the model's generalization ability is evaluated on a separate set $T=\{\mathbf{x^{(j)}}\} \subset D$, where $T \neq S$, frequently with $T \cap S = \emptyset$, to assess its performance beyond the training set. However, certain applications require accurate approximation not only within the original domain $D$ but also in an extended domain $D'$ that encompasses $D$. This becomes particularly relevant in scenarios involving the design of new structures, where minimizing errors in approximations is crucial. For example, when developing new materials through data-driven approaches, the AI/ML system can provide valuable insights to guide the design process by serving as a surrogate function. Consequently, the learned model can be employed to facilitate the design of new laboratory experiments. In this paper, we propose a method for multivariate regression based on iterative fitting of a continued fraction, incorporating additive spline models. We compare the performance of our method with established techniques, including AdaBoost, Kernel Ridge, Linear Regression, Lasso Lars, Linear Support Vector Regression, Multi-Layer Perceptrons, Random Forests, Stochastic Gradient Descent, and XGBoost. To evaluate these methods, we focus on an important problem in the field: predicting the critical temperature of superconductors based on physical-chemical characteristics.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-27T04:57:40Z</published>
+    <arxiv:comment>Submitted to Algorithms ( ISSN: 1999-4893 )</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Algorithms 2023, 16(8), 382</arxiv:journal_ref>
+    <author>
+      <name>Pablo Moscato</name>
+    </author>
+    <author>
+      <name>Mohammad Nazmul Haque</name>
+    </author>
+    <author>
+      <name>Kevin Huang</name>
+    </author>
+    <author>
+      <name>Julia Sloan</name>
+    </author>
+    <author>
+      <name>Jon C. de Oliveira</name>
+    </author>
+    <arxiv:doi>10.3390/a16080382</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/a16080382" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.07266v1</id>
+    <title>Predicting new superconductors and their critical temperatures using unsupervised machine learning</title>
+    <updated>2020-02-17T21:40:48Z</updated>
+    <link href="https://arxiv.org/abs/2002.07266v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.07266v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We used the superconductors in the SuperCon database to construct element vectors and then perform unsupervised learning of their critical temperatures (T$_c$). Only the chemical composition of superconductors was used in this procedure. No physical predictors (neither experimental nor computational) of any kind were used. We achieved the coefficient of determination R$^2$$\simeq$0.93, which is comparable and in some cases higher then similar estimates using other artificial intelligence techniques. Based on this machine learning model, we predicted several new superconductors with high critical temperatures. We also discuss the factors that limit the learning process and suggest possible ways to overcome them.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-17T21:40:48Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Physica C 575, 1353689 (2020)</arxiv:journal_ref>
+    <author>
+      <name>B. Roter</name>
+    </author>
+    <author>
+      <name>S. V. Dordevic</name>
+    </author>
+    <arxiv:doi>10.1016/j.physc.2020.1353689</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physc.2020.1353689" title="doi"/>
+  </entry>
+</feed>

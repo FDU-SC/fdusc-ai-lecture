@@ -1,0 +1,276 @@
+
+ VOC2012 results 
+ VOC2012 RESULTS 
+ Key to abbreviations 
+ Classification Results: VOC2012 data 
+ Competition "comp1" (train on VOC2012 data) 
+ Average Precision (AP %) 
+   aero plane bicycle bird boat bottle bus car cat chair cow dining table dog horse motor bike person potted plant sheep sofa train tv/ monitor CVC_BOW_FK_COLORHOG 89.3 70.9 69.8 73.9 51.3 84.8 79.6 72.9 63.8 59.4 64.1 64.7 75.5 79.2 91.4 42.7 63.2 61.9 86.7 73.8 CVC_UVA_UNITN_ BOW_FK_COLORDET_SP 92.0 74.2 73.0 77.5 54.3 85.2 81.9 76.4 65.2 63.2 68.5 68.9 78.2 81.0 91.6 55.9 69.4 65.4 86.7 77.4 IMPERIAL_COMPLEX_LOGNORMAL 73.2 33.4 31.0 44.7 17.0 57.7 34.4 45.9 41.2 18.1 30.2 34.3 23.1 39.3 57.3 11.9 23.1 25.3 51.2 36.2 ITI_FK_BS_GRAYSIFT 89.1 62.3 60.0 68.1 33.4 79.8 66.9 70.3 57.4 51.0 55.0 59.3 68.6 74.5 83.1 25.6 57.2 53.8 83.4 64.9 ITI_FK_FUSED_SIFT 90.4 65.4 65.8 72.3 37.7 80.6 70.5 72.4 60.3 55.1 61.4 63.6 72.4 77.4 86.8 37.7 61.1 57.2 85.9 68.7 NUSPSL_CTX_GPM_SCM 97.3 84.2 80.8 85.3 60.8 89.9 86.8 89.3 75.4 77.8 75.1 83.0 87.5 90.1 95.0 57.8 79.2 73.4 94.5 80.7 UP_FEATURE_ENSEMBLE - - - - - - - - - - - - - - 88.7 - - - - - 
+ Precision/Recall Curves 
+ aeroplane [ .eps ] 
+ bicycle [ .eps ] 
+ bird [ .eps ] 
+ boat [ .eps ] 
+ bottle [ .eps ] 
+ bus [ .eps ] 
+ car [ .eps ] 
+ cat [ .eps ] 
+ chair [ .eps ] 
+ cow [ .eps ] 
+ diningtable [ .eps ] 
+ dog [ .eps ] 
+ horse [ .eps ] 
+ motorbike [ .eps ] 
+ person [ .eps ] 
+ pottedplant [ .eps ] 
+ sheep [ .eps ] 
+ sofa [ .eps ] 
+ train [ .eps ] 
+ tvmonitor [ .eps ] 
+ Classification Results: VOC2012 data 
+ Competition "comp2" (train on own data) 
+ Average Precision (AP %) 
+   aero plane bicycle bird boat bottle bus car cat chair cow dining table dog horse motor bike person potted plant sheep sofa train tv/ monitor ITI_FK_FLICKR_GRAYSIFT_ENTROPY 88.1 63.0 61.9 68.6 34.9 79.6 67.4 70.5 57.5 52.0 55.3 60.1 68.7 74.3 83.2 26.4 57.6 53.4 83.0 64.0 
+ Precision/Recall Curves 
+ aeroplane [ .eps ] 
+ bicycle [ .eps ] 
+ bird [ .eps ] 
+ boat [ .eps ] 
+ bottle [ .eps ] 
+ bus [ .eps ] 
+ car [ .eps ] 
+ cat [ .eps ] 
+ chair [ .eps ] 
+ cow [ .eps ] 
+ diningtable [ .eps ] 
+ dog [ .eps ] 
+ horse [ .eps ] 
+ motorbike [ .eps ] 
+ person [ .eps ] 
+ pottedplant [ .eps ] 
+ sheep [ .eps ] 
+ sofa [ .eps ] 
+ train [ .eps ] 
+ tvmonitor [ .eps ] 
+ Detection Results: VOC2012 data 
+ Competition "comp3" (train on VOC2012 data) 
+ Average Precision (AP %) 
+   aero plane bicycle bird boat bottle bus car cat chair cow dining table dog horse motor bike person potted plant sheep sofa train tv/ monitor CVC_BOW_COLOR_HOG 45.4 49.8 15.7 16.0 26.3 54.6 44.8 35.1 16.8 31.3 23.6 26.0 45.6 49.6 42.2 14.5 30.5 28.5 45.7 40.0 MISSOURI_HOGLBP_MDPM_CONTEXT 51.4 53.7 18.3 15.6 31.6 56.5 47.1 38.6 19.5 32.0 22.1 25.0 50.3 51.9 44.9 11.9 37.7 30.6 50.9 39.3 NEC_STANFORD_OCP 65.1 46.8 25.0 24.6 16.0 51.0 44.9 51.5 13.0 26.6 31.0 40.2 39.7 51.5 32.8 12.6 35.7 33.5 48.0 44.8 OLB_FT_DPM_R5 47.5 51.7 14.2 12.6 27.3 51.8 44.2 25.3 17.8 30.2 18.1 16.9 46.9 50.9 43.0 9.5 31.2 23.6 44.3 22.1 SYSU_DYNAMIC_AND_OR_TREE 50.2 47.0 7.9 3.8 24.8 47.2 42.8 31.2 17.5 24.2 10.0 21.3 43.5 46.4 37.5 7.9 26.4 21.5 43.1 36.7 UOC_OXFORD_DPM_MKL 59.6 54.5 21.9 21.6 32.1 52.5 49.3 40.8 19.1 35.2 28.9 37.2 50.9 49.9 46.1 15.6 39.3 35.6 48.9 42.8 UVA_DETECTOR_MERGING 47.2 50.2 18.3 21.4 25.2 53.3 46.3 46.3 17.5 27.8 30.3 35.0 41.6 52.1 43.2 18.0 35.2 31.1 45.4 44.4 UVA_HYBRID_CODING_APE 61.8 52.0 24.6 24.8 20.2 57.1 44.5 53.6 17.4 33.0 38.3 42.8 48.8 59.4 35.7 22.8 40.3 39.5 51.1 49.5 
+ Precision/Recall Curves 
+ aeroplane [ .eps ] 
+ bicycle [ .eps ] 
+ bird [ .eps ] 
+ boat [ .eps ] 
+ bottle [ .eps ] 
+ bus [ .eps ] 
+ car [ .eps ] 
+ cat [ .eps ] 
+ chair [ .eps ] 
+ cow [ .eps ] 
+ diningtable [ .eps ] 
+ dog [ .eps ] 
+ horse [ .eps ] 
+ motorbike [ .eps ] 
+ person [ .eps ] 
+ pottedplant [ .eps ] 
+ sheep [ .eps ] 
+ sofa [ .eps ] 
+ train [ .eps ] 
+ tvmonitor [ .eps ] 
+ Detection Results: VOC2012 data 
+ Competition "comp4" (train on own data) 
+ Average Precision (AP %) 
+   aero plane bicycle bird boat bottle bus car cat chair cow dining table dog horse motor bike person potted plant sheep sofa train tv/ monitor 
+ Precision/Recall Curves 
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Segmentation Results: VOC2012 data 
+ Competition "comp5" (train on VOC2012 data) 
+ Average Precision (AP %) 
+   [mean] back ground aero plane bicycle bird boat bottle bus car cat chair cow dining table dog horse motor bike person potted plant sheep sofa train tv/ monitor BONNGC_O2P_CPMC_CSI 45.4 85.0 59.3 27.9 43.9 39.8 41.4 52.2 61.5 56.4 13.6 44.5 26.1 42.8 51.7 57.9 51.3 29.8 45.7 28.8 49.9 43.3 BONN_CMBR_O2P_CPMC_LIN 44.8 83.9 60.0 27.3 46.4 40.0 41.7 57.6 59.0 50.4 10.0 41.6 22.3 43.0 51.7 56.8 50.1 33.7 43.7 29.5 47.5 44.7 BONN_O2PCPMC_FGT_SEGM 47.0 85.1 65.4 29.3 51.3 33.4 44.2 59.8 60.3 52.5 13.6 53.6 32.6 40.3 57.6 57.3 49.0 33.5 53.5 29.2 47.6 37.6 NUS_DET_SPR_GC_SP 47.3 82.8 52.9 31.0 39.8 44.5 58.9 60.8 52.5 49.0 22.6 38.1 27.5 47.4 52.4 46.8 51.9 35.7 55.3 40.8 54.2 47.8 UVA_OPT_NBNN_CRF 11.3 63.2 10.5 2.3 3.0 3.0 1.0 30.2 14.9 15.0 0.2 6.1 2.3 5.1 12.1 15.3 23.4 0.5 8.9 3.5 10.7 5.3 
+ Segmentation Results: VOC2012 data 
+ Competition "comp6" (train on own data) 
+ Average Precision (AP %) 
+   [mean] back ground aero plane bicycle bird boat bottle bus car cat chair cow dining table dog horse motor bike person potted plant sheep sofa train tv/ monitor BONNGC_O2P_CPMC_CSI 46.8 85.0 63.6 26.8 45.6 41.7 47.1 54.3 58.6 55.1 14.5 49.0 30.9 46.1 52.6 58.2 53.4 32.0 44.5 34.6 45.3 43.1 BONN_CMBR_O2P_CPMC_LIN 46.7 84.7 63.9 23.8 44.6 40.3 45.5 59.6 58.7 57.1 11.7 45.9 34.9 43.0 54.9 58.0 51.5 34.6 44.1 29.9 50.5 44.5 BONN_O2PCPMC_FGT_SEGM 47.5 85.2 63.4 27.3 56.1 37.7 47.2 57.9 59.3 55.0 11.5 50.8 30.5 45.0 58.4 57.4 48.6 34.6 53.3 32.4 47.6 39.2 
+ Person Layout Results: VOC2012 data 
+ Competition "comp7" (train on VOC2012 data) 
+ Average Precision (AP %) 
+   Head Hand Foot 
+ Precision/Recall Curves 
+ head 
+ hand 
+ feet 
+ Person Layout Results: VOC2012 data 
+ Competition "comp8" (train on own data) 
+ Average Precision (AP %) 
+   Head Hand Foot CANON_HEAD_TORSO 80.9 - - 
+ Precision/Recall Curves 
+ head [ .eps ] 
+ hand [ .eps ] 
+ feet [ .eps ] 
+ Action Classification Results: VOC2012 data 
+ Competition "comp9" (train on VOC2012 data) 
+ Average Precision (AP %) 
+   jumping phoning playing instrument reading riding bike riding horse running taking photo using computer walking STANFORD_RF_MULTFEAT_SVM 75.7 44.8 66.6 44.4 93.2 94.2 87.6 38.4 70.6 75.6 SZU_DPM_RF_SVM 73.8 45.0 62.8 41.4 93.0 93.4 87.8 35.0 64.7 73.5 
+ Precision/Recall Curves 
+ jumping [ .eps ] 
+ phoning [ .eps ] 
+ playinginstrument [ .eps ] 
+ reading [ .eps ] 
+ ridingbike [ .eps ] 
+ ridinghorse [ .eps ] 
+ running [ .eps ] 
+ takingphoto [ .eps ] 
+ usingcomputer [ .eps ] 
+ walking [ .eps ] 
+ Action Classification Results: VOC2012 data 
+ Competition "comp10" (train on own data) 
+ Average Precision (AP %) 
+   jumping phoning playing instrument reading riding bike riding horse running taking photo using computer walking HU_BU_MIL_MULTI_CUE 59.4 39.6 56.5 34.4 75.7 80.2 74.3 27.6 55.2 56.6 OXFORD_ALIGNED_BODYPARTS 77.0 50.4 65.3 39.5 94.1 95.9 87.7 42.7 68.6 74.5 
+ Precision/Recall Curves 
+ jumping [ .eps ] 
+ phoning [ .eps ] 
+ playinginstrument [ .eps ] 
+ reading [ .eps ] 
+ ridingbike [ .eps ] 
+ ridinghorse [ .eps ] 
+ running [ .eps ] 
+ takingphoto [ .eps ] 
+ usingcomputer [ .eps ] 
+ walking [ .eps ] 
+ Results: VOC2012 data 
+ Competition "comp11" (train on VOC2012 data) 
+ Average Precision (AP %) 
+   jumping phoning playing instrument reading riding bike riding horse running taking photo using computer walking 
+ Precision/Recall Curves 
+ jumping 
+ phoning 
+ playinginstrument 
+ reading 
+ ridingbike 
+ ridinghorse 
+ running 
+ takingphoto 
+ usingcomputer 
+ walking 
+ Results: VOC2012 data 
+ Competition "comp12" (train on own data) 
+ Average Precision (AP %) 
+   jumping phoning playing instrument reading riding bike riding horse running taking photo using computer walking 
+ Precision/Recall Curves 
+ jumping 
+ phoning 
+ playinginstrument 
+ reading 
+ ridingbike 
+ ridinghorse 
+ running 
+ takingphoto 
+ usingcomputer 
+ walking 
+ Key to Abbreviations 
+ Abbreviation Title Method Affiliation Contributors Descriptiorn 
+ BONNGC_O2P_CPMC_CSI O2P Regressor + Composite Statistical Inference BONNGC_O2P_CPMC_CSI (1) University of Bonn, (2) Georgia Institute of Technology, (3) University of Coimbra Joao Carreira (1,3)
+Fuxin Li (2)
+Guy Lebanon (2)
+Cristian Sminchisescu (1) We utilize a novel probabilistic inference procedure (unpublished yet), Composite Statisitcal Inference (CSI), on semantic segmentation using predictions on overlapping figure-ground hypotheses. Regressor predictions on segment overlaps to the ground truth object are modelled as generated by the true overlap with the ground truth segment plus noise. A model of ground truth overlap is defined by parametrizing on the unknown percentage of each superpixel that belongs to the unknown ground truth. A joint optimization on all the superpixels and all the categories is then performed in order to maximize the likelihood of the SVR predictions. The optimization has a tight convex relaxation so solutions can be expected to be close to the global optimum. A fast and optimal search algorithm is then applied to retrieve each object. CSI takes the intuition from the SVRSEGM inference algorithm that multiple predictions on similar segments can be combined to better consolidate the segment mask. But it fully develops the idea by constructing a probabilistic framework and performing composite MLE jointly on all segments and categories. Therefore it is able to consolidate better object boundaries and handle hard cases when objects interact closely and heavily occlude each other. For each image, we use 150 overlapping figure-ground hypotheses generated by the CPMC algorithm (Carreira and Sminchisescu, PAMI 2012), and linear SVR predictions on them with the novel second order O2P features (Carreira, Caseiro, Batista, Sminchisescu, ECCV2012; see VOC12 entry BONN_CMBR_O2P_CPMC_LIN) as the input to the inference algorithm. BONN_CMBR_O2P_CPMC_LIN Linear SVR with second-order pooling. BONN_CMBR_O2P_CPMC_LIN (1) University of Bonn, (2) University of Coimbra Joao Carreira (2,1) 
+Rui Caseiro (2) 
+Jorge Batista (2) 
+Cristian Sminchisescu (1) We present a novel effective local feature aggregation method that we use in conjunction with an existing figure-ground segmentation sampling mechanism. This submission is described in detail in [1]. We sample multiple figure-ground segmentation candidates per image using the Constrained Parametric Min-Cuts (CPMC) algorithm. SIFT, masked SIFT and LBP features are extracted on the whole image, then pooled over each object segmentation candidate to generate global region descriptors. We employ a novel second-order pooling procedure, O2P, with two non-linearities: a tangent space mapping and power normalization. The global region descriptors are passed through linear regressors for each category, then labeled segments in each image having scores above some threshold are pasted onto the image in the order of these scores. Learning is performed using an epsilon-insensitive loss function on overlap with ground truth, similar to [2], but within a linear formulation (using LIBLINEAR). comp6: learning uses all images in the segmentation+detection trainval sets, and external ground truth annotations provided by courtesy of the Berkeley vision group. comp5: one model is trained for each category using the available ground truth segmentations from the 2012 trainval set. Then, on each image having no associated ground truth segmentations, the learned models are used together with bounding box constraints, low-level cues and region competition to generate predicted object segmentations inside all bounding boxes. Afterwards, learning proceeds similarly to the fully annotated case. 1. �Semantic Segmentation with Second-Order Pooling�, Carreira, Caseiro, Batista, Sminchisescu. ECCV 2012. 2. "Object Recognition by Ranking Figure-Ground Hypotheses", Li, Carreira, Sminchisescu. CVPR 2010. BONN_O2PCPMC_FGT_SEGM BONN_O2PCPMC_FGT_SEGM BONN_O2PCPMC_FGT_SEGM (1) Universitfy of Bonn, (2) University of Coimbra, (3) Georgia Institute of Technology, (4) Vienna University of Technology Joao Carreira(1,2), Adrian Ion(4), Fuxin Li(3), Cristian Sminchisescu(1) We present a joint image segmentation and labeling model which, given a bag of figure-ground segment hypotheses extracted at multiple image locations and scales using CPMC (Carreira and Sminchisescu, PAMI 2012), constructs a joint probability distribution over both the compatible image interpretations (tilings or image segmentations) composed from those segments, and over their labeling into categories. The process of drawing samples from the joint distribution can be interpreted as first sampling tilings, modeled as maximal cliques, from a graph connecting spatially non-overlapping segments in the bag (Ion, Carreira, Sminchisescu, ICCV2011), followed by sampling labels for those segments, conditioned on the choice of a particular tiling. We learn the segmentation and labeling parameters jointly, based on Maximum Likelihood with a novel Incremental Saddle Point estimation procedure (Ion, Carreira, Sminchisescu, NIPS2011). As meta-features we combine outputs from linear SVRs using novel second order O2P features to predict the overlap between segments and ground-truth objects of each class (Carreira, Caseiro, Batista, Sminchisescu, ECCV2012; see VOC12 entry BONNCMBR_O2PCPMC_LINEAR), bounding box object detectors, and kernel SVR outputs trained to predict the overlap between segments and ground-truth objects of each class (Carreira, Li, Sminchisescu, IJCV 2012). comp6: the O2P SVR learning uses all images in the segmentation+detection trainval sets, and external ground truth annotations provided by courtesy of the Berkeley vision group. CANON_HEAD_TORSO Head and Torso Detection with Persistent Use of He HEAD-TORSO-ESTIMATOR Canon Inc. Kan Torii, Atsushi Nogami, Kaname Tomite, Kenji Tsukamoto, Masakazu Matsugu We build a head detector by integrating two types of detectors based on the parts-based model by Felzenszwalb et al. (PAMI 2010). One is a robust view-based head detector trained on newly annotated images in the VOC 2006-2010 trainval datasets. The other is the whole body detector of Felzenszwalb et al., although it can be configured to learn a wider variety of poses. Both detectors estimate the bounding box of the head instead of the whole body. The two detectors are integrated by merging their detections based on the score and overlap of the estimated bounding boxes. This works as a verification process of one of the detectors by the other. We can show that the total detector is also capable of estimating the inclination of the upper body. CVC_BOW_COLOR_HOG Color_HOG based detector with BOW classifier CVC_DET Computer Vision Center Barcelona Fahad Khan, Camp Davesa, Joost van de Weijer, Rao Muhammad Anwer, Albert Gordo, Pep Gonfaus, Ramon Baldrich, Antonio Lopez We use our Color-HOG based part detector [1]. The detection results are combined with our CVC_CLS submission. References: 1. Fahad shahbaz khan, Rao Muhammad Anwer, Joost van de Weijer, Andrew D. Bagdanov, Maria Vanrell, Antonio M. Lopez. Color Attributes for Object Detection. In CVPR 2012. CVC_BOW_FK_COLORHOG BOW with fisher and color-HOG detection CVC_CLS Computer Vision Barcelona Albert Gordo, Camp Davesa, Fahad Khan, Pep Gonfaus, Joost van de Weijer, Rao Muhammad Anwer, Ramon Baldrich, Jordi Gonzalez, Ernest Valveny Our submission is a combination of standard bag-of-words pipeline, fisher vectors and color-HOG based part detection models.
+For bag-of-words, we use SIFT and ColorNames. To combine multiple cues, we use late fusion and color attention [1]. Fisher representation is based
+on SIFT features. Finally, we use our color-HOG detector [2] which introduces color information within the part based detection framework [3].
+References:
+1. Fahad shahbaz khan, Joost van de Weijer, Maria Vanrell. Modulating shape features by color attention for object recognition. IJCV, 98(1):49-64, 2012.
+2. Fahad shahbaz khan, Rao Muhammad Anwer, Joost van de Weijer, Andrew D. Bagdanov, Maria Vanrell, Antonio M. Lopez. Color Attributes for Object Detection. In CVPR 2012.
+3. P. F. Felzenszwalb, R. B. Girshick, D. A. McAllester, D. Ramanan. Object detection with discriminatively trained part-based models. PAMI, 32(9):1627�1645, 2010. CVC_UVA_UNITN_ BOW_FK_COLORDET_SP Combination of BOW, Fihser, Color detection, SP CVC_UVA_UNITN Computer Vision Barcelona, University of Amsterdam, University of Trento Fahad Khan, Jan van Gemert, Camp Davesa, Jasper Uijlings , Albert Gordo, Sezer Karaoglu, Koen van de Sande, Pep Gonfaus, Rao Muhammad Anwer, Joost van de Weijer, Cees Snoek, Ramon Baldrich, Nicu Sebe, Theo gevers For bag-of-words, we use SIFT 
+and ColorNames. To combine multiple cues, we use late fusion and color attention [1]. 
+Fisher representation is based on SIFT features. We use our color-HOG detector [2] 
+which introduces color information within the part based detection framework [3]. 
+We extend the Spatial Pyramid pooling with a generic functional
+pooling scheme. Pooling can be seen as a crude pre-matching technique
+which may be based on geometry (SPM) but can be any other grouping
+function [4]. This technique has shown to aid with pooling based on
+saliency [5]. Here we also include pools based on signal to noise,
+interest points, and a pyramid over scale. 
+References: 
+1. Fahad shahbaz khan, Joost van de Weijer, Maria Vanrell. 
+Modulating shape features by color attention for object recognition. IJCV, 98(1):49-64, 2012.
+2. Fahad shahbaz khan, Rao Muhammad Anwer, Joost van de Weijer, Andrew D. Bagdanov, Maria Vanrell, 
+Antonio M. Lopez. Color Attributes for Object Detection. In CVPR 2012. 
+3. P. F. Felzenszwalb, R. B. Girshick, D. A. McAllester, D. Ramanan. 
+Object detection with discriminatively trained part-based models. PAMI, 32(9):1627�1645, 2010.
+4. J. C. van Gemert. Exploiting Photographic Style for
+Category-Level Image Classification by Generalizing the Spatial
+Pyramid. In ICMR, 2011.
+5. S. Karaoglu, J. C. van Gemert and Th. Gevers. Object Reading: Text
+Recognition for Object Recognition. In ECCV-IFCVCR 2012, Oct 2012. HU_BU_MIL_MULTI_CUE On Recognizing Actions in Still Images via MIL SVM-HOG, BOW, miles-objectness Hacettepe University, Bilkent University Cagdas Bas, Fadime Sener, Nazli Ikizler-Cinbis We propose a multi-cue based approach for recognizing hu-
+man actions in still images, where candidate object regions are discovered
+and utilized in a weakly supervised manner. Our approach is weakly su-
+pervised in the sense that it does not require any explicitly trained object
+detector or part/attribute annotation. Instead, a multiple instance learn-
+ing approach is used over sets of object hypotheses in order to represent
+objects relevant to the actions. Our results show that using multiple ob-
+ject hypotheses within multiple instance learning is eective for human
+action recognition in still images and such an object representation is
+suitable for using in conjunction with other visual features. IMPERIAL_COMPLEX_LOGNORMAL Complex LogNormal Scale Space ComplexLogNormal_LogFoveal_PhaseInvariance Imperial College London 1) Ioannis Alexiou
+2) Anil A. Bharath We design and optimize a scale space based on sparse coding optimization in the frequency domain. This Scale Space is obtained by using Complex filters with lognormal envelopes which span over angular and radial frequencies. Two basic features are harvested from these filters. The oriented magnitudes and the projected Phase of the filter outputs which are used for sampling Keypoints and Grid-points specifically designed for such filter outputs. We design descriptors comprised by pooling functions to properly accumulate such outputs. The descriptors are produced by foveal arranged poolers which sample the basic features using (136 & 544) inner products per sampling point. These poolers are obtained by using lognormal distributions on the spatial domain this time. Two basic descriptors of 136 and 544 dimensions are produced for keypoint and grid based sampling. These are fed to a k-means algorithmic module to generate 4000 visual words. Histograms of these words are used at fixed regions with hard assignment of the words. Another class of histograms is introduced by pairing up words and computing histograms of word pairs, as proposed by Alexiou, Bharath (BMVC2012). The fixed regions compose a spatial pyramid where each is independently learnt by an SVM classifier. A final simple learning approach is used to merge all SVM predictions into a class prediction. ITI_FK_BS_GRAYSIFT Fisher Encoding Baseline using gray SIFT features ITI_FK_BS_GRAYSIFT ITI-CERTH & Surrey University E. Chatzilari, S. Nikolopoulos, Y. Kompatsiaris, J. Kittler Based on the implementation of �K. Chatfield, V. Lempitsky, A. Vedaldi, A. Zisserman, The devil is in the details: an evaluation of recent feature encoding methods, British Machine Vision Conference, 2011� and specifically following the approach described in �F. Perronnin, J. Sanchez, and T. Mensink. 2010. Improving the fisher kernel for large-scale image classification. In Proc. (ECCV'10), Springer-Verlag, Berlin, Heidelberg, 143-156.� for feature encoding based on the Fisher Kernel.
+We use gray-SIFT descriptors reduced with PCA to 80 dimensions and GMM with 256 components for estimating the probabilistic visual vocabulary. A spatial pyramid tree with 3 levels (1st:1x1, 2nd:2x2 and 3rd:3x1 horizontal) and dense sampling every 3 pixels has been employed to define the key-points. The descriptors are aggregated using Fisher encoding, which produces in a 40960-dimensional vector for each of the 8 regions of the spatial pyramid. These vectors are subsequently concatenated to produce the final 327680-dimensional representation vector for each image. SVM classifiers are trained using the Hellinger kernel which results in square rooting the features and then normalizing the results using the l2 norm. ITI_FK_FLICKR_GRAYSIFT_ENTROPY Multimodal bootstrapping using MIRFLICKR1m ITI_FK_FLICKR_GRAYSIFT_ENTROPY ITI-CERTH & Surrey University E. Chatzilari, S. Nikolopoulos, Y. Kompatsiaris, J. Kittler Based on the implementation of �K. Chatfield, V. Lempitsky, A. Vedaldi, A. Zisserman, The devil is in the details: an evaluation of recent feature encoding methods, British Machine Vision Conference, 2011� and specifically following the approach described in �F. Perronnin, J. Sanchez, and T. Mensink. 2010. Improving the fisher kernel for large-scale image classification. In Proc. (ECCV'10), Springer-Verlag, Berlin, Heidelberg, 143-156.� for feature encoding based on the Fisher Kernel.
+We use gray-SIFT descriptors reduced with PCA to 80 dimensions and GMM with 256 components for estimating the probabilistic visual vocabulary. A spatial pyramid tree with 3 levels (1st:1x1, 2nd:2x2 and 3rd:3x1 horizontal) and dense sampling every 3 pixels has been employed to define the key-points. The descriptors are aggregated using Fisher encoding, which produces in a 40960-dimensional vector for each of the 8 regions of the spatial pyramid. These vectors are subsequently concatenated to produce the final 327680-dimensional representation vector for each image. SVM classifiers are trained using the Hellinger kernel which results in square rooting the features and then normalizing the results using the l2 norm. In addition to the train+validation dataset the set of examples that is used for training the visual recognition models is further enriched by collecting the first 500 images per concept from the MIRFLICKR dataset (1 million images in total). The images are ranked in ascending order based on the geometric mean of the image visual score (distance from the SVM-hyperplane), the complement of the image tag-based similarity (between the image tags and the concept of interest) and the entropy of tag-based similarities among all concepts in the dataset.
+ ITI_FK_FUSED_SIFT Late fusion of Gray, RGB, HSV and Op SIFT by avg ITI_FK_FUSED_GRAY-RGB-HSV-OP-SIFT ITI-CERTH & Surrey University E. Chatzilari, S. Nikolopoulos, Y. Kompatsiaris, J. Kittler Based on the implementation of �K. Chatfield, V. Lempitsky, A. Vedaldi, A. Zisserman, The devil is in the details: an evaluation of recent feature encoding methods, British Machine Vision Conference, 2011� and specifically following the approach described in �F. Perronnin, J. Sanchez, and T. Mensink. 2010. Improving the fisher kernel for large-scale image classification. In Proc. (ECCV'10), Springer-Verlag, Berlin, Heidelberg, 143-156.� for feature encoding based on the Fisher Kernel.
+We use SIFT descriptors reduced with PCA to 80 dimensions and GMM with 256 components for estimating the probabilistic visual vocabulary. A spatial pyramid tree with 3 levels (1st:1x1, 2nd:2x2 and 3rd:3x1 horizontal) and dense sampling every 3 pixels has been employed to define the key-points. The descriptors are aggregated using Fisher encoding, which produces in a 40960-dimensional vector for each of the 8 regions of the spatial pyramid. These vectors are subsequently concatenated to produce the final 327680-dimensional representation vector for each image. SVM classifiers are trained using the Hellinger kernel which results in square rooting the features and then normalizing the results using the l2 norm. Four different feature spaces namely, Gray-SIFT, RGB-SIFT, HSV-SIFT, OP-SIFT have been calculated and the final prediction is generated by averaging the predictions of all four feature spaces (late fusion). MISSOURI_HOGLBP_MDPM_CONTEXT HOGLBP with Mixture DPM and Context MISSOURI_HOGLBP_MDPM_CONTEXT The University of Missouri-Columbia Guang Chen, Miao Sun, Xutao Lv, Yan Li, Tony X. Han HOG-LBP features [1] are incorporated in the deformable part model [2]. Deformable model is further improved by using the learned multiple anchor positions so that the possible locations for each part are modeled as a mixture of Gaussian distribution. For part and root filters, PCA is adopted to denoise and accelerate the detection speed. We proposed a permutation matrix method to add the model symmetry constraints during the feature selection, which effectively takes advantage of the symmetry property existing in most of the object categories and avoids the overfitting. Contextual information including image class label estimation, segmentation estimation, color histogram of ROI, and objects location priors, and correlations between the object detectors are used to leverage the final detection results to a very large extent: there are lots of contextual information and correlational information among objects that can be used to boost the detection performance. For example, trains and buses are objects bearing some visual similarities. But none of the large objects can coexist in the same location. So detection scores are correlated and we use the inference on Bayesian networks to further improve the detection results. [1] Xiaoyu Wang, Tony X. Han and Shuicheng Yan, �An HOG-LBP Human Detector with Partial Occlusion Handling,� IEEE International Conference on Computer ICCV 2009), Kyoto, 2009. [2] Girshick, R. B. and Felzenszwalb, P. F. and McAllester, D. : Discriminatively Trained Deformable Part Models, Release 5 NEC_STANFORD_OCP Object-centric pooling NEC_STANFORD_OCP NEC Laboratories America and Stanford University Olga Russakovsky
+Xiaoyu Wang
+Shenghuo Zhu
+Li Fei-Fei
+Yuanqing Lin
+ Object-centric pooling (OCP) is a method which represents a bounding box by pooling the coded low-level descriptors on the foreground and background separately and then concatenating them (Russakovsky et al. ECCV 2012). This method exploits powerful classification features that have been developed in the past years. In this system, we used DHOG and LBP as low-level descriptors. We developed a discriminative LCC coding scheme in addition to traditional LCC coding. We make use of candidate bounding boxes (van de Sande et al. ICCV 2011). NUSPSL_CTX_GPM_SCM �Sub-class�-aware Object Classification NUSPSL_CTX_GPM_SCM National University of Singapore; Panasonic Singapore Laboratories; Sun Yat-sen University NUS: Dong Jian, Chen Qiang, Song Zheng, Pan Yan, Xia Wei, Yan Shuicheng;
+PSL: Hua Yang, Huang Zhongyang, Shen Shengmei;
+ The new solution is motivated by the observation of considerable within-class diversities in the PASCAL VOC dataset. For example, the chair category includes two obvious sub-classes, namely sofa-like chairs and rigid-material chairs. In feature space, these two sub-classes are essentially far away, and it is intuitively beneficial to model them independently. The proposed new solution contributes in the following aspects: 1) inhomogeneous-similarity aware sub-class mining (SCM), 2) sub-class aware object detection and classification, and 3) sub-class aware kernel mapping for late fusion. Also the whole solution is founded on several valuable components from the NUS-PSL team in VOC 2011: 1) Traditional SPM and the novel Generalized Hierarchical Matching (GPM) [2] schemes are performed to generate image representations. 2) Contextualized object detection and classification [1]. Considerable improvement over our solution for PASCAL VOC 2011 has been achieved as shown in our offline train-vs-validation experiments. 
+[1] Zheng Song, Qiang Chen, Zhongyang Huang, Yang Hua, and Shuicheng Yan. Contextualizing Object Detection and Classification, CVPR 2011 
+[2] Qiang Chen, Zheng Song, Yang Hua, Zhongyang Huang, Shuicheng YAN. Generalized Hierarchical Matching for Image Classification, CVPR 2012.
+ NUS_DET_SPR_GC_SP DM2: Detection, Mask transfer, MRF pruning NUS_DET_SPR_GC_SP National University of Singapore(NUS), Panasonic Singapore Laboratories(PSL) (NUS) Wei XIA, Csaba DOMOKOS, Jian DONG, Loong Fah CHEONG, Shuicheng YAN, (PSL) Zhongyang HUANG, Shengmei SHEN We propose a three-step coarse-to-fine framework for general object segmentation. Given a test image, the object bounding boxes are first predicted by object detectors, and then the coarse masks within the corresponding bounding boxes are transferred from the training data based on the optimization framework of coupled global and local sparse representations in [1]. Then based on the coarse masks as well as the original detection information (bounding boxes and confidence maps), we built a super-pixel based MRF model for each bounding box, and then perform foreground-background inference. Both L-a-b color histogram and detection confidence map are used for characterizing the unary terms, while the PB edge contrast is used as smoothness term. Finally, the segmentation results are further refined by post-processing of multi-scale super-pixel segmentation. 
+[1]Wei Xia, Zheng Song, Jiashi Feng, Loong Fah Cheong and Shuicheng Yan. Segmentation over Detection by Coupled Global and Local Sparse Representations, ECCV 2012. 
+ OLB_FT_DPM_R5 SVM classifier using HOG?V2? SVM-HOG Orange Labs Beijing, France Telecom Zhao Feng Our object detection system is based on the Discriminatively Trained Deformable Part Models, Release 5. It is our first attempt for VOC challange. 
+We do not make much modifications to the baseline system provided in http://people.cs.uchicago.edu/~rbg/latent/. 
+The submitted results are obtained by applying post-processings of both bounding box prediction and contextual rescoring.
+ OXFORD_ALIGNED_BODYPARTS Human action recognition from aligned body parts Oxford University of Oxford Minh Hoai, Lubor Ladicky, Andrew Zisserman We propose a method for human action recognition that uses body-part
+detectors to localize the human and align feature descriptors.
+We first automatically detect the upper-body, the hands, and the silhouette.
+We compute appearance features (SIFT + HOG + color) and location
+features (aspect ratio + relative position) of the detected body
+parts.
+We use the silhouette as an indicator of the pose and as a mask for
+discarding irrelevant features computed outside the body.
+We further utilize the detection scores obtained from several object
+detectors trained on publicly available datasets. STANFORD_RF_MULTFEAT_SVM Random forest with SVM on multiple features RF_MULTFEAT_SVM Stanford University; MIT Aditya Khosla, Rui Zhang, Bangpeng Yao, and Li Fei-Fei We use a random forest (RF) approach for action classification. Our method is adapted from our CVPR2011 paper (Khosla*, Yao*, Fei-Fei, 2011). We explore two key properties that determine the performance of RF classifiers: discrimination and randomization. (1) Discrimination: We obtain strong decision trees, using discriminative SVM classifiers at each tree node. (2) Randomization: We consider a very dense feature space, where we sample image regions that can have any size and location in the image. Compared to VOC2011, we use multiple features including SIFT, HOG, Color Naming, Object Bank and LBP. We modify some of the existing features to better address our need. Further, we perform tree selection (similar to feature selection) to identify more discriminative regions in a class-specific manner. SYSU_DYNAMIC_AND_OR_TREE Dynamic And-Or Tree Learning For Object Detection Configurable And-Or Tree Model Sun Yat-Sen University Xiaolong Wang, Liang Lin, Lichao Huang, Xinhui Zhang, Zechao Yang We propose a novel hierarchical model for object detection, namely "And-Or tree", which is a configurable by introducing the �switch� variables (i.e. the or-nodes) accounting for intra-class object variance. This model comprises three layers: a batch of leaf-nodes in bottom for localizing object parts; the or-nodes for activating several leaf-nodes to specify a composition of parts; a root-node verifying object holistic distortion. For model training , a novel discriminative learning algorithm is proposed to explicitly determine the structural configuration (e.g., the production of leaf-nodes associated with the or-nodes) along with the optimization of multi-layer parameters. The response of model integrates the bottom-up testings via the leaf-nodes and or-nodes with the global verification via the root-node. In the implementation, we apply the histograms of gradients(HOG) as the image feature. Object detection is achieved by scanning the sub-windows over different scales and locations of the image. The final decisions are further rescored by a context model encoding the inter-object spatial interactions. SZU_DPM_RF_SVM Part based models and object detection SZU_DPM_RF_SVM Shenzhen University Shiqi Yu, Shengyin Wu, Wensheng Chen Based on "Object Detection with Discriminatively Trained Part Based Models", P. Felzenszwalb, R. Girshick, D. McAllester, D. Ramanan; IEEE TPAMI, 2010; and "Combining Randomization and Discrimination for Fine-Grained Image Categorization"; B. Yao, A. Khosla, and L. Fei-Fei. CVPR2011.
+We combine human part based models with object detectors for the proposed action classification method. Based on a simple principle that similar poses are presented when the subjects perform the same action, the deformable part based model [Felzenszwalb et. al. TPAMI 2010] is employed to describe the pose of a human body. In detail, the positions and textures of the parts can be extracted as features for action classification. For detection part of the proposed method, we use the random forest (RF) described in [Yao et. al. CVPR2011]. RF can detect human body parts and the objects interact with the human. At last we fuse the features and scores from the two models, and achieved a stronger classifier. UOC_OXFORD_DPM_MKL The DPM-MKL baseline DPM-MKL University of Oxford, University of Chicago Ross Girshick, Andrea Vedaldi, Karen Simonyan, Pedro Felzenszwalb, Andrew Zisserman This method is similar to last year DPM-MKL entry. We updated several aspects of the implementation (e.g. the type of features).
+ UP_FEATURE_ENSEMBLE SVM with different descriptors Ensemble of ensemble university of Padova Loris Nanni we proposed a system that incorporates several perturbation approaches and descriptors for a generic computer vision system. Some of the variations of approach we investigate include using different global and bag-of-feature based descriptors, different clusterings for codebook creations, different subspace projections for reducing the dimensionality of the descriptors extracted from each region. The basic classifier used in our ensembles is the Support Vector Machine. The ensemble decisions are combined by sum rule. UVA_DETECTOR_MERGING Detector_Weighting Detector-Merging University of Amsterdam Sezer Karaoglu, Fahad Shahbaz Khan, Koen van de Sande, Jan van Gemert, Rao Muhammad Anwer, , Jasper Uijlings, Camp Davesa, Joost van de Weijer, Theo Gevers, Cees Snoek We use a bounding box merging scheme that exploits the results from different independent detectors. Each detector results in a ranked list of BB, which is not directly comparable with other detectors. We merge the detectors with a weighting scheme based on hold-out performance. For input, we use the standard Felzenszwalb gray HOG detector [1] ; the color-HOG detector of CVC [2] which introduces color information within the part based detection framework; and a slightly improved version of the SelectiveSearch detector [3] by the UvA submitted to VOC 2011.
+[1] P. Felzenszwalb, R. Girshick, D. McAllester, D. Ramanan
+Object Detection with Discriminatively Trained Part Based Models. In TPAMI, Vol. 32, No. 9, Sep. 2010
+[2] Fahad shahbaz khan, Rao Muhammad Anwer, Joost van de Weijer, Andrew D. Bagdanov, Maria Vanrell, Antonio M. Lopez. 
+Color Attributes for Object Detection. In CVPR 2012.
+[3] Segmentation As Selective Search for Object Recognition Koen E. A. van de Sande, Jasper R. R. Uijlings, Theo Gevers, Arnold W. M. Smeulders. In
+ICCV, 2011
+ UVA_HYBRID_CODING_APE Hybrid Coding for Selective Search HybridCodingApe ksande@uva.nl Koen E. A. van de Sande
+Jasper R. R. Uijlings
+Cees G. M. Snoek
+Arnold W. M. Smeulders We have improved significantly over last years method from [1] with a hybrid bag-of-words using average and difference coding, a first in object detection. Briefly, the method of [1], instead of exhaustive search, which was dominant in the Pascal VOC 2010 and 2011 detection challenge, uses segmentation as a sampling strategy for selective search (cf. the ICCV paper). We use a small set of data-driven, class-independent, high quality object locations (coverage of 96-99% of all objects in the VOC2007 test set). Because we have only a limited number of locations to evaluate, this enables the use of more computationally expensive features, such as bag-of-words using average and difference coding strategies. While difference coding is an order of magnitude more expensive than average, we are still able to efficiently train a detection system for it due to several optimizations in the descriptor coding and the kernel classification runtime. As low-level features, we use new complementary color descriptors. Finally, the detection system is fused with classification scores found using most telling example selection from [2].
+[1] "Segmentation as Selective Search for Object Recognition"; Koen E. A. van de Sande, Jasper R. R. Uijlings, Theo Gevers, Arnold W. M. Smeulders; 13th International Conference on Computer Vision, 2011.
+[2] "The Most Telling Window for Image Classification"; Jasper R. R. Uijlings, Koen E. A. van de Sande, Arnold W. M. Smeulders, Theo Gevers, Nicu Sebe, Cees G. M. Snoek; PASCAL VOC Challenge Workshop 2011 at ICCV, 2011. UVA_OPT_NBNN_CRF CRF with NBNN features and simple smoothing OptNBNN-CRF University of Amsterdam (UvA) Carsten van Weelden, Maarten van der Velden, Jan van Gemert Naive Bayes nearest neighbor (NBNN) [Boiman et al, CVPR 2008] performs well in image classification because it avoids quantization of image features and estimates image-to-class distance. In the context of my MSc thesis we applied the NBNN method to segmentation by estimating image-to-class distances for superpixels, which we use as unary potentials in a simple conditional random field (CRF). To get the NBNN estimates we extract dense SIFT features from the training set and store these in a FLANN index [Muja and Lowe, VISSAPP'09] for efficient nearest neighbor search. To deal with the unbalanced class frequency we learn a linear correction for each class as in [Behmo et al, ECCV 2010]. We segment each test image into 500 SLIC superpixels [Achanta et al, TPAMI 2012] and take each superpixel as a vertex in the CRF. We use the corrected NBNN estimates as unary potentials and Potts potential as pairwise potentials and infer the MAP labeling using alpha-expansion [Boykov et al, TPAMI 2001]. We tune the weighting between the unary and pairwise potential by exhaustive search. 

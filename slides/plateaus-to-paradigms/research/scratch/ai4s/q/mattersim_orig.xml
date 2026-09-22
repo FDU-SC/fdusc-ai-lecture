@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TScxS5DowkC4XCByWVVQuxWJ4nQ</id>
+  <title>arXiv Query: search_query=ti:"MatterSim"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-16T14:49:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22MatterSim%22&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.07927v2</id>
+    <title>MatterSim-MT: A multi-task foundation model for in silico materials characterization</title>
+    <updated>2026-05-28T21:59:19Z</updated>
+    <link href="https://arxiv.org/abs/2605.07927v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.07927v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate property characterization is a major bottleneck in materials design. While first-principles methods and task-specific machine-learning models have driven important progress, they remain fundamentally limited in scalability and generalizability across the vast space of structures and properties relevant to real-world materials design. We present MatterSim-MT, a multi-task foundation model for in silico materials simulation and property characterization. The model is pretrained on over 35 million first-principles-labeled structures covering 89 elements, temperatures up to 5000 K and pressures up to 1000 GPa, and is fine-tuned on various properties including Bader charges, magnetic moments, Born effective charges, and dielectric matrices. Out of the box, MatterSim-MT not only serves as a foundation model for predicting material structure, dynamics and thermodynamics, its multi-task architecture also enables a wide range of complex simulations that cannot be captured by potential energy surfaces alone. For example, we demonstrate pressure-dependent LO-TO phonon splitting in SiC with close agreement with experiment, electric hysteresis in ferroelectric BaTiO3, and the cationic-to-anionic redox transition during delithiation of a Li-rich cathode material. Finally, we show that MatterSim-MT scales well with more data and parameters, can be efficiently fine-tuned to higher levels of theory, and can be efficiently extended to new systems via active learning. Overall, we believe this approach provides a scalable route to accurate in silico materials characterization.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T16:01:20Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Han Yang</name>
+    </author>
+    <author>
+      <name>Xixian Liu</name>
+    </author>
+    <author>
+      <name>Chenxi Hu</name>
+    </author>
+    <author>
+      <name>Yichi Zhou</name>
+    </author>
+    <author>
+      <name>Yu Shi</name>
+    </author>
+    <author>
+      <name>Chang Liu</name>
+    </author>
+    <author>
+      <name>Junfu Tan</name>
+    </author>
+    <author>
+      <name>Jielan Li</name>
+    </author>
+    <author>
+      <name>Guanzhi Li</name>
+    </author>
+    <author>
+      <name>Qian Wang</name>
+    </author>
+    <author>
+      <name>Yu Zhu</name>
+    </author>
+    <author>
+      <name>Zekun Chen</name>
+    </author>
+    <author>
+      <name>Shuizhou Chen</name>
+    </author>
+    <author>
+      <name>Fabian Thiemann</name>
+    </author>
+    <author>
+      <name>Claudio Zeni</name>
+    </author>
+    <author>
+      <name>Matthew Horton</name>
+    </author>
+    <author>
+      <name>Robert Pinsler</name>
+    </author>
+    <author>
+      <name>Andrew Fowler</name>
+    </author>
+    <author>
+      <name>Daniel Zügner</name>
+    </author>
+    <author>
+      <name>Tian Xie</name>
+    </author>
+    <author>
+      <name>Lixin Sun</name>
+    </author>
+    <author>
+      <name>Yicheng Chen</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Yeqi Bai</name>
+    </author>
+    <author>
+      <name>Deniz Gunceler</name>
+    </author>
+    <author>
+      <name>Frank Noé</name>
+    </author>
+    <author>
+      <name>Hongxia Hao</name>
+    </author>
+    <author>
+      <name>Ziheng Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.04967v2</id>
+    <title>MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures</title>
+    <updated>2024-05-10T16:49:52Z</updated>
+    <link href="https://arxiv.org/abs/2405.04967v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.04967v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate and fast prediction of materials properties is central to the digital transformation of materials design. However, the vast design space and diverse operating conditions pose significant challenges for accurately modeling arbitrary material candidates and forecasting their properties. We present MatterSim, a deep learning model actively learned from large-scale first-principles computations, for efficient atomistic simulations at first-principles level and accurate prediction of broad material properties across the periodic table, spanning temperatures from 0 to 5000 K and pressures up to 1000 GPa. Out-of-the-box, the model serves as a machine learning force field, and shows remarkable capabilities not only in predicting ground-state material structures and energetics, but also in simulating their behavior under realistic temperatures and pressures, signifying an up to ten-fold enhancement in precision compared to the prior best-in-class. This enables MatterSim to compute materials' lattice dynamics, mechanical and thermodynamic properties, and beyond, to an accuracy comparable with first-principles methods. Specifically, MatterSim predicts Gibbs free energies for a wide range of inorganic solids with near-first-principles accuracy and achieves a 15 meV/atom resolution for temperatures up to 1000K compared with experiments. This opens an opportunity to predict experimental phase diagrams of materials at minimal computational cost. Moreover, MatterSim also serves as a platform for continuous learning and customization by integrating domain-specific data. The model can be fine-tuned for atomistic simulations at a desired level of theory or for direct structure-to-property predictions, achieving high data efficiency with a reduction in data requirements by up to 97%.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-08T11:13:30Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Han Yang</name>
+    </author>
+    <author>
+      <name>Chenxi Hu</name>
+    </author>
+    <author>
+      <name>Yichi Zhou</name>
+    </author>
+    <author>
+      <name>Xixian Liu</name>
+    </author>
+    <author>
+      <name>Yu Shi</name>
+    </author>
+    <author>
+      <name>Jielan Li</name>
+    </author>
+    <author>
+      <name>Guanzhi Li</name>
+    </author>
+    <author>
+      <name>Zekun Chen</name>
+    </author>
+    <author>
+      <name>Shuizhou Chen</name>
+    </author>
+    <author>
+      <name>Claudio Zeni</name>
+    </author>
+    <author>
+      <name>Matthew Horton</name>
+    </author>
+    <author>
+      <name>Robert Pinsler</name>
+    </author>
+    <author>
+      <name>Andrew Fowler</name>
+    </author>
+    <author>
+      <name>Daniel Zügner</name>
+    </author>
+    <author>
+      <name>Tian Xie</name>
+    </author>
+    <author>
+      <name>Jake Smith</name>
+    </author>
+    <author>
+      <name>Lixin Sun</name>
+    </author>
+    <author>
+      <name>Qian Wang</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Chang Liu</name>
+    </author>
+    <author>
+      <name>Hongxia Hao</name>
+    </author>
+    <author>
+      <name>Ziheng Lu</name>
+    </author>
+  </entry>
+</feed>

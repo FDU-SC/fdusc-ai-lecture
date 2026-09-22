@@ -1,0 +1,2779 @@
+ 
+ VOC2010 preliminary results 
+ VOC2010 PRELIMINARY RESULTS
+ Key to abbreviations 
+ Classification Results: VOC2010 data
+ Competition "comp1" (train on VOC2010 data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BONN_FGT_SEGM 
+ 88.0 61.6 53.1 63.3 34.8 77.5 72.3 71.1 41.1 56.0 39.6 64.3 68.9 75.4 87.5 32.5 59.3 40.8 78.7 61.4 
+ BUPT_LPBETA_MULTFEAT 
+ 82.1 38.6 39.5 46.5 15.5 55.0 46.4 46.5 39.9 21.3 31.2 37.6 45.8 41.4 75.5 15.6 41.7 25.0 62.5 44.3 
+ BUPT_SPM_SC_HOG 
+ 79.6 47.0 42.9 52.3 21.3 66.6 50.1 58.7 44.3 21.8 32.7 46.0 49.7 51.7 72.4 13.2 44.1 28.1 61.5 48.8 
+ BUPT_SVM_MULTFEAT 
+ 81.1 45.3 47.3 46.3 20.1 42.3 36.4 49.1 37.5 20.6 38.5 43.8 44.9 54.4 68.6 18.0 48.2 26.0 57.7 40.3 
+ BUT_FU_SVM_SIFT 
+ 89.7 63.9 64.5 68.3 36.8 77.9 68.5 72.0 57.2 47.2 56.7 63.5 66.8 74.2 85.0 32.8 54.3 49.1 82.6 66.8 
+ CVC_FLAT 
+ 89.4 57.6 63.0 68.5 32.0 76.7 64.7 66.9 51.5 48.4 50.0 54.8 63.1 69.9 83.5 33.6 54.8 46.1 82.2 65.9 
+ CVC_PLUS 
+ 91.0 61.8 66.7 71.1 37.7 78.9 67.8 72.2 55.8 51.0 55.8 59.4 65.3 73.0 84.0 39.9 56.9 48.5 83.9 68.1 
+ CVC_PLUSDET 
+ 91.7 70.0 66.8 71.3 49.0 81.4 77.5 71.2 60.0 52.6 55.7 61.0 70.9 76.7 88.4 43.2 59.7 53.8 84.7 71.3 
+ HIT_PROTOLEARN_2 
+ 60.7 22.1 22.7 29.0 15.0 34.9 27.8 31.6 31.9 14.1 17.4 28.9 24.0 20.6 55.8 9.2 22.0 16.8 30.9 24.6 
+ LIG_MSVM_FUSE_CONCEPT 
+ 74.4 43.0 37.5 50.4 22.0 60.7 47.1 46.8 47.5 22.2 35.0 42.1 42.9 48.4 73.8 15.6 31.8 28.9 63.8 46.6 
+ LIP6UPMC_KSVM_BASELINE 
+ 78.4 54.1 49.9 61.1 24.6 68.3 58.0 59.9 50.7 35.7 42.5 55.0 60.8 63.1 71.1 25.9 51.5 39.9 74.1 59.6 
+ LIP6UPMC_MKL_L1 
+ 78.5 55.9 54.6 62.5 25.0 69.3 59.5 60.0 51.3 37.9 46.7 54.0 60.5 64.0 72.8 32.8 52.6 38.5 72.7 61.1 
+ LIP6UPMC_RANKING 
+ 78.8 51.3 46.1 58.2 19.5 68.6 55.6 59.4 46.8 30.7 36.0 49.3 52.3 60.0 76.3 17.8 49.1 35.3 66.3 56.6 
+ LIRIS_MKL_TRAINVAL 
+ 87.5 57.0 61.7 68.2 29.9 76.6 61.9 67.5 56.9 35.1 50.6 55.1 62.2 69.3 83.6 35.9 52.9 42.7 79.8 66.3 
+ NEC_V1_HOGLBP_NONLIN_SVM 
+ 93.3 71.7 69.9 76.9 42.0 85.3 77.4 79.3 60.0 55.8 60.6 71.1 75.7 77.7 86.8 33.5 61.5 55.8 87.5 69.9 
+ NEC_V1_HOGLBP_NONLIN_SVMDET 
+ 93.3 72.9 69.9 77.2 47.9 85.6 79.7 79.4 61.7 56.6 61.1 71.1 76.7 79.3 86.8 38.1 63.9 55.8 87.5 72.9 
+ NII_SVMSIFT 
+ 69.3 40.3 27.3 44.1 19.5 54.1 23.9 44.4 42.9 20.3 31.1 37.5 36.6 40.5 68.8 9.3 24.6 20.2 55.6 43.9 
+ NLPR_VSTAR_CLS_DICTLEARN 
+ 90.3 77.0 65.3 75.0 53.7 85.9 80.4 74.6 62.9 66.2 54.1 66.8 76.1 81.7 89.9 41.6 66.3 57.0 85.0 74.3 
+ NTHU_LINSPARSE_2 
+ 77.9 44.0 37.4 48.5 19.0 63.6 49.0 51.0 45.5 27.6 32.1 41.7 46.9 49.7 68.5 13.2 40.3 30.1 61.7 46.3 
+ NUDT_SVM_LDP_SIFT_PMK_SPMK 
+ 86.1 59.3 60.2 68.7 28.7 74.8 63.5 68.0 52.5 41.4 47.1 57.5 60.9 68.2 81.5 29.4 52.1 44.5 79.1 4.7 
+ NUDT_SVM_WHGO_SIFT_CENTRIST_LLM 
+ 83.5 54.2 55.2 66.8 28.5 72.1 65.4 64.2 51.9 36.1 49.3 55.6 58.0 66.5 82.1 25.3 48.1 41.7 78.4 59.5 
+ NUSPSL_EXCLASSIFIER 
+ 91.3 77.0 70.0 75.6 50.7 83.2 77.1 75.4 62.5 62.6 62.7 64.6 77.9 81.8 91.1 44.8 64.2 53.2 86.3 77.1 
+ NUSPSL_KERNELREGFUSING 
+ 93.0 79.0 71.6 77.8 54.3 85.2 78.6 78.8 64.5 64.0 62.7 69.6 82.0 84.4 91.6 48.6 64.9 59.6 89.4 76.4 
+ NUSPSL_MFDETSVM 
+ 91.9 77.1 69.5 74.7 52.5 84.3 77.3 76.2 63.0 63.5 62.9 65.0 79.5 83.2 91.2 45.5 65.4 55.0 87.0 77.2 
+ RITSU_CBVR_WKF 
+ 85.6 57.2 54.9 64.5 29.2 71.2 57.1 63.2 53.9 37.6 49.6 54.7 58.7 67.9 80.1 29.2 52.1 43.5 76.4 60.9 
+ SURREY_MK_KDA 
+ 90.6 66.1 67.2 70.6 36.0 79.7 69.8 73.4 58.4 50.7 60.1 65.2 69.8 76.9 87.0 42.5 59.6 49.9 85.2 71.3 
+ TIT_SIFT_GMM_MKL 
+ 87.2 56.6 59.6 66.0 32.6 72.7 63.1 64.8 54.6 41.2 49.3 58.8 59.1 68.2 82.9 31.2 49.2 43.2 75.0 63.4 
+ UC3M_GENDISC 
+ 85.5 51.6 55.4 64.8 25.9 74.4 60.6 66.0 51.0 45.9 43.9 55.0 59.0 65.2 80.3 24.0 51.4 47.0 76.4 58.6 
+ UVA_BW_NEWCOLOURSIFT 
+ 91.5 71.0 67.3 69.9 43.9 80.6 75.3 73.4 59.3 57.8 60.8 64.0 70.6 80.0 88.6 50.8 65.6 56.1 83.0 76.2 
+ UVA_BW_NEWCOLOURSIFT_SRKDA 
+ 90.6 66.9 63.4 70.2 49.4 81.8 76.7 70.9 60.0 57.1 60.5 64.5 67.4 79.1 90.2 53.3 63.5 58.0 81.9 74.4 
+ WLU_SPM_EMDIST 
+ 75.8 48.9 36.8 44.3 21.2 65.8 52.1 52.1 45.4 28.2 35.0 45.3 47.8 54.2 71.0 14.7 39.8 32.7 62.2 48.0 
+ XRCE_IFV 
+ 87.1 59.6 59.9 69.7 31.3 76.4 62.9 64.3 52.5 42.4 55.1 59.7 64.3 70.4 83.9 32.6 53.3 50.4 80.0 67.6 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Classification Results: VOC2010 data
+ Competition "comp2" (train on own data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BIT_LINSVM_PHOW 
+ 59.7 28.8 17.4 29.7 12.5 25.3 28.3 32.2 34.3 15.7 24.5 26.3 31.2 21.5 43.8 7.4 15.6 18.2 37.9 27.3 
+ UCI_LSVM_MDPM_10X 
+ - 65.1 - - - 78.1 - - - 43.8 16.9 - 64.0 60.4 - - 53.1 25.0 - 58.7 
+ XRCE_IFV_1M 
+ 92.7 68.0 69.0 79.9 29.3 81.4 60.0 78.0 45.0 62.9 31.6 69.2 71.2 78.6 78.0 34.0 67.3 - 82.7 - 
+ XRCE_IFV_FUSE_OPT 
+ 92.7 68.4 68.5 80.4 38.2 81.8 66.9 77.8 55.0 62.1 56.5 70.1 71.4 79.4 85.0 40.0 67.2 51.8 84.6 67.6 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Detection Results: VOC2010 data
+ Competition "comp3" (train on VOC2010 data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BONN_FGT_SEGM 
+ 52.7 
+ 33.7 
+ 13.2 
+ 11.0 
+ 14.2 
+ 43.1 
+ 31.9 
+ 35.6 
+ 5.7 
+ 25.4 
+ 14.4 
+ 20.6 
+ 38.1 
+ 41.7 
+ 25.0 
+ 5.8 
+ 26.3 
+ 18.1 
+ 37.6 
+ 28.1 
+ BONN_SVR_SEGM 
+ 50.5 
+ 24.4 
+ 17.1 
+ 13.3 
+ 10.9 
+ 39.5 
+ 32.9 
+ 36.5 
+ 5.6 
+ 16.0 
+ 6.6 
+ 22.3 
+ 24.9 
+ 29.0 
+ 29.8 
+ 6.7 
+ 28.4 
+ 13.3 
+ 32.1 
+ 27.2 
+ CMIC_SYNTHTRAIN 
+ - 
+ 28.9 
+ - 
+ - 
+ - 
+ 30.2 
+ 13.3 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 26.2 
+ 28.1 
+ 13.2 
+ - 
+ - 
+ - 
+ 18.8 
+ 25.7 
+ CMIC_VARPARTS 
+ - 
+ 28.2 
+ - 
+ - 
+ - 
+ 26.9 
+ 13.7 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 23.5 
+ 24.7 
+ 16.1 
+ - 
+ - 
+ - 
+ 18.8 
+ 24.5 
+ CMU_RANDPARTS 
+ 23.8 
+ 31.7 
+ 1.2 
+ 3.4 
+ 11.1 
+ 29.7 
+ 19.5 
+ 14.2 
+ 0.8 
+ 11.1 
+ 7.0 
+ 4.7 
+ 16.4 
+ 31.5 
+ 16.0 
+ 1.1 
+ 15.6 
+ 10.2 
+ 14.7 
+ 21.0 
+ CMU_RANDPARTS_MAXSCORE 
+ - 
+ - 
+ 2.7 
+ - 
+ - 
+ - 
+ - 
+ 16.2 
+ - 
+ 10.6 
+ 8.5 
+ - 
+ - 
+ - 
+ 17.9 
+ - 
+ - 
+ - 
+ 15.7 
+ - 
+ LJKINPG_HOG_LBP_LTP_PLS2ROOTS 
+ 32.7 
+ 29.7 
+ 0.8 
+ 1.1 
+ 19.8 
+ 39.4 
+ 27.5 
+ 8.6 
+ 4.5 
+ 8.1 
+ 6.3 
+ 11.0 
+ 22.9 
+ 34.1 
+ 24.6 
+ 3.1 
+ 24.0 
+ 2.0 
+ 23.5 
+ 27.0 
+ MITUCLA_HIERARCHY 
+ 54.2 
+ 48.5 
+ 15.7 
+ 19.2 
+ 29.2 
+ 55.5 
+ 43.5 
+ 41.7 
+ 16.9 
+ 28.5 
+ 26.7 
+ 30.9 
+ 48.3 
+ 55.0 
+ 41.7 
+ 9.7 
+ 35.8 
+ 30.8 
+ 47.2 
+ 40.8 
+ NLPR_HOGLBP_MC_LCEGCHLC 
+ 53.3 
+ 55.3 
+ 19.2 
+ 21.0 
+ 30.0 
+ 54.4 
+ 46.7 
+ 41.2 
+ 20.0 
+ 31.5 
+ 20.7 
+ 30.3 
+ 48.6 
+ 55.3 
+ 46.5 
+ 10.2 
+ 34.4 
+ 26.5 
+ 50.3 
+ 40.3 
+ NUS_HOGLBP_CTX_CLS_RESCORE_V2 
+ 49.1 
+ 52.4 
+ 17.8 
+ 12.0 
+ 30.6 
+ 53.5 
+ 32.8 
+ 37.3 
+ 17.7 
+ 30.6 
+ 27.7 
+ 29.5 
+ 51.9 
+ 56.3 
+ 44.2 
+ 9.6 
+ 14.8 
+ 27.9 
+ 49.5 
+ 38.4 
+ TIT_SIFT_GMM_MKL 
+ 10.5 
+ 1.6 
+ 1.2 
+ 0.9 
+ 0.1 
+ 2.8 
+ 1.6 
+ 6.7 
+ 0.1 
+ 2.0 
+ 0.4 
+ 3.0 
+ 2.0 
+ 4.4 
+ 2.0 
+ 0.3 
+ 1.1 
+ 1.2 
+ 2.1 
+ 1.9 
+ TIT_SIFT_GMM_MKL2 
+ 20.0 
+ 14.5 
+ 3.8 
+ 1.2 
+ 0.5 
+ 17.6 
+ 8.1 
+ 28.5 
+ 0.1 
+ 2.9 
+ 3.1 
+ 17.5 
+ 7.2 
+ 18.8 
+ 3.3 
+ 0.8 
+ 2.9 
+ 6.3 
+ 7.6 
+ 1.1 
+ UC3M_GENDISC 
+ 15.8 
+ 5.5 
+ 5.6 
+ 2.3 
+ 0.3 
+ 10.2 
+ 5.4 
+ 12.6 
+ 0.5 
+ 5.6 
+ 4.5 
+ 7.7 
+ 11.3 
+ 12.6 
+ 5.3 
+ 1.5 
+ 2.0 
+ 5.9 
+ 9.1 
+ 3.2 
+ UCI_DPM_SP 
+ 46.1 
+ 52.6 
+ 13.8 
+ 15.5 
+ 28.3 
+ 53.2 
+ 44.5 
+ 26.6 
+ 17.6 
+ - 
+ 16.1 
+ 20.4 
+ 45.5 
+ 51.2 
+ 43.5 
+ 11.6 
+ 30.9 
+ 20.3 
+ 47.6 
+ - 
+ UMNECUIUC_HOGLBP_DHOGBOW_SVM 
+ 40.4 
+ 34.7 
+ 2.7 
+ 8.4 
+ 26.0 
+ 43.1 
+ 33.8 
+ 17.2 
+ 11.2 
+ 14.3 
+ 14.4 
+ 14.9 
+ 31.8 
+ 37.3 
+ 30.0 
+ 6.4 
+ 25.2 
+ 11.6 
+ 30.0 
+ 35.7 
+ UMNECUIUC_HOGLBP_LINSVM 
+ 37.9 
+ 33.7 
+ 2.7 
+ 6.5 
+ 25.3 
+ 37.5 
+ 33.1 
+ 15.5 
+ 10.9 
+ 12.3 
+ 12.5 
+ 13.7 
+ 29.6 
+ 34.5 
+ 33.8 
+ 7.2 
+ 22.9 
+ 9.9 
+ 28.9 
+ 34.1 
+ UOCTTI_LSVM_MDPM 
+ 52.4 
+ 54.3 
+ 13.0 
+ 15.6 
+ 35.1 
+ 54.2 
+ 49.1 
+ 31.8 
+ 15.5 
+ 26.2 
+ 13.5 
+ 21.5 
+ 45.4 
+ 51.6 
+ 47.5 
+ 9.1 
+ 35.1 
+ 19.4 
+ 46.6 
+ 38.0 
+ UVA_DETMONKEY 
+ 56.7 
+ 39.8 
+ 16.8 
+ 12.2 
+ 13.8 
+ 44.9 
+ 36.9 
+ 47.7 
+ 12.1 
+ 26.9 
+ 26.5 
+ 37.2 
+ 42.1 
+ 51.9 
+ 25.7 
+ 12.1 
+ 37.8 
+ 33.0 
+ 41.5 
+ 41.7 
+ UVA_GROUPLOC 
+ 58.4 
+ 39.6 
+ 18.0 
+ 13.3 
+ 11.1 
+ 46.4 
+ 37.8 
+ 43.9 
+ 10.3 
+ 27.5 
+ 20.8 
+ 36.0 
+ 39.4 
+ 48.5 
+ 22.9 
+ 13.0 
+ 36.8 
+ 30.5 
+ 41.2 
+ 41.9 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Detection Results: VOC2010 data
+ Competition "comp4" (train on own data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BERKELEY_POSELETS 
+ 33.2 
+ 51.9 
+ 8.5 
+ 8.2 
+ 34.8 
+ 39.0 
+ 48.8 
+ 22.2 
+ - 
+ 20.6 
+ - 
+ 18.5 
+ 48.2 
+ 44.1 
+ 48.5 
+ 9.1 
+ 28.0 
+ 13.0 
+ 22.5 
+ 33.0 
+ CVITVGG_HEADDETSEG 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 41.7 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ UCI_LSVM_MDPM_10X 
+ - 
+ 48.1 
+ - 
+ - 
+ - 
+ 54.7 
+ - 
+ - 
+ - 
+ 25.1 
+ 6.0 
+ - 
+ 46.6 
+ 41.1 
+ - 
+ - 
+ 31.2 
+ 17.7 
+ - 
+ 32.3 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Segmentation Results (VOC2010 data)
+ Competition "comp5" (train on VOC2010 data) 
+ Accuracy (%)
+ - Entries in parentheses are synthesized from detection results.
+ [mean] 
+ back ground 
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BONN_FGT_SEGM 
+ 36.5 
+ 82.5 
+ 54.6 
+ 22.5 
+ 25.1 
+ 27.6 
+ 40.0 
+ 60.2 
+ 48.3 
+ 39.4 
+ 7.3 
+ 30.8 
+ 21.3 
+ 25.3 
+ 34.9 
+ 54.1 
+ 36.6 
+ 22.5 
+ 45.0 
+ 17.6 
+ 33.5 
+ 37.0 
+ BONN_SVR_SEGM 
+ 39.7 
+ 84.2 
+ 52.5 
+ 27.4 
+ 32.3 
+ 34.5 
+ 47.4 
+ 60.6 
+ 54.8 
+ 42.6 
+ 9.0 
+ 32.9 
+ 25.2 
+ 27.1 
+ 32.4 
+ 47.1 
+ 38.3 
+ 36.8 
+ 50.3 
+ 21.9 
+ 35.2 
+ 40.9 
+ BROOKES_AHCRF 
+ 30.3 
+ 70.1 
+ 31.0 
+ 18.8 
+ 19.5 
+ 23.9 
+ 31.3 
+ 53.5 
+ 45.3 
+ 24.4 
+ 8.2 
+ 31.0 
+ 16.4 
+ 15.8 
+ 27.3 
+ 48.1 
+ 31.1 
+ 31.0 
+ 27.5 
+ 19.8 
+ 34.8 
+ 26.4 
+ CVC_HARMONY 
+ 35.4 
+ 80.8 
+ 56.7 
+ 20.6 
+ 31.0 
+ 33.9 
+ 20.8 
+ 57.6 
+ 51.4 
+ 35.8 
+ 7.1 
+ 28.1 
+ 22.6 
+ 24.3 
+ 29.3 
+ 49.4 
+ 37.8 
+ 23.3 
+ 37.6 
+ 18.1 
+ 45.6 
+ 30.7 
+ CVC_HARMONY_DET 
+ 40.1 
+ 81.1 
+ 58.3 
+ 23.1 
+ 39.0 
+ 37.8 
+ 36.4 
+ 63.2 
+ 62.4 
+ 31.9 
+ 9.1 
+ 36.8 
+ 24.6 
+ 29.4 
+ 37.5 
+ 60.6 
+ 44.9 
+ 30.1 
+ 36.8 
+ 19.4 
+ 44.1 
+ 35.9 
+ STANFORD_REGLABEL 
+ 29.1 
+ 80.0 
+ 38.8 
+ 21.5 
+ 13.6 
+ 9.2 
+ 31.1 
+ 51.8 
+ 44.4 
+ 25.7 
+ 6.7 
+ 26.0 
+ 12.5 
+ 12.8 
+ 31.0 
+ 41.9 
+ 44.4 
+ 5.7 
+ 37.5 
+ 10.0 
+ 33.2 
+ 32.3 
+ UC3M_GENDISC 
+ 27.8 
+ 73.4 
+ 45.9 
+ 12.3 
+ 14.5 
+ 22.3 
+ 9.3 
+ 46.8 
+ 38.3 
+ 41.7 
+ 0.0 
+ 35.9 
+ 20.7 
+ 34.1 
+ 34.8 
+ 33.5 
+ 24.6 
+ 4.7 
+ 25.6 
+ 13.0 
+ 26.8 
+ 26.1 
+ UOCTTI_LSVM_MDPM 
+ 31.8 
+ 80.0 
+ 36.7 
+ 23.9 
+ 20.9 
+ 18.8 
+ 41.0 
+ 62.7 
+ 49.0 
+ 21.5 
+ 8.3 
+ 21.1 
+ 7.0 
+ 16.4 
+ 28.2 
+ 42.5 
+ 40.5 
+ 19.6 
+ 33.6 
+ 13.3 
+ 34.1 
+ 48.5 
+ (CMU_RANDPARTS) 
+ 12.2 
+ 4.3 
+ 7.9 
+ 10.1 
+ 4.7 
+ 5.4 
+ 20.5 
+ 38.9 
+ 12.1 
+ 11.9 
+ 1.7 
+ 15.1 
+ 3.8 
+ 5.7 
+ 12.5 
+ 25.4 
+ 7.6 
+ 2.7 
+ 19.7 
+ 12.1 
+ 11.8 
+ 23.1 
+ (LJKINPG_HOG_LBP_LTP_PLS2ROOTS) 
+ 6.7 
+ 0.5 
+ 18.6 
+ 10.2 
+ 0.0 
+ 0.0 
+ 12.5 
+ 26.1 
+ 10.2 
+ 1.5 
+ 0.5 
+ 0.0 
+ 0.0 
+ 3.9 
+ 2.9 
+ 7.7 
+ 5.6 
+ 0.0 
+ 2.9 
+ 0.8 
+ 8.5 
+ 28.0 
+ (MITUCLA_HIERARCHY) 
+ 15.4 
+ 0.5 
+ 14.2 
+ 6.6 
+ 10.5 
+ 5.9 
+ 39.9 
+ 30.9 
+ 26.8 
+ 21.8 
+ 4.2 
+ 12.0 
+ 15.5 
+ 10.8 
+ 18.1 
+ 24.1 
+ 11.7 
+ 8.0 
+ 21.0 
+ 11.5 
+ 16.0 
+ 13.5 
+ (NLPR_HOGLBP_MC_LCEGCHLC) 
+ 14.4 
+ 2.2 
+ 9.6 
+ 7.3 
+ 11.5 
+ 5.8 
+ 10.8 
+ 39.8 
+ 24.4 
+ 18.5 
+ 5.3 
+ 12.4 
+ 10.5 
+ 15.0 
+ 15.5 
+ 20.2 
+ 21.8 
+ 3.2 
+ 22.0 
+ 7.7 
+ 20.0 
+ 17.9 
+ (NUS_HOGLBP_CTX_CLS_RESCORE_V2) 
+ 9.5 
+ 1.4 
+ 7.9 
+ 12.0 
+ 4.2 
+ 7.0 
+ 4.3 
+ 42.5 
+ 27.6 
+ 2.9 
+ 0.3 
+ 19.5 
+ 5.9 
+ 2.4 
+ 10.5 
+ 16.3 
+ 1.5 
+ 2.0 
+ 0.1 
+ 6.0 
+ 14.2 
+ 11.2 
+ (TIT_SIFT_GMM_MKL) 
+ 12.3 
+ 13.7 
+ 12.7 
+ 7.5 
+ 6.8 
+ 6.9 
+ 18.7 
+ 29.3 
+ 14.5 
+ 16.9 
+ 6.2 
+ 7.4 
+ 11.0 
+ 11.6 
+ 10.4 
+ 17.0 
+ 9.7 
+ 6.4 
+ 11.6 
+ 8.1 
+ 14.3 
+ 18.6 
+ (TIT_SIFT_GMM_MKL2) 
+ 14.9 
+ 21.7 
+ 16.6 
+ 10.5 
+ 9.3 
+ 13.8 
+ 17.9 
+ 42.2 
+ 14.9 
+ 17.6 
+ 6.3 
+ 9.9 
+ 2.5 
+ 11.1 
+ 12.5 
+ 20.7 
+ 8.5 
+ 6.2 
+ 21.8 
+ 7.6 
+ 19.9 
+ 20.5 
+ (UMNECUIUC_HOGLBP_DHOGBOW_SVM) 
+ 11.1 
+ 4.8 
+ 6.9 
+ 6.7 
+ 3.2 
+ 4.7 
+ 20.8 
+ 37.3 
+ 13.6 
+ 10.4 
+ 3.4 
+ 12.6 
+ 8.4 
+ 5.8 
+ 8.4 
+ 14.8 
+ 12.0 
+ 5.1 
+ 14.5 
+ 7.3 
+ 13.8 
+ 19.1 
+ (UMNECUIUC_HOGLBP_LINSVM) 
+ 9.7 
+ 2.8 
+ 4.3 
+ 9.5 
+ 1.3 
+ 0.5 
+ 21.9 
+ 33.1 
+ 17.0 
+ 6.8 
+ 3.2 
+ 1.7 
+ 4.6 
+ 5.1 
+ 8.6 
+ 14.5 
+ 8.1 
+ 1.0 
+ 15.6 
+ 5.6 
+ 14.0 
+ 25.3 
+ (UVA_DETMONKEY) 
+ 14.7 
+ 2.4 
+ 13.8 
+ 7.8 
+ 3.8 
+ 6.3 
+ 18.5 
+ 48.8 
+ 36.2 
+ 19.2 
+ 3.8 
+ 11.0 
+ 4.5 
+ 14.5 
+ 10.7 
+ 23.6 
+ 11.1 
+ 6.4 
+ 22.7 
+ 10.1 
+ 14.8 
+ 19.9 
+ (UVA_GROUPLOC) 
+ 13.8 
+ 3.1 
+ 15.9 
+ 7.3 
+ 6.6 
+ 5.5 
+ 14.4 
+ 43.9 
+ 24.0 
+ 19.0 
+ 3.1 
+ 11.8 
+ 6.2 
+ 11.4 
+ 11.3 
+ 25.0 
+ 13.2 
+ 3.3 
+ 17.9 
+ 9.0 
+ 15.7 
+ 21.8 
+ Segmentation Results (VOC2010 data)
+ Competition "comp6" (train on own data) 
+ Accuracy (%)
+ - Entries in parentheses are synthesized from detection results.
+ [mean] 
+ back ground 
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BERKELEY_POSELETS_ALIGN_PB 
+ 34.7 
+ 82.0 
+ 49.7 
+ 23.3 
+ 20.6 
+ 19.0 
+ 47.1 
+ 58.1 
+ 53.6 
+ 32.5 
+ 0.0 
+ 31.1 
+ 0.0 
+ 29.5 
+ 42.9 
+ 41.9 
+ 43.8 
+ 16.6 
+ 39.0 
+ 18.4 
+ 38.0 
+ 41.5 
+ Person Layout Results: VOC2010 data
+ Competition "comp7" (train on VOC2010 data) 
+ Average Precision (AP %)
+ Head 
+ Hand 
+ Foot 
+ Precision/Recall Curves
+ head 
+ hand 
+ foot 
+ Person Layout Results: VOC2010 data
+ Competition "comp8" (train on own data) 
+ Average Precision (AP %)
+ Head 
+ Hand 
+ Foot 
+ BCNPCL_HumanLayout 
+ 74.4 3.3 1.2 
+ OXFORD_SBD 
+ 52.7 10.4 0.0 
+ Precision/Recall Curves
+ head 
+ hand 
+ foot 
+ Action Classification Results: VOC2010 data
+ Competition "comp9" (train on VOC2010 data) 
+ Average Precision (AP %)
+ phoning 
+ playing instrument 
+ reading 
+ riding bike 
+ riding horse 
+ running 
+ taking photo 
+ using computer 
+ walking 
+ BONN_ACTION 
+ 47.5 51.1 31.9 64.5 69.1 78.5 32.4 53.9 61.1 
+ CVC_BASE 
+ 56.2 56.5 34.7 75.1 83.6 86.5 25.4 60.0 69.2 
+ CVC_SEL 
+ 49.8 52.8 34.3 74.2 85.5 85.1 24.9 64.1 72.5 
+ INRIA_SPM_HT 
+ 53.2 53.6 30.2 78.2 88.4 84.6 30.4 60.9 61.8 
+ NUDT_SVM_WHGO_SIFT_CENTRIST_LLM 
+ 47.2 47.9 24.5 74.2 81.0 79.5 24.9 58.6 71.5 
+ SURREY_MK_KDA 
+ 52.6 53.5 35.9 81.0 89.3 86.5 32.8 59.2 68.6 
+ UCLEAR_SVM_DOSP_MULTFEATS 
+ 47.0 57.8 26.9 78.8 89.7 87.3 32.5 60.0 70.1 
+ UMCO_DHOG_KSVM 
+ 53.5 43.0 32.0 67.9 68.8 83.0 34.1 45.9 60.4 
+ WILLOW_A_SVMSIFT_1-A_LSVM 
+ 49.2 37.7 22.2 73.2 77.1 81.7 24.3 53.7 56.9 
+ WILLOW_LSVM 
+ 40.4 29.9 32.2 53.5 62.2 73.6 17.6 45.8 41.5 
+ WILLOW_SVMSIFT 
+ 47.9 29.1 21.7 53.5 76.7 78.3 26.0 42.9 56.4 
+ Precision/Recall Curves
+ phoning 
+ playinginstrument 
+ reading 
+ ridingbike 
+ ridinghorse 
+ running 
+ takingphoto 
+ usingcomputer 
+ walking 
+ Action Classification Results: VOC2010 data
+ Competition "comp10" (train on own data) 
+ Average Precision (AP %)
+ phoning 
+ playing instrument 
+ reading 
+ riding bike 
+ riding horse 
+ running 
+ taking photo 
+ using computer 
+ walking 
+ BERKELEY_POSELETS_ACTION 
+ 45.9 45.8 23.7 79.9 87.6 83.1 26.2 44.9 66.6 
+ Precision/Recall Curves
+ phoning 
+ playinginstrument 
+ reading 
+ ridingbike 
+ ridinghorse 
+ running 
+ takingphoto 
+ usingcomputer 
+ walking 
+ Classification Results: VOC2009 data
+ Competition "comp1" (train on VOC2010 data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BONN_FGT_SEGM 
+ 84.4 61.2 56.7 61.0 38.5 73.6 68.6 69.4 44.6 55.9 39.9 58.5 70.1 73.0 86.9 35.3 53.2 42.3 78.9 61.6 
+ BUPT_LPBETA_MULTFEAT 
+ 79.1 41.5 45.5 45.5 22.3 52.7 44.2 44.1 41.3 26.4 34.2 33.4 47.4 42.7 77.0 16.6 37.5 30.0 65.5 43.8 
+ BUPT_SPM_SC_HOG 
+ 77.3 47.4 48.0 51.7 24.6 62.6 46.6 55.3 46.1 27.7 37.0 43.0 52.8 51.8 73.8 19.0 39.4 33.7 64.1 49.8 
+ BUPT_SVM_MULTFEAT 
+ 78.4 47.4 51.9 46.1 20.4 39.4 35.1 49.3 38.5 24.7 41.4 39.3 48.3 53.2 71.9 18.9 42.5 29.7 63.4 41.2 
+ BUT_FU_SVM_SIFT 
+ 85.2 63.0 67.0 66.2 37.6 73.0 65.1 68.4 57.0 48.8 55.5 56.7 67.7 71.4 84.3 33.4 50.0 51.1 82.6 65.8 
+ CVC_FLAT 
+ 85.5 57.4 65.8 66.2 34.5 71.9 61.2 64.3 51.8 48.5 50.1 48.2 64.6 66.7 83.2 34.4 49.5 48.6 82.8 65.6 
+ CVC_PLUS 
+ 87.3 61.1 68.7 69.2 39.5 74.3 64.2 69.1 55.8 52.1 55.3 52.4 67.8 70.1 83.8 39.2 51.3 50.3 84.0 67.5 
+ CVC_PLUSDET 
+ 88.6 68.7 68.6 68.3 50.2 76.1 74.0 68.6 60.3 53.2 56.2 54.6 72.1 73.9 87.2 42.9 54.1 53.6 84.7 70.5 
+ HIT_PROTOLEARN_2 
+ 60.0 23.1 29.1 26.5 17.0 31.9 28.7 27.1 31.5 15.0 16.8 23.1 27.0 21.5 60.8 9.5 17.3 18.9 32.6 24.6 
+ LIG_MSVM_FUSE_CONCEPT 
+ 71.9 44.0 42.9 50.2 28.1 59.5 44.1 45.4 48.3 23.8 35.2 38.5 46.6 47.8 75.1 20.2 29.7 33.5 66.0 47.9 
+ LIP6UPMC_KSVM_BASELINE 
+ 76.4 52.8 54.1 59.8 26.0 64.1 53.9 56.2 52.0 39.6 43.5 49.9 62.7 61.7 72.9 27.4 44.3 43.2 75.7 59.9 
+ LIP6UPMC_MKL_L1 
+ 75.7 55.6 57.6 60.5 29.5 64.3 55.6 57.6 51.7 42.3 46.5 47.4 62.6 62.3 74.5 32.3 46.2 42.4 74.3 61.6 
+ LIP6UPMC_RANKING 
+ 76.3 50.7 48.8 56.4 24.9 64.8 51.3 55.7 48.7 34.0 37.9 44.5 54.8 58.5 77.4 17.1 42.1 38.7 68.8 56.6 
+ LIRIS_MKL_TRAINVAL 
+ 83.2 56.9 64.1 65.6 33.2 70.6 58.0 64.4 56.9 37.8 50.1 48.6 64.3 66.1 83.3 36.5 46.4 47.1 80.5 65.5 
+ NEC_V1_HOGLBP_NONLIN_SVM 
+ 89.6 71.0 70.8 74.1 42.7 80.4 73.5 75.8 60.0 59.0 60.5 64.4 75.4 74.0 86.2 35.6 55.5 57.2 86.7 68.1 
+ NEC_V1_HOGLBP_NONLIN_SVMDET 
+ 89.6 71.7 70.8 74.3 48.9 80.5 75.7 76.0 61.2 59.5 61.1 64.5 76.3 75.7 86.2 39.9 57.6 57.2 86.7 71.1 
+ NII_SVMSIFT 
+ 66.8 42.9 32.8 43.8 20.6 52.4 26.6 41.9 44.2 21.3 30.2 34.1 40.7 41.0 71.5 17.3 18.4 24.6 57.8 45.6 
+ NLPR_VSTAR_CLS_DICTLEARN 
+ 86.6 74.2 67.7 71.9 54.4 81.1 76.3 71.7 62.4 65.8 55.8 60.9 76.1 77.7 88.3 43.5 59.8 57.7 85.4 72.0 
+ NTHU_LINSPARSE_2 
+ 75.8 43.9 42.1 47.4 19.8 59.2 46.8 47.5 46.1 34.1 35.3 39.4 50.3 49.9 70.9 16.1 34.1 34.0 62.7 47.9 
+ NUDT_SVM_LDP_SIFT_PMK_SPMK 
+ 83.0 59.3 62.9 66.7 31.7 70.2 58.8 65.6 54.0 44.7 47.1 50.4 63.7 65.2 81.6 31.1 45.4 47.1 79.3 5.0 
+ NUDT_SVM_WHGO_SIFT_CENTRIST_LLM 
+ 80.8 54.7 59.0 65.0 31.7 67.6 61.5 61.8 51.9 40.0 50.2 49.0 60.4 63.6 81.9 27.5 43.5 44.4 79.0 59.7 
+ NUSPSL_EXCLASSIFIER 
+ 86.8 74.8 71.1 72.4 53.2 77.8 73.8 73.1 62.0 61.0 62.0 59.7 77.5 78.3 89.5 45.6 60.7 53.5 86.9 74.2 
+ NUSPSL_KERNELREGFUSING 
+ 88.1 77.1 73.2 74.8 55.3 80.4 74.6 76.3 63.3 64.0 62.4 64.2 81.3 79.9 89.8 47.7 60.2 59.2 87.6 73.8 
+ NUSPSL_MFDETSVM 
+ 88.3 74.8 71.1 71.6 54.1 79.2 74.2 73.2 62.5 62.7 61.7 59.4 78.7 79.0 89.5 45.6 60.1 55.4 86.2 74.6 
+ RITSU_CBVR_WKF 
+ 82.0 57.0 58.6 62.6 33.2 66.2 53.3 60.4 54.3 40.3 47.5 48.4 61.5 65.6 80.6 30.9 47.3 45.4 77.7 59.5 
+ SURREY_MK_KDA 
+ 86.4 65.3 68.3 68.3 38.1 74.6 66.3 70.7 58.2 53.3 57.6 58.0 70.7 73.3 86.0 41.5 52.8 53.2 85.5 69.9 
+ TIT_SIFT_GMM_MKL 
+ 83.6 56.8 62.2 64.2 36.0 69.6 59.0 61.9 54.3 45.7 49.5 53.5 61.7 66.8 83.0 32.6 43.1 45.2 76.6 61.9 
+ UC3M_GENDISC 
+ 81.7 52.4 58.3 63.5 29.5 69.5 56.6 63.5 50.6 47.5 44.9 50.4 61.9 62.1 80.1 24.6 47.8 47.6 78.1 58.5 
+ UVA_BW_NEWCOLOURSIFT 
+ 88.1 69.4 68.5 67.5 45.3 75.0 71.7 69.4 58.8 58.5 58.9 57.6 72.1 75.1 87.3 49.7 59.2 56.6 83.2 75.2 
+ UVA_BW_NEWCOLOURSIFT_SRKDA 
+ 86.7 65.7 64.6 67.0 50.2 77.2 72.9 67.6 60.0 57.6 59.1 57.6 70.2 73.8 88.5 52.9 57.1 58.2 83.4 72.8 
+ WLU_SPM_EMDIST 
+ 73.2 49.2 42.6 44.7 26.5 61.9 48.9 49.1 46.7 31.7 39.1 42.5 51.9 53.4 73.0 16.9 34.7 37.4 64.3 48.8 
+ XRCE_IFV 
+ 83.2 59.4 62.2 67.1 34.1 70.7 58.4 61.1 52.4 45.8 52.5 53.5 66.3 66.9 83.5 32.7 46.2 53.2 80.4 66.3 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Classification Results: VOC2009 data
+ Competition "comp2" (train on own data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BIT_LINSVM_PHOW 
+ 64.7 31.6 22.9 33.2 13.9 28.2 27.7 34.3 38.4 20.0 30.0 28.9 38.3 24.9 51.0 7.4 15.5 25.7 42.5 29.1 
+ UCI_LSVM_MDPM_10X 
+ - 64.3 - - - 73.8 - - - 44.8 21.6 - 66.1 59.8 - - 47.3 29.3 - 58.0 
+ XRCE_IFV_1M 
+ 88.0 68.2 69.6 76.0 30.7 75.4 55.6 74.8 46.7 62.9 35.7 62.2 72.7 74.2 79.1 34.6 61.9 - 82.6 - 
+ XRCE_IFV_FUSE_OPT 
+ 88.0 68.6 69.6 76.8 40.4 76.8 62.7 74.6 54.8 62.5 54.4 63.2 72.3 75.1 84.6 38.4 61.8 54.5 84.2 66.3 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Detection Results: VOC2009 data
+ Competition "comp3" (train on VOC2010 data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BONN_FGT_SEGM 
+ 52.7 
+ 35.7 
+ 17.0 
+ 15.4 
+ 17.4 
+ 40.9 
+ 30.5 
+ 37.9 
+ 11.5 
+ 26.6 
+ 19.6 
+ 22.5 
+ 41.2 
+ 40.5 
+ 28.0 
+ 12.2 
+ 26.8 
+ 21.4 
+ 42.5 
+ 29.4 
+ BONN_SVR_SEGM 
+ 50.3 
+ 25.2 
+ 21.0 
+ 18.0 
+ 13.1 
+ 39.3 
+ 31.1 
+ 39.3 
+ 10.3 
+ 17.4 
+ 11.8 
+ 23.2 
+ 26.0 
+ 26.2 
+ 31.4 
+ 11.8 
+ 28.8 
+ 16.7 
+ 36.7 
+ 28.9 
+ CMIC_SYNTHTRAIN 
+ - 
+ 30.9 
+ - 
+ - 
+ - 
+ 28.8 
+ 17.2 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 30.0 
+ 30.1 
+ 18.6 
+ - 
+ - 
+ - 
+ 25.0 
+ 27.0 
+ CMIC_VARPARTS 
+ - 
+ 29.8 
+ - 
+ - 
+ - 
+ 28.2 
+ 16.7 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 27.7 
+ 28.1 
+ 20.7 
+ - 
+ - 
+ - 
+ 24.5 
+ 25.8 
+ CMU_RANDPARTS 
+ 27.4 
+ 33.0 
+ 2.4 
+ 11.0 
+ 15.1 
+ 30.1 
+ 21.4 
+ 16.0 
+ 0.9 
+ 14.8 
+ 9.3 
+ 4.3 
+ 23.7 
+ 32.6 
+ 21.1 
+ 2.6 
+ 18.2 
+ 14.2 
+ 19.3 
+ 22.7 
+ CMU_RANDPARTS_MAXSCORE 
+ - 
+ - 
+ 7.2 
+ - 
+ - 
+ - 
+ - 
+ 20.0 
+ - 
+ 16.6 
+ 15.0 
+ - 
+ - 
+ - 
+ 22.2 
+ - 
+ - 
+ - 
+ 22.5 
+ - 
+ LJKINPG_HOG_LBP_LTP_PLS2ROOTS 
+ 34.0 
+ 31.6 
+ 4.8 
+ 5.8 
+ 22.8 
+ 36.8 
+ 26.7 
+ 13.6 
+ 10.6 
+ 14.8 
+ 13.7 
+ 13.8 
+ 27.2 
+ 35.6 
+ 27.3 
+ 10.0 
+ 23.9 
+ 9.4 
+ 28.8 
+ 28.3 
+ MITUCLA_HIERARCHY 
+ 54.3 
+ 48.1 
+ 18.4 
+ 21.0 
+ 31.7 
+ 50.8 
+ 40.7 
+ 41.6 
+ 19.8 
+ 29.0 
+ 32.2 
+ 29.3 
+ 50.8 
+ 52.3 
+ 43.0 
+ 13.9 
+ 35.4 
+ 31.1 
+ 51.5 
+ 39.4 
+ NLPR_HOGLBP_MC_LCEGCHLC 
+ 52.2 
+ 54.5 
+ 21.9 
+ 23.6 
+ 32.3 
+ 48.8 
+ 44.4 
+ 41.1 
+ 23.6 
+ 33.1 
+ 25.7 
+ 29.6 
+ 50.7 
+ 52.3 
+ 47.0 
+ 15.8 
+ 33.4 
+ 30.6 
+ 53.2 
+ 39.2 
+ NUS_HOGLBP_CTX_CLS_RESCORE_V2 
+ 49.1 
+ 52.2 
+ 21.2 
+ 16.3 
+ 33.5 
+ 49.0 
+ 32.4 
+ 37.7 
+ 21.5 
+ 28.9 
+ 32.2 
+ 27.9 
+ 53.7 
+ 54.1 
+ 45.3 
+ 14.2 
+ 20.0 
+ 29.9 
+ 53.6 
+ 37.8 
+ TIT_SIFT_GMM_MKL 
+ 17.0 
+ 1.9 
+ 1.4 
+ 0.9 
+ 0.2 
+ 4.6 
+ 1.3 
+ 7.2 
+ 0.4 
+ 3.6 
+ 0.5 
+ 2.5 
+ 3.3 
+ 4.6 
+ 10.1 
+ 9.1 
+ 2.8 
+ 9.6 
+ 10.5 
+ 2.5 
+ TIT_SIFT_GMM_MKL2 
+ 24.4 
+ 18.0 
+ 6.3 
+ 2.9 
+ 4.5 
+ 19.7 
+ 11.5 
+ 28.4 
+ 0.3 
+ 6.0 
+ 5.6 
+ 18.0 
+ 10.3 
+ 18.1 
+ 10.7 
+ 9.1 
+ 9.1 
+ 10.1 
+ 9.1 
+ 4.5 
+ UC3M_GENDISC 
+ 24.2 
+ 10.3 
+ 11.6 
+ 9.1 
+ 9.1 
+ 17.2 
+ 11.1 
+ 26.1 
+ 9.1 
+ 11.5 
+ 11.7 
+ 17.6 
+ 18.0 
+ 19.4 
+ 12.6 
+ 9.1 
+ 9.4 
+ 12.1 
+ 16.7 
+ 10.1 
+ UCI_DPM_SP 
+ 46.2 
+ 52.4 
+ 16.8 
+ 17.8 
+ 31.6 
+ 49.0 
+ 42.3 
+ 27.7 
+ 20.9 
+ - 
+ 21.5 
+ 20.6 
+ 48.2 
+ 49.4 
+ 44.5 
+ 15.2 
+ 29.7 
+ 20.7 
+ 50.8 
+ - 
+ UMNECUIUC_HOGLBP_DHOGBOW_SVM 
+ 41.8 
+ 37.4 
+ 9.8 
+ 12.6 
+ 28.5 
+ 39.4 
+ 33.3 
+ 20.3 
+ 15.3 
+ 19.0 
+ 19.7 
+ 16.9 
+ 34.9 
+ 38.1 
+ 34.0 
+ 10.3 
+ 24.7 
+ 15.7 
+ 33.4 
+ 34.5 
+ UMNECUIUC_HOGLBP_LINSVM 
+ 39.2 
+ 35.9 
+ 9.8 
+ 9.4 
+ 27.6 
+ 34.6 
+ 32.1 
+ 17.9 
+ 14.9 
+ 17.5 
+ 18.2 
+ 16.0 
+ 33.6 
+ 35.8 
+ 35.8 
+ 10.9 
+ 22.6 
+ 14.9 
+ 33.5 
+ 34.2 
+ UOCTTI_LSVM_MDPM 
+ 49.9 
+ 52.7 
+ 16.6 
+ 18.5 
+ 37.1 
+ 50.0 
+ 47.3 
+ 31.8 
+ 19.3 
+ 28.9 
+ 18.8 
+ 20.9 
+ 48.2 
+ 49.9 
+ 47.9 
+ 13.6 
+ 32.4 
+ 20.9 
+ 49.4 
+ 37.3 
+ UVA_DETMONKEY 
+ 56.3 
+ 42.2 
+ 20.1 
+ 17.4 
+ 17.4 
+ 42.3 
+ 36.1 
+ 46.3 
+ 17.6 
+ 29.6 
+ 31.5 
+ 34.8 
+ 44.4 
+ 50.0 
+ 28.3 
+ 16.9 
+ 35.7 
+ 36.0 
+ 45.5 
+ 40.9 
+ UVA_GROUPLOC 
+ 57.6 
+ 40.0 
+ 22.1 
+ 17.9 
+ 15.0 
+ 43.7 
+ 36.5 
+ 45.4 
+ 15.7 
+ 27.5 
+ 25.3 
+ 33.3 
+ 42.6 
+ 46.3 
+ 26.1 
+ 17.1 
+ 35.6 
+ 32.7 
+ 46.8 
+ 40.5 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Competition "comp4" (train on own data) 
+ Average Precision (AP %)
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BERKELEY_POSELETS 
+ 33.0 
+ 51.2 
+ 12.0 
+ 12.3 
+ 37.5 
+ 37.3 
+ 46.9 
+ 26.7 
+ - 
+ 25.2 
+ - 
+ 21.1 
+ 50.9 
+ 44.6 
+ 48.6 
+ 14.6 
+ 25.9 
+ 17.2 
+ 27.3 
+ 32.5 
+ CVITVGG_HEADDETSEG 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 42.8 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ UCI_LSVM_MDPM_10X 
+ - 
+ 47.6 
+ - 
+ - 
+ - 
+ 49.8 
+ - 
+ - 
+ - 
+ 26.8 
+ 11.8 
+ - 
+ 49.2 
+ 40.4 
+ - 
+ - 
+ 30.0 
+ 21.6 
+ - 
+ 32.9 
+ Precision/Recall Curves
+ aeroplane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ diningtable 
+ dog 
+ horse 
+ motorbike 
+ person 
+ pottedplant 
+ sheep 
+ sofa 
+ train 
+ tvmonitor 
+ Segmentation Results (VOC2009 data)
+ Competition "comp5" (train on VOC2010 data) 
+ Accuracy (%)
+ - Entries in parentheses are synthesized from detection results.
+ [mean] 
+ back ground 
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BONN_FGT_SEGM 
+ 36.3 
+ 82.6 
+ 61.1 
+ 21.1 
+ 22.9 
+ 30.2 
+ 36.8 
+ 50.0 
+ 50.9 
+ 33.9 
+ 7.9 
+ 27.9 
+ 22.4 
+ 21.5 
+ 38.3 
+ 52.0 
+ 37.8 
+ 25.0 
+ 44.3 
+ 20.4 
+ 35.6 
+ 39.0 
+ BONN_SVR_SEGM 
+ 38.9 
+ 84.4 
+ 52.8 
+ 25.3 
+ 31.5 
+ 39.5 
+ 45.7 
+ 50.7 
+ 55.5 
+ 35.5 
+ 9.8 
+ 31.7 
+ 26.4 
+ 19.0 
+ 34.7 
+ 40.2 
+ 39.7 
+ 39.6 
+ 48.1 
+ 26.9 
+ 37.4 
+ 42.9 
+ BROOKES_AHCRF 
+ 31.0 
+ 70.2 
+ 30.7 
+ 19.0 
+ 19.5 
+ 30.2 
+ 36.9 
+ 50.0 
+ 43.9 
+ 21.9 
+ 7.5 
+ 31.7 
+ 16.5 
+ 17.3 
+ 30.6 
+ 45.6 
+ 32.1 
+ 32.9 
+ 29.2 
+ 21.4 
+ 35.5 
+ 29.5 
+ CVC_HARMONY 
+ 34.5 
+ 80.6 
+ 56.5 
+ 21.1 
+ 30.1 
+ 38.5 
+ 22.5 
+ 50.0 
+ 49.1 
+ 30.6 
+ 6.2 
+ 30.3 
+ 22.8 
+ 18.9 
+ 30.0 
+ 44.0 
+ 37.6 
+ 20.8 
+ 35.0 
+ 21.2 
+ 46.4 
+ 32.9 
+ CVC_HARMONY_DET 
+ 39.7 
+ 80.9 
+ 62.1 
+ 22.8 
+ 37.0 
+ 42.1 
+ 37.9 
+ 58.1 
+ 62.3 
+ 25.9 
+ 7.9 
+ 39.5 
+ 25.4 
+ 23.2 
+ 39.0 
+ 56.6 
+ 44.8 
+ 29.9 
+ 34.5 
+ 20.1 
+ 45.5 
+ 37.9 
+ STANFORD_REGLABEL 
+ 29.0 
+ 80.1 
+ 39.4 
+ 21.5 
+ 16.0 
+ 9.8 
+ 32.4 
+ 44.5 
+ 43.7 
+ 21.2 
+ 6.8 
+ 24.1 
+ 13.8 
+ 12.0 
+ 34.3 
+ 38.6 
+ 45.9 
+ 3.9 
+ 40.7 
+ 12.2 
+ 33.6 
+ 34.4 
+ UC3M_GENDISC 
+ 26.9 
+ 73.5 
+ 48.3 
+ 11.3 
+ 11.8 
+ 26.5 
+ 12.6 
+ 40.3 
+ 41.4 
+ 37.4 
+ 0.0 
+ 31.9 
+ 20.7 
+ 28.6 
+ 31.8 
+ 29.1 
+ 23.3 
+ 1.4 
+ 25.7 
+ 15.9 
+ 25.8 
+ 26.8 
+ UOCTTI_LSVM_MDPM 
+ 32.0 
+ 80.8 
+ 42.1 
+ 23.6 
+ 22.5 
+ 21.6 
+ 43.6 
+ 59.7 
+ 52.0 
+ 12.7 
+ 6.6 
+ 19.6 
+ 6.1 
+ 15.7 
+ 29.6 
+ 43.3 
+ 41.4 
+ 24.0 
+ 27.3 
+ 16.6 
+ 34.2 
+ 49.6 
+ (CMU_RANDPARTS) 
+ 12.4 
+ 4.1 
+ 7.6 
+ 10.2 
+ 5.2 
+ 5.7 
+ 19.0 
+ 33.4 
+ 10.5 
+ 8.9 
+ 1.4 
+ 17.3 
+ 4.1 
+ 5.2 
+ 13.5 
+ 27.7 
+ 7.8 
+ 3.4 
+ 22.3 
+ 14.5 
+ 13.2 
+ 25.4 
+ (LJKINPG_HOG_LBP_LTP_PLS2ROOTS) 
+ 6.8 
+ 0.6 
+ 20.7 
+ 10.8 
+ 0.0 
+ 0.0 
+ 14.8 
+ 23.8 
+ 10.0 
+ 1.1 
+ 0.5 
+ 0.0 
+ 0.0 
+ 2.7 
+ 3.3 
+ 7.1 
+ 5.5 
+ 0.0 
+ 3.3 
+ 1.0 
+ 8.3 
+ 29.9 
+ (MITUCLA_HIERARCHY) 
+ 14.9 
+ 0.6 
+ 12.5 
+ 6.6 
+ 10.6 
+ 7.0 
+ 43.1 
+ 25.6 
+ 24.0 
+ 18.0 
+ 3.2 
+ 11.7 
+ 15.8 
+ 9.7 
+ 20.3 
+ 20.7 
+ 11.6 
+ 8.1 
+ 19.2 
+ 11.9 
+ 16.1 
+ 16.2 
+ (NLPR_HOGLBP_MC_LCEGCHLC) 
+ 13.8 
+ 2.3 
+ 7.8 
+ 7.4 
+ 11.9 
+ 6.8 
+ 11.4 
+ 34.6 
+ 21.0 
+ 15.1 
+ 4.9 
+ 14.5 
+ 11.0 
+ 12.9 
+ 16.2 
+ 17.0 
+ 22.3 
+ 3.2 
+ 20.6 
+ 8.3 
+ 20.1 
+ 21.8 
+ (NUS_HOGLBP_CTX_CLS_RESCORE_V2) 
+ 9.6 
+ 1.4 
+ 7.5 
+ 12.9 
+ 5.1 
+ 8.1 
+ 4.4 
+ 37.4 
+ 28.6 
+ 2.2 
+ 0.4 
+ 18.0 
+ 3.8 
+ 0.6 
+ 10.8 
+ 19.9 
+ 1.6 
+ 1.9 
+ 0.2 
+ 7.5 
+ 16.5 
+ 12.9 
+ (TIT_SIFT_GMM_MKL) 
+ 11.4 
+ 13.3 
+ 10.6 
+ 6.8 
+ 6.5 
+ 8.4 
+ 18.1 
+ 25.4 
+ 12.7 
+ 13.1 
+ 5.2 
+ 7.1 
+ 11.9 
+ 8.3 
+ 12.2 
+ 10.5 
+ 9.1 
+ 6.0 
+ 11.4 
+ 9.6 
+ 14.8 
+ 19.3 
+ (TIT_SIFT_GMM_MKL2) 
+ 13.8 
+ 21.2 
+ 14.3 
+ 9.9 
+ 8.1 
+ 14.7 
+ 18.4 
+ 40.1 
+ 12.8 
+ 11.9 
+ 5.3 
+ 8.1 
+ 2.7 
+ 8.8 
+ 12.4 
+ 12.8 
+ 8.1 
+ 7.4 
+ 21.1 
+ 8.7 
+ 20.8 
+ 21.5 
+ (UMNECUIUC_HOGLBP_DHOGBOW_SVM) 
+ 10.8 
+ 4.9 
+ 5.9 
+ 6.5 
+ 3.5 
+ 5.8 
+ 20.5 
+ 34.0 
+ 12.8 
+ 7.0 
+ 2.8 
+ 12.6 
+ 9.2 
+ 3.6 
+ 9.8 
+ 15.5 
+ 11.6 
+ 5.6 
+ 13.0 
+ 7.4 
+ 14.5 
+ 21.6 
+ (UMNECUIUC_HOGLBP_LINSVM) 
+ 9.8 
+ 3.0 
+ 3.6 
+ 9.6 
+ 1.7 
+ 0.4 
+ 21.2 
+ 34.7 
+ 16.6 
+ 3.2 
+ 2.4 
+ 1.9 
+ 5.0 
+ 3.7 
+ 9.6 
+ 16.5 
+ 8.1 
+ 1.2 
+ 14.6 
+ 6.3 
+ 14.9 
+ 27.3 
+ (UVA_DETMONKEY) 
+ 14.0 
+ 2.4 
+ 11.3 
+ 7.4 
+ 3.9 
+ 7.4 
+ 19.8 
+ 44.3 
+ 33.8 
+ 13.9 
+ 3.4 
+ 11.5 
+ 5.3 
+ 10.8 
+ 11.2 
+ 21.1 
+ 10.7 
+ 6.7 
+ 21.6 
+ 11.2 
+ 15.3 
+ 21.7 
+ (UVA_GROUPLOC) 
+ 12.9 
+ 3.1 
+ 14.5 
+ 6.8 
+ 6.8 
+ 6.3 
+ 13.5 
+ 36.9 
+ 20.9 
+ 14.6 
+ 2.3 
+ 12.0 
+ 7.0 
+ 9.7 
+ 13.1 
+ 22.5 
+ 13.1 
+ 2.9 
+ 15.8 
+ 9.8 
+ 15.8 
+ 24.1 
+ Segmentation Results (VOC2009 data)
+ Competition "comp6" (train on own data) 
+ Accuracy (%)
+ - Entries in parentheses are synthesized from detection results.
+ [mean] 
+ back ground 
+ aero plane 
+ bicycle 
+ bird 
+ boat 
+ bottle 
+ bus 
+ car 
+ cat 
+ chair 
+ cow 
+ dining table 
+ dog 
+ horse 
+ motor bike 
+ person 
+ potted plant 
+ sheep 
+ sofa 
+ train 
+ tv/ monitor 
+ BERKELEY_POSELETS_ALIGN_PB 
+ 36.0 
+ 82.9 
+ 61.2 
+ 24.2 
+ 22.9 
+ 19.9 
+ 47.6 
+ 52.8 
+ 54.0 
+ 30.5 
+ 0.0 
+ 30.9 
+ 0.0 
+ 27.8 
+ 46.0 
+ 50.2 
+ 45.8 
+ 16.7 
+ 38.8 
+ 22.5 
+ 39.8 
+ 41.8 
+ Key to Abbreviations
+ Abbreviation Title Method Affiliation Contributors Descriptiorn 
+ BCNPCL_HumanLayout 
+ BCNPCL_Human_Layout Combining detectors for human layout analysis Dept. de Matem�tica Aplicada i An�lisi, Facultat de Matem�tiques, Computer Vision Center Barcelona and Universitat Oberta de Catalunya M. Drozdzal, A. Hern�ndez, S. Segu�, X. Bar�, S. Escalera, A. Lapedriza, D. Masip, P. Radeva, J. Vitri� Combination of several detectors for a complex human layout detector. For details see BCNPCL_PASCAL2010.pptx 
+ BERKELEY_POSELETS 
+ BERKELEY POSELETS Multiclass poselets UC Berkeley / Adobe Lubomir Bourdev, Subhransu Maji, Thomas Brox, Jitendra Malik Poselets based on Bourdev et al ECCV 2010, extended for multiple categories. 
+ BERKELEY_POSELETS_ACTION 
+ BERKELEY_POSELETS_ACTION Poselets trained on action categories University of California, Berkeley Subhransu Maji, Lubomir Bourdev, Jitendra Malik Discriminatively selected poselets for action classification + context from object detections and other actions in the image. 
+ BERKELEY_POSELETS_ALIGN_PB 
+ Berkeley-poselets-align-pb Segmentation on poselet detections UC Berkeley Thomas Brox, Lubomir Bourdev, Subhransu Maji, Jitendra Malik Non-rigid alignment of poselet activations to UCM edges, filling of area between object edges by variational smoothing, competition among objects, and competitive refinement of masks 
+ BIT_LINSVM_PHOW 
+ LinearSVM-PHOW LinearSVM-PHOW Beijing Institute of Technology Chunliang Lv, Lu Tian, Yuan Zhou, Xiumin Shi Linear SVM classifier using spatial pyramid matching kernel. 
+ BONN_ACTION 
+ Bonn_action action Univeristy of Bonn Jo�o Carreira, Adrian Ion, Fuxin Li, Cristian Sminchisescu Segmentation-based recognition method, where multiple figure-ground image partitions constrained by the bounding box are extracted using the Constrained Parametric Min Cuts algorithm (CPMC), and classified using a regression-based framework. 
+ BONN_FGT_SEGM 
+ Bonn_FGT_Segm FG Detection, FG Tiling Univeristy of Bonn Jo�o Carreira, Adrian Ion, Fuxin Li, Cristian Sminchisescu For each image, multiple full image segmentations (tilings) are generated using a maximum clique formulation on a graph that connects all non-overlapping figure-ground segments obtained using the Constrained Parametric Min Cuts Algorithm (CPMC, CVPR10, http://sminchisescu.ins.uni-bonn.de/papers/cs-cvpr10.pdf). A unary + pairwise scoring is then learned using relevance optimization, by alternating between estimating labels for tiles and learning their scoring parameters against the VOC criteria. 
+ BONN_SVR_SEGM 
+ Svr-Segm Svr-Segm University of Bonn Joao Carreira, Fuxin Li, Adrian Ion, Cristian Sminchisescu Support vector regression on mulltiple descriptors extracted from figure-ground segmentations obtained using the Constrained Parametric Min Cuts Algorithm (CPMC, CVPR10, http://sminchisescu.ins.uni-bonn.de/papers/cs-cvpr10.pdf). Descriptors include SIFT, color SIFT and HOG on foreground and background. Sequential segment aggregation strategy to handle multiple objects and rank multiple figure ground hypotheses (CVPR10, http://sminchisescu.ins.uni-bonn.de/papers/cls-cvpr10.pdf). The winning method of the 2009 segmentation challenge. 
+ BROOKES_AHCRF 
+ AHCRF Associative hierarchical CRF Oxford Brookes University Lubor Ladicky
+Christopher Russell
+Philip Torr Associative hierarchical CRF with detectors and cooccurence. One pixel layer with dense feature boost potential, 6 segmentation with potentials based on histograms of features, detector potential based on part-based model sliding window detector, generatively trained cooccurence potential 
+ BUPT_LPBETA_MULTFEAT 
+ LPbeta-Multi features LPbeta with multi features Beijing University of Posts and Telecommunications Cheng Lin, Qi Xianbiao, Li Chunguang, Guo Jun, Zhang Honggang, Chen Guang LPbeta with multi features including SIFT-gray, SIFT-color and SSIM.Trained on full train+val set with default parameters. 
+ BUPT_SPM_SC_HOG 
+ SPM-SC-HOG Linear SVM Classifier with dense HOG features Beijing University of Posts and Telecommunications Qi Xianbiao, Cheng Lin, Li Chunguang, Guo Jun, Zhang Honggang, Chen Guang Liblinear classifier with dense HOG features. Trained on full train+val set with default parameters. 
+ BUPT_SVM_MULTFEAT 
+ SVM-Multi features Svm classifier with multi features Beijing University of Posts and Telecommunications Cheng Lin, Qi Xianbiao, Li Chunguang, Guo Jun, Zhang Honggang, Chen Guang Libsvm classifier with multi features. Re-trained the final result with default cross-validation and tuned parameters. 
+ BUT_FU_SVM_SIFT 
+ FU-SVM-SIFT SVM kernel fusion with several SIFT Brno University of Technology Michal Hradi�, Ivo ?ezn�?ek, David Ba?ina, AdamVl?ek Features: grayscale SIFT and color SIFT
+Sampling: dense, Harris-Laplace
+Codebook: k-means 4k
+BOW trans.: codeword uncertainty - whole image, three horizontal stripes, 2x2 grid
+Kernel: exp() of weigted X2 distances (fusion of 30 distances)
+SVM: libsvm 
+ CMIC_SYNTHTRAIN 
+ CMIC_SynthTrain Synthetic Training of Deformable Part Models Cairo Microsoft Innovation Lab, Microsoft Research Osama Khalil, Yasmine Badr, Motaz El-Saban This submission applies synthetic training for Deformable Part Models. Using the segmentation mask of the objects, we synthesized new training examples, by relocating the objects to different background. The idea was applied on top of the deformable models approach [1]. 
+[1] P. Felzenszwalb, R. Girshick, D. McAllester, and D. Ramanan; Object detection with discriminatively trained part based models; PAMI 2009. 
+ CMIC_VARPARTS 
+ CMIC_VarParts Deformable part models with variable sized parts Cairo Microsoft Innovation Lab, Microsoft Research Osama Khalil, Yasmine Badr, Motaz El-Saban Our submission is based on the Deformable Part Models approach[1]. We allowed the model parts to have variable sizes accommodating for affine distortion that renders part sizes non-proportional. 
+[1] P. Felzenszwalb, R. Girshick, D. McAllester, and D. Ramanan; Object detection with discriminatively trained part based models; PAMI 2009. 
+ CMU_RANDPARTS 
+ RandomParts Unsupervised Parts-based Attributes Carnegie Mellon University Santosh Divvala (CMU)
+Larry Zitnick (MSR)
+Ashish Kapoor (MSR)
+Simon Baker (MSR) http://www.cs.cmu.edu/~santosh/finalReport.pdf
+(unpublished work) 
+ CMU_RANDPARTS_MAXSCORE 
+ RandomParts_maxScore Unsupervised Parts-based Attributes (max score) Carnegie Mellon University Santosh Divvala (CMU) Larry Zitnick (MSR) Ashish Kapoor (MSR) Simon Baker (MSR) Updated version of earlier submission (http://www.cs.cmu.edu/~santosh/finalReport.pdf). Main update: inclusion of max score feature and one round of iterative training 
+ CVC_BASE 
+ CVC-BASE SVM classifier with multiple features Computer Vision Center, Universitat Autonoma de Barcelona, Spain Nataliya Shapovalova, 
+Wenjuan Gong, 
+Fahad Shahbaz Khan, 
+Josep M. Gonfaus, 
+Marco Pedersoli, 
+Andrew D. Bagdanov, 
+Joost van de Weijer, 
+Jordi Gonz�lez Baseline CVC submission for action recognition. Standard BoW model over multiple features including PHOG, grayscale SIFT and (various) color SIFT descriptors. Foreground/background modeled separately, spatial pyramid over several features for foreground representation. Late fusion of feature-specific SVM outputs for final action score. 
+ CVC_FLAT 
+ CVC_Flat Bag-of-words with Non-linear SVM Computer Vision Center Barcelona Fahad Shahbaz Khan
+Joost van de Weijer
+Andrew D. Bagdanov
+Noha Elfiky
+David Rojas
+Pep Gonfaus
+Jordi Gonzalez
+Maria Vanrell We followed the standard bag-of-words pipeline with multiple detectors alongwith SIFT, ColorNames and HUE descriptors. To combine Color and SHape, we use our own Color Attention Algorithm. GIST descriptor is used to obtain the holistic representation of an image. 
+Finally, we use a standard Non linear SVM for learning. 
+ CVC_HARMONY 
+ CVC_Harmony Harmony Potentials Computer Vision Center - Universitat Aut�noma de Barcelona Josep Maria Gonfaus, Xavier Boix, Fahad Kahn, Joost van de Weijer, Andrew Bagdanov, Marco Pedersoli, Jordi Gonz�lez, Joan Serrat Our submission is based on [1]. We use the CVC_flat classification submission as the observations for the global node.
+New Absolute Position Prior is added to the Superpixels Probabilities
+[1] Josep M. Gonfaus, Xavier Boix, Joost Van de Weijer, Andrew D. Bagdanov, Joan Serrat, and Jordi Gonz�lez, " Harmony Potentials for Joint Classification and Segmentation ", in Computer Vision and Pattern Recognition (CVPR), San Francisco, CA, 2010. 
+ CVC_HARMONY_DET 
+ CVC_Harmony+Det CVC_Harmony plus Detection Priors Computer Vision Center - Universitat Aut�noma de Barcelona Josep Maria Gonfaus, Xavier Boix, Fahad Kahn, Joost van de Weijer, Andrew Bagdanov, Marco Pedersoli, Joan Serrat, Xavier Roca, Jordi Gonz�lez Our submission is based on [1] and the previous submission "CVC_Harmony". Here we add the detection scores of [2] as location prior in the image. [1] J.M. Gonfaus, X. Boix, J. Van de Weijer, A. D. Bagdanov, J. Serrat, and J. Gonz�lez, "Harmony Potentials for Joint Classification and Segmentation", in CVPR 2010. [2] Felzenszwalb, Girshick, McAllester, Ramanan, "Object Detection with Discriminatively Trained Part Based Models", PAMI 2010 
+ CVC_PLUS 
+ CVC_Plus Bag-of-words with Non-linear SVM Computer Vision Center Barcelona Fahad Shahbaz Khan
+Joost van de Weijer
+Andrew D. Bagdanov
+Noha Elfiky
+David Rojas
+Pep Gonfaus
+Jordi Gonzalez
+Maria Vanrell All of CVC_Flat with additional color features combined through averaging the kernel combinations. 
+ CVC_PLUSDET 
+ CVC_Plus_Det CVC_Plus submission combined with Detection result Computer Vision Center Barcelona Fahad Shahbaz Khan
+Joost van de Weijer
+Andrew D. Bagdanov
+Noha Elfiky
+David Rojas
+Pep Gonfaus
+Jordi Gonzalez
+Maria Vanrell Same as our CVC_Plus Submission combined with object localization scores. 
+ CVC_SEL 
+ CVC-SEL SVM classifier with per-class feature selection Computer Vision Center, Universitat Autonoma de Barcelona, Spain Nataliya Shapovalova, 
+Wenjuan Gong,
+Fahad Shahbaz Khan, 
+Josep M. Gonfaus, 
+Marco Pedersoli, 
+Andrew D. Bagdanov,
+Joost van de Weijer, 
+Jordi Gonz�lez Enhanced CVC submission built upon CVC-BASE for action recognition. Standard BoW model over multiple features from CVC-BASE plus contextual object descriptors. Cross-validation procedure for action-specific feature and kernel selection. Foreground/background/neighborhood modeled separately, spatial pyramid over several features for foreground representation. Object detection based on deformable part-based detector incorporated. Late fusion of feature-specific SVM outputs for final action score. 
+ CVITVGG_HEADDETSEG 
+ Head-Detect-Segment Cat-Cut CVIT-IIIT,Hyderabad, VGG University of Oxford Omkar M Parkhi, Andrea Vedaldi, C.V.Jawahar, Andrew Zisserman Detector is trained to detect cat heads. The detections returned are used to initialize seeds for
+GrabCut which segments the cat. Bounding box is then inferred from these segmentations. 
+ HIT_PROTOLEARN_2 
+ ProtoLearn Learning the prototype of image categories Harbin Institute of Technology Deyuan Zhang
+Bingquan Liu
+Chengjie Sun
+XIaolong Wang Dense SIFT features, learning the prototype of images using large margin framework. Trains the classifier using 200 positive and 300 negative images selected randomly. The parameters is fixed. 
+ INRIA_SPM_HT 
+ SPM+HT Spatial Pyramids and Hough Transform INRIA Norberto Adri�n Goussies, Arnau Ramisa, Cordelia Schmid Spatial Pyramids on the bounding box, on the image and a hough transform for taking into account the object-person interactions for bicycle, horse and tvmonitor. Trained on trainval with 5-fold cross-validation. 
+ LIG_MSVM_FUSE_CONCEPT 
+ LIG_msvm_fuse_concept Fusion of MSVMs with several features, concept opt Laboratoire d'Informatique de Grenoble Bahjat Safadi
+Georges Qu�not Late fusion of multiple SVMs with multiple features. features include dense and Harris-Laplace filtered opponent SIFT, color histograms and Gabor transforms. Fusion is optimized by concept. 
+ LIP6UPMC_KSVM_BASELINE 
+ LIP6_KSVM_Baseline Baseline with BOF, SPM and gaussian SVM LIP6 UPMC David Picard, Nicolas Thome, Matthieu Cord Baseline with Bag Of Feature scheme, Spatial Pyramid and gaussian SVM 
+ LIP6UPMC_MKL_L1 
+ LIP6_MKL_L1 l1-MKL with sift, texture and color features LIP6 UPMC David Picard, Nicolas Thome, Matthieu Cord l1-MKL with sift, texture (gabor) and color features. 
+ LIP6UPMC_RANKING 
+ LIP6_ranking BOF scheme with ranking classifier LIP6 UPMC David Picard, Nicolas Thome, Matthieu Cord Same as baseline, but with ranking classifier 
+ LIRIS_MKL_TRAINVAL 
+ LIRIS_Multi-Feature_MKL_trainval MKL classifier with multiple features LIRIS, Ecole Centrale Lyon, CNRS, UMR5205, France Chao ZHU, Huanzhang FU, Charles-Edmond BICHOT, Emmanuel Dellandrea, Liming CHEN Multiple Kernel Learning (MKL) classifier with multiple features: colorSIFT (dense+harris-laplace), colorLBP (see our paper in ICPR2010), PHOG, Self-Similarity, and Color Histogram. A vocabulary of 4000 codewords is created for SIFT. Spatial pyramid information is used. Trained on 'train + val' set. 
+ LJKINPG_HOG_LBP_LTP_PLS2ROOTS 
+ HOG+LBP+LTP+PLS2ROOTS HOG+LBP+LTP+PLS2ROOTS LJK,INPG Sibt ul Hussain, Bill Triggs This method consists of two roots based object detector. This detector is also trained using HOG+LBP+LTP as feature sets while PLS based linear SVM is used as learning algorithm. 
+ MITUCLA_HIERARCHY 
+ MITUCLA_Hierarchy Latent hierarchical structural learning MIT and UCLA Long Zhu, Yuanhao Chen, William Freeman, Alan Yuille, Antonio Torralba Latent hierarchical structural learning with dense HOG and HOW(SIFT) features. 
+ NEC_V1_HOGLBP_NONLIN_SVM 
+ hog, lbp, nonlinear coding, svm v1_classdependent_nodection NEC Labs, America NEC: Yuanqing Lin, Fengjun Lv, Shenghuo Zhu, Ming Yang, Timothee Cour, Kai Yu
+UIUC: LiangLiang Cao, Thomas Huang
+Rutgers Univ.: Tong Zhang
+Univ. Missouri: Xiaoyu Wang, Tony Xu Han Dense DHOG and LBP features are coded by both local linear and nonlinear methods. The resulting high-dimension features were then fed to linear SVMs. Class dependent cross-validation. 
+ NEC_V1_HOGLBP_NONLIN_SVMDET 
+ hog, lbp, nonlinear coding, svm, detection v1_classdependent_withdetection NEC Labs, America NEC: Yuanqing Lin, Fengjun Lv, Shenghuo Zhu, Ming Yang, Timothee Cour, Kai Yu
+UIUC: LiangLiang Cao, Thomas Huang
+Rutgers Univ.: Tong Zhang
+Univ. Missouri: Xiaoyu Wang, Tony Xu Han Dense DHOG and LBP features are coded by both local linear and nonlinear methods. The resulting high-dimension features were then fed to linear SVMs. Detection results were taken into account. Class dependent cross-validation. 
+ NII_SVMSIFT 
+ SVM-SIFT SVM classifier with color sift features NII Japan Xiao Zhou, Cai-Zhi Zhu libsvm classifier with color sift features. Trained using 5-fold cross-validation. Re-trained on val set with fixed parameters. 
+ NLPR_HOGLBP_MC_LCEGCHLC 
+ Boosted HOG-LBP and multi-context (LC, EGC, HLC) NLPR_VSTAR_DET_4 National Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences Yinan Yu, Junge Zhang, Yongzhen Huang, Shuai Zheng, Weiqiang Ren, Chong Wang, Kaiqi Huang, Tieniu Tan Deformable model with Boosted HOG-LBP and multi-context information, use location context, enhanced global context, HOG and LBP inter-class context. 
+ NLPR_VSTAR_CLS_DICTLEARN 
+ NLPR_VSTAR_CLS_DICTLEARN Saliency coding and dictionary learning National Laboratory of Pattern Recognition , Institute of Automation, Chinese Academy of Sciences Yongzhen Huang, Shuai Zheng, Weiqiang Ren, Chong Wang, Yinan Yu, Junge Zhang, Kaiqi Huang, Tieniu Tan Lib-SVM classifier with dense SIFT features, saliency coding, dictionary leanring and detection information. 
+ NTHU_LINSPARSE_2 
+ LINEAR-SPARSE Linear SVM with spatial max pooling features. NTHU Tao Yen Tang, Jyun Yi Lin, Cheng Hao Kung, Meng Hua Wu, Chun Han Chien, Jia Yu Kuo, Hwann Tzong Chen LIBLINEAR with spatial max pooling of sparse features.
+Sparse featues are determined by ScSPM and color descriptor.
+Sparse coding dictionary is learned by SPAMS. 
+ NUDT_SVM_LDP_SIFT_PMK_SPMK 
+ SVM_LDP_SIFT_PMK_SPMK SVM classifier on PMK and SPMK approaches with lin National University of Defense Technology Hongping Cai, Krystian Mikolajczk, Dewen Hu Local features are extracted on regular grids at multiple scales, then described by SIFT and 'SIFT+hue histogram'. To reduce the memory and computational cost, the linear discriminant projection (LDP) are applied, leading to significant feature dimensionality reduction and performance boosting. With the 30-dim LDP-projected features, the submitted results are obtained by fusing pyramid match kernel (PMK) and spatial pyramid match kernel (SPMK), with an SVM classifier for the final stage. 
+ NUDT_SVM_WHGO_SIFT_CENTRIST_LLM 
+ SVM_WHGO_SIFT_CENTRIST_low-level modeling SVM classifier on low-level modeling based approac Department of Automatic Control, College of Mechatronics and Automation, National University of Defense Technology Li Zhou, Zongtan Zhou, Dewen Hu This method is based on a low-level modeling strategy. The approach works by creating multiple resolution images and partitioning them into sub-regions at different scales. We represent each sub-region with WHGO, CENTRIST and SIFT descriptors and combine the features of different descriptor and resolution channels through an SVM classifier to form the final decision function. 
+ NUSPSL_EXCLASSIFIER 
+ Exclusive-Classifier classifier based on exclusive dense graph National University of Singapore; Panasonic Singapore Laboratories; NUS: Xiangyu Chen, Qiang Chen, Xiaotong Yuan, Zheng Song, Si Liu, Tat-Seng Chua, Shuicheng Yan; PSL: Yang Hua, Zhongyang Huang, Shengmei Shen Exclusive calssifier with both visual features and exclusive contextual information. Trained on full train+val set using both visual and context information. 
+ NUSPSL_KERNELREGFUSING 
+ KernelRegFusing kernel regression for all methods National University of Singapore; Panasonic Singapore Laboratories; NUS: Qiang Chen, Zheng Song, Si Liu, Xiangyu Chen, Tat-Seng Chua, Shuicheng Yan; PSL: Yang Hua, Zhongyang Huang, Shengmei Shen kernel regression as a combination method to fuse all other submissions. 
+ NUSPSL_MFDETSVM 
+ MFDETSVM SVM with multifeature and detection kernel National University of Singapore; Panasonic Singapore Laboratories; NUS: Qiang Chen, Zheng Song, Si Liu, Shuicheng Yan; PSL: Yang Hua, Zhongyang Huang, Shengmei Shen SVM classifier with multiple feature and detection kernel. 
+ NUS_HOGLBP_CTX_CLS_RESCORE_V2 
+ HOGLBP_context_classification_rescore_v2 results refined by context and classification National University of Singapore Zheng Song, Qiang Chen, Shuicheng Yan Use HOG+LBP trained part-based detector. The detection results are further reranked via the context information of other detect windows and image classificaton scores. 
+ OXFORD_SBD 
+ Oxford_SBD Skin based layout detection University of Oxford Arpit Mittal, Andrew Zisserman, Philip H. S. Torr, Manuel J. Marin Head localization is performed using a part-based upper body detector. A local color model of skin pixels is learned using face pixels obtained from the head bounding box. Using this color model, we perform skin detection on the image. Hand positions are then hypothesized from the skin regions so obtained. These hypotheses are verified using the RBF kernel SVM classifier and our own articulated model of the human upper body.
+It is to be noted that we do not localize feet in the image. 
+ RITSU_CBVR_WKF 
+ Ritsu_CBVR_WKF SVM Classifier with dense and Harris BOF Ritsumeikan University Xian-Hua Han, Yen-Wei Chen, Xiang Ruan We extracted Gray and color (Opponent and C_sift) BOF feature with dense and Harris sampling, and use SVM with normalized kernel fusion for classification 
+ STANFORD_REGLABEL 
+ REGION-LABEL Optimizing regions and their labels Stanford University M. Pawan Kumar, Stephen Gould, Haithem Turki, Dan Preston, Daphne Koller The method groups pixels into regions and assigns the regions a unique semantic label simultaneously by minimizing a global energy function. Features used include those obtained from an object detector (deformable parts-based model) as well as a bag of SIFT words computed over the region. Inference as described in CVPR 2010, learning as described in ICCV 2009. 
+ SURREY_MK_KDA 
+ Multikernel+KDA Mulitkernel fusion with KDA The University of Surrey Piotr Koniusz, Muhammad Atif Tahir, Mark Barnard, Fei Yan, Krystian Mikolajczyk Kernel-level fusion with Spatial Pyramid Grids, Soft Assignment and Kernel Discriminant Analysis using spectral regression. 18 kernels have been generated from 18 variants of SIFT. 
+ TIT_SIFT_GMM_MKL 
+ SIFT-GMM-MKL Multiple kernel learning with SIFT GMMs Tokyo Institute of Technology Nakamasa Inoue, Yusuke Kamishima, Koichi Shinoda We use multiple kernel learning and GMM supervector kernels with SIFT features. 
+ TIT_SIFT_GMM_MKL2 
+ SIFT-GMM-MKL2 Multiple kernel learning with SIFT GMMs Tokyo Institute of Technology Nakamasa Inoue, Yusuke Kamishima, Koichi Shinoda Same as the SIFT-GMM-MKL run but the GrabCut is applied for detection. 
+ UC3M_GENDISC 
+ UC3M_Generative_Discriminative Combination of Generative Discriminative Methods Universidad Carlos III de Madrid Iv�n Gonz�lez-D�az, Fernando D�az de Mar�a Combination of Supervised Topic Models with SVM-based discriminative methods for concurrent image recognition and segmentation 
+ UCI_DPM_SP 
+ DPM-SP parts based model and spatial pyramid features University of California, Irvine Ragib Morshed, Yi Yang, Charless Fowlkes Parts model results rescored by combining with spatial pyramid based scene (global) classification results. Scene trained using svm with hist intersect kernel, rescoring trained using SVM on train+val+some_from_segmentations with parameters obtained via search. 
+ UCI_LSVM_MDPM_10X 
+ UCI_LSVM-MDPM-10X 10x train set for LSVM, mixtures, deformable parts University of California, Irvine Xiangxin Zhu, Carl Vondrick, Deva Ramanan, Charless Fowlkes We downloaded additional images from Flickr that match the distribution of the testing set. We used Amazon's Mechanical Turk to annotate these training sets that are 10 times larger the standard trainval set. We used our larger training set to train models with the detector from Felzenswalb et. all. 
+ UCLEAR_SVM_DOSP_MULTFEATS 
+ SVM-DOSP-MULTFEATS SVM & dense saptial pyramid w/ multiple features University of Caen GREYC and INRIA LEAR Gaurav Sharma, Frederic Jurie, Cordelia Schmid Multiple chi squared kernels are computed: spatial pyramid (SP) w/ dense SIFT, dense overlapping SP w/ HOG, texture filter, LAB values (bag-of-words w/ the above features) and edge dir hists. They are computed on full images, person bounding boxes (BB) and BB of the lower part (simple stretch-scale of person BB) expected to contain horse, bike etc. They are combined with class specific binary weights based on their perf on val set. Finally, class specific SVMs trained on train+val. 
+ UMCO_DHOG_KSVM 
+ dhog-ksvm kernel svm classifier with dhog feature University of Missouri - Columbia Xutao Lv, Xiaoyu Wang, Xi Zhou, Tony X. Han train SVM model with different kernels on dhog feature. 
+ UMNECUIUC_HOGLBP_DHOGBOW_SVM 
+ HOG-LBP + DHOG bag of words, SVM Linear svm classifier with bag of words method The University of Missouri, NEC Labs America, The University of Illinois at Urbana-Champaign Xiaoyu Wang,
+Xi Zhou,
+Tony X. Han,
+Shuai Tang,
+Guang Chen,
+Kai Yu,
+Thomas S. Huang Liblinear SVM with HOG-LBP feature and DHOG bag of words approach 
+ UMNECUIUC_HOGLBP_LINSVM 
+ HOG-LBP Linear SVM svm classifier with HOG LBP features The University of Missouri, NEC Labs America, The University of Illinois at Urbana-Champaign Xiaoyu Wang,
+Xi Zhou,
+Tony X. Han,
+Shuai Tang,
+Guang Chen,
+Kai Yu,
+Thomas S. Huang Liblinear SVM with HOG-LBP features. All classes use the same default training parameters. 
+ UOCTTI_LSVM_MDPM 
+ LSVM-MDPM LSVM Mixtures of deformable part models University of Chicago and TTI-C Pedro Felzenszwalb (UChicago), Ross Girshick (UChicago), David McAllester (TTI-C) Deformable part models with HOG features. Based on [1,2]. Each model has 6 components with 8 parts. We associate a binary mask with each component to generate segmentations. The object detection models were trained from bounding boxes using LSVM. The segmentation masks were trained from segmentations. [1] P. Felzenszwalb, R. Girshick, D. McAllester, D. Ramanan. Object Detection with Discriminatively Trained Part Based Models. PAMI 32(9), Sept 2010. [2] http://people.cs.uchicago.edu/~pff/latent-release4/ 
+ UVA_BW_NEWCOLOURSIFT 
+ BW+New Colour SIFT Best Window + New Colour SIFT UvA Jasper Uijlings
+Koen van de Sande
+Theo Gevers
+Arnold Smeulders Best Window approach with new Colour SIFT trained with Multiple Kernel Learning SVM. 
+ UVA_BW_NEWCOLOURSIFT_SRKDA 
+ BW+New Colour SIFT-SRKDA BW+New Colour SIFT-SRKDA University of Amsterdam Jasper Uijlings
+Koen van de Sande
+Theo Gevers
+Arnold Smeulders
+Remko Scha Best Window Approach plus new color sift. Classification by SRKDA 
+ UVA_DETMONKEY 
+ Detection Monkey Detection Monkey University of Amsterdam Koen van de Sande
+Jasper Uijlings
+Theo Gevers
+Arnold Smeulders The detection monkey is trained with SVM, dense Color SIFT, spatial pyramid and multiple iterations. 
+ UVA_GROUPLOC 
+ GroupLoc Localisation with grouping window selection University of Amsterdam Jasper Uijlings
+Koen van de Sande
+Theo Gevers
+Arnold Smeulders
+Remko Scha Candidate windows are selected using hierarchical grouping. Classification is with SIFT, SVM-Histogram Intersection, Spatial Pyramid 
+ WILLOW_A_SVMSIFT_1-A_LSVM 
+ a * SVM-SIFT + (1-a) * LSVM Combination of SVM and DPM with learned weights. France, INRIA - Willow Project Vincent Delaitre, Ivan Laptev, Josef Sivic Combination of a SVM classifier(with dense SIFT features, trained using 5-fold cross-validation and re-trained on full train+val set with fixed parameters) and of the Felzenszwalb's deformable part-based model (trained on full train+val set with default parameters).The classification score is obtained by a linear combination of the scores of the two classifiers:the two classifiers are also trained on the train set and the weights of this combination are determined by optimizing over the val set. 
+ WILLOW_LSVM 
+ LSVM Felzenszwalb's part-based model. France, INRIA - Willow Project Vincent Delaitre, Ivan Laptev, Josef Sivic Felzenszwalb's part-based model trained on full train+val set with default parameters. 
+ WILLOW_SVMSIFT 
+ SVM-SIFT SVM classifier with dense SIFT features. France, INRIA - Willow Project Vincent Delaitre, Ivan Laptev, Josef Sivic SVM-Light classifier with dense SIFT features. Trained using 5-fold cross-validation. Re-trained on full train+val set with fixed parameters 
+ WLU_SPM_EMDIST 
+ WLU-SPM-EMDIST SPM/lin.SVM, codebook using Earth Mover dist. Washington and Lee University Chen Zhong, William Richardson, Joshua Stough Spatial Pyramid Match after Lazebnik. Linear SVM on LLC-coded dense SIFT features after Yang/Wang/Yu. Annotation-based codebook training. SPM levels trained separately and combined. Codebook generated using Earth Mover's distance. 
+ XRCE_IFV 
+ Improved Fisher Vector Linear SVM on Improved Fisher vector XRCE Florent Perronnin
+Jorge Sanchez
+Thomas Mensink Based on [PSM10]: F. Perronnin, J. Sanchez and T. Mensink, "Improving the Fisher kernel for Large-Scale Image Classification", ECCV, 2010. 
+ XRCE_IFV_1M 
+ Improved Fisher Vector Linear SVM on Improved Fisher vector XRCE Florent Perronnin
+Jorge Sanchez
+Thomas Mensink Based on [PSM10]: F. Perronnin, J. Sanchez and T. Mensink, "Improving the Fisher kernel for Large-Scale Image Classification", ECCV, 2010. 
+Trained on close to 1M mono-tagged Flickr group images (non-overlapping with test set). 
+ XRCE_IFV_FUSE_OPT 
+ Improved Fisher Vector Linear SVM on Improved Fisher vector XRCE Florent Perronnin, Jorge Sanchez, Thomas Mensink Based on [PSM10]: F. Perronnin, J. Sanchez and T. Mensink, "Improving the Fisher kernel for Large-Scale Image Classification", ECCV, 2010. Late fusion of two systems trained respectively on i)voc10 trainval and ii) close to 1M mono-tagged Flickr group images. Optimal weights are learned per-class through cross-validation. 

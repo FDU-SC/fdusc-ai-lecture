@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/sbyifg9iFkv6AbT+2tHbGF3JCEI</id>
+  <title>arXiv Query: search_query=abs:"SU(3)" AND abs:"normalizing flow"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T15:03:03Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22SU(3)%22+AND+abs:%22normalizing+flow%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.12416v1</id>
+    <title>Machine learning for four-dimensional SU(3) lattice gauge theories</title>
+    <updated>2026-04-14T08:02:16Z</updated>
+    <link href="https://arxiv.org/abs/2604.12416v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.12416v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this review I summarize how machine learning can be used in lattice gauge theory simulations and what ap\-proaches are currently available to improve the sampling of gauge field configurations, with a focus on applications in four-dimensional SU(3) gauge theories. These include approaches based on generative machine-learning models such as (stochastic) normalizing flows and diffusion processes, and an approach based on renormalization group (RG) transformations, more specifically the machine learning of RG-improved gauge actions using gauge-equivariant convolutional neural networks. In particular, I present scaling results for a machine-learned fixed-point action in four-dimensional SU(3) gauge theory towards the continuum limit. The results include observables based on the classically perfect gradient-flow scales, which are free of tree-level lattice artefacts to all orders, and quantities related to the static potential and the deconfinement transition.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-14T08:02:16Z</published>
+    <arxiv:comment>18 pages, 9 figure; Plenary talk at the 42nd International Symposium on Lattice Field Theory (LATTICE2025), Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Urs Wenger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.02984v2</id>
+    <title>Variance reduction in lattice QCD observables via normalizing flows</title>
+    <updated>2026-08-09T20:20:41Z</updated>
+    <link href="https://arxiv.org/abs/2603.02984v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.02984v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows can be used to construct unbiased, reduced-variance estimators for lattice field theory observables that are defined by a derivative with respect to action parameters. This work implements the approach for observables involving gluonic operator insertions in the SU(3) Yang-Mills theory and two-flavor Quantum Chromodynamics (QCD) in four space-time dimensions. Variance reduction by factors of $10$-$60$ is achieved in glueball correlation functions and in gluonic matrix elements related to hadron structure, with demonstrated computational advantages. The observed variance reduction is found to be approximately independent of the lattice volume, so that volume transfer can be utilized to minimize training costs.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-03T13:36:29Z</published>
+    <arxiv:comment>15 pages, 4 figures, 2 tables. v2: update to match published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Yang Fu</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/5xns-7qmj</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/5xns-7qmj" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.20708v1</id>
+    <title>A scalable flow-based approach to mitigate topological freezing</title>
+    <updated>2026-01-28T15:40:46Z</updated>
+    <link href="https://arxiv.org/abs/2601.20708v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.20708v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As lattice gauge theories with non-trivial topological features are driven towards the continuum limit, standard Markov Chain Monte Carlo simulations suffer for topological freezing, i.e., a dramatic growth of autocorrelations in topological observables. A widely used strategy is the adoption of Open Boundary Conditions (OBC), which restores ergodic sampling of topology but at the price of breaking translation invariance and introducing unphysical boundary artifacts. In this contribution we summarize a scalable, exact flow-based strategy to remove them by transporting configurations from a prior with a OBC defect to a fully periodic ensemble, and apply it to 4d SU(3) Yang--Mills theory. The method is based on a Stochastic Normalizing Flow (SNF) that alternates non-equilibrium Monte Carlo updates with localized, gauge-equivariant defect coupling layers implemented via masked parametric stout smearing. Training is performed by minimizing the average dissipated work, equivalent to a Kullback--Leibler divergence between forward and reverse non-equilibrium path measures, to achieve more reversible trajectories and improved efficiency. We discuss the scaling with the number of degrees of freedom affected by the defect and show that defect SNFs achieve better performances than purely stochastic non-equilibrium methods at comparable cost. Finally, we validate the approach by reproducing reference results for the topological susceptibility.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-28T15:40:46Z</published>
+    <arxiv:comment>1+9 pages, 3 figures, contribution to the 42nd International Symposium on Lattice Field Theory (Lattice 2025), 2-8 November 2025, Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Dario Panfalone</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+    <author>
+      <name>Lorenzo Verzichelli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.25704v2</id>
+    <title>Scaling flow-based approaches for topology sampling in $\mathrm{SU}(3)$ gauge theory</title>
+    <updated>2026-04-10T12:30:09Z</updated>
+    <link href="https://arxiv.org/abs/2510.25704v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.25704v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a methodology based on out-of-equilibrium simulations to mitigate topological freezing when approaching the continuum limit of lattice gauge theories. We reduce the autocorrelation of the topological charge employing open boundary conditions, while removing exactly their unphysical effects using a non-equilibrium Monte Carlo approach in which periodic boundary conditions are gradually switched on. We perform a detailed analysis of the computational costs of this strategy in the case of the four-dimensional $\mathrm{SU}(3)$ Yang-Mills theory. After achieving full control of the scaling, we outline a clear strategy to sample topology efficiently in the continuum limit, which we check at lattice spacings as small as $0.045$ fm. We also generalize this approach by designing a customized Stochastic Normalizing Flow for evolutions in the boundary conditions, obtaining superior performances with respect to the purely stochastic non-equilibrium approach, and paving the way for more efficient future flow-based solutions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-29T17:12:21Z</published>
+    <arxiv:comment>1+39 pages, 14 figures; v1: 1+40 pages, 14 figures, expanded discussions in section 4 and 5, matches published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 04 (2026) 051</arxiv:journal_ref>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Dario Panfalone</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+    <author>
+      <name>Lorenzo Verzichelli</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP04(2026)051</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP04(2026)051" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.18288v1</id>
+    <title>Normalizing flows for SU($N$) gauge theories employing singular value decomposition</title>
+    <updated>2025-01-30T11:56:16Z</updated>
+    <link href="https://arxiv.org/abs/2501.18288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.18288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a progress report on the use of normalizing flows for generating gauge field configurations in pure SU(N) gauge theories. We discuss how the singular value decomposition can be used to construct gauge-invariant quantities, which serve as the building blocks for designing gauge-equivariant transformations of SU(N) gauge links. Using this novel approach, we build representative models for the SU(3) Wilson action on a \( 4^4 \) lattice with \( β= 1 \). We train these models and provide an analysis of their performance, highlighting the effectiveness of the new technique for gauge-invariant transformations. We also provide a comparison between the efficiency of the proposed algorithm and the spectral flow of Wilson loops.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-30T11:56:16Z</published>
+    <arxiv:comment>9 pages, 4 figures; contribution to the 41th International Symposium on Lattice Field Theory, 2024, Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Javad Komijani</name>
+    </author>
+    <author>
+      <name>Marina K. Marinkovic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.00200v3</id>
+    <title>Scaling of Stochastic Normalizing Flows in $\mathrm{SU}(3)$ lattice gauge theory</title>
+    <updated>2025-05-05T08:01:32Z</updated>
+    <link href="https://arxiv.org/abs/2412.00200v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.00200v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Non-equilibrium Markov Chain Monte Carlo (NE-MCMC) simulations provide a well-understood framework based on Jarzynski's equality to sample from a target probability distribution. By driving a base probability distribution out of equilibrium, observables are computed without the need to thermalize. If the base distribution is characterized by mild autocorrelations, this approach provides a way to mitigate critical slowing down. Out-of-equilibrium evolutions share the same framework of flow-based approaches and they can be naturally combined into a novel architecture called Stochastic Normalizing Flows (SNFs). In this work we present the first implementation of SNFs for $\mathrm{SU}(3)$ lattice gauge theory in 4 dimensions, defined by introducing gauge-equivariant layers between out-of-equilibrium Monte Carlo updates. The core of our analysis is focused on the promising scaling properties of this architecture with the degrees of freedom of the system, which are directly inherited from NE-MCMC. Finally, we discuss how systematic improvements of this approach can realistically lead to a general and yet efficient sampling strategy at fine lattice spacings for observables affected by long autocorrelation times.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-29T19:01:05Z</published>
+    <arxiv:comment>14 pages, 12 figures. v2: 14 pages, 13 figures, added comments and improved discussion in section 5, matches published version. v3: fixed figure 7, added missing footnote</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 111 7, 074517 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.111.074517</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.111.074517" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.18861v2</id>
+    <title>Sampling SU(3) pure gauge theory with Stochastic Normalizing Flows</title>
+    <updated>2024-10-04T13:57:13Z</updated>
+    <link href="https://arxiv.org/abs/2409.18861v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.18861v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Non-equilibrium Monte Carlo simulations based on Jarzynski's equality are a well-understood method to compute differences in free energy and also to sample from a target probability distribution without the need to thermalize the system under study. In each evolution, the system starts from a given base distribution at equilibrium and it is gradually driven out-of-equilibrium while evolving towards the target parameters. If the target distribution suffers from long autocorrelation times, this approach represents a promising candidate to mitigate critical slowing down. Out-of-equilibrium evolutions are conceptually similar to Normalizing Flows and they can be combined into a recently-developed architecture called Stochastic Normalizing Flows (SNFs). In this contribution we first focus on the promising scaling with the volume guaranteed by the purely stochastic approach in the $\mathrm{SU}(3)$ lattice gauge theory in 4 dimensions; then, we define an SNF by introducing gauge-equivariant layers between the out-of-equilibrium Monte Carlo updates, and we analyse the improvement obtained as well as the inherited scaling with the volume. Finally, we discuss how this approach can be systematically improved and how simulations of lattice gauge theories in four dimensions for large volumes and close to criticality can be realistically achieved.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-27T15:55:22Z</published>
+    <arxiv:comment>1+8 pages, 6 figures, contribution for the 41st International Symposium on Lattice Field Theory (Lattice 2024), 28 July - 3 August 2024, Liverpool, UK; v2: 1+9 pages, 6 figures, reference added</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.10819v1</id>
+    <title>Multiscale Normalizing Flows for Gauge Theories</title>
+    <updated>2024-04-16T18:00:05Z</updated>
+    <link href="https://arxiv.org/abs/2404.10819v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.10819v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Scale separation is an important physical principle that has previously enabled algorithmic advances such as multigrid solvers. Previous work on normalizing flows has been able to utilize scale separation in the context of scalar field theories, but the principle has been largely unexploited in the context of gauge theories. This work gives an overview of a new method for generating gauge fields using hierarchical normalizing flow models. This method builds gauge fields from the outside in, allowing different parts of the model to focus on different scales of the problem. Numerical results are presented for $U(1)$ and $SU(3)$ gauge theories in 2, 3, and 4 spacetime dimensions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-16T18:00:05Z</published>
+    <arxiv:comment>Submitted as a proceedings to the 40th International Symposium on Lattice Field Theory (Lattice 2023)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.02402v1</id>
+    <title>Normalizing flows for lattice gauge theory in arbitrary space-time dimension</title>
+    <updated>2023-05-03T19:54:04Z</updated>
+    <link href="https://arxiv.org/abs/2305.02402v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.02402v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Applications of normalizing flows to the sampling of field configurations in lattice gauge theory have so far been explored almost exclusively in two space-time dimensions. We report new algorithmic developments of gauge-equivariant flow architectures facilitating the generalization to higher-dimensional lattice geometries. Specifically, we discuss masked autoregressive transformations with tractable and unbiased Jacobian determinants, a key ingredient for scalable and asymptotically exact flow-based sampling algorithms. For concreteness, results from a proof-of-principle application to SU(3) lattice gauge theory in four space-time dimensions are reported.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-03T19:54:04Z</published>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Alexander G. D. G. Matthews</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Ali Razavi</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.08469v2</id>
+    <title>Learning Trivializing Gradient Flows for Lattice Gauge Theories</title>
+    <updated>2023-03-09T08:28:15Z</updated>
+    <link href="https://arxiv.org/abs/2212.08469v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.08469v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a unifying approach that starts from the perturbative construction of trivializing maps by Lüscher and then improves on it by learning. The resulting continuous normalizing flow model can be implemented using common tools of lattice field theory and requires several orders of magnitude fewer parameters than any existing machine learning approach. Specifically, our model can achieve competitive performance with as few as 14 parameters while existing deep-learning models have around 1 million parameters for $SU(3)$ Yang--Mills theory on a $16^2$ lattice. This has obvious consequences for training speed and interpretability. It also provides a plausible path for scaling machine-learning approaches toward realistic theories.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-16T13:31:31Z</published>
+    <arxiv:comment>10 pages, 4 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Simone Bacchio</name>
+    </author>
+    <author>
+      <name>Pan Kessel</name>
+    </author>
+    <author>
+      <name>Stefan Schaefer</name>
+    </author>
+    <author>
+      <name>Lorenz Vaitl</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.107.L051504</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.107.L051504" title="doi"/>
+  </entry>
+</feed>

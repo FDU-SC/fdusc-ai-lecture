@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/lB07HCPEeJGOZ0Zq20g8YduspXI</id>
+  <title>arXiv Query: search_query=abs:"phonon" AND abs:"benchmark" AND abs:"machine learning potential"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T15:03:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22phonon%22+AND+(abs:%22benchmark%22+AND+abs:%22machine+learning+potential%22)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.22316v1</id>
+    <title>Charge-Density-Wave Phase Transitions in Monolayer 1T-TaS2 from Universal Machine Learning Molecular Dynamics</title>
+    <updated>2026-07-24T13:57:09Z</updated>
+    <link href="https://arxiv.org/abs/2607.22316v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.22316v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Charge-density-wave (CDW) phases in 1T transition-metal dichalcogenides arise from strong electron-phonon coupling and accompanying lattice instabilities. Capturing their temperature-dependent structural evolution using conventional first-principles molecular dynamics (MD) remains challenging because of the large supercells and extensive finite-temperature sampling required. Here, we combine density functional theory (DFT), universal machine-learning interatomic potentials (MLIPs), MD, and temperature-dependent effective potential phonon calculations to investigate the structural and vibrational signatures of CDW transitions in monolayer 1T-TaS2. Benchmarking against DFT displacement energies identifies UMA-s-1p1 universal machine learning potentials with sufficient accuracy for subsequent finite-temperature simulations. Our results show that large-scale MD simulations reproduce the experimentally observed phase transition sequence from the low-temperature Star-of-David (SoD) distorted structure to the high-temperature primitive hexagonal structure, as quantified by the number of Ta atoms attributed to SoDs. Heating-cooling cycles exhibit thermal hysteresis, and upon cooling, the system freezes into a multi-domain state in which α and \b{eta} CDW chiralities nucleate independently and persist to the lowest temperatures. These findings demonstrate that carefully benchmarked universal MLIPs can provide a scalable framework for finite-temperature studies of CDW materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-24T13:57:09Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Valentina Nesterova</name>
+    </author>
+    <author>
+      <name>Tribhuwan Pandey</name>
+    </author>
+    <author>
+      <name>Tom Berlijn</name>
+    </author>
+    <author>
+      <name>Fariborz Kargar</name>
+    </author>
+    <author>
+      <name>Lucas Lindsay</name>
+    </author>
+    <author>
+      <name>Konstantin Klyukin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.17129v1</id>
+    <title>STEP: Spin Tensor Equivariant Potential for Data-Efficient Learning of Magnetic Potential Energy Surfaces</title>
+    <updated>2026-07-19T08:34:20Z</updated>
+    <link href="https://arxiv.org/abs/2607.17129v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.17129v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate and efficient modeling of magnetic potential energy surfaces remains challenging because spin-polarized first-principles calculations for diverse non-collinear spin-lattice configurations are computationally demanding. Here we introduce the Spin Tensor Equivariant Potential (STEP), a magnetic machine-learning interatomic potential that treats vector magnetic moments as continuous geometric degrees of freedom and embeds them in an equivariant representation. By coupling the central spin representation to its local spin-lattice environment through a Center-Environment Tensor Product, STEP introduces a physics-informed bias while preserving translational invariance and $\mathrm{SO}(3)$ equivariance and supporting feature-level time-reversal symmetrization. Learning-curve analysis on monolayer CrI$_3$ shows that STEP achieves pronounced data efficiency, with higher-order tensor channels and iterative center-environment couplings leading to steep learning curves for energy, force, and magnetic force errors. On public FeAl, CrN, and Fe benchmarks, STEP achieves competitive or improved accuracy compared with recent magnetic machine-learning potentials. Using a compact but representative CrI$_3$ dataset, STEP reproduces phonon dispersions and magnon spectra with high fidelity, capturing subtle anisotropic magnetic interactions. For Fe$_2$Mo$_3$O$_8$, STEP further provides a quantitative description of magnon--phonon hybridization and reproduces its characteristic magnon polaron dispersion. Finally, spin dynamics simulations driven by STEP yield Curie temperatures for monolayer CrI$_3$ and bcc Fe in good agreement with experiments. These results establish STEP as a physically informed, data-efficient, and scalable framework for modeling spin-lattice coupling, magnetic excitations, and finite-temperature magnetic behavior.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-19T08:34:20Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yuanqing Gao</name>
+    </author>
+    <author>
+      <name>Wen-Hao Luo</name>
+    </author>
+    <author>
+      <name>Lei Zhang</name>
+    </author>
+    <author>
+      <name>Kun Cao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.18033v1</id>
+    <title>Benchmarking 34 OpenKIM Nickel Potentials with an Emphasis on Surfaces and Extended Defects</title>
+    <updated>2025-10-20T19:09:21Z</updated>
+    <link href="https://arxiv.org/abs/2510.18033v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.18033v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an automated benchmarking suite for face-centered-cubic (FCC) nickel that evaluates 47 quantitative metrics spanning both standard tests (equation of state, elastic constants, surface energies and phonons) and application-specific scenarios such as defect formation and migration, grain boundaries, step edges, close-range interactions, and vacancy cluster energetics. Using this framework, we assess 34 interatomic potentials from the OpenKIM repository, including pairwise, embedded-atom, modified-embedded-atom, angular-dependent, and spectral neighbor analysis potentials (SNAP). Results are compared against ab initio benchmarks compiled from the literature. Most potentials accurately reproduce lattice parameters, elastic constants, and surface energies, whereas predictive accuracy degrades for migration barriers and short-range compression. Principal-component analysis identifies correlated property groups and a partially orthogonal component associated with migration and short-range physics, revealing Pareto trade-offs between accuracy domains. SNAP models occupy the lowest-error frontier, although several embedded-atom potentials remain competitive across many metrics. The framework provides a reproducible baseline for potential selection, highlights systematic limitations across formalisms, and supports benchmarking-in-the-loop strategies for developing next-generation machine-learning potentials for Ni and Ni-based alloys.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-20T19:09:21Z</published>
+    <arxiv:comment>38 pages, 10 figures, to be submitted to computational materials science, code available at https://gitlab.com/mattmtl/ni-pots-tests</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Matthew Thoms</name>
+      <arxiv:affiliation>Queen's University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hao Sun</name>
+      <arxiv:affiliation>Liaoning Academy of Materials</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Laurent Karim Béland</name>
+      <arxiv:affiliation>Queen's University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.03401v1</id>
+    <title>A Comprehensive Assessment and Benchmark Study of Large Atomistic Foundation Models for Phonons</title>
+    <updated>2025-09-03T15:24:45Z</updated>
+    <link href="https://arxiv.org/abs/2509.03401v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.03401v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid development of universal machine learning potentials (uMLPs) has enabled efficient, accurate predictions of diverse material properties across broad chemical spaces. While their capability for modeling phonon properties is emerging, systematic benchmarking across chemically diverse systems remains limited. We evaluate six recent uMLPs (EquiformerV2, MatterSim, MACE, and CHGNet) on 2,429 crystalline materials from the Open Quantum Materials Database. Models were used to compute atomic forces in displaced supercells, derive interatomic force constants (IFCs), and predict phonon properties including lattice thermal conductivity (LTC), compared with density functional theory (DFT) and experimental data. The EquiformerV2 pretrained model trained on the OMat24 dataset exhibits strong performance in predicting atomic forces and third-order IFC, while its fine-tuned counterpart consistently outperforms other models in predicting second-order IFC, LTC, and other phonon properties. Although MACE and CHGNet demonstrated comparable force prediction accuracy to EquiformerV2, notable discrepancies in IFC fitting led to poor LTC predictions. Conversely, MatterSim, despite lower force accuracy, achieved intermediate IFC predictions, suggesting error cancellation and complex relationships between force accuracy and phonon predictions. This benchmark guides the evaluation and selection of uMLPs for high-throughput screening of materials with targeted thermal transport properties.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-03T15:24:45Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Advanced Intelligent Discovery 2025, 0, e202500075</arxiv:journal_ref>
+    <author>
+      <name>Md Zaibul Anam</name>
+    </author>
+    <author>
+      <name>Ogheneyoma Aghoghovbia</name>
+    </author>
+    <author>
+      <name>Mohammed Al-Fahdi</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Victor Fung</name>
+    </author>
+    <author>
+      <name>Ming Hu</name>
+    </author>
+    <arxiv:doi>10.1002/aidi.202500075</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/aidi.202500075" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.17464v1</id>
+    <title>Consistency between the Green-Kubo formula and Lorentz model for predicting the infrared dielectric function of polar materials</title>
+    <updated>2025-04-24T11:54:12Z</updated>
+    <link href="https://arxiv.org/abs/2504.17464v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.17464v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate prediction of infrared dielectric functions in polar materials is fundamental for thermal and photonic applications, yet it remains unexplored whether the two main methods, Green-Kubo formula and Lorentz model, can give unified predictions. In this work, we present a detailed comparison of these two approaches using MgO and LiH as prototypical cases employing both empirical rigid ion model (RIM) and machine learning potential (MLP). We demonstrate that the conventional Lorentz model fails to capture the multi-phonon absorption inherent in Green-Kubo method, which can be resolved via using the phonon self-energy as a generalization of the usual linewidth. In addition, with RIM, a correction factor is required in the ionic contribution to infrared response to account for the electronic polarization effect, which is yet captured by MLP using the Born effective charges for calculating dipole moment. The present benchmark study thus enables cross-validation of dielectric function calculations while providing mechanistic insights into the polarization dynamics.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-24T11:54:12Z</published>
+    <arxiv:comment>14 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <arxiv:journal_ref>Phys. Rev. B 111, 184310 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Wei-Zhe Yuan</name>
+    </author>
+    <author>
+      <name>Yangyu Guo</name>
+    </author>
+    <author>
+      <name>Hong-Liang Yi</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.111.184310</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.111.184310" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.01278v2</id>
+    <title>Machine learned Force-Fields for an ab-initio Quality Description of Metal-Organic Frameworks</title>
+    <updated>2023-08-03T09:41:24Z</updated>
+    <link href="https://arxiv.org/abs/2308.01278v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.01278v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Metal-organic frameworks (MOFs) are an incredibly diverse group of highly porous hybrid materials, which are interesting for a wide range of possible applications. For a reliable description of many of their properties accurate computationally highly efficient methods, like force-field potentials (FFPs), are required. With the advent of machine learning approaches, it is now possible to generate such potentials with relatively little human effort. Here, we present a recipe to parametrize two fundamentally different types of exceptionally accurate and computationally highly efficient machine learned potentials, which belong to the moment-tensor and kernel-based potential families. They are parametrized relying on reference configurations generated in the course of molecular dynamics based, active learning runs and their performance is benchmarked for a representative selection of commonly studied MOFs. For both potentials, comparison to a random set of validation structures reveals close to DFT precision in predicted forces and structural parameters of all MOFs. Essentially the same applies to elastic constants and phonon band structures. Additionally, for MOF-5 the thermal conductivity is obtained with full quantitative agreement to single-crystal experiments. All this is possible while maintaining a high degree of computational efficiency, with the obtained machine learned potentials being only moderately slower than the extremely simple UFF4MOF or Dreiding force fields. The exceptional accuracy of the presented FFPs combined with their computational efficiency has the potential of lifting the computational modelling of MOFs to the next level.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-02T17:04:01Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Sandro Wieser</name>
+    </author>
+    <author>
+      <name>Egbert Zojer</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-024-01205-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-024-01205-w" title="doi"/>
+  </entry>
+</feed>

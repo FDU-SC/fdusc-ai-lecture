@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fYnRckyViVhQSCmX5pGA/ynTQxo</id>
+  <title>arXiv Query: search_query=abs:"neural quantum states" AND abs:"gauge"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:42:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22neural+quantum+states%22+AND+abs:%22gauge%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13912v2</id>
+    <title>Low-variance estimators overcome the phase-gradient bottleneck in complex-valued neural quantum states</title>
+    <updated>2026-06-19T20:38:09Z</updated>
+    <link href="https://arxiv.org/abs/2606.13912v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13912v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Complex neural quantum states are difficult to optimize when their wavefunction phase carries gauge, chiral, fermionic, or topological structure. We show that the major failure mode is not only ansatz expressivity, but the Monte Carlo estimator used to learn this phase. For separated amplitude-phase states, differentiating the local energy at fixed samples gives a different unbiased estimator of the same variational Monte Carlo phase force, without changing the objective. We further extend the construction to coupled two-head networks by keeping the amplitude-gradient contribution and applying the direct derivative only to the phase path. An adaptive minimum-variance mixture interpolates between standard and direct estimators during training. Across flux ladders, chiral chains, two-dimensional flux cylinders, an interacting fermion ladder, shared-network controls, and a fractional quantum Hall benchmark, the resulting estimators reduce phase-gradient variance, suppress seed failures, and often move multi-percent standard-gradient plateaus to sub-percent accuracy.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T21:05:28Z</published>
+    <arxiv:comment>38 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Yi-Ran Xue</name>
+    </author>
+    <author>
+      <name>Rui Wang</name>
+    </author>
+    <author>
+      <name>Baigeng Wang</name>
+    </author>
+    <author>
+      <name>Chenan Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.13192v1</id>
+    <title>Matter-induced plaquette terms in a $\mathbb{Z}_2$ lattice gauge theory</title>
+    <updated>2026-02-13T18:57:51Z</updated>
+    <link href="https://arxiv.org/abs/2602.13192v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.13192v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice gauge theories (LGTs) provide a powerful framework for studying confinement, topological order, and exotic quantum matter. In particular, the paradigmatic phenomenon of confinement, where dynamical matter is coupled to gauge fields and forms bound states, remains an open problem. In addition, LGTs can provide low-energy descriptions of quantum spin liquids, which is the focus of ongoing experimental research. However, the study of LGTs is often limited theoretically by their numerical complexity and experimentally in implementing challenging multi-body interactions, such as the plaquette terms crucial for the realization of many exotic phases of matter. Here we investigate a $(2+1)$D $\mathbb{Z}_2$ LGT coupled to hard-core bosonic matter featuring a global U(1) symmetry, and show that dynamical matter naturally induces sizable plaquette interactions even in the absence of explicit plaquette terms in the Hamiltonian. Using a combination of density matrix renormalization group simulations and neural quantum state calculations up to a system size of $20 \times 20$, we analyze the model across different fillings and electric field strengths. At small coupling strength, we find a large plaquette expectation value, independent of system size, for a wide range of fillings, which decreases in the presence of stronger electric fields. Furthermore, we observe signatures of a confinement-deconfinement transition at weak coupling strengths. Our results demonstrate that dynamical U(1) matter can induce complex multi-body interactions, suggesting a natural route to the realization of strong plaquette terms and paving the way for realizing a topological quantum spin liquid protected by a large gap.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-13T18:57:51Z</published>
+    <arxiv:comment>8 + 8 pages, 3 + 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <author>
+      <name>Matjaž Kebrič</name>
+    </author>
+    <author>
+      <name>Fabian Döschl</name>
+    </author>
+    <author>
+      <name>Umberto Borla</name>
+    </author>
+    <author>
+      <name>Jad C. Halimeh</name>
+    </author>
+    <author>
+      <name>Ulrich Schollwöck</name>
+    </author>
+    <author>
+      <name>Annabelle Bohrdt</name>
+    </author>
+    <author>
+      <name>Fabian Grusdt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11632v3</id>
+    <title>Basis dependence of Neural Quantum States for the Transverse Field Ising Model</title>
+    <updated>2026-03-24T13:55:16Z</updated>
+    <link href="https://arxiv.org/abs/2512.11632v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11632v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural Quantum States (NQS) are powerful tools used to represent complex quantum many-body states in an increasingly wide range of applications. However, despite their popularity, at present only a rudimentary understanding of their limitations exists. In this work, we investigate the dependence of NQS on the choice of the computational basis, focusing on restricted Boltzmann machines. Considering a family of rotated Hamiltonians corresponding to the paradigmatic transverse-field Ising model, we discuss the properties of ground states responsible for the dependence of NQS performance, namely the presence of ground state degeneracies as well as the uniformity of amplitudes and phases, carefully examining their interplay. We identify that the basis-dependence of the performance is linked to the convergence properties of a cluster or cumulant expansion of multi-spin operators -- providing a framework to directly connect physical, basis-dependent properties, to performance itself. Our results provide insights that may be used to gauge the applicability of NQS to new problems and to identify the optimal basis for numerical computations.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T15:11:05Z</published>
+    <arxiv:comment>23 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>SciPost Phys. Core 9, 027 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Ronald Santiago Cortes</name>
+    </author>
+    <author>
+      <name>Aravindh S. Shankar</name>
+    </author>
+    <author>
+      <name>Marcello Dalmonte</name>
+    </author>
+    <author>
+      <name>Roberto Verdel</name>
+    </author>
+    <author>
+      <name>Nils Niggemann</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhysCore.9.2.027</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhysCore.9.2.027" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.18519v1</id>
+    <title>Implementing advanced trial wave functions in fermion quantum Monte Carlo via stochastic sampling</title>
+    <updated>2025-05-24T05:31:23Z</updated>
+    <link href="https://arxiv.org/abs/2505.18519v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.18519v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce an efficient approach to implement correlated many-body trial wave functions in auxiliary-field quantum Monte Carlo (AFQMC). To control the sign/phase problem in AFQMC, a constraint is derived from an exact gauge condition but is typically imposed approximately through a trial wave function or trial density matrix, whose quality can affect the accuracy of the method. Furthermore, the trial wave function can also affect the efficiency through importance sampling. The most natural form of the trial wave function has been single Slater determinants or their linear combinations. More sophisticated forms, for example, with the inclusion of a Jastrow factor or other explicit correlations, have been challenging to use and their implementation is often assumed to require a quantum computer. In this work, we demonstrate that a large class of correlated wave functions, written in the general form of multi-dimensional integrals over hidden or auxiliary variables times Slater determinants, can be implemented as trial wave function by coupling the random walkers to a generalized Metropolis sampling. We discuss the fidelity of AFQMC with stochastically sampled trial wave functions, which are relevant to both quantum and classical algorithms. We illustrate the method and show that an efficient implementation can be achieved which preserves the low-polynomial computational scaling of AFQMC. We test our method in molecules under bond stretching and in transition metal diatomics. Significant improvements are seen in both accuracy and efficiency over typical trial wave functions, and the method yields total ground-state energies systematically within chemical accuracy. The method can be useful for incorporating other advanced wave functions, for example, neural quantum state wave functions optimized from machine learning techniques, or for other forms of fermion quantum Monte Carlo.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-24T05:31:23Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>J. Chem. Phys. 163, 164109 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Zhi-Yu Xiao</name>
+    </author>
+    <author>
+      <name>Zixiang Lu</name>
+    </author>
+    <author>
+      <name>Yixiao Chen</name>
+    </author>
+    <author>
+      <name>Tao Xiang</name>
+    </author>
+    <author>
+      <name>Shiwei Zhang</name>
+    </author>
+    <arxiv:doi>10.1063/5.0296390</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0296390" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.04527v1</id>
+    <title>Efficiency of the hidden fermion determinant states Ansatz in the light of different complexity measures</title>
+    <updated>2024-11-07T08:36:37Z</updated>
+    <link href="https://arxiv.org/abs/2411.04527v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.04527v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Finding reliable approximations to the quantum many-body problem is one of the central challenges of modern physics. Elemental to this endeavor is the development of advanced numerical techniques pushing the limits of what is tractable. One such recently proposed numerical technique are neural quantum states. This new type of wavefunction based Ansätze utilizes the expressivity of neural networks to tackle fundamentally challenging problems, such as the Mott transition. In this paper we aim to gauge the universalness of one representative of neural network Ansätze, the hidden-fermion slater determinant approach. To this end, we study five different fermionic models each displaying volume law scaling of the entanglement entropy. For these, we correlate the effectiveness of the Ansatz with different complexity measures. Each measure indicates a different complexity in the absence of which a conventional Ansatz becomes efficient. We provide evidence that whenever one of the measures indicates proximity to a parameter region in which a conventional approach would work reliable, the neural network approach also works reliable and efficient. This highlights the great potential, but also challenges for neural network approaches: Finding suitable points in theory space around which to construct the Ansatz in order to be able to efficiently treat models unsuitable for their current designs.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-07T08:36:37Z</published>
+    <arxiv:comment>20 pages, 25 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Björn J. Wurst</name>
+    </author>
+    <author>
+      <name>Dante M. Kennes</name>
+    </author>
+    <author>
+      <name>Jonas B. Profe</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevResearch.7.023316</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevResearch.7.023316" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.05333v1</id>
+    <title>Neural quantum states for supersymmetric quantum gauge theories</title>
+    <updated>2021-12-10T04:42:51Z</updated>
+    <link href="https://arxiv.org/abs/2112.05333v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.05333v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Supersymmetric quantum gauge theories are important mathematical tools in high energy physics. As an example, supersymmetric matrix models can be used as a holographic description of quantum black holes. The wave function of such supersymmetric gauge theories is not known and it is challenging to obtain with traditional techniques. We employ a neural quantum state ansatz for the wave function of a supersymmetric matrix model and use a variational quantum Monte Carlo approach to discover the ground state of the system. We discuss the difficulty of including bosonic particles and fermionic particles, as well as gauge degrees of freedom.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-10T04:42:51Z</published>
+    <arxiv:comment>Presented at the 4th workshop on Machine Learning and the Physical Sciences (ML4PS) at NeurIPS2021 on December 13th</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Xizhi Han</name>
+    </author>
+    <author>
+      <name>Enrico Rinaldi</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Iid+CLu7V66/M8OnVacloj75z4o</id>
+  <title>arXiv Query: search_query=abs:"tensor network" AND abs:"neural quantum states"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T15:01:05Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22tensor+network%22+AND+abs:%22neural+quantum+states%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>16</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11745v1</id>
+    <title>Unraveling the Kagome Antiferromagnetic $3J$ Model and Its Materials: An Integrated Approach</title>
+    <updated>2026-09-10T16:00:46Z</updated>
+    <link href="https://arxiv.org/abs/2609.11745v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11745v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the ground-state and finite-temperature properties of the kagome antiferromagnetic Heisenberg model with three inequivalent couplings, dubbed the 3J model, which is designed for the candidate Dirac quantum spin liquid (QSL) material YCu$_3$(OH)$_6$Br$_2$[Br$_{1-x}$(OH)$_x$] (see, e.g., Zeng et al., 2024). Employing large-scale density-matrix renormalization group (DMRG) supplemented by neural quantum states (NQS) simulations, we identify an intermediate QSL phase between two magnetically ordered phases. We also find that this QSL is separated from the kagome spin liquid ground state at the isotropic limit. To establish a direct comparison with experiments, we compute the specific heat of the model by means of advanced exponential (XTRG) and tangent-space (tanTRG) thermal tensor-network methods. In the magnetically ordered phase, the specific heat over temperature exhibits a shoulder at a temperature that is a fraction of the coupling strength $J_{hex}$, which disappears in the QSL phase. These universal behaviors are consistent with the experimentally observed specific heat in 3J materials for both ordered and QSL candidate samples. Our work thus connects microscopic models with experimentally measurable signatures, exemplifying an integrated approach (see Meng et al., 2026) to understanding QSL phenomena in frustrated quantum magnets, with 3J materials serving as a representative case and providing a foundation for future studies.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T16:00:46Z</published>
+    <arxiv:comment>9+7 pages, 5+7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Xin Lu</name>
+    </author>
+    <author>
+      <name>Andreas Raikos</name>
+    </author>
+    <author>
+      <name>Menghan Song</name>
+    </author>
+    <author>
+      <name>Zezong Li</name>
+    </author>
+    <author>
+      <name>Lankun Han</name>
+    </author>
+    <author>
+      <name>Shiliang Li</name>
+    </author>
+    <author>
+      <name>Sylvain Capponi</name>
+    </author>
+    <author>
+      <name>Zi Yang Meng</name>
+    </author>
+    <author>
+      <name>Chengkang Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01719v1</id>
+    <title>Numerical simulation of D-Wave's quantum advantage experiment with time-dependent variational Monte Carlo</title>
+    <updated>2026-09-01T18:00:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.01719v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01719v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Programmable quantum annealers can realize real-time dynamics of frustrated transverse-field Ising models on large, nontrivial graphs. Recent work by King et al. argued that the classical simulation of such experiments would require exponential computational resources for classical methods such as tensor networks and neural quantum states. Here, we numerically simulate the D-Wave spin-glass annealing protocol with time-dependent variational Monte Carlo (t-VMC) using a correlator state tailored to spin-glass dynamics. For the two-dimensional cylinder, three-dimensional dimer, diamond, and biclique instances considered, at annealing times of 7 and 20 ns, we show that systematically increasing the variational ansatz size enables t-VMC to approximate the final two-spin correlation errors of the quantum processing unit (QPU). We also perform an accurate large-scale simulation of a challenging biclique instance for which no other variational method is known to work, and we find close agreement with the quantum annealer. Through ablation studies, we identify poor Markov-chain mixing, high-variance local-energy estimators, and stochastic Runge-Kutta error estimates as the principal numerical failure modes. We address these numerical issues by using parallel tempering, blurred sampling and an importance-weighted differential equation solver, thereby clarifying the numerical requirements for stable, large-scale t-VMC simulations. Our results extend the frontier of classical simulation while providing a realistic assessment of the computational costs of simulating quantum dynamics at this scale.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T18:00:11Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Roeland Wiersema</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.18339v1</id>
+    <title>Ground state preparation of random all-to-all Hamiltonians using ADAPT-VQE</title>
+    <updated>2026-06-16T18:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.18339v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.18339v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ground state of random Hamiltonians with all-to-all interactions such as the quantum Sherrington-Kirkpatrick (SK) model and the Sachdev-Ye-Kitaev (SYK) model follow volume-law entanglement and are expected to be hard to model using tensor networks. In recent years, some progress has been made to push the limit of classical methods using neural quantum states. However, it remains an open question whether there exist quantum algorithms that could offer a quantum advantage over the state-of-the-art classical methods in simulating random Hamiltonians. In this work, we show that one such algorithm, TETRIS-ADAPT-VQE, can construct accurate ground states for dense and sparse SYK models containing up to $N=20$ Majorana fermions achieving fidelities $\geq 99.3\%$ and for the quantum SK model with up to $L=18$ sites achieving fidelities $\geq 99.9998\%$. We find that while the preparation of ground states is efficient (in terms of operator pool size and circuit depth) for the SK model, it is not efficient for either dense or moderately sparse SYK models.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-16T18:00:00Z</published>
+    <arxiv:comment>v1: 12 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Sabhyata Gupta</name>
+    </author>
+    <author>
+      <name>Bharath Sambasivam</name>
+    </author>
+    <author>
+      <name>Sophia E. Economou</name>
+    </author>
+    <author>
+      <name>Edwin Barnes</name>
+    </author>
+    <author>
+      <name>Alexander F. Kemper</name>
+    </author>
+    <author>
+      <name>Raghav G. Jha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.27191v1</id>
+    <title>Statistical and Algorithmic Foundations of Probing Quantum Systems with Compressive Measurements: A Review</title>
+    <updated>2026-05-26T15:44:42Z</updated>
+    <link href="https://arxiv.org/abs/2605.27191v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.27191v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum state tomography (QST) is a fundamental task in quantum information science that aims to reconstruct unknown quantum states from measurement data. However, the exponential growth of Hilbert-space dimension with system size makes full tomography of general quantum states statistically and computationally prohibitive. This challenge has motivated extensive research on structured quantum state tomography, where prior structure, such as low-rankness, tensor-network representations, shallow quantum circuits, and neural quantum states, can substantially reduce the effective degrees of freedom and enable scalable recovery. In this review, we provide a unified perspective on QST for structured quantum states through three closely related themes: compact state representations, measurement design, and computational algorithms. After reviewing common models for structured quantum states, we survey existing work on geometric preservation properties of measurement frameworks, ranging from informationally complete POVMs to randomized measurements, and their implications for sample complexity. On the algorithmic side, we review optimization methods for reconstructing structured quantum states from empirical measurements. By connecting QST with broader principles from compressive sensing, matrix sensing, and structured inverse problems, this survey highlights common theoretical foundations underlying sample complexity, measurement efficiency, and scalable recovery.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T15:44:42Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Zhen Qin</name>
+    </author>
+    <author>
+      <name>Michael B. Wakin</name>
+    </author>
+    <author>
+      <name>Zhihui Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.04640v1</id>
+    <title>Neural network modeling of many-body super- and sub-radiant dynamics</title>
+    <updated>2026-05-06T08:32:19Z</updated>
+    <link href="https://arxiv.org/abs/2605.04640v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.04640v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There is significant interest in exploring novel phenomena in quantum light-matter interfaces, which are driven by the combination of structured dissipation and long-range interactions that are typical in such systems. To this end, it is important to develop new general numerical simulation techniques, which can access large system sizes and are not based on semi-classical approaches. Here, we report the first application of neural quantum states to obtain the dissipative dynamics of light-matter-coupled systems beyond what is accessible with exact and tensor-network calculations. We specifically apply this method to simulate the many-body emission dynamics of approximately 40 atoms, arranged in dense arrays in one and two dimensions. These systems have been chosen because they can support prominent subradiant dynamics at late times and could be realized with cold atomic quantum simulators.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-06T08:32:19Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Gianluca Lagnese</name>
+    </author>
+    <author>
+      <name>Laurin Brunner</name>
+    </author>
+    <author>
+      <name>Lorenzo Rossi</name>
+    </author>
+    <author>
+      <name>Darrick Chang</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+    <author>
+      <name>Zala Lenarčič</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.03930v1</id>
+    <title>Time-dependent variational Monte Carlo without bias</title>
+    <updated>2026-05-05T16:20:02Z</updated>
+    <link href="https://arxiv.org/abs/2605.03930v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.03930v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When combined with highly expressive ansatz functions such as neural quantum states, variational Monte Carlo (VMC) constitutes a versatile numerical approach to tackle the quantum many-body problem in and out of equilibrium. However, its traditional formulation exhibits a subtle estimation bias leading to inaccuracies, which can be particularly detrimental when addressing real time dynamics. In this work, we investigate two avenues to circumvent said estimation bias. First, we propose an unbiased variant of time-dependent VMC using self-normalized importance sampling with respect to a cutoff-based deformation of the Born distribution. We demonstrate the feasibility and accuracy of the approach in pathological and generic cases of quench dynamics. Furthermore, we explore an alternative sampling strategy based on active learning via the tensor cross interpolation (TCI). While we find that our choice of tensor network architecture lacks the required low rank property, the proposed TCI-based algorithm complements the conventional importance sampling paradigm, providing an alternative perspective that may be further explored in future work.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-05T16:20:02Z</published>
+    <arxiv:comment>10 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Wladislaw Krinitsin</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.28646v1</id>
+    <title>Neural Quantum States in Non-Stabilizer Regimes: Benchmarks with Atomic Nuclei</title>
+    <updated>2026-03-30T16:29:42Z</updated>
+    <link href="https://arxiv.org/abs/2603.28646v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.28646v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As neural networks are known to efficiently represent classes of tensor-network states as well as volume-law-entangled states, identifying which properties determine the representational capabilities of neural quantum states (NQS) remains an open question. We construct NQS representations of ground states of medium-mass atomic nuclei, which typically exhibit significant entanglement and non-stabilizerness, to study their performance in relation to the quantum complexity of the target state. Leveraging a second-quantized formulation of NQS tailored for nuclear-physics applications, we perform calculations in active orbital spaces using a restricted Boltzmann machine (RBM), a prototypical NQS ansatz. For a fixed number of configurations, we find that states with larger non-stabilizerness are systematically harder to learn, as evidenced by reduced accuracy. This finding suggests that non-stabilizerness is a primary factor governing the compression and representational efficiency of RBMs in entangled regimes, and motivates extending these studies to more sophisticated network architectures.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-30T16:29:42Z</published>
+    <arxiv:comment>13 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>James W. T. Keeble</name>
+    </author>
+    <author>
+      <name>Alessandro Lovato</name>
+    </author>
+    <author>
+      <name>Caroline E. P. Robin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.03294v2</id>
+    <title>Expressibility of neural quantum states: a Walsh-complexity perspective</title>
+    <updated>2026-04-07T15:05:52Z</updated>
+    <link href="https://arxiv.org/abs/2604.03294v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.03294v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states are powerful variational wavefunctions, but it remains unclear which many-body states can be represented efficiently by modern additive architectures. We introduce Walsh complexity, a basis-dependent measure of how broadly a wavefunction is spread over parity patterns. States with an almost uniform Walsh spectrum require exponentially large Walsh complexity from any good approximant. We show that shallow additive feed-forward networks cannot generate such complexity in the tame regime, e.g. polynomial activations with subexponential parameter scaling. As a concrete example, we construct a simple dimerized state prepared by a single layer of disjoint controlled-$Z$ gates. Although it has only short-range entanglement and a simple tensor-network description, its Walsh complexity is maximal. Full-cube fits across system size and depth are consistent with the complexity bound: for polynomial activations, successful fitting appears only once depth reaches a logarithmic scale in $N$, whereas activation saturation in $\tanh$ produces a sharp threshold-like jump already at depth $3$. Walsh complexity therefore provides an expressibility axis complementary to entanglement and clarifies when depth becomes an essential resource for additive neural quantum states.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-27T18:07:01Z</published>
+    <arxiv:comment>5 pages, 2 figures. (v2) added acknowledgement</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Taige Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.25066v1</id>
+    <title>Neural Operator Quantum State: A Foundation Model for Quantum Dynamics</title>
+    <updated>2026-03-26T06:10:14Z</updated>
+    <link href="https://arxiv.org/abs/2603.25066v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.25066v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Capturing the dynamics of quantum many-body systems under time-dependent driving protocols is a central challenge for numerical simulations. Existing methods such as tensor networks and time-dependent neural quantum states, however, must be re-run for every protocol. In this work, we introduce the Neural Operator Quantum State (NOQS) as a foundation model for quantum dynamics. Rather than solving the Schrödinger equation for individual trajectories, our approach aims to \emph{learn the solution operator} that maps entire driving protocols to time-evolved quantum states. Once trained, the NOQS predicts time evolution under unseen protocols in a single forward pass, requiring no additional optimization. We validate NOQS on the two-dimensional Ising model with time-dependent longitudinal and transverse fields, demonstrating accurate prediction not only for unseen in-distribution protocols, but also for qualitatively different, out-of-distribution functional forms of driving. Further, a single NOQS model can be transferred between different temporal resolutions, and can be efficiently fine-tuned with sparse experimental measurements to improve predictions across all observables at negligible cost. Our work introduces a new paradigm for quantum dynamics simulation and provides a practical computational-experimental interface for driven quantum systems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-26T06:10:14Z</published>
+    <arxiv:comment>14 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Zihao Qi</name>
+    </author>
+    <author>
+      <name>Christopher Earls</name>
+    </author>
+    <author>
+      <name>Yang Peng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.19340v1</id>
+    <title>Simulating dynamics of the two-dimensional transverse-field Ising model: a comparative study of large-scale classical numerics</title>
+    <updated>2025-11-24T17:39:29Z</updated>
+    <link href="https://arxiv.org/abs/2511.19340v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.19340v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The quantum dynamics of many-qubit systems is an outstanding problem that has recently driven significant advances in both numerical methods and programmable quantum processing units. In this work, we employ a comprehensive toolbox of state-of-the-art numerical approaches to classically simulate the dynamics of the two-dimensional transverse field Ising model. Our methods include three different tensor network techniques -- matrix product states, tree-tensor networks, and two-dimensional tensor-networks under the belief propagation approximation -- as well as time-dependent variational Monte Carlo with Neural Quantum States. We focus on two paradigmatic dynamical protocols: (i) quantum annealing through a critical point and (ii) post-quench dynamics. Our extensive results show the quantitative predictions of various state-of-the-art numerical methods providing a benchmark for future numerical investigations and experimental studies with the aim to push the limitations on classical and QPUs. In particular, our work connects classical simulability to different regimes associated with quantum dynamics in Rydberg arrays - namely, quasi-adiabatic dynamics, the Kibble-Zurek mechanism, and quantum quenches.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-24T17:39:29Z</published>
+    <arxiv:comment>17 (+11) pages, 10 (+10) figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Research 8, 023311 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Vovrosh</name>
+    </author>
+    <author>
+      <name>Sergi Julià-Farré</name>
+    </author>
+    <author>
+      <name>Wladislaw Krinitsin</name>
+    </author>
+    <author>
+      <name>Michael Kaicher</name>
+    </author>
+    <author>
+      <name>Fergus Hayes</name>
+    </author>
+    <author>
+      <name>Emmanuel Gottlob</name>
+    </author>
+    <author>
+      <name>Augustine Kshetrimayum</name>
+    </author>
+    <author>
+      <name>Kemal Bidzhiev</name>
+    </author>
+    <author>
+      <name>Simon B. Jäger</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Constantin Dalyac</name>
+    </author>
+    <author>
+      <name>Tiago Mendes-Santos</name>
+    </author>
+    <author>
+      <name>Alexandre Dauphin</name>
+    </author>
+    <arxiv:doi>10.1103/x4gs-g63p</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/x4gs-g63p" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.08964v1</id>
+    <title>Neural quantum states for emitter dynamics in waveguide QED</title>
+    <updated>2025-08-12T14:30:58Z</updated>
+    <link href="https://arxiv.org/abs/2508.08964v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.08964v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum emitters coupled to one-dimensional waveguides constitute a paradigmatic quantum-optical platform for exploring collective phenomena in open quantum many-body systems. For appropriately spaced emitters, they realize the Dicke model, whose characteristic permutation symmetry allows for efficient exact solutions featuring superradiance. When the emitters are arbitrarily spaced, however, this symmetry is lost and general analytical solutions are no longer available. In this work, we introduce a novel numerical method to study the dynamics of such systems by extending the time-dependent neural quantum state (t-NQS) framework to open quantum systems. We benchmark our approach across a range of waveguide QED settings and compare its performance with tensor-network calculations. Our results demonstrate that the t-NQS approach is competitive with other numerical methods and highlight the potential of t-NQSs for studying open quantum many-body systems out of equilibrium.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-12T14:30:58Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Tatiana Vovk</name>
+    </author>
+    <author>
+      <name>Anka Van de Walle</name>
+    </author>
+    <author>
+      <name>Hannes Pichler</name>
+    </author>
+    <author>
+      <name>Annabelle Bohrdt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.08329v3</id>
+    <title>Neuralized Fermionic Tensor Networks for Quantum Many-Body Systems</title>
+    <updated>2025-10-29T02:36:31Z</updated>
+    <link href="https://arxiv.org/abs/2506.08329v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.08329v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a class of neuralized fermionic tensor network states (NN-fTNS) that introduce non-linearity into fermionic tensor networks through configuration-dependent neural network transformations of the local tensors. The construction uses the fTNS algebra to implement a natural fermionic sign structure and is compatible with standard tensor network algorithms, but gains enhanced expressivity through the neural network parametrization. Using the 1D and 2D Fermi-Hubbard models as benchmarks, we demonstrate that NN-fTNS achieve order of magnitude improvements in the ground-state energy compared to pure fTNS with the same bond dimension, and can be systematically improved through both the tensor network bond dimension and the neural network parametrization. Compared to existing fermionic neural quantum states (NQS) based on Slater determinants and Pfaffians, NN-fTNS offer a physically motivated alternative fermionic structure. Furthermore, compared to such states, NN-fTNS naturally exhibit improved computational scaling and we demonstrate a construction that achieves linear scaling with the lattice size.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-10T01:33:58Z</published>
+    <arxiv:comment>6 pages, 5 figures + 7 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Phys. Rev. B 113, 085134 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Si-Jing Du</name>
+    </author>
+    <author>
+      <name>Ao Chen</name>
+    </author>
+    <author>
+      <name>Garnet Kin-Lic Chan</name>
+    </author>
+    <arxiv:doi>10.1103/x8vl-qf14</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/x8vl-qf14" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.19576v2</id>
+    <title>An Analysis of First- and Quasi-Second-Order Optimization Algorithms in Variational Monte Carlo</title>
+    <updated>2025-08-20T15:31:58Z</updated>
+    <link href="https://arxiv.org/abs/2502.19576v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.19576v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many quantum many-body wavefunctions, such as Jastrow-Slater, tensor network, and neural quantum states, are studied with the variational Monte Carlo technique, where stochastic optimization is usually performed to obtain a faithful approximation to the ground-state of a given Hamiltonian. While first-order gradient descent methods are commonly used for such optimizations, quasi-second-order optimization formulations offer the potential of faster convergence under certain theoretical conditions, but with a similar cost per sample to first-order methods. However, the relative performance of first-order and second-order optimizers is influenced in practice by many factors, including the sampling requirements for a faithful optimization step, the influence of wavefunction quality, as well as the wavefunction parametrization and expressivity. Here we analyze these performance characteristics of first-order and quasi-second-order optimization methods for a variety of Hamiltonians, with the additional context of understanding the scaling of these methods (for good performance) as a function of system size. Our findings help clarify the role of first-order and quasi-second-order methods in variational Monte Carlo calculations and the conditions under which they should respectively be used. In particular, we find that unlike in deterministic optimization, where closeness to the variational minimum determines the suitability of second-order methods, in stochastic optimization the main factor is the overall expressivity of the wavefunction: quasi-second-order methods lead to an overall reduction in cost relative to first-order methods when the wavefunction is sufficiently expressive to represent the ground-state, even when starting far away from the ground state. This makes quasi-second-order methods an important technique when used with wavefunctions with arbitrarily improvable accuracy.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-26T21:38:47Z</published>
+    <arxiv:comment>23 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Ruojing Peng</name>
+    </author>
+    <author>
+      <name>Garnet Kin-Lic Chan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.09725v2</id>
+    <title>Non-stabilizerness of Neural Quantum States</title>
+    <updated>2026-01-27T14:41:24Z</updated>
+    <link href="https://arxiv.org/abs/2502.09725v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.09725v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a methodology to estimate non-stabilizerness or "magic", a key resource for quantum complexity, with Neural Quantum States (NQS). Our framework relies on two schemes based on Monte Carlo sampling to quantify non-stabilizerness via Stabilizer Rényi Entropy (SRE) in arbitrary variational wave functions. When combined with NQS, this approach is effective for systems with strong correlations and in dimensions larger than one, unlike Tensor Network methods. Firstly, we study the magic content in an ensemble of random NQS, demonstrating that neural network parametrizations of the wave function capture finite non-stabilizerness besides large entanglement. Secondly, we investigate the non-stabilizerness in the ground state of the $J_1$-$J_2$ Heisenberg model. In 1D, we find that the SRE vanishes at the Majumdar-Ghosh point $J_2 = J_1/2$, consistent with a stabilizer ground state. In 2D, a dip in the SRE is observed near maximum frustration around $J_2/J_1 \approx 0.6$, suggesting a Valence Bond Solid between the two antiferromagnetic phases.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-13T19:14:15Z</published>
+    <arxiv:comment>6 + 6 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Research 7, 043289 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Alessandro Sinibaldi</name>
+    </author>
+    <author>
+      <name>Antonio Francesco Mello</name>
+    </author>
+    <author>
+      <name>Mario Collura</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <arxiv:doi>10.1103/v5tw-yn1f</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/v5tw-yn1f" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.20669v2</id>
+    <title>A Tutorial on the Use of Physics-Informed Neural Networks to Compute the Spectrum of Quantum Systems</title>
+    <updated>2024-09-11T11:08:12Z</updated>
+    <link href="https://arxiv.org/abs/2407.20669v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.20669v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum many-body systems are of great interest for many research areas, including physics, biology and chemistry. However, their simulation is extremely challenging, due to the exponential growth of the Hilbert space with the system size, making it exceedingly difficult to parameterize the wave functions of large systems by using exact methods. Neural networks and machine learning in general are a way to face this challenge. For instance, methods like Tensor networks and Neural Quantum States are being investigated as promising tools to obtain the wave function of a quantum mechanical system. In this tutorial, we focus on a particularly promising class of deep learning algorithms. We explain how to construct a Physics-Informed Neural Network (PINN) able to solve the Schrödinger equation for a given potential, by finding its eigenvalues and eigenfunctions. This technique is unsupervised, and utilizes a novel computational method in a manner that is barely explored. PINNs are a deep learning method that exploits Automatic Differentiation to solve Integro-Differential Equations in a mesh-free way. We show how to find both the ground and the excited states. The method discovers the states progressively by starting from the ground state. We explain how to introduce inductive biases in the loss to exploit further knowledge of the physical system. Such additional constraints allow for a faster and more accurate convergence. This technique can then be enhanced by a smart choice of collocation points in order to take advantage of the mesh-free nature of the PINN. The methods are made explicit by applying them to the infinite potential well and the particle in a ring, a challenging problem to be learned by an Artificial Intelligence agent due to the presence of complex-valued eigenfunctions and degenerate states.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-30T09:07:03Z</published>
+    <arxiv:comment>18 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Technologies 12, 174 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Lorenzo Brevi</name>
+    </author>
+    <author>
+      <name>Antonio Mandarino</name>
+    </author>
+    <author>
+      <name>Enrico Prati</name>
+    </author>
+    <arxiv:doi>10.3390/technologies12100174</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/technologies12100174" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.11941v1</id>
+    <title>Entanglement transition in deep neural quantum states</title>
+    <updated>2023-12-19T08:40:23Z</updated>
+    <link href="https://arxiv.org/abs/2312.11941v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.11941v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite the huge theoretical potential of neural quantum states, their use in describing generic, highly-correlated quantum many-body systems still often poses practical difficulties. Customized network architectures are under active investigation to address these issues. For a guided search of suited network architectures a deepened understanding of the link between neural network properties and attributes of the physical system one is trying to describe, is imperative. Drawing inspiration from the field of machine learning, in this work we show how information propagation in deep neural networks impacts the physical entanglement properties of deep neural quantum states. In fact, we link a previously identified information propagation phase transition of a neural network to a similar transition of entanglement in neural quantum states. With this bridge we can identify optimal neural quantum state hyperparameter regimes for representing area as well as volume law entangled states. The former are easily accessed by alternative methods, such as tensor network representations, at least in low physical dimensions, while the latter are challenging to describe generally due to their extensive quantum entanglement. This advance of our understanding of network configurations for accurate quantum state representation helps to develop effective representations to deal with volume-law quantum states, and we apply these findings to describe the ground state (area law state) vs. the excited state (volume law state) properties of the prototypical next-nearest neighbor spin-1/2 Heisenberg model.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-19T08:40:23Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Giacomo Passetti</name>
+    </author>
+    <author>
+      <name>Dante M. Kennes</name>
+    </author>
+  </entry>
+</feed>

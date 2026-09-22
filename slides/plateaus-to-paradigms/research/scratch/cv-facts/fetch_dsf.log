@@ -1,0 +1,40 @@
+OK HTTP:200 SIZE:589236 TRY:1 https://openaccess.thecvf.com/content_iccv_2015/papers/Girshick_Fast_R-CNN_ICCV_2015_paper.pdf
+OK HTTP:200 SIZE:761683 TRY:1 https://papers.nips.cc/paper_files/paper/2015/file/14bfa6bb14875e45bba028a21ed38046-Paper.pdf
+OK HTTP:200 SIZE:1270136 TRY:1 https://openaccess.thecvf.com/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf
+OK HTTP:200 SIZE:1847626 TRY:1 https://openaccess.thecvf.com/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf
+FAIL HTTP:404 SIZE:284 https://openaccess.thecvf.com/content_iccv_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf
+OK HTTP:200 SIZE:2927813 TRY:1 https://openaccess.thecvf.com/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf
+OK HTTP:200 SIZE:2855206 TRY:1 https://arxiv.org/pdf/1706.05587
+OK HTTP:200 SIZE:4192282 TRY:1 https://arxiv.org/pdf/1802.02611
+OK HTTP:200 SIZE:2494225 TRY:1 https://arxiv.org/pdf/1512.02325
+OK HTTP:200 SIZE:1959595 TRY:1 https://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf
+OK HTTP:200 SIZE:6101934 TRY:1 https://arxiv.org/pdf/1606.00915
+OK HTTP:200 SIZE:4712082 TRY:1 https://openaccess.thecvf.com/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf
+OK HTTP:200 SIZE:4722682 TRY:1 https://arxiv.org/pdf/1412.7062
+OK HTTP:200 SIZE:2190032 TRY:1 https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf
+OK HTTP:200 SIZE:1648684 TRY:1 https://arxiv.org/pdf/1505.04597
+FAIL HTTP:000 SIZE:0 http://vis-www.cs.umass.edu/lfw/results.html
+FAIL HTTP:000 SIZE:0 http://vis-www.cs.umass.edu/papers/kumar_iccv09.pdf
+FAIL HTTP:000 SIZE:0 http://host.robots.ox.ac.uk/pascal/VOC/voc2012/results.html
+FAIL HTTP:000 SIZE:0 http://host.robots.ox.ac.uk/pascal/VOC/voc2007/results.html
+FAIL HTTP:000 SIZE:0 http://host.robots.ox.ac.uk/pascal/VOC/voc2010/results.html
+FAIL HTTP:000 SIZE:0 http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf
+OK HTTP:200 SIZE:35537 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2010/index.html
+OK HTTP:200 SIZE:25463 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2007/index.html
+OK HTTP:200 SIZE:44878 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2012/index.html
+OK HTTP:200 SIZE:1759227 TRY:1 https://www.cs.umass.edu/~elm/papers/FRTprimer.pdf
+OK HTTP:200 SIZE:2939831 TRY:1 https://www.cs.umass.edu/~elm/papers/LFW_survey.pdf
+OK HTTP:200 SIZE:18361986 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/pubs/everingham15.pdf
+OK HTTP:200 SIZE:38118 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2007/results/index.shtml
+OK HTTP:200 SIZE:76334 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2012/results/index.html
+OK HTTP:200 SIZE:179891 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2010/results/index.html
+OK HTTP:200 SIZE:210375 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2010/devkit_doc_08-May-2010.pdf
+OK HTTP:200 SIZE:425744 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2012/devkit_doc.pdf
+OK HTTP:200 SIZE:178965 TRY:1 https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2007/devkit_doc_07-Jun-2007.pdf
+OK HTTP:200 SIZE:9677211 TRY:1 http://cs.brown.edu/~pff/papers/latent.pdf
+OK HTTP:200 SIZE:1108470 TRY:1 https://arxiv.org/pdf/1404.3840
+OK HTTP:200 SIZE:19374990 TRY:1 https://web.cs.ucdavis.edu/~yjlee/teaching/ecs289h-fall2014/11.13.pdf
+OK HTTP:200 SIZE:6846714 TRY:1 https://www.cs.columbia.edu/~neeraj/base/papers/nk_iccv2009_attrs.pdf
+FAIL HTTP:404 SIZE:271 http://biometrics.cse.msu.edu/Publications/Face/BestRowdenBishtKlontzJain_HumanBaselineLFW_IJCB2014.pdf
+OK HTTP:200 SIZE:1839010 TRY:1 http://biometrics.cse.msu.edu/Presentations/Crowdsourcing_IJCB_2014_ppt.pdf
+OK HTTP:200 SIZE:6913803 TRY:1 https://arxiv.org/pdf/1506.01497v3

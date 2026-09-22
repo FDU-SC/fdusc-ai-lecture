@@ -1,0 +1,3436 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/O1OPxJx6cxR49pc5H0fr6+i54j8</id>
+  <title>arXiv Query: search_query=au:"Albergo" AND abs:"flow"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T15:03:41Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:%22Albergo%22+AND+abs:%22flow%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>35</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.01692v3</id>
+    <title>Beckmann Transport Models: From Autonomous Flows to One-Step Maps</title>
+    <updated>2026-08-13T03:07:19Z</updated>
+    <link href="https://arxiv.org/abs/2608.01692v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.01692v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose an instantiation of flow matching that relies on a time-independent velocity field (an \emph{autonomous flow}) to exactly map between two distributions, so long as the target is singular, i.e.\ supported on a lower-dimensional data manifold. We also show that the one-step generative map associated with this flow is the unique solution of a simple conservation equation, which can be used to learn the map directly from samples. These autonomous flows and maps give a dynamical meaning to the flux constraint of Beckmann's transportation problem. Their construction provides a unifying framework that recovers, for instance, the closed-form Poisson-flow generative model and equilibrium matching with a quadratic flow-matching regression loss. We illustrate how this theory corrects inconsistencies in existing methods and demonstrate the effectiveness of the autonomous flow and the one-step map on ImageNet 256x256.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T04:45:52Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lee Cheuk-Kit</name>
+    </author>
+    <author>
+      <name>Florentin Coeurdoux</name>
+    </author>
+    <author>
+      <name>Yuyuan Chen</name>
+    </author>
+    <author>
+      <name>Sophia Tang</name>
+    </author>
+    <author>
+      <name>Peter Potaptchik</name>
+    </author>
+    <author>
+      <name>Yilun Du</name>
+    </author>
+    <author>
+      <name>Michael Samuel Albergo</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.11156v1</id>
+    <title>Itô maps for any-step SDEs</title>
+    <updated>2026-06-09T17:39:22Z</updated>
+    <link href="https://arxiv.org/abs/2606.11156v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.11156v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent one-step generative models accelerate sampling by learning deterministic flow maps of the underlying dynamics. These methods rely on learning from ordinary differential equations, leaving open how to define an exact distillation procedure for stochastic dynamics. We introduce the Itô map, an any-step stochastic flow map that takes an intermediate state and Brownian path and predicts future states in a single pass. The Itô map formulation yields novel estimators for inference-time control by providing cheap, differentiable access to posterior samples. Empirically, Itô maps produce diverse, conditionally valid endpoint samples from fixed intermediate states and support strong steering performance on synthetic and image-generation benchmarks. These results establish any-step SDE integration as a useful primitive for posterior sampling and stochastic control.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-09T17:39:22Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Zhengkai Pan</name>
+    </author>
+    <author>
+      <name>Peter Potaptchik</name>
+    </author>
+    <author>
+      <name>Wenxi Yao</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Jakiw Pidstrigach</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.00229v1</id>
+    <title>A unified perspective on fine-tuning and sampling with diffusion and flow models</title>
+    <updated>2026-04-30T21:06:46Z</updated>
+    <link href="https://arxiv.org/abs/2605.00229v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.00229v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the problem of training diffusion and flow generative models to sample from target distributions defined by an exponential tilting of a base density; a formulation that subsumes both sampling from unnormalized densities and reward fine-tuning of pre-trained models. This problem can be approached from a stochastic optimal control (SOC) perspective, using adjoint-based or score matching methods, or from a non-equilibrium thermodynamics perspective. We provide a unified framework encompassing these approaches and make three main contributions: (i) bias-variance decompositions revealing that Adjoint Matching/Sampling and Novel Score Matching have finite gradient variance, while Target and Conditional Score Matching do not; (ii) norm bounds on the lean adjoint ODE that theoretically support the effectiveness of adjoint-based methods; and (iii) adaptations of the CMCD and NETS loss functions, along with novel Crooks and Jarzynski identities, to the exponential tilting setting. We validate our analysis with reward fine-tuning experiments on Stable Diffusion 1.5 and 3.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T21:06:46Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Carles Domingo-Enrich</name>
+    </author>
+    <author>
+      <name>Yuanqi Du</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.09784v2</id>
+    <title>Discrete Flow Maps</title>
+    <updated>2026-04-14T17:35:15Z</updated>
+    <link href="https://arxiv.org/abs/2604.09784v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.09784v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The sequential nature of autoregressive next-token prediction imposes a fundamental speed limit on large language models. While continuous flow models offer a path to parallel generation, they traditionally demand expensive iterative integration. Flow Maps bypass this bottleneck by compressing generative trajectories into single-step mappings, theoretically enabling the generation of full text sequences from noise in a single forward pass. However, standard formulations rely on Euclidean regression losses that are geometrically ill-suited for discrete data. In this work, we resolve this conflict with Discrete Flow Maps, a framework that reconciles trajectory compression with the geometry of the probability simplex. We recast standard flow map training for the discrete domain, aligning the training dynamics with the discrete nature of language. Empirically, this strict geometric alignment allows our method to surpass previous state-of-the-art results in discrete flow modeling.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-10T18:10:14Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Peter Potaptchik</name>
+    </author>
+    <author>
+      <name>Jason Yim</name>
+    </author>
+    <author>
+      <name>Adhi Saravanan</name>
+    </author>
+    <author>
+      <name>Peter Holderrieth</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.00252v1</id>
+    <title>A Monte Carlo estimator of flow fields for sampling and noise problems</title>
+    <updated>2026-02-27T19:04:13Z</updated>
+    <link href="https://arxiv.org/abs/2603.00252v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.00252v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learned field transformations may help address ubiquitous critical slowing down and signal-to-noise problems in lattice field theory. In the context of an annealed sequence of distributions, field transformations are defined by integrating flow fields that exactly solve a local transport problem. These proceedings discuss a new Monte Carlo approach to evaluating these flow fields, which can then be used directly in such contexts or as a means of generating unbiased training data for machine learning approaches. By defining the Monte Carlo estimator using coupled Langevin noise, the statistical noise in the required integrals is significantly mitigated. Demonstrations of the method include a U(1) transport problem and an SU(N) glueball correlator.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-27T19:04:13Z</published>
+    <arxiv:comment>10 pages, 5 figures. Proceedings of the 42nd International Symposium on Lattice Field Theory (LATTICE2025)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.14430v2</id>
+    <title>Meta Flow Maps enable scalable reward alignment</title>
+    <updated>2026-06-18T00:14:54Z</updated>
+    <link href="https://arxiv.org/abs/2601.14430v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.14430v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Controlling generative models is computationally expensive. This is because optimal alignment with a reward function--whether via inference-time steering or fine-tuning--requires estimating the value function. This task demands access to the conditional posterior $p_{1|t}(x_1|x_t)$, the distribution of clean data $x_1$ consistent with an intermediate state $x_t$, a requirement that typically compels methods to resort to costly trajectory simulations. To address this bottleneck, we introduce Meta Flow Maps (MFMs), a framework extending consistency models and flow maps into the stochastic regime. MFMs are trained to perform stochastic one-step posterior sampling, generating arbitrarily many i.i.d. draws of clean data $x_1$ from any intermediate state. Crucially, these samples provide a differentiable reparametrization that unlocks efficient value function estimation. We leverage this capability to solve bottlenecks in both paradigms: enabling inference-time steering without inner rollouts, and facilitating unbiased, off-policy fine-tuning to general rewards. Empirically, our single-particle steered-MFM sampler outperforms a Best-of-1000 baseline on ImageNet across multiple rewards at a fraction of the compute.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-20T19:39:56Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Peter Potaptchik</name>
+    </author>
+    <author>
+      <name>Adhi Saravanan</name>
+    </author>
+    <author>
+      <name>Abbas Mammadov</name>
+    </author>
+    <author>
+      <name>Alvaro Prat</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Yee Whye Teh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21829v1</id>
+    <title>Tilt Matching for Scalable Sampling and Fine-Tuning</title>
+    <updated>2025-12-26T02:12:10Z</updated>
+    <link href="https://arxiv.org/abs/2512.21829v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21829v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a simple, scalable algorithm for using stochastic interpolants to sample from unnormalized densities and for fine-tuning generative models. The approach, Tilt Matching, arises from a dynamical equation relating the flow matching velocity to one targeting the same distribution tilted by a reward, implicitly solving a stochastic optimal control problem. The new velocity inherits the regularity of stochastic interpolant transports while also being the minimizer of an objective with strictly lower variance than flow matching itself. The update to the velocity field can be interpreted as the sum of all joint cumulants of the stochastic interpolant and copies of the reward, and to first order is their covariance. The algorithms do not require any access to gradients of the reward or backpropagating through trajectories of the flow or diffusion. We empirically verify that the approach is efficient and highly scalable, providing state-of-the-art results on sampling under Lennard-Jones potentials and is competitive on fine-tuning Stable Diffusion, without requiring reward multipliers. It can also be straightforwardly applied to tilting few-step flow map models.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-26T02:12:10Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Peter Potaptchik</name>
+    </author>
+    <author>
+      <name>Cheuk-Kit Lee</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.22688v1</id>
+    <title>Test-time scaling of diffusions with flow maps</title>
+    <updated>2025-11-27T18:44:12Z</updated>
+    <link href="https://arxiv.org/abs/2511.22688v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.22688v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A common recipe to improve diffusion models at test-time so that samples score highly against a user-specified reward is to introduce the gradient of the reward into the dynamics of the diffusion itself. This procedure is often ill posed, as user-specified rewards are usually only well defined on the data distribution at the end of generation. While common workarounds to this problem are to use a denoiser to estimate what a sample would have been at the end of generation, we propose a simple solution to this problem by working directly with a flow map. By exploiting a relationship between the flow map and velocity field governing the instantaneous transport, we construct an algorithm, Flow Map Trajectory Tilting (FMTT), which provably performs better ascent on the reward than standard test-time methods involving the gradient of the reward. The approach can be used to either perform exact sampling via importance weighting or principled search that identifies local maximizers of the reward-tilted distribution. We demonstrate the efficacy of our approach against other look-ahead techniques, and show how the flow map enables engagement with complicated reward functions that make possible new forms of image editing, e.g. by interfacing with vision language models.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-27T18:44:12Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Amirmojtaba Sabour</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Carles Domingo-Enrich</name>
+    </author>
+    <author>
+      <name>Nicholas M. Boffi</name>
+    </author>
+    <author>
+      <name>Sanja Fidler</name>
+    </author>
+    <author>
+      <name>Karsten Kreis</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.20906v2</id>
+    <title>DASIP: Dynamic Test-Time Compute Scaling for Robot Control with Stochastic Interpolant Policies</title>
+    <updated>2026-06-20T17:21:11Z</updated>
+    <link href="https://arxiv.org/abs/2511.20906v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.20906v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion- and flow-based policies deliver state-of-the-art performance on long-horizon robotic manipulation and imitation learning tasks. However, these controllers employ a fixed inference budget at every control step, regardless of task complexity, leading to computational inefficiency for simple subtasks while potentially underperforming on challenging ones. To address these issues, we introduce Difficulty-Aware Stochastic Interpolant Policy (DA-SIP), a framework that enables robotic controllers to adaptively adjust their integration horizon in real time based on task difficulty. Our approach employs a difficulty classifier that analyzes observations to dynamically select the step budget, the optimal solver variant, and ODE/SDE integration at each control cycle. DA-SIP builds upon the stochastic interpolant formulation to provide a unified framework that unlocks diverse training and inference configurations for diffusion- and flow-based policies. Through comprehensive benchmarks across diverse manipulation tasks, DA-SIP achieves 2.6-4.4x reduction in total computation time while maintaining task success rates comparable to fixed maximum-computation baselines. By implementing adaptive computation within this framework, DA-SIP transforms generative robot controllers into efficient, task-aware systems that intelligently allocate inference resources where they provide the greatest benefit.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-25T22:46:42Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Inkook Chun</name>
+    </author>
+    <author>
+      <name>Seungjae Lee</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Saining Xie</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.21608v2</id>
+    <title>Generalised Flow Maps for Few-Step Generative Modelling on Riemannian Manifolds</title>
+    <updated>2026-02-07T15:43:15Z</updated>
+    <link href="https://arxiv.org/abs/2510.21608v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.21608v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Geometric data and purpose-built generative models on them have become ubiquitous in high-impact deep learning application domains, ranging from protein backbone generation and computational chemistry to geospatial data. Current geometric generative models remain computationally expensive at inference -- requiring many steps of complex numerical simulation -- as they are derived from dynamical measure transport frameworks such as diffusion and flow-matching on Riemannian manifolds. In this paper, we propose Generalised Flow Maps (GFM), a new class of few-step generative models that generalises the Flow Map framework in Euclidean spaces to arbitrary Riemannian manifolds. We instantiate GFMs with three self-distillation-based training methods: Generalised Lagrangian Flow Maps, Generalised Eulerian Flow Maps, and Generalised Progressive Flow Maps. We theoretically show that GFMs, under specific design decisions, unify and elevate existing Euclidean few-step generative models, such as consistency models, shortcut models, and meanflows, to the Riemannian setting. We benchmark GFMs against other geometric generative models on a suite of geometric datasets, including geospatial data, RNA torsion angles, and hyperbolic manifolds, and achieve state-of-the-art sample quality for single- and few-step evaluations, and superior or competitive log-likelihoods using the implicit probability flow.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-24T16:14:31Z</published>
+    <arxiv:comment>Under review</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Oscar Davis</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Nicholas M. Boffi</name>
+    </author>
+    <author>
+      <name>Michael M. Bronstein</name>
+    </author>
+    <author>
+      <name>Avishek Joey Bose</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.04605v4</id>
+    <title>Multitask Learning with Stochastic Interpolants</title>
+    <updated>2026-02-25T16:49:58Z</updated>
+    <link href="https://arxiv.org/abs/2508.04605v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.04605v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a framework for learning maps between probability distributions that broadly generalizes the time dynamics of flow and diffusion models. To enable this, we generalize stochastic interpolants by replacing the scalar time variable with vectors, matrices, or linear operators, allowing us to bridge probability distributions across multiple dimensional spaces. This approach enables the construction of versatile generative models capable of fulfilling multiple tasks without task-specific training. Our operator-based interpolants not only provide a unifying theoretical perspective for existing generative models but also extend their capabilities. Through numerical experiments, we demonstrate the zero-shot efficacy of our method on conditional generation and inpainting, fine-tuning and posterior sampling, and multiscale modeling, suggesting its potential as a generic task-agnostic alternative to specialized models.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-06T16:25:19Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hugo Negrel</name>
+    </author>
+    <author>
+      <name>Florentin Coeurdoux</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.18825v2</id>
+    <title>How to build a consistency model: Learning flow maps via self-distillation</title>
+    <updated>2025-10-05T20:24:27Z</updated>
+    <link href="https://arxiv.org/abs/2505.18825v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.18825v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow-based generative models achieve state-of-the-art sample quality, but require the expensive solution of a differential equation at inference time. Flow map models, commonly known as consistency models, encompass many recent efforts to improve inference-time efficiency by learning the solution operator of this differential equation. Yet despite their promise, these models lack a unified description that clearly explains how to learn them efficiently in practice. Here, building on the methodology proposed in Boffi et. al. (2024), we present a systematic algorithmic framework for directly learning the flow map associated with a flow or diffusion model. By exploiting a relationship between the velocity field underlying a continuous-time flow and the instantaneous rate of change of the flow map, we show how to convert any distillation scheme into a direct training algorithm via self-distillation, eliminating the need for pre-trained teachers. We introduce three algorithmic families based on different mathematical characterizations of the flow map: Eulerian, Lagrangian, and Progressive methods, which we show encompass and extend all known distillation and direct training schemes for consistency models. We find that the novel class of Lagrangian methods, which avoid both spatial derivatives and bootstrapping from small steps by design, achieve significantly more stable training and higher performance than more standard Eulerian and Progressive schemes. Our methodology unifies existing training schemes under a single common framework and reveals new design principles for accelerated generative modeling. Associated code is available at https://github.com/nmboffi/flow-maps.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-24T18:50:50Z</published>
+    <arxiv:comment>NeurIPS 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nicholas M. Boffi</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.08468v2</id>
+    <title>Flow and thermal modelling of the argon volume in the DarkSide-20k TPC</title>
+    <updated>2025-06-26T16:06:38Z</updated>
+    <link href="https://arxiv.org/abs/2503.08468v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.08468v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The DarkSide-20k dark matter experiment, currently under construction at LNGS, features a dual-phase time projection chamber (TPC) with a ~50 t argon target from an underground well. At this scale, it is crucial to optimise the argon flow pattern for efficient target purification and for fast distribution of internal gaseous calibration sources with lifetimes of the order of hours. To this end, we have performed computational fluid dynamics simulations and heat transfer calculations. The residence time distribution shows that the detector is well-mixed on time-scales of the turnover time (~40 d). Notably, simulations show that despite a two-order-of-magnitude difference between the turnover time and the half-life of $^{83\text{m}}$Kr of 1.83 h, source atoms have the highest probability to reach the centre of the TPC 13 min after their injection, allowing for a homogeneous distribution before undergoing radioactive decay. We further analyse the thermal aspects of dual-phase operation and define the requirements for the formation of a stable gas pocket on top of the liquid. We find a best-estimate value for the heat transfer rate at the liquid-gas interface of 62 W with an upper limit of 144 W and a minimum gas pocket inlet temperature of 89 K to avoid condensation on the acrylic anode. This study also informs the placement of liquid inlets and outlets in the TPC. The presented techniques are widely applicable to other large-scale, noble-liquid detectors.</summary>
+    <category term="physics.ins-det" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-11T14:15:51Z</published>
+    <arxiv:comment>37 pages, 19 figures, 7 tables. Updated to match the published journal version</arxiv:comment>
+    <arxiv:primary_category term="physics.ins-det"/>
+    <arxiv:journal_ref>JINST 20 P06046 (2025)</arxiv:journal_ref>
+    <author>
+      <name>DarkSide-20k Collaboration</name>
+    </author>
+    <author>
+      <name> :</name>
+    </author>
+    <author>
+      <name>F. Acerbi</name>
+    </author>
+    <author>
+      <name>P. Adhikari</name>
+    </author>
+    <author>
+      <name>P. Agnes</name>
+    </author>
+    <author>
+      <name>I. Ahmad</name>
+    </author>
+    <author>
+      <name>S. Albergo</name>
+    </author>
+    <author>
+      <name>I. F. Albuquerque</name>
+    </author>
+    <author>
+      <name>T. Alexander</name>
+    </author>
+    <author>
+      <name>A. K. Alton</name>
+    </author>
+    <author>
+      <name>P. Amaudruz</name>
+    </author>
+    <author>
+      <name>M. Angiolilli</name>
+    </author>
+    <author>
+      <name>E. Aprile</name>
+    </author>
+    <author>
+      <name>M. Atzori Corona</name>
+    </author>
+    <author>
+      <name>D. J. Auty</name>
+    </author>
+    <author>
+      <name>M. Ave</name>
+    </author>
+    <author>
+      <name>I. C. Avetisov</name>
+    </author>
+    <author>
+      <name>O. Azzolini</name>
+    </author>
+    <author>
+      <name>H. O. Back</name>
+    </author>
+    <author>
+      <name>Z. Balmforth</name>
+    </author>
+    <author>
+      <name>A. Barrado Olmedo</name>
+    </author>
+    <author>
+      <name>P. Barrillon</name>
+    </author>
+    <author>
+      <name>G. Batignani</name>
+    </author>
+    <author>
+      <name>P. Bhowmick</name>
+    </author>
+    <author>
+      <name>M. Bloem</name>
+    </author>
+    <author>
+      <name>S. Blua</name>
+    </author>
+    <author>
+      <name>V. Bocci</name>
+    </author>
+    <author>
+      <name>W. Bonivento</name>
+    </author>
+    <author>
+      <name>B. Bottino</name>
+    </author>
+    <author>
+      <name>M. G. Boulay</name>
+    </author>
+    <author>
+      <name>A. Buchowicz</name>
+    </author>
+    <author>
+      <name>S. Bussino</name>
+    </author>
+    <author>
+      <name>J. Busto</name>
+    </author>
+    <author>
+      <name>M. Cadeddu</name>
+    </author>
+    <author>
+      <name>M. Cadoni</name>
+    </author>
+    <author>
+      <name>R. Calabrese</name>
+    </author>
+    <author>
+      <name>V. Camillo</name>
+    </author>
+    <author>
+      <name>A. Caminata</name>
+    </author>
+    <author>
+      <name>N. Canci</name>
+    </author>
+    <author>
+      <name>M. Caravati</name>
+    </author>
+    <author>
+      <name>M. Cárdenas-Montes</name>
+    </author>
+    <author>
+      <name>N. Cargioli</name>
+    </author>
+    <author>
+      <name>M. Carlini</name>
+    </author>
+    <author>
+      <name>A. Castellani</name>
+    </author>
+    <author>
+      <name>P. Castello</name>
+    </author>
+    <author>
+      <name>P. Cavalcante</name>
+    </author>
+    <author>
+      <name>S. Cebrian</name>
+    </author>
+    <author>
+      <name>S. Chashin</name>
+    </author>
+    <author>
+      <name>A. Chepurnov</name>
+    </author>
+    <author>
+      <name>S. Choudhary</name>
+    </author>
+    <author>
+      <name>L. Cifarelli</name>
+    </author>
+    <author>
+      <name>B. Cleveland</name>
+    </author>
+    <author>
+      <name>Y. Coadou</name>
+    </author>
+    <author>
+      <name>V. Cocco</name>
+    </author>
+    <author>
+      <name>D. Colaiuda</name>
+    </author>
+    <author>
+      <name>E. Conde Vilda</name>
+    </author>
+    <author>
+      <name>L. Consiglio</name>
+    </author>
+    <author>
+      <name>J. Corbett</name>
+    </author>
+    <author>
+      <name>B. S. Costa</name>
+    </author>
+    <author>
+      <name>M. Czubak</name>
+    </author>
+    <author>
+      <name>M. D'Aniello</name>
+    </author>
+    <author>
+      <name>S. D'Auria</name>
+    </author>
+    <author>
+      <name>M. D. Da Rocha Rolo</name>
+    </author>
+    <author>
+      <name>A. Dainty</name>
+    </author>
+    <author>
+      <name>G. Darbo</name>
+    </author>
+    <author>
+      <name>S. Davini</name>
+    </author>
+    <author>
+      <name>R. de Asmundis</name>
+    </author>
+    <author>
+      <name>S. De Cecco</name>
+    </author>
+    <author>
+      <name>G. Dellacasa</name>
+    </author>
+    <author>
+      <name>A. V. Derbin</name>
+    </author>
+    <author>
+      <name>A. Devoto</name>
+    </author>
+    <author>
+      <name>F. Di Capua</name>
+    </author>
+    <author>
+      <name>L. Di Noto</name>
+    </author>
+    <author>
+      <name>P. Di Stefano</name>
+    </author>
+    <author>
+      <name>L. K. Dias</name>
+    </author>
+    <author>
+      <name>D. Díaz Mairena</name>
+    </author>
+    <author>
+      <name>C. Dionisi</name>
+    </author>
+    <author>
+      <name>G. Dolganov</name>
+    </author>
+    <author>
+      <name>F. Dordei</name>
+    </author>
+    <author>
+      <name>V. Dronik</name>
+    </author>
+    <author>
+      <name>F. Dylon</name>
+    </author>
+    <author>
+      <name>A. Elersich</name>
+    </author>
+    <author>
+      <name>E. Ellingwood</name>
+    </author>
+    <author>
+      <name>T. Erjavec</name>
+    </author>
+    <author>
+      <name>N. Fearon</name>
+    </author>
+    <author>
+      <name>M. Fernandez Diaz</name>
+    </author>
+    <author>
+      <name>A. Ficorella</name>
+    </author>
+    <author>
+      <name>G. Fiorillo</name>
+    </author>
+    <author>
+      <name>P. Franchini</name>
+    </author>
+    <author>
+      <name>D. Franco</name>
+    </author>
+    <author>
+      <name>H. Frandini Gatti</name>
+    </author>
+    <author>
+      <name>E. Frolov</name>
+    </author>
+    <author>
+      <name>F. Gabriele</name>
+    </author>
+    <author>
+      <name>D. Gahan</name>
+    </author>
+    <author>
+      <name>C. Galbiati</name>
+    </author>
+    <author>
+      <name>G. Galiński</name>
+    </author>
+    <author>
+      <name>G. Gallina</name>
+    </author>
+    <author>
+      <name>G. Gallus</name>
+    </author>
+    <author>
+      <name>M. Garbini</name>
+    </author>
+    <author>
+      <name>P. Garcia Abia</name>
+    </author>
+    <author>
+      <name>A. Gawdzik</name>
+    </author>
+    <author>
+      <name>A. Gendotti</name>
+    </author>
+    <author>
+      <name>G. K. Giovanetti</name>
+    </author>
+    <author>
+      <name>V. Goicoechea Casanueva</name>
+    </author>
+    <author>
+      <name>A. Gola</name>
+    </author>
+    <author>
+      <name>L. Grandi</name>
+    </author>
+    <author>
+      <name>G. Grauso</name>
+    </author>
+    <author>
+      <name>G. Grilli di Cortona</name>
+    </author>
+    <author>
+      <name>A. Grobov</name>
+    </author>
+    <author>
+      <name>M. Gromov</name>
+    </author>
+    <author>
+      <name>M. Gulino</name>
+    </author>
+    <author>
+      <name>B. R. Hackett</name>
+    </author>
+    <author>
+      <name>A. L. Hallin</name>
+    </author>
+    <author>
+      <name>A. Hamer</name>
+    </author>
+    <author>
+      <name>M. Haranczyk</name>
+    </author>
+    <author>
+      <name>B. Harrop</name>
+    </author>
+    <author>
+      <name>T. Hessel</name>
+    </author>
+    <author>
+      <name>J. Hollingham</name>
+    </author>
+    <author>
+      <name>S. Horikawa</name>
+    </author>
+    <author>
+      <name>J. Hu</name>
+    </author>
+    <author>
+      <name>F. Hubaut</name>
+    </author>
+    <author>
+      <name>D. Huff</name>
+    </author>
+    <author>
+      <name>T. Hugues</name>
+    </author>
+    <author>
+      <name>E. V. Hungerford</name>
+    </author>
+    <author>
+      <name>A. Ianni</name>
+    </author>
+    <author>
+      <name>V. Ippolito</name>
+    </author>
+    <author>
+      <name>A. Jamil</name>
+    </author>
+    <author>
+      <name>C. Jillings</name>
+    </author>
+    <author>
+      <name>R. Keloth</name>
+    </author>
+    <author>
+      <name>N. Kemmerich</name>
+    </author>
+    <author>
+      <name>A. Kemp</name>
+    </author>
+    <author>
+      <name>M. Kimura</name>
+    </author>
+    <author>
+      <name>A. Klenin</name>
+    </author>
+    <author>
+      <name>K. Kondo</name>
+    </author>
+    <author>
+      <name>G. Korga</name>
+    </author>
+    <author>
+      <name>L. Kotsiopoulou</name>
+    </author>
+    <author>
+      <name>S. Koulosousas</name>
+    </author>
+    <author>
+      <name>A. Kubankin</name>
+    </author>
+    <author>
+      <name>P. Kunzé</name>
+    </author>
+    <author>
+      <name>M. Kuss</name>
+    </author>
+    <author>
+      <name>M. Kuźniak</name>
+    </author>
+    <author>
+      <name>M. Kuzwa</name>
+    </author>
+    <author>
+      <name>M. La Commara</name>
+    </author>
+    <author>
+      <name>M. Lai</name>
+    </author>
+    <author>
+      <name>E. Le Guirriec</name>
+    </author>
+    <author>
+      <name>E. Leason</name>
+    </author>
+    <author>
+      <name>A. Leoni</name>
+    </author>
+    <author>
+      <name>L. Lidey</name>
+    </author>
+    <author>
+      <name>J. Lipp</name>
+    </author>
+    <author>
+      <name>M. Lissia</name>
+    </author>
+    <author>
+      <name>L. Luzzi</name>
+    </author>
+    <author>
+      <name>O. Lychagina</name>
+    </author>
+    <author>
+      <name>O. Macfadyen</name>
+    </author>
+    <author>
+      <name>I. N. Machulin</name>
+    </author>
+    <author>
+      <name>S. Manecki</name>
+    </author>
+    <author>
+      <name>I. Manthos</name>
+    </author>
+    <author>
+      <name>L. Mapelli</name>
+    </author>
+    <author>
+      <name>A. Marasciulli</name>
+    </author>
+    <author>
+      <name>S. M. Mari</name>
+    </author>
+    <author>
+      <name>C. Mariani</name>
+    </author>
+    <author>
+      <name>J. Maricic</name>
+    </author>
+    <author>
+      <name>M. Martinez</name>
+    </author>
+    <author>
+      <name>C. J. Martoff</name>
+    </author>
+    <author>
+      <name>G. Matteucci</name>
+    </author>
+    <author>
+      <name>K. Mavrokoridis</name>
+    </author>
+    <author>
+      <name>A. B. McDonald</name>
+    </author>
+    <author>
+      <name>S. Merzi</name>
+    </author>
+    <author>
+      <name>A. Messina</name>
+    </author>
+    <author>
+      <name>R. Milincic</name>
+    </author>
+    <author>
+      <name>S. Minutoli</name>
+    </author>
+    <author>
+      <name>A. Mitra</name>
+    </author>
+    <author>
+      <name>J. Monroe</name>
+    </author>
+    <author>
+      <name>E. Moretti</name>
+    </author>
+    <author>
+      <name>M. Morrocchi</name>
+    </author>
+    <author>
+      <name>A. Morsy</name>
+    </author>
+    <author>
+      <name>T. Mroz</name>
+    </author>
+    <author>
+      <name>V. N. Muratova</name>
+    </author>
+    <author>
+      <name>M. Murra</name>
+    </author>
+    <author>
+      <name>C. Muscas</name>
+    </author>
+    <author>
+      <name>P. Musico</name>
+    </author>
+    <author>
+      <name>R. Nania</name>
+    </author>
+    <author>
+      <name>M. Nessi</name>
+    </author>
+    <author>
+      <name>G. Nieradka</name>
+    </author>
+    <author>
+      <name>K. Nikolopoulos</name>
+    </author>
+    <author>
+      <name>E. Nikoloudaki</name>
+    </author>
+    <author>
+      <name>I. Nikulin</name>
+    </author>
+    <author>
+      <name>J. Nowak</name>
+    </author>
+    <author>
+      <name>K. Olchanski</name>
+    </author>
+    <author>
+      <name>A. Oleinik</name>
+    </author>
+    <author>
+      <name>V. Oleynikov</name>
+    </author>
+    <author>
+      <name>P. Organtini</name>
+    </author>
+    <author>
+      <name>A. Ortiz de Solórzano</name>
+    </author>
+    <author>
+      <name>A. Padmanabhan</name>
+    </author>
+    <author>
+      <name>M. Pallavicini</name>
+    </author>
+    <author>
+      <name>L. Pandola</name>
+    </author>
+    <author>
+      <name>E. Pantic</name>
+    </author>
+    <author>
+      <name>E. Paoloni</name>
+    </author>
+    <author>
+      <name>D. Papi</name>
+    </author>
+    <author>
+      <name>B. Park</name>
+    </author>
+    <author>
+      <name>G. Pastuszak</name>
+    </author>
+    <author>
+      <name>G. Paternoster</name>
+    </author>
+    <author>
+      <name>A. Peck</name>
+    </author>
+    <author>
+      <name>P. A. Pegoraro</name>
+    </author>
+    <author>
+      <name>K. Pelczar</name>
+    </author>
+    <author>
+      <name>R. Perez</name>
+    </author>
+    <author>
+      <name>V. Pesudo</name>
+    </author>
+    <author>
+      <name>S. Piacentini</name>
+    </author>
+    <author>
+      <name>N. Pino</name>
+    </author>
+    <author>
+      <name>G. Plante</name>
+    </author>
+    <author>
+      <name>A. Pocar</name>
+    </author>
+    <author>
+      <name>S. Pordes</name>
+    </author>
+    <author>
+      <name>P. Pralavorio</name>
+    </author>
+    <author>
+      <name>E. Preosti</name>
+    </author>
+    <author>
+      <name>D. Price</name>
+    </author>
+    <author>
+      <name>S. Puglia</name>
+    </author>
+    <author>
+      <name>M. Queiroga Bazetto</name>
+    </author>
+    <author>
+      <name>F. Raffaelli</name>
+    </author>
+    <author>
+      <name>F. Ragusa</name>
+    </author>
+    <author>
+      <name>Y. Ramachers</name>
+    </author>
+    <author>
+      <name>A. Ramirez</name>
+    </author>
+    <author>
+      <name>S. Ravinthiran</name>
+    </author>
+    <author>
+      <name>M. Razeti</name>
+    </author>
+    <author>
+      <name>A. L. Renshaw</name>
+    </author>
+    <author>
+      <name>A. Repond</name>
+    </author>
+    <author>
+      <name>M. Rescigno</name>
+    </author>
+    <author>
+      <name>S. Resconi</name>
+    </author>
+    <author>
+      <name>F. Retiere</name>
+    </author>
+    <author>
+      <name>L. P. Rignanese</name>
+    </author>
+    <author>
+      <name>A. Rivetti</name>
+    </author>
+    <author>
+      <name>A. Roberts</name>
+    </author>
+    <author>
+      <name>C. Roberts</name>
+    </author>
+    <author>
+      <name>G. Rogers</name>
+    </author>
+    <author>
+      <name>L. Romero</name>
+    </author>
+    <author>
+      <name>M. Rossi</name>
+    </author>
+    <author>
+      <name>A. Rubbia</name>
+    </author>
+    <author>
+      <name>D. Rudik</name>
+    </author>
+    <author>
+      <name>J. Runge</name>
+    </author>
+    <author>
+      <name>M. A. Sabia</name>
+    </author>
+    <author>
+      <name>P. Salomone</name>
+    </author>
+    <author>
+      <name>O. Samoylov</name>
+    </author>
+    <author>
+      <name>S. Sanfilippo</name>
+    </author>
+    <author>
+      <name>D. Santone</name>
+    </author>
+    <author>
+      <name>R. Santorelli</name>
+    </author>
+    <author>
+      <name>E. M. Santos</name>
+    </author>
+    <author>
+      <name>I. Sargeant</name>
+    </author>
+    <author>
+      <name>C. Savarese</name>
+    </author>
+    <author>
+      <name>E. Scapparone</name>
+    </author>
+    <author>
+      <name>F. G. Schuckman</name>
+    </author>
+    <author>
+      <name>G. Scioli</name>
+    </author>
+    <author>
+      <name>D. A. Semenov</name>
+    </author>
+    <author>
+      <name>V. Shalamova</name>
+    </author>
+    <author>
+      <name>A. Sheshukov</name>
+    </author>
+    <author>
+      <name>M. Simeone</name>
+    </author>
+    <author>
+      <name>P. Skensved</name>
+    </author>
+    <author>
+      <name>M. D. Skorokhvatov</name>
+    </author>
+    <author>
+      <name>O. Smirnov</name>
+    </author>
+    <author>
+      <name>T. Smirnova</name>
+    </author>
+    <author>
+      <name>B. Smith</name>
+    </author>
+    <author>
+      <name>F. Spadoni</name>
+    </author>
+    <author>
+      <name>M. Spangenberg</name>
+    </author>
+    <author>
+      <name>A. Steri</name>
+    </author>
+    <author>
+      <name>V. Stornelli</name>
+    </author>
+    <author>
+      <name>S. Stracka</name>
+    </author>
+    <author>
+      <name>S. Sulis</name>
+    </author>
+    <author>
+      <name>A. Sung</name>
+    </author>
+    <author>
+      <name>C. Sunny</name>
+    </author>
+    <author>
+      <name>Y. Suvorov</name>
+    </author>
+    <author>
+      <name>A. M. Szelc</name>
+    </author>
+    <author>
+      <name>O. Taborda</name>
+    </author>
+    <author>
+      <name>R. Tartaglia</name>
+    </author>
+    <author>
+      <name>A. Taylor</name>
+    </author>
+    <author>
+      <name>J. Taylor</name>
+    </author>
+    <author>
+      <name>G. Testera</name>
+    </author>
+    <author>
+      <name>K. Thieme</name>
+    </author>
+    <author>
+      <name>A. Thompson</name>
+    </author>
+    <author>
+      <name>S. Torres-Lara</name>
+    </author>
+    <author>
+      <name>A. Tricomi</name>
+    </author>
+    <author>
+      <name>E. V. Unzhakov</name>
+    </author>
+    <author>
+      <name>M. Van Uffelen</name>
+    </author>
+    <author>
+      <name>T. Viant</name>
+    </author>
+    <author>
+      <name>S. Viel</name>
+    </author>
+    <author>
+      <name>A. Vishneva</name>
+    </author>
+    <author>
+      <name>R. B. Vogelaar</name>
+    </author>
+    <author>
+      <name>J. Vossebeld</name>
+    </author>
+    <author>
+      <name>B. Vyas</name>
+    </author>
+    <author>
+      <name>M. Wada</name>
+    </author>
+    <author>
+      <name>M. Walczak</name>
+    </author>
+    <author>
+      <name>H. Wang</name>
+    </author>
+    <author>
+      <name>Y. Wang</name>
+    </author>
+    <author>
+      <name>S. Westerdale</name>
+    </author>
+    <author>
+      <name>L. Williams</name>
+    </author>
+    <author>
+      <name>M. Wojcik</name>
+    </author>
+    <author>
+      <name>M. M. Wojcik</name>
+    </author>
+    <author>
+      <name>Y. Xie</name>
+    </author>
+    <author>
+      <name>C. Yang</name>
+    </author>
+    <author>
+      <name>J. Yin</name>
+    </author>
+    <author>
+      <name>A. Zabihi</name>
+    </author>
+    <author>
+      <name>P. Zakhary</name>
+    </author>
+    <author>
+      <name>A. Zani</name>
+    </author>
+    <author>
+      <name>Y. Zhang</name>
+    </author>
+    <author>
+      <name>T. Zhu</name>
+    </author>
+    <author>
+      <name>A. Zichichi</name>
+    </author>
+    <author>
+      <name>G. Zuzel</name>
+    </author>
+    <author>
+      <name>M. P. Zykova</name>
+    </author>
+    <arxiv:doi>10.1088/1748-0221/20/06/P06046</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1748-0221/20/06/P06046" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.14071v2</id>
+    <title>Benchmarking the design of the cryogenics system for the underground argon in DarkSide-20k</title>
+    <updated>2025-02-19T09:14:13Z</updated>
+    <link href="https://arxiv.org/abs/2408.14071v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.14071v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>DarkSide-20k (DS-20k) is a dark matter detection experiment under construction at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy. It utilises ~100 t of low radioactivity argon from an underground source (UAr) in its inner detector, with half serving as target in a dual-phase time projection chamber (TPC). The UAr cryogenics system must maintain stable thermodynamic conditions throughout the experiment's lifetime of over 10 years. Continuous removal of impurities and radon from the UAr is essential for maximising signal yield and mitigating background. We are developing an efficient and powerful cryogenics system with a gas purification loop with a target circulation rate of 1000 slpm. Central to its design is a condenser operated with liquid nitrogen which is paired with a gas heat exchanger cascade, delivering a combined cooling power of more than 8 kW. Here we present the design choices in view of the DS-20k requirements, in particular the condenser's working principle and the cooling control, and we show test results obtained with a dedicated benchmarking platform at CERN and LNGS. We find that the thermal efficiency of the recirculation loop, defined in terms of nitrogen consumption per argon flow rate, is 95 % and the pressure in the test cryostat can be maintained within $\pm$(0.1-0.2) mbar. We further detail a 5-day cool-down procedure of the test cryostat, maintaining a cooling rate typically within -2 K/h, as required for the DS-20k inner detector. Additionally, we assess the circuit's flow resistance, and the heat transfer capabilities of two heat exchanger geometries for argon phase change, used to provide gas for recirculation. We conclude by discussing how our findings influence the finalisation of the system design, including necessary modifications to meet requirements and ongoing testing activities.</summary>
+    <category term="physics.ins-det" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-26T07:55:21Z</published>
+    <arxiv:comment>44 pages, 25 figures, 1 table. Updated to match the published journal version</arxiv:comment>
+    <arxiv:primary_category term="physics.ins-det"/>
+    <arxiv:journal_ref>JINST 20 P02016 (2025)</arxiv:journal_ref>
+    <author>
+      <name>DarkSide-20k Collaboration</name>
+    </author>
+    <author>
+      <name> :</name>
+    </author>
+    <author>
+      <name>F. Acerbi</name>
+    </author>
+    <author>
+      <name>P. Adhikari</name>
+    </author>
+    <author>
+      <name>P. Agnes</name>
+    </author>
+    <author>
+      <name>I. Ahmad</name>
+    </author>
+    <author>
+      <name>S. Albergo</name>
+    </author>
+    <author>
+      <name>I. F. M. Albuquerque</name>
+    </author>
+    <author>
+      <name>T. Alexander</name>
+    </author>
+    <author>
+      <name>A. K. Alton</name>
+    </author>
+    <author>
+      <name>P. Amaudruz</name>
+    </author>
+    <author>
+      <name>M. Angiolilli</name>
+    </author>
+    <author>
+      <name>E. Aprile</name>
+    </author>
+    <author>
+      <name>R. Ardito</name>
+    </author>
+    <author>
+      <name>M. Atzori Corona</name>
+    </author>
+    <author>
+      <name>D. J. Auty</name>
+    </author>
+    <author>
+      <name>M. Ave</name>
+    </author>
+    <author>
+      <name>I. C. Avetisov</name>
+    </author>
+    <author>
+      <name>O. Azzolini</name>
+    </author>
+    <author>
+      <name>H. O. Back</name>
+    </author>
+    <author>
+      <name>Z. Balmforth</name>
+    </author>
+    <author>
+      <name>A. Barrado Olmedo</name>
+    </author>
+    <author>
+      <name>P. Barrillon</name>
+    </author>
+    <author>
+      <name>G. Batignani</name>
+    </author>
+    <author>
+      <name>P. Bhowmick</name>
+    </author>
+    <author>
+      <name>S. Blua</name>
+    </author>
+    <author>
+      <name>V. Bocci</name>
+    </author>
+    <author>
+      <name>W. Bonivento</name>
+    </author>
+    <author>
+      <name>B. Bottino</name>
+    </author>
+    <author>
+      <name>M. G. Boulay</name>
+    </author>
+    <author>
+      <name>A. Buchowicz</name>
+    </author>
+    <author>
+      <name>S. Bussino</name>
+    </author>
+    <author>
+      <name>J. Busto</name>
+    </author>
+    <author>
+      <name>M. Cadeddu</name>
+    </author>
+    <author>
+      <name>M. Cadoni</name>
+    </author>
+    <author>
+      <name>R. Calabrese</name>
+    </author>
+    <author>
+      <name>V. Camillo</name>
+    </author>
+    <author>
+      <name>A. Caminata</name>
+    </author>
+    <author>
+      <name>N. Canci</name>
+    </author>
+    <author>
+      <name>A. Capra</name>
+    </author>
+    <author>
+      <name>M. Caravati</name>
+    </author>
+    <author>
+      <name>M. Cárdenas-Montes</name>
+    </author>
+    <author>
+      <name>N. Cargioli</name>
+    </author>
+    <author>
+      <name>M. Carlini</name>
+    </author>
+    <author>
+      <name>A. Castellani</name>
+    </author>
+    <author>
+      <name>P. Castello</name>
+    </author>
+    <author>
+      <name>P. Cavalcante</name>
+    </author>
+    <author>
+      <name>S. Cebrian</name>
+    </author>
+    <author>
+      <name>J. Cela Ruiz</name>
+    </author>
+    <author>
+      <name>S. Chashin</name>
+    </author>
+    <author>
+      <name>A. Chepurnov</name>
+    </author>
+    <author>
+      <name>L. Cifarelli</name>
+    </author>
+    <author>
+      <name>D. Cintas</name>
+    </author>
+    <author>
+      <name>M. Citterio</name>
+    </author>
+    <author>
+      <name>B. Cleveland</name>
+    </author>
+    <author>
+      <name>Y. Coadou</name>
+    </author>
+    <author>
+      <name>V. Cocco</name>
+    </author>
+    <author>
+      <name>D. Colaiuda</name>
+    </author>
+    <author>
+      <name>E. Conde Vilda</name>
+    </author>
+    <author>
+      <name>L. Consiglio</name>
+    </author>
+    <author>
+      <name>B. S. Costa</name>
+    </author>
+    <author>
+      <name>M. Czubak</name>
+    </author>
+    <author>
+      <name>M. D'Aniello</name>
+    </author>
+    <author>
+      <name>S. D'Auria</name>
+    </author>
+    <author>
+      <name>M. D. Da Rocha Rolo</name>
+    </author>
+    <author>
+      <name>G. Darbo</name>
+    </author>
+    <author>
+      <name>S. Davini</name>
+    </author>
+    <author>
+      <name>S. De Cecco</name>
+    </author>
+    <author>
+      <name>G. De Guido</name>
+    </author>
+    <author>
+      <name>G. Dellacasa</name>
+    </author>
+    <author>
+      <name>A. V. Derbin</name>
+    </author>
+    <author>
+      <name>A. Devoto</name>
+    </author>
+    <author>
+      <name>F. Di Capua</name>
+    </author>
+    <author>
+      <name>A. Di Ludovico</name>
+    </author>
+    <author>
+      <name>L. Di Noto</name>
+    </author>
+    <author>
+      <name>P. Di Stefano</name>
+    </author>
+    <author>
+      <name>L. K. Dias</name>
+    </author>
+    <author>
+      <name>D. Díaz Mairena</name>
+    </author>
+    <author>
+      <name>X. Ding</name>
+    </author>
+    <author>
+      <name>C. Dionisi</name>
+    </author>
+    <author>
+      <name>G. Dolganov</name>
+    </author>
+    <author>
+      <name>F. Dordei</name>
+    </author>
+    <author>
+      <name>V. Dronik</name>
+    </author>
+    <author>
+      <name>A. Elersich</name>
+    </author>
+    <author>
+      <name>E. Ellingwood</name>
+    </author>
+    <author>
+      <name>T. Erjavec</name>
+    </author>
+    <author>
+      <name>M. Fernandez Diaz</name>
+    </author>
+    <author>
+      <name>A. Ficorella</name>
+    </author>
+    <author>
+      <name>G. Fiorillo</name>
+    </author>
+    <author>
+      <name>P. Franchini</name>
+    </author>
+    <author>
+      <name>D. Franco</name>
+    </author>
+    <author>
+      <name>H. Frandini Gatti</name>
+    </author>
+    <author>
+      <name>E. Frolov</name>
+    </author>
+    <author>
+      <name>F. Gabriele</name>
+    </author>
+    <author>
+      <name>D. Gahan</name>
+    </author>
+    <author>
+      <name>C. Galbiati</name>
+    </author>
+    <author>
+      <name>G. Galiński</name>
+    </author>
+    <author>
+      <name>G. Gallina</name>
+    </author>
+    <author>
+      <name>G. Gallus</name>
+    </author>
+    <author>
+      <name>M. Garbini</name>
+    </author>
+    <author>
+      <name>P. Garcia Abia</name>
+    </author>
+    <author>
+      <name>A. Gawdzik</name>
+    </author>
+    <author>
+      <name>A. Gendotti</name>
+    </author>
+    <author>
+      <name>A. Ghisi</name>
+    </author>
+    <author>
+      <name>G. K. Giovanetti</name>
+    </author>
+    <author>
+      <name>V. Goicoechea Casanueva</name>
+    </author>
+    <author>
+      <name>A. Gola</name>
+    </author>
+    <author>
+      <name>L. Grandi</name>
+    </author>
+    <author>
+      <name>G. Grauso</name>
+    </author>
+    <author>
+      <name>G. Grilli di Cortona</name>
+    </author>
+    <author>
+      <name>A. Grobov</name>
+    </author>
+    <author>
+      <name>M. Gromov</name>
+    </author>
+    <author>
+      <name>M. Guerzoni</name>
+    </author>
+    <author>
+      <name>M. Gulino</name>
+    </author>
+    <author>
+      <name>C. Guo</name>
+    </author>
+    <author>
+      <name>B. R. Hackett</name>
+    </author>
+    <author>
+      <name>A. Hallin</name>
+    </author>
+    <author>
+      <name>A. Hamer</name>
+    </author>
+    <author>
+      <name>M. Haranczyk</name>
+    </author>
+    <author>
+      <name>B. Harrop</name>
+    </author>
+    <author>
+      <name>T. Hessel</name>
+    </author>
+    <author>
+      <name>S. Hill</name>
+    </author>
+    <author>
+      <name>S. Horikawa</name>
+    </author>
+    <author>
+      <name>J. Hu</name>
+    </author>
+    <author>
+      <name>F. Hubaut</name>
+    </author>
+    <author>
+      <name>J. Hucker</name>
+    </author>
+    <author>
+      <name>T. Hugues</name>
+    </author>
+    <author>
+      <name>E. V. Hungerford</name>
+    </author>
+    <author>
+      <name>A. Ianni</name>
+    </author>
+    <author>
+      <name>V. Ippolito</name>
+    </author>
+    <author>
+      <name>A. Jamil</name>
+    </author>
+    <author>
+      <name>C. Jillings</name>
+    </author>
+    <author>
+      <name>S. Jois</name>
+    </author>
+    <author>
+      <name>P. Kachru</name>
+    </author>
+    <author>
+      <name>R. Keloth</name>
+    </author>
+    <author>
+      <name>N. Kemmerich</name>
+    </author>
+    <author>
+      <name>A. Kemp</name>
+    </author>
+    <author>
+      <name>C. L. Kendziora</name>
+    </author>
+    <author>
+      <name>M. Kimura</name>
+    </author>
+    <author>
+      <name>A. Kish</name>
+    </author>
+    <author>
+      <name>K. Kondo</name>
+    </author>
+    <author>
+      <name>G. Korga</name>
+    </author>
+    <author>
+      <name>L. Kotsiopoulou</name>
+    </author>
+    <author>
+      <name>S. Koulosousas</name>
+    </author>
+    <author>
+      <name>A. Kubankin</name>
+    </author>
+    <author>
+      <name>P. Kunzé</name>
+    </author>
+    <author>
+      <name>M. Kuss</name>
+    </author>
+    <author>
+      <name>M. Kuźniak</name>
+    </author>
+    <author>
+      <name>M. Kuzwa</name>
+    </author>
+    <author>
+      <name>M. La Commara</name>
+    </author>
+    <author>
+      <name>M. Lai</name>
+    </author>
+    <author>
+      <name>E. Le Guirriec</name>
+    </author>
+    <author>
+      <name>E. Leason</name>
+    </author>
+    <author>
+      <name>A. Leoni</name>
+    </author>
+    <author>
+      <name>L. Lidey</name>
+    </author>
+    <author>
+      <name>M. Lissia</name>
+    </author>
+    <author>
+      <name>L. Luzzi</name>
+    </author>
+    <author>
+      <name>O. Lychagina</name>
+    </author>
+    <author>
+      <name>O. Macfadyen</name>
+    </author>
+    <author>
+      <name>I. N. Machulin</name>
+    </author>
+    <author>
+      <name>S. Manecki</name>
+    </author>
+    <author>
+      <name>I. Manthos</name>
+    </author>
+    <author>
+      <name>L. Mapelli</name>
+    </author>
+    <author>
+      <name>A. Marasciulli</name>
+    </author>
+    <author>
+      <name>S. M. Mari</name>
+    </author>
+    <author>
+      <name>C. Mariani</name>
+    </author>
+    <author>
+      <name>J. Maricic</name>
+    </author>
+    <author>
+      <name>M. Martinez</name>
+    </author>
+    <author>
+      <name>C. J. Martoff</name>
+    </author>
+    <author>
+      <name>G. Matteucci</name>
+    </author>
+    <author>
+      <name>K. Mavrokoridis</name>
+    </author>
+    <author>
+      <name>A. B. McDonald</name>
+    </author>
+    <author>
+      <name>J. Mclaughlin</name>
+    </author>
+    <author>
+      <name>S. Merzi</name>
+    </author>
+    <author>
+      <name>A. Messina</name>
+    </author>
+    <author>
+      <name>R. Milincic</name>
+    </author>
+    <author>
+      <name>S. Minutoli</name>
+    </author>
+    <author>
+      <name>A. Mitra</name>
+    </author>
+    <author>
+      <name>A. Moharana</name>
+    </author>
+    <author>
+      <name>S. Moioli</name>
+    </author>
+    <author>
+      <name>J. Monroe</name>
+    </author>
+    <author>
+      <name>E. Moretti</name>
+    </author>
+    <author>
+      <name>M. Morrocchi</name>
+    </author>
+    <author>
+      <name>T. Mroz</name>
+    </author>
+    <author>
+      <name>V. N. Muratova</name>
+    </author>
+    <author>
+      <name>M. Murphy</name>
+    </author>
+    <author>
+      <name>M. Murra</name>
+    </author>
+    <author>
+      <name>C. Muscas</name>
+    </author>
+    <author>
+      <name>P. Musico</name>
+    </author>
+    <author>
+      <name>R. Nania</name>
+    </author>
+    <author>
+      <name>M. Nessi</name>
+    </author>
+    <author>
+      <name>G. Nieradka</name>
+    </author>
+    <author>
+      <name>K. Nikolopoulos</name>
+    </author>
+    <author>
+      <name>E. Nikoloudaki</name>
+    </author>
+    <author>
+      <name>J. Nowak</name>
+    </author>
+    <author>
+      <name>K. Olchanski</name>
+    </author>
+    <author>
+      <name>A. Oleinik</name>
+    </author>
+    <author>
+      <name>V. Oleynikov</name>
+    </author>
+    <author>
+      <name>P. Organtini</name>
+    </author>
+    <author>
+      <name>A. Ortiz de Solórzano</name>
+    </author>
+    <author>
+      <name>M. Pallavicini</name>
+    </author>
+    <author>
+      <name>L. Pandola</name>
+    </author>
+    <author>
+      <name>E. Pantic</name>
+    </author>
+    <author>
+      <name>E. Paoloni</name>
+    </author>
+    <author>
+      <name>D. Papi</name>
+    </author>
+    <author>
+      <name>G. Pastuszak</name>
+    </author>
+    <author>
+      <name>G. Paternoster</name>
+    </author>
+    <author>
+      <name>A. Peck</name>
+    </author>
+    <author>
+      <name>P. A. Pegoraro</name>
+    </author>
+    <author>
+      <name>K. Pelczar</name>
+    </author>
+    <author>
+      <name>L. A. Pellegrini</name>
+    </author>
+    <author>
+      <name>R. Perez</name>
+    </author>
+    <author>
+      <name>F. Perotti</name>
+    </author>
+    <author>
+      <name>V. Pesudo</name>
+    </author>
+    <author>
+      <name>S. I. Piacentini</name>
+    </author>
+    <author>
+      <name>N. Pino</name>
+    </author>
+    <author>
+      <name>G. Plante</name>
+    </author>
+    <author>
+      <name>A. Pocar</name>
+    </author>
+    <author>
+      <name>M. Poehlmann</name>
+    </author>
+    <author>
+      <name>S. Pordes</name>
+    </author>
+    <author>
+      <name>P. Pralavorio</name>
+    </author>
+    <author>
+      <name>D. Price</name>
+    </author>
+    <author>
+      <name>S. Puglia</name>
+    </author>
+    <author>
+      <name>M. Queiroga Bazetto</name>
+    </author>
+    <author>
+      <name>F. Ragusa</name>
+    </author>
+    <author>
+      <name>Y. Ramachers</name>
+    </author>
+    <author>
+      <name>A. Ramirez</name>
+    </author>
+    <author>
+      <name>S. Ravinthiran</name>
+    </author>
+    <author>
+      <name>M. Razeti</name>
+    </author>
+    <author>
+      <name>A. L. Renshaw</name>
+    </author>
+    <author>
+      <name>M. Rescigno</name>
+    </author>
+    <author>
+      <name>F. Retiere</name>
+    </author>
+    <author>
+      <name>L. P. Rignanese</name>
+    </author>
+    <author>
+      <name>A. Rivetti</name>
+    </author>
+    <author>
+      <name>A. Roberts</name>
+    </author>
+    <author>
+      <name>C. Roberts</name>
+    </author>
+    <author>
+      <name>G. Rogers</name>
+    </author>
+    <author>
+      <name>L. Romero</name>
+    </author>
+    <author>
+      <name>M. Rossi</name>
+    </author>
+    <author>
+      <name>A. Rubbia</name>
+    </author>
+    <author>
+      <name>D. Rudik</name>
+    </author>
+    <author>
+      <name>M. Sabia</name>
+    </author>
+    <author>
+      <name>P. Salomone</name>
+    </author>
+    <author>
+      <name>O. Samoylov</name>
+    </author>
+    <author>
+      <name>E. Sandford</name>
+    </author>
+    <author>
+      <name>S. Sanfilippo</name>
+    </author>
+    <author>
+      <name>D. Santone</name>
+    </author>
+    <author>
+      <name>R. Santorelli</name>
+    </author>
+    <author>
+      <name>E. M. Santos</name>
+    </author>
+    <author>
+      <name>C. Savarese</name>
+    </author>
+    <author>
+      <name>E. Scapparone</name>
+    </author>
+    <author>
+      <name>G. Schillaci</name>
+    </author>
+    <author>
+      <name>F. G. Schuckman</name>
+    </author>
+    <author>
+      <name>G. Scioli</name>
+    </author>
+    <author>
+      <name>D. A. Semenov</name>
+    </author>
+    <author>
+      <name>V. Shalamova</name>
+    </author>
+    <author>
+      <name>A. Sheshukov</name>
+    </author>
+    <author>
+      <name>M. Simeone</name>
+    </author>
+    <author>
+      <name>P. Skensved</name>
+    </author>
+    <author>
+      <name>M. D. Skorokhvatov</name>
+    </author>
+    <author>
+      <name>O. Smirnov</name>
+    </author>
+    <author>
+      <name>T. Smirnova</name>
+    </author>
+    <author>
+      <name>B. Smith</name>
+    </author>
+    <author>
+      <name>A. Sotnikov</name>
+    </author>
+    <author>
+      <name>F. Spadoni</name>
+    </author>
+    <author>
+      <name>M. Spangenberg</name>
+    </author>
+    <author>
+      <name>R. Stefanizzi</name>
+    </author>
+    <author>
+      <name>A. Steri</name>
+    </author>
+    <author>
+      <name>V. Stornelli</name>
+    </author>
+    <author>
+      <name>S. Stracka</name>
+    </author>
+    <author>
+      <name>S. Sulis</name>
+    </author>
+    <author>
+      <name>A. Sung</name>
+    </author>
+    <author>
+      <name>C. Sunny</name>
+    </author>
+    <author>
+      <name>Y. Suvorov</name>
+    </author>
+    <author>
+      <name>A. M. Szelc</name>
+    </author>
+    <author>
+      <name>O. Taborda</name>
+    </author>
+    <author>
+      <name>R. Tartaglia</name>
+    </author>
+    <author>
+      <name>A. Taylor</name>
+    </author>
+    <author>
+      <name>J. Taylor</name>
+    </author>
+    <author>
+      <name>S. Tedesco</name>
+    </author>
+    <author>
+      <name>G. Testera</name>
+    </author>
+    <author>
+      <name>K. Thieme</name>
+    </author>
+    <author>
+      <name>A. Thompson</name>
+    </author>
+    <author>
+      <name>T. N. Thorpe</name>
+    </author>
+    <author>
+      <name>A. Tonazzo</name>
+    </author>
+    <author>
+      <name>S. Torres-Lara</name>
+    </author>
+    <author>
+      <name>A. Tricomi</name>
+    </author>
+    <author>
+      <name>E. V. Unzhakov</name>
+    </author>
+    <author>
+      <name>T. J. Vallivilayil</name>
+    </author>
+    <author>
+      <name>M. Van Uffelen</name>
+    </author>
+    <author>
+      <name>L. Velazquez-Fernandez</name>
+    </author>
+    <author>
+      <name>T. Viant</name>
+    </author>
+    <author>
+      <name>S. Viel</name>
+    </author>
+    <author>
+      <name>A. Vishneva</name>
+    </author>
+    <author>
+      <name>R. B. Vogelaar</name>
+    </author>
+    <author>
+      <name>J. Vossebeld</name>
+    </author>
+    <author>
+      <name>B. Vyas</name>
+    </author>
+    <author>
+      <name>M. Wada</name>
+    </author>
+    <author>
+      <name>M. B. Walczak</name>
+    </author>
+    <author>
+      <name>H. Wang</name>
+    </author>
+    <author>
+      <name>Y. Wang</name>
+    </author>
+    <author>
+      <name>S. Westerdale</name>
+    </author>
+    <author>
+      <name>L. Williams</name>
+    </author>
+    <author>
+      <name>R. Wojaczyński</name>
+    </author>
+    <author>
+      <name>M. Wojcik</name>
+    </author>
+    <author>
+      <name>M. M. Wojcik</name>
+    </author>
+    <author>
+      <name>T. Wright</name>
+    </author>
+    <author>
+      <name>X. Xiao</name>
+    </author>
+    <author>
+      <name>Y. Xie</name>
+    </author>
+    <author>
+      <name>C. Yang</name>
+    </author>
+    <author>
+      <name>J. Yin</name>
+    </author>
+    <author>
+      <name>A. Zabihi</name>
+    </author>
+    <author>
+      <name>P. Zakhary</name>
+    </author>
+    <author>
+      <name>A. Zani</name>
+    </author>
+    <author>
+      <name>Y. Zhang</name>
+    </author>
+    <author>
+      <name>T. Zhu</name>
+    </author>
+    <author>
+      <name>A. Zichichi</name>
+    </author>
+    <author>
+      <name>G. Zuzel</name>
+    </author>
+    <author>
+      <name>M. P. Zykova</name>
+    </author>
+    <arxiv:doi>10.1088/1748-0221/20/02/P02016</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1748-0221/20/02/P02016" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.07507v2</id>
+    <title>Flow map matching with stochastic interpolants: A mathematical framework for consistency models</title>
+    <updated>2025-06-03T00:03:07Z</updated>
+    <link href="https://arxiv.org/abs/2406.07507v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.07507v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models based on dynamical equations such as flows and diffusions offer exceptional sample quality, but require computationally expensive numerical integration during inference. The advent of consistency models has enabled efficient one-step or few-step generation, yet despite their practical success, a systematic understanding of their design has been hindered by the lack of a comprehensive theoretical framework. Here we introduce Flow Map Matching (FMM), a principled framework for learning the two-time flow map of an underlying dynamical generative model, thereby providing this missing mathematical foundation. Leveraging stochastic interpolants, we propose training objectives both for distillation from a pre-trained velocity field and for direct training of a flow map over an interpolant or a forward diffusion process. Theoretically, we show that FMM unifies and extends a broad class of existing approaches for fast sampling, including consistency models, consistency trajectory models, and progressive distillation. Experiments on CIFAR-10 and ImageNet-32 highlight that our approach can achieve sample quality comparable to flow matching while reducing generation time by a factor of 10-20.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-11T17:41:26Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nicholas M. Boffi</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.11674v1</id>
+    <title>Practical applications of machine-learned flows on gauge fields</title>
+    <updated>2024-04-17T18:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2404.11674v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.11674v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows are machine-learned maps between different lattice theories which can be used as components in exact sampling and inference schemes. Ongoing work yields increasingly expressive flows on gauge fields, but it remains an open question how flows can improve lattice QCD at state-of-the-art scales. We discuss and demonstrate two applications of flows in replica exchange (parallel tempering) sampling, aimed at improving topological mixing, which are viable with iterative improvements upon presently available flows.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-17T18:17:14Z</published>
+    <arxiv:comment>9 pages, 5 figures, proceedings of the 40th International Symposium on Lattice Field Theory (Lattice 2023)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.10819v1</id>
+    <title>Multiscale Normalizing Flows for Gauge Theories</title>
+    <updated>2024-04-16T18:00:05Z</updated>
+    <link href="https://arxiv.org/abs/2404.10819v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.10819v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Scale separation is an important physical principle that has previously enabled algorithmic advances such as multigrid solvers. Previous work on normalizing flows has been able to utilize scale separation in the context of scalar field theories, but the principle has been largely unexploited in the context of gauge theories. This work gives an overview of a new method for generating gauge fields using hierarchical normalizing flow models. This method builds gauge fields from the outside in, allowing different parts of the model to focus on different scales of the problem. Numerical results are presented for $U(1)$ and $SU(3)$ gauge theories in 2, 3, and 4 spacetime dimensions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-16T18:00:05Z</published>
+    <arxiv:comment>Submitted as a proceedings to the 40th International Symposium on Lattice Field Theory (Lattice 2023)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.03725v3</id>
+    <title>Stochastic interpolants with data-dependent couplings</title>
+    <updated>2024-09-23T16:38:43Z</updated>
+    <link href="https://arxiv.org/abs/2310.03725v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.03725v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models inspired by dynamical transport of measure -- such as flows and diffusions -- construct a continuous-time map between two probability densities. Conventionally, one of these is the target density, only accessible through samples, while the other is taken as a simple base density that is data-agnostic. In this work, using the framework of stochastic interpolants, we formalize how to \textit{couple} the base and the target densities, whereby samples from the base are computed conditionally given samples from the target in a way that is different from (but does preclude) incorporating information about class labels or continuous embeddings. This enables us to construct dynamical transport maps that serve as conditional generative models. We show that these transport maps can be learned by solving a simple square loss regression problem analogous to the standard independent setting. We demonstrate the usefulness of constructing dependent couplings in practice through experiments in super-resolution and in-painting.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-05T17:46:31Z</published>
+    <arxiv:comment>ICML 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Mark Goldstein</name>
+    </author>
+    <author>
+      <name>Nicholas M. Boffi</name>
+    </author>
+    <author>
+      <name>Rajesh Ranganath</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.02402v1</id>
+    <title>Normalizing flows for lattice gauge theory in arbitrary space-time dimension</title>
+    <updated>2023-05-03T19:54:04Z</updated>
+    <link href="https://arxiv.org/abs/2305.02402v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.02402v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Applications of normalizing flows to the sampling of field configurations in lattice gauge theory have so far been explored almost exclusively in two space-time dimensions. We report new algorithmic developments of gauge-equivariant flow architectures facilitating the generalization to higher-dimensional lattice geometries. Specifically, we discuss masked autoregressive transformations with tractable and unbiased Jacobian determinants, a key ingredient for scalable and asymptotically exact flow-based sampling algorithms. For concreteness, results from a proof-of-principle application to SU(3) lattice gauge theory in four space-time dimensions are reported.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-03T19:54:04Z</published>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Alexander G. D. G. Matthews</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Ali Razavi</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.08797v4</id>
+    <title>Stochastic Interpolants: A Unifying Framework for Flows and Diffusions</title>
+    <updated>2025-10-09T00:43:44Z</updated>
+    <link href="https://arxiv.org/abs/2303.08797v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.08797v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A class of generative models that unifies flow-based and diffusion-based methods is introduced. These models extend the framework proposed in Albergo and Vanden-Eijnden (2023), enabling the use of a broad class of continuous-time stochastic processes called stochastic interpolants to bridge any two probability density functions exactly in finite time. These interpolants are built by combining data from the two prescribed densities with an additional latent variable that shapes the bridge in a flexible way. The time-dependent density function of the interpolant is shown to satisfy a transport equation as well as a family of forward and backward Fokker-Planck equations with tunable diffusion coefficient. Upon consideration of the time evolution of an individual sample, this viewpoint leads to both deterministic and stochastic generative models based on probability flow equations or stochastic differential equations with an adjustable level of noise. The drift coefficients entering these models are time-dependent velocity fields characterized as the unique minimizers of simple quadratic objective functions, one of which is a new objective for the score. We show that minimization of these quadratic objectives leads to control of the likelihood for generative models built upon stochastic dynamics, while likelihood control for deterministic dynamics is more stringent. We also construct estimators for the likelihood and the cross entropy of interpolant-based generative models, and we discuss connections with other methods such as score-based diffusion models, stochastic localization, probabilistic denoising, and rectifying flows. In addition, we demonstrate that stochastic interpolants recover the Schrödinger bridge between the two target densities when explicitly optimizing over the interpolant. Finally, algorithmic aspects are discussed and the approach is illustrated on numerical examples.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-15T17:43:42Z</published>
+    <arxiv:comment>JMLR Version</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Nicholas M. Boffi</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.07541v1</id>
+    <title>Aspects of scaling and scalability for flow-based sampling of lattice QCD</title>
+    <updated>2022-11-14T17:07:37Z</updated>
+    <link href="https://arxiv.org/abs/2211.07541v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.07541v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent applications of machine-learned normalizing flows to sampling in lattice field theory suggest that such methods may be able to mitigate critical slowing down and topological freezing. However, these demonstrations have been at the scale of toy models, and it remains to be determined whether they can be applied to state-of-the-art lattice quantum chromodynamics calculations. Assessing the viability of sampling algorithms for lattice field theory at scale has traditionally been accomplished using simple cost scaling laws, but as we discuss in this work, their utility is limited for flow-based approaches. We conclude that flow-based approaches to sampling are better thought of as a broad family of algorithms with different scaling properties, and that scalability must be assessed experimentally.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-14T17:07:37Z</published>
+    <arxiv:comment>22 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Alexander G. D. G. Matthews</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Ali Razavi</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.15571v3</id>
+    <title>Building Normalizing Flows with Stochastic Interpolants</title>
+    <updated>2023-03-09T15:18:40Z</updated>
+    <link href="https://arxiv.org/abs/2209.15571v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.15571v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A generative model based on a continuous-time normalizing flow between any pair of base and target probability densities is proposed. The velocity field of this flow is inferred from the probability current of a time-dependent density that interpolates between the base and the target in finite time. Unlike conventional normalizing flow inference methods based the maximum likelihood principle, which require costly backpropagation through ODE solvers, our interpolant approach leads to a simple quadratic loss for the velocity itself which is expressed in terms of expectations that are readily amenable to empirical estimation. The flow can be used to generate samples from either the base or target, and to estimate the likelihood at any time along the interpolant. In addition, the flow can be optimized to minimize the path length of the interpolant density, thereby paving the way for building optimal transport maps. In situations where the base is a Gaussian density, we also show that the velocity of our normalizing flow can also be used to construct a diffusion model to sample the target as well as estimate its score. However, our approach shows that we can bypass this diffusion completely and work at the level of the probability flow with greater simplicity, opening an avenue for methods based solely on ordinary differential equations as an alternative to those based on stochastic differential equations. Benchmarking on density estimation tasks illustrates that the learned flow can match and surpass conventional continuous flows at a fraction of the cost, and compares well with diffusions on image generation on CIFAR-10 and ImageNet $32\times32$. The method scales ab-initio ODE flows to previously unreachable image resolutions, demonstrated up to $128\times128$.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-30T16:30:31Z</published>
+    <arxiv:comment>ICLR 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.03832v2</id>
+    <title>Sampling QCD field configurations with gauge-equivariant flow models</title>
+    <updated>2022-08-20T05:14:00Z</updated>
+    <link href="https://arxiv.org/abs/2208.03832v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.03832v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning methods based on normalizing flows have been shown to address important challenges, such as critical slowing-down and topological freezing, in the sampling of gauge field configurations in simple lattice field theories. A critical question is whether this success will translate to studies of QCD. This Proceedings presents a status update on advances in this area. In particular, it is illustrated how recently developed algorithmic components may be combined to construct flow-based sampling algorithms for QCD in four dimensions. The prospects and challenges for future use of this approach in at-scale applications are summarized.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-07T22:16:20Z</published>
+    <arxiv:comment>Submitted as a proceedings to the 39th International Symposium on Lattice Field Theory (Lattice 2022)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Alexander G. D. G. Matthews</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Ali Razavi</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.08945v3</id>
+    <title>Gauge-equivariant flow models for sampling in lattice field theories with pseudofermions</title>
+    <updated>2022-10-16T19:39:17Z</updated>
+    <link href="https://arxiv.org/abs/2207.08945v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.08945v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents gauge-equivariant architectures for flow-based sampling in fermionic lattice field theories using pseudofermions as stochastic estimators for the fermionic determinant. This is the default approach in state-of-the-art lattice field theory calculations, making this development critical to the practical application of flow models to theories such as QCD. Methods by which flow-based sampling approaches can be improved via standard techniques such as even/odd preconditioning and the Hasenbusch factorization are also outlined. Numerical demonstrations in two-dimensional U(1) and SU(3) gauge theories with $N_f=2$ flavors of fermions are provided.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-18T21:13:34Z</published>
+    <arxiv:comment>15 pages, 7 figures. v3: accepted version for publication. New appendix C</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 106 (2022) 7, 074506</arxiv:journal_ref>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Betsy Tian</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.106.074506</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.106.074506" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.11712v1</id>
+    <title>Flow-based sampling in the lattice Schwinger model at criticality</title>
+    <updated>2022-02-23T19:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2202.11712v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.11712v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent results suggest that flow-based algorithms may provide efficient sampling of field distributions for lattice field theory applications, such as studies of quantum chromodynamics and the Schwinger model. In this work, we provide a numerical demonstration of robust flow-based sampling in the Schwinger model at the critical value of the fermion mass. In contrast, at the same parameters, conventional methods fail to sample all parts of configuration space, leading to severely underestimated uncertainties.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-23T19:00:00Z</published>
+    <arxiv:comment>5 pages main text, 3 pages supplementary material. 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.106.014514</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.106.014514" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.00734v2</id>
+    <title>Flow-based sampling for multimodal and extended-mode distributions in lattice field theory</title>
+    <updated>2025-02-15T00:34:46Z</updated>
+    <link href="https://arxiv.org/abs/2107.00734v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.00734v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent results have demonstrated that samplers constructed with flow-based generative models are a promising new approach for configuration generation in lattice field theory. In this paper, we present a set of training- and architecture-based methods to construct flow models for targets with multiple separated modes (i.e.~vacua) as well as targets with extended/continuous modes. We demonstrate the application of these methods to modeling two-dimensional real and complex scalar field theories in their symmetry-broken phases. In this context we investigate different flow-based sampling algorithms, including a composite sampling algorithm where flow-based proposals are occasionally augmented by applying updates using traditional algorithms like HMC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-01T20:22:10Z</published>
+    <arxiv:comment>38+3 pages, 39 figures. v2: major revisions including new application to extended modes</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Chung-Chun Hsieh</name>
+    </author>
+    <author>
+      <name>Sahil Pontula</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Jiunn-Wei Chen</name>
+    </author>
+    <author>
+      <name>Kai-Feng Chen</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.05934v2</id>
+    <title>Flow-based sampling for fermionic lattice field theories</title>
+    <updated>2021-12-28T22:33:50Z</updated>
+    <link href="https://arxiv.org/abs/2106.05934v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.05934v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Algorithms based on normalizing flows are emerging as promising machine learning approaches to sampling complicated probability distributions in a way that can be made asymptotically exact. In the context of lattice field theory, proof-of-principle studies have demonstrated the effectiveness of this approach for scalar theories, gauge theories, and statistical systems. This work develops approaches that enable flow-based sampling of theories with dynamical fermions, which is necessary for the technique to be applied to lattice field theory studies of the Standard Model of particle physics and many condensed matter systems. As a practical demonstration, these methods are applied to the sampling of field configurations for a two-dimensional theory of massless staggered fermions coupled to a scalar field via a Yukawa interaction.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-10T17:32:47Z</published>
+    <arxiv:comment>26 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 104, 114507 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.104.114507</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.104.114507" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.08176v3</id>
+    <title>Introduction to Normalizing Flows for Lattice Field Theory</title>
+    <updated>2021-08-06T14:14:21Z</updated>
+    <link href="https://arxiv.org/abs/2101.08176v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.08176v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This notebook tutorial demonstrates a method for sampling Boltzmann distributions of lattice field theories using a class of machine learning models known as normalizing flows. The ideas and approaches proposed in arXiv:1904.12072, arXiv:2002.02428, and arXiv:2003.06413 are reviewed and a concrete implementation of the framework is presented. We apply this framework to a lattice scalar field theory and to U(1) gauge theory, explicitly encoding gauge symmetries in the flow-based approach to the latter. This presentation is intended to be interactive and working with the attached Jupyter notebook is recommended.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-20T15:16:28Z</published>
+    <arxiv:comment>38 pages, 5 numbered figures, Jupyter notebook included as ancillary file</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo Jimenez Rezende</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2008.05456v2</id>
+    <title>Sampling using $SU(N)$ gauge equivariant flows</title>
+    <updated>2020-09-18T18:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2008.05456v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2008.05456v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a flow-based sampling algorithm for $SU(N)$ lattice gauge theories that is gauge-invariant by construction. Our key contribution is constructing a class of flows on an $SU(N)$ variable (or on a $U(N)$ variable by a simple alternative) that respect matrix conjugation symmetry. We apply this technique to sample distributions of single $SU(N)$ variables and to construct flow-based samplers for $SU(2)$ and $SU(3)$ lattice gauge theory in two dimensions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-08-12T17:43:39Z</published>
+    <arxiv:comment>24 pages, 19 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 103, 074504 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo Jimenez Rezende</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.103.074504</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.103.074504" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.06413v1</id>
+    <title>Equivariant flow-based sampling for lattice gauge theory</title>
+    <updated>2020-03-13T17:54:05Z</updated>
+    <link href="https://arxiv.org/abs/2003.06413v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.06413v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define a class of machine-learned flow-based sampling algorithms for lattice gauge theories that are gauge-invariant by construction. We demonstrate the application of this framework to U(1) gauge theory in two spacetime dimensions, and find that near critical points in parameter space the approach is orders of magnitude more efficient at sampling topological quantities than more traditional sampling procedures such as Hybrid Monte Carlo and Heat Bath.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-13T17:54:05Z</published>
+    <arxiv:comment>6 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 125, 121601 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo Jimenez Rezende</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.125.121601</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.125.121601" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.02428v2</id>
+    <title>Normalizing Flows on Tori and Spheres</title>
+    <updated>2020-07-01T16:48:12Z</updated>
+    <link href="https://arxiv.org/abs/2002.02428v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.02428v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows are a powerful tool for building expressive distributions in high dimensions. So far, most of the literature has concentrated on learning flows on Euclidean spaces. Some problems however, such as those involving angles, are defined on spaces with more complex geometries, such as tori or spheres. In this paper, we propose and compare expressive and numerically stable flows on such spaces. Our flows are built recursively on the dimension of the space, starting from flows on circles, closed intervals or spheres.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-06T18:24:06Z</published>
+    <arxiv:comment>Accepted to the International Conference on Machine Learning (ICML) 2020</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Danilo Jimenez Rezende</name>
+    </author>
+    <author>
+      <name>George Papamakarios</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.12072v3</id>
+    <title>Flow-based generative models for Markov chain Monte Carlo in lattice field theory</title>
+    <updated>2019-09-09T17:53:37Z</updated>
+    <link href="https://arxiv.org/abs/1904.12072v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.12072v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A Markov chain update scheme using a machine-learned flow-based generative model is proposed for Monte Carlo sampling in lattice field theories. The generative model may be optimized (trained) to produce samples from a distribution approximating the desired Boltzmann distribution determined by the lattice action of the theory being studied. Training the model systematically improves autocorrelation times in the Markov chain, even in regions of parameter space where standard Markov chain Monte Carlo algorithms exhibit critical slowing down in producing decorrelated updates. Moreover, the model may be trained without existing samples from the desired distribution. The algorithm is compared with HMC and local Metropolis sampling for $φ^4$ theory in two dimensions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-26T23:30:09Z</published>
+    <arxiv:comment>13 pages, 7 figures; corrected normalization conventions in eqns. 20 and 23</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 100, 034515 (2019)</arxiv:journal_ref>
+    <author>
+      <name>M. S. Albergo</name>
+    </author>
+    <author>
+      <name>G. Kanwar</name>
+    </author>
+    <author>
+      <name>P. E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.100.034515</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.100.034515" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/nucl-ex/9708005v2</id>
+    <title>Lambda Hyperons in 2 A*GeV Ni + Cu Collisions</title>
+    <updated>1998-09-09T21:52:52Z</updated>
+    <link href="https://arxiv.org/abs/nucl-ex/9708005v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/nucl-ex/9708005v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A sample of Lambda's produced in 2 A*GeV Ni + Cu collisions has been obtained with the EOS Time Projection Chamber at the Bevalac. Low background in the invariant mass distribution allows for the unambiguous demonstration of Lambda directed flow. The transverse mass spectrum at mid-rapidity has the characteristic shoulder-arm shape of particles undergoing radial transverse expansion. A linear dependence of Lambda multiplicity on impact parameter is observed, from which a total Lambda + Sigma^0 production cross section of $112 +/- 24 mb is deduced. Detailed comparisons with the ARC and RVUU models are made.</summary>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1997-08-27T04:55:43Z</published>
+    <arxiv:comment>Revised version accepted for publication in Phys. Lett. B</arxiv:comment>
+    <arxiv:primary_category term="nucl-ex"/>
+    <arxiv:journal_ref>Phys.Lett.B440:12-19,1998</arxiv:journal_ref>
+    <author>
+      <name> EOS Collaboration</name>
+    </author>
+    <author>
+      <name>M. Justice</name>
+    </author>
+    <author>
+      <name>S. Albergo</name>
+    </author>
+    <author>
+      <name>F. Bieser</name>
+    </author>
+    <author>
+      <name>F. P. Brady</name>
+    </author>
+    <author>
+      <name>Z. Caccia</name>
+    </author>
+    <author>
+      <name>D. A. Cebra</name>
+    </author>
+    <author>
+      <name>A. D. Chacon</name>
+    </author>
+    <author>
+      <name>J. L. Chance</name>
+    </author>
+    <author>
+      <name>Y. Choi</name>
+    </author>
+    <author>
+      <name>S. Costa</name>
+    </author>
+    <author>
+      <name>J. B. Elliott</name>
+    </author>
+    <author>
+      <name>M. L. Gilkes</name>
+    </author>
+    <author>
+      <name>J. A. Hauger</name>
+    </author>
+    <author>
+      <name>A. S. Hirsch</name>
+    </author>
+    <author>
+      <name>E. L. Hjort</name>
+    </author>
+    <author>
+      <name>A. Insolia</name>
+    </author>
+    <author>
+      <name>D. Keane</name>
+    </author>
+    <author>
+      <name>J. C. Kintner</name>
+    </author>
+    <author>
+      <name>M. A. Lisa</name>
+    </author>
+    <author>
+      <name>H. Liu</name>
+    </author>
+    <author>
+      <name>H. S. Matis</name>
+    </author>
+    <author>
+      <name>R. McGrath</name>
+    </author>
+    <author>
+      <name>M. McMahan</name>
+    </author>
+    <author>
+      <name>C. McParland</name>
+    </author>
+    <author>
+      <name>D. L. Olson</name>
+    </author>
+    <author>
+      <name>M. D. Partlan</name>
+    </author>
+    <author>
+      <name>N. T. Porile</name>
+    </author>
+    <author>
+      <name>R. Potenza</name>
+    </author>
+    <author>
+      <name>G. Rai</name>
+    </author>
+    <author>
+      <name>J. O. Rasmussen</name>
+    </author>
+    <author>
+      <name>H. G. Ritter</name>
+    </author>
+    <author>
+      <name>J. Romanski</name>
+    </author>
+    <author>
+      <name>J. L. Romero</name>
+    </author>
+    <author>
+      <name>G. V. Russo</name>
+    </author>
+    <author>
+      <name>R. P. Scharenberg</name>
+    </author>
+    <author>
+      <name>A. Scott</name>
+    </author>
+    <author>
+      <name>Y. Shao</name>
+    </author>
+    <author>
+      <name>B. K. Srivastava</name>
+    </author>
+    <author>
+      <name>T. J. M. Symons</name>
+    </author>
+    <author>
+      <name>M. Tincknell</name>
+    </author>
+    <author>
+      <name>C. Tuve</name>
+    </author>
+    <author>
+      <name>S. Wang</name>
+    </author>
+    <author>
+      <name>P. G. Warren</name>
+    </author>
+    <author>
+      <name>D. Weerasundara</name>
+    </author>
+    <author>
+      <name>H. H. Wieman</name>
+    </author>
+    <author>
+      <name>T. Wienold</name>
+    </author>
+    <author>
+      <name>K. Wolf</name>
+    </author>
+    <arxiv:doi>10.1016/S0370-2693(98)01159-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/S0370-2693(98)01159-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/nucl-ex/9610008v1</id>
+    <title>The Evolution of Nuclear Multifragmentation in the Temperature-Density Plane</title>
+    <updated>1996-10-25T20:04:10Z</updated>
+    <link href="https://arxiv.org/abs/nucl-ex/9610008v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/nucl-ex/9610008v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The mean transverse kinetic energies of the fragments formed in the interaction of 1 A GeV Au+C have been determined. An energy balance argument indicates the presence of a collective energy which increases in magnitude with increasing multiplicity and accounts for nearly half of the measured mean transverse kinetic energy. The radial flow velocity associated with the collective energy yields estimates for the time required to expand to the freeze-out volume. Isentropic trajectories in the temperature-density plane are shown for the expansion and indicate that the system goes through the critical region at the same multiplicities as deduced from a statistical analysis. Here, the expansion time is approximately 70 fm/c.</summary>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1996-10-25T20:04:10Z</published>
+    <arxiv:primary_category term="nucl-ex"/>
+    <author>
+      <name>P. G. Warren</name>
+    </author>
+    <author>
+      <name>S. Albergo</name>
+    </author>
+    <author>
+      <name>J. M. Alexander</name>
+    </author>
+    <author>
+      <name>F. Bieser</name>
+    </author>
+    <author>
+      <name>F. P. Brady</name>
+    </author>
+    <author>
+      <name>Z. Caccia</name>
+    </author>
+    <author>
+      <name>D. A. Cebra</name>
+    </author>
+    <author>
+      <name>A. D. Chacon</name>
+    </author>
+    <author>
+      <name>J. L. Chance</name>
+    </author>
+    <author>
+      <name>Y. Choi</name>
+    </author>
+    <author>
+      <name>S. Costa</name>
+    </author>
+    <author>
+      <name>J. B. Elliott</name>
+    </author>
+    <author>
+      <name>M. L. Gilkes</name>
+    </author>
+    <author>
+      <name>J. A. Hauger</name>
+    </author>
+    <author>
+      <name>A. S. Hirsch</name>
+    </author>
+    <author>
+      <name>E. L. Hjort</name>
+    </author>
+    <author>
+      <name>A. Insolia</name>
+    </author>
+    <author>
+      <name>M. Justice</name>
+    </author>
+    <author>
+      <name>D. Keane</name>
+    </author>
+    <author>
+      <name>J. C. Kitner</name>
+    </author>
+    <author>
+      <name>R. Lacey</name>
+    </author>
+    <author>
+      <name>J. Lauret</name>
+    </author>
+    <author>
+      <name>V. Lindenstruth</name>
+    </author>
+    <author>
+      <name>M. A. Lisa</name>
+    </author>
+    <author>
+      <name>H. S. Matis</name>
+    </author>
+    <author>
+      <name>R. L. McGrath</name>
+    </author>
+    <author>
+      <name>M. McMahan</name>
+    </author>
+    <author>
+      <name>C. McParlan</name>
+    </author>
+    <author>
+      <name>W. F. J. Mueller</name>
+    </author>
+    <author>
+      <name>D. L. Olson</name>
+    </author>
+    <author>
+      <name>M. D. Partlan</name>
+    </author>
+    <author>
+      <name>N. T. Porile</name>
+    </author>
+    <author>
+      <name>R. Potenza</name>
+    </author>
+    <author>
+      <name>G. Rai</name>
+    </author>
+    <author>
+      <name>J. Rasmussen</name>
+    </author>
+    <author>
+      <name>H. G. Ritter</name>
+    </author>
+    <author>
+      <name>J. Romanski</name>
+    </author>
+    <author>
+      <name>J. L. Romero</name>
+    </author>
+    <author>
+      <name>G. V. Russo</name>
+    </author>
+    <author>
+      <name>H. Sann</name>
+    </author>
+    <author>
+      <name>R. P. Scharenberg</name>
+    </author>
+    <author>
+      <name>A. Scott</name>
+    </author>
+    <author>
+      <name>Y. Shao</name>
+    </author>
+    <author>
+      <name>B. K. Srivastava</name>
+    </author>
+    <author>
+      <name>T. J. M. Symons</name>
+    </author>
+    <author>
+      <name>M. L. Tincknell</name>
+    </author>
+    <author>
+      <name>C. Tuve</name>
+    </author>
+    <author>
+      <name>S. Wang</name>
+    </author>
+    <author>
+      <name>H. H. Wieman</name>
+    </author>
+    <author>
+      <name>T. Wienold</name>
+    </author>
+    <author>
+      <name>K. Wolf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/nucl-ex/9502001v1</id>
+    <title>Radial Flow in Au+Au Collisions at E=0.25-1.15 A GeV</title>
+    <updated>1995-02-09T23:27:01Z</updated>
+    <link href="https://arxiv.org/abs/nucl-ex/9502001v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/nucl-ex/9502001v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A systematic study of energy spectra for light particles emitted at midrapidity from Au+Au collisions at E=0.25-1.15 A GeV reveals a significant non-thermal component consistent with a collective radial flow. This component is evaluated as a function of bombarding energy and event centrality. Comparisons to Quantum Molecular Dynamics (QMD) and Boltzmann-Uehling-Uhlenbeck (BUU) models are made for different equations of state.</summary>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1995-02-09T23:27:01Z</published>
+    <arxiv:comment>10 pages of text and 4 figures (all ps files in a uuencoded package).</arxiv:comment>
+    <arxiv:primary_category term="nucl-ex"/>
+    <arxiv:journal_ref>Phys.Rev.Lett. 75 (1995) 2662-2665</arxiv:journal_ref>
+    <author>
+      <name>M. A. Lisa</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>S. Albergo</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>F. Bieser</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>F. P. Brady</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Z. Caccia</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>D. A. Cebra</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>A. D. Chacon</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. L. Chance</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Y. Choi</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>S. Costa</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. B. Elliott</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. L. Gilkes</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. A. Hauger</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>A. S. Hirsch</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>E. L. Hjort</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>A. Insolia</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. Justice</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>D. Keane</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. Kintner</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>H. S. Matis</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. McMahan</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>C. McParland</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>D. L. Olson</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. D. Partlan</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>N. T. Porile</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>R. Potenza</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>G. Rai</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. Rasmussen</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>H. G. Ritter</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. Romanski</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. L. Romero</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>G. V. Russo</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>R. Scharenberg</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>A. Scott</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Y. Shao</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>B. K. Srivastava</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>T. J. M. Symons</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. Tincknell</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>C. Tuve</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>S. Wang</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>P. Warren</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>G. D. Westfall</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>H. H. Wieman</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>K. Wolf</name>
+      <arxiv:affiliation>EOS Collaboration: LBL-Kent State-Purdue-UC Davis-Texas A&amp;M-Catania</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.75.2662</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.75.2662" title="doi"/>
+  </entry>
+</feed>

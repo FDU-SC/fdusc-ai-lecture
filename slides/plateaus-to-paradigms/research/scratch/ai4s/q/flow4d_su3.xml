@@ -1,0 +1,918 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/FSJCM9MNZawPpb1HlOmAqYbl4HI</id>
+  <title>arXiv Query: search_query=abs:"trivializing" AND abs:"flow"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T15:02:42Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22trivializing%22+AND+abs:%22flow%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>2061</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.17399v1</id>
+    <title>SCHERI: Provably Secure Speculation Under the Constant-Time Policy for CHERI (Extended Version)</title>
+    <updated>2026-09-15T16:33:45Z</updated>
+    <link href="https://arxiv.org/abs/2609.17399v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.17399v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Capability-based architectures such as CHERI provide strong support for the architectural isolation of software components. To additionally protect against microarchitectural leakage, software can be written in a constant-time fashion. Modern processors, however, rely heavily on speculative execution, which can invalidate the constant-time guarantees and leak isolated secrets transiently.
+  In this work, we show that providing secure speculation for CHERI is non-trivial, and that existing proposals fail to preserve the confidentiality guarantees. We develop a formal framework for reasoning jointly about capability safety, speculative execution, and information-flow security, and use it to demonstrate potential leaks. We then present SCHERI, a new processor design within this framework, and formally prove that it provides end-to-end secure speculation guarantees for the constant-time policy.
+  Our results provide formal foundations and practical guidance for building future capability-based processors, which are resilient to Spectre attacks for constant-time programs.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T16:33:45Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Shixin Song</name>
+    </author>
+    <author>
+      <name>Davide Davoli</name>
+    </author>
+    <author>
+      <name>Elias Storme</name>
+    </author>
+    <author>
+      <name>Marton Bognar</name>
+    </author>
+    <author>
+      <name>Dominique Devriese</name>
+    </author>
+    <author>
+      <name>Frank Piessens</name>
+    </author>
+    <author>
+      <name>Tamara Rezk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.16423v1</id>
+    <title>No Bit Left Behind: Using Brute-Force Lifting to Achieve Fully Static Binary Recompilation</title>
+    <updated>2026-09-14T23:00:09Z</updated>
+    <link href="https://arxiv.org/abs/2609.16423v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.16423v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Binary recompilation is a technique for operating directly on executable code. It promises to automate two important tasks: retrofitting security mitigations onto legacy binaries, and migrating binaries across instruction set architectures (ISAs). Yet today, there is no fully automated system that can reliably lift arbitrary binary executables to a compiler intermediate representation (IR) such as LLVM IR, or that can fully statically and reliably translate non-trivial binary executables from one ISA to another. The main underlying problem is that recovering a program's control flow graph (CFG) statically is impossible in general: computed branches can jump to targets that cannot be determined without actually running the program. Existing systems resort to runtime fallback mechanisms, requiring a significant portion of the binary translation machinery to accompany the translated program on the target machine.
+  This article presents a fully static, whole-program binary lifting system requiring no runtime translation support on the target. Rather than attempting to distinguish code from data, we treat every byte offset as a potential branch target and lift the entire binary in a brute-force manner, constructing a superset CFG that conservatively contains all feasible control flows. Statically unresolvable computed branches are thereby reduced to lookups in a dispatch table that points to the corresponding translated control flow path. We have implemented this approach as a prototype binary recompiler from x86-64 binaries to LLVM IR, requiring no code/data heuristics. We validate it with a fully static cross-compilation to AArch64, achieved by reusing existing LLVM backends with no modification.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-14T23:00:09Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Tianjiao Huang</name>
+    </author>
+    <author>
+      <name>Po-An Chen</name>
+    </author>
+    <author>
+      <name>Nick Baron</name>
+    </author>
+    <author>
+      <name>Michael Franz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.14242v1</id>
+    <title>Liouville integrability of Beltrami-Maxwell fields with sources: A geometric theory of magnetic surfaces</title>
+    <updated>2026-09-13T02:36:36Z</updated>
+    <link href="https://arxiv.org/abs/2609.14242v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.14242v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study classical Maxwell fields with non-trivial sources in four-dimensional Minkowski spacetime. In particular, contact and symplectic geometric aspects are discussed. As a point of departure, it is shown that a few classes of solutions with sources are constructed from the so-called Beltrami fields, where these fields are contact forms on three-dimensional Riemannian manifolds. In addition, several applications in these classes are provided. One is to give a solution to the London equations for superconductors. Another one is that, if there is a non-trivial conserved quantity along the magnetic vector field, then the Maxwell system can be viewed as a Liouville integrable Hamiltonian system on a four-dimensional symplectic manifold, where this manifold is obtained by a symplectization of the contact manifold. As examples, Maxwell fields with the Lundquist model, a restricted case of the ABC flow model, and so on, are shown to be integrable in the above sense.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-13T02:36:36Z</published>
+    <arxiv:comment>39 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Shin-itiro Goto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.13374v1</id>
+    <title>The index from a nonpoint and RG flows</title>
+    <updated>2026-09-11T18:00:01Z</updated>
+    <link href="https://arxiv.org/abs/2609.13374v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.13374v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We extend the algebro-geometric construction of bifiltered affine schemes that encode both the Higgs branch and the Macdonald index of 4d $\mathcal{N}=2$ superconformal field theories to theories with non-trivial Higgs branches. For the Argyres--Douglas theories $\mathcal{D}_p(SU(N))$, we find that a universal potential, given by a function in the Casimir invariants of $\mathfrak{sl}(N)$, determines the scheme. The scheme is given by a `fattened' nilpotent orbit closure, encoding the OPE decoupling structure of the 4d theory. A procedure we call syzygy maximization fixes the precise potential in a broad range of examples, and the resulting schemes reproduce the 4d data. The underlying graded ring gives conjectural presentations of Zhu's $C_2$-algebra of the associated vertex operator algebra, while the bifiltration refines Arakawa's associated scheme by retaining the R-symmetry information. We find that Higgs branch renormalization group flows are realized by pulling back the same universal potential to the corresponding Slodowy slices, including flows for which the infrared Higgs branch is a point. In particular, our construction provides a systematic method for determining the Macdonald indices of the $\mathcal{D}_p(SU(N), O)$ theories, for which no general expressions were previously known.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-11T18:00:01Z</published>
+    <arxiv:comment>44 pages + references</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Monica Jinwoo Kang</name>
+    </author>
+    <author>
+      <name>Craig Lawrie</name>
+    </author>
+    <author>
+      <name>Jaewon Song</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11526v1</id>
+    <title>Study of the multiplicity dependence of non-flow correlations in pp collisions at $\sqrt{s}=200$ GeV using PYTHIA</title>
+    <updated>2026-09-10T13:28:00Z</updated>
+    <link href="https://arxiv.org/abs/2609.11526v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11526v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The observation of a near-side enhancement in long-range correlations within high-multiplicity pA and pp collisions, commonly referred to as the ridge, has motivated significant efforts to quantify possible collective effects in small systems. Estimation of non-flow contributions in two-particle correlation measurements in small systems at the LHC typically relies on the assumption that jet-induced non-flow correlations are independent of event multiplicity. Consequently, this assumption allows the high-multiplicity non-flow to be estimated and accounted for by directly using low-multiplicity events. In this paper, the validity of this assumption is studied examining the multiplicity dependence of non-flow contributions estimated via two-particle correlation functions in pp collisions at RHIC energies $\sqrt{s} = 200$~GeV using the PYTHIA event generator. It is observed that selecting any specific multiplicity range inherently biases jet production dynamics. These biases introduce a non-trivial multiplicity dependence of the non-flow contribution at RHIC energies. The dependence of jet fragmentation and $p_{\text{T}}$-differential cross sections on event multiplicity is studied using a variety of commonly used multiplicity estimators, including mid-rapidity charged-particle multiplicity, forward multiplicity, and underlying-event activity. The results indicate that non-flow contributions do not exhibit simple multiplicity scaling and challenge the applicability of standard subtraction procedures utilized at LHC energies at lower RHIC collision energies.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T13:28:00Z</published>
+    <arxiv:comment>13 pages, 19 figures</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>Milan Stojanovic</name>
+    </author>
+    <author>
+      <name>Joern Putschke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.08113v1</id>
+    <title>Non-Kähler Critical Hermitian Metrics of the Dinew--Popovici Functional</title>
+    <updated>2026-09-08T01:45:09Z</updated>
+    <link href="https://arxiv.org/abs/2609.08113v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.08113v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Dinew--Popovici functional is an energy functional for Hermitian symplectic metrics in a fixed Aeppli cohomology class. Its vanishing characterizes the Kähler metrics in that class, providing a variational approach to Kähler geometry. Dinew and Popovici proved that every critical point is Kähler in complex dimension three. We give a negative answer to Erfan Soheil's question about higher dimensions by constructing non-Kähler critical metrics on products of two Kähler surfaces $(S_1,η_1)$ and $(S_2,η_2)$. These metrics are critical under every variation on the product 4-fold. We characterize the critical product metrics and prove that non-Kähler critical products exist in the Aeppli class $[η_1+η_2]_A$ precisely when the canonical bundles of the two surface factors are smoothly trivial. As a by-product, we develop a geometric flow driven by the torsion tensor and converging to the fixed Kähler background when this background metric has nonnegative holomorphic bisectional curvature.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-08T01:45:09Z</published>
+    <arxiv:comment>25 pages, 0 figure</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Hanwen Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07829v1</id>
+    <title>Diffeomorphism-invariant Approach to Asymptotically Safe Quantum Gravity</title>
+    <updated>2026-09-07T18:00:10Z</updated>
+    <link href="https://arxiv.org/abs/2609.07829v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07829v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide a novel diffeomorphism-invariant approach to asymptotically safe metric quantum gravity. It is based on physics-informed renormalisation group flows with a renormalisation group kernel that guarantees diffeomorphism invariance at each renormalisation group step. Importantly, it also allows us to control and maintain the relevance counting of operators in metric quantum gravity. The resulting effective action is quantum diffeomorphism-invariant and background-independent. As a first non-trivial application, we compute the Reuter fixed point in a manifestly diffeomorphism-invariant way. This computation is augmented with a detailed discussion of regularisation dependence and a systematic estimate of the errors arising from approximations.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T18:00:10Z</published>
+    <arxiv:comment>24 pages, 7 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Friederike Ihssen</name>
+    </author>
+    <author>
+      <name>Benjamin Knorr</name>
+    </author>
+    <author>
+      <name>Silas Mezger</name>
+    </author>
+    <author>
+      <name>Jan M. Pawlowski</name>
+    </author>
+    <author>
+      <name>Paul P. Sprenger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04888v1</id>
+    <title>Homoclinic-shedding in the steady forced water-wave problem</title>
+    <updated>2026-09-04T08:44:10Z</updated>
+    <link href="https://arxiv.org/abs/2609.04888v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04888v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, an infinite set of steady solitary-wave solution branches was discovered for inviscid and irrotational flow over a localised topographic depression. These solutions were restricted to critical flow, when the Froude number is unity. Several questions were raised, including i) what happens to the solution structure as the flow speed is continued into the supercritical regime? and ii) how does the decay rate of the topography affect the solution structure? In this article, we answer these questions by examining exact steady solutions of the fKdV model and numerical solutions of the fully nonlinear Euler system over i) trench, ii) Gaussian and iii) generalised Agnesi topographies. We uncover a highly non-trivial bifurcation structure consisting of spirals and closed loops, characterised by the phenomenon of `homoclinic shedding', where pairs of solitary waves are emitted up- and downstream as the amplitude is varied.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-04T08:44:10Z</published>
+    <arxiv:comment>26 pages</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Jack Keeler</name>
+    </author>
+    <author>
+      <name>Mark Blyth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04538v1</id>
+    <title>Lagrangian dynamics unveil polymer conformation in viscoelastic flows</title>
+    <updated>2026-09-03T22:51:59Z</updated>
+    <link href="https://arxiv.org/abs/2609.04538v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04538v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The complex flow behavior of viscoelastic fluids emerges from a feedback between fluid stress and the out-of-equilibrium conformational dynamics of their constituent polymer chains. While constitutive models can predict flow and stress fields in simple geometries, a fundamental understanding of the mechanisms regulating viscoelastic flows with mixed kinematics and non-trivial polymer dynamics remains elusive. Quantifying the history-dependent conformation of polymer chains in flow is essential to resolve these complex systems. To address this knowledge gap, we employ direct Lagrangian tracking of individual DNA molecules to reveal their conformational dynamics in microfluidic viscoelastic flows for different polymer contour lengths and concentrations. Comparing the measured molecular extension and orientation reveals discrepancies with canonical constitutive models, which do not fully capture the transient dynamics. Our measurements show a distinct anisotropy in polymer relaxation and shape, which couple the polymer's rotation and extension through hydrodynamic drag, regulating their Lagrangian mechanics. These findings emphasize the importance of Lagrangian polymer history and the need to account for non-trivial intra-molecular mechanics to improve constitutive descriptions of viscoelastic flows.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T22:51:59Z</published>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Louison Thorens</name>
+    </author>
+    <author>
+      <name>Gabriel Juarez</name>
+    </author>
+    <author>
+      <name>Jeffrey S. Guasto</name>
+    </author>
+    <author>
+      <name>Paulo E. Arratia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01706v1</id>
+    <title>Holographic algebras at null infinity</title>
+    <updated>2026-09-01T18:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2609.01706v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01706v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct an algebra of observables associated to a cut of null infinity in asymptotically flat spacetimes. The Bondi mass associated with a sharp cut of future null infinity is not a well-defined quantum operator: its fluctuations diverge even after smearing in retarded time. We instead introduce a finite-radius, time-smeared version of the Bondi mass and adjoin this operator to the matter and graviton observables in an arbitrarily small asymptotic neighborhood of the cut. We separately analyze spacetimes with and without black holes and find, in both cases, Type III$_1$ von Neumann algebras that satisfy non-trivial nesting relations. In Minkowski spacetime, the resulting algebra reconstructs the spacelike wedge associated with the cut. In a stationary black hole spacetime, it reconstructs the region bounded by the cut and the black hole bifurcation surface, providing an asymptotically flat analogue of an entanglement wedge. In the limit as the cut is moved to past infinity, we recover a Type I$_{\infty}$ algebra for spacetimes without black holes and a Type II$_{\infty}$ algebra for black hole spacetimes. For algebras at finite cuts of retarded time, we construct a Type II$_\infty$ regularization of the black hole algebra whose renormalized von Neumann entropy agrees with the generalized entropy. In appendices, we prove two technical results about quantum fields, in a Schwarzschild spacetime, that asymptote to the Minkowski vacuum at infinity: a split property for unbounded, spacelike separated regions and the construction of a faithful, normal, and semifinite Hartle-Hawking weight whose modular flow is Schwarzschild time evolution.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T18:00:00Z</published>
+    <arxiv:comment>49 pages + appendices, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Chang-Han Chen</name>
+    </author>
+    <author>
+      <name>Geoff Penington</name>
+    </author>
+    <author>
+      <name>Gautam Satishchandran</name>
+    </author>
+    <author>
+      <name>Elisa Tabor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.30965v2</id>
+    <title>Higher genus Cherry flows and full families of GIETs</title>
+    <updated>2026-09-10T16:00:55Z</updated>
+    <link href="https://arxiv.org/abs/2608.30965v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.30965v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cherry flows are classical examples of $C^\infty$ flows on the two-dimensional torus exhibiting non-trivial recurrent dynamics. For every higher genus $g\geq1$ we construct a $C^\infty$ parameter family of flows whose first return map is a generalized interval exchange transformation (GIET) with flat pieces. In such family, for every interval exchange transformation $T$ satisfying the Keane property, there are parameters corresponding to a Cherry flow whose return map is semi-conjugate to $T$. In particular, for each $k=1,\ldots,g$, our family contains a Cherry flow whose unique quasi-minimal set supports exactly $k$ ergodic invariant measures. The construction relies on a Full Family Theorem for GIETs with flat pieces, which establishes the realization of every admissible Rauzy renormalization path within a specific finite-dimensional family with the optimal number of parameters.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T15:29:35Z</published>
+    <arxiv:comment>50 Pages, 5 figures. Improved exposition. More general version of the main Definition 1.3 of full family</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Luca Marchese</name>
+    </author>
+    <author>
+      <name>Liviana Palmisano</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.29271v1</id>
+    <title>Nechvile-Transformed Spacecraft Dynamics and Propellant Computation in the 3-Body Problem</title>
+    <updated>2026-08-29T13:51:06Z</updated>
+    <link href="https://arxiv.org/abs/2608.29271v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.29271v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The uncontrolled equations of motion in the Nechvile frame for the restricted three-body problem have been well-known since at least the 1960s. It would seem that adding an external force to these equations is quite trivial: simply add an external force per mass term to the acceleration equations. Here we show that the last statement is not true. In fact, we show that the additive generic external force must be multiplied by the inverse of $(1 + e \cosθ)^3$ where $e$ is the relative eccentricity of the primaries and $θ$ is the true anomaly of the rotating frame located at the barycenter. Furthermore, when this result is combined with the mass flow rate equation, it generates several surprising results due to the mismatch between the resulting quadratic term and the cubic term in the equations of motion. This leads to a corresponding modification of the rocket equation itself. A Birkhoff-theoretic solution to an illustrative cislunar space mission problem shows propellent savings of 80% with the use of the correct cost functional. The popular quadratic cost utilizes more than $2X$ the minimum propellant consumption.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-29T13:51:06Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <arxiv:journal_ref>Dixon, M. J. and Ross, I. M., "Nuances in Propellant Computation in the Elliptic Restricted Three- Body Problem," Journal of Guidance, Control and Dynamics, Vol. 49, No. 1, Jan. 2026</arxiv:journal_ref>
+    <author>
+      <name>Michael J. Dixon</name>
+    </author>
+    <author>
+      <name>Isaac M. Ross</name>
+    </author>
+    <arxiv:doi>10.2514/1.G009053</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2514/1.G009053" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.29183v1</id>
+    <title>Foundational feature fusion for conditional flow matching in 6D pose estimation</title>
+    <updated>2026-08-29T10:20:17Z</updated>
+    <link href="https://arxiv.org/abs/2608.29183v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.29183v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Conditional flow matching has enabled a step forward in object 6D pose estimation, achieving state-of-the-art performance by progressively denoising and registering object representations to observed scenes. Existing methods require training task-specific encoders supervised on object-scene overlap and rely on trivial feature fusion strategies to resolve pose ambiguities. We present FunFlow6D, a novel flow matching-based formulation that leverages features from geometric and appearance foundation models for pose estimation, eliminating the need for task-specific encoder training. We also introduce a cross attention-based fusion mechanism that dynamically combines geometric and appearance features to provide richer conditioning for the flow matching module. Experiments on four datasets from the BOP benchmark show that FunFlow6D outperforms the previous state of the art while reducing supervision requirements and memory overhead. Extensive ablations validate the contribution of each proposed component. Project website: https://tev-fbk.github.io/FunFlow6D/.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-29T10:20:17Z</published>
+    <arxiv:comment>Accepted at BMVC 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Amir Hamza</name>
+    </author>
+    <author>
+      <name>Davide Boscaini</name>
+    </author>
+    <author>
+      <name>Fabio Poiesi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28208v2</id>
+    <title>Non-Closing Double-Commutator Flows and the Small-Coupling Limit of Spin-Boson Models</title>
+    <updated>2026-09-03T22:05:27Z</updated>
+    <link href="https://arxiv.org/abs/2608.28208v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28208v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spin-boson models are paradigmatic examples of open quantum systems and serve as the theoretical paradigm for current quantum computers based on single-ion trap technology. Despite their ubiquity, a complete spectral diagonalization of these models remains an open problem, except in highly singular regimes. This paper establishes a rigorous framework for the approximate diagonalization of generalized spin-boson systems. Our approach is inspired by the Brockett-Wegner double-commutator flow, which is a non-linear differential equation governing the evolution of (here unbounded) operators. Unlike relatively recent applications of this flow to quadratic Hamiltonians in quantum field theory, it does not close in the spin-boson context. We overcome this fundamental obstruction by performing a detailed analysis of the resulting non-closed algebraic structure, allowing us to explicitly bound the higher-order error term with respect to the spin-boson coupling strength. Consequently, this work provides the first mathematically rigorous justification for several heuristic diagonalization techniques widely employed in the theoretical physics literature for small-coupling regimes, in the simplest non-trivial cases. More broadly, our framework renders a flow-based algorithm feasible for systematic higher-order diagonalization and self-energy renormalization. This strategy is conceptually akin to multi-scale analysis, or, much more recently, to the iterative, local Lie-Schwinger block-diagonalization method by Fröhlich and Pizzo.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T11:27:50Z</published>
+    <arxiv:comment>Acknowledgements updated</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Jean-Bernard Bru</name>
+    </author>
+    <author>
+      <name>Nathan Metraud</name>
+    </author>
+    <author>
+      <name>Walter de Siqueira Pedra</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28105v1</id>
+    <title>Experimental and Signal Processing Techniques for Fault Diagnosis on a Small Horizontal-Axis Wind Turbine Generator</title>
+    <updated>2026-08-28T09:11:47Z</updated>
+    <link href="https://arxiv.org/abs/2608.28105v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28105v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Small HAWT is a technology characterized by non-trivial critical points, basically because it is targeted for domestic use and therefore cheap manufacturing and control must conjugate with good efficiency under possibly complex flow conditions (especially in urban environment). Therefore, dynamical control optimization and noise and vibration mitigation are pressing issues for this kind of technology. Despite it is peculiar of small HAWTs that the generator constitutes a non-negligible fraction of the total mass and therefore the electromechanical coupling is relevant, condition monitoring of small HAWT generators is an overlooked topic. The present work is a test case study of damage diagnosis on a permanent magnet generator of a HAWT having 3 kW of maximum power and 2 meters of rotor diameter. The experimental analysis is conducted through wind tunnel tests and on a generator test rig where a damaged and an undamaged generators have been driven at different rotational speeds. Vibration measurements are collected in the wind tunnel through radial accelerometers near the rear bearing of the shaft and in the test rig through uni-axial accelerometers (fixed in radial positions, in order to be aligned with front and rear bearings). The test rig data result being particularly useful for studying the low-frequency tail of the vibration spectrum, where the characteristic frequencies of the bearing are located. The experimental data are analyzed in the time and frequency domain for feature extraction: a fault in the cage of the bearing supporting the generator is diagnosed using in particular the spectral coherence analysis.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T09:11:47Z</published>
+    <arxiv:primary_category term="eess.SP"/>
+    <arxiv:journal_ref>Vibration 2019, 2(2), 187-200</arxiv:journal_ref>
+    <author>
+      <name>Francesco Natili</name>
+    </author>
+    <author>
+      <name>Francesco Castellani</name>
+    </author>
+    <author>
+      <name>Davide Astolfi</name>
+    </author>
+    <author>
+      <name>Matteo Becchetti</name>
+    </author>
+    <arxiv:doi>10.3390/vibration2020012</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/vibration2020012" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.27093v1</id>
+    <title>Soliton Solutions to the Curvature Flow on the 2-dimensional De Sitter Space and Applications</title>
+    <updated>2026-08-27T13:12:30Z</updated>
+    <link href="https://arxiv.org/abs/2608.27093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.27093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the spacelike solutions to the curvature flow for curves on the De Sitter space are in correspondence with the solutions to the inverse curvature flow on the 2-dimensional hyperbolic space, that on the De Sitter space, the timelike solutions to the curvature flow are in correspondence with the timelike solutions to the inverse curvature flow, and that the solutions curve shortening flow on the 2-dimensional hyperbolic space are in correspondence with the solutions to the spacelike solutions to the inverse curvature flow on the De Sitter space. We prove that, for spacelike curves on the De Sitter space, the curvature flow is a gradient-type flow for the arc-length functional. We observe that a spacelike or timelike curve on the De Sitter space is a soliton solution to the curvature flow (resp. inverse curvature flow) if and only if its curvature (resp. inverse of its curvature) can be written as the inner product between its tangent vector field and a fixed vector $v$ of the 3-dimensional Minkowski space. We prove that for each vector $v$, there exists a 2-parameter family of timelike (spacelike) soliton solutions to the curvature flow and to the inverse curvature flow on the De Sitter space. We show that there exists no non-trivial complete timelike soliton. There exist non-trivial complete spacelike solutions. As a consequence of curvature flow, we obtain the behavior of the soliton solutions to the inverse curvature flow on the De Sitter space and hyperbolic space.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-27T13:12:30Z</published>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Fábio Nunes da Silva</name>
+    </author>
+    <author>
+      <name>Edwin Salinas Reyes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22574v1</id>
+    <title>Singularity formation and self-shrinkers for the parabolic Bernoulli problem</title>
+    <updated>2026-08-23T19:51:07Z</updated>
+    <link href="https://arxiv.org/abs/2608.22574v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22574v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study singularity formation for classical solutions of the parabolic Bernoulli free boundary problem and the associated self-similar profiles. Inspired by Ricci and mean curvature flows, we introduce a Type I assumption on the blow-up rate at a singular free boundary point, under which the parabolic rescalings are compact and every tangent flow is a non-trivial self-shrinking solution of the elliptic profile equation. The proof establishes convergence of the positivity sets and recovers the Bernoulli condition in the limit, despite the absence of a minimizing structure. In the subcritical regime, every tangent flow is a double plane. We next classify all radial self-shrinkers. Besides the known ball and exterior profiles, there is a unique annular profile. We obtain dimension-uniform bounds and sharp asymptotics for its inner and outer radii, including a quantitative outward bias of its midpoint. These delicate estimates yield a complete classification of the signs of the linear spectrum for the annular solution in every dimension. As a consequence, the ball is dynamically stable modulo ambient symmetries, whereas the annulus is dynamically unstable, with genuine unstable modes of angular degrees $0,1,2,3$. We finally prove, from the spectral nondegeneracy of the compact radial profiles, that whenever one tangent flow is a ball or an annular solution, the tangent flow is unique. One borderline spectral sign in dimensions $2\leq n \leq 4000$ is verified by a rigorous computer-assisted argument using interval arithmetic.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-23T19:51:07Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Hunter Liu</name>
+    </author>
+    <author>
+      <name>Sebastian Munoz</name>
+    </author>
+    <author>
+      <name>Zihui Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.20011v1</id>
+    <title>Manifold Drift in Flow Preference Optimization: A Root Cause of Reward Hacking</title>
+    <updated>2026-08-20T13:25:24Z</updated>
+    <link href="https://arxiv.org/abs/2608.20011v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.20011v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Preference optimization is a standard alignment method for generative models, yet extending it to continuous-time dynamics remains non-trivial. In flow matching, reward-driven updates modify transport trajectories without an inherent constraint to the pretrained data manifold and can move terminal samples off the pretrained support. We formalize this failure mode as manifold drift. Theoretically, we show that optimal flow matching recovers the terminal data distribution, whereas a preference update leaves the pretrained manifold whenever its induced terminal displacement has a nonzero normal component. As a remedy, we propose ThermoDPO, a temperature-controlled objective that anchors pairwise preference optimization on preferred samples. Across temperature regimes, this objective connects rejection sampling fine-tuning and FlowDPO and controls a pointwise reconstruction-based surrogate for manifold distance. To counteract diminished signals at low temperatures, we further introduce a weighted variant, ThermoDPO-weighted. On the main toy benchmark, ThermoDPO-weighted attains a StrictScore of 0.899, compared with 0.629 for FlowDPO and 0.857 for FlowDPO+RFT. On SD3.5-M at CFG = 4.5, it improves OCR by 47.5% and the average of four metrics by 16.0%.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T13:25:24Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yansen Han</name>
+    </author>
+    <author>
+      <name>Shengyi Liao</name>
+    </author>
+    <author>
+      <name>Yuanxing Zhang</name>
+    </author>
+    <author>
+      <name>Pengfei Wan</name>
+    </author>
+    <author>
+      <name>Tao Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.19631v1</id>
+    <title>Variational Goal-Oriented Optimal Experimental Design for Mixed-Distribution Quantities of Interest: Application to Ship Roll Safety</title>
+    <updated>2026-08-20T04:52:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.19631v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.19631v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Goal-oriented optimal experimental design (GO-OED) selects experiments according to the expected information gain (EIG) about a quantity of interest (QoI) rather than the full parameter vector. This work develops a variational GO-OED formulation for mixed discrete-continuous QoI laws arising in probabilistic mechanics when thresholding or event-based transformations map a positive-probability set of uncertain inputs to a common value while other inputs produce continuously varying responses. The motivating application is ship roll safety assessment in random waves, where the QoI is the temporal exceedance probability above a prescribed roll-angle threshold. This quantity is zero when no exceedance occurs and varies continuously over positive values otherwise. A purely continuous variational approximation does not dominate a posterior QoI law containing an atom, yielding an infinite Kullback-Leibler divergence and a trivial Barber-Agakov lower bound of $-\infty$. Scoring atom samples using continuous density values instead changes the objective and does not produce a valid lower-bound estimator. We introduce a mixed variational approximation that models the conditional atom probability and continuous component separately, with a normalizing flow used for the latter. An analytical example recovers the correct EIG landscape, while the ship roll application provides stable EIG lower-bound estimates and identifies informative wave conditions for temporal-exceedance-probability inference.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T04:52:02Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Chen Cheng</name>
+    </author>
+    <author>
+      <name>Xun Huan</name>
+    </author>
+    <author>
+      <name>Yulin Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.17692v1</id>
+    <title>Effect of Convection Rolls in Motility-Induced Phase Separation of Active Janus Particles</title>
+    <updated>2026-08-18T12:09:10Z</updated>
+    <link href="https://arxiv.org/abs/2608.17692v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.17692v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We numerically study motility-induced phase separation of active particles in two-dimensional convection rolls. We analyse local packing-fraction distributions, density fluctuations, the corresponding phase diagrams, and diffusivity curves to characterise the interplay between self-propulsion, global packing fraction, and advection strength. In the weak-flow regime, the system exhibits phase separation characterised by bimodal density distributions, slowly decaying density fluctuations, and a sharp reduction in diffusivity. Increasing advection suppresses clustering by enhancing particle transport and reducing trapping, leading to a shift in the critical self-propulsion velocity for motility-induced phase separation and a shrinkage of the spinodal region. Beyond the intuitive suppression of clustering by weak-flow advection, our results reveal several non-trivial phenomena including a reentrant phase behaviour where extremely high self-propulsion hinders motility-induced phase separation by facilitating particle escape from dense regions. We also observe that the density distributions strongly depend on roll periodicity. These findings demonstrate that convection rolls provide an effective means to control non-equilibrium collective behaviour in active matter.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T12:09:10Z</published>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <arxiv:journal_ref>The Journal of Physical Chemistry B, 2026</arxiv:journal_ref>
+    <author>
+      <name>Poulami Bag</name>
+    </author>
+    <arxiv:doi>10.1021/acs.jpcb.6c04075</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.jpcb.6c04075" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.15585v2</id>
+    <title>The Holonomy of Optimal Mass Transport: The Smooth Case</title>
+    <updated>2026-08-26T21:34:13Z</updated>
+    <link href="https://arxiv.org/abs/2608.15585v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.15585v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that, on a smooth manifold $M$ equipped with a constant rank horizontal distribution $H$ and a smooth inner product $g_H$ on $H$, any horizontal vector field can be written as a linear combination of, at most, $3N$ Lie brackets of horizontal gradient fields of depth-$(1)$, where $N$ is the minimal immersion dimension of $M$, recovering the Riemannian case trivially when $H$ is the entire tangent bundle. When $H$ is also bracket-generating with a uniformly bounded step, we show that any vector field can be written as a linear combination of a uniformly bounded number of iterated Lie brackets of horizontal gradient fields with uniformly bounded depth, both bounds depending solely on the immersion dimension $N$ and the uniform upper bound on the step of $H$. Utilizing this, in conjunction with the Trotter property, we show that, if the manifold is compact, connected, and without boundary, the group generated by flows of horizontal gradient fields is dense in the identity component of the diffeomorphism group. When the manifold is also Riemannian, we show that the same density statement holds for the group generated by diffeomorphic optimal mass transport maps.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-16T07:20:16Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Mahmoud Abdelgalil</name>
+    </author>
+    <author>
+      <name>Tryphon T. Georgiou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.15477v1</id>
+    <title>Postselection-Free Reconstruction of Monitored SPT Flux-Charge Responses</title>
+    <updated>2026-08-16T01:52:10Z</updated>
+    <link href="https://arxiv.org/abs/2608.15477v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.15477v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A class of monitored topological invariants compares ordinary and symmetry-twisted quantum trajectories with identical stochastic records, so direct estimation requires exponentially costly matched-record postselection. We replace the twisted quantum experiment by uniformly randomized symmetry eigenstates with known charges, ordinary-boundary monitoring, and an offline twist decoder. Their correlation yields an exact finite-time response identity and removes this experimental sampling bottleneck. When the ordinary charge sharpens and the ordinary-to-flux deformation has trivial net readout-character flow, the response converges to the projective commutator of the symmetry-protected-topological phase; generator-pair responses then determine its finite-Abelian cohomology class. Spectator-sector crossings may close the global Lyapunov gap without changing this character-valued response. In monitored cluster circuits, the decoder is exact and polynomial in the Gaussian limit, while Gaussian-drop reconstruction treats interacting records; independent joint-sector spectroscopy and effect-state diagnostics validate the topological deformation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-16T01:52:10Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Shuai Zeng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.15397v1</id>
+    <title>Consensus and Persistent Harmonic Edge Circulation in a Hodge-Theoretic Model of Networked Information Flow</title>
+    <updated>2026-08-15T20:03:33Z</updated>
+    <link href="https://arxiv.org/abs/2608.15397v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.15397v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a finite-dimensional cochain model for information flow on an online communication complex. Node variables represent issue positions, while edge variables represent independently modelled signed information flow. The coupling is written in terms of the coboundary operator $d_0$ and the $1$-cochain Hodge Laplacian $Δ_1=d_0d_0^*+d_1^*d_1$. We prove conservation of the mean opinion, a Lyapunov energy law, and convergence to an equilibrium determined by the initial harmonic projection of the edge flow. In particular, node opinions converge to consensus for every initial condition, whereas the edge flow converges to $P_{\mathcal H^1}u_0$. Thus, trivial first cohomology implies decay of the entire edge-flow variable, while nontrivial first cohomology provides capacity for a nonzero residual circulation only when the initial edge flow has a nonzero harmonic projection. The model therefore establishes that node consensus need not imply decay of an independently represented edge-flow variable; it does not model the formation, reinforcement, or amplification of behavioral echo chambers. We also consider linear damping and a bounded nonlinear saturation as modifications that remove persistent edge flow under the stated assumptions.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-15T20:03:33Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Moses Boudourides</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.15042v1</id>
+    <title>Uncovering Hidden Leptonic Correlations with Flow Matching and Autoencoders</title>
+    <updated>2026-08-15T05:04:52Z</updated>
+    <link href="https://arxiv.org/abs/2608.15042v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.15042v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We perform a global search for values of the Yukawa matrices and Majorana masses in the Type-I seesaw mechanism. Using flow matching, which is a generative artificial intelligence (generative AI) method, we generate a broad set of solutions reproducing the experimentally measured values of the neutrino mass-squared differences and the mixing angles. Then, a machine learning method known as an autoencoder is applied to uncover non-trivial correlations among physical quantities in the lepton sector. Our analysis reveals new non-linear relations involving neutrino masses and CP phases. These findings may contribute to elucidating the origins of the mass hierarchies and mixing patterns among generation structure.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-15T05:04:52Z</published>
+    <arxiv:comment>32 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Haruto Kitagawa</name>
+    </author>
+    <author>
+      <name>Satsuki Nishimura</name>
+    </author>
+    <author>
+      <name>Hajime Otsuka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12165v1</id>
+    <title>Shadowing in the presence of singularities: oriented versus standard shadowing, entropy and the structure of recurrent sets</title>
+    <updated>2026-08-12T15:26:47Z</updated>
+    <link href="https://arxiv.org/abs/2608.12165v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12165v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two shadowing properties for flows that differ in the allowed reparametrizations of time: oriented shadowing permits arbitrary increasing reparametrizations, whereas standard shadowing requires their distortion to be uniformly close to one. We prove that these notions are distinct already for $C^\infty$ flows on every closed oriented surface. Moreover, such examples are $C^0$-dense among $C^1$ flows with a singularity and consequently, on closed oriented surfaces with non-zero Euler characteristic, they are dense among all $C^1$ flows. We then relate local standard shadowing to recurrence and entropy. A non-trivial chain-transitive set with local standard shadowing forces positive topological entropy unless it is an irreducible almost heteroclinic set. Consequently, for a zero-entropy flow with standard shadowing, every non-trivial chain-recurrent class has this form, and every non-singular one is minimal. For surface flows, we further prove that oriented shadowing together with finitely many singularities forces every chain-recurrent class to be minimal.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T15:26:47Z</published>
+    <arxiv:comment>53 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Sakshi Jain</name>
+    </author>
+    <author>
+      <name>Piotr Oprocha</name>
+    </author>
+    <author>
+      <name>Elias Rego</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12136v1</id>
+    <title>Tolls for Dynamic Equilibrium Flows</title>
+    <updated>2026-08-12T14:55:25Z</updated>
+    <link href="https://arxiv.org/abs/2608.12136v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12136v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider dynamic network flows and study the following question: Which dynamic edge flows can be implemented as tolled dynamic equilibrium flows? We study this question for the heterogeneous-user model, where the flow particles are partitioned into populations characterized by their own source,destination-pairs and a cost function associating with any walk and departure time some costs. As our two main results, we first provide a duality-based characterization of implementability of dynamic edge flows for the multi-source, multi-destination case. Secondly, we derive both, a combinatorial and duality-based characterization of implementability of dynamic edge flows for the multi-source, single-destination case. Both results are derived under a fairly general network loading model. For the proof, we make several technical contributions: We formulate a novel infinite dimensional optimization problem, where the goal is to minimize the aggregated costs of the particles with respect to the fixed network loading induced by the given edge flow. This requires the recently introduced concept of autonomous network loadings for which we show several new structural insights. In particular, we give an alternative (tighter) characterization of the existence of autonomous network loadings for our setting by deriving a generalization of a result of M.A. Zareckiĭ on the Lusin $N^{-1}$ property of absolutely continuous monotone functions which may also be of independent interest. These insights allow us to prove the stated characterizations under the assumption of strong duality. Finally, for the case of a single-destination, we are able to provide a non-trivial proof that this assumption is always fulfilled for finitely supported edge flows with costs representing weighted travel times.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T14:55:25Z</published>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Lukas Graf</name>
+    </author>
+    <author>
+      <name>Tobias Harks</name>
+    </author>
+    <author>
+      <name>Julian Schwarz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11205v1</id>
+    <title>AdvFD: Boosting Visual Generation via Adversarial Fr'echet Distance Loss</title>
+    <updated>2026-08-11T17:59:56Z</updated>
+    <link href="https://arxiv.org/abs/2608.11205v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11205v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fréchet distance has recently emerged as an effective distribution-level objective for generator post-training, complementing the conventional sample-level diffusion and flow-matching losses. However, directly optimizing Fréchet objectives can cause Fréchet hacking. The target metrics keep improving, but visual quality and Fréchet alignment in other feature spaces may stagnate or deteriorate. We attribute this failure to the static pretrained feature spaces used by existing Fréchet losses. These feature spaces provide incomplete and fixed views of the differences between real and generated distributions. To address this limitation, we propose Adversarial Fréchet Distance (AdvFD), which complements the static representation targets in FD-Loss with a calibrated adversarially learned representation. AdvFD augments the original static Fréchet objective with a learnable representation that adversarially maximizes the Fréchet discrepancy between real and generated samples, while the generator minimizes the same discrepancy in the resulting adaptive feature space. To prevent the adversarial representation from trivially increasing the objective through feature amplification, we further introduce real-feature whitening, which normalizes its scale and covariance geometry and stabilizes the min--max optimization. Extensive experiments show that AdvFD consistently improves one-step generator post-training across both JiT and pMF backbones and across different model scales.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T17:59:56Z</published>
+    <arxiv:comment>Project Page: https://gasaiyu.github.io/AdvFD-page/</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Mingju Gao</name>
+    </author>
+    <author>
+      <name>Jingkai Zhou</name>
+    </author>
+    <author>
+      <name>Kun Gai</name>
+    </author>
+    <author>
+      <name>Changqian Yu</name>
+    </author>
+    <author>
+      <name>Hao Tang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.10578v1</id>
+    <title>Scaling of soft QGP signatures in relativistic lead, xenon and oxygen collisions in EPOS4</title>
+    <updated>2026-08-11T07:04:45Z</updated>
+    <link href="https://arxiv.org/abs/2608.10578v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.10578v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The collective expansion and hydrodynamic evolution in heavy-ion collisions is well-established. However, whether femtometer-scale droplets of QGP are produced in small systems at high energies remains a fundamental open question. Analysis of Pb$-$Pb collisions at $\sqrt{s_{\mathrm{NN}}}$ = 5.02 TeV, Xe$-$Xe at $\sqrt{s_{\mathrm{NN}}}$ = 5.44 TeV and O$-$O collisions at $\sqrt{s_{\mathrm{NN}}}$ = 5.36 TeV using EPOS4 is reported to make predictions and postdictions. The results are compared with ALICE data for Pb$-$Pb and Xe$-$Xe collisions. Charged particle multiplicity (d$N_{\mathrm{ch}}$/d$η$), transverse-momentum ($p_{\mathrm{T}}$) spectra for pions ($π^{\pm}$), kaons ($K^{\pm}$), and protons ($\text{p}(\overline{\text{p}})$) are studied. The inclusion of hadronic afterburner, UrQMD (Ultra-relativistic Quantum Molecular Dynamics) is found to be necessary to correctly describe baryon yields. $p_{\mathrm{T}}$-fluctuations are also studied via normalized $p_{\mathrm{T}}$ correlator, $\sqrt{\langle \langle Δp_{\mathrm{T},i}Δp_{\mathrm{T},j} \rangle \rangle}\mathrm{/} \langle \langle p_{\mathrm{T}} \rangle \rangle$. Lastly, anisotropic flow harmonics ($v_{\mathrm{2}} \{2\}$, $v_{\mathrm{3}} \{2\}$) are computed as a function of $p_{\mathrm{T}}$ and centrality. Since EPOS4 has not been extensively studied for flow observables, this study thereby provides a non-trivial assessment of its collective dynamics. The results are compared with experiment wherever data is available. Taken together, this study provides a unified description of soft observables from Pb$-$Pb through Xe$-$Xe down to O$-$O and offer quantitative guidance on how such collisions may inform of the properties of the QGP.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T07:04:45Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Phys.Rev.C 114 (2026) 2, 025203</arxiv:journal_ref>
+    <author>
+      <name>Salman Khurshid Malik</name>
+    </author>
+    <author>
+      <name>Fakhar Ul Haider</name>
+    </author>
+    <author>
+      <name>Pratibha Bhagat</name>
+    </author>
+    <author>
+      <name>Anju Bhasin</name>
+    </author>
+    <author>
+      <name>Ramni Gupta</name>
+    </author>
+    <arxiv:doi>10.1103/gqr8-vjxy</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/gqr8-vjxy" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09845v2</id>
+    <title>Topological phase rectification via Aharonov-Bohm interference in a Majorana--quantum-dot interferometer</title>
+    <updated>2026-08-11T10:41:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.09845v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09845v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose and theoretically investigate a topological superconducting rectifier based on a quantum-dot--Majorana interferometer. The Aharonov-Bohm phase, controlled by a magnetic flux threading the interferometer loop, tunes the quantum interference between a trivial $2π$-periodic quantum-dot channel and a topological $4π$-periodic Majorana channel. At non-integer flux, this interference generates a persistent current background $I_{\rm off}$ that shifts the current-phase relation into a unipolar regime, in which the supercurrent flows strictly in one direction. We introduce a signed unipolarity factor $η_u$, with $|η_u|&gt;0.5$ defining the unipolar regime, and establish its quantitative relationship to the conventional diode efficiency $η$. The unipolarity proves robust against variations of the quantum-dot level, spin polarization, and Majorana hybridization, is enhanced by stronger Majorana coupling and Rashba spin-orbit interaction, and persists at realistic temperatures and under quasiparticle poisoning. We further propose a topological diode figure of merit $\mathcal{Z}_{\rm TD}$, defined from the Fourier spectrum of $η_u$, whose nonzero value provides a model-independent signature of the $4π$-periodic Majorana channel and distinguishes topological from trivial rectification mechanisms. Our findings establish the quantum-dot--Majorana interferometer as a promising route toward high-performance topological superconducting diodes with clear experimental signatures accessible via standard dc transport measurements.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T17:05:39Z</published>
+    <arxiv:comment>Figures need to be modified</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <author>
+      <name>Jia Liu</name>
+    </author>
+    <author>
+      <name>Hao-Yuan Yang</name>
+    </author>
+    <author>
+      <name>Yuan Hong</name>
+    </author>
+    <author>
+      <name>Li Ma</name>
+    </author>
+    <author>
+      <name>Feng Chi</name>
+    </author>
+    <author>
+      <name>Zi-Chuan Yi</name>
+    </author>
+    <author>
+      <name>Li-Ming Liu</name>
+    </author>
+    <author>
+      <name>Zhen-Guo Fu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09661v1</id>
+    <title>Memory-, Circuit-, and Ansatz-Efficient VQLS for CFD on Hybrid Quantum-HPC Systems</title>
+    <updated>2026-08-10T14:37:59Z</updated>
+    <link href="https://arxiv.org/abs/2608.09661v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09661v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fluid dynamics workloads are dominated by repeated solves of large, structured linear systems, motivating the search for quantum acceleration. The Variational Quantum Linear Solver (VQLS) is a leading near-term candidate, but practical deployment on hybrid quantum--high--performance computing (HPC) systems faces three persistent challenges: (i) the linear-combination-of-unitaries (LCU) encoding of the system matrix explodes in memory and runtime as the problem size grows, (ii) ansatz selection is largely empirical, with no clear link between standard circuit metrics and solver convergence, and (iii) end-to-end VQLS pipelines have rarely been exercised on production HPC hardware at non-trivial qubit counts. This work addresses these challenges through three contributions. First, we benchmark four matrix-encoding strategies---naive LCU, PennyLane-integrated, Fast Walsh--Hadamard Transform (FWHT)-based parallel Pauli decomposition, and an singular value decomposition (SVD)-based two-term LCU---and show that the FWHT approach reduces peak memory by up to $1298\times$ on an $11\times 11$ Hele--Shaw grid, while the SVD-based coherent VQLS delivers over $10{,}000\times$ per-iteration speedup over standard Pauli-based VQLS at 8 qubits. Second, we evaluate 11 ansatz families with gradient-free and gradient-based optimizers on canonical Hele--Shaw flow, and find that expressibility and entanglement metrics correlate only weakly with VQLS convergence, motivating problem-aware ansatz design. Third, we deploy the full workflow on the OLCF Frontier supercomputer and successfully simulate a 15-qubit tridiagonal Toeplitz system on a single node. Together, these results establish a practical baseline for VQLS in hybrid quantum--HPC computation fluid dynamic (CFD) workflows and identify the remaining bottlenecks for larger problems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T14:37:59Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Chao Lu</name>
+    </author>
+    <author>
+      <name>Muralikrishnan Gopalakrishnan Meena</name>
+    </author>
+    <author>
+      <name>Eduardo Antonio Coello Perez</name>
+    </author>
+    <author>
+      <name>Kalyana Chakravarthi Gottiparthi</name>
+    </author>
+    <author>
+      <name>Seongmin Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08781v2</id>
+    <title>Sasaki with torsion manifolds and string backgrounds</title>
+    <updated>2026-08-18T19:05:21Z</updated>
+    <link href="https://arxiv.org/abs/2608.08781v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08781v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the analogy with the Bismut connection in Hermitian geometry, we study Sasaki with torsion manifolds. In particular, we characterize co-Kähler-like and flat Sasaki with torsion manifolds, and we introduce the notion of a $\nabla$-Einstein manifold as the odd-dimensional analogue of the Bismut Hermite-Einstein condition. We provide non-compact examples and we study compact $\nabla$-Einstein manifold in dimension $5$ and $7$. We also develop a general framework for geometric flows of almost contact metric structures. In particular, we derive a flow for Sasaki with torsion structures that preserves the strong condition, that is, the closure of the torsion. Furthermore we prove that such flow is gauge-equivalent to the generalized Ricci flow and it is gauge-equivalent to the pluriclosed flow, after performing a trivial product with $S^1$.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T15:54:52Z</published>
+    <arxiv:comment>45 pages. Added new results on the flow for Sasaki with torsion structures</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Beatrice Brienza</name>
+    </author>
+    <author>
+      <name>Anna Fino</name>
+    </author>
+    <author>
+      <name>Udhav Fowdar</name>
+    </author>
+    <author>
+      <name>Gueo Grantcharov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07061v1</id>
+    <title>Automated vehicles: Challenging transition from Minimal Risk Condition</title>
+    <updated>2026-08-07T10:10:16Z</updated>
+    <link href="https://arxiv.org/abs/2608.07061v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07061v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>If an automated vehicle is no longer capable of handling the dynamic driving tasks, regulations require that a minimal risk manouvre is initiated aimed at achieving minimum risk condition. Details on measures and actions to resolve this standstill position are missing. This article provides clues for closing this gap and addresses various states in which the human intervention operator must understand the current situation and decide whether it is more acceptable to maintain the stay, e.g. on road-shoulder, or to move the vehicle back into traffic flow or 'limp it' to another position, depending on the outcome of a health check. Our investigations, based on a list of nearly 30 reasons and a subsequent development of 'scenario trees' prove the complexity of the situation and the heavy difficulties faced by the operator to handle in a correct manner. We also discuss how the technical automated driving system can be enhanced so that it stronger supports the operator or allows to even dismiss human intervention. This deems technically feasible but limits became obvious, so that assistance from out side appears indispensable at least for the ramp-up phase of respective automated vehicle. The non-trivial problem of transitioning the 'stranded' vehicle needs to be addressed by further regulation for which this paper may provide useful input.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T10:10:16Z</published>
+    <arxiv:comment>This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible. Both authors contributed equally to this article. Corresponding author is Leon Johann Brettin</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Wolfgang Kröger</name>
+    </author>
+    <author>
+      <name>Leon Johann Brettin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.02280v1</id>
+    <title>The $(2+1)$-dimensional Gross-Neveu-Yukawa model at finite temperature, density, and magnetic field within the Functional Renormalization Group</title>
+    <updated>2026-08-03T14:14:36Z</updated>
+    <link href="https://arxiv.org/abs/2608.02280v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.02280v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the phase diagram of the (2+1)-dimensional Gross-Neveu-Yukawa (GNY) model at finite temperature, density, and magnetic field beyond mean-field, using the Functional Renormalization Group (FRG) in the local potential approximation. Large magnetic fields result in magnetic catalysis, a dimensional reduction of the system, and enhancement of chiral symmetry breaking. We employ a hydrodynamical algorithm to solve the FRG flow equation for the effective potential, which allows for go further into the infrared region than with previously used methods. We find that the chiral condensate exhibits non-trivial behavior in various regions of the phase diagram: several first-order phase transitions and de Haas -- van Alphen oscillations at small magnetic field and large chemical potential, as well as a critical endpoint which shifts to higher temperature with increasing magnetic field.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T14:14:36Z</published>
+    <arxiv:comment>9 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Justin L. P. Mauldin</name>
+    </author>
+    <author>
+      <name>Dirk H. Rischke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.28719v1</id>
+    <title>Anomalous Boundary Modes in a Floquet Hyperbolic System</title>
+    <updated>2026-07-30T18:00:01Z</updated>
+    <link href="https://arxiv.org/abs/2607.28719v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.28719v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct an anomalous Floquet topological phase on a negatively curved hyperbolic lattice. The model is a tight-binding Hamiltonian with a periodically repeated four-color edge-hopping sequence and a sublattice-staggered onsite potential step. The topological regime is reached near the limit in which a single hopping step transfers amplitude completely across an active edge, while the trivial regime is reached near the point where two full hops occur along an active edge during a single hopping step, returning the amplitude to its starting site. In finite open patches, the topological regime is characterized by bulk quasienergy gaps at $0$ and $π$ that are populated by in-gap states, in contrast to a trivial regime where these gaps remain empty. Using compact periodic lattices, we map the bulk $0$ and $π$ quasienergy gaps and identify the gapped regions connected to the trivial and anomalous open-boundary spectra. We diagnose the in-gap states as chiral boundary modes by their real-space dynamics. Finally, we introduce a small-boundary spectral-flow diagnostic based on punctured periodic hyperbolic lattices, which avoids the ambiguity associated with the extensive outer boundary of finite hyperbolic patches. This puncture-based diagnostic should be useful for studying other topological hyperbolic systems.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.other" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-30T18:00:01Z</published>
+    <arxiv:comment>15 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <author>
+      <name>Ali Fahimniya</name>
+    </author>
+    <author>
+      <name>Hossein Dehghani</name>
+    </author>
+    <author>
+      <name>Alicia J. Kollár</name>
+    </author>
+    <author>
+      <name>Alexey V. Gorshkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.28479v1</id>
+    <title>Mitigating quantum decoherence via global optimal control</title>
+    <updated>2026-07-30T16:30:18Z</updated>
+    <link href="https://arxiv.org/abs/2607.28479v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.28479v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that global optimal control can drastically suppress the impact of decoherence in globally driven superconducting quantum computing architectures, taking as a prototype a recently proposed quasi-two-dimensional ladder geometry. Using a tensor-network-based approach, we quantify how amplitude-damping and dephasing channels degrade the flow of quantum information along the ladder and the fidelity of one- and two-qubit gate operations. We then demonstrate that shaping the global drive compresses the gate sequences by an order of magnitude in time, restoring high gate fidelities. We stress that this mitigation is far from trivial: in a globally driven processor, dissipation acts on every physical qubit---including those outside the logical register that sustain the surrounding ordered phases---so its impact cannot be suppressed by protecting an isolated subsystem, and is instead overcome purely through the temporal shaping of the global drive.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-30T16:30:18Z</published>
+    <arxiv:comment>14 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ashkan Abedi</name>
+    </author>
+    <author>
+      <name>Roberto Menta</name>
+    </author>
+    <author>
+      <name>Julien Despres</name>
+    </author>
+    <author>
+      <name>Marco Polini</name>
+    </author>
+    <author>
+      <name>Francesco Caravelli</name>
+    </author>
+    <author>
+      <name>Vittorio Giovannetti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.25836v1</id>
+    <title>Long-wave instability of periodic shear flows with constant magnetic field for the 2D resistive MHD equations</title>
+    <updated>2026-07-28T15:16:01Z</updated>
+    <link href="https://arxiv.org/abs/2607.25836v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.25836v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the long-wave linear stability and instability of the two-dimensional viscous, resistive Magnetohydrodynamic (MHD) equations, in vorticity-current formulation, on the periodic domain ${\mathbb T}_α\times {\mathbb T} = \Big( {\mathbb R}/(\frac{2 π}α {\mathbb Z}) \times {\mathbb R}/(2 π{\mathbb Z}) \Big)$, around a periodic shear flow $(U(y),0)$ coupled with a constant background magnetic field ${\bf b}=({\rm b}_1,{\rm b}_2)$. It is a non-trivial extension of a recent paper for the Navier-Stokes equations by Colombo, Dolce, Montalto &amp; Ventura to the MHD setting in the spirit of the classical works of Kolmogorov, Meshalkin, Sinai and Yudovich. We establish explicit conditions on the shear flow profile $U(y)$ involving the viscosity $ν$, the resistivity $η$ and the components of the background magnetic field ${\bf b}$ to obtain linear long-wave stability and instability in the regime $α\ll 1$. The proof combines a non-perturbative normal form transformation decoupling the zero Fourier mode from the non-zero modes with sharp asymptotic expansions of the eigenvalues bifurcating from the zero unperturbed eigenvalue with respect to the parameter $α$. As a dynamical consequence, we obtain a splitting of the phase space into unstable and stable subspaces, on which solutions grow or decay exponentially in Sobolev norm.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T15:16:01Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Roberto Feola</name>
+    </author>
+    <author>
+      <name>Luca Franzoi</name>
+    </author>
+    <author>
+      <name>Riccardo Montalto</name>
+    </author>
+    <author>
+      <name>Claudia Peña</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.23262v1</id>
+    <title>Bipolar Thermoelectric Superconducting Quantum Devices</title>
+    <updated>2026-07-25T15:59:28Z</updated>
+    <link href="https://arxiv.org/abs/2607.23262v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.23262v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum technologies increasingly require accurate modeling of their hardware components and of the non-equilibrium regimes in which they operate, where managing heat and energy flow becomes a central challenge. Thermoelectric effects, the direct conversion of a thermal gradient into electrical signals, offer one such route to this control. In this review, we present an overview of the bipolar thermoelectric effect, a recent development for thermoelectric conversion in reciprocal systems, where linear effects are forbidden by symmetry. This symmetry yields a bipolar thermoelectric signal, in which the generated voltage can exhibit both polarities at a fixed temperature gradient. This represents a non-trivial novelty relative to conventional thermoelectric effects, in which carrier dominance determines the sign of the thermoelectric signal. We summarize the underlying physical principles, showing how thermoelectricity emerges as a strong violation of detailed balance. Concrete physical conditions for obtaining bipolar thermoelectricity are then outlined, of which a tunnel junction between two superconductors with unequal energy gaps and suppressed Josephson coupling is the paradigmatic example. Afterward, we discuss the experimental observation of the effect to date and related proposals for different applications, including volatile memories and radiation detection. Finally, we briefly survey recent developments and outlooks, ranging from extensions to new platforms to a proposal for a novel quantum thermoelectric effect.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-25T15:59:28Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>F. Antola</name>
+    </author>
+    <author>
+      <name>G. Marchegiani</name>
+    </author>
+    <author>
+      <name>A. Braggio</name>
+    </author>
+    <author>
+      <name>F. Giazotto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.22462v1</id>
+    <title>Pulsatile poromechanics in layered soft media controls fluid flow and solute transport: from fundamentals to brain clearance</title>
+    <updated>2026-07-24T16:27:58Z</updated>
+    <link href="https://arxiv.org/abs/2607.22462v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.22462v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Soft porous media often feature a heterogeneous structure. Notably, biological tissues - such as cartilage and the brain tissue - consist of two or more layers, with varying mechanical and fluid-flow properties. Despite the ubiquity of periodic loading in these systems, the physical implications of layering on nonlinear poromechanics and solute transport remain poorly understood. Uncovering these coupled mechanisms could clarify the fundamental physics behind pressing topics, such as brain metabolic clearance. Here, we address this gap using a bilayer model of a generic soft porous medium. To isolate the specific role of layering, we select combinations of material properties (porosity, permeability, and p-wave modulus) that maintain an identical poroelastic timescale, $T_{\mathrm{PE}}$, across four layered configurations and a reference homogeneous case. We demonstrate that while $T_\mathrm{PE}$ is the key parameter governing the response in a homogeneous medium, the same $T_\mathrm{PE}$ leads to non-trivial localization/propagation patterns for strain, fluid flow and solute transport in a bilayer medium. These non-intuitive results suggest that layered architectures may provide functional benefits for cellular homeostasis over homogeneous ones. Finally, we show that pathological alterations to the brain's layered structure significantly disrupt fluid-flow and metabolic waste clearance, offering a possible mechanical explanation for impaired transport in disease.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-24T16:27:58Z</published>
+    <arxiv:comment>20 pages, 5 figure. Submitted to Physical Review E</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Matilde Fiori</name>
+    </author>
+    <author>
+      <name>Sylvie Lorthois</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21160v1</id>
+    <title>Duality constrains optimal thresholds in quantum error correction</title>
+    <updated>2026-07-23T10:42:57Z</updated>
+    <link href="https://arxiv.org/abs/2607.21160v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21160v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Error correction thresholds are often treated as the primary figure of merit for comparing quantum error-correcting code families. We show that the optimal error correction threshold for many commonly considered codes is constrained to a single universal value at leading order in a replica limit. Through a statistical mechanical mapping, we demonstrate that duality constrains all zero-rate em-symmetric CSS codes to have the same optimal code capacity threshold. Here, em symmetry means that the X- and Z-type parity-check matrices are equivalent up to row and column permutations. Under this statistical mechanical mapping, em-symmetric CSS codes are self-dual under a generalized Kramers-Wannier duality up to a mixing of logical sectors. For zero-rate code families, this mixing contributes only subextensive corrections, so the thermodynamic bulk free energy is self-dual in the trivial logical sector. This self-duality fixes the clean critical point and constrains the disordered phase boundary. We also show that self-duality is preserved under code concatenation, and that optimal decoding of concatenated codes can be reformulated as a renormalization group flow on a hierarchical lattice. Our results provide a common framework for analyzing topological, concatenated, and more general quantum low-density parity-check code families, including both their optimal code capacity thresholds and their sub-threshold logical error suppression.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T10:42:57Z</published>
+    <arxiv:comment>27 pages, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Lucas H. English</name>
+    </author>
+    <author>
+      <name>Haoyuan Luo</name>
+    </author>
+    <author>
+      <name>Yangming Wang</name>
+    </author>
+    <author>
+      <name>Basudha Srivastava</name>
+    </author>
+    <author>
+      <name>Stephen D. Bartlett</name>
+    </author>
+    <author>
+      <name>Dominic J. Williamson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.19486v1</id>
+    <title>Localization transitions of diffusion dynamics in physical networks</title>
+    <updated>2026-07-21T18:06:40Z</updated>
+    <link href="https://arxiv.org/abs/2607.19486v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.19486v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Network diffusion underlies many transport phenomena, with Laplacian modes setting how information spreads and relaxes. In physical networks, however, connectivity alone is not enough: node volumes introduce local dwell times that regulate how flow is stored before being propagated. Here we show that physical heterogeneity reshapes topology-driven localization, with the degree-volume ratio emerging as the relevant disorder parameter. We solve an analytical model in which ratio detuning qualitatively reorganizes the Laplacian spectrum, and demonstrate in empirical networks how degree-volume correlations shift extremal eigenmodes away from the nodes selected by topology alone. Our results reveal a general feature-rich-driven mechanism for localization control, showing that physicality non-trivially reshapes the disorder landscape governing network dynamics.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-21T18:06:40Z</published>
+    <arxiv:comment>6 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Jun Yamamoto</name>
+    </author>
+    <author>
+      <name>Ivan Bonamassa</name>
+    </author>
+    <author>
+      <name>Márton Pósfai</name>
+    </author>
+  </entry>
+</feed>

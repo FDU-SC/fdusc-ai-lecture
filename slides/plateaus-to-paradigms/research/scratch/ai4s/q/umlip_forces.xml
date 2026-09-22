@@ -1,0 +1,789 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/3eKUYFsPqcwUwwGXLDuOdspUzSY</id>
+  <title>arXiv Query: search_query=abs:"universal machine learning interatomic potentials" AND abs:"forces"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T15:04:00Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22universal+machine+learning+interatomic+potentials%22+AND+abs:%22forces%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>25</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07477v1</id>
+    <title>Benchmarking Universal Machine Learning Force Fields for Crystal Structure Prediction of High-Energy Molecular Systems</title>
+    <updated>2026-09-07T13:34:05Z</updated>
+    <link href="https://arxiv.org/abs/2609.07477v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07477v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent developments of universal machine learning interatomic potentials (UMLIPs) offer a fast route for screening molecular crystals based on geometry relaxation and energy ranking, but their reliability across chemically diverse energetic materials remains elusive. In particular, it is unclear whether or not these UMLIPs are over-sensitive to break the desired molecular connectivity for relaxing the periodic crystals. Herein we tested the hypothesis that classical force-field pre-relaxation can provide a more suitable starting geometry for subsequent UMLIP relaxation on a large database of high energy molecular crystals. Three models (MACE, MACE-OFF and UMA) in conjunction with the General Amber Force Field (GAFF) were applied to test this hypothesis. Among them, direct MACE-OFF and UMA showed very high relaxation success and preserved the reference geometries most closely, but they still exhibit failures for some rare cases. Using GAFF pre-relaxation can systematically reduce the number of failed relaxations with lower computational costs. Our comparative failure and robustness analyses revealed distinct trade-offs among the evaluated models. Among them, MACE-OFF achieves a better compromise between potential energy surface smoothness, structural fidelity, and stress convergence, serving as a good choice to provide a reliable foundation for automated structural optimization.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T13:34:05Z</published>
+    <arxiv:comment>10 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Musiha Mahfuza Mukta</name>
+    </author>
+    <author>
+      <name>Osman Goni Ridwan</name>
+    </author>
+    <author>
+      <name>Romain Perriot</name>
+    </author>
+    <author>
+      <name>Qiang Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07081v1</id>
+    <title>Local lattice dynamics of hcp zinc from EXAFS and machine-learning interatomic potentials</title>
+    <updated>2026-08-07T10:33:04Z</updated>
+    <link href="https://arxiv.org/abs/2608.07081v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07081v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The lattice dynamics of hexagonal close-packed (hcp) zinc, a prototypical anisotropic metal, is studied using temperature-dependent Zn K-edge extended X-ray absorption fine structure (EXAFS) spectroscopy combined with atomistic simulations. The reverse Monte Carlo method enable the extraction of mean-square relative displacements (MSRDs) for eight coordination shells, providing a shell-resolved description of thermal motion. The MSRD temperature dependence, analysed using the correlated Einstein model, yields effective interatomic force constants and reveals pronounced anisotropy between in-plane and out-of-plane interactions. This anisotropy is further quantified by the ratio of MSRDs for the first and second coordination shells, which closely matches the anisotropic displacement parameters from diffraction experiments. Molecular dynamics simulations using the CHGNet universal machine-learning interatomic potential show that the original model overestimates thermal disorder, while a fine-tuned version substantially improves agreement with experimental EXAFS spectrum and radial distribution function. Overall, EXAFS-informed analysis is effective for validating and refining machine-learning interatomic potentials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T10:33:04Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Physica B 739 (2026) 418945</arxiv:journal_ref>
+    <author>
+      <name>Vitalijs Dimitrijevs</name>
+    </author>
+    <author>
+      <name>Pjotrs Žguns</name>
+    </author>
+    <author>
+      <name>Inga Pudza</name>
+    </author>
+    <author>
+      <name>Aleksandr Kalinko</name>
+    </author>
+    <author>
+      <name>Alexei Kuzmin</name>
+    </author>
+    <arxiv:doi>10.1016/j.physb.2026.418945</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physb.2026.418945" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.09456v1</id>
+    <title>Active rejection enables reliable generalization of universal machine-learning interatomic potentials</title>
+    <updated>2026-07-10T14:24:47Z</updated>
+    <link href="https://arxiv.org/abs/2607.09456v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.09456v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine learning interatomic potentials (uMLIPs) bridge quantum-mechanical accuracy and large-scale molecular dynamics, but the cost of high-accuracy calculations such as r$^2$SCAN limits training to datasets that remain small relative to the open materials space. Strong average benchmark performance also does not guarantee reliable energy--force predictions for every structure. We propose Adaptive Multi-Teacher Routing (ATR), which reformulates high-fidelity data construction as a structure-wise decision problem under uncertainty. Using a small set of real r$^2$SCAN labels, ATR calibrates multiple pretrained uMLIP teachers and combines structural descriptors, teacher identity, and inter-teacher disagreement to estimate the reliability of each structure--teacher pair. It selects high-confidence predictions for pseudo-label generation and rejects structures for which no teacher is sufficiently reliable. With real r$^2$SCAN labels for only 0.2\% of candidate structures, ATR distils 2.89 million traceable r$^2$SCAN-level pseudo-labels for pretraining. On held-out r$^2$SCAN structures and the MP-r$^2$SCAN benchmark, a lightweight CHGNet trained on the ATR-generated dataset consistently outperforms the baseline and non-routed controls. Finite-temperature molecular dynamics further shows that ATR improves dynamical robustness across multiple material systems, maintaining stable trajectories where baseline simulations undergo catastrophic structural collapse. These results establish active rejection as an effective mechanism for converting multiple pretrained uMLIPs into a scalable and reliable data-construction system for high-fidelity uMLIPs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T14:24:47Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mingxiang Luo</name>
+    </author>
+    <author>
+      <name>Xinnan Mao</name>
+    </author>
+    <author>
+      <name>Lu Wang</name>
+    </author>
+    <author>
+      <name>Lei Bai</name>
+    </author>
+    <author>
+      <name>Feng Ding</name>
+    </author>
+    <author>
+      <name>Yuqiang Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27636v1</id>
+    <title>CoTAR: Topology and Atomic State Reconstruction in Condensed Phases</title>
+    <updated>2026-06-26T01:23:31Z</updated>
+    <link href="https://arxiv.org/abs/2606.27636v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27636v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine learning interatomic potentials (uMLIPs) enable condensed-phase molecular dynamics (MD) simulations with near-first-principles accuracy, but their lack of explicit molecular topology limits bond-aware analysis and reconnection to classical force fields. Here, we present CoTAR, a hybrid graph neural network (GNN)--hidden Markov model (HMM) framework that reconstructs molecular topology, formal charges, and unpaired electrons from atomic species, coordinates, and total charge by combining message passing on a proximity graph with a van der Waals prior, chemical constraints, and temporal smoothing. Across 128 nonreactive, topology-preserving condensed-phase systems, CoTAR achieved a bond-order-weighted F1 score of 0.906 on classical-MD data; for uMLIP trajectories, few-shot fine-tuning improved the valid-snapshot rate from 38.6\% to 84.7\%. The reconstructed topologies also supported downstream classical MD simulations, and HMM smoothing improved system-level MD simulation feasibility from 83.6\% to 85.9\%, indicating that CoTAR provides a practical framework for bond-aware analysis of condensed-phase uMLIP trajectories.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-26T01:23:31Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hodaka Mori</name>
+    </author>
+    <author>
+      <name>Yu Miyazaki</name>
+    </author>
+    <author>
+      <name>Takechika Kikkawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16385v2</id>
+    <title>Melt-Quench Failures and Practical Solutions for Universal Machine-Learning Interatomic Potentials in Amorphous Structure Generation</title>
+    <updated>2026-07-16T10:24:21Z</updated>
+    <link href="https://arxiv.org/abs/2606.16385v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16385v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generating experimentally relevant amorphous structures via melt-quench molecular dynamics is prohibitively expensive at the first-principles level. Universal machine-learning interatomic potentials (uMLIPs) could accelerate such simulations, but their reliability under non-equilibrium conditions remains unclear. Here, we examine eight leading uMLIPs for generating amorphous IrO2, using this electrocatalytically relevant oxide as a diagnostic case. Under the conventional melt-quench protocol, all models yield unphysically expanded structures with densities of 1-4 g/cm3, far below the ab initio molecular dynamics (AIMD) reference value of 10.04 g/cm3. Comparisons against ab initio references show that accurate energies and forces alone do not ensure stable NPT dynamics; correct energy-volume responses and pressure predictions are also essential. We identify two practical remedies: pressure-targeted fine-tuning and a revised NVT-quench/NPT-equilibration protocol that avoids unphysical volume expansion without additional ab initio training data. Both recover IrO2 densities and local structures consistent with AIMD. Across 30 chemically diverse materials, the volume-expansion failure proves general, and the revised protocol substantially improves density predictions, reducing the AIMD-referenced MAE from 2.46 to 0.35 g/cm3. This work establishes practical validation criteria and simulation strategies for robust uMLIP-driven amorphous structure generation.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T08:17:17Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Shuwei Li</name>
+    </author>
+    <author>
+      <name>Yuqi An</name>
+    </author>
+    <author>
+      <name>Xingyu Guo</name>
+    </author>
+    <author>
+      <name>Wenqiang Yang</name>
+    </author>
+    <author>
+      <name>Zhenbin Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.11072v1</id>
+    <title>Approaching the Limit of Intrinsic Crystalline Thermal Insulation</title>
+    <updated>2026-06-09T16:33:29Z</updated>
+    <link href="https://arxiv.org/abs/2606.11072v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.11072v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Crystalline materials with ultralow thermal conductivity ($κ$) are potential thermal barrier coatings or thermoelectrics, yet the discovery of ultralow-$κ$ materials remains inefficient due to the limitations of trial-and-error approaches. Herein, we propose a state-of-the-art high-throughput workflow that integrates universal machine learning interatomic potentials with high-fidelity phonon transport theories to accelerate the exploration of thermal insulators. Applying this approach, we identify dozens of crystalline materials with intrinsic room-temperature $κ$ values below 0.2 $\rm W m^{-1} K^{-1}$. Among them, we report and experimentally validate CsTlI$_4$, a record-breaking material with an ultralow $κ$ of 0.14 $\rm W m^{-1} K^{-1}$ at 300 K. Structural and bond analyses reveal that a hierarchical bonding framework, consisting of multi-coordinated Cs-I and antibonding Tl-I interactions, leads to weak chemical bonding and a soft lattice. These features reduce phonon group velocities, enhance phonon scattering, and induce strong vibrational mismatch between sublattices, collectively suppressing both particle-like phonon propagation and wave-like tunneling. Beyond this specific system, we establish physically interpretable descriptors based on interatomic force constants that correlate strongly with ultralow $κ$ and capture the role of bonding hierarchy and coordination environments in governing thermal transport. This work demonstrates a robust data-driven strategy for accelerating the discovery of thermal insulators and provides microscopic insight into how hierarchical bonding and strong anharmonicity cooperate to impede heat-carrying vibrations.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-09T16:33:29Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Ruihuan Cheng</name>
+    </author>
+    <author>
+      <name>Zhiqiang Cui</name>
+    </author>
+    <author>
+      <name>Mani Jayaraman</name>
+    </author>
+    <author>
+      <name>Lincong Ji</name>
+    </author>
+    <author>
+      <name>Chen Wang</name>
+    </author>
+    <author>
+      <name>Zesheng Zeng</name>
+    </author>
+    <author>
+      <name>Petr Levinsky</name>
+    </author>
+    <author>
+      <name>Jiri Hejtmanek</name>
+    </author>
+    <author>
+      <name>Christophe Candolfi</name>
+    </author>
+    <author>
+      <name>Emmanuel Guilmeau</name>
+    </author>
+    <author>
+      <name>Xingchen Shen</name>
+    </author>
+    <author>
+      <name>Yue Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.09422v2</id>
+    <title>A Robust Agentic Framework for Expert-Level Automation of Atomistic Simulations</title>
+    <updated>2026-06-12T04:07:24Z</updated>
+    <link href="https://arxiv.org/abs/2606.09422v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.09422v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditionally, atomistic simulation has been constrained by the computational scaling limits of ab initio methods and the parameterization overhead of empirical force fields. The recent emergence of universal machine learning interatomic potentials has significantly mitigated these bottlenecks, offering near-quantum accuracy and generalizability across diverse chemical spaces at a fraction of the computational cost. However, this shift has relocated the bottleneck to the human dimension: time-consuming mechanical processes, such as input preparation and data analysis, now dominate the research lifecycle. We introduce Paimon, a Platform for Agentic Integration in Materials Optimization and Nanoscale-simulations. Through hundreds of trials on an expert-level liquid electrolyte simulation, we show that Paimon substantially improves the reliability of agentic workflows by suppressing silent errors: plausible yet physically incorrect results. We further demonstrate that Paimon can cooperate with an external scientific agent and autonomously reproduce simulation methodologies from the literature. As an agent harness for atomistic simulations, Paimon affords researchers a continuous, science-centric workflow throughout the entire simulation lifecycle.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-08T12:37:20Z</published>
+    <arxiv:comment>added data availability</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yutack Park</name>
+    </author>
+    <author>
+      <name>Yeonwoo Chung</name>
+    </author>
+    <author>
+      <name>Jinmu You</name>
+    </author>
+    <author>
+      <name>Jisu Kim</name>
+    </author>
+    <author>
+      <name>Suyeon Ju</name>
+    </author>
+    <author>
+      <name>Seungwu Han</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.15630v1</id>
+    <title>Reweighting free energy profiles between universal machine learning interatomic potentials for fast consensus building</title>
+    <updated>2026-05-15T05:30:38Z</updated>
+    <link href="https://arxiv.org/abs/2605.15630v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.15630v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Free energy profiles serve as a fundamental bridge between microscopic atomic fluctuations and macroscopic thermodynamic observables. Estimating the free energy profile along a reaction coordinate, referred to as the potential of mean force (PMF), with density functional theory (DFT) accuracy is computationally expensive. Universal machine learning interatomic potentials (MLIPs) drastically reduce this cost, but their accuracy is strongly determined by their training data and hence can be uncertain for a given system. In this work, we present a systematic and scalable framework for reweighting PMFs, initially sampled with a single 'source' MLIP, across a representative suite of target MLIPs. Because traditional direct exponential reweighting fails for large system sizes due to low phase-space overlap between potentials, we deploy robust analytical corrections. Applying this to a complex 601-atom system of Li$^+$ transport in a nanoconfined electrolyte, we demonstrate that a mean energy-gap approximation effectively bypasses statistical collapse, producing a highly stable PMF matching the target PMF. Using this approach, we recover high-fidelity target thermodynamics across multiple DFT reference levels (PBE+D3, PBE-sol, r$^2$SCAN,r$^2$SCAN-D4) at a fraction of the computational cost of full simulations. Furthermore, thermodynamic analysis reveals that the studied MLIPs partition into two distinct clusters driven by their training data. Our reweighting framework successfully recovers target thermodynamic properties--specifically, reaction and activation free energies--even when the phase-space overlap between potentials is critically low. Ultimately, this approach establishes a vital diagnostic protocol to achieve affordable cross-model consensus on materials chemistry properties without redundant, resource-intensive simulations.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T05:30:38Z</published>
+    <arxiv:comment>19 pages, 4 figures, 1 table, SI appended</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Sauradeep Majumdar</name>
+    </author>
+    <author>
+      <name>Miguel Steiner</name>
+    </author>
+    <author>
+      <name>Johannes C. B. Dietschreit</name>
+    </author>
+    <author>
+      <name>Swagata Roy</name>
+    </author>
+    <author>
+      <name>Daniel Willimetz</name>
+    </author>
+    <author>
+      <name>Lukaš Grajciar</name>
+    </author>
+    <author>
+      <name>Rafael Gómez-Bombarelli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.25262v1</id>
+    <title>Benchmarking Universal Machine-Learned Interatomic Potentials for High-Temperature Metal-Organic Framework Chemistry</title>
+    <updated>2026-04-28T06:11:25Z</updated>
+    <link href="https://arxiv.org/abs/2604.25262v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.25262v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine-learned interatomic potentials (uMLIPs) offer a promising approach to performing atomistic simulations at near-DFT accuracy with greatly reduced computational cost. Here, we present a new high-temperature benchmarking dataset of 40~ps ab~initio molecular dynamics (AIMD) trajectories simulated at 300, 1000, and 2000 K for nine zinc- and zirconium-based metal-organic frameworks (MOFs): ZIF-8, CALF-20, MOF-10, MOF-5, MIP-206, UiO-66, UiO-67, UiO-66-NH2, and NU-1000. These trajectories capture equilibrium dynamics, thermally induced distortions, and early-stage decomposition events, including linker degradation and metal node aggregation. Subsequently, we use this dataset to benchmark five leading uMLIPs: ORB-v3, MACE-MP-0a, MACE-MPA-0, fairchem ODAC23, and fairchem OMAT. Our results reveal that ORB-v3 and fairchem OMAT achieve the lowest energy, force, and stress errors across all temperatures. However, all models exhibit significant error under high-temperature conditions. Long-timescale molecular dynamics simulations produced with ORB-v3 demonstrate that the generative error of uMLIPs far exceeds model losses captured during static validation, highlighting the limitations of current universal models for simulating high-temperature MOF dynamics. This work provides a benchmark for assessing the robustness of uMLIPs in extreme regimes and guides future development of potentials capable of accurately modeling the chemistry of high-temperature MOF dynamics.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-28T06:11:25Z</published>
+    <arxiv:comment>13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Connor W. Edwards</name>
+    </author>
+    <author>
+      <name>Jack D. Evans</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.02524v1</id>
+    <title>AQVolt26: High-Temperature r$^2$SCAN Halide Dataset for Universal ML Potentials and Solid-State Batteries</title>
+    <updated>2026-04-02T21:23:47Z</updated>
+    <link href="https://arxiv.org/abs/2604.02524v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.02524v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The demand for safe, high-energy-density batteries has spotlighted halide solid-state electrolytes, which offer the potential for enhanced ionic mobility, electrochemical stability, and interfacial deformability. Accelerating their discovery requires extensive molecular dynamics, which has been increasingly enabled by universal machine learning interatomic potentials trained on foundational datasets. However, the dynamic softness of halides poses a stringent test of whether general-purpose models can reliably replace first-principles calculations under the highly distorted, elevated-temperature regimes necessary to probe ion transport. Here, we present AQVolt26, a dataset of 322,656 r$^2$SCAN single-point calculations for lithium halides, generated via high-temperature configurational sampling across $\sim$5K structures. We demonstrate that foundational datasets provide a strong baseline for stable halide chemistries and transfer local forces well, however absolute energy predictions degrade in distorted higher-temperature regimes. Co-training with AQVolt26 resolves this blind spot. Furthermore, incorporating Materials Project relaxation data improves near-equilibrium performance but degrades extreme-strain robustness without enhancing high-temperature force accuracy. These results demonstrate that domain-specific configurational sampling is essential for the reliable dynamic screening of halide electrolytes. Furthermore, our findings suggest that while foundational models provide a robust base, they are most effective for dynamically soft solid-state chemistries when augmented with targeted, high-temperature data. Finally, we show that near-equilibrium relaxation data serves as a task-specific complement rather than a universally beneficial addition.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-02T21:23:47Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jiyoon Kim</name>
+    </author>
+    <author>
+      <name>Chuhong Wang</name>
+    </author>
+    <author>
+      <name>Aayush R. Singh</name>
+    </author>
+    <author>
+      <name>Tyler Sours</name>
+    </author>
+    <author>
+      <name>Shivang Agarwal</name>
+    </author>
+    <author>
+      <name>AJ Nish</name>
+    </author>
+    <author>
+      <name>Paul Abruzzo</name>
+    </author>
+    <author>
+      <name>Ang Xiao</name>
+    </author>
+    <author>
+      <name>Omar Allam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.15503v1</id>
+    <title>High-Throughput Computational Exploration of MOFs for Short-Chain PFAS Removal</title>
+    <updated>2026-03-16T16:32:20Z</updated>
+    <link href="https://arxiv.org/abs/2603.15503v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.15503v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Short-chain per- and polyfluoroalkyl substances (PFASs) are increasingly replacing regulated long-chain PFASs, yet they remain challenging to remove from water due to their high persistence, mobility, and weak affinity toward conventional adsorbents. In this work, we developed a hybrid high-throughput computational screening (HTCS) strategy to identify high-performance MOFs for the selective adsorption of perfluorobutanoic acid (PFBA), a representative short-chain PFAS, from water. The workflow begins with a curated MOF dataset and employs Monte Carlo (MC) simulations based on synergistic use of a classical universal force field (UFF) and a universal machine-learned interatomic potential (u-MLIP), enabling scalable and quantitatively accurate prediction of adsorption across large MOF databases. A set of promising MOFs initially identified using UFF-based HTCS, that combine strong PFBA affinity and high PFBA/H2O selectivity were re-evaluated with u-MLIP to refine adsorption predictions and to assess guest-induced framework flexibility, enabling the exclusion of materials with unfavourable high water-framework interactions. Ultimately, four high-performance MOFs were identified that optimally balance strong PFBA interactions, high PFBA selectivity over water, and practical considerations including sustainability, water stability, and synthetic feasibility. This study demonstrates that combining classical force fields with u-MLIPs enables scalable, quantitatively accurate MOF adsorption screening and establishes transferable principles for the rational design of adsorbents targeting short-chain PFAS.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-16T16:32:20Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Mengru Zhang</name>
+    </author>
+    <author>
+      <name>Satyanarayana Bonakala</name>
+    </author>
+    <author>
+      <name>Taku Watanabe</name>
+    </author>
+    <author>
+      <name>Karim Hamzaoui</name>
+    </author>
+    <author>
+      <name>Guillaume Maurin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.17847v1</id>
+    <title>An AI-ready fine-tuning framework for accurate machine-learning interatomic potentials in solid-solid battery interfaces</title>
+    <updated>2026-01-25T14:07:37Z</updated>
+    <link href="https://arxiv.org/abs/2601.17847v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.17847v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomistic modeling of solid-solid battery interfaces is essential for understanding electro-chemo-mechanical coupling, but the complex interfacial chemistry and heterogeneous environments pose major challenges for quantum-accurate, data-efficient modeling. Herein, we propose an approach of fine-tuning with integrated replay and efficiency (FIRE), a general framework for universal machine-learning interatomic potentials by combining efficient configurational sampling with a replay-argumented continual strategy, achieving quantum-level accuracy at moderate cost. Across six solid-solid battery interface systems, FIRE consistently achieves root-mean-square errors in energy below 1 meV/atom and in force near 20 meV/angstrom, marking an order-of-magnitude improvement over existing models while requiring only 10% of the original datasets. In addition, the fine-tuned model successfully reproduces key mechanical and electrochemical properties of the materials, in close agreement with experimental data. The FIRE offers a generalizable and data-efficient approach for developing accurate interatomic potentials across diverse materials, enabling predictive simulations beyond the reach of first-principles methods.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-25T14:07:37Z</published>
+    <arxiv:comment>21 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Xiaoqing Liu</name>
+    </author>
+    <author>
+      <name>Xinyu Yu</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+    <author>
+      <name>Zhe-Tao Sun</name>
+    </author>
+    <author>
+      <name>Zedong Luo</name>
+    </author>
+    <author>
+      <name>Kehan Zeng</name>
+    </author>
+    <author>
+      <name>Teng Zhao</name>
+    </author>
+    <author>
+      <name>Shou-Hang Bo</name>
+    </author>
+    <author>
+      <name>Zhenli Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.09169v2</id>
+    <title>AI-Driven Expansion and Application of the Alexandria Database</title>
+    <updated>2026-05-01T14:32:43Z</updated>
+    <link href="https://arxiv.org/abs/2512.09169v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.09169v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a novel multi-stage workflow for computational materials discovery that achieves a 99% success rate in identifying compounds within 100 meV/atom of thermodynamic stability, with a threefold improvement over previous approaches. By combining the Matra-Genoa generative model, Orb-v2 universal machine learning interatomic potential, and ALIGNN graph neural network for energy prediction, we generated 119 million candidate structures and added 1.3 million DFT-validated compounds to the ALEXANDRIA database, including 74 thousand new stable materials. The expanded ALEXANDRIA database now contains 5.8 million structures with 175 thousand compounds on the convex hull. Predicted structural disorder rates (37-43%) match experimental databases, unlike other recent AI-generated datasets. Analysis reveals fundamental patterns in space group distributions, coordination environments, and phase stability networks, including sub-linear scaling of convex hull connectivity. We release the complete dataset, including sAlex25 with 14 million out-of-equilibrium structures containing forces and stresses for training universal force fields. We demonstrate that fine-tuning a GRACE model on this data improves benchmark accuracy. All data, models, and workflows are freely available under Creative Commons licenses.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-09T22:31:17Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Théo Cavignac</name>
+      <arxiv:affiliation>Research Center Future Energy Materials and Systems of the University Alliance Ruhr and ICAMS, Ruhr University Bochum, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jonathan Schmidt</name>
+      <arxiv:affiliation>Department of Materials, ETH Zürich, Zürich, Switzerland</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pierre-Paul De Breuck</name>
+      <arxiv:affiliation>Research Center Future Energy Materials and Systems of the University Alliance Ruhr and ICAMS, Ruhr University Bochum, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Antoine Loew</name>
+      <arxiv:affiliation>Research Center Future Energy Materials and Systems of the University Alliance Ruhr and ICAMS, Ruhr University Bochum, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+      <arxiv:affiliation>CFisUC, Department of Physics, University of Coimbra, Coimbra, Portugal</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hai-Chen Wang</name>
+      <arxiv:affiliation>Research Center Future Energy Materials and Systems of the University Alliance Ruhr and ICAMS, Ruhr University Bochum, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anton Bochkarev</name>
+      <arxiv:affiliation>ICAMS, Ruhr-Universität Bochum and ACEworks GmbH, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yury Lysogorskiy</name>
+      <arxiv:affiliation>ICAMS, Ruhr-Universität Bochum and ACEworks GmbH, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aldo H. Romero</name>
+      <arxiv:affiliation>Department of Physics, West Virginia University, Morgantown, USA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ralf Drautz</name>
+      <arxiv:affiliation>ICAMS, Ruhr-Universität Bochum and ACEworks GmbH, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Silvana Botti</name>
+      <arxiv:affiliation>Research Center Future Energy Materials and Systems of the University Alliance Ruhr and ICAMS, Ruhr University Bochum, Bochum, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+      <arxiv:affiliation>Research Center Future Energy Materials and Systems of the University Alliance Ruhr and ICAMS, Ruhr University Bochum, Bochum, Germany</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05489v1</id>
+    <title>Beyond Adam: Disentangling Optimizer Effects in the Fine-Tuning of Atomistic Foundation Models</title>
+    <updated>2025-12-05T07:29:42Z</updated>
+    <link href="https://arxiv.org/abs/2512.05489v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05489v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomistic foundation models constitute a paradigm shift in computational materials science by providing universal machine-learned interatomic potentials with broad transferability across chemical spaces. Although fine-tuning is essential for adapting these pretrained models to specific target systems, the influence of the optimization algorithm on this process remains insufficiently characterized. In this work, we perform a rigorous benchmark of seven first-order optimizers, including Adam, AdamW, RAdam, SGD, LAMB, Ranger, and ScheduleFree, for the fine-tuning of foundation models across molecular, crystalline, and liquid regimes. We evaluate these algorithms based on energy and force accuracy for both in-distribution and out-of-distribution configurations, as well as their impact on downstream physical properties such as elastic moduli, phonon spectra, and interfacial dynamics. We interpret these empirical results through a preconditioning framework that views each optimizer as a data-dependent linear transformation of the gradient. This analysis clarifies how different update rules impose specific spectral filters on the effective loss Hessian. Across all regimes, AdamW and ScheduleFree achieve superior curvature conditioning and force accuracy, whereas stochastic gradient descent exhibits slow convergence and instability. Furthermore, we demonstrate that a brief second-order refinement stage reduces residual anisotropy in the loss landscape and enhances the fidelity of physical observables without increasing inference costs. These findings provide conceptual insight and practical guidance for selecting and designing optimizers to ensure the stable and efficient fine-tuning of universal interatomic potentials.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T07:29:42Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Xiaoqing Liu</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+    <author>
+      <name>Teng Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.22874v1</id>
+    <title>Ready-to-Use Polymerization Simulations Combining Universal Machine Learning Interatomic Potential with Time-Dependent Bond Boosting for Polymer and Interface Design</title>
+    <updated>2025-11-28T04:35:57Z</updated>
+    <link href="https://arxiv.org/abs/2511.22874v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.22874v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although polymerization and curing reactions govern the performance of advanced materials, their simulation remains challenging owing to the need for accurate, transferable potentials and rarity of chemical events. Conventional reactive force fields such as ReaxFF require system-specific parametrization, while universal machine learning interatomic potentials (uMLIPs) exhibit limited sampling efficiency. This paper introduces a novel simulation framework integrating a uMLIP with a time-dependent bond-boost scheme. The bias potential increases monotonically with time, and the use of a unified parameter set across reaction classes enables consistent acceleration without system-specific tuning. For radical polymerization of vinyl monomers, the proposed framework reproduces characteristic trends, such as linear molecular-weight growth with conversion, initiator-concentration scaling, and relative monomer reactivity trends. For step-growth polycondensation of nylon-6,6, it captures the characteristic sharp increase in molecular weight at high conversion rates, consistent with experimental behavior. For epoxy curing at a copper substrate, it reveals interfacial ring-opening and cross-linking events, consistent with spectroscopic evidence of Cu-O-C bond formation. Overall, coupling uMLIPs with time-dependent bond boost enables practical and transferable simulations of polymerization and curing processes. The proposed framework reliably resolves mechanistic pathways and relative reactivity, offering molecular-level insights into polymer growth and interfacial adhesion.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-28T04:35:57Z</published>
+    <arxiv:comment>18 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hodaka Mori</name>
+    </author>
+    <author>
+      <name>Shunsuke Tonogai</name>
+    </author>
+    <author>
+      <name>Yu Miyazaki</name>
+    </author>
+    <author>
+      <name>Akihide Hayashi</name>
+    </author>
+    <author>
+      <name>Masayoshi Takayanagi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.20179v2</id>
+    <title>A follow-up on the sulphur atom popping model for MoS$_2$ memristor</title>
+    <updated>2025-10-23T16:25:02Z</updated>
+    <link href="https://arxiv.org/abs/2509.20179v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.20179v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The mechanism of resistive switching in two-dimensional (2D) semiconductor-based memristors is intriguing, and our conventional knowledge of bulk-oxide based memristors does not apply to these devices. Experimental data indicate that the genesis of resistive switching may be intrinsic to the 2D semiconducting active layer, as well as resulting from the movement of electrode atoms. Employing reactive-force field (ReaxFF) molecular dynamics simulations, we introduced the "sulphur atom popping model" [npj 2D Mater. Appl. 5, 33 (2021)] to elucidate the intrinsic nature of non-volatile resistive switching in 2D molybdenum disulfide-based memristors. In this paper we provide additional perspective to this model using density functional theory. We also discuss the limitations of universal machine learning interatomic potentials in reproducing ReaxFF simulation results.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-24T14:40:47Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Sanchali Mitra</name>
+    </author>
+    <author>
+      <name>Santanu Mahapatra</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.20164v2</id>
+    <title>Massive Discovery of Low-Dimensional Materials from Universal Computational Strategy</title>
+    <updated>2026-02-14T14:54:10Z</updated>
+    <link href="https://arxiv.org/abs/2509.20164v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.20164v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Low-dimensional materials have attractive properties that drive intense efforts for novel materials discovery. However, experiments are tedious for systematic discovery, and present computational methods are often tuned to two-dimensional (2D) materials, overlooking other low-dimensional materials. Here, we combined universal machine-learning interatomic potentials (UMLIPs) and an advanced, interatomic force constant (FC) -based dimensionality classification method to make a massive discovery of novel low-dimensional materials. We first benchmarked UMLIPs' first-principles-level accuracy in quantifying FCs and calculated phonons for 35,689 materials from the Materials Project database. We then used the FC-based method for dimensionality classification to discover 9139 low-dimensional materials, including 1838 0D clusters, 1760 1D chains, 3057 2D sheets/layers, and 2484 mixed-dimensionality materials, all of which conventional geometric descriptors have not recognized. By calculating the binding energies for the discovered 2D materials, we also identified 887 sheets that could be easily or potentially exfoliated from their parent bulk structures.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-24T14:31:48Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Chem. Mater. 2026</arxiv:journal_ref>
+    <author>
+      <name>Mohammad Bagheri</name>
+    </author>
+    <author>
+      <name>Ethan Berger</name>
+    </author>
+    <author>
+      <name>Hannu-Pekka Komsa</name>
+    </author>
+    <author>
+      <name>Pekka Koskinen</name>
+    </author>
+    <arxiv:doi>10.1021/acs.chemmater.5c03151</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.chemmater.5c03151" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.08498v1</id>
+    <title>Benchmarking CHGNet Universal Machine Learning Interatomic Potential Against DFT and EXAFS: Case of Layered WS2 and MoS2</title>
+    <updated>2025-09-10T11:14:25Z</updated>
+    <link href="https://arxiv.org/abs/2509.08498v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.08498v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine learning interatomic potentials (uMLIPs) deliver near ab initio accuracy in energy and force calculations at low computational cost, making them invaluable for materials modeling. Although uMLIPs are pre-trained on vast ab initio datasets, rigorous validation remains essential for their ongoing adoption. In this study, we use the CHGNet uMLIP to model thermal disorder in isostructural layered 2Hc-WS2 and 2Hc-MoS2, benchmarking it against ab initio data and extended X-ray absorption fine structure (EXAFS) spectra, which capture thermal variations in bond lengths and angles. Fine-tuning CHGNet with compound-specific ab initio (DFT) data mitigates the systematic softening (i.e., force underestimation) typical of uMLIPs and simultaneously improves alignment between molecular dynamics-derived and experimental EXAFS spectra. While fine-tuning with a single DFT structure is viable, using ~100 structures is recommended to accurately reproduce EXAFS spectra and achieve DFT-level accuracy. Benchmarking the CHGNet uMLIP against both DFT and experimental EXAFS data reinforces confidence in its performance and provides guidance for determining optimal fine-tuning dataset sizes.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-10T11:14:25Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>J. Chem. Theory Comput. 2025, 21, 16, 8142-8150</arxiv:journal_ref>
+    <author>
+      <name>Pjotrs Žguns</name>
+    </author>
+    <author>
+      <name>Inga Pudza</name>
+    </author>
+    <author>
+      <name>Alexei Kuzmin</name>
+    </author>
+    <arxiv:doi>10.1021/acs.jctc.5c00955</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.jctc.5c00955" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.06719v1</id>
+    <title>Towards Accurate and Scalable High-throughput MOF Adsorption Screening: Merging Classical Force Fields and Universal Machine Learned Interatomic Potentials</title>
+    <updated>2025-09-08T14:15:14Z</updated>
+    <link href="https://arxiv.org/abs/2509.06719v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.06719v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-throughput computational screening (HTCS) of gas adsorption in metal-organic frameworks (MOFs) typically relies on classical generic force fields such as the Universal Force Field (UFF), which are efficient but often fail to capture complex host-guest interactions. Universal machine-learned interatomic potentials (u-MLIPs) offer near-quantum accuracy at far lower cost than density functional theory (DFT), yet their large-scale application in adsorption screening remains limited. Here, we present a hybrid screening strategy that merges Widom insertion Monte Carlo simulations performed with both UFF and the PreFerred Potential (PFP) u-MLIP to evaluate the adsorption performance of a large MOF database, using ethylene capture under humid conditions as a benchmark. From a curated set of MOFs, 88 promising candidates initially identified using UFF-based HTCS were re-evaluated with the PFP u-MLIP, benchmarked against DFT calculations to refine adsorption predictions and assess the role of framework flexibility. We show that PFP u-MLIP is essential to accurately assess the sorption performance of MOFs involving strong hydrogen bonding or confinement pockets within narrow pores, effects poorly captured using UFF. Notably, accounting for framework flexibility through full unit cell relaxation revealed deviations in ethylene affinity of up to 20 kJ mol-1, underscoring the impact of guest-induced structural changes. This HTCS workflow identified seven MOFs with optimal pore sizes, high ethylene affinity, and high C2H4/H2O selectivity, offering moisture-tolerant performance for applications from food packaging to trace ethylene removal. Our findings highlight the importance of accurately capturing host-guest energetics and framework flexibility, and demonstrate the practicality of incorporating u-MLIPs into scalable HTCS for identifying top MOF sorbents.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-08T14:15:14Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Satyanarayana Bonakala</name>
+    </author>
+    <author>
+      <name>Mohammad Wahiduzzaman</name>
+    </author>
+    <author>
+      <name>Taku Watanabe</name>
+    </author>
+    <author>
+      <name>Karim Hamzaoui</name>
+    </author>
+    <author>
+      <name>Guillaume Maurin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.02641v2</id>
+    <title>FastCSP: Accelerated Molecular Crystal Structure Prediction with Universal Model for Atoms</title>
+    <updated>2026-07-03T03:26:54Z</updated>
+    <link href="https://arxiv.org/abs/2508.02641v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.02641v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Molecular crystal structure prediction (CSP) is essential for applications in pharmaceuticals and organic electronics. However, CSP remains challenging and computationally intensive due to the need to explore a large search space with sub-kJ/mol accuracy to distinguish between competing polymorphs. While dispersion-inclusive density functional theory (DFT) offers the necessary precision, its computational cost is impractical for a large number of putative structures. Here, we present FastCSP, an open-source, end-to-end CSP workflow driven entirely by a single pretrained universal machine learning interatomic potential (MLIP), the Universal Model for Atoms (UMA), without any system-specific fine-tuning or DFT calculations. FastCSP integrates conformer generation, random structure generation via Genarris 3, geometry optimization, free energy evaluation, and conformer energy corrections, all powered by UMA. Benchmarked on 28 semi-rigid and 10 flexible molecules spanning 74 experimental polymorphs, FastCSP reliably recovers all known structures, ranking them within 9 kJ/mol of the global minimum. UMA reproduces dispersion-inclusive DFT results with high fidelity across chemically diverse compounds. Conformer corrections are particularly beneficial for flexible compounds with conformational polymorphism, such as ROY. UMA's accuracy, transferability, and computational cost thus eliminate the need for classical force fields in early-stage screening and DFT-based re-ranking in CSP workflows. The open-source release of the entire FastCSP workflow lowers the barrier to accessing CSP, enabling both pharmaceutical-grade and high-throughput polymorph screening within practical computational reach.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-04T17:25:55Z</published>
+    <arxiv:comment>32 pages, 10 figures, 32 pages supplementary information. Code available at https://github.com/facebookresearch/fairchem/tree/main/src/fairchem/applications/fastcsp</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Vahe Gharakhanyan</name>
+    </author>
+    <author>
+      <name>Yi Yang</name>
+    </author>
+    <author>
+      <name>Luis Barroso-Luque</name>
+    </author>
+    <author>
+      <name>Daniel S. Levine</name>
+    </author>
+    <author>
+      <name>Sushree Jagriti Sahoo</name>
+    </author>
+    <author>
+      <name>Brandon M. Wood</name>
+    </author>
+    <author>
+      <name>Kyle Michel</name>
+    </author>
+    <author>
+      <name>Muhammed Shuaibi</name>
+    </author>
+    <author>
+      <name>Gregory J. O. Beran</name>
+    </author>
+    <author>
+      <name>Viachaslau Bernat</name>
+    </author>
+    <author>
+      <name>Misko Dzamba</name>
+    </author>
+    <author>
+      <name>Xiang Fu</name>
+    </author>
+    <author>
+      <name>Meng Gao</name>
+    </author>
+    <author>
+      <name>Xingyu Liu</name>
+    </author>
+    <author>
+      <name>Benjamin K. Miller</name>
+    </author>
+    <author>
+      <name>Keian Noori</name>
+    </author>
+    <author>
+      <name>Lafe J. Purvis</name>
+    </author>
+    <author>
+      <name>Tingling Rao</name>
+    </author>
+    <author>
+      <name>Ammar Rizvi</name>
+    </author>
+    <author>
+      <name>Matt Uyttendaele</name>
+    </author>
+    <author>
+      <name>Andrew J. Ouderkirk</name>
+    </author>
+    <author>
+      <name>Chiara Daraio</name>
+    </author>
+    <author>
+      <name>C. Lawrence Zitnick</name>
+    </author>
+    <author>
+      <name>Arman Boromand</name>
+    </author>
+    <author>
+      <name>Noa Marom</name>
+    </author>
+    <author>
+      <name>Zachary W. Ulissi</name>
+    </author>
+    <author>
+      <name>Anuroop Sriram</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11806v1</id>
+    <title>MOFSimBench: Evaluating Universal Machine Learning Interatomic Potentials In Metal--Organic Framework Molecular Modeling</title>
+    <updated>2025-07-16T00:00:55Z</updated>
+    <link href="https://arxiv.org/abs/2507.11806v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.11806v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine learning interatomic potentials (uMLIPs) have emerged as powerful tools for accelerating atomistic simulations, offering scalable and efficient modeling with accuracy close to quantum calculations. However, their reliability and effectiveness in practical, real-world applications remain an open question. Metal-organic frameworks (MOFs) and related nanoporous materials are highly porous crystals with critical relevance in carbon capture, energy storage, and catalysis applications. Modeling nanoporous materials presents distinct challenges for uMLIPs due to their diverse chemistry, structural complexity, including porosity and coordination bonds, and the absence from existing training datasets. Here, we introduce MOFSimBench, a benchmark to evaluate uMLIPs on key materials modeling tasks for nanoporous materials, including structural optimization, molecular dynamics (MD) stability, the prediction of bulk properties, such as bulk modulus and heat capacity, and guest-host interactions. Evaluating over 20 models from various architectures on a chemically and structurally diverse materials set, we find that top-performing uMLIPs consistently outperform classical force fields and fine-tuned machine learning potentials across all tasks, demonstrating their readiness for deployment in nanoporous materials modeling. Our analysis highlights that data quality, particularly the diversity of training sets and inclusion of out-of-equilibrium conformations, plays a more critical role than model architecture in determining performance across all evaluated uMLIPs. We release our modular and extendable benchmarking framework at https://github.com/AI4ChemS/mofsim-bench, providing an open resource to guide the adoption for nanoporous materials modeling and further development of uMLIPs.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-16T00:00:55Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hendrik Kraß</name>
+    </author>
+    <author>
+      <name>Ju Huang</name>
+    </author>
+    <author>
+      <name>Seyed Mohamad Moosavi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.01860v1</id>
+    <title>Benchmarking Universal Machine Learning Interatomic Potentials for Real-Time Analysis of Inelastic Neutron Scattering Data</title>
+    <updated>2025-06-02T16:50:29Z</updated>
+    <link href="https://arxiv.org/abs/2506.01860v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.01860v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The accurate calculation of phonons and vibrational spectra remains a significant challenge, requiring highly precise evaluations of interatomic forces. Traditional methods based on the quantum description of the electronic structure, while widely used, are computationally expensive and demand substantial expertise. Emerging universal machine learning interatomic potentials (uMLIPs) offer a transformative alternative by employing pre-trained neural network surrogates to predict interatomic forces directly from atomic coordinates. This approach dramatically reduces computation time and minimizes the need for technical knowledge. In this paper, we produce a phonon database comprising nearly 5,000 inorganic crystals to benchmark the performance of several leading uMLIPs. We further assess these models in real-world applications by using them to analyze experimental inelastic neutron scattering data collected on a variety of materials. Through detailed comparisons, we identify the strengths and limitations of these uMLIPs, providing insights into their accuracy and suitability for fast calculations of phonons and related properties, as well as for real-time interpretation of neutron scattering spectra. Our findings highlight how the rapid advancement of AI in science is revolutionizing experimental research and data analysis.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-02T16:50:29Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Bowen Han</name>
+    </author>
+    <author>
+      <name>Yongqiang Cheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.09970v1</id>
+    <title>Universal Machine Learning Interatomic Potentials are Ready for Solid Ion Conductors</title>
+    <updated>2025-02-14T07:55:53Z</updated>
+    <link href="https://arxiv.org/abs/2502.09970v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.09970v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With the rapid development of energy storage technology, high-performance solid-state electrolytes (SSEs) have become critical for next-generation lithium-ion batteries. These materials require high ionic conductivity, excellent electrochemical stability, and good mechanical properties to meet the demands of electric vehicles and portable electronics. However, traditional methods like density functional theory (DFT) and empirical force fields face challenges such as high computational costs, poor scalability, and limited accuracy across material systems. Universal machine learning interatomic potentials (uMLIPs) offer a promising solution with their efficiency and near-DFT-level accuracy.This study systematically evaluates six advanced uMLIP models (MatterSim, MACE, SevenNet, CHGNet, M3GNet, and ORBFF) in terms of energy, forces, thermodynamic properties, elastic moduli, and lithium-ion diffusion behavior. The results show that MatterSim outperforms others in nearly all metrics, particularly in complex material systems, demonstrating superior accuracy and physical consistency. Other models exhibit significant deviations due to issues like energy inconsistency or insufficient training data coverage.Further analysis reveals that MatterSim achieves excellent agreement with reference values in lithium-ion diffusivity calculations, especially at room temperature. Studies on Li3YCl6 and Li6PS5Cl uncover how crystal structure, anion disorder levels, and Na/Li arrangements influence ionic conductivity. Appropriate S/Cl disorder levels and optimized Na/Li arrangements enhance diffusion pathway connectivity, improving overall ionic transport performance.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-14T07:55:53Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hongwei Du</name>
+    </author>
+    <author>
+      <name>Jian Hui</name>
+    </author>
+    <author>
+      <name>Lanting Zhang</name>
+    </author>
+    <author>
+      <name>Hong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.03578v2</id>
+    <title>Universal machine learning interatomic potentials poised to supplant DFT in modeling general defects in metals and random alloys</title>
+    <updated>2025-06-09T14:23:27Z</updated>
+    <link href="https://arxiv.org/abs/2502.03578v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.03578v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in machine learning, combined with the generation of extensive density functional theory (DFT) datasets, have enabled the development of universal machine learning interatomic potentials (uMLIPs). These models offer broad applicability across the periodic table, achieving first-principles accuracy at a fraction of the computational cost of traditional DFT calculations. In this study, we demonstrate that state-of-the-art pretrained uMLIPs can effectively replace DFT for accurately modeling complex defects in a wide range of metals and alloys. Our investigation spans diverse scenarios, including grain boundaries and general defects in pure metals, defects in high-entropy alloys, hydrogen-alloy interactions, and solute-defect interactions. Remarkably, the latest EquiformerV2 models achieve DFT-level accuracy on comprehensive defect datasets, with root mean square errors (RMSE) below 5 meV/atom for energies and 100 meV/Å for forces, outperforming specialized machine learning potentials such as moment tensor potential and atomic cluster expansion. We also present a systematic analysis of accuracy versus computational cost and explore uncertainty quantification for uMLIPs. A detailed case study of tungsten (W) demonstrates that data on pure W alone is insufficient for modeling complex defects in uMLIPs, underscoring the critical importance of advanced machine learning architectures and diverse datasets, which include over 100 million structures spanning all elements. These findings establish uMLIPs as a robust alternative to DFT and a transformative tool for accelerating the discovery and design of high-performance materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-05T19:55:53Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Fei Shuang</name>
+    </author>
+    <author>
+      <name>Zixiong Wei</name>
+    </author>
+    <author>
+      <name>Kai Liu</name>
+    </author>
+    <author>
+      <name>Wei Gao</name>
+    </author>
+    <author>
+      <name>Poulumi Dey</name>
+    </author>
+    <arxiv:doi>10.1088/2632-2153/adea2d</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2632-2153/adea2d" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.16551v2</id>
+    <title>Universal Machine Learning Interatomic Potentials are Ready for Phonons</title>
+    <updated>2025-05-08T14:24:46Z</updated>
+    <link href="https://arxiv.org/abs/2412.16551v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.16551v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There has been an ongoing race for the past several years to develop the best universal machinelearning interatomic potential. This progress has led to increasingly accurate models for predictingenergy, forces, and stresses, combining innovative architectures with big data. Here, we benchmarkthese models on their ability to predict harmonic phonon properties, which are critical for under-standing the vibrational and thermal behavior of materials. Using around 10 000 ab initio phononcalculations, we evaluate model performance across various phonon-related parameters to test theuniversal applicability of these models. The results reveal that some models achieve high accuracyin predicting harmonic phonon properties. However, others still exhibit substantial inaccuracies,even if they excel in the prediction of the energy and the forces for materials close to dynamicalequilibrium. These findings highlight the importance of considering phonon-related properties inthe development of universal machine learning interatomic potentials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-21T09:28:28Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Antoine Loew</name>
+    </author>
+    <author>
+      <name>Dewen Sun</name>
+    </author>
+    <author>
+      <name>Hai-Chen Wang</name>
+    </author>
+    <author>
+      <name>Silvana Botti</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+  </entry>
+</feed>

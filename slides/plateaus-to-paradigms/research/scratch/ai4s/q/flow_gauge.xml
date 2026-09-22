@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/u5hkemGycXYMjJ4Ec752CQtI030</id>
+  <title>arXiv Query: search_query=abs:"flow-based sampling"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:44:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22flow-based+sampling%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>17</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.10008v1</id>
+    <title>Manifold Constrained Conformal Prediction for Spatial Events</title>
+    <updated>2026-07-10T22:10:12Z</updated>
+    <link href="https://arxiv.org/abs/2607.10008v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.10008v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a new conformal prediction method that constructs calibrated prediction sets over collections of spatial events, such as tropical cyclone genesis and earthquake locations. Forecasting natural hazards has become increasingly important, due to their significant economic impact, and quantifying the uncertainty of predictions is critical for accurate risk assessment. Our approach works by representing spatial point clouds as empirical measures so that we can score them using (sliced) Wasserstein distance, then constraining the resulting distribution-valued prediction set to be supported only near the training data manifold. We derive a coverage lower bound for the intersected sets and show that, in practice, this gap can be made small through a simple data-adaptive selection criterion. Because the resulting set is not analytically tractable, we introduce a modified flow-based sampling procedure, which allows us to represent and apply these prediction sets in practice as ensembles. Numerical experiments on synthetic data, tropical cyclone genesis, and earthquake occurrences show that our method achieves near-nominal coverage, with significantly lower energy distance and manifold distance than highest predictive density region (HDR) baselines along with generative model baselines.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T22:10:12Z</published>
+    <arxiv:comment>21 pages, 10 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Collin Nill</name>
+    </author>
+    <author>
+      <name>Trevor Harris</name>
+    </author>
+    <author>
+      <name>Jason Adams</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.21429v3</id>
+    <title>Provably Safe Generative Sampling with Constricting Barrier Functions</title>
+    <updated>2026-07-31T20:00:39Z</updated>
+    <link href="https://arxiv.org/abs/2602.21429v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.21429v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow-based generative models, such as diffusion models and flow matching models, have achieved remarkable success in learning complex data distributions. However, a critical gap remains for their deployment in safety-critical domains: the lack of formal guarantees that generated samples will satisfy hard constraints. We propose a safety filtering framework that acts as an online shield for any pre-trained generative model. Our key insight is to cooperate with the generative process rather than override it. We define a constricting safety tube that is relaxed at the initial noise distribution and progressively tightens to the target safe set at the final data distribution, mirroring the coarse-to-fine structure of the generative process itself. By characterizing this tube via Control Barrier Functions (CBFs), we synthesize a feedback control input through a convex Quadratic Program (QP) at each sampling step. As the tube is loosest when noise is high and intervention is cheapest in terms of control energy, most constraint enforcement occurs when it least disrupts the model's learned structure. We prove that this mechanism guarantees safe sampling in discrete-time. The minimum-norm control synthesized at each step minimizes the per-step contribution to the KL divergence between the safe and original distributions. Across all experiments, we observe 100% constraint satisfaction. Our framework applies to any pre-trained flow-based sampling scheme requiring no retraining or architectural modifications. We validate the approach across constrained image generation, physically-consistent trajectory sampling, and safe robotic manipulation policies, achieving 100% constraint satisfaction while preserving semantic fidelity.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-24T23:06:58Z</published>
+    <arxiv:comment>26 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Darshan Gadginmath</name>
+    </author>
+    <author>
+      <name>Ahmed Allibhoy</name>
+    </author>
+    <author>
+      <name>Fabio Pasqualetti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11389v1</id>
+    <title>Computing quantum entanglement with machine learning</title>
+    <updated>2025-12-12T09:00:39Z</updated>
+    <link href="https://arxiv.org/abs/2512.11389v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11389v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Entanglement calculations in quantum field theories are extremely challenging and typically rely on the replica trick, where the problem is rephrased in a study of defects. We demonstrate that the use of deep generative models drastically outperforms standard Monte Carlo algorithms. Remarkably, such a machine-learning method enables high-precision estimates of Rényi entropies in three dimensions for very large lattices. Moreover, we propose a new paradigm for studying lattice defects with flow-based sampling.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T09:00:39Z</published>
+    <arxiv:comment>1+9 pages, 3 figures, contribution for the 42nd International Symposium on Lattice Field Theory (Lattice 2025), 2 - 8 November 2025, Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Karl Jansen</name>
+    </author>
+    <author>
+      <name>Stefan Kühn</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Shinichi Nakajima</name>
+    </author>
+    <author>
+      <name>Kim A. Nicoli</name>
+    </author>
+    <author>
+      <name>Marco Panero</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.16636v1</id>
+    <title>Latent Noise Injection for Private and Statistically Aligned Synthetic Data Generation</title>
+    <updated>2025-06-19T22:22:57Z</updated>
+    <link href="https://arxiv.org/abs/2506.16636v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.16636v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Synthetic Data Generation has become essential for scalable, privacy-preserving statistical analysis. While standard approaches based on generative models, such as Normalizing Flows, have been widely used, they often suffer from slow convergence in high-dimensional settings, frequently converging more slowly than the canonical $1/\sqrt{n}$ rate when approximating the true data distribution.
+  To overcome these limitations, we propose a Latent Noise Injection method using Masked Autoregressive Flows (MAF). Instead of directly sampling from the trained model, our method perturbs each data point in the latent space and maps it back to the data domain. This construction preserves a one to one correspondence between observed and synthetic data, enabling synthetic outputs that closely reflect the underlying distribution, particularly in challenging high-dimensional regimes where traditional sampling struggles.
+  Our procedure satisfies local $(ε, δ)$-differential privacy and introduces a single perturbation parameter to control the privacy-utility trade-off. Although estimators based on individual synthetic datasets may converge slowly, we show both theoretically and empirically that aggregating across $K$ studies in a meta analysis framework restores classical efficiency and yields consistent, reliable inference. We demonstrate that with a well-calibrated perturbation parameter, Latent Noise Injection achieves strong statistical alignment with the original data and robustness against membership inference attacks. These results position our method as a compelling alternative to conventional flow-based sampling for synthetic data sharing in decentralized and privacy-sensitive domains, such as biomedical research.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-19T22:22:57Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Rex Shen</name>
+    </author>
+    <author>
+      <name>Lu Tian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.13233v3</id>
+    <title>Estimating Gibbs free energies via isobaric-isothermal flows</title>
+    <updated>2023-09-06T11:51:36Z</updated>
+    <link href="https://arxiv.org/abs/2305.13233v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.13233v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a machine-learning model based on normalizing flows that is trained to sample from the isobaric-isothermal ensemble. In our approach, we approximate the joint distribution of a fully-flexible triclinic simulation box and particle coordinates to achieve a desired internal pressure. This novel extension of flow-based sampling to the isobaric-isothermal ensemble yields direct estimates of Gibbs free energies. We test our NPT-flow on monatomic water in the cubic and hexagonal ice phases and find excellent agreement of Gibbs free energies and other observables compared with established baselines.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-22T17:05:34Z</published>
+    <arxiv:comment>19 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Peter Wirnsberger</name>
+    </author>
+    <author>
+      <name>Borja Ibarz</name>
+    </author>
+    <author>
+      <name>George Papamakarios</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.02402v1</id>
+    <title>Normalizing flows for lattice gauge theory in arbitrary space-time dimension</title>
+    <updated>2023-05-03T19:54:04Z</updated>
+    <link href="https://arxiv.org/abs/2305.02402v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.02402v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Applications of normalizing flows to the sampling of field configurations in lattice gauge theory have so far been explored almost exclusively in two space-time dimensions. We report new algorithmic developments of gauge-equivariant flow architectures facilitating the generalization to higher-dimensional lattice geometries. Specifically, we discuss masked autoregressive transformations with tractable and unbiased Jacobian determinants, a key ingredient for scalable and asymptotically exact flow-based sampling algorithms. For concreteness, results from a proof-of-principle application to SU(3) lattice gauge theory in four space-time dimensions are reported.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-03T19:54:04Z</published>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Alexander G. D. G. Matthews</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Ali Razavi</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.01798v1</id>
+    <title>Locality-constrained autoregressive cum conditional normalizing flow for lattice field theory simulations</title>
+    <updated>2023-04-04T13:55:51Z</updated>
+    <link href="https://arxiv.org/abs/2304.01798v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.01798v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flow-based sampling methods have been successful in tackling computational challenges traditionally associated with simulating lattice quantum field theories. Further works have incorporated gauge and translational invariance of the action integral in the underlying neural networks, which have led to efficient training and inference in those models. In this paper, we incorporate locality of the action integral which leads to simplifications to the input domain of conditional normalizing flows that sample constant time sub-lattices in an autoregressive process, dubbed local-Autoregressive Conditional Normalizing Flow (l-ACNF). We find that the autocorrelation times of l-ACNF models outperform an equivalent normalizing flow model on the full lattice by orders of magnitude when sampling $φ^{4}$ theory on a 2 dimensional lattice.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-04T13:55:51Z</published>
+    <arxiv:comment>13 Pages, 6 Figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Dinesh P. R.</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08903v2</id>
+    <title>GomalizingFlow.jl: A Julia package for Flow-based sampling algorithm for lattice field theory</title>
+    <updated>2023-10-04T09:53:56Z</updated>
+    <link href="https://arxiv.org/abs/2208.08903v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08903v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>GomalizingFlow.jl: is a package to generate configurations for quantum field theory on the lattice using the flow based sampling algorithm in Julia programming language. This software serves two main purposes: to accelerate research of lattice QCD with machine learning with easy prototyping, and to provide an independent implementation to an existing public Jupyter notebook in Python/PyTorch. GomalizingFlow.jl implements, the flow based sampling algorithm, namely, RealNVP and Metropolis-Hastings test for two dimension and three dimensional scalar field, which can be switched by a parameter file. HMC for that theory also implemented for comparison. This package has Docker image, which reduces effort for environment construction. This code works both on CPU and NVIDIA GPU.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-18T15:19:36Z</published>
+    <arxiv:comment>15 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Akio Tomiya</name>
+    </author>
+    <author>
+      <name>Satoshi Terasaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.03832v2</id>
+    <title>Sampling QCD field configurations with gauge-equivariant flow models</title>
+    <updated>2022-08-20T05:14:00Z</updated>
+    <link href="https://arxiv.org/abs/2208.03832v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.03832v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning methods based on normalizing flows have been shown to address important challenges, such as critical slowing-down and topological freezing, in the sampling of gauge field configurations in simple lattice field theories. A critical question is whether this success will translate to studies of QCD. This Proceedings presents a status update on advances in this area. In particular, it is illustrated how recently developed algorithmic components may be combined to construct flow-based sampling algorithms for QCD in four dimensions. The prospects and challenges for future use of this approach in at-scale applications are summarized.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-07T22:16:20Z</published>
+    <arxiv:comment>Submitted as a proceedings to the 39th International Symposium on Lattice Field Theory (Lattice 2022)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Alexander G. D. G. Matthews</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Ali Razavi</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.08945v3</id>
+    <title>Gauge-equivariant flow models for sampling in lattice field theories with pseudofermions</title>
+    <updated>2022-10-16T19:39:17Z</updated>
+    <link href="https://arxiv.org/abs/2207.08945v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.08945v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents gauge-equivariant architectures for flow-based sampling in fermionic lattice field theories using pseudofermions as stochastic estimators for the fermionic determinant. This is the default approach in state-of-the-art lattice field theory calculations, making this development critical to the practical application of flow models to theories such as QCD. Methods by which flow-based sampling approaches can be improved via standard techniques such as even/odd preconditioning and the Hasenbusch factorization are also outlined. Numerical demonstrations in two-dimensional U(1) and SU(3) gauge theories with $N_f=2$ flavors of fermions are provided.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-18T21:13:34Z</published>
+    <arxiv:comment>15 pages, 7 figures. v3: accepted version for publication. New appendix C</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 106 (2022) 7, 074506</arxiv:journal_ref>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Betsy Tian</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.106.074506</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.106.074506" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.01243v2</id>
+    <title>Flow-based density of states for complex actions</title>
+    <updated>2023-09-29T17:17:06Z</updated>
+    <link href="https://arxiv.org/abs/2203.01243v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.01243v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Emerging sampling algorithms based on normalizing flows have the potential to solve ergodicity problems in lattice calculations. Furthermore, it has been noted that flows can be used to compute thermodynamic quantities which are difficult to access with traditional methods. This suggests that they are also applicable to the density-of-states approach to complex action problems. In particular, flow-based sampling may be used to compute the density directly, in contradistinction to the conventional strategy of reconstructing it via measuring and integrating the derivative of its logarithm. By circumventing this procedure, the accumulation of errors from the numerical integration is avoided completely and the overall normalization factor can be determined explicitly. In this proof-of-principle study, we demonstrate our method in the context of two-component scalar field theory where the $O(2)$ symmetry is explicitly broken by an imaginary external field. First, we concentrate on the zero-dimensional case which can be solved exactly. We show that with our method, the Lee-Yang zeroes of the associated partition function can be successfully located. Subsequently, we confirm that the flow-based approach correctly reproduces the density computed with conventional methods in one- and two-dimensional models.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-02T17:05:50Z</published>
+    <arxiv:comment>9 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 108, 054511 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Jan M. Pawlowski</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.108.054511</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.108.054511" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.11712v1</id>
+    <title>Flow-based sampling in the lattice Schwinger model at criticality</title>
+    <updated>2022-02-23T19:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2202.11712v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.11712v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent results suggest that flow-based algorithms may provide efficient sampling of field distributions for lattice field theory applications, such as studies of quantum chromodynamics and the Schwinger model. In this work, we provide a numerical demonstration of robust flow-based sampling in the Schwinger model at the critical value of the fermion mass. In contrast, at the same parameters, conventional methods fail to sample all parts of configuration space, leading to severely underestimated uncertainties.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-23T19:00:00Z</published>
+    <arxiv:comment>5 pages main text, 3 pages supplementary material. 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.106.014514</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.106.014514" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.00734v2</id>
+    <title>Flow-based sampling for multimodal and extended-mode distributions in lattice field theory</title>
+    <updated>2025-02-15T00:34:46Z</updated>
+    <link href="https://arxiv.org/abs/2107.00734v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.00734v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent results have demonstrated that samplers constructed with flow-based generative models are a promising new approach for configuration generation in lattice field theory. In this paper, we present a set of training- and architecture-based methods to construct flow models for targets with multiple separated modes (i.e.~vacua) as well as targets with extended/continuous modes. We demonstrate the application of these methods to modeling two-dimensional real and complex scalar field theories in their symmetry-broken phases. In this context we investigate different flow-based sampling algorithms, including a composite sampling algorithm where flow-based proposals are occasionally augmented by applying updates using traditional algorithms like HMC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-01T20:22:10Z</published>
+    <arxiv:comment>38+3 pages, 39 figures. v2: major revisions including new application to extended modes</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Chung-Chun Hsieh</name>
+    </author>
+    <author>
+      <name>Sahil Pontula</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Jiunn-Wei Chen</name>
+    </author>
+    <author>
+      <name>Kai-Feng Chen</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.05934v2</id>
+    <title>Flow-based sampling for fermionic lattice field theories</title>
+    <updated>2021-12-28T22:33:50Z</updated>
+    <link href="https://arxiv.org/abs/2106.05934v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.05934v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Algorithms based on normalizing flows are emerging as promising machine learning approaches to sampling complicated probability distributions in a way that can be made asymptotically exact. In the context of lattice field theory, proof-of-principle studies have demonstrated the effectiveness of this approach for scalar theories, gauge theories, and statistical systems. This work develops approaches that enable flow-based sampling of theories with dynamical fermions, which is necessary for the technique to be applied to lattice field theory studies of the Standard Model of particle physics and many condensed matter systems. As a practical demonstration, these methods are applied to the sampling of field configurations for a two-dimensional theory of massless staggered fermions coupled to a scalar field via a Yukawa interaction.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-10T17:32:47Z</published>
+    <arxiv:comment>26 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 104, 114507 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.104.114507</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.104.114507" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.01975v1</id>
+    <title>Machine Learning and Variational Algorithms for Lattice Field Theory</title>
+    <updated>2021-06-03T16:37:05Z</updated>
+    <link href="https://arxiv.org/abs/2106.01975v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.01975v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In lattice quantum field theory studies, parameters defining the lattice theory must be tuned toward criticality to access continuum physics. Commonly used Markov chain Monte Carlo (MCMC) methods suffer from critical slowing down in this limit, restricting the precision of continuum extrapolations. Further difficulties arise when measuring correlation functions of operators widely separated in spacetime: for most correlation functions, an exponentially severe signal-to-noise problem is encountered as the operators are taken to be widely separated. This dissertation details two new techniques to address these issues. First, we define a novel MCMC algorithm based on generative flow-based models. Such models utilize machine learning methods to describe efficient approximate samplers for distributions of interest. Independently drawn flow-based samples are then used as proposals in an asymptotically exact Metropolis-Hastings Markov chain. We address incorporating symmetries of interest, including translational and gauge symmetries. We secondly introduce an approach to "deform" Monte Carlo estimators based on contour deformations applied to the domain of the path integral. The deformed estimators associated with an observable give equivalent unbiased measurements of that observable, but generically have different variances. We define families of deformed manifolds for lattice gauge theories and introduce methods to efficiently optimize the choice of manifold (the "observifold"), minimizing the deformed observable variance. Finally, we demonstrate that flow-based MCMC can mitigate critical slowing down and observifolds can exponentially reduce variance in proof-of-principle applications to scalar $φ^4$ theory and $\mathrm{U}(1)$ and $\mathrm{SU}(N)$ lattice gauge theories.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-03T16:37:05Z</published>
+    <arxiv:comment>PhD Thesis, MIT (June 2021). Based on work appearing in arXiv:2101.12668, arXiv:2008.05456, arXiv:2003.06413, arXiv:2003.05914, arXiv:1904.12072, arXiv:1806.01832, arXiv:2101.08176, arXiv:2002.02428, and arXiv:1811.03944</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2008.05456v2</id>
+    <title>Sampling using $SU(N)$ gauge equivariant flows</title>
+    <updated>2020-09-18T18:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2008.05456v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2008.05456v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a flow-based sampling algorithm for $SU(N)$ lattice gauge theories that is gauge-invariant by construction. Our key contribution is constructing a class of flows on an $SU(N)$ variable (or on a $U(N)$ variable by a simple alternative) that respect matrix conjugation symmetry. We apply this technique to sample distributions of single $SU(N)$ variables and to construct flow-based samplers for $SU(2)$ and $SU(3)$ lattice gauge theory in two dimensions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-08-12T17:43:39Z</published>
+    <arxiv:comment>24 pages, 19 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 103, 074504 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo Jimenez Rezende</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.103.074504</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.103.074504" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.06413v1</id>
+    <title>Equivariant flow-based sampling for lattice gauge theory</title>
+    <updated>2020-03-13T17:54:05Z</updated>
+    <link href="https://arxiv.org/abs/2003.06413v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.06413v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define a class of machine-learned flow-based sampling algorithms for lattice gauge theories that are gauge-invariant by construction. We demonstrate the application of this framework to U(1) gauge theory in two spacetime dimensions, and find that near critical points in parameter space the approach is orders of magnitude more efficient at sampling topological quantities than more traditional sampling procedures such as Hybrid Monte Carlo and Heat Bath.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-13T17:54:05Z</published>
+    <arxiv:comment>6 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 125, 121601 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo Jimenez Rezende</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.125.121601</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.125.121601" title="doi"/>
+  </entry>
+</feed>

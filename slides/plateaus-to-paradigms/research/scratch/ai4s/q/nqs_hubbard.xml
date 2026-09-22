@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/gATLzzSU0bNhcZjxpeTO7YmiaG4</id>
+  <title>arXiv Query: search_query=abs:"neural quantum states" AND abs:"Hubbard"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:48:21Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22neural+quantum+states%22+AND+abs:%22Hubbard%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>19</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.02753v2</id>
+    <title>Large scale neural quantum states reveal the interplay between superconductivity and quantum criticality in the Hofstadter-Hubbard model</title>
+    <updated>2026-08-10T18:12:58Z</updated>
+    <link href="https://arxiv.org/abs/2608.02753v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.02753v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Understanding how a parent insulating state shapes the superconductivity that emerges upon doping is a long-standing problem dating back to Anderson's resonating-valence-bond proposal. The triangular-lattice Hofstadter-Hubbard model with $π/2$ flux per plaquette offers an ideal setting: at half filling it hosts two distinct parent states---an integer quantum Hall insulator and a chiral spin liquid---separated by a topological phase transition. Using neural quantum states on tori of up to $432$ sites, we present strong evidence that the transition is continuous, with a vanishing $2e$ charge gap and critical charge fluctuations. Upon doping, we find a topological superconductor on either side of the transition. While the pairing order parameter remains nearly unchanged across the transition, the superfluid stiffness is strongly enhanced near the critical point. The energy scale of the superconductor is therefore set not by which parent state is doped, but by proximity to the transition between them. Our results establish neural quantum states as a powerful tool for understanding the interplay between unconventional electronic correlations and superconductivity.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T18:01:16Z</published>
+    <arxiv:comment>14 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Christopher Roth</name>
+    </author>
+    <author>
+      <name>Andrew Millis</name>
+    </author>
+    <author>
+      <name>Tomohiro Soejima</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.02727v2</id>
+    <title>Spin-charge separation in the triangular-lattice Hofstadter-Hubbard model</title>
+    <updated>2026-08-26T20:44:23Z</updated>
+    <link href="https://arxiv.org/abs/2608.02727v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.02727v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent experiments in moiré materials have enabled the realization of a variety of exotic quantum phases. In this context, the Hofstadter-Hubbard model has been proposed as a possible setting for hosting chiral spin liquid. Concurrently, significant progress has been recently made in the computational methods for two-dimensional many-body fermion systems, which makes numerically studying this challenging model a real possibility in genuine 2D geometry. Motivated by these advances, we investigate the putative chiral spin liquid phase in the triangular-lattice Hofstadter-Hubbard model using variational Monte Carlo with neural quantum states (NQS) and projected entangled pair states (PEPS). We observe spin-charge separation directly in real space through numerical spin-pumping simulation and real-time spin and charge motion. In addition, in the context of anyonic superconductivity conjectured in this model, we find a positive two-electron binding energy on small systems, but it decreases below our numerical resolution as the system size increases. Our work demonstrates NQS and PEPS as powerful tools, capable of cross-checking each other, for diagnosing topological order and fractionalized excitations in strongly correlated electronic systems.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T18:00:02Z</published>
+    <arxiv:comment>6 pages, 5 figures. 1 supplement</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Yuntian Gu</name>
+    </author>
+    <author>
+      <name>Hui Yang</name>
+    </author>
+    <author>
+      <name>Zhehao Dai</name>
+    </author>
+    <author>
+      <name>Yantao Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.20623v1</id>
+    <title>Learning the closest Slater determinant</title>
+    <updated>2026-07-22T18:00:04Z</updated>
+    <link href="https://arxiv.org/abs/2607.20623v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.20623v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning compact, interpretable descriptions of quantum many-body states is an important task in quantum science. We study the task of learning the Slater determinant with maximum fidelity to an arbitrary fermionic many-body state, with motivation from both Hartree-Fock methods and agnostic tomography. Given an $n$-fermion wavefunction built from $m$ fermionic modes, we provide classical and quantum algorithms returning a Slater determinant with fidelity within $\varepsilon$ of maximal in time $m^{\text{poly}(n,1/\varepsilon)}$. We prove matching hardness lower bounds, assuming standard complexity conjectures, along some parameter axes. Given access to quantum copies, we prove this can be accomplished with $\text{poly}(m,n,1/\varepsilon)$ copies of $ρ$. We also show that above a fidelity of $2/3$ any stationary point is the unique global maximum while below $2/3$ the optimization landscape can have spurious stationary points, and hence $2/3$ marks a transition point in the optimization landscape for this problem. We apply the algorithm to the Fermi-Hubbard model, extracting the closest Slater determinant from neural quantum state solutions. Together, our results provide algorithmic tools with provable guarantees in understanding fermionic many-body systems with classical or quantum simulation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T18:00:04Z</published>
+    <arxiv:comment>12 + 14 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Nisarga Paul</name>
+    </author>
+    <author>
+      <name>Haimeng Zhao</name>
+    </author>
+    <author>
+      <name>David D. Dai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14875v1</id>
+    <title>Optimization dynamics of Transformer backflow neural quantum states for the two-dimensional Hubbard model</title>
+    <updated>2026-07-16T11:46:06Z</updated>
+    <link href="https://arxiv.org/abs/2607.14875v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14875v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building on the multi-determinant Transformer backflow neural quantum state (NQS) ansatz and the associated multi-stage training workflow for the doped two-dimensional Hubbard model, we investigate how the optimization dynamics of the NQS depend on several key optimization and architectural hyperparameters. The workflow consists of neural-network backflow (NNB) initialization, supervised Transformer pre-training, and main energy optimization using the Moment-Adaptive ReConfiguration Heuristic (MARCH) within variational Monte Carlo. Using the doped $4\times4$ periodic Hubbard model at $U=8$ as a baseline, we examine how the update-norm threshold, Transformer width, number of determinant channels, and Monte Carlo batch size affect convergence. We find that a moderate update constraint improves the efficiency of MARCH optimization, larger Transformer width and more determinant channels improve the expressive capacity of the ansatz, and larger Monte Carlo batches reduce sampling noise in the update direction. We further test the same workflow at half filling, weaker interaction strength, open boundary conditions, and on a larger $8\times8$ doped lattice. These results identify practical optimization trends for Transformer backflow NQSs and highlight the balance between ansatz expressivity, MARCH update stability, and Monte Carlo sampling quality.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T11:46:06Z</published>
+    <arxiv:comment>11 pages, 4 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Zong-Yu Liao</name>
+    </author>
+    <author>
+      <name>Jia-Qi Wang</name>
+    </author>
+    <author>
+      <name>Rong-Qiang He</name>
+    </author>
+    <author>
+      <name>Zhong-Yi Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.09247v1</id>
+    <title>Benchmarking a restricted Boltzmann machine on the $\mathbb{Z}_2$ Bose-Hubbard chain in the adiabatic hard-core regime</title>
+    <updated>2026-05-10T01:09:30Z</updated>
+    <link href="https://arxiv.org/abs/2605.09247v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.09247v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the ground state of the $\mathbb{Z}_2$ Bose-Hubbard chain in the adiabatic hard-core limit at half filling using variational Monte Carlo with a shallow restricted Boltzmann machine as the variational ansatz. In this context, the neural quantum state is compared with the established adiabatic description of the model. The variational results reproduce the overall structure of the phase diagram obtained from magnetization observables, distinguish the polarized and Néel-ordered regions, and capture representative spin patterns and site occupations for the staggered insulating configurations selected by a weak symmetry-breaking field. Taken together, these results show that a shallow restricted Boltzmann machine reproduces the main adiabatic phase structure of the one-dimensional $\mathbb{Z}_2$ Bose-Hubbard chain and captures the selected symmetry-broken insulating configurations at half filling.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-10T01:09:30Z</published>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <author>
+      <name>Gustavo Alejandro Avalos Valentín</name>
+    </author>
+    <author>
+      <name>Roman Josué Armenta Rico</name>
+    </author>
+    <author>
+      <name>Isaac Pérez Castillo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.25775v1</id>
+    <title>Pareto Frontier of Neural Quantum States: Scalable, Affordable, and Accurate Convolutional Backflow for Strongly Correlated Lattice Fermions</title>
+    <updated>2026-04-28T15:42:01Z</updated>
+    <link href="https://arxiv.org/abs/2604.25775v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.25775v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural Quantum States (NQS) are now among the most accurate methods for studying strongly correlated many-fermion systems, outperforming existing many-body approaches for large systems. However, NQS calculations remain extremely resource-intensive. Here, we introduce a new Pareto frontier of efficiency and accuracy for NQS in simulating strongly correlated lattice fermions, defined by two complementary backflow-related architectures: the Sparse Convolutional Ansatz for Lattice Electrons (SCALE) (state-of-the-art efficiency) and the Accurate Convolutional ansatz for lattice Electrons (ACE) (state-of-the-art accuracy), benchmarked on the iconic Hubbard and $t-J$ models for large lattices. SCALE uses a tailored convolutional design enabling efficient local updates via low-rank determinant updates, reducing computational scaling from $O(N^4)$ to $O(N^3)$ in backflow methods and yielding a &gt;40$\times$ practical speed-up in tests while maintaining high variational accuracy. As an application, we study the previously inaccessible 1/8-doped pure Hubbard model up to $32 \times 32$, finding no significant energy difference between horizontal and vertical filled stripe states - contrasting with half-filled stripe states when next-nearest-neighbor hoppings are included. ACE employs a deep convolutional stack to maximize expressive power, achieving unprecedented accuracy on large systems. Extensive benchmarks on Hubbard and $t-J$ models show SCALE delivers variational energies competitive with leading methods at a fraction of the cost, while ACE sets a new accuracy benchmark, surpassing recent results with only 1/6 the runtime for $16 \times 4$ systems. These new NQS approaches provide scalable, affordable, and accurate tools for exploring strongly correlated fermionic physics, such as the microscopic mechanism of unconventional superconductivity.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-28T15:42:01Z</published>
+    <arxiv:comment>submitted to peer-reviewed journal on 2026/02/16</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Yuntian Gu</name>
+    </author>
+    <author>
+      <name>Zeyao Han</name>
+    </author>
+    <author>
+      <name>Wenrui Li</name>
+    </author>
+    <author>
+      <name>Zhiyu Xiao</name>
+    </author>
+    <author>
+      <name>Tao Xiang</name>
+    </author>
+    <author>
+      <name>Mingpu Qin</name>
+    </author>
+    <author>
+      <name>Liwei Wang</name>
+    </author>
+    <author>
+      <name>Dingshun Lv</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.08624v1</id>
+    <title>Operator Lanczos Approach enabling Neural Quantum States as Real-Frequency Impurity Solvers</title>
+    <updated>2025-12-09T14:10:22Z</updated>
+    <link href="https://arxiv.org/abs/2512.08624v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.08624v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To understand the intricate exchange between electrons of different bands in strongly correlated materials, it is essential to treat multi-orbital models accurately. For this purpose, dynamical mean-field theory (DMFT) provides an established framework, whose scope crucially hinges on the availability of efficient quantum impurity solvers. Here we present a real-frequency impurity solver based on neural quantum states (NQS) combined with an operator-Lanczos construction. NQS are an asymptotically unbiased variational ground-state ansatz that employs neural networks to capture long-range correlations on complicated graph structures. We leverage this ability to solve multi-orbital impurity problems using a systematically improvable Segmented Commutator Operator-Lanczos (SCOL) construction. Our benchmarks on both the single-orbital Anderson model and the multi-orbital Hubbard-Kanamori impurity Hamiltonian reveal excellent ground-state precision and the capacity to accurately resolve zero temperature spectral functions and self-energies. These results open avenues for extending DMFT to more challenging problems.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-09T14:10:22Z</published>
+    <arxiv:comment>5 pages, 3 figures, appendices</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Jonas B. Rigo</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.07566v1</id>
+    <title>Superconductivity in the two-dimensional Hubbard model revealed by neural quantum states</title>
+    <updated>2025-11-10T19:21:58Z</updated>
+    <link href="https://arxiv.org/abs/2511.07566v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.07566v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Whether the ground state of the square lattice Hubbard model exhibits superconductivity remains a major open question, central to understanding high temperature cuprate superconductors and ultra-cold fermions in optical lattices. Numerical studies have found evidence for stripe-ordered states and superconductivity at strong coupling but the phase diagram remains controversial. Here, we show that one can resolve the subtle energetics of metallic, superconducting, and stripe phases using a new class of neural quantum state (NQS) wavefunctions that extend hidden fermion determinant states to Pfaffians. We simulate several hundred electrons using fast Pfaffian algorithms allowing us to measure off-diagonal long range order. At strong coupling and low hole-doping, we find that a non-superconducting filled stripe phase prevails, while superconductivity coexisting with partially-filled stripes is stabilized by a negative next neighbor hopping t-prime, with |t-prime| &gt; 0.1. At larger doping levels, we introduce momentum-space correlation functions to mitigate finite size effects that arise from weakly-bound pairs. These provide evidence for uniform d-wave superconductivity at U = 4, even when t-prime = 0. Our results highlight the potential of NQS approaches, and provide a fresh perspective on superconductivity in the square lattice Hubbard model.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-10T19:21:58Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Christopher Roth</name>
+    </author>
+    <author>
+      <name>Ao Chen</name>
+    </author>
+    <author>
+      <name>Anirvan Sengupta</name>
+    </author>
+    <author>
+      <name>Antoine Georges</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.11710v2</id>
+    <title>Comparing Symmetrized Determinant Neural Quantum States for the Hubbard Model</title>
+    <updated>2026-06-03T09:39:27Z</updated>
+    <link href="https://arxiv.org/abs/2510.11710v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.11710v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate simulations of the Hubbard model are crucial to understanding strongly correlated phenomena, where small energy differences between competing orders demand high numerical precision. In this work, Neural Quantum States are used to probe the strongly coupled and underdoped regime of the square-lattice Hubbard model. We systematically compare the Hidden Fermion Determinant State and the Jastrow-Backflow ansatz, parametrized by a Vision Transformer, finding that in practice, their accuracy is similar. We also test different symmetrization strategies, finding that output averaging yields the lowest energies, though it becomes costly for larger system sizes. On cylindrical systems, we consistently observe filled stripes. On the torus, our calculations display features consistent with a doped Mott insulator, including antiferromagnetic correlations and suppressed density fluctuations. Our results demonstrate both the promise and current challenges of neural quantum states for correlated fermions.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-13T17:59:10Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 113, 245104, 2026</arxiv:journal_ref>
+    <author>
+      <name>Louis Sharma</name>
+    </author>
+    <author>
+      <name>Ahmedeo Shokry</name>
+    </author>
+    <author>
+      <name>Rajah Nutakki</name>
+    </author>
+    <author>
+      <name>Olivier Simard</name>
+    </author>
+    <author>
+      <name>Michel Ferrero</name>
+    </author>
+    <author>
+      <name>Filippo Vicentini</name>
+    </author>
+    <arxiv:doi>10.1103/s3kd-bc4q</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/s3kd-bc4q" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.10705v1</id>
+    <title>Neural Network-Augmented Pfaffian Wave-functions for Scalable Simulations of Interacting Fermions</title>
+    <updated>2025-07-14T18:20:19Z</updated>
+    <link href="https://arxiv.org/abs/2507.10705v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.10705v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Developing accurate numerical methods for strongly interacting fermions is crucial for improving our understanding of various quantum many-body phenomena, especially unconventional superconductivity. Recently, neural quantum states have emerged as a promising approach for studying correlated fermions, highlighted by the hidden fermion and backflow methods, which use neural networks to model corrections to fermionic quasiparticle orbitals. In this work, we expand these ideas to the space of Pfaffians, a wave-function that naturally expresses superconducting pairings, and propose the hidden fermion Pfaffian state (HFPS), which flexibly represents both unpaired and superconducting phases and scales to large systems with favorable asymptotic complexity. In our numerical experiments, HFPS provides state-of-the-art variational accuracy in different regimes of both the attractive and repulsive Hubbard models. We show that the HFPS is able to capture both s-wave and d-wave pairing, and therefore may be a useful tool for modeling phases with unconventional superconductivity.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-14T18:20:19Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Ao Chen</name>
+    </author>
+    <author>
+      <name>Zhou-Quan Wan</name>
+    </author>
+    <author>
+      <name>Anirvan Sengupta</name>
+    </author>
+    <author>
+      <name>Antoine Georges</name>
+    </author>
+    <author>
+      <name>Christopher Roth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.02644v2</id>
+    <title>Solving the Hubbard model with Neural Quantum States</title>
+    <updated>2025-07-10T14:46:55Z</updated>
+    <link href="https://arxiv.org/abs/2507.02644v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.02644v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid development of neural quantum states (NQS) has established it as a promising framework for studying quantum many-body systems. In this work, by leveraging the cutting-edge transformer-based architectures and developing highly efficient optimization algorithms, we achieve the state-of-the-art results for the doped two-dimensional (2D) Hubbard model, arguably the minimum model for high-Tc superconductivity. Interestingly, we find different attention heads in the NQS ansatz can directly encode correlations at different scales, making it capable of capturing long-range correlations and entanglements in strongly correlated systems. With these advances, we establish the half-filled stripe in the ground state of 2D Hubbard model with the next nearest neighboring hoppings, consistent with experimental observations in cuprates. Our work establishes NQS as a powerful tool for solving challenging many-fermions systems.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-03T14:08:25Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Yuntian Gu</name>
+    </author>
+    <author>
+      <name>Wenrui Li</name>
+    </author>
+    <author>
+      <name>Heng Lin</name>
+    </author>
+    <author>
+      <name>Bo Zhan</name>
+    </author>
+    <author>
+      <name>Ruichen Li</name>
+    </author>
+    <author>
+      <name>Yifei Huang</name>
+    </author>
+    <author>
+      <name>Di He</name>
+    </author>
+    <author>
+      <name>Yantao Wu</name>
+    </author>
+    <author>
+      <name>Tao Xiang</name>
+    </author>
+    <author>
+      <name>Mingpu Qin</name>
+    </author>
+    <author>
+      <name>Liwei Wang</name>
+    </author>
+    <author>
+      <name>Dingshun Lv</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.08329v3</id>
+    <title>Neuralized Fermionic Tensor Networks for Quantum Many-Body Systems</title>
+    <updated>2025-10-29T02:36:31Z</updated>
+    <link href="https://arxiv.org/abs/2506.08329v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.08329v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a class of neuralized fermionic tensor network states (NN-fTNS) that introduce non-linearity into fermionic tensor networks through configuration-dependent neural network transformations of the local tensors. The construction uses the fTNS algebra to implement a natural fermionic sign structure and is compatible with standard tensor network algorithms, but gains enhanced expressivity through the neural network parametrization. Using the 1D and 2D Fermi-Hubbard models as benchmarks, we demonstrate that NN-fTNS achieve order of magnitude improvements in the ground-state energy compared to pure fTNS with the same bond dimension, and can be systematically improved through both the tensor network bond dimension and the neural network parametrization. Compared to existing fermionic neural quantum states (NQS) based on Slater determinants and Pfaffians, NN-fTNS offer a physically motivated alternative fermionic structure. Furthermore, compared to such states, NN-fTNS naturally exhibit improved computational scaling and we demonstrate a construction that achieves linear scaling with the lattice size.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-10T01:33:58Z</published>
+    <arxiv:comment>6 pages, 5 figures + 7 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Phys. Rev. B 113, 085134 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Si-Jing Du</name>
+    </author>
+    <author>
+      <name>Ao Chen</name>
+    </author>
+    <author>
+      <name>Garnet Kin-Lic Chan</name>
+    </author>
+    <arxiv:doi>10.1103/x8vl-qf14</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/x8vl-qf14" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.10430v3</id>
+    <title>Simulating the two-dimensional $t-J$ model at finite doping with neural quantum states</title>
+    <updated>2025-09-09T09:11:28Z</updated>
+    <link href="https://arxiv.org/abs/2411.10430v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.10430v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Simulating large, strongly interacting fermionic systems remains a major challenge for existing numerical methods. In this work, we introduce Gutzwiller projected hidden fermion determinant states (G-HFDS) to simulate the strongly interacting limit of the Fermi-Hubbard model, namely the $t$-$J$ model, across the entire doping regime. We demonstrate that the G-HFDS achieve energies competitive with matrix product states (MPS) on lattices as large as $10 \times 10$ sites while using several orders of magnitude fewer parameters, suggesting the potential for efficient application to even larger system sizes. This remarkable efficiency enables us to probe low-energy physics across the full doping range, providing new insights into the competition between kinetic and magnetic interactions and the nature of emergent quasiparticles. Starting from the low-doping regime, where magnetic polarons dominate the low energy physics, we track their evolution with increasing doping and different next-nearest neighbor hopping amplitudes through analyses of spin and polaron correlation functions as well as the Fermi surface. Our findings demonstrate the potential of determinant-based neural quantum states with inherent fermionic sign structure, opening the way for simulating large-scale fermionic systems at any particle filling.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-15T18:51:07Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Hannah Lange</name>
+    </author>
+    <author>
+      <name>Annika Böhler</name>
+    </author>
+    <author>
+      <name>Christopher Roth</name>
+    </author>
+    <author>
+      <name>Annabelle Bohrdt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.07144v2</id>
+    <title>Autoregressive neural quantum states of Fermi Hubbard models</title>
+    <updated>2025-01-08T15:48:14Z</updated>
+    <link href="https://arxiv.org/abs/2411.07144v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.07144v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) have emerged as a powerful ansatz for variational quantum Monte Carlo studies of strongly-correlated systems. Here, we apply recurrent neural networks (RNNs) and autoregressive transformer neural networks to the Fermi-Hubbard and the (non-Hermitian) Hatano-Nelson-Hubbard models in one and two dimensions. In both cases, we observe that the convergence of the RNN ansatz is challenged when increasing the interaction strength. We present a physically-motivated and easy-to-implement strategy for improving the optimization, namely, by ramping of the model parameters. Furthermore, we investigate the advantages and disadvantages of the autoregressive sampling property of both network architectures. For the Hatano-Nelson-Hubbard model, we identify convergence issues that stem from the autoregressive sampling scheme in combination with the non-Hermitian nature of the model. Our findings provide insights into the challenges of the NQS approach and make the first step towards exploring strongly-correlated electrons using this ansatz.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-11T17:15:39Z</published>
+    <arxiv:comment>14 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Research 7, 013122 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Eduardo Ibarra-García-Padilla</name>
+    </author>
+    <author>
+      <name>Hannah Lange</name>
+    </author>
+    <author>
+      <name>Roger G Melko</name>
+    </author>
+    <author>
+      <name>Richard T Scalettar</name>
+    </author>
+    <author>
+      <name>Juan Carrasquilla</name>
+    </author>
+    <author>
+      <name>Annabelle Bohrdt</name>
+    </author>
+    <author>
+      <name>Ehsan Khatami</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevResearch.7.013122</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevResearch.7.013122" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.01981v3</id>
+    <title>Universal Performance Gap of Neural Quantum States Applied to the Hofstadter-Bose-Hubbard Model</title>
+    <updated>2024-10-11T08:32:41Z</updated>
+    <link href="https://arxiv.org/abs/2405.01981v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.01981v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural Quantum States (NQS) have demonstrated significant potential in approximating ground states of many-body quantum systems, though their performance can be inconsistent across different models. This study investigates the performance of NQS in approximating the ground state of the Hofstadter-Bose-Hubbard (HBH) model, an interacting boson system on a two-dimensional square lattice with a perpendicular magnetic field. Our results indicate that increasing magnetic flux leads to a substantial increase in energy error, up to three orders of magnitude. Importantly, this decline in NQS performance is consistent across different optimization methods, neural network architectures, and physical model parameters, suggesting a significant challenge intrinsic to the model. Despite investigating potential causes such as wave function phase structure, quantum entanglement, fractional quantum Hall effect, and the variational loss landscape, the precise reasons for this degradation remain elusive. The HBH model thus proves to be an effective testing ground for exploring the capabilities and limitations of NQS. Our study highlights the need for advanced theoretical frameworks to better understand the expressive power of NQS which would allow a systematic development of methods that could potentially overcome these challenges.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-03T10:18:35Z</published>
+    <arxiv:comment>Submission to SciPost</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>SciPost Phys. 18, 011 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Eimantas Ledinauskas</name>
+    </author>
+    <author>
+      <name>Egidijus Anisimovas</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.18.1.011</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.18.1.011" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.07869v2</id>
+    <title>Accurate neural quantum states for interacting lattice bosons</title>
+    <updated>2025-06-11T08:55:57Z</updated>
+    <link href="https://arxiv.org/abs/2404.07869v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.07869v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In recent years, neural quantum states have emerged as a powerful variational approach, achieving state-of-the-art accuracy when representing the ground-state wave function of a great variety of quantum many-body systems, including spin lattices, interacting fermions or continuous-variable systems. However, accurate neural representations of the ground state of interacting bosons on a lattice have remained elusive. We introduce a neural backflow Jastrow Ansatz, in which occupation factors are dressed with translationally equivariant many-body features generated by a deep neural network. We show that this neural quantum state is able to faithfully represent the ground state of the 2D Bose-Hubbard Hamiltonian across all values of the interaction strength. We scale our simulations to lattices of dimension up to $20{\times}20$ while achieving the best variational energies reported for this model. This enables us to investigate the scaling of the entanglement entropy across the superfluid-to-Mott quantum phase transition, a quantity hard to extract with non-variational approaches.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-11T16:04:33Z</published>
+    <arxiv:comment>18 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum 9, 1772 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Zakari Denis</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <arxiv:doi>10.22331/q-2025-06-17-1772</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2025-06-17-1772" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.05749v2</id>
+    <title>Mott Transition and Volume Law Entanglement with Neural Quantum States</title>
+    <updated>2024-12-07T16:26:12Z</updated>
+    <link href="https://arxiv.org/abs/2311.05749v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.05749v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The interplay between delocalisation and repulsive interactions can cause electronic systems to undergo a Mott transition between a metal and an insulator. Here we use neural network hidden fermion determinantal states (HFDS) to uncover this transition in the disordered, fully-connected Hubbard model. Whilst dynamical mean-field theory (DMFT) provides exact solutions to physical observables of the model in the thermodynamic limit, our method allows us to directly access the wave function for finite system sizes well beyond the reach of exact diagonalisation. We demonstrate how HFDS are able to obtain more accurate results in the metallic regime and in the vicinity of the transition than calculations based on a Matrix Product State (MPS) ansatz, for which the volume law of entanglement exhibited by the system is prohibitive. We use the HFDS method to calculate the energy and double occupancy, the quasi-particle weight and the energy gap and, importantly, the amplitudes of the wave function which provide a novel insight into this model. Our work paves the way for the study of strongly correlated electron systems with neural quantum states.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-09T21:26:00Z</published>
+    <arxiv:comment>Main Text: 5 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 134, 076502 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Chloé Gauvin-Ndiaye</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Javier Robledo Moreno</name>
+    </author>
+    <author>
+      <name>Antoine Georges</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.134.076502</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.134.076502" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.08578v1</id>
+    <title>Neural network approach to quasiparticle dispersions in doped antiferromagnets</title>
+    <updated>2023-10-12T17:59:33Z</updated>
+    <link href="https://arxiv.org/abs/2310.08578v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.08578v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Numerically simulating spinful, fermionic systems is of great interest from the perspective of condensed matter physics. However, the exponential growth of the Hilbert space dimension with system size renders an exact parameterization of large quantum systems prohibitively demanding. This is a perfect playground for neural networks, owing to their immense representative power that often allows to use only a fraction of the parameters that are needed in exact methods. Here, we investigate the ability of neural quantum states (NQS) to represent the bosonic and fermionic $t-J$ model - the high interaction limit of the Fermi-Hubbard model - on different 1D and 2D lattices. Using autoregressive recurrent neural networks (RNNs) with 2D tensorized gated recurrent units, we study the ground state representations upon doping the half-filled system with holes. Moreover, we present a method to calculate dispersion relations from the neural network state representation, applicable to any neural network architecture and any lattice geometry, that allows to infer the low-energy physics from the NQS. To demonstrate our approach, we calculate the dispersion of a single hole in the $t-J$ model on different 1D and 2D square and triangular lattices. Furthermore, we analyze the strengths and weaknesses of the RNN approach for fermionic systems, pointing the way for an accurate and efficient parameterization of fermionic quantum systems using neural quantum states.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-12T17:59:33Z</published>
+    <arxiv:comment>14 pages + SM, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Communications Physics volume 7, Article number: 187 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Hannah Lange</name>
+    </author>
+    <author>
+      <name>Fabian Döschl</name>
+    </author>
+    <author>
+      <name>Juan Carrasquilla</name>
+    </author>
+    <author>
+      <name>Annabelle Bohrdt</name>
+    </author>
+    <arxiv:doi>10.1038/s42005-024-01678-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s42005-024-01678-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.12556v2</id>
+    <title>Phase diagram reconstruction of the Bose-Hubbard model with a Restricted Boltzmann Machine wavefunction</title>
+    <updated>2020-11-06T15:17:40Z</updated>
+    <link href="https://arxiv.org/abs/2004.12556v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.12556v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, the use of neural quantum states for describing the ground state of many- and few-body problems has been gaining popularity because of their high expressivity and ability to handle intractably large Hilbert spaces. In particular, methods based on variational Monte Carlo have proven to be successful in describing the physics of bosonic systems such as the Bose-Hubbard (BH) model. However, this technique has not been systematically tested on the parameter space of the BH model, particularly at the boundary between the Mott insulator and superfluid phases. In this work, we evaluate the capabilities of variational Monte Carlo with a trial wavefunction given by a Restricted Boltzmann Machine to reproduce the quantum ground state of the BH model on several points of its parameter space. To benchmark the technique, we compare its results to the ground state found through exact diagonalization for small one-dimensional chains. In general, we find that the learned ground state correctly estimates many observables, reproducing to a high degree the phase diagram for the first Mott lobe and part of the second one. However, we find that the technique is challenged whenever the system transitions between excitation manifolds, as the ground state is not learned correctly at these boundaries. We improve the quality of the results produced by the technique by proposing a method to discard noisy probabilities learned in the ground state.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-27T02:40:45Z</published>
+    <arxiv:comment>preprint with 10 pages and 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Vladimir Vargas-Calderón</name>
+    </author>
+    <author>
+      <name>Herbert Vinck-Posada</name>
+    </author>
+    <author>
+      <name>Fabio A. González</name>
+    </author>
+    <arxiv:doi>10.7566/JPSJ.89.094002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.7566/JPSJ.89.094002" title="doi"/>
+  </entry>
+</feed>

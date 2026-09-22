@@ -1,0 +1,1 @@
+Human accuracy on large-scale image classification ‣ 6 Results and analysis ‣ ImageNet Large Scale Visual Recognition Challenge" class="ltx_ref"> 6.4 compares state-of-the-art computer vision accuracy with human accuracy. We conclude and discuss lessons learned from ILSVRC in Section <a href="#S7" title="7 

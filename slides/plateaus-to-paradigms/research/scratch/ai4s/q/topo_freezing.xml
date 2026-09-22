@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/RzvaUfl5AAFco1V0zvLCQ56JTHU</id>
+  <title>arXiv Query: search_query=abs:"topological freezing"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:44:41Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22topological+freezing%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>67</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.16451v1</id>
+    <title>Jump-Diffusion Stochastic Quantization for Euclidean Lattice Field Theories</title>
+    <updated>2026-08-17T11:54:44Z</updated>
+    <link href="https://arxiv.org/abs/2608.16451v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.16451v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct the natural generalization of stochastic quantization (in the Markovian sense) by considering jump-diffusion processes. This class of stochastic processes exhibits non-continuous paths, so-called Lévy flights. In the presence of jumps, action landscapes with barriers can be efficiently explored, improving and even restoring ergodicity where traditional diffusion approaches become inefficient. We explore different strategies for constructing efficient jump updates, which we deploy to address the benchmark problem of topological freezing in 2d U(1) gauge theory.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-17T11:54:44Z</published>
+    <arxiv:comment>15 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Alexander Rothkopf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21575v1</id>
+    <title>Parallel Tempered Metadynamics for full QCD</title>
+    <updated>2026-07-23T17:54:44Z</updated>
+    <link href="https://arxiv.org/abs/2607.21575v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21575v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an algorithm that addresses topological freezing in lattice QCD simulations by combining parallel tempering with collective-variable-based enhanced sampling methods, and apply it to a particularly challenging system with $N_f = 2$ staggered fermions. We find that the algorithm unfreezes the system, which is otherwise completely frozen for approximately 40000 Molecular Dynamics Units with the Rational Hybrid Monte Carlo algorithm.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T17:54:44Z</published>
+    <arxiv:comment>7 pages, 5 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Timo Eichhorn</name>
+    </author>
+    <author>
+      <name>Gianluca Fuwa</name>
+    </author>
+    <author>
+      <name>Christian Hoelbling</name>
+    </author>
+    <author>
+      <name>Lukas Varnhorst</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.09939v1</id>
+    <title>Robust Decentralized Optimization under Node Failures via Adaptive Regularization</title>
+    <updated>2026-07-10T19:42:38Z</updated>
+    <link href="https://arxiv.org/abs/2607.09939v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.09939v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study decentralized minimization of a sum of functions over a network where nodes may only leave, the remaining nodes stay connected, and the topology freezes between departures. Standard methods forget departed functions, causing a permanent bias proportional to the heterogeneity of the data. We propose Legacy Gradient Tracking (Legacy-GT): before leaving, a node compresses its function into a gradient-anchored quadratic legacy, bequeaths it to a neighbor, and provides a correction that exactly preserves the gradient-tracking invariant. We prove that the optimal legacy curvature is the average of the strong-convexity and smoothness constants, that legacies compose losslessly across chained departures, and that an adaptive anchor rule yields error bounds that decay geometrically after the last departure to a small residual--the minimum of the network's optimization error at departure and its heterogeneity radius. In contrast, the classic drop-and-forget baseline suffers a bias that never decays. Numerical experiments confirm the theory.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T19:42:38Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Ilya Kuruzov</name>
+    </author>
+    <author>
+      <name>Anastasiia Murzina</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.29885v1</id>
+    <title>The topological susceptibility slope $χ^\prime$ in the large-$N$ limit</title>
+    <updated>2026-06-29T07:27:07Z</updated>
+    <link href="https://arxiv.org/abs/2606.29885v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.29885v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents the first non-perturbative lattice determination of the Yang--Mills topological susceptibility slope $χ^\prime$ in the large-$N$ limit. This quantity represents the $\mathcal{O}(p^2)$ term of the momentum expansion of the topological charge density two-point correlator, and has important theoretical and phenomenological implications for strong interactions. This calculation is based on a novel algorithm that avoids topological freezing at large $N$ on fine lattices, and on a novel method to reliably compute $χ^\prime$ on the lattice. The results of this study are relevant for the description of the proton spin in deep inelastic scattering experiments via the Shore--Veneziano formula.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-29T07:27:07Z</published>
+    <arxiv:comment>Main text: 7 pages, 4 figures. Supplemental Material: 4 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27481v2</id>
+    <title>Sampling the Schwinger Model with Gauge-Equivariant Diffusion</title>
+    <updated>2026-08-14T19:58:37Z</updated>
+    <link href="https://arxiv.org/abs/2606.27481v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27481v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a first study of a diffusion-based approach to accelerated sampling of the $N_f = 2$ lattice Schwinger model. Our work is inspired by recent and growing successes in developing such generative models for ensemble generation in LFT to overcome the well-known critical slowing down problem. We train a U(1)-equivariant score-based generative model to sample gauge link configurations from the marginal Schwinger model. By computing model likelihoods, we obtain unbiased estimates for observables that closely match those produced by MCMC simulations. We also demonstrate improvement over HMC as measured qualitatively by a reduction in topological freezing near critical parameters.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T19:00:56Z</published>
+    <arxiv:comment>v2: Updated acknowledgements, paper unchanged. Conference paper at PAI 2026. 6 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>2026 Conference on Physics and AI (PAI26), Stanford University</arxiv:journal_ref>
+    <author>
+      <name>Octavio Vega</name>
+    </author>
+    <author>
+      <name>Aida X. El-Khadra</name>
+    </author>
+    <arxiv:doi>10.5281/zenodo.21007460</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.21007460" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.01287v1</id>
+    <title>Enhanced Sampling Techniques for Lattice Gauge Theory</title>
+    <updated>2026-04-01T18:01:00Z</updated>
+    <link href="https://arxiv.org/abs/2604.01287v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.01287v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In theories with topological sectors, such as lattice QCD and four-dimensional SU(N) gauge theories with periodic boundary conditions, conventional update algorithms suffer from topological freezing due to large action barriers separating distinct sectors. With appropriately constructed bias potentials, Metadynamics and related enhanced sampling techniques can mitigate this problem and significantly reduce the integrated autocorrelation times of the topological charge and associated observables. We test strategies to accelerate the buildup of bias potentials and the possibility of extrapolating potentials from small to large volumes. We also investigate the effectiveness of orthogonal algorithmic improvements, such as longer HMC trajectories and HMC variants, which may benefit conventional simulations as well.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-01T18:01:00Z</published>
+    <arxiv:comment>10 pages, 4 figures. Proceedings of the 42nd International Symposium on Lattice Field Theory (LATTICE2025), 2-8 November 2025, Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Timo Eichhorn</name>
+    </author>
+    <author>
+      <name>Gianluca Fuwa</name>
+    </author>
+    <author>
+      <name>Christian Hoelbling</name>
+    </author>
+    <author>
+      <name>Lukas Varnhorst</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.01577v1</id>
+    <title>From strong interactions to Dark Matter: the non-perturbative QCD sphaleron rate</title>
+    <updated>2026-03-02T08:06:05Z</updated>
+    <link href="https://arxiv.org/abs/2603.01577v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.01577v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Acceptance plenary talk for the 2025 Kenneth G.~Wilson Award for Excellence in Lattice Field Theory:
+  For significant contributions to the understanding of topology in QCD, QCD-like, and large-$N_c$ gauge theories, including algorithmic developments to reduce topological freezing, studies of Dirac spectral properties, and axion phenomenology.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-02T08:06:05Z</published>
+    <arxiv:comment>20 pages, 7 figures, Contribution to the 42nd International Symposium on Lattice Field Theory (LATTICE2025), 2-8 Nov. 2025, Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.20708v1</id>
+    <title>A scalable flow-based approach to mitigate topological freezing</title>
+    <updated>2026-01-28T15:40:46Z</updated>
+    <link href="https://arxiv.org/abs/2601.20708v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.20708v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As lattice gauge theories with non-trivial topological features are driven towards the continuum limit, standard Markov Chain Monte Carlo simulations suffer for topological freezing, i.e., a dramatic growth of autocorrelations in topological observables. A widely used strategy is the adoption of Open Boundary Conditions (OBC), which restores ergodic sampling of topology but at the price of breaking translation invariance and introducing unphysical boundary artifacts. In this contribution we summarize a scalable, exact flow-based strategy to remove them by transporting configurations from a prior with a OBC defect to a fully periodic ensemble, and apply it to 4d SU(3) Yang--Mills theory. The method is based on a Stochastic Normalizing Flow (SNF) that alternates non-equilibrium Monte Carlo updates with localized, gauge-equivariant defect coupling layers implemented via masked parametric stout smearing. Training is performed by minimizing the average dissipated work, equivalent to a Kullback--Leibler divergence between forward and reverse non-equilibrium path measures, to achieve more reversible trajectories and improved efficiency. We discuss the scaling with the number of degrees of freedom affected by the defect and show that defect SNFs achieve better performances than purely stochastic non-equilibrium methods at comparable cost. Finally, we validate the approach by reproducing reference results for the topological susceptibility.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-28T15:40:46Z</published>
+    <arxiv:comment>1+9 pages, 3 figures, contribution to the 42nd International Symposium on Lattice Field Theory (Lattice 2025), 2-8 November 2025, Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Dario Panfalone</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+    <author>
+      <name>Lorenzo Verzichelli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.09160v2</id>
+    <title>QCD Equation of State at very high temperature: computational strategy, simulations and data analysis</title>
+    <updated>2026-02-19T16:51:48Z</updated>
+    <link href="https://arxiv.org/abs/2511.09160v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.09160v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a detailed account of the theoretical progress and the computational strategy that led to the non-perturbative determination of the QCD Equation of State at temperatures up to the electroweak scale reported in [Phys. Rev. Lett. 134, 201904 (2025)]. The two key ingredients that make such a calculation feasible with controlled uncertainties are: (i) the definition of lines of constant physics through the running of a non-perturbatively defined finite-volume coupling across a wide range of energy scales, and (ii) the use of shifted boundary conditions which allow a direct determination of the entropy density thus without the need for a zero-temperature subtraction. Considering the case of QCD with $N_f =3$ massless flavours in the temperature interval between 3 GeV and 165 GeV, we describe the numerical strategy based on integrating in the bare coupling and quark mass, the perturbative improvement of lattice observables, the optimization of numerical simulations, and the continuum extrapolation. Extensive consistency checks, including finite-volume and topological-freezing effects, confirm the robustness of the method. The final results have a relative accuracy of about $1\%$ or better, and the errors are dominated by the statistical fluctuations of the Monte Carlo ensembles. We also compare our non-perturbative results with predictions from standard and hard thermal loop perturbation theory showing that at the level of $\%$-precision contributions beyond those known, including non-perturbative ones due to ultrasoft modes, are relevant up to the highest temperatures explored. The methodological framework is general and readily applicable to QCD with four and five massive quark flavours and to other thermal observables, paving the way for systematic non-perturbative studies of thermal QCD at very high temperatures.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-12T09:52:02Z</published>
+    <arxiv:comment>Minor changes to match published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Matteo Bresciani</name>
+    </author>
+    <author>
+      <name>Mattia Dalla Brida</name>
+    </author>
+    <author>
+      <name>Leonardo Giusti</name>
+    </author>
+    <author>
+      <name>Michele Pepe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.07355v2</id>
+    <title>Scale setting of SU($N$) Yang--Mills theory, topology and large-$N$ volume independence</title>
+    <updated>2026-03-27T15:57:52Z</updated>
+    <link href="https://arxiv.org/abs/2511.07355v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.07355v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We set the scale of SU($N$) Yang--Mills theories for $N=3,5,8$ and in the large-$N$ limit via gradient flow, as a first step towards the computation of the large-$N$ $Λ$-parameter using step scaling. We adopt twisted boundary conditions to achieve large-$N$ volume reduction and the Parallel Tempering on Boundary Conditions algorithm to tame topological freezing. This setup allows accurate determinations of the gradient-flow scales down to lattice spacings as fine as $\sim 0.025$ fm for all the explored values of $N$, a regime that has never been reached with ergodic algorithms. Moreover, we are able to precisely estimate the finite-size systematics related to topological freezing, and to show the suppression of finite-volume effects expected by virtue of large-$N$ twisted volume reduction.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-10T18:01:33Z</published>
+    <arxiv:comment>18 pages, 19 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 113, 074501 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Jorge Luis Dasilva Golán</name>
+    </author>
+    <author>
+      <name>Margarita García Pérez</name>
+    </author>
+    <author>
+      <name>Massimo D'Elia</name>
+    </author>
+    <author>
+      <name>Andrea Giorgieri</name>
+    </author>
+    <arxiv:doi>10.1103/qtqt-hdpz</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/qtqt-hdpz" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.25704v2</id>
+    <title>Scaling flow-based approaches for topology sampling in $\mathrm{SU}(3)$ gauge theory</title>
+    <updated>2026-04-10T12:30:09Z</updated>
+    <link href="https://arxiv.org/abs/2510.25704v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.25704v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a methodology based on out-of-equilibrium simulations to mitigate topological freezing when approaching the continuum limit of lattice gauge theories. We reduce the autocorrelation of the topological charge employing open boundary conditions, while removing exactly their unphysical effects using a non-equilibrium Monte Carlo approach in which periodic boundary conditions are gradually switched on. We perform a detailed analysis of the computational costs of this strategy in the case of the four-dimensional $\mathrm{SU}(3)$ Yang-Mills theory. After achieving full control of the scaling, we outline a clear strategy to sample topology efficiently in the continuum limit, which we check at lattice spacings as small as $0.045$ fm. We also generalize this approach by designing a customized Stochastic Normalizing Flow for evolutions in the boundary conditions, obtaining superior performances with respect to the purely stochastic non-equilibrium approach, and paving the way for more efficient future flow-based solutions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-29T17:12:21Z</published>
+    <arxiv:comment>1+39 pages, 14 figures; v1: 1+40 pages, 14 figures, expanded discussions in section 4 and 5, matches published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 04 (2026) 051</arxiv:journal_ref>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Dario Panfalone</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+    <author>
+      <name>Lorenzo Verzichelli</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP04(2026)051</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP04(2026)051" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08006v2</id>
+    <title>The large-$N$ limit of the topological susceptibility of $\mathrm{SU}(N)$ Yang-Mills theories via Parallel Tempering on Boundary Conditions</title>
+    <updated>2026-01-05T16:11:54Z</updated>
+    <link href="https://arxiv.org/abs/2510.08006v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.08006v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>I present a large-$N$ determination of the topological susceptibility $χ$ of $\mathrm{SU}(N)$ Yang--Mills theories using non-perturbative numerical Monte Carlo simulations of the lattice-discretized theory for $3\le N \le 6$, and adopting the Parallel Tempering on Boundary Conditions (PTBC) algorithm to bypass topological freezing for $N&gt;3$. Thanks to this algorithm I am able to explore a uniform range of lattice spacings across all values of $N$, and to precisely determine $χ$ for finer lattice spacings compared to previous studies with periodic or open boundary conditions. By taking the continuum limit at fixed smoothing radius in physical units, I am also able to show the independence of the continuum limit of $χ$ from this choice. I conclude providing a comprehensive comparison of my new PTBC results with previous determinations of the topological susceptibility in the literature, both at finite $N$ and in the large-$N$ limit.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-09T09:43:07Z</published>
+    <arxiv:comment>29 (main text) + 11 (appendix and references) pages, 16 figures. v2: few typos corrected, matches published version in JHEP</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.05504v2</id>
+    <title>Physics-Conditioned Diffusion Models for Lattice Gauge Theory</title>
+    <updated>2026-01-23T01:53:56Z</updated>
+    <link href="https://arxiv.org/abs/2502.05504v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.05504v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop diffusion models for simulating lattice gauge theories, where stochastic quantization is explicitly incorporated as a physical condition for sampling. We demonstrate the applicability of this novel sampler to U(1) gauge theory in two spacetime dimensions and find that a model trained at a small inverse coupling constant can be extrapolated to larger inverse coupling regions without encountering the topological freezing problem. Additionally, the trained model can be employed to sample configurations on different lattice sizes without requiring further training. The exactness of the generated samples is ensured by incorporating Metropolis-adjusted Langevin dynamics into the generation process. Furthermore, we demonstrate that this approach enables more efficient sampling of topological quantities compared to traditional algorithms such as Hybrid Monte Carlo and Langevin simulations.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-08T09:50:27Z</published>
+    <arxiv:comment>28 pages, 10 figures, accepted in JHEP. Codes are available at: https://github.com/zzzqt/DM4U1</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Qianteng Zhu</name>
+    </author>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.03315v2</id>
+    <title>HMC and gradient flow with machine-learned classically perfect fixed-point actions</title>
+    <updated>2025-02-20T13:35:09Z</updated>
+    <link href="https://arxiv.org/abs/2502.03315v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.03315v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fixed-point (FP) lattice actions are classically perfect, i.e., they have continuum classical properties unaffected by discretization effects and are expected to have suppressed lattice artifacts at weak coupling. Therefore they provide a possible way to extract continuum physics with coarser lattices, allowing to circumvent problems with critical slowing down and topological freezing towards the continuum limit. We use machine-learning methods to parameterize a FP action for four-dimensional SU(3) gauge theory using lattice gauge-covariant convolutional neural networks. The large operator space allows us to find superior parameterizations compared to previous studies and we show how such actions can be efficiently simulated with the Hybrid Monte Carlo algorithm. Furthermore, we argue that FP lattice actions can be used to define a classically perfect gradient flow without any lattice artifacts at tree level. We present initial results for scaling of the gradient flow with the FP action.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-05T16:13:51Z</published>
+    <arxiv:comment>10 pages, 8 figures; Proceedings of the 41th International Symposium on Lattice Field Theory (Lattice 2024)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Kieran Holland</name>
+    </author>
+    <author>
+      <name>Andreas Ipp</name>
+    </author>
+    <author>
+      <name>David I. Müller</name>
+    </author>
+    <author>
+      <name>Urs Wenger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.02670v2</id>
+    <title>Machine-learning approaches to accelerating lattice simulations</title>
+    <updated>2025-02-20T21:20:33Z</updated>
+    <link href="https://arxiv.org/abs/2502.02670v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.02670v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The last decade has seen an explosive growth of interest in exploiting developments in machine learning to accelerate lattice QCD calculations. On the sampling side, generative models are a promising approach to mitigating critical slowing down and topological freezing. Meanwhile, signal-to-noise problems have been shown to be improvable by the use of optimized improved observables. Both techniques can be made free of bias, resulting in trustworthy but reduced statistical errors. This talk reviews recent developments in this field.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-04T19:18:44Z</published>
+    <arxiv:comment>12 pages, 7 figures; contribution to the 41st International Symposium on Lattice Field Theory (Lattice 2024), 28 July - 3 August 2024, Liverpool, UK; added reference</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Scott Lawrence</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.02127v1</id>
+    <title>Exploring Generative Networks for Manifolds with Non-Trivial Topology</title>
+    <updated>2025-02-04T09:02:41Z</updated>
+    <link href="https://arxiv.org/abs/2502.02127v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.02127v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The expressive power of neural networks in modelling non-trivial distributions can in principle be exploited to bypass topological freezing and critical slowing down in simulations of lattice field theories. Some popular approaches are unable to sample correctly non-trivial topology, which may lead to some classes of configurations not being generated. In this contribution, we present a novel generative method inspired by a model previously introduced in the ML community (GFlowNets). We demonstrate its efficiency at exploring ergodically configuration manifolds with non-trivial topology through applications such as triple ring models and two-dimensional lattice scalar field theory.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-04T09:02:41Z</published>
+    <arxiv:comment>10 pages, 7 figures. Talk presented at the 41th International Symposium on Lattice Field Theory (Lattice 2024), July 28th to August 3rd, 2024, the University of Liverpool, United Kingdom</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Shiyang Chen</name>
+    </author>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Biagio Lucini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.01217v2</id>
+    <title>Lattice techniques to investigate the strong $CP$ problem: lessons from a toy model</title>
+    <updated>2025-02-14T14:15:29Z</updated>
+    <link href="https://arxiv.org/abs/2502.01217v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.01217v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent studies have claimed that the strong $CP$ problem does not occur in QCD, proposing a new order of limits in volume and topological sectors when studying observables on the lattice. We study the effect of the topological term on a simple quantum mechanical rotor that allows a lattice description. We particularly focus on recent proposals to face the challenging problems that this study poses in lattice QCD and that are also present in the quantum rotor, such as topology freezing and the sign problem.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-03T10:16:30Z</published>
+    <arxiv:comment>10 pages, 5 figures. Contribution to the 41st International Symposium on Lattice Field Theory (LATTICE2024), 28 July - 3 August 2024, Liverpool, UK. v2: Edit to match version submitted in PoS</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>David Albandea</name>
+    </author>
+    <author>
+      <name>Guilherme Catumba</name>
+    </author>
+    <author>
+      <name>Alberto Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.18449v1</id>
+    <title>Scale setting of $\mathrm{SU}(N)$ Yang-Mills theories via Twisted Gradient Flow</title>
+    <updated>2025-01-30T16:00:50Z</updated>
+    <link href="https://arxiv.org/abs/2501.18449v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.18449v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present preliminary results for the scale setting of $\mathrm{SU}(N)$ Yang-Mills theories using twisted boundary conditions and the gradient-flow scale $\sqrt{t_0}$. The end goal of this study is to determine the $\mathrm{SU(N)}$ $Λ$-parameter through the step-scaling method. The scale $\sqrt{t_0}$, being defined from the flowed action density of the gauge fields, is correlated with their topological charge and thus could be affected by topological freezing. We deal with this problem with the Parallel Tempering on Boundary Conditions algorithm, which we found to be effective for the same numerical setup in a previous work.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-30T16:00:50Z</published>
+    <arxiv:comment>9 pages, 3 figures, contribution for the Proceedings of the 41st International Symposium on Lattice Field Theory (Lattice 2024), 28 July-3 August 2024, Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Jorge Luis Dasilva Golán</name>
+    </author>
+    <author>
+      <name>Massimo D'Elia</name>
+    </author>
+    <author>
+      <name>Margarita García Pérez</name>
+    </author>
+    <author>
+      <name>Andrea Giorgieri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.15352v1</id>
+    <title>Tensor renormalization group study of the two-dimensional lattice U(1) gauge-Higgs model with a topological $θ$ term under Lüscher's admissibility condition</title>
+    <updated>2025-01-26T00:01:36Z</updated>
+    <link href="https://arxiv.org/abs/2501.15352v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.15352v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the two-dimensional lattice U(1) gauge-Higgs model with a topological term, employing Lüscher's admissibility condition. The standard Monte Carlo simulation for this model is hindered not only by the complex action problem due to the topological term but also by the topological freezing problem originating from the admissibility condition. Resolving both obstacles simultaneously with the tensor renormalization group approach, we show the advantage of the admissibility condition in dealing with the topological term discretized with the so-called field-theoretical definition.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-26T00:01:36Z</published>
+    <arxiv:comment>10 pages, 7 figures, Proceedings of the 41st International Symposium on Lattice Field Theory (LATTICE2024) 28 July - 3 August 2024, Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Shinichiro Akiyama</name>
+    </author>
+    <author>
+      <name>Yoshinobu Kuramashi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.11438v1</id>
+    <title>Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form gauge fields</title>
+    <updated>2025-01-20T12:23:27Z</updated>
+    <link href="https://arxiv.org/abs/2501.11438v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.11438v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The pure $SU(N)$ gauge theory with a $θ$ term has the $\mathbb{Z}_N$ $1$-form global symmetry. When this symmetry is gauged, it is formally established that the topological charge becomes fractional. In this talk, we generate gauge configurations using the HMC method with coupling to the gauged $\mathbb{Z}_N$ $2$-form gauge field. After smoothing these configurations via the gradient flow method, we numerically confirm that the topological charge has a fractional value. We also anticipate that these higher-form fields can solve the topological freezing problem.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-20T12:23:27Z</published>
+    <arxiv:comment>8 pages, 4 figures, talk presented at the 41st International Symposium on Lattice Field Theory (Lattice2024), July 28th - August 3rd, 2024, The University of Liverpool</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Motokazu Abe</name>
+    </author>
+    <author>
+      <name>Okuto Morikawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.14022v2</id>
+    <title>The imaginary-$θ$ dependence of the SU($N$) spectrum</title>
+    <updated>2024-11-29T14:39:01Z</updated>
+    <link href="https://arxiv.org/abs/2411.14022v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.14022v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this talk we will report on a study of the $θ$-dependence of the string tension and of the mass gap of four-dimensional SU($N$) Yang--Mills theories. The spectrum at $N=3$ and $N=6$ was obtained on the lattice at various imaginary values of the $θ$-parameter, using Parallel Tempering on Boundary Conditions to avoid topological freezing at fine lattice spacings. The coefficient of the $\mathcal{O}(θ^2)$ term in the Taylor expansion of the spectrum around $θ=0$ could be obtained in the continuum limit for $N=3$, and on two fairly fine lattices for $N=6$.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-21T11:09:30Z</published>
+    <arxiv:comment>15 pages, 3 figures. Contribution to Proceedings of the 41st International Symposium on Lattice Field Theory (Lattice 2024), July 28th - August 3rd, 2024, University of Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Claudio Bonati</name>
+    </author>
+    <author>
+      <name>Mario Papace</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.11593v1</id>
+    <title>Topology in 2D non-Abelian Lattice Gauge Theories</title>
+    <updated>2024-11-18T14:13:07Z</updated>
+    <link href="https://arxiv.org/abs/2411.11593v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.11593v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In two dimensions, $U(N_c)$ gauge theories exhibit a non-trivial topological structure, while $SU(N_c)$ theories are topologically trivial. Hence, for $G = U(N_c)$ the phase space is divided into topological sectors, characterized by a topological index (a.k.a. ``topological charge''). These sectors are separated by action barriers, which diverge if the lattice spacing is taken small, resulting in an algorithmic problem known as ``topological freezing''. We study these theories in various box sizes and at various couplings. With the help of gradient flow we derive instanton-like solutions for 2D $U(N_c)$ theory with a specific focus on the case of $N_c = 2$.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-18T14:13:07Z</published>
+    <arxiv:comment>8 pages, 7 figures, 1 table. Proceedings of the 41st International Symposium on Lattice Field Theory (LATTICE2024), 28 July - 3 August, 2024 Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Stephan Durr</name>
+    </author>
+    <author>
+      <name>Philip Rouenhoff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.00620v2</id>
+    <title>Topological susceptibility of $\mathrm{SU}(3)$ pure-gauge theory from out-of-equilibrium simulations</title>
+    <updated>2024-11-25T09:51:51Z</updated>
+    <link href="https://arxiv.org/abs/2411.00620v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.00620v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In \textit{JHEP} \textbf{04} (2024) 126 [arXiv:2402.06561] we recently proposed an out-of-equilibrium setup to reduce the large auto-correlations of the topological charge in two-dimensional $\mathrm{CP}^{N-1}$ models. Our proposal consists of performing open-boundaries simulations at equilibrium, and gradually switching on periodic boundary conditions out-of-equilibrium. Our setup allows to exploit the reduced auto-correlations achieved with open boundaries, avoiding at the same time unphysical boundary effects thanks to a Jarzynski-inspired reweighting-like procedure. We present preliminary results obtained applying this setup to the $4d$ $\mathrm{SU}(3)$ pure-gauge theory and we outline a computational strategy to mitigate topological freezing in this theory.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-01T14:26:38Z</published>
+    <arxiv:comment>12 pages, 6 figures, poster presented at the 41st International Symposium on Lattice Field Theory (LATTICE2024), July 28th - August 3rd, 2024, The University of Liverpool</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.19602v1</id>
+    <title>Diffusion models for lattice gauge field simulations</title>
+    <updated>2024-10-25T14:49:20Z</updated>
+    <link href="https://arxiv.org/abs/2410.19602v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.19602v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop diffusion models for lattice gauge theories which build on the concept of stochastic quantization. This framework is applied to $U(1)$ gauge theory in $1+1$ dimensions. We show that a model trained at one small inverse coupling can be effectively transferred to larger inverse coupling without encountering issues related to topological freezing, i.e., the model can generate configurations corresponding to different couplings by introducing the Boltzmann factors as physics conditions, while maintaining the correct physical distributions without any additional training. This demonstrates the potential of physics-conditioned diffusion models for efficient and flexible lattice gauge theory simulations.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-25T14:49:20Z</published>
+    <arxiv:comment>7 pages, 3 figures, accepted at the NeurIPS 2024 workshop "Machine Learning and the Physical Sciences"</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Qianteng Zhu</name>
+    </author>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.10409v2</id>
+    <title>Tensor renormalization group study of (1+1)-dimensional U(1) gauge-Higgs model at $θ=π$ with Lüscher's admissibility condition</title>
+    <updated>2024-09-20T04:55:32Z</updated>
+    <link href="https://arxiv.org/abs/2407.10409v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.10409v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the phase structure of the (1+1)-dimensional U(1) gauge-Higgs model with a $θ$ term, where the U(1) gauge action is constructed with Lüscher's admissibility condition. Using the tensor renormalization group, both the complex action problem and topological freezing problem in the standard Monte Carlo simulation are avoided. We find the first-order phase transition with sufficiently large Higgs mass at $θ=π$, where the $\mathbb{Z}_2$ charge conjugation symmetry is spontaneously broken. On the other hand, the symmetry is restored with a sufficiently small mass. We determine the critical endpoint as a function of the Higgs mass parameter and show the critical behavior is in the two-dimensional Ising universality class.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-15T03:02:06Z</published>
+    <arxiv:comment>22 pages, 10 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 09 (2024) 086</arxiv:journal_ref>
+    <author>
+      <name>Shinichiro Akiyama</name>
+    </author>
+    <author>
+      <name>Yoshinobu Kuramashi</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP09(2024)086</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP09(2024)086" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.14151v2</id>
+    <title>Full QCD with milder topological freezing</title>
+    <updated>2024-09-02T10:17:44Z</updated>
+    <link href="https://arxiv.org/abs/2404.14151v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.14151v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We simulate $N_f=2+1$ QCD at the physical point combining open and periodic boundary conditions in a parallel tempering framework, following the original proposal by M. Hasenbusch for $2d$ $\mathrm{CP}^{N-1}$ models, which has been recently implemented and widely employed in $4d$ $\mathrm{SU}(N)$ pure Yang-Mills theories too. We show that using this algorithm it is possible to achieve a sizable reduction of the auto-correlation time of the topological charge in dynamical fermions simulations both at zero and finite temperature, allowing to avoid topology freezing down to lattice spacings as fine as $a \sim 0.02$ fm. Therefore, this implementation of the Parallel Tempering on Boundary Conditions algorithm has the potential to substantially push forward the investigation of the QCD vacuum properties by means of lattice simulations.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-22T12:57:41Z</published>
+    <arxiv:comment>26 pages, 7 figures. v2: expanded discussion about PTBC improvement over standard RHMC, improved estimate of tau_int(Q^2) with standard RHMC at finest lattice spacing, final results and conclusions unchanged, matches accepted version on JHEP</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Giuseppe Clemente</name>
+    </author>
+    <author>
+      <name>Massimo D'Elia</name>
+    </author>
+    <author>
+      <name>Lorenzo Maio</name>
+    </author>
+    <author>
+      <name>Luca Parente</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.13607v2</id>
+    <title>The $\mathrm{SU}(3)$ twisted gradient flow strong coupling without topological freezing</title>
+    <updated>2024-09-02T10:34:30Z</updated>
+    <link href="https://arxiv.org/abs/2403.13607v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.13607v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the role of topology on the lattice determination of the $\mathrm{SU}(3)$ strong coupling renormalized via gradient flow. To deal with the topological freezing of standard local algorithms, the definition of the coupling is usually projected onto the zero topological sector. However, it is not obvious that this definition is not biased by the loss of ergodicity. We instead avoid the topological freezing using a novel algorithm, the Parallel Tempering on Boundary Conditions. The comparison with a standard algorithm shows that, even in the case where the latter is severely frozen, one obtains the same projected coupling. Moreover, we show that the two definitions of the coupling, projected and non-projected, lead to the same flow of the renormalization scale. Our results imply that projecting the coupling does not affect the determination of the dynamically-generated scale of the theory $Λ$, as obtained through the step-scaling method.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-20T13:59:04Z</published>
+    <arxiv:comment>v1: 30 pages, 9 figures. v2: 33 pages, 9 figures, revised and expanded text in Sections 1 and 2, expanded discussion about topological quantities, results and conclusions unchanged, matches accepted version on EPJC</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Jorge Luis Dasilva Golán</name>
+    </author>
+    <author>
+      <name>Massimo D'Elia</name>
+    </author>
+    <author>
+      <name>Margarita García Pérez</name>
+    </author>
+    <author>
+      <name>Andrea Giorgieri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.06561v2</id>
+    <title>Mitigating topological freezing using out-of-equilibrium simulations</title>
+    <updated>2024-04-29T15:38:39Z</updated>
+    <link href="https://arxiv.org/abs/2402.06561v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.06561v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the recently-established connection between Jarzynski's equality and the theoretical framework of Stochastic Normalizing Flows, we investigate a protocol relying on out-of-equilibrium lattice Monte Carlo simulations to mitigate the infamous computational problem of topological freezing. We test our proposal on $2d$ $\mathrm{CP}^{N-1}$ models and compare our results with those obtained adopting the Parallel Tempering on Boundary Conditions proposed by M. Hasenbusch, obtaining comparable performances. Our work thus sets the stage for future applications combining our Monte Carlo setup with machine learning techniques.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-09T17:21:04Z</published>
+    <arxiv:comment>1+26 pages, 14 figures; v2: 1+27 pages, 14 figures, discussion in section 4 expanded, matches published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 04 (2024) 126</arxiv:journal_ref>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.03096v2</id>
+    <title>The $θ$-dependence of the Yang-Mills spectrum from analytic continuation</title>
+    <updated>2024-05-10T13:00:34Z</updated>
+    <link href="https://arxiv.org/abs/2402.03096v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.03096v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the $θ$-dependence of the string tension and of the lightest glueball mass in four-dimensional $\mathrm{SU}(N)$ Yang-Mills theories. More precisely, we focus on the coefficients parametrizing the $\mathcal{O}(θ^2)$ dependence of these quantities, which we investigate by means of numerical simulations of the lattice-discretized theory, carried out using imaginary values of the $θ$ parameter. Topological freezing at large $N$ is avoided using the Parallel Tempering on Boundary Conditions algorithm. We provide controlled continuum extrapolations of such coefficients in the $N=3$ case, and we report the results obtained on two fairly fine lattice spacings for $N=6$.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-05T15:27:10Z</published>
+    <arxiv:comment>22 pages, 5 figures. v2: minor revisions, matches accepted version on JHEP</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Claudio Bonati</name>
+    </author>
+    <author>
+      <name>Mario Papace</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.01046v1</id>
+    <title>Towards the Application of Skewed Detailed Balance in Lattice Gauge Theories</title>
+    <updated>2024-02-01T22:27:46Z</updated>
+    <link href="https://arxiv.org/abs/2402.01046v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.01046v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>State-of-the-art algorithms in lattice gauge theory typically rely heavily on detailed balance, which is an instrumental tool to prove the correct convergence of the Markov Chain Monte Carlo Algorithm. In this work, we investigate an alternative to detailed balance, skewed detailed balance, and the prospects of alleviating the topological freezing problem by studying the one-dimensional $O\left(2\right)$ model.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-01T22:27:46Z</published>
+    <arxiv:comment>PoS Lattice 2022</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Marina Krstic Marinkovic</name>
+    </author>
+    <author>
+      <name>Joao C. Pinto Barros</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.06481v2</id>
+    <title>Machine learning a fixed point action for SU(3) gauge theory with a gauge equivariant convolutional neural network</title>
+    <updated>2024-10-02T22:51:02Z</updated>
+    <link href="https://arxiv.org/abs/2401.06481v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.06481v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fixed point lattice actions are designed to have continuum classical properties unaffected by discretization effects and reduced lattice artifacts at the quantum level. They provide a possible way to extract continuum physics with coarser lattices, thereby allowing one to circumvent problems with critical slowing down and topological freezing toward the continuum limit. A crucial ingredient for practical applications is to find an accurate and compact parametrization of a fixed point action, since many of its properties are only implicitly defined. Here we use machine learning methods to revisit the question of how to parametrize fixed point actions. In particular, we obtain a fixed point action for four-dimensional SU(3) gauge theory using convolutional neural networks with exact gauge invariance. The large operator space allows us to find superior parametrizations compared to previous studies, a necessary first step for future Monte Carlo simulations and scaling studies.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-12T10:03:00Z</published>
+    <arxiv:comment>22 pages, 15 figures, 6 tables; updated to published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Kieran Holland</name>
+    </author>
+    <author>
+      <name>Andreas Ipp</name>
+    </author>
+    <author>
+      <name>David I. Müller</name>
+    </author>
+    <author>
+      <name>Urs Wenger</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.110.074502</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.110.074502" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.01297v2</id>
+    <title>Flow-based sampling for lattice field theories</title>
+    <updated>2024-01-24T12:34:19Z</updated>
+    <link href="https://arxiv.org/abs/2401.01297v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.01297v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Critical slowing down and topological freezing severely hinder Monte Carlo sampling of lattice field theories as the continuum limit is approached. Recently, significant progress has been made in applying a class of generative machine learning models, known as "flow-based" samplers, to combat these issues. These generative samplers also enable promising practical improvements in Monte Carlo sampling, such as fully parallelized configuration generation. These proceedings review the progress towards this goal and future prospects of the method.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-02T17:19:55Z</published>
+    <arxiv:comment>21 pages, 7 figures, Plenary talk at the 40th International Symposium on Lattice Field Theory (Lattice 2023); references added</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.11599v1</id>
+    <title>Topological charge unfreezing with AMReX</title>
+    <updated>2023-12-18T18:24:49Z</updated>
+    <link href="https://arxiv.org/abs/2312.11599v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.11599v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A new approach to the problem of topological freezing in gauge theories is introduced in which a physical volume preserving coarsening of the lattice induces sufficient energy variation in the Hamiltonian to overcome large topological barriers. Though the process is not reversible, the physical volume preserving aspect minimises the time spent rethermalisating the lattice after coarsening periods, which we then treat as a new ensemble disjoint from previous runs. We have tested this technique on the pure gauge 2D Schwinger model and find that topological sampling rates are improved. We also demonstrate that autocorrelation times for extensive observables are restored to their pre-coarsening values after coarsening periods over a acceptably short simulation time.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-18T18:24:49Z</published>
+    <arxiv:comment>12 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Dean Howarth</name>
+    </author>
+    <author>
+      <name>Adam J Peterson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.09212v2</id>
+    <title>The Twisted Gradient Flow strong coupling with Parallel Tempering on Boundary Conditions</title>
+    <updated>2023-12-15T09:38:11Z</updated>
+    <link href="https://arxiv.org/abs/2312.09212v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.09212v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a proposal for calculating the running of the coupling constant of the $\mathrm{SU}(3)$ pure-gauge theory, which combines the Twisted Gradient Flow (TGF) renormalization scheme with Parallel Tempering on Boundary Conditions (PTBC). The TGF is a gradient flow-based renormalization scheme formulated in an asymmetric lattice with twisted boundary conditions. Combined with step scaling, it has been successfully used to calculate the $\mathrm{SU}(3)$ $Λ$ parameter. As with all gradient flow-based schemes, the coupling constant is highly correlated with the topological charge and affected by topology freezing, an issue addressed by projecting the determination of the coupling onto the zero topological sector. As an alternative to the zero-charge projection, we combine TGF with PTBC, by replicating multiple copies of the same lattice, interpolating between periodic and open boundary conditions in a parallel-tempered manner. We present a first exploration of these ideas by analyzing specific ensembles of $\mathrm{SU}(3)$ lattices with and without PTBC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-14T18:42:37Z</published>
+    <arxiv:comment>11 pages, 5 figures, 40th International Symposium on Lattice Field Theory, LATTICE2023 Fermilab, Batavia, Illinois, USA, from July 31 to August 4, 2023. V2: text unchanged, some previous figures were not correct and have been updated</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Jorge Luis Dasilva Golán</name>
+    </author>
+    <author>
+      <name>Massimo D'Elia</name>
+    </author>
+    <author>
+      <name>Margarita García Pérez</name>
+    </author>
+    <author>
+      <name>Andrea Giorgieri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.17816v1</id>
+    <title>Fixed point actions from convolutional neural networks</title>
+    <updated>2023-11-29T17:10:49Z</updated>
+    <link href="https://arxiv.org/abs/2311.17816v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.17816v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice gauge-equivariant convolutional neural networks (L-CNNs) can be used to form arbitrarily shaped Wilson loops and can approximate any gauge-covariant or gauge-invariant function on the lattice. Here we use L-CNNs to describe fixed point (FP) actions which are based on renormalization group transformations. FP actions are classically perfect, i.e., they have no lattice artifacts on classical gauge-field configurations satisfying the equations of motion, and therefore possess scale invariant instanton solutions. FP actions are tree-level Symanzik-improved to all orders in the lattice spacing and can produce physical predictions with very small lattice artifacts even on coarse lattices. We find that L-CNNs are much more accurate at parametrizing the FP action compared to older approaches. They may therefore provide a way to circumvent critical slowing down and topological freezing towards the continuum limit.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-29T17:10:49Z</published>
+    <arxiv:comment>9 pages, 5 figures; Proceedings of the 40th International Symposium on Lattice Field Theory (Lattice 2023)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Kieran Holland</name>
+    </author>
+    <author>
+      <name>Andreas Ipp</name>
+    </author>
+    <author>
+      <name>David I. Müller</name>
+    </author>
+    <author>
+      <name>Urs Wenger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.03381v1</id>
+    <title>Learning Trivializing Flows in a $φ^4$ theory from coarser lattices</title>
+    <updated>2023-10-05T08:32:16Z</updated>
+    <link href="https://arxiv.org/abs/2310.03381v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.03381v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The so-called trivializing flows were proposed to speed up Hybrid Monte Carlo simulations, where the Wilson flow was used as an approximation of a trivializing map, a transformation of the gauge fields which trivializes the theory. It was shown that the scaling of the computational costs towards the continuum did not change with respect to HMC. The introduction of machine learning tecniques, especially normalizing flows, for the sampling of lattice gauge theories has shed some hope on solving topology freezing in lattice QCD simulations. In this talk I will present our work in a $φ^{4}$ theory using normalizing flows as trivializing flows (given its similarity with the idea of a trivializing map), training from a trivial distribution as well as from coarser lattices, and study its scaling towards the continuum, comparing it with standard HMC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-05T08:32:16Z</published>
+    <arxiv:comment>7 pages of main content, 5 figures, 1 table. Talk presented at the 40th International Symposium on Lattice Field Theory (Lattice2023), July 31st - August 4th, 2023, Fermi National Accelerator Laboratory</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>David Albandea</name>
+    </author>
+    <author>
+      <name>Luigi Del Debbio</name>
+    </author>
+    <author>
+      <name>Pilar Hernández</name>
+    </author>
+    <author>
+      <name>Richard Kenway</name>
+    </author>
+    <author>
+      <name>Joe Marsh Rossney</name>
+    </author>
+    <author>
+      <name>Alberto Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.04742v2</id>
+    <title>Parallel Tempered Metadynamics: Overcoming potential barriers without surfing or tunneling</title>
+    <updated>2024-06-10T23:24:10Z</updated>
+    <link href="https://arxiv.org/abs/2307.04742v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.04742v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>At fine lattice spacings, Markov chain Monte Carlo simulations of QCD and other gauge theories with or without fermions are plagued by slow modes that give rise to large autocorrelation times. This can lead to simulation runs that are effectively stuck in one topological sector, a problem known as topological freezing. Here, we demonstrate that for a relevant set of parameters, Metadynamics can be used to unfreeze 4-dimensional SU(3) gauge theory. However, compared to local update algorithms and the Hybrid Monte Carlo algorithm, the computational overhead is significant in pure gauge theory, and the required reweighting procedure may considerably reduce the effective sample size. To deal with the latter problem, we propose modifications to the Metadynamics bias potential and the combination of Metadynamics with parallel tempering. We test the new algorithm in 4-dimensional SU(3) gauge theory and find that it can achieve topological unfreezing without compromising the effective sample size, thereby reducing the autocorrelation times of topological observables by at least two orders of magnitude compared to conventional update algorithms. Additionally, we observe significantly improved scaling of autocorrelation times with the lattice spacing in 2-dimensional U(1) gauge theory.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-10T17:53:09Z</published>
+    <arxiv:comment>23 pages, 12 figures, 8 tables. v2: Matches published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 109 (2024) 11, 114504</arxiv:journal_ref>
+    <author>
+      <name>Timo Eichhorn</name>
+    </author>
+    <author>
+      <name>Gianluca Fuwa</name>
+    </author>
+    <author>
+      <name>Christian Hoelbling</name>
+    </author>
+    <author>
+      <name>Lukas Varnhorst</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.109.114504</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.109.114504" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.00581v2</id>
+    <title>Sampling U(1) gauge theory using a re-trainable conditional flow-based model</title>
+    <updated>2023-10-31T05:43:39Z</updated>
+    <link href="https://arxiv.org/abs/2306.00581v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.00581v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sampling topological quantities in the Monte Carlo simulation of Lattice Gauge Theory becomes challenging as we approach the continuum limit of the theory. In this work, we introduce a Conditional Normalizing Flow (C-NF) model to sample U(1) gauge theory in two dimensions, aiming to mitigate the impact of topological freezing when dealing with smaller values of the U(1) bare coupling. To train the conditional flow model, we utilize samples generated by Hybrid Monte Carlo (HMC) method, ensuring that the autocorrelation in topological quantities remains low. Subsequently, we employ the trained model to interpolate the coupling parameter to values where training was not performed. We thoroughly examine the quality of the model in this region and generate uncorrelated samples, significantly reducing the occurrence of topological freezing. Furthermore, we propose a re-trainable approach that utilizes the model's own samples to enhance the generalization capability of the conditional model. This method enables sampling for coupling values that are far beyond the initial training region, expanding the applicability of the model.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-01T11:52:56Z</published>
+    <arxiv:comment>1. Comments: page 4, added a section on Mode collapse in U(1) Gauge Theory. 2. Comments: page 11, added a section in appendix</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 108 (2023) 7, 074518</arxiv:journal_ref>
+    <author>
+      <name>Ankur Singha</name>
+    </author>
+    <author>
+      <name>Dipankar Chakrabarti</name>
+    </author>
+    <author>
+      <name>Vipul Arora</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.108.074518</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.108.074518" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.11665v1</id>
+    <title>Metadynamics Surfing on Topology Barriers in the Schwinger Model</title>
+    <updated>2022-12-22T13:06:35Z</updated>
+    <link href="https://arxiv.org/abs/2212.11665v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.11665v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Topological freezing is a well known problem in lattice simulations: with shrinking lattice spacing a transition between topological sectors becomes increasingly improbable, leading to a problematic increase of the autocorrelation time regarding several observables. We present our investigation of metadynamics as a solution for topological freezing in the Schwinger model. Specifically, we take a closer look at the collective variable and its scaling behaviour, visualize the effects of topological freezing and how metadynamics helps in that respect and explore alternatives for a more efficient building process. Possible implications for and differences to four-dimensional SU(3) theory are briefly discussed.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-22T13:06:35Z</published>
+    <arxiv:comment>10 pages, 7 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>PoS(LATTICE2022)253</arxiv:journal_ref>
+    <author>
+      <name>Christian Hoelbling</name>
+    </author>
+    <author>
+      <name>Timo Eichhorn</name>
+    </author>
+    <author>
+      <name>Philip Rouenhoff</name>
+    </author>
+    <author>
+      <name>Lukas Varnhorst</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.06709v1</id>
+    <title>Exploring the large-$N_c$ limit with one quark flavour</title>
+    <updated>2022-12-13T16:24:04Z</updated>
+    <link href="https://arxiv.org/abs/2212.06709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.06709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use one-flavour QCD ($N_c=3$) as a proxy to understand $\mathcal{N}=1$ SYM. For our simulations, we use tree-level improved Wilson fermions and Symanzik improved gauge action. The hadron spectrum is obtained by using LapH smearing for different masses and simulation volumes. We also report on our efforts to increase the number of colours in our simulations, where we find that the simulations show increasing topological freezing for larger $N_c$.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-13T16:24:04Z</published>
+    <arxiv:comment>9 pages, 6 figures, Proceedings of the 39th International Symposium on Lattice Field Theory, 8th-13th August 2022, Bonn, Germany</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michele Della Morte</name>
+    </author>
+    <author>
+      <name>Benjamin Jäger</name>
+    </author>
+    <author>
+      <name>Sofie Martins</name>
+    </author>
+    <author>
+      <name>Francesco Sannino</name>
+    </author>
+    <author>
+      <name>J. Tobias Tsang</name>
+    </author>
+    <author>
+      <name>Felix P. G. Ziegler</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/o6mOW0Bv/dndlyMf438Ho51ty6s</id>
+  <title>arXiv Query: search_query=abs:"MatterSim"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:45:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22MatterSim%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>24</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.25592v1</id>
+    <title>A Hierarchical Synergistic Deep Learning Framework Integrating Composition, Structure, and Ionic Transport for Solid-State Electrolyte Discovery</title>
+    <updated>2026-08-26T10:04:42Z</updated>
+    <link href="https://arxiv.org/abs/2608.25592v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.25592v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inorganic solid-state electrolytes must combine high room-temperature ionic conductivity, a wide electrochemical window, excellent electronic insulation, and favorable mechanical compliance. Single models struggle to support reliable multi-objective screening across vast chemical spaces because of training-data distribution mismatch, cross-property dataset heterogeneity, and scarce kinetic transport data. To overcome these limitations, we develop a hierarchical synergistic deep-learning framework that sequentially coordinates efficiency, accuracy, and reliability through four complementary modules. The in-house-developed L-G-DCNN and a multi-fidelity implementation built on DenseGNN serve as compositional and structural experts for thermodynamic coarse screening and multi-property evaluation, respectively; MatterSim and system-specific DeePMD models provide transport pre-assessment and kinetic validation. Systematic benchmarks show that each module outperforms mainstream counterparts in its task, while retrospective validation establishes dual closed-loop verification of module-level accuracy and end-to-end workflow reliability. Applied to 30,364,908 Alex/ICSD-derived candidates, the framework identifies 97 high-performance candidates with room-temperature ionic conductivities of 0.109--59.0 mS/cm, including 94 halides, one borohydride, and two oxides. Consistency with independent experimental data confirms that 76 of the 94 halides fall within reported high-conductivity structural regions. Analysis reveals that Li$^{+}$ jump-network connectivity, rather than the number of geometric Li sites, is the core determinant of room-temperature ionic conductivity. Li-defect engineering effectively enhances oxide transport, whereas the inherent rigidity of the O$^{2-}$ framework suggests a potential upper limit on oxide electrolyte performance.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T10:04:42Z</published>
+    <arxiv:comment>22 pages, 8 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hongwei Du</name>
+    </author>
+    <author>
+      <name>Dingyang Lv</name>
+    </author>
+    <author>
+      <name>Baole Wei</name>
+    </author>
+    <author>
+      <name>Yongheng Li</name>
+    </author>
+    <author>
+      <name>Feng Yu</name>
+    </author>
+    <author>
+      <name>Ziheng Lu</name>
+    </author>
+    <author>
+      <name>Siqi Shi</name>
+    </author>
+    <author>
+      <name>Hong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14899v1</id>
+    <title>Data-Efficient Construction of Material-Specific Machine-Learning Interatomic Potentials from Ab Initio Molecular Dynamics Trajectories</title>
+    <updated>2026-08-14T21:12:26Z</updated>
+    <link href="https://arxiv.org/abs/2608.14899v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14899v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pretrained machine-learning interatomic potentials, so-called universal or foundation models offer an appealing starting point for atomistic simulations, but their accuracy for material-specific observables often remains limited without additional reference data (fine-tuning). Here, we systematically quantify how much first-principles data are required to convert universal models into ab initio-accurate material-specific potentials, and ask whether fine-tuning is necessarily preferable to training from scratch. We compare five universal MLIP frameworks, MACE-MP-0, SevenNet-0, GRACE-1L-OAM, MatterSim-v1-5M and ORB-v2, across seven chemically diverse systems incorporating rare and reactive events. Fine-tuning on only 10 AIMD-derived configurations is insufficient for the investigated systems; 200 configurations succeed in favorable cases, but the outcome remains strongly system-dependent. By contrast, 2000 AIMD configurations constitute a robust default, yielding low force and energy errors and reproducing the target material-specific observables. Moderately dense sub-sampling of the AIMD trajectory reduces the required trajectory length tenfold with little loss in model quality. Training from scratch on the same datasets is competitive with, and often slightly more accurate than, naive fine-tuning for MACE and SevenNet, whereas GRACE requires more data. The energy profile for a sulfur-vacancy jump in MoS$_2$ reveals that low trajectory-level errors do not guarantee a correct reaction profile, highlighting the need for observable-level validation. Finally, we show that averaging independently trained models improves predictions in scarce-data regimes at no additional first-principles cost. Together, these results provide practical guidelines for converting limited AIMD reference data into reliable material-specific MLIPs for nanosecond-timescale simulations at near-DFT accuracy.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-14T21:12:26Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jonas Hänseroth</name>
+    </author>
+    <author>
+      <name>Christian Dreßler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14640v1</id>
+    <title>BDIP-Net: Dual-Interaction Graph Learning for Property Prediction of Bilayer Materials</title>
+    <updated>2026-07-28T20:11:30Z</updated>
+    <link href="https://arxiv.org/abs/2608.14640v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14640v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Stacked bilayer materials exhibit rich stacking-dependent properties driven by the interplay between strong intra-layer bonding and weak inter-layer van der Waals interactions. The computational discovery of such materials is challenging because accurate structure generation typically relies on expensive DFT-based optimization, while existing machine-learning models often fail to explicitly distinguish different interaction types during property prediction. To address these challenges, we propose a machine-learning framework for efficient construction and property prediction of stacked bilayer materials. The framework employs a MatterSim-D3-based structural optimization workflow to generate DFT-quality bilayer structures from monolayer building blocks and stacking configurations at substantially reduced computational cost. For property prediction, we introduce BDIP-Net (Bilayer Dual-Interaction Potential Network), a graph neural network that explicitly models intra-layer and inter-layer interactions through interaction-specific potential representations and adaptive message fusion. We evaluate the proposed framework on BiDB, HetDB, and SAMBA, encompassing homobilayers, heterobilayers, and twisted bilayer systems. Results show that the MatterSim-D3-based workflow closely reproduces DFT-PBE-D3 optimized structures, while BDIP-Net consistently outperforms existing graph neural network and potential-based approaches for bilayer property prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T20:11:30Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>An Vuong</name>
+    </author>
+    <author>
+      <name>Chen Zhao</name>
+    </author>
+    <author>
+      <name>Jin Hu</name>
+    </author>
+    <author>
+      <name>Shui-Qing Yu</name>
+    </author>
+    <author>
+      <name>Xintao Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.20591v1</id>
+    <title>Lithium-Projected Phonon Spectral Distributions as Robust Descriptors of Ionic Conductivity in Solid Electrolytes</title>
+    <updated>2026-07-22T15:04:25Z</updated>
+    <link href="https://arxiv.org/abs/2607.20591v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.20591v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice dynamics are widely invoked in the design of solid electrolytes, yet phonon information is commonly compressed into a band center or another scalar softness measure. Here we test whether the complete lithium-projected phonon density of states (Li-PDOS) provides a reproducible descriptor of experimental room-temperature ionic conductivity. MatterSim forces and Phonopy were used to generate harmonic total and Li-projected spectra for crystallographically resolved entries in the OBELiX dataset. A composition and structure audit defined a primary cohort of 260 materials (212 train and 48 test), a strict cohort of 241, and an exact-composition cohort of 168. Across 20 independently generated phonon-calculation database comparisons, the mean Wasserstein-1 distance was 0.542 THz for total DOS and 0.731 THz for Li-PDOS, revealing broad agreement but systematic, projection-dependent softening. Higher conductivity was associated with redistribution of normalized Li spectral weight toward low frequencies: in the untouched test set, the Li fractions below 2 and 5 THz had Spearman coefficients of 0.333 and 0.374, while the 5$\%$ cumulative-frequency quantile had a coefficient of $-0.393$. A Wasserstein kernel on the full Li-PDOS achieved held-out $R^2=0.444$, compared with 0.012 for total DOS and 0.181 for a static composition--structure kernel. The Li model remained stable in the strict ($R^2=0.462$) and exact ($R^2=0.451$) cohorts. Family adjustment attenuated scalar associations, and Li-versus-total whole-spectrum dependence was cohort sensitive. The results therefore support mobile-ion-resolved spectral distributions as useful comparative screening descriptors, not as a universal causal softness law.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T15:04:25Z</published>
+    <arxiv:comment>27 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Gajendra Bohara</name>
+    </author>
+    <author>
+      <name>Ramakrishna Podila</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.09005v1</id>
+    <title>Benchmarking Universal Machine Learning Force Fields for Molecular Dynamics of Lunar Regolith Minerals</title>
+    <updated>2026-07-10T00:19:43Z</updated>
+    <link href="https://arxiv.org/abs/2607.09005v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.09005v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine-learning interatomic potentials provide a promising route for accelerating molecular dynamics simulations of materials, but their transferability to lunar regolith-relevant silicates, oxides, and hydrogen-bearing surface species remains elucidated. Here, we benchmark six foundation models, MACE-MH, MatterSim, SevenNet-0, UPET, UMA, and NequIP-OAM-L, using NVT molecular dynamics simulations of four representative lunar minerals: forsterite, fayalite, ilmenite, and anorthite. Structural fidelity is evaluated using temperature stability, bond-distance statistics, bond-angle distributions, and partial radial distribution functions, with comparison to crystallographic reference data. The models reproduce Si--O, Mg--O, Al--O, and Ca--O local environments reasonably well, while Fe--O and Ti--O coordination environments show broader distributions and larger short-timescale fluctuations, highlighting the need for further validation and fine tuning with additional ground truth data for Fe- and Ti-bearing lunar phases. Hydroxylated surface tests show consistent O--H bond-distance distributions across models and minerals, suggesting that these foundation models may provide useful starting points for screening surface hydroxyl stability and volatile-related processes. Performance benchmarks on a single NVIDIA RTX 4090 show that SevenNet-0, MatterSim, and UPET provide the highest throughput among the six tested models, MACE-MH remains practical at intermediate cost, and UMA and NequIP-OAM-L extend the comparison to newer foundation potentials at higher runtime cost and memory demand. These results provide an initial benchmark for applying universal foundation models to lunar mineral simulations and identify key directions for future ab initio validation, model fine-tuning, and applications to lunar volatile evolution, space weathering, ISRU, and polar sample return studies.</summary>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T00:19:43Z</published>
+    <arxiv:comment>14 pages, 7 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="physics.geo-ph"/>
+    <author>
+      <name>Ziyu Huang</name>
+    </author>
+    <author>
+      <name>Ken-ichi Nomura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12811v1</id>
+    <title>A wrong ground-state structure of HfO$_2$ predicted by machine-learning interatomic potentials based on the PBE functional</title>
+    <updated>2026-06-11T02:11:53Z</updated>
+    <link href="https://arxiv.org/abs/2606.12811v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12811v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine-learning interatomic potentials (MLIPs) have become powerful tools for material simulations. Many MLIPs are trained based on density functional theory (DFT) datasets generated with the Perdew-Burke-Ernzerhof (PBE) exchange-correlation functional. Using a PBE-based MLIP for HfO2, we identify a previously unreported low-energy I41/amd structure, which is predicted to be more stable than the well-known ground-state structure, the monoclinic P21/c structure. Since experiments show clearly that HfO2 takes the P21/c structure as the ground state, this is obviously a wrong prediction. Unfortunately, the same prediction is also made by widely used PBE-based foundation models such as NequIP-OAM-L and MatterSim-v1-5M. Comparisons among different DFT functionals show that this error originates from the PBE functional, which overstabilizes low-density structures containing sixfold Hf-O octahedral units, such as the I41/amd and Pbcn phases. The error also affects the calculated energy landscapes and barrier heights along ferroelectric HfO2 polarization switching paths when there are large lattice relaxations. Fortunately, the error can be largely suppressed by other functionals such as PBEsol and local density approximation. Our study serves as a warning about the impact of errors in exchange-correlation functional approximations on the reliability of MLIP simulations of crystal structures and phase transitions.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T02:11:53Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Shuqi Tang</name>
+    </author>
+    <author>
+      <name>Jinchen Wei</name>
+    </author>
+    <author>
+      <name>Kang Wang</name>
+    </author>
+    <author>
+      <name>Junjie Zhou</name>
+    </author>
+    <author>
+      <name>Yihan Zhang</name>
+    </author>
+    <author>
+      <name>Menglin Huang</name>
+    </author>
+    <author>
+      <name>Shiyou Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.13594v2</id>
+    <title>Assessing foundational atomistic models for iron alloys under Earth's core conditions</title>
+    <updated>2026-08-29T22:00:24Z</updated>
+    <link href="https://arxiv.org/abs/2605.13594v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.13594v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We assess the capability of recently developed foundational atomistic models (FAMs) to simulate iron alloys under the extreme pressures and temperatures of Earth's core. Static equations of state for hexagonal close-packed (hcp) and body-centered cubic (bcc) iron, computed using 17 FAMs, are benchmarked against ab initio calculations. Two representative models, MatterSim and MACE, are further evaluated for their ability to reproduce phonon spectra, liquid structure, and melting relations of iron at core conditions. While both models capture several key properties, MACE substantially overestimates the stability of bcc iron and fails to correctly describe the stability of hcp iron. Their performance is also examined for binary liquids, superionic phases, and a seven-component Fe-Ni-Si-S-O-H-C liquid. Although these FAMs were not explicitly trained on data from core conditions, they can reproduce several structural and dynamical properties across a wide range of compositions. However, none of the tested models consistently reproduces all first-principles benchmarks. By analyzing the origins of these discrepancies, we identify several limitations of current FAMs, particularly the lack of an explicit treatment of thermal electronic excitations, which significantly affect phase stability and thermodynamic properties under core conditions. We further discuss directions for improving FAMs to enable predictive simulations of core-forming materials under extreme conditions.</summary>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-13T14:30:14Z</published>
+    <arxiv:comment>Phys. Rev. Materials in press</arxiv:comment>
+    <arxiv:primary_category term="physics.geo-ph"/>
+    <author>
+      <name>Tianqi Wan</name>
+    </author>
+    <author>
+      <name>Liangrui Wei</name>
+    </author>
+    <author>
+      <name>Zepeng Wu</name>
+    </author>
+    <author>
+      <name>Renata M. Wentzcovitch</name>
+    </author>
+    <author>
+      <name>Yang Sun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.07927v2</id>
+    <title>MatterSim-MT: A multi-task foundation model for in silico materials characterization</title>
+    <updated>2026-05-28T21:59:19Z</updated>
+    <link href="https://arxiv.org/abs/2605.07927v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.07927v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate property characterization is a major bottleneck in materials design. While first-principles methods and task-specific machine-learning models have driven important progress, they remain fundamentally limited in scalability and generalizability across the vast space of structures and properties relevant to real-world materials design. We present MatterSim-MT, a multi-task foundation model for in silico materials simulation and property characterization. The model is pretrained on over 35 million first-principles-labeled structures covering 89 elements, temperatures up to 5000 K and pressures up to 1000 GPa, and is fine-tuned on various properties including Bader charges, magnetic moments, Born effective charges, and dielectric matrices. Out of the box, MatterSim-MT not only serves as a foundation model for predicting material structure, dynamics and thermodynamics, its multi-task architecture also enables a wide range of complex simulations that cannot be captured by potential energy surfaces alone. For example, we demonstrate pressure-dependent LO-TO phonon splitting in SiC with close agreement with experiment, electric hysteresis in ferroelectric BaTiO3, and the cationic-to-anionic redox transition during delithiation of a Li-rich cathode material. Finally, we show that MatterSim-MT scales well with more data and parameters, can be efficiently fine-tuned to higher levels of theory, and can be efficiently extended to new systems via active learning. Overall, we believe this approach provides a scalable route to accurate in silico materials characterization.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T16:01:20Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Han Yang</name>
+    </author>
+    <author>
+      <name>Xixian Liu</name>
+    </author>
+    <author>
+      <name>Chenxi Hu</name>
+    </author>
+    <author>
+      <name>Yichi Zhou</name>
+    </author>
+    <author>
+      <name>Yu Shi</name>
+    </author>
+    <author>
+      <name>Chang Liu</name>
+    </author>
+    <author>
+      <name>Junfu Tan</name>
+    </author>
+    <author>
+      <name>Jielan Li</name>
+    </author>
+    <author>
+      <name>Guanzhi Li</name>
+    </author>
+    <author>
+      <name>Qian Wang</name>
+    </author>
+    <author>
+      <name>Yu Zhu</name>
+    </author>
+    <author>
+      <name>Zekun Chen</name>
+    </author>
+    <author>
+      <name>Shuizhou Chen</name>
+    </author>
+    <author>
+      <name>Fabian Thiemann</name>
+    </author>
+    <author>
+      <name>Claudio Zeni</name>
+    </author>
+    <author>
+      <name>Matthew Horton</name>
+    </author>
+    <author>
+      <name>Robert Pinsler</name>
+    </author>
+    <author>
+      <name>Andrew Fowler</name>
+    </author>
+    <author>
+      <name>Daniel Zügner</name>
+    </author>
+    <author>
+      <name>Tian Xie</name>
+    </author>
+    <author>
+      <name>Lixin Sun</name>
+    </author>
+    <author>
+      <name>Yicheng Chen</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Yeqi Bai</name>
+    </author>
+    <author>
+      <name>Deniz Gunceler</name>
+    </author>
+    <author>
+      <name>Frank Noé</name>
+    </author>
+    <author>
+      <name>Hongxia Hao</name>
+    </author>
+    <author>
+      <name>Ziheng Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23728v2</id>
+    <title>kALDo 2.0: Scalable Thermal Transport from First Principles and Machine Learning Potentials</title>
+    <updated>2026-08-13T16:43:06Z</updated>
+    <link href="https://arxiv.org/abs/2602.23728v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23728v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce kALDo2.0, an open-source Python package for computing vibrational, elastic, and thermal transport properties of solids from first principles and machine-learned interatomic potentials. Building on the anharmonic lattice dynamics (ALD) framework, kALDo2.0 provides efficient CPU and GPU-accelerated implementations of the Boltzmann transport equation (BTE) for crystals and the quasi-harmonic Green-Kubo (QHGK) method. QHGK extends thermal transport predictions beyond crystals to disordered materials, including glasses, alloys, and complex nanostructures. kALDo2.0 introduces native integration with modern machine-learned potentials (MLPs), enabling thermal transport workflows that combine the accuracy of first-principles methods with the scalability of classical force fields. It also features comprehensive support for temperature-dependent effective potentials workflows, flexible storage backends for large-scale calculations, and advanced quantification of anharmonicity. The software seamlessly interfaces with electronic structure codes (Quantum ESPRESSO, VASP), molecular dynamics packages (LAMMPS), and MLPs (ACE, NEP, MACE, MatterSim, Orb), enabling thermal transport studies from 0 K to finite temperatures. kALDo2.0 implements multiple BTE solution strategies and essential physical corrections, including isotopic scattering and non-analytical terms for polar materials. A modular Python architecture with lazy evaluation and multiple storage formats (ASCII, NumPy, HDF5) enables simulations of systems containing up to tens of thousands of atoms. This paper describes the theoretical framework, implementation details, software architecture, and validation examples demonstrating kALDo2.0's capabilities for studying complex materials, including halide perovskites with strong anharmonicity and polar oxides requiring long-range electrostatic corrections.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-27T06:52:15Z</published>
+    <arxiv:comment>35 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Giuseppe Barbalinardo</name>
+    </author>
+    <author>
+      <name>Zekun Chen</name>
+    </author>
+    <author>
+      <name>Dylan Folkner</name>
+    </author>
+    <author>
+      <name>Bohan Li</name>
+    </author>
+    <author>
+      <name>Nicholas W. Lundgren</name>
+    </author>
+    <author>
+      <name>Nathaniel Troup</name>
+    </author>
+    <author>
+      <name>Alfredo Fiorentino</name>
+    </author>
+    <author>
+      <name>Davide Donadio</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23515v2</id>
+    <title>Performance of universal machine learning potentials in global optimization of inorganic crystal structures</title>
+    <updated>2026-07-13T18:05:37Z</updated>
+    <link href="https://arxiv.org/abs/2602.23515v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23515v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Rapid development of universal machine learning potentials (uMLPs) and expansion of training data sets are reshaping the state of the art in atomistic simulation, highlighting the need for concurrent systematic benchmarking of their capabilities. Global optimization is among the most demanding uMLP applications because unconstrained exploration includes probing motifs not present in reference sets. We examined twelve pretrained uMLPs in unconstrained evolutionary searches to assess whether these models can consistently predict complex nonmagnetic crystal structure ground states under ambient pressure across diverse inorganic systems. Our findings demonstrate that the considered M3GNet, MACE-MATPES, MACE-mh-1, SevenNet, EquiformerV2, EquiformerV3, MatterSim, GRACE, eSEN, Orb-v3, PET-MAD, and PET-OAM models span a wide performance range, from near {\it ab initio} to essentially non-predictive, in their ability to resolve competing phases within low-energy basins. Additional tests on hcp-Zn, MB$_4$ (M = Cr, Mn, and Fe), and LiB$_{y}$ ($y\approx 0.9$) ground states reveal that several uMLPs capture fine energy differences arising from subtle electronic structure features.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T21:39:33Z</published>
+    <arxiv:comment>16 pages, 3 tables, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Edan T. Marcial</name>
+    </author>
+    <author>
+      <name>Laxman Chaudhary</name>
+    </author>
+    <author>
+      <name>Olesya Gorbunova</name>
+    </author>
+    <author>
+      <name>Aleksey N. Kolmogorov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.24849v2</id>
+    <title>SSCHA-based evolutionary crystal structure prediction at finite temperatures with account for quantum nuclear motion</title>
+    <updated>2026-09-09T07:20:55Z</updated>
+    <link href="https://arxiv.org/abs/2512.24849v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.24849v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reliable crystal structure prediction (CSP) at finite temperatures, including quantum anharmonic effects, remains challenging but is particularly important for systems containing light atoms such as superconducting hydrides. Here, we integrate machine-learned interatomic potentials (MLIPs) with the stochastic self-consistent harmonic approximation (SSCHA) to enable evolutionary CSP on the quantum anharmonic free-energy landscape. Using LaH10 as a test case, we compare three approaches: (i) active-learning MLIPs (AL-MLIPs) trained on the fly, (ii) universal MLIPs (uMLIPs), and (iii) temperature-dependent effective potentials (TDEPs) trained on SSCHA ensemble data. AL-MLIPs correctly predict the cubic Fm-3m phase but require thermodynamic perturbation theory corrections for consistent results. The foundation uMLIP Mattersim-5m enables SSCHA-based CSP without per-structure training, but fine-tuning is required for higher accuracy. Temperature-dependent effective potentials trained on SSCHA data enable accurate and very efficient CSP for large unit cells on the quantum anharmonic free-energy landscape. We demonstrate that quantum anharmonicity simplifies the free-energy landscape and is essential for the correct energy ranking of LaH10 structures.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-31T13:17:49Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Daniil Poletaev</name>
+    </author>
+    <author>
+      <name>Artem R. Oganov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21227v3</id>
+    <title>PhononBench:A Large-Scale Phonon-Based Benchmark for Dynamical Stability in Crystal Generation</title>
+    <updated>2026-06-11T04:08:12Z</updated>
+    <link href="https://arxiv.org/abs/2512.21227v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21227v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In recent years, generative artificial intelligence has made significant advances in the design of crystalline materials, giving rise to approaches based on graph neural networks, diffusion models, and large language models. Existing evaluations commonly follow the stability-uniqueness-novelty (S.U.N.) framework, where stability is primarily assessed using thermodynamic criteria, which do not fully capture the dynamical stability essential for a material's practical existence. Dynamical stability is a key determinant of whether a material can be synthesized and persist, with phonon spectrum calculations serving as the standard for its evaluation. However, the high computational cost of such calculations has prevented large-scale assessment of dynamical stability in generated crystals. In this work, we introduce PhononBench, the first large-scale benchmark for dynamical stability in AI-generated crystals. Leveraging the recently developed MatterSim interatomic potential, which achieves density-functional-theory (DFT)-level accuracy in phonon predictions across more than 10,000 materials, PhononBench enables efficient phonon calculations and dynamical-stability analysis for 133,838 crystal structures generated by 7 leading crystal generation models. PhononBench reveals a widespread limitation of current generative models: unless otherwise specified, all reported dynamical-stability metrics are evaluated at a phonon-frequency threshold of -0.1 THz, with the average dynamical-stability rate across all generated structures being only 32.15%, and the top-performing model, MatterGen, reaching just 45.05%.In addition, we identify 32,995 crystal structures that are phonon-stable across the entire Brillouin zone under a strict threshold of -0.001 THz. In addition, a web-based service is accessible at http://phononbench.cn/, enabling minute-level ultra-fast phonon predictions.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T15:07:36Z</published>
+    <arxiv:comment>53 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Xiao-Qi Han</name>
+    </author>
+    <author>
+      <name>Ze-Feng Gao</name>
+    </author>
+    <author>
+      <name>Wen-Kao Li</name>
+    </author>
+    <author>
+      <name>Peng-Jie Guo</name>
+    </author>
+    <author>
+      <name>Zhong-Yi Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.20230v2</id>
+    <title>Benchmarking Universal Machine Learning Interatomic Potentials on Elemental Systems</title>
+    <updated>2025-12-29T11:01:15Z</updated>
+    <link href="https://arxiv.org/abs/2512.20230v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.20230v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid emergence of universal Machine Learning Interatomic Potentials (uMLIPs) has transformed materials modeling. However, a comprehensive understanding of their generalization behavior across configurational space remains an open challenge. In this work, we introduce a benchmarking framework to evaluate both the equilibrium and far-from-equilibrium performance of state-of-the-art uMLIPs, including three MACE-based models, MatterSim, and PET-MAD. Our assessment utilizes Equation-of-State (EOS) tests to evaluate near-equilibrium properties, such as bulk moduli and equilibrium volumes, alongside extensive Minima Hopping (MH) structural searches to probe the global Potential Energy Surface (PES). Here, we assess universality within the fundamental limit of unary (elemental) systems, which serve as a necessary baseline for broader chemical generalization and provide a framework that can be systematically extended to multicomponent materials. We find that while most models exhibit high accuracy in reproducing equilibrium volumes for transition metals, significant performance gaps emerge in alkali and alkaline earth metal groups. Crucially, our MH results reveal a decoupling between search efficiency and structural fidelity, highlighting that smoother learned PESs do not necessarily yield more accurate energetic landscapes.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-23T10:41:11Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hossein Tahmasbi</name>
+    </author>
+    <author>
+      <name>Andreas Knüpfer</name>
+    </author>
+    <author>
+      <name>Thomas D. Kühne</name>
+    </author>
+    <author>
+      <name>Hossein Mirhosseini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05221v2</id>
+    <title>Benchmarking Universal Machine Learning Interatomic Potentials for Supported Nanoparticles: Decoupling Energy Accuracy from Structural Exploration</title>
+    <updated>2026-03-25T16:20:48Z</updated>
+    <link href="https://arxiv.org/abs/2512.05221v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05221v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Supported nanoparticle catalysts are widely used in the chemical industry. Computational modeling of supported nanoparticles based on density functional theory (DFT) often involves structural searches of stable local minimum energy configurations and molecular dynamics simulations at finite temperature. These are computationally demanding tasks that are intractable within DFT for large systems. In the last two decades, machine learning interatomic potentials (MLIPs) have been successfully used to substantially increase the size and time scales accessible to simulations approximating DFT accuracy. However, training reliable MLIPs is non-trivial as it requires many costly DFT calculations. Recently, several universal MLIPs (uMLIPs) have been developed, which are trained on large datasets that cover a wide range of molecules and materials. Here, we benchmark the accuracy and the efficiency of these uMLIPs in describing Cu nanoparticles supported on Al$_2$O$_3$ surfaces against our domain-specific DP-UniAlCu model. We find that the MACE-OMAT can reproduce reasonably well the low-energy structures found in global optimization at an energy accuracy comparable to DP-UniAlCu. Interestingly, the MatterSim-v1.0.0-1M model, which exhibits larger deviations in the binding energies, can find even more stable configurations than the other two models in some supported nanoparticle sizes, showing its capability in structure exploration. For MD simulations, MACE-OMAT and MatterSim-v1.0.0-1M can qualitatively reproduce the mean-squared displacements of Cu atoms (MSD$_\mathrm{Cu}$) predicted by DP-UniAlCu, albeit at roughly two orders of magnitude higher cost. We demonstrate that the uMLIPs can be very useful in simulating supported nanoparticles even without any fine-tuning, though their reduced efficiency remains a limiting factor for large-scale simulations.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-04T19:43:18Z</published>
+    <arxiv:comment>32 pages, 5 figures, 3 tables; fix table 1, figure 2, and figure 3; add table 3</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jiayan Xu</name>
+    </author>
+    <author>
+      <name>Abhirup Patra</name>
+    </author>
+    <author>
+      <name>Amar Deep Pathak</name>
+    </author>
+    <author>
+      <name>Sharan Shetty</name>
+    </author>
+    <author>
+      <name>Detlef Hohl</name>
+    </author>
+    <author>
+      <name>Roberto Car</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.05337v1</id>
+    <title>Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy</title>
+    <updated>2025-11-07T15:33:45Z</updated>
+    <link href="https://arxiv.org/abs/2511.05337v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.05337v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work demonstrates that fine-tuning transforms foundational machine-learned interatomic potentials (MLIPs) to achieve consistent, near-ab initio accuracy across diverse architectures. Benchmarking five leading MLIP frameworks (MACE, GRACE, SevenNet, MatterSim, and ORB) across seven chemically diverse compounds reveals that fine-tuning universally enhances force predictions by factors of 5-15 and improves energy accuracy by 2-4 orders of magnitude. The investigated models span both equivariant and invariant, as well as conservative and non-conservative, architectures. While general-purpose foundation models are robust, they exhibit architecture-dependent deviations from ab initio reference data; fine-tuning eliminates these discrepancies, enabling quantitatively accurate predictions of atomistic and structural properties. Using datasets constructed from equidistantly sampled frames of short ab initio molecular dynamics trajectories, fine-tuning reduces force errors by an order of magnitude and harmonizes performance across all architectures. These findings establish fine-tuning as a universal route to achieving system-specific predictive accuracy while preserving the computational efficiency of MLIPs. To promote widespread adoption, we introduce the aMACEing Toolkit, which provides a unified and reproducible interface for fine-tuning workflows across multiple MLIP frameworks.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-07T15:33:45Z</published>
+    <arxiv:comment>main article and supporting information</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Jonas Hänseroth</name>
+    </author>
+    <author>
+      <name>Aaron Flötotto</name>
+    </author>
+    <author>
+      <name>Muhammad Nawaz Qaisrani</name>
+    </author>
+    <author>
+      <name>Christian Dreßler</name>
+    </author>
+    <arxiv:doi>10.1021/acs.jpclett.5c03801</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.jpclett.5c03801" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.22999v3</id>
+    <title>Benchmarking Universal Machine Learning Interatomic Potentials for Elastic Property Prediction</title>
+    <updated>2026-03-05T09:47:36Z</updated>
+    <link href="https://arxiv.org/abs/2510.22999v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.22999v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Universal machine learning interatomic potentials have emerged as efficient tools for materials simulation, yet their reliability for elastic property prediction remains unclear. Here, we present a systematic benchmark of four uMLIPs -- MatterSim, MACE, SevenNet, and CHGNet -- against first-principles data for nearly 11\,000 elastically stable materials from the Materials Project database. The results show that SevenNet achieves the highest accuracy, MACE and MatterSim balance accuracy with efficiency, while CHGNet performs less effectively overall. To further improve predictive quality, we perform targeted fine-tuning on all four uMLIPs using strained configurations derived from 185 high-error materials. After fine-tuning, CHGNet shows the most substantial improvement in overall accuracy, with MatterSim and SevenNet also benefiting from the fine-tuning, whereas MACE shows limited robustness to this procedure. This work provides quantitative guidance for model selection and data refinement, advancing uMLIPs toward reliable applications in mechanical property prediction.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-27T04:36:07Z</published>
+    <arxiv:comment>14 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Pengfei Gao</name>
+    </author>
+    <author>
+      <name>Haidi Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.10293v1</id>
+    <title>OpenCSP: A Deep Learning Framework for Crystal Structure Prediction from Ambient to High Pressure</title>
+    <updated>2025-09-12T14:35:42Z</updated>
+    <link href="https://arxiv.org/abs/2509.10293v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.10293v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-pressure crystal structure prediction (CSP) underpins advances in condensed matter physics, planetary science, and materials discovery. Yet, most large atomistic models are trained on near-ambient, equilibrium data, leading to degraded stress accuracy at tens to hundreds of gigapascals and sparse coverage of pressure-stabilized stoichiometries and dense coordination motifs. Here, we introduce OpenCSP, a machine learning framework for CSP tasks spanning ambient to high-pressure conditions. This framework comprises an open-source pressure-resolved dataset alongside a suite of publicly available atomistic models that are jointly optimized for accuracy in energy, force, and stress predictions. The dataset is constructed via randomized high-pressure sampling and iteratively refined through an uncertainty-guided concurrent learning strategy, which enriches underrepresented compression regimes while suppressing redundant DFT labeling. Despite employing a training corpus one to two orders of magnitude smaller than those of leading large models, OpenCSP achieves comparable or superior performance in high-pressure enthalpy ranking and stability prediction. Across benchmark CSP tasks spanning a wide pressure window, our models match or surpass MACE-MPA-0, MatterSim v1 5M, and GRACE-2L-OAM, with the largest gains observed at elevated pressures. These results demonstrate that targeted, pressure-aware data acquisition coupled with scalable architectures enables data-efficient, high-fidelity CSP, paving the way for autonomous materials discovery under ambient and extreme conditions.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-12T14:35:42Z</published>
+    <arxiv:comment>15 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yinan Wang</name>
+    </author>
+    <author>
+      <name>Xiaoyang Wang</name>
+    </author>
+    <author>
+      <name>Zhenyu Wang</name>
+    </author>
+    <author>
+      <name>Jing Wu</name>
+    </author>
+    <author>
+      <name>Jian Lv</name>
+    </author>
+    <author>
+      <name>Han Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07417v1</id>
+    <title>Benchmarking Universal Interatomic Potentials on Zeolite Structures</title>
+    <updated>2025-09-09T06:04:40Z</updated>
+    <link href="https://arxiv.org/abs/2509.07417v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.07417v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Interatomic potentials (IPs) with wide elemental coverage and high accuracy are powerful tools for high-throughput materials discovery. While the past few years witnessed the development of multiple new universal IPs that cover wide ranges of the periodic table, their applicability to target chemical systems should be carefully investigated. We benchmark several universal IPs using equilibrium zeolite structures as testbeds. We select a diverse set of universal IPs encompassing two major categories: (i) universal analytic IPs, including GFN-FF, UFF, and Dreiding; (ii) pretrained universal machine learning IPs (MLIPs), comprising CHGNet, ORB-v3, MatterSim, eSEN-30M-OAM, PFP-v7, and EquiformerV2-lE4-lF100-S2EFS-OC22. We compare them with established tailor-made IPs, SLC, ClayFF, and BSFF using experimental data and density functional theory (DFT) calculations with dispersion correction as the reference. The tested zeolite structures comprise pure silica frameworks and aluminosilicates containing copper species, potassium, and organic cations. We found that GFN-FF is the best among the tested universal analytic IPs, but it does not achieve satisfactory accuracy for highly strained silica rings and aluminosilicate systems. All MLIPs can well reproduce experimental or DFT-level geometries and energetics. Among the universal MLIPs, the eSEN-30M-OAM model shows the most consistent performance across all zeolite structures studied. These findings show that the modern pretrained universal MLIPs are practical tools in zeolite screening workflows involving various compositions.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-09T06:04:40Z</published>
+    <arxiv:comment>26 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Shusuke Ito</name>
+    </author>
+    <author>
+      <name>Koki Muraoka</name>
+    </author>
+    <author>
+      <name>Akira Nakayama</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.03401v1</id>
+    <title>A Comprehensive Assessment and Benchmark Study of Large Atomistic Foundation Models for Phonons</title>
+    <updated>2025-09-03T15:24:45Z</updated>
+    <link href="https://arxiv.org/abs/2509.03401v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.03401v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid development of universal machine learning potentials (uMLPs) has enabled efficient, accurate predictions of diverse material properties across broad chemical spaces. While their capability for modeling phonon properties is emerging, systematic benchmarking across chemically diverse systems remains limited. We evaluate six recent uMLPs (EquiformerV2, MatterSim, MACE, and CHGNet) on 2,429 crystalline materials from the Open Quantum Materials Database. Models were used to compute atomic forces in displaced supercells, derive interatomic force constants (IFCs), and predict phonon properties including lattice thermal conductivity (LTC), compared with density functional theory (DFT) and experimental data. The EquiformerV2 pretrained model trained on the OMat24 dataset exhibits strong performance in predicting atomic forces and third-order IFC, while its fine-tuned counterpart consistently outperforms other models in predicting second-order IFC, LTC, and other phonon properties. Although MACE and CHGNet demonstrated comparable force prediction accuracy to EquiformerV2, notable discrepancies in IFC fitting led to poor LTC predictions. Conversely, MatterSim, despite lower force accuracy, achieved intermediate IFC predictions, suggesting error cancellation and complex relationships between force accuracy and phonon predictions. This benchmark guides the evaluation and selection of uMLPs for high-throughput screening of materials with targeted thermal transport properties.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-03T15:24:45Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Advanced Intelligent Discovery 2025, 0, e202500075</arxiv:journal_ref>
+    <author>
+      <name>Md Zaibul Anam</name>
+    </author>
+    <author>
+      <name>Ogheneyoma Aghoghovbia</name>
+    </author>
+    <author>
+      <name>Mohammed Al-Fahdi</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Victor Fung</name>
+    </author>
+    <author>
+      <name>Ming Hu</name>
+    </author>
+    <arxiv:doi>10.1002/aidi.202500075</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/aidi.202500075" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.14245v1</id>
+    <title>Path-integral molecular dynamics with actively-trained and universal machine learning force fields</title>
+    <updated>2025-05-20T11:55:22Z</updated>
+    <link href="https://arxiv.org/abs/2505.14245v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.14245v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accounting for nuclear quantum effects (NQEs) can significantly alter material properties at finite temperatures. Atomic modeling using the path-integral molecular dynamics (PIMD) method can fully account for such effects, but requires computationally efficient and accurate models of interatomic interactions. Empirical potentials are fast but may lack sufficient accuracy, whereas quantum-mechanical calculations are highly accurate but computationally expensive. Machine-learned interatomic potentials offer a solution to this challenge, providing near-quantum-mechanical accuracy while maintaining high computational efficiency compared to density functional theory (DFT) calculations. In this context, an interface was developed to integrate moment tensor potentials (MTPs) from the MLIP-2 software package into PIMD calculations using the i-PI software package. This interface was then applied to active learning of potentials and to investigate the influence of NQEs on material properties, namely the temperature dependence of lattice parameters and thermal expansion coefficients, as well as radial distribution functions, for lithium hydride (LiH) and silicon (Si) systems. The results were compared with experimental data, quasi-harmonic approximation calculations, and predictions from the universal machine learning force field MatterSim. These comparisons demonstrated the high accuracy and effectiveness of the MTP-PIMD approach.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-20T11:55:22Z</published>
+    <arxiv:comment>9 pages, 6 eps figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>A. A. Solovykh</name>
+      <arxiv:affiliation>Lomonosov Moscow State University, Faculty of Physics, Moscow, Russian Federation</arxiv:affiliation>
+      <arxiv:affiliation>Skobeltsyn Institute of Nuclear Physics, Lomonosov Moscow State University, Moscow, Russian Federation</arxiv:affiliation>
+      <arxiv:affiliation>Skolkovo Institute of Science and Technology, Moscow, Russian Federation</arxiv:affiliation>
+    </author>
+    <author>
+      <name>N. E. Rybin</name>
+      <arxiv:affiliation>Skolkovo Institute of Science and Technology, Moscow, Russian Federation</arxiv:affiliation>
+      <arxiv:affiliation>Digital Materials LLC, Odintsovo, Russian Federation</arxiv:affiliation>
+    </author>
+    <author>
+      <name>I. S. Novikov</name>
+      <arxiv:affiliation>Skolkovo Institute of Science and Technology, Moscow, Russian Federation</arxiv:affiliation>
+      <arxiv:affiliation>HSE University, Faculty of Computer Science, Moscow, Russian Federation</arxiv:affiliation>
+      <arxiv:affiliation>Moscow Institute of Physics and Technology, Moscow, Russian Federation</arxiv:affiliation>
+      <arxiv:affiliation>Emanuel Institute of Biochemical Physics of the Russian Academy of Sciences, Moscow, Russian Federation</arxiv:affiliation>
+    </author>
+    <author>
+      <name>A. V. Shapeev</name>
+      <arxiv:affiliation>Skolkovo Institute of Science and Technology, Moscow, Russian Federation</arxiv:affiliation>
+      <arxiv:affiliation>Digital Materials LLC, Odintsovo, Russian Federation</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.10655v1</id>
+    <title>MatterTune: An Integrated, User-Friendly Platform for Fine-Tuning Atomistic Foundation Models to Accelerate Materials Simulation and Discovery</title>
+    <updated>2025-04-14T19:12:43Z</updated>
+    <link href="https://arxiv.org/abs/2504.10655v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.10655v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Geometric machine learning models such as graph neural networks have achieved remarkable success in recent years in chemical and materials science research for applications such as high-throughput virtual screening and atomistic simulations. The success of these models can be attributed to their ability to effectively learn latent representations of atomic structures directly from the training data. Conversely, this also results in high data requirements for these models, hindering their application to problems which are data sparse which are common in this domain. To address this limitation, there is a growing development in the area of pre-trained machine learning models which have learned general, fundamental, geometric relationships in atomistic data, and which can then be fine-tuned to much smaller application-specific datasets. In particular, models which are pre-trained on diverse, large-scale atomistic datasets have shown impressive generalizability and flexibility to downstream applications, and are increasingly referred to as atomistic foundation models. To leverage the untapped potential of these foundation models, we introduce MatterTune, a modular and extensible framework that provides advanced fine-tuning capabilities and seamless integration of atomistic foundation models into downstream materials informatics and simulation workflows, thereby lowering the barriers to adoption and facilitating diverse applications in materials science. In its current state, MatterTune supports a number of state-of-the-art foundation models such as ORB, MatterSim, JMP, and EquformerV2, and hosts a wide range of features including a modular and flexible design, distributed and customizable fine-tuning, broad support for downstream informatics tasks, and more.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-14T19:12:43Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Nima Shoghi</name>
+    </author>
+    <author>
+      <name>Guoxiang Hu</name>
+    </author>
+    <author>
+      <name>Pan Li</name>
+    </author>
+    <author>
+      <name>Victor Fung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.09970v1</id>
+    <title>Universal Machine Learning Interatomic Potentials are Ready for Solid Ion Conductors</title>
+    <updated>2025-02-14T07:55:53Z</updated>
+    <link href="https://arxiv.org/abs/2502.09970v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.09970v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With the rapid development of energy storage technology, high-performance solid-state electrolytes (SSEs) have become critical for next-generation lithium-ion batteries. These materials require high ionic conductivity, excellent electrochemical stability, and good mechanical properties to meet the demands of electric vehicles and portable electronics. However, traditional methods like density functional theory (DFT) and empirical force fields face challenges such as high computational costs, poor scalability, and limited accuracy across material systems. Universal machine learning interatomic potentials (uMLIPs) offer a promising solution with their efficiency and near-DFT-level accuracy.This study systematically evaluates six advanced uMLIP models (MatterSim, MACE, SevenNet, CHGNet, M3GNet, and ORBFF) in terms of energy, forces, thermodynamic properties, elastic moduli, and lithium-ion diffusion behavior. The results show that MatterSim outperforms others in nearly all metrics, particularly in complex material systems, demonstrating superior accuracy and physical consistency. Other models exhibit significant deviations due to issues like energy inconsistency or insufficient training data coverage.Further analysis reveals that MatterSim achieves excellent agreement with reference values in lithium-ion diffusivity calculations, especially at room temperature. Studies on Li3YCl6 and Li6PS5Cl uncover how crystal structure, anion disorder levels, and Na/Li arrangements influence ionic conductivity. Appropriate S/Cl disorder levels and optimized Na/Li arrangements enhance diffusion pathway connectivity, improving overall ionic transport performance.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-14T07:55:53Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hongwei Du</name>
+    </author>
+    <author>
+      <name>Jian Hui</name>
+    </author>
+    <author>
+      <name>Lanting Zhang</name>
+    </author>
+    <author>
+      <name>Hong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.10516v4</id>
+    <title>CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties</title>
+    <updated>2025-03-19T03:10:46Z</updated>
+    <link href="https://arxiv.org/abs/2412.10516v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.10516v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we introduce CHIPS-FF (Computational High-Performance Infrastructure for Predictive Simulation-based Force Fields), a universal, open-source benchmarking platform for machine learning force fields (MLFFs). This platform provides robust evaluation beyond conventional metrics such as energy, focusing on complex properties including elastic constants, phonon spectra, defect formation energies, surface energies, and interfacial and amorphous phase properties. Utilizing 16 graph-based MLFF models including ALIGNN-FF, CHGNet, MatGL, MACE, SevenNet, ORB, MatterSim and OMat24, the CHIPS-FF workflow integrates the Atomic Simulation Environment (ASE) with JARVIS-Tools to facilitate automated high-throughput simulations. Our framework is tested on a set of 104 materials, including metals, semiconductors and insulators representative of those used in semiconductor components, with each MLFF evaluated for convergence, accuracy, and computational cost. Additionally, we evaluate the force-prediction accuracy of these models for close to 2 million atomic structures. By offering a streamlined, flexible benchmarking infrastructure, CHIPS-FF aims to guide the development and deployment of MLFFs for real-world semiconductor applications, bridging the gap between quantum mechanical simulations and large-scale device modeling.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-13T19:22:31Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Daniel Wines</name>
+    </author>
+    <author>
+      <name>Kamal Choudhary</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.04967v2</id>
+    <title>MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures</title>
+    <updated>2024-05-10T16:49:52Z</updated>
+    <link href="https://arxiv.org/abs/2405.04967v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.04967v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate and fast prediction of materials properties is central to the digital transformation of materials design. However, the vast design space and diverse operating conditions pose significant challenges for accurately modeling arbitrary material candidates and forecasting their properties. We present MatterSim, a deep learning model actively learned from large-scale first-principles computations, for efficient atomistic simulations at first-principles level and accurate prediction of broad material properties across the periodic table, spanning temperatures from 0 to 5000 K and pressures up to 1000 GPa. Out-of-the-box, the model serves as a machine learning force field, and shows remarkable capabilities not only in predicting ground-state material structures and energetics, but also in simulating their behavior under realistic temperatures and pressures, signifying an up to ten-fold enhancement in precision compared to the prior best-in-class. This enables MatterSim to compute materials' lattice dynamics, mechanical and thermodynamic properties, and beyond, to an accuracy comparable with first-principles methods. Specifically, MatterSim predicts Gibbs free energies for a wide range of inorganic solids with near-first-principles accuracy and achieves a 15 meV/atom resolution for temperatures up to 1000K compared with experiments. This opens an opportunity to predict experimental phase diagrams of materials at minimal computational cost. Moreover, MatterSim also serves as a platform for continuous learning and customization by integrating domain-specific data. The model can be fine-tuned for atomistic simulations at a desired level of theory or for direct structure-to-property predictions, achieving high data efficiency with a reduction in data requirements by up to 97%.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-08T11:13:30Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Han Yang</name>
+    </author>
+    <author>
+      <name>Chenxi Hu</name>
+    </author>
+    <author>
+      <name>Yichi Zhou</name>
+    </author>
+    <author>
+      <name>Xixian Liu</name>
+    </author>
+    <author>
+      <name>Yu Shi</name>
+    </author>
+    <author>
+      <name>Jielan Li</name>
+    </author>
+    <author>
+      <name>Guanzhi Li</name>
+    </author>
+    <author>
+      <name>Zekun Chen</name>
+    </author>
+    <author>
+      <name>Shuizhou Chen</name>
+    </author>
+    <author>
+      <name>Claudio Zeni</name>
+    </author>
+    <author>
+      <name>Matthew Horton</name>
+    </author>
+    <author>
+      <name>Robert Pinsler</name>
+    </author>
+    <author>
+      <name>Andrew Fowler</name>
+    </author>
+    <author>
+      <name>Daniel Zügner</name>
+    </author>
+    <author>
+      <name>Tian Xie</name>
+    </author>
+    <author>
+      <name>Jake Smith</name>
+    </author>
+    <author>
+      <name>Lixin Sun</name>
+    </author>
+    <author>
+      <name>Qian Wang</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Chang Liu</name>
+    </author>
+    <author>
+      <name>Hongxia Hao</name>
+    </author>
+    <author>
+      <name>Ziheng Lu</name>
+    </author>
+  </entry>
+</feed>

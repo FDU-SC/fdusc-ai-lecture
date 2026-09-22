@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+        <title>The PASCAL Visual Object Classes Challenge 2007 (VOC2007)</title>
+		<link rel="stylesheet" href="main.css"/>
+			<meta name="keyword" content="PASCAL, voc2007, 2007, visual, object, classes, challenge, recognition"/>
+</head>
+
+<body>
+    <center>
+		<TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+			<TR>
+				<TD ALIGN="center" width="70"><a href="examples/aeroplane_03.jpg"><img alt="aeroplane" src="examples/aeroplane_03_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/bicycle_08.jpg"><img alt="bicycle" src="examples/bicycle_08_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/bird_07.jpg"><img alt="bird" src="examples/bird_07_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/boat_02.jpg"><img alt="boat" src="examples/boat_02_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/bottle_05.jpg"><img alt="bottle" src="examples/bottle_05_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/bus_01.jpg"><img alt="bus" src="examples/bus_01_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/car_01.jpg"><img alt="car" src="examples/car_01_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/cat_02.jpg"><img alt="cat" src="examples/cat_02_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/chair_02.jpg"><img alt="chair" src="examples/chair_02_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/cow_02.jpg"><img alt="cow" src="examples/cow_02_thumb.jpg" width="70"></a></TD>
+			</TR>
+		</TABLE>
+        <h1>The PASCAL Visual Object Classes Challenge&nbsp;2007</h1>
+		<TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+			<TR>
+				<TD ALIGN="center" width="70"><a href="examples/diningtable_05.jpg"><img alt="dining table" src="examples/diningtable_05_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/dog_08.jpg"><img alt="dog" src="examples/dog_08_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/horse_07.jpg"><img alt="horse" src="examples/horse_07_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/motorbike_04.jpg"><img alt="motorbike" src="examples/motorbike_04_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/person_06.jpg"><img alt="person" src="examples/person_06_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/pottedplant_03.jpg"><img alt="potted plant" src="examples/pottedplant_03_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/sheep_07.jpg"><img alt="sheep" src="examples/sheep_07_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/sofa_03.jpg"><img alt="sofa" src="examples/sofa_03_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/train_05.jpg"><img alt="train" src="examples/train_05_thumb.jpg" width="70"></a></TD>
+				<TD ALIGN="center" width="70"><a href="examples/tvmonitor_01.jpg"><img alt="tv/monitor" src="examples/tvmonitor_01_thumb.jpg" width="70"></a></TD>
+			</TR>
+			<tr>
+				<td align="center" colspan="10">
+					<font size="-2">[click on an image to see the annotation]</font>
+				</td>
+			</tr>
+		</TABLE>
+    </center>
+
+    <p>&nbsp;</p>
+
+<h1> For news and updates, see the 
+<a href="../index.html">
+PASCAL Visual Object Classes Homepage </a> </h1> 
+
+    <h2>News</h2>
+    <ul>
+		<li>
+            <font color="red" size="+1">
+                26-Mar-08: Preliminary details of the <a href="http://www.pascal-network.org/challenges/VOC/voc2008/">VOC2008 challenge</a> are now available.
+            </font>
+		</li>                
+		<li>
+            21-Jan-08: Detailed <a href="results/index.shtml">results</a> of all submitted methods are now online.
+            For summarized results and information about some of the best-performing methods, please see
+            the <a href="workshop/index.html">workshop</a> presentations.
+		</li>            
+		<li>
+            08-Nov-07: All presentations from the <a href="workshop/index.html">workshop</a> are now online.
+		</li>            
+		<li>
+            06-Nov-07: The <a href="#testdata">annotated test data</a> is now available to download. If you
+            use the VOC2007 data in a publication, please include the <a href="#citation">appropriate citation</a>.
+		</li>            
+		<li>
+            23-Oct-07: Some slides from the <a href="workshop/index.html">workshop</a> are now online. We hope to include
+            all presentations over the next few days.
+		</li>            
+        <li>
+            09-Sep-07: The deadline for submission of results has been extended by one week to
+            Monday 24 September 2007, 11pm GMT.
+        </li>
+        <li>
+            11-Jun-07: <a href="#testdata">Test data</a> is now available.
+        </li>
+        <li>
+            11-Jun-07: <a href="#devkit">Updated development kit</a> is now available.
+        </li>
+        <li>
+            11-Jun-07: <a href="#submission">Instructions for submission of results</a> are now available.
+        </li>
+        <li>
+			07-Apr-07: Development kit code and training data are now available.
+        </li>
+    </ul>
+
+
+    <h2>Introduction</h2>
+    <p>
+        The goal of this challenge is to recognize objects from a number of
+        visual object classes in realistic scenes (i.e. not pre-segmented
+        objects). It is fundamentally a supervised learning learning problem
+        in that a training set of labelled images is provided. The twenty object
+        classes that have been selected are:
+    </p>
+    <ul>
+        <li><i>Person:</i> person</li>
+        <li><i>Animal:</i> bird, cat, cow, dog, horse, sheep</li>
+        <li><i>Vehicle:</i> aeroplane, bicycle, boat, bus, car, motorbike, train</li>
+        <li><i>Indoor:</i> bottle, chair, dining table, potted plant, sofa,
+        tv/monitor</li>
+    </ul>
+
+    <p>
+        There will be two main competitions, and two smaller scale "taster" competitions.
+    </p>
+
+    <h3>Main Competitions</h3>
+
+    <ol>
+        <li>
+			<b>Classification</b>: For each of the twenty classes, predicting presence/absence of an example of that class in the test image.
+		</li> 
+        <li>
+			<b>Detection</b>: Predicting the bounding box and label of
+			each object from the twenty target classes in the test image.
+			<table ID="Table1">
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td width="50"></td>
+					<td align="center" colspan="10">20 classes</td>
+				</tr>
+				<TR>
+					<td width="50"></td>
+					<TD width="60"><a href="examples/aeroplane_03.jpg"><img alt="aeroplane" src="examples/aeroplane_03_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/bicycle_08.jpg"><img alt="bicycle" src="examples/bicycle_08_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/bird_07.jpg"><img alt="bird" src="examples/bird_07_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/boat_02.jpg"><img alt="boat" src="examples/boat_02_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/bottle_05.jpg"><img alt="bottle" src="examples/bottle_05_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/bus_01.jpg"><img alt="bus" src="examples/bus_01_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/car_01.jpg"><img alt="car" src="examples/car_01_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/cat_02.jpg"><img alt="cat" src="examples/cat_02_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/chair_02.jpg"><img alt="chair" src="examples/chair_02_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/cow_02.jpg"><img alt="cow" src="examples/cow_02_thumb.jpg" width="60"></a></TD>
+				</TR>
+				<TR>
+					<td width="50"></td>
+					<TD width="60"><a href="examples/diningtable_05.jpg"><img alt="dining table" src="examples/diningtable_05_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/dog_08.jpg"><img alt="dog" src="examples/dog_08_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/horse_07.jpg"><img alt="horse" src="examples/horse_07_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/motorbike_04.jpg"><img alt="motorbike" src="examples/motorbike_04_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/person_06.jpg"><img alt="person" src="examples/person_06_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/pottedplant_03.jpg"><img alt="potted plant" src="examples/pottedplant_03_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/sheep_07.jpg"><img alt="sheep" src="examples/sheep_07_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/sofa_03.jpg"><img alt="sofa" src="examples/sofa_03_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/train_05.jpg"><img alt="train" src="examples/train_05_thumb.jpg" width="60"></a></TD>
+					<TD width="60"><a href="examples/tvmonitor_01.jpg"><img alt="tv/monitor" src="examples/tvmonitor_01_thumb.jpg" width="60"></a></TD>
+				</TR>
+				<tr><td>&nbsp;</td></tr>
+			</table>
+		 </li> 			
+    </ol>
+
+    <p>
+        Participants may enter either (or both) of these competitions, and can
+        choose to tackle any (or all) of the twenty object classes. The
+        challenge allows for two approaches to each of the competitions:
+    </p>
+
+    <ol>
+        <li> Participants may use systems built or trained using any methods or
+           data excluding the provided test sets.   </li>
+        <li> Systems are to be built
+           or trained using only the provided training/validation data.
+        </li>
+    </ol>
+
+    <p>
+        The intention in the first case is to establish just what level of
+        success can currently be achieved on these problems and by what
+        method; in the second case the intention is to establish which method
+        is most successful given a specified training set.
+    </p>
+
+    <h3>Taster Competitions</h3>
+
+    <ol>
+        <li>
+			<b>Segmentation</b>: Generating pixel-wise segmentations giving the class of
+			the object visible at each pixel, or "background" otherwise.
+			<table>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td width="50"></td>
+					<td align="center">Image</td>
+					<td align="center">Objects</td>
+					<td align="center">Class</td>
+				</tr>
+				<tr>
+					<td width="50"></td>
+					<td>
+						<a href="segexamples/index.html"><img src="segexamples/images/006585.jpg" width="200"></a>
+					</td>
+					<td>
+						<a href="segexamples/index.html"><img src="segexamples/images/006585_object.png" width="200"></a>
+					</td>
+					<td>
+						<a href="segexamples/index.html"><img src="segexamples/images/006585_class.png" width="200"></a>
+					</td>
+					<tr><td>&nbsp;</td></tr>
+				</tr>				
+			</table>
+        </li>
+        <li>
+			<b>Person Layout</b>:  Predicting the bounding box and label of each part of a person (head, hands, feet).
+			<table>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td width="50"></td>
+					<td align="center">Image</td>
+					<td align="center">Person Layout</td>
+				</tr>
+				<tr>
+					<td width="50"></td>
+					<td>
+						<a href="layoutexamples/index.html"><img src="layoutexamples/images/08.jpg" width="300"></a>
+					</td>
+					<td>
+						<a href="layoutexamples/index.html"><img src="layoutexamples/images/08_parts.jpg" width="300"></a>
+					</td>
+					<tr><td>&nbsp;</td></tr>
+				</tr>				
+			</table>
+        </li> 
+    </ol>
+    <p>
+        Participants may enter either (or both) of these competitions.
+    </p>
+    <p>
+        The VOC2007 challenge has been organized following the 
+        successful 
+        <a href="http://www.pascal-network.org/challenges/VOC/voc2006/index.html">
+        VOC2006</a> and
+        <a href="http://www.pascal-network.org/challenges/VOC/voc2005/index.html">
+        VOC2005</a> challenges. Compared to VOC2006 we have increased the 
+        number of classes from 10 to 20, and added the taster challenges.
+        These tasters have been introduced to sample the interest in 
+        segmentation and layout.
+    </p>
+
+
+    <h2>Data</h2>
+    <p>
+        The training data provided consists of a set of images; each image has
+        an annotation file giving a bounding box and object class label for
+        each object in one of the twenty classes present in the image. Note that
+        multiple objects from multiple classes may be present in the same
+        image. Some <a href="examples/index.html">example images</a> can be viewed online.
+    </p>
+	<p>
+	    Annotation was performed according to a set of guidelines distributed to
+	    all annotators. These guidelines can be viewed <a href="guidelines.html">here</a>.
+	</p>
+    <p>
+        The data will be made available in two stages; in the first stage, a
+        development kit will be released consisting of training and validation
+        data, plus evaluation software (written in MATLAB). One purpose of the
+        validation set is to demonstrate how the evaluation software works
+        ahead of the competition submission.
+    </p>
+    <p>
+        In the second stage, the test set will be made available for the
+        actual competition. As in the VOC2006 challenge, no ground
+        truth for the test data will be released until after the challenge is
+        complete.
+    </p>
+    <p>
+        The data has been split into 50% for training/validation
+        and 50% for testing. The distributions of images and objects by class
+        are approximately equal across the training/validation and test
+        sets. In total there are 9,963 images, containing 24,640 annotated
+        objects. Further statistics can be found <a href="dbstats.html">here</a>.
+    </p>
+    <a name="examples"><h3>Example images</h3></a>
+    <p>
+		Example images and the corresponding annotation for the main classification/detection
+		tasks, segmentation and layout tasters can be viewed online:
+    </p>
+	<ul>
+	    <li>
+		    <a href="examples/index.html">Classification/detection example images</a>
+	    </li>
+	    <li>
+		    <a href="segexamples/index.html">Segmentation taster example images</a>
+	    </li>
+	    <li>
+		    <a href="layoutexamples/index.html">Person Layout taster example images</a>
+	    </li>
+    </ul>
+
+    <a name="rights"><h2>Database Rights</h2></a>
+
+    <p>
+        The VOC2007 data includes some images provided by 
+        "flickr". Use of these images must respect the
+        corresponding terms of use:
+    </p>
+    <ul>
+        <li>
+            <a href="http://www.flickr.com/terms.gne?legacy=1">"flickr" terms of use</a>
+        </li>
+    </ul>
+
+    <p>
+        For the purposes of the challenge, the identity of the images in the
+        database, e.g. source and name of owner, has been obscured. 
+        Details of the contributor of each image can be found in the annotation
+        to be included in the final release of the data, after completion of the challenge.
+        Any queries about the use or ownership of the data should be addressed to the
+        <a href="#organizers">organizers</a>.
+    </p>
+
+    <a name="devkit"><h2>Development Kit</h2></a>
+	<p>
+        The development kit provided for the VOC challenge 2007 is available. You can:
+    </p>
+    <ul>
+        <li> Download the <a href="VOCtrainval_06-Nov-2007.tar">training/validation data</a> (450MB tar file)</li>
+        <li> Download the <a href="VOCdevkit_08-Jun-2007.tar">development kit code and documentation</a> (250KB tar file)</li>
+        <li> Download the <a href="devkit_doc_07-Jun-2007.pdf">PDF documentation</a> (120KB PDF) 
+        <li> Browse the <a href="htmldoc/index.html">HTML documentation</a></li>
+        <li>View the <a href="guidelines.html">guidelines</a> used for annotating the database</li> 
+    </ul>
+	<p>
+		The updated development kit made available 11-Jun-2007 contains two changes:
+	</p>
+	<ul>
+		<li>
+			Bug fix: There was an error in the <font face=courier>VOCevaldet</font> function affecting
+			the accuracy of precision/recall curve calculation. Please download the update to correct.
+		</li>
+		<li>
+			Changes to the location
+			of results files to support running on both VOC2007 and VOC2006 test sets,
+			see <a href="#runvoc2006">below</a>. 
+		</li>
+	</ul>
+	<p>
+		It should be possible to untar the updated development kit
+		over the previous version with no adverse effects.
+	</p>
+    
+    <a name="testdata"><h2>Test Data</h2></a>
+    
+    <p>
+		The <b>annotated</b> test data for the VOC challenge 2007 is now available:		
+	</p>
+	<ul>
+		<li>Download the <a href="VOCtest_06-Nov-2007.tar">annotated test data</a> (430MB tar file)</li>
+		<li>Download the <a href="VOCtestnoimgs_06-Nov-2007.tar">annotation only</a> (12MB tar file, no images)</li>
+	</ul>
+	<p>
+		This is a direct replacement for that provided for the challenge but additionally
+		includes full annotation of each test image, and segmentation ground truth for the
+		segmentation taster images. The annotated test data additionally contains information about the owner of each image as
+		provided by <a href="http://www.flickr.com">flickr</a>. An updated
+		version of the training/validation data also containing ownership information is available
+		in the <a href="#devkit">development kit</a>.
+	</p>
+	<a name="results"><h2>Results</h2></a>
+	<p>
+        Detailed results of all submitted methods are now online.
+        For summarized results and information about some of the best-performing methods, please see
+        the workshop presentations:
+	</p>
+    <ul>
+		<li><a href="results/index.shtml">Browse the results online</a></li>
+		<li><a href="workshop/index.html">Workshop presentations</a></li>
+    </ul>
+	<a name="citation"><h2>Citation</h2></a>
+	<p>
+		If you make use of the VOC2007 data, please cite the following reference in any publications:
+	</p>
+<pre>
+@misc{pascal-voc-2007,
+	author = "Everingham, M. and Van~Gool, L. and Williams, C. K. I. and Winn, J. and Zisserman, A.",
+	title = "The {PASCAL} {V}isual {O}bject {C}lasses {C}hallenge 2007 {(VOC2007)} {R}esults",
+	howpublished = "http://www.pascal-network.org/challenges/VOC/voc2007/workshop/index.html"}	
+</pre>		
+
+<!--
+	<p>
+		The test data for the VOC challenge 2007 is now available. To obtain the data, please send a request
+		by email to Mark Everingham, <a href="mailto:me@comp.leeds.ac.uk">me@comp.leeds.ac.uk</a>. Please
+		include the following information in your email:
+	</p>
+	<ul>
+		<li>Email address</li>
+		<li>Full name</li>
+		<li>Affiliation</li>
+		<li>Any other relevant information e.g. participation as part of a class project</li>
+	</ul>
+	<p>
+		The supplied test data contains two test sets: VOC2007 and VOC2006. If at all possible,
+		participants are requested to return (separate) results for both <i>both</i> test sets. The updated
+		<a href="#devkit">development kit</a> provides a switch for selecting between the test sets - more
+		information is provided in the development kit documentation.
+	</p>
+	<p>
+		Please see <a href="#submission">below</a> for instructions on how to submit your finished results.
+	</p>
+
+    <h2>VOC2007 Registration</h2>
+    <p>
+        Please send email to Mark Everingham <a href="mailto:
+        me@comp.leeds.ac.uk">me@comp.leeds.ac.uk</a> 
+        with subject line "VOC2007&nbsp;Registration" to register 
+        for the challenge. This will allow us to contact you in case 
+        of updates/bug fixes etc. Registration does not imply a commitment
+        to submit results.
+    </p>
+-->
+    <h2>Timetable</h2>
+    <ul>
+        <li> 7 April 2007 : Development kit (training and validation data plus evaluation software) made available.</li>
+        <li> 11 June 2007: Test set made available.</li>
+        <li><font color="red">24 September 2007, 11pm GMT: DEADLINE (extended) for submission of results.</font></li>
+        <li> 15 October 2007: Visual Recognition Challenge <a href="workshop/index.html">workshop</a> (Caltech
+        256 and PASCAL VOC2007) to be held as part of 
+        <a href="http://iccv2007.rutgers.edu/">ICCV 2007</a> in 
+        Rio de Janeiro, Brazil.
+        </li>
+    </ul>
+
+    <h2><a name="submission">Submission of Results</a></h2>
+    <p>
+        Participants are expected to submit a single set of results per method 
+        employed. Participants who have investigated several algorithms may submit one 
+        result per method. Changes in algorithm parameters do <i>not</i> constitute a 
+        different method - all parameter tuning must be conducted using the training 
+        and validation data alone.
+    </p>
+
+    <p>
+        Details of the required file formats for submitted results can be
+        found in the development kit documentation.
+	</p>
+	<p>
+		The results files should be collected in a single archive file (tar/zip) and 
+		placed on an FTP/HTTP server accessible from outside your institution. Email the 
+		URL and any details needed to access the file to Mark Everingham, <A 
+		href="mailto:me@comp.leeds.ac.uk">me@comp.leeds.ac.uk</A>. Please do not send 
+		large files (>1MB) directly by email. 
+	</p>
+	<p>
+		Participants submitting results for several different methods (noting
+		the definition of different methods above) may either collect results for
+		each method into a single archive, providing separate directories for
+		each method and an appropriate key to the results, or may submit
+		several archive files.
+	</p>
+	<p>
+		In addition to the results files, participants should provide contact details,
+		a list of contributors and a brief description of the method used, see below.
+		This information may be sent by email or included in the results archive file.
+	</p>
+	<ul>
+		<li>
+			URL of results archive file and instructions on how to access.
+		</li>
+		<li>
+			Contact details: full name, affiliation and email.
+		</li>
+		<li>
+			Details of any contributors to the submission.
+		</li>
+		<li>
+			A brief description of the method. LaTeX+BibTeX is preferred. Participants
+			should provide a short <i>self-contained</i> description of the approach used,
+			and may provide references to published work on the method, where available.
+		</li>
+	</ul>
+	<p>
+		For participants using the provided development kit, all results are stored in the
+		<font face=courier>results/</font> directory. An archive suitable for submission can be
+		generated using e.g.:
+	</p>
+	<ul>
+		<font face=courier>tar cvf markeveringham_results.tar results/</font>
+	</ul>		
+	<p>
+		Participants not making use of the development kit must follow the specification for
+		contents and naming of results files given in the development kit. Example files
+		in the correct format may be generated by running the example implementations in the
+		development kit.
+	</p>
+	<h3><a name="runvoc2006">Running on <i>VOC2006</i> test data</a></h3>
+    <p>
+        If at all possible, participants are requested to submit results for <i>both</i> the VOC2007
+        and VOC2006 test sets provided in the test data, to allow comparison of results across the
+        years.
+    </p>		
+    <p>
+		The updated <a href="#devkit">development kit</a> provides a switch to select between
+		test sets. Results are placed in two directories, <font face=courier>results/VOC2006/</font> or
+		<font face=courier>results/VOC2007/</font> according to the test set.
+    </p>
+
+    <h2>Publication Policy</h2>
+    <p>
+        The main mechanism for dissemination of the results will be the
+        challenge webpage. Further details will be made available
+        at a later date.
+    </p>
+
+    <h2><a name="organizers">Organizers</a></h2>
+    <ul>
+        <li> Mark Everingham (Leeds), <a href="mailto:me@comp.leeds.ac.uk">me@comp.leeds.ac.uk</a> </li>
+        <li> Luc van Gool (Zurich) </li>
+        <li> Chris Williams (Edinburgh) </li>
+        <li> John Winn (MSR Cambridge) </li>
+        <li> Andrew Zisserman (Oxford) </li>
+    </ul>
+
+    <h2>Acknowledgements</h2>
+    <p>
+        We gratefully acknowledge the following, who spent many long hours
+        providing annotation for the VOC2007 database:
+        Moray Allan, Patrick Buehler, Terry Herbert, Anitha Kannan, Julia Lasserre,
+        Alain Lehmann, Mukta Prasad, Till Quack, John Quinn, Florian Schroff. We are also grateful to
+        James Philbin, Ondra Chum, and Felix Agakov for additional assistance.
+    </p>
+    <h2>Support</h2>
+    <p>
+        The preparation and running of this challenge is supported by the
+        EU-funded <a href="http://www.pascal-network.org/">PASCAL</a> 
+Network of Excellence on Pattern Analysis,
+Statistical Modelling and Computational Learning. 
+    </p>
+</body>
+</html>

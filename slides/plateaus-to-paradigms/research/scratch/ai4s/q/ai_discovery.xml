@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/U8OtiQhEaepYg7xoo7AMd0zGzk8</id>
+  <title>arXiv Query: search_query=abs:"autonomous laboratory" AND abs:"materials"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T14:47:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22autonomous+laboratory%22+AND+abs:%22materials%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>16</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.24480v1</id>
+    <title>Breaking Bottlenecks in Solid Electrolyte Discovery with Large Artificial Intelligence Models</title>
+    <updated>2026-06-23T12:16:41Z</updated>
+    <link href="https://arxiv.org/abs/2606.24480v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.24480v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Solid electrolytes (SEs) are central to next-generation metal batteries, yet their discovery remains constrained by fragmented data, limited transferability of simulations, and slow experimental iteration. Unlike catalysis, where surface reactivity dominates, SEs require simultaneous optimization of bulk ion transport, defect chemistry, mechanical integrity, and interfacial stability. Here, we outline a framework for autonomous SE discovery enabled by large artificial intelligence (AI) models, including machine learning interatomic potentials (MLIPs) and large language models (LLMs). We discuss the evolution from static materials databases to dynamic, self-updating knowledge systems, the role of MLIPs in bridging density functional theory (DFT) and long-timescale ion migration, and the emergence of LLMs as engines for literature mining, hypothesis generation, and scientific reasoning. We further describe a closed-loop architecture integrating AI-driven candidate design, multiscale simulation, uncertainty-aware selection, and experimental validation. Such systems shift SE research from intuition-guided exploration to data-informed, self-improving cycles. We conclude by highlighting challenges in data standardization, interfacial complexity, and reproducibility, and we propose design principles for building autonomous laboratories for solid-state battery materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-23T12:16:41Z</published>
+    <arxiv:comment>54 pages, 6 figures. Perspective article</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Eric Jianfeng Cheng</name>
+    </author>
+    <author>
+      <name>Min Hong</name>
+    </author>
+    <author>
+      <name>Zhiquan Zeng</name>
+    </author>
+    <author>
+      <name>Chuanyu Liu</name>
+    </author>
+    <author>
+      <name>Qian Wang</name>
+    </author>
+    <author>
+      <name>Melissa Jane Meadowcroft</name>
+    </author>
+    <author>
+      <name>Vlad Badilita</name>
+    </author>
+    <author>
+      <name>Carlos Miguel Costa</name>
+    </author>
+    <author>
+      <name>Senentxu Lanceros-Méndez</name>
+    </author>
+    <author>
+      <name>Ying Li</name>
+    </author>
+    <author>
+      <name>Chenyao Ma</name>
+    </author>
+    <author>
+      <name>Weibo Gong</name>
+    </author>
+    <author>
+      <name>Surendra Martha</name>
+    </author>
+    <author>
+      <name>Aloysius Soon</name>
+    </author>
+    <author>
+      <name>Piao Ma</name>
+    </author>
+    <author>
+      <name>Di Zhang</name>
+    </author>
+    <author>
+      <name>Teguh Ariyanto</name>
+    </author>
+    <author>
+      <name> Sudaryanto</name>
+    </author>
+    <author>
+      <name>Hiroshi Kakinuma</name>
+    </author>
+    <author>
+      <name>Jie Zhao</name>
+    </author>
+    <author>
+      <name>Jiayu Peng</name>
+    </author>
+    <author>
+      <name>Pengfei Ou</name>
+    </author>
+    <author>
+      <name>Jun Lu</name>
+    </author>
+    <author>
+      <name>Shin-ichi Orimo</name>
+    </author>
+    <author>
+      <name>Hao Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.18086v1</id>
+    <title>Materials Informatics Across the Length Scales</title>
+    <updated>2026-04-20T11:04:40Z</updated>
+    <link href="https://arxiv.org/abs/2604.18086v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.18086v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Materials informatics is increasingly used to support modelling, analysis and design across the length scales of materials science, from atomistic simulations to microstructural characterisation and continuum descriptions. Despite rapid progress, the reliability and transferability of these approaches vary strongly with scale. Here we survey data-driven methods at the nanoscale, mesoscale, and micro-to-continuum levels, highlighting established capabilities as well as unresolved challenges. Machine-learning interatomic potentials, mesoscale surrogate and operator-learning models, and learning-based analysis of experimental microstructures are discussed, with emphasis on data quality, uncertainty, interpretability, and cross-scale consistency. We further examine the role of data standards, ontologies, and emerging tools, such as autonomous laboratories, where they directly affect multiscale workflows. This perspective clarifies what can be considered reliable today and identifies key obstacles to the broader integration of materials informatics across scales.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-20T11:04:40Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jamal Abdul Nasir</name>
+    </author>
+    <author>
+      <name>Hamide Kavak</name>
+    </author>
+    <author>
+      <name>Oguzhan Der</name>
+    </author>
+    <author>
+      <name>Ali Ercetin</name>
+    </author>
+    <author>
+      <name>Amila Akagic</name>
+    </author>
+    <author>
+      <name>Jesper Friis</name>
+    </author>
+    <author>
+      <name>Francesca L. Bleken</name>
+    </author>
+    <author>
+      <name>Andrea Lorenzoni</name>
+    </author>
+    <author>
+      <name>Francesco Mercuri</name>
+    </author>
+    <author>
+      <name>Scott M. Woodley</name>
+    </author>
+    <author>
+      <name>Keith T. Butler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.06835v1</id>
+    <title>AIMD-L: An automated laboratory for high-throughput characterization of structural materials for extreme environments</title>
+    <updated>2026-03-06T19:55:58Z</updated>
+    <link href="https://arxiv.org/abs/2603.06835v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.06835v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Rapid developments in artificial intelligence and machine learning as applied to materials science are creating an urgent need for experimental data, which can be provided by high-throughput and autonomous laboratories. To date most demonstrations of such laboratories have focused on functional materials, with less attention paid to structural materials. We present here the Artificial Intelligence in Materials Design Laboratory (AIMD-L), an automated, high-throughput facility for characterizing the microstructure and properties of structural metals and ceramics, with an emphasis on materials in extreme environments.
+  AIMD-L has two custom instruments for characterization of structural materials: HELIX for shock studies of materials, and MAXIMA for X-ray diffraction and X-ray fluorescence spectroscopy. Specifically designed for high-throughput studies, HELIX and MAXIMA are each capable of collecting data at rates two to three orders of magnitude faster than conventional systems. A third experimental station, SPHINX, is a commercial nanoindenter modified for integration into the automated workflow of AIMD-L. A user (which may be human or an AI agent) directs the experiments to be carried out by means of a centralized control program. The experimental stations are linked by a conveyance that moves samples around the lab, with a robot at each station for sample transfer in/out of the instrument. The experimental stations also communicate with a common data layer that streams data autonomously from each instrument to a data portal, where their arrival triggers automated workflows for data reduction and analysis. The processed data are immediately available to the human operator or agentic AI, forming a closed loop for rapid decision-making and experimental control.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ins-det" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-06T19:55:58Z</published>
+    <arxiv:comment>15 pages, 10 figures, submitted to Matter</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Todd C. Hufnagel</name>
+    </author>
+    <author>
+      <name>Pranav Addepalli</name>
+    </author>
+    <author>
+      <name>Anuruddha Bhattacharjee</name>
+    </author>
+    <author>
+      <name>Rohit Berlia</name>
+    </author>
+    <author>
+      <name>Jaafar El-Awady</name>
+    </author>
+    <author>
+      <name>David Elbert</name>
+    </author>
+    <author>
+      <name>Lori Graham-Brady</name>
+    </author>
+    <author>
+      <name>Axel Krieger</name>
+    </author>
+    <author>
+      <name>Harichandana Neralla</name>
+    </author>
+    <author>
+      <name>T. Joseph Nkansah-Mahaney</name>
+    </author>
+    <author>
+      <name>Mostafa M. Omar</name>
+    </author>
+    <author>
+      <name>Hyun Sang Park</name>
+    </author>
+    <author>
+      <name>K. T. Ramesh</name>
+    </author>
+    <author>
+      <name>Matthew Shaeffer</name>
+    </author>
+    <author>
+      <name>Eric Walker</name>
+    </author>
+    <author>
+      <name>Piyush Wanchoo</name>
+    </author>
+    <author>
+      <name>Timothy P. Weihs</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06977v1</id>
+    <title>Autonomous Manipulation of Hazardous Chemicals and Delicate Objects in a Self-Driving Laboratory: A Sliding Mode Approach</title>
+    <updated>2026-01-18T21:05:47Z</updated>
+    <link href="https://arxiv.org/abs/2602.06977v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06977v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Precise handling of chemical instruments and materials within a self-driving laboratory environment using robotic systems demands advanced and reliable control strategies. Sliding Mode Control (SMC) has emerged as a robust approach for managing uncertainties and disturbances in manipulator dynamics, providing superior control performance compared to traditional methods. This study implements a model-based SMC (MBSMC) utilizing a hyperbolic tangent function to regulate the motion of a manipulator mounted on a mobile platform operating inside a self-driving chemical laboratory. Given the manipulator's role in transporting fragile glass vessels filled with hazardous chemicals, the controller is specifically designed to minimize abrupt transitions and achieve gentle, accurate trajectory tracking. The proposed controller is benchmarked against a non-model-based SMC (NMBSMC) and a Proportional-Integral-Derivative (PID) controller using a comprehensive set of joint and Cartesian metrics. Compared to PID and NMBSMC, MBSMC achieved significantly smoother motion and up to 90% lower control effort, validating its robustness and precision for autonomous laboratory operations. Experimental trials confirmed successful execution of tasks such as vessel grasping and window operation, which failed under PID control due to its limited ability to handle nonlinear dynamics and external disturbances, resulting in substantial trajectory tracking errors. The results validate the controller's effectiveness in achieving smooth, precise, and safe manipulator motions, supporting the advancement of intelligent mobile manipulators in autonomous laboratory environments.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-18T21:05:47Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Shifa Sulaiman</name>
+    </author>
+    <author>
+      <name>Francesco Schetter</name>
+    </author>
+    <author>
+      <name>Tobias Jensen</name>
+    </author>
+    <author>
+      <name>Simon Bøgh</name>
+    </author>
+    <author>
+      <name>Fanny Ficuciello</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.23880v2</id>
+    <title>CASCADE: Cumulative Agentic Skill Creation through Autonomous Development and Evolution</title>
+    <updated>2026-01-28T06:08:09Z</updated>
+    <link href="https://arxiv.org/abs/2512.23880v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.23880v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM) agents currently depend on predefined tools or early-stage tool generation, limiting their adaptability and scalability to complex scientific tasks. We introduce CASCADE, a self-evolving agentic framework representing an early instantiation of the transition from "LLM + tool use" to "LLM + skill acquisition". CASCADE enables agents to master complex external tools and codify knowledge through two meta-skills: continuous learning via web search, code extraction, and memory utilization; self-reflection via introspection, knowledge graph exploration, and others. We evaluate CASCADE on SciSkillBench, a benchmark of 116 materials science and chemistry research tasks. CASCADE achieves a 93.3% success rate using GPT-5, compared to 35.4% without evolution mechanisms. We further demonstrate real-world applications in computational analysis, autonomous laboratory experiments, and selective reproduction of published papers. Along with human-agent collaboration and memory consolidation, CASCADE accumulates executable skills that can be shared across agents and scientists, moving toward scalable AI-assisted scientific research.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-29T21:50:23Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Xu Huang</name>
+    </author>
+    <author>
+      <name>Junwu Chen</name>
+    </author>
+    <author>
+      <name>Yuxing Fei</name>
+    </author>
+    <author>
+      <name>Zhuohan Li</name>
+    </author>
+    <author>
+      <name>Philippe Schwaller</name>
+    </author>
+    <author>
+      <name>Gerbrand Ceder</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21766v1</id>
+    <title>UniLabOS: An AI-Native Operating System for Autonomous Laboratories</title>
+    <updated>2025-12-25T19:24:05Z</updated>
+    <link href="https://arxiv.org/abs/2512.21766v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21766v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Autonomous laboratories promise to accelerate discovery by coupling learning algorithms with robotic experimentation, yet adoption remains limited by fragmented software that separates high-level planning from low-level execution. Here we present UniLabOS, an AI-native operating system for autonomous laboratories that bridges digital decision-making and embodied experimentation through typed, stateful abstractions and transactional safeguards. UniLabOS unifies laboratory elements via an Action/Resource/Action&amp;Resource (A/R/A&amp;R) model, represents laboratory structure with a dual-topology of logical ownership and physical connectivity, and reconciles digital state with material motion using a transactional CRUTD protocol. Built on a distributed edge-cloud architecture with decentralized discovery, UniLabOS enables protocol mobility across reconfigurable topologies while supporting human-in-the-loop governance. We demonstrate the system in four real-world settings -- a liquid-handling workstation, a modular organic synthesis platform, a distributed electrolyte foundry, and a decentralized computation-intensive closed-loop system -- showing robust orchestration across heterogeneous instruments and multi-node coordination. UniLabOS establishes a scalable foundation for agent-ready, reproducible, and provenance-aware autonomous experimentation.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-25T19:24:05Z</published>
+    <arxiv:comment>18 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Jing Gao</name>
+    </author>
+    <author>
+      <name>Junhan Chang</name>
+    </author>
+    <author>
+      <name>Haohui Que</name>
+    </author>
+    <author>
+      <name>Yanfei Xiong</name>
+    </author>
+    <author>
+      <name>Shixiang Zhang</name>
+    </author>
+    <author>
+      <name>Xianwei Qi</name>
+    </author>
+    <author>
+      <name>Zhen Liu</name>
+    </author>
+    <author>
+      <name>Jun-Jie Wang</name>
+    </author>
+    <author>
+      <name>Qianjun Ding</name>
+    </author>
+    <author>
+      <name>Xinyu Li</name>
+    </author>
+    <author>
+      <name>Ziwei Pan</name>
+    </author>
+    <author>
+      <name>Qiming Xie</name>
+    </author>
+    <author>
+      <name>Zhuang Yan</name>
+    </author>
+    <author>
+      <name>Junchi Yan</name>
+    </author>
+    <author>
+      <name>Linfeng Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.04055v1</id>
+    <title>KAN-Enhanced Contrastive Learning Accelerating Crystal Structure Identification from XRD Patterns</title>
+    <updated>2025-11-06T04:53:08Z</updated>
+    <link href="https://arxiv.org/abs/2511.04055v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.04055v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate determination of crystal structures is central to materials science, underpinning the understanding of composition-structure-property relationships and the discovery of new materials. Powder X-ray diffraction is a key technique in this pursuit due to its versatility and reliability. However, current analysis pipelines still rely heavily on expert knowledge and slow iterative fitting, limiting their scalability in high-throughput and autonomous settings. Here, we introduce a physics-guided contrastive learning framework termed as XCCP. It aligns powder diffraction patterns with candidate crystal structures in a shared embedding space to enable efficient structure retrieval and symmetry recognition. The XRD encoder employs a dual-expert design with a Kolmogorov-Arnold Network projection head, one branch emphasizes low angle reflections reflecting long-range order, while the other captures dense high angle peaks shaped by symmetry. Coupled with a crystal graph encoder, contrastive pretraining yields physically grounded representations. XCCP demonstrates strong performance across tasks, with structure retrieval reaching 0.89 and space group identification attains 0.93 accuracy. The framework further generalizes to compositionally similar multi principal element alloys and demonstrates zero-shot transfer to experimental patterns. These results establish XCCP as a robust, interpretable, and scalable approach that offers a new paradigm for X-ray diffraction analysis. XCCP facilitates high-throughput screening, rapid structural validation and integration into autonomous laboratories.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-06T04:53:08Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Chenlei Xu</name>
+    </author>
+    <author>
+      <name>Tianhao Su</name>
+    </author>
+    <author>
+      <name>Jie Xiong</name>
+    </author>
+    <author>
+      <name>Yue Wu</name>
+    </author>
+    <author>
+      <name>Shuya Dong</name>
+    </author>
+    <author>
+      <name>Tian Jiang</name>
+    </author>
+    <author>
+      <name>Mengwei He</name>
+    </author>
+    <author>
+      <name>Shuai Chen</name>
+    </author>
+    <author>
+      <name>Tong-Yi Zhang</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-026-02015-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-026-02015-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.05938v2</id>
+    <title>Autonomous interpretation of atomistic scattering data</title>
+    <updated>2025-10-08T21:16:23Z</updated>
+    <link href="https://arxiv.org/abs/2510.05938v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.05938v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Materials with bespoke properties have long been identified by computational searches, and their experimental realisation is now coming within reach through autonomous laboratories. Scattering experiments are central to verifying the atomic structures of autonomously synthesised materials. Yet, interpreting these measurements typically requires user expertise and manual processing, or machine learning (ML) models trained on predefined datasets, limiting fully autonomous materials discovery. Here, we introduce a differentiable optimisation framework that treats scattering calculations, energetics, and chemical constraints as a unified refinement problem. Capability demonstrations across molecules, crystal structures, nanoparticles, and amorphous matter show that this data-driven approach resolves structural degeneracies with multi-modal inputs - suggesting its usefulness for informing, and ultimately guiding, the operation of autonomous laboratories.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-07T13:50:03Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Andy S. Anker</name>
+    </author>
+    <author>
+      <name>John L. A. Gardner</name>
+    </author>
+    <author>
+      <name>Louise A. M. Rosset</name>
+    </author>
+    <author>
+      <name>Andrew L. Goodwin</name>
+    </author>
+    <author>
+      <name>Volker L. Deringer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.05351v1</id>
+    <title>Self-Driving Laboratory Optimizes the Lower Critical Solution Temperature of Thermoresponsive Polymers</title>
+    <updated>2025-09-02T19:35:33Z</updated>
+    <link href="https://arxiv.org/abs/2509.05351v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.05351v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To overcome the inherent inefficiencies of traditional trial-and-error materials discovery, the scientific community is increasingly developing autonomous laboratories that integrate data-driven decision-making into closed-loop experimental workflows. In this work, we realize this concept for thermoresponsive polymers by developing a low-cost, "frugal twin" platform for the optimization of the lower critical solution temperature (LCST) of poly(N-isopropylacrylamide) (PNIPAM). Our system integrates robotic fluid-handling, on-line sensors, and Bayesian optimization (BO) that navigates the multi-component salt solution spaces to achieve user-specified LCST targets. The platform demonstrates convergence to target properties within a minimal number of experiments. It strategically explores the parameter space, learns from informative "off-target" results, and self-corrects to achieve the final targets. By providing an accessible and adaptable blueprint, this work lowers the barrier to entry for autonomous experimentation and accelerates the design and discovery of functional polymers.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-02T19:35:33Z</published>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Guoyue Xu</name>
+    </author>
+    <author>
+      <name>Renzheng Zhang</name>
+    </author>
+    <author>
+      <name>Tengfei Luo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.06569v1</id>
+    <title>Operationalizing Serendipity: Multi-Agent AI Workflows for Enhanced Materials Characterization with Theory-in-the-Loop</title>
+    <updated>2025-08-07T04:59:17Z</updated>
+    <link href="https://arxiv.org/abs/2508.06569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.06569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The history of science is punctuated by serendipitous discoveries, where unexpected observations, rather than targeted hypotheses, opened new fields of inquiry. While modern autonomous laboratories excel at accelerating hypothesis testing, their optimization for efficiency risks overlooking these crucial, unplanned findings. To address this gap, we introduce SciLink, an open-source, multi-agent artificial intelligence framework designed to operationalize serendipity in materials research by creating a direct, automated link between experimental observation, novelty assessment, and theoretical simulations. The framework employs a hybrid AI strategy where specialized machine learning models perform quantitative analysis of experimental data, while large language models handle higher-level reasoning. These agents autonomously convert raw data from materials characterization techniques into falsifiable scientific claims, which are then quantitatively scored for novelty against the published literature. We demonstrate the framework's versatility across diverse research scenarios, showcasing its application to atomic-resolution and hyperspectral data, its capacity to integrate real-time human expert guidance, and its ability to close the research loop by proposing targeted follow-up experiments. By systematically analyzing all observations and contextualizing them, SciLink provides a practical framework for AI-driven materials research that not only enhances efficiency but also actively cultivates an environment ripe for serendipitous discoveries, thereby bridging the gap between automated experimentation and open-ended scientific exploration.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-07T04:59:17Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Lance Yao</name>
+    </author>
+    <author>
+      <name>Suman Samantray</name>
+    </author>
+    <author>
+      <name>Ayana Ghosh</name>
+    </author>
+    <author>
+      <name>Kevin Roccapriore</name>
+    </author>
+    <author>
+      <name>Libor Kovarik</name>
+    </author>
+    <author>
+      <name>Sarah Allec</name>
+    </author>
+    <author>
+      <name>Maxim Ziatdinov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.17510v1</id>
+    <title>A Grassroots Network and Community Roadmap for Interconnected Autonomous Science Laboratories for Accelerated Discovery</title>
+    <updated>2025-06-20T23:20:28Z</updated>
+    <link href="https://arxiv.org/abs/2506.17510v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.17510v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Scientific discovery is being revolutionized by AI and autonomous systems, yet current autonomous laboratories remain isolated islands unable to collaborate across institutions. We present the Autonomous Interconnected Science Lab Ecosystem (AISLE), a grassroots network transforming fragmented capabilities into a unified system that shorten the path from ideation to innovation to impact and accelerates discovery from decades to months. AISLE addresses five critical dimensions: (1) cross-institutional equipment orchestration, (2) intelligent data management with FAIR compliance, (3) AI-agent driven orchestration grounded in scientific principles, (4) interoperable agent communication interfaces, and (5) AI/ML-integrated scientific education. By connecting autonomous agents across institutional boundaries, autonomous science can unlock research spaces inaccessible to traditional approaches while democratizing cutting-edge technologies. This paradigm shift toward collaborative autonomous science promises breakthroughs in sustainable energy, materials development, and public health.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-20T23:20:28Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Rafael Ferreira da Silva</name>
+    </author>
+    <author>
+      <name>Milad Abolhasani</name>
+    </author>
+    <author>
+      <name>Dionysios A. Antonopoulos</name>
+    </author>
+    <author>
+      <name>Laura Biven</name>
+    </author>
+    <author>
+      <name>Ryan Coffee</name>
+    </author>
+    <author>
+      <name>Ian T. Foster</name>
+    </author>
+    <author>
+      <name>Leslie Hamilton</name>
+    </author>
+    <author>
+      <name>Shantenu Jha</name>
+    </author>
+    <author>
+      <name>Theresa Mayer</name>
+    </author>
+    <author>
+      <name>Benjamin Mintz</name>
+    </author>
+    <author>
+      <name>Robert G. Moore</name>
+    </author>
+    <author>
+      <name>Salahudin Nimer</name>
+    </author>
+    <author>
+      <name>Noah Paulson</name>
+    </author>
+    <author>
+      <name>Woong Shin</name>
+    </author>
+    <author>
+      <name>Frederic Suter</name>
+    </author>
+    <author>
+      <name>Mitra Taheri</name>
+    </author>
+    <author>
+      <name>Michela Taufer</name>
+    </author>
+    <author>
+      <name>Newell R. Washburn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.13494v1</id>
+    <title>Polymer Data Challenges in the AI Era: Bridging Gaps for Next-Generation Energy Materials</title>
+    <updated>2025-05-15T00:20:42Z</updated>
+    <link href="https://arxiv.org/abs/2505.13494v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.13494v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The pursuit of advanced polymers for energy technologies, spanning photovoltaics, solid-state batteries, and hydrogen storage, is hindered by fragmented data ecosystems that fail to capture the hierarchical complexity of these materials. Polymer science lacks interoperable databases, forcing reliance on disconnected literature and legacy records riddled with unstructured formats and irreproducible testing protocols. This fragmentation stifles machine learning (ML) applications and delays the discovery of materials critical for global decarbonization. Three systemic barriers compound the challenge. First, academic-industrial data silos restrict access to proprietary industrial datasets, while academic publications often omit critical synthesis details. Second, inconsistent testing methods undermine cross-study comparability. Third, incomplete metadata in existing databases limits their utility for training reliable ML models. Emerging solutions address these gaps through technological and collaborative innovation. Natural language processing (NLP) tools extract structured polymer data from decades of literature, while high-throughput robotic platforms generate self-consistent datasets via autonomous experimentation. Central to these advances is the adoption of FAIR (Findable, Accessible, Interoperable, Reusable) principles, adapted to polymer-specific ontologies, ensuring machine-readability and reproducibility. Future breakthroughs hinge on cultural shifts toward open science, accelerated by decentralized data markets and autonomous laboratories that merge robotic experimentation with real-time ML validation. By addressing data fragmentation through technological innovation, collaborative governance, and ethical stewardship, the polymer community can transform bottlenecks into accelerants.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-15T00:20:42Z</published>
+    <arxiv:comment>45 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Ying Zhao</name>
+    </author>
+    <author>
+      <name>Guanhua Chen</name>
+    </author>
+    <author>
+      <name>Jie Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.13169v1</id>
+    <title>Collaborative AI Enhances Image Understanding in Materials Science</title>
+    <updated>2025-03-17T13:44:30Z</updated>
+    <link href="https://arxiv.org/abs/2503.13169v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.13169v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Copilot for Real-world Experimental Scientist (CRESt) system empowers researchers to control autonomous laboratories through conversational AI, providing a seamless interface for managing complex experimental workflows. We have enhanced CRESt by integrating a multi-agent collaboration mechanism that utilizes the complementary strengths of the ChatGPT and Gemini models for precise image analysis in materials science. This innovative approach significantly improves the accuracy of experimental outcomes by fostering structured debates between the AI models, which enhances decision-making processes in materials phase analysis. Additionally, to evaluate the generalizability of this approach, we tested it on a quantitative task of counting particles. Here, the collaboration between the AI models also led to improved results, demonstrating the versatility and robustness of this method. By harnessing this dual-AI framework, this approach stands as a pioneering method for enhancing experimental accuracy and efficiency in materials research, with applications extending beyond CRESt to broader scientific experimentation and analysis.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-17T13:44:30Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Ruoyan Avery Yin</name>
+    </author>
+    <author>
+      <name>Zhichu Ren</name>
+    </author>
+    <author>
+      <name>Zongyou Yin</name>
+    </author>
+    <author>
+      <name>Zhen Zhang</name>
+    </author>
+    <author>
+      <name>So Yeon Kim</name>
+    </author>
+    <author>
+      <name>Chia-Wei Hsu</name>
+    </author>
+    <author>
+      <name>Ju Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.13930v2</id>
+    <title>AlabOS: A Python-based Reconfigurable Workflow Management Framework for Autonomous Laboratories</title>
+    <updated>2024-08-30T22:19:05Z</updated>
+    <link href="https://arxiv.org/abs/2405.13930v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.13930v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The recent advent of autonomous laboratories, coupled with algorithms for high-throughput screening and active learning, promises to accelerate materials discovery and innovation. As these autonomous systems grow in complexity, the demand for robust and efficient workflow management software becomes increasingly critical. In this paper, we introduce AlabOS, a general-purpose software framework for orchestrating experiments and managing resources, with an emphasis on automated laboratories for materials synthesis and characterization. AlabOS features a reconfigurable experiment workflow model and a resource reservation mechanism, enabling the simultaneous execution of varied workflows composed of modular tasks while eliminating conflicts between tasks. To showcase its capability, we demonstrate the implementation of AlabOS in a prototype autonomous materials laboratory, A-Lab, with around 3,500 samples synthesized over 1.5 years.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-22T18:59:39Z</published>
+    <arxiv:comment>34 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>https://pubs.rsc.org/en/content/articlelanding/2024/dd/d4dd00129j</arxiv:journal_ref>
+    <author>
+      <name>Yuxing Fei</name>
+    </author>
+    <author>
+      <name>Bernardus Rendy</name>
+    </author>
+    <author>
+      <name>Rishi Kumar</name>
+    </author>
+    <author>
+      <name>Olympia Dartsi</name>
+    </author>
+    <author>
+      <name>Hrushikesh P. Sahasrabuddhe</name>
+    </author>
+    <author>
+      <name>Matthew J. McDermott</name>
+    </author>
+    <author>
+      <name>Zheren Wang</name>
+    </author>
+    <author>
+      <name>Nathan J. Szymanski</name>
+    </author>
+    <author>
+      <name>Lauren N. Walters</name>
+    </author>
+    <author>
+      <name>David Milsted</name>
+    </author>
+    <author>
+      <name>Yan Zeng</name>
+    </author>
+    <author>
+      <name>Anubhav Jain</name>
+    </author>
+    <author>
+      <name>Gerbrand Ceder</name>
+    </author>
+    <arxiv:doi>10.1039/D4DD00129J</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1039/D4DD00129J" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.02303v2</id>
+    <title>Precursor recommendation for inorganic synthesis by machine learning materials similarity from scientific literature</title>
+    <updated>2023-05-19T23:15:16Z</updated>
+    <link href="https://arxiv.org/abs/2302.02303v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.02303v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Synthesis prediction is a key accelerator for the rapid design of advanced materials. However, determining synthesis variables such as the choice of precursor materials is challenging for inorganic materials because the sequence of reactions during heating is not well understood. In this work, we use a knowledge base of 29,900 solid-state synthesis recipes, text-mined from the scientific literature, to automatically learn which precursors to recommend for the synthesis of a novel target material. The data-driven approach learns chemical similarity of materials and refers the synthesis of a new target to precedent synthesis procedures of similar materials, mimicking human synthesis design. When proposing five precursor sets for each of 2,654 unseen test target materials, the recommendation strategy achieves a success rate of at least 82%. Our approach captures decades of heuristic synthesis data in a mathematical form, making it accessible for use in recommendation engines and autonomous laboratories.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-05T04:57:59Z</published>
+    <arxiv:comment>Presented at 2022 MRS Spring Meeting &amp; Exhibit (DS04.04.05, May 10, 2022). Link: https://www.mrs.org/meetings-events/spring-meetings-exhibits/past-spring-meetings/2022-mrs-spring-meeting/</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Sci. Adv. 9, eadg8180 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Tanjin He</name>
+    </author>
+    <author>
+      <name>Haoyan Huo</name>
+    </author>
+    <author>
+      <name>Christopher J. Bartel</name>
+    </author>
+    <author>
+      <name>Zheren Wang</name>
+    </author>
+    <author>
+      <name>Kevin Cruse</name>
+    </author>
+    <author>
+      <name>Gerbrand Ceder</name>
+    </author>
+    <arxiv:doi>10.1126/sciadv.adg8180</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1126/sciadv.adg8180" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.05398v2</id>
+    <title>Self-driving laboratory for accelerated discovery of thin-film materials</title>
+    <updated>2020-03-10T17:10:33Z</updated>
+    <link href="https://arxiv.org/abs/1906.05398v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.05398v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Discovering and optimizing commercially viable materials for clean energy applications typically takes over a decade. Self-driving laboratories that iteratively design, execute, and learn from material science experiments in a fully autonomous loop present an opportunity to accelerate this research. We report here a modular robotic platform driven by a model-based optimization algorithm capable of autonomously optimizing the optical and electronic properties of thin-film materials by modifying the film composition and processing conditions. We demonstrate this platform by using it to maximize the hole mobility of organic hole transport materials commonly used in perovskite solar cells and consumer electronics. This demonstration highlights the possibilities of using autonomous laboratories to discover organic and inorganic materials relevant to materials sciences and clean energy technologies.</summary>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-12T21:53:51Z</published>
+    <arxiv:comment>43 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.app-ph"/>
+    <author>
+      <name>Benjamin P. MacLeod</name>
+    </author>
+    <author>
+      <name>Fraser G. L. Parlane</name>
+    </author>
+    <author>
+      <name>Thomas D. Morrissey</name>
+    </author>
+    <author>
+      <name>Florian Häse</name>
+    </author>
+    <author>
+      <name>Loïc M. Roch</name>
+    </author>
+    <author>
+      <name>Kevan E. Dettelbach</name>
+    </author>
+    <author>
+      <name>Raphaell Moreira</name>
+    </author>
+    <author>
+      <name>Lars P. E. Yunker</name>
+    </author>
+    <author>
+      <name>Michael B. Rooney</name>
+    </author>
+    <author>
+      <name>Joseph R. Deeth</name>
+    </author>
+    <author>
+      <name>Veronica Lai</name>
+    </author>
+    <author>
+      <name>Gordon J. Ng</name>
+    </author>
+    <author>
+      <name>Henry Situ</name>
+    </author>
+    <author>
+      <name>Ray H. Zhang</name>
+    </author>
+    <author>
+      <name>Michael S. Elliott</name>
+    </author>
+    <author>
+      <name>Ted H. Haley</name>
+    </author>
+    <author>
+      <name>David J. Dvorak</name>
+    </author>
+    <author>
+      <name>Alán Aspuru-Guzik</name>
+    </author>
+    <author>
+      <name>Jason E. Hein</name>
+    </author>
+    <author>
+      <name>Curtis P. Berlinguette</name>
+    </author>
+  </entry>
+</feed>

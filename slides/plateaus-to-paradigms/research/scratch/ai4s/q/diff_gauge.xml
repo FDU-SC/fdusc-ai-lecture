@@ -1,0 +1,885 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/i7DEueemRhmG1FzGHJaBWJNWUsA</id>
+  <title>arXiv Query: search_query=abs:"diffusion model" AND abs:"gauge"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:45:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22diffusion+model%22+AND+abs:%22gauge%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>33</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11696v1</id>
+    <title>Stress-Testing Dynamical and Generative Downscaling Using Subseasonal Extreme Precipitation Forecasts</title>
+    <updated>2026-09-10T15:21:40Z</updated>
+    <link href="https://arxiv.org/abs/2609.11696v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11696v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coarse spatial resolution limits the ability of subseasonal prediction models to resolve extreme precipitation. Downscaling with either dynamical or deep generative models can overcome this issue, but the comparative performance of these models for extremes across different atmospheric regimes remains poorly understood. In this work, we evaluate the Weather Research and Forecasting (WRF) model against a diffusion-based generative model by downscaling two physically distinct, extreme precipitation events up to lead times of 3 weeks. For a fair comparison with WRF, which can downscale boundary conditions from different driving models without model-specific training, the diffusion model is trained in an unpaired fashion. Both approaches improve upon the raw European Centre for Medium-Range Weather Forecasts forecasts, in comparison to fused rain gauge-radar observations in Switzerland (CombiPrecip), but exhibit regime-dependent strengths. WRF achieves the highest probabilistic skill for a multicell, non-stationary event. Conversely, the diffusion model is more consistent across different performance metrics for the two events, outperforming WRF in a more stationary supercell event. These results demonstrate that explicit dynamical modeling can add value for specific precipitation events for subseasonal lead times, and that generative downscaling adds value more broadly in different situations.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T15:21:40Z</published>
+    <arxiv:comment>36 pages, 12 figures, 6 tables, submitted to JAMES</arxiv:comment>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Mauricio Lima</name>
+    </author>
+    <author>
+      <name>Marika Koukoula</name>
+    </author>
+    <author>
+      <name>Romain Pilon</name>
+    </author>
+    <author>
+      <name>Monika Feldmann</name>
+    </author>
+    <author>
+      <name>Erwan Koch</name>
+    </author>
+    <author>
+      <name>Daniela I. V. Domeisen</name>
+    </author>
+    <author>
+      <name>Tom Beucler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08954v1</id>
+    <title>Do AI Forecast Ensembles Sample the Correct Conditional Distribution?</title>
+    <updated>2026-08-09T23:16:10Z</updated>
+    <link href="https://arxiv.org/abs/2608.08954v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08954v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ensemble forecasting aims to sample the conditional distribution of outcomes; whether AI forecast ensembles do this correctly in a joint sense remains largely untested. We train a diffusion model for probabilistic subseasonal coastal sea level forecasts at eight US East Coast tide gauge stations, with sea level derived from reanalysis, and find that marginal and joint forecast quality decouple: positive skill at every station and lead time marginally, while joint spatial structure is worse than climatological draws. A shuffle-based permutation decomposition reveals this failure is invisible to the energy score but detected by the variogram score. Lorenz-96 experiments across 0.7-170 equivalent years show the gap persists regardless of training volume and is reproduced by a linear baseline, indicating structural inadequacy of the learned distribution. A dynamical ensemble does not replicate the failure while a deterministic emulator does, suggesting it is specific to learned emulators rather than ensemble forecasting generally.</summary>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T23:16:10Z</published>
+    <arxiv:primary_category term="physics.ao-ph"/>
+    <author>
+      <name>Lucas J. Howard</name>
+    </author>
+    <author>
+      <name>Elizabeth A. Barnes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.17326v1</id>
+    <title>Noise scheduling and linear dynamics in diffusion models on Lie groups</title>
+    <updated>2026-05-17T08:34:31Z</updated>
+    <link href="https://arxiv.org/abs/2605.17326v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.17326v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the role of the noise schedule in diffusion processes on Lie groups, with particular emphasis on applications to lattice gauge theory. We show that a specific noise schedule leads to a linear decay of the expectation value of the Wilson action as a function of diffusion time. We compare this with Euclidean diffusion models, where such behavior requires an explicitly designed drift term, while in the Lie-group setting it arises naturally.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-17T08:34:31Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Javad Komijani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.09275v1</id>
+    <title>DiffATS: Diffusion in Aligned Tensor Space</title>
+    <updated>2026-05-10T02:53:43Z</updated>
+    <link href="https://arxiv.org/abs/2605.09275v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.09275v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Direct diffusion modeling of high-resolution spatiotemporal fields is computationally challenging. Parameter-efficient primitives address this by representing high-dimensional data with a compact set of parameters. In this paper, we construct data-dependent tensor primitives without pretrained compression autoencoders. Our construction starts from Tucker decomposition, which captures low-rank multilinear structure through a core tensor and mode-wise factors. However, Tucker factors are non-unique: the same tensor can be represented by different rotated factors, which complicates generative modeling. We address this issue with orthogonal Procrustes (OP) alignment. Specifically, we select medoid anchor matrices from the data and align the factor matrices to resolve the gauge ambiguity. This yields matrix Grassmannian primitives and tensor Grassmannian primitives that are compact, data-adaptive, and directly decodable by explicit multilinear reconstruction. Theoretically, we prove that the proposed primitive maps are homeomorphisms between low-rank tensors and their corresponding primitive spaces, certifying that the representations are non-degenerate and topologically faithful. Building on these primitives, we propose *Diffusion in Aligned Tensor Space* (DiffATS), a generative framework that trains diffusion models directly on aligned tensor primitives. Across images, videos, and PDE solutions, DiffATS achieves strong unconditional and conditional generation performance while compressing original data by $3.9\times$ to $210\times$, without relying on any pretrained deep compression autoencoders.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-10T02:53:43Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jinhua Lyu</name>
+    </author>
+    <author>
+      <name>Tianmin Yu</name>
+    </author>
+    <author>
+      <name>Brian Kim</name>
+    </author>
+    <author>
+      <name>Lizhuo Zhou</name>
+    </author>
+    <author>
+      <name>Chanwook Park</name>
+    </author>
+    <author>
+      <name>Naichen Shi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.06134v1</id>
+    <title>Diffusion model for SU(N) gauge theories</title>
+    <updated>2026-05-07T12:34:27Z</updated>
+    <link href="https://arxiv.org/abs/2605.06134v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.06134v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Implicit score matching provides a computationally efficient approach for training diffusion models and generating high-quality samples from complex distributions. In this work, we develop a score-matching framework for SU(N) lattice gauge theories, which can be extended to other Lie groups. We apply the method to SU(3) gauge configurations with the Wilson gauge action in two and four dimensions and assess the quality of the generated samples by comparison with Hybrid Monte Carlo (HMC) simulations. We show that the diffusion models can be successfully trained and applied for sampling the Wilson gauge action. For large values of inverse coupling, accurate reverse-time integration requires predictor-corrector schemes, for which we introduce a corrector based on Hamiltonian molecular dynamics. While the corrector significantly improves sampling quality, it also increases the computational cost. We outline several strategies for improving sampling efficiency.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-07T12:34:27Z</published>
+    <arxiv:comment>23 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Javad Komijani</name>
+    </author>
+    <author>
+      <name>Marina K. Marinkovic</name>
+    </author>
+    <author>
+      <name>Lara Turgut</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.09045v3</id>
+    <title>Diffusion Models for SU(2) Lattice Gauge Theory in Two Dimensions</title>
+    <updated>2026-07-27T13:35:17Z</updated>
+    <link href="https://arxiv.org/abs/2602.09045v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.09045v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We apply score-based diffusion models to two-dimensional SU(2) lattice pure gauge theory with the Wilson action, extending recent work on U(1) gauge theories. The SU(2) manifold structure is handled through a quaternion parameterization. The model is trained on 10,000 configurations generated via Hybrid Monte Carlo at a fixed coupling $β_0= 2.0$ on an $8\times 8$ lattice, augmented to 20,000 samples via random gauge transformations. Through physics-conditioned sampling exploiting the linear $β$-dependence of the score function, we generate configurations at different values of the coupling without retraining; through the fully convolutional U-Net architecture with periodic boundary conditions, we generate configurations on lattices of different spatial extents. We validate our approach by comparing the average plaquette against exact analytical predictions. At the training lattice size ($8\times 8$), the model reproduces the exact plaquette with biases $|Δ| \leq 0.001$ for $β\in [1.5, 2.5]$ and $|Δ| &lt; 0.06$ across $β\in [1, 4]$. For lattices sharing the training extent $L=8$ in at least one direction, biases remain below $\sim 0.003$ for $β\in [1.5, 2.5]$, with larger deviations at higher couplings. This work demonstrates that diffusion models are a promising tool for non-Abelian gauge field generation and motivates further investigation toward higher-dimensional theories.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T18:57:51Z</published>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 114, 014522 (2026)</arxiv:journal_ref>
+    <author>
+      <name>H. Alharazin</name>
+    </author>
+    <author>
+      <name>J. Yu. Panteleeva</name>
+    </author>
+    <author>
+      <name>B. -D. Sun</name>
+    </author>
+    <arxiv:doi>10.1103/n3bh-gs98</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/n3bh-gs98" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.19552v1</id>
+    <title>Generalizable Equivariant Diffusion Models for Non-Abelian Lattice Gauge Theory</title>
+    <updated>2026-01-27T12:44:44Z</updated>
+    <link href="https://arxiv.org/abs/2601.19552v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.19552v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We demonstrate that gauge equivariant diffusion models can accurately model the physics of non-Abelian lattice gauge theory using the Metropolis-adjusted annealed Langevin algorithm (MAALA), as exemplified by computations in two-dimensional U(2) and SU(2) gauge theories. Our network architecture is based on lattice gauge equivariant convolutional neural networks (L-CNNs), which respect local and global symmetries on the lattice. Models are trained on a single ensemble generated using a traditional Monte Carlo method. By studying Wilson loops of various size as well as the topological susceptibility, we find that the diffusion approach generalizes remarkably well to larger inverse couplings and lattice sizes with negligible loss of accuracy while retaining moderately high acceptance rates.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-27T12:44:44Z</published>
+    <arxiv:comment>9 pages, 5 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Diaa E. Habibi</name>
+    </author>
+    <author>
+      <name>Andreas Ipp</name>
+    </author>
+    <author>
+      <name>David I. Müller</name>
+    </author>
+    <author>
+      <name>Thomas R. Ranner</name>
+    </author>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+    <author>
+      <name>Qianteng Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11698v2</id>
+    <title>Fusion of multi-source precipitation records via coordinate-based generative model</title>
+    <updated>2025-06-23T13:54:38Z</updated>
+    <link href="https://arxiv.org/abs/2506.11698v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.11698v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Precipitation remains one of the most challenging climate variables to observe and predict accurately. Existing datasets face intricate trade-offs: gauge observations are relatively trustworthy but sparse, satellites provide global coverage with retrieval uncertainties, and numerical models offer physical consistency but are biased and computationally intensive. Here we introduce PRIMER (Precipitation Record Infinite MERging), a deep generative framework that fuses these complementary sources to produce accurate, high-resolution, full-coverage precipitation estimates. PRIMER employs a coordinate-based diffusion model that learns from arbitrary spatial locations and associated precipitation values, enabling seamless integration of gridded data and irregular gauge observations. Through two-stage training--first learning large-scale patterns, then refining with accurate gauge measurements--PRIMER captures both large-scale climatology and local precision. Once trained, it can downscale forecasts, interpolate sparse observations, and correct systematic biases within a principled Bayesian framework. Using gauge observations as ground truth, PRIMER effectively corrects biases in existing datasets, yielding statistically significant error reductions at most stations and furthermore enhancing the spatial coherence of precipitation fields. Crucially, it generalizes without retraining, correcting biases in operational forecasts it has never seen. This demonstrates how generative AI can transform Earth system science by combining imperfect data, providing a scalable solution for global precipitation monitoring and prediction.</summary>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-13T11:59:37Z</published>
+    <arxiv:comment>49 pages, 21 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.ao-ph"/>
+    <author>
+      <name>Sencan Sun</name>
+    </author>
+    <author>
+      <name>Congyi Nai</name>
+    </author>
+    <author>
+      <name>Baoxiang Pan</name>
+    </author>
+    <author>
+      <name>Wentao Li</name>
+    </author>
+    <author>
+      <name>Lu Li</name>
+    </author>
+    <author>
+      <name>Xin Li</name>
+    </author>
+    <author>
+      <name>Efi Foufoula-Georgiou</name>
+    </author>
+    <author>
+      <name>Yanluan Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.16373v1</id>
+    <title>Heat transfer and mixing in initiated Chemical Vapor Deposition analyzed by in-situ gas composition sensing</title>
+    <updated>2025-03-20T17:35:31Z</updated>
+    <link href="https://arxiv.org/abs/2503.16373v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.16373v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Studies of iCVD kinetics often make assumptions about the iCVD vapor phase that have been challenging to validate experimentally. We address this gap by investigating heat transfer and mixing in the iCVD reactor using in-situ gas composition sensing. Our work allows practitioners of iCVD to estimate the degree of mixing and temperature profile in the vapor phase based on reactor dimensions and process variables such as chamber pressure. We begin by using dimensional analysis to simplify the parameter space governing heat transfer and mixing, identifying key dimensionless groups that capture the dominant physics. We find that the degree of mixing in the reactor is primarily determined by the Peclet number (Pe), and heat transfer is primarily determined by the Knudsen number (Kn). Multiphysics simulations of the iCVD reactor provide visualizations of non-ideal mixing and allow us to identify the critical Pe above which the well-mixed assumption may begin to break down. To verify that the well-mixed assumption applies to iCVD at low Pe, we measured the residence time distribution (RTD) for argon and isopropanol flowing at 1 sccm, finding a close match to the well-mixed model. We used a Pirani pressure gauge for composition sensing to measure the RTD. We demonstrate the Pirani gauge to be a precise gas composition sensor, which is more modular and less expensive than methods like in-situ infrared spectroscopy and mass spectrometry. We then address heat transfer by measuring thermal diffusion from the filament at a range of pressures in argon and isopropanol. We quantified the effects of non-ideal heat transfer at low pressures and identified a critical Kn, above which heat transfer is independent of pressure. Measurement of thermally driven pressure changes in batch mode enables us to define and model an "effective temperature" for the reactor, matching the thermal diffusion model.</summary>
+    <category term="physics.class-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-20T17:35:31Z</published>
+    <arxiv:primary_category term="physics.class-ph"/>
+    <author>
+      <name>Simon Shindler</name>
+    </author>
+    <author>
+      <name>Rong Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.05504v2</id>
+    <title>Physics-Conditioned Diffusion Models for Lattice Gauge Theory</title>
+    <updated>2026-01-23T01:53:56Z</updated>
+    <link href="https://arxiv.org/abs/2502.05504v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.05504v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop diffusion models for simulating lattice gauge theories, where stochastic quantization is explicitly incorporated as a physical condition for sampling. We demonstrate the applicability of this novel sampler to U(1) gauge theory in two spacetime dimensions and find that a model trained at a small inverse coupling constant can be extrapolated to larger inverse coupling regions without encountering the topological freezing problem. Additionally, the trained model can be employed to sample configurations on different lattice sizes without requiring further training. The exactness of the generated samples is ensured by incorporating Metropolis-adjusted Langevin dynamics into the generation process. Furthermore, we demonstrate that this approach enables more efficient sampling of topological quantities compared to traditional algorithms such as Hybrid Monte Carlo and Langevin simulations.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-08T09:50:27Z</published>
+    <arxiv:comment>28 pages, 10 figures, accepted in JHEP. Codes are available at: https://github.com/zzzqt/DM4U1</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Qianteng Zhu</name>
+    </author>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.00474v1</id>
+    <title>A framework for river connectivity classification using temporal image processing and attention based neural networks</title>
+    <updated>2025-02-01T16:00:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.00474v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.00474v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Measuring the connectivity of water in rivers and streams is essential for effective water resource management. Increased extreme weather events associated with climate change can result in alterations to river and stream connectivity. While traditional stream flow gauges are costly to deploy and limited to large river bodies, trail camera methods are a low-cost and easily deployed alternative to collect hourly data. Image capturing, however requires stream ecologists to manually curate (select and label) tens of thousands of images per year. To improve this workflow, we developed an automated instream trail camera image classification system consisting of three parts: (1) image processing, (2) image augmentation and (3) machine learning. The image preprocessing consists of seven image quality filters, foliage-based luma variance reduction, resizing and bottom-center cropping. Images are balanced using variable amount of generative augmentation using diffusion models and then passed to a machine learning classification model in labeled form. By using the vision transformer architecture and temporal image enhancement in our framework, we are able to increase the 75% base accuracy to 90% for a new unseen site image. We make use of a dataset captured and labeled by staff from the Connecticut Department of Energy and Environmental Protection between 2018-2020. Our results indicate that a combination of temporal image processing and attention-based models are effective at classifying unseen river connectivity images.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-01T16:00:28Z</published>
+    <arxiv:comment>15 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Timothy James Becker</name>
+    </author>
+    <author>
+      <name>Derin Gezgin</name>
+    </author>
+    <author>
+      <name>Jun Yi He Wu</name>
+    </author>
+    <author>
+      <name>Mary Becker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.19602v1</id>
+    <title>Diffusion models for lattice gauge field simulations</title>
+    <updated>2024-10-25T14:49:20Z</updated>
+    <link href="https://arxiv.org/abs/2410.19602v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.19602v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop diffusion models for lattice gauge theories which build on the concept of stochastic quantization. This framework is applied to $U(1)$ gauge theory in $1+1$ dimensions. We show that a model trained at one small inverse coupling can be effectively transferred to larger inverse coupling without encountering issues related to topological freezing, i.e., the model can generate configurations corresponding to different couplings by introducing the Boltzmann factors as physics conditions, while maintaining the correct physical distributions without any additional training. This demonstrates the potential of physics-conditioned diffusion models for efficient and flexible lattice gauge theory simulations.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-25T14:49:20Z</published>
+    <arxiv:comment>7 pages, 3 figures, accepted at the NeurIPS 2024 workshop "Machine Learning and the Physical Sciences"</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Qianteng Zhu</name>
+    </author>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.16319v1</id>
+    <title>A Generative Diffusion Model for Probabilistic Ensembles of Precipitation Maps Conditioned on Multisensor Satellite Observations</title>
+    <updated>2024-09-18T22:25:56Z</updated>
+    <link href="https://arxiv.org/abs/2409.16319v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.16319v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A generative diffusion model is used to produce probabilistic ensembles of precipitation intensity maps at the 1-hour 5-km resolution. The generation is conditioned on infrared and microwave radiometric measurements from the GOES and DMSP satellites and is trained with merged ground radar and gauge data over southeastern United States. The generated precipitation maps reproduce the spatial autocovariance and other multiscale statistical properties of the gauge-radar reference fields on average. Conditioning the generation on the satellite measurements allows us to constrain the magnitude and location of each generated precipitation feature. The mean of the 128- member ensemble shows high spatial coherence with the reference fields with 0.82 linear correlation between the two. On average, the coherence between any two ensemble members is approximately the same as the coherence between any ensemble member and the ground reference, attesting that the ensemble dispersion is a proper measure of the estimation uncertainty. From the generated ensembles we can easily derive the probability of the precipitation intensity exceeding any given intensity threshold, at the 5-km resolution of the generation or at any desired aggregated resolution.</summary>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-18T22:25:56Z</published>
+    <arxiv:primary_category term="physics.ao-ph"/>
+    <author>
+      <name>Clement Guilloteau</name>
+    </author>
+    <author>
+      <name>Gavin Kerrigan</name>
+    </author>
+    <author>
+      <name>Kai Nelson</name>
+    </author>
+    <author>
+      <name>Giosue Migliorini</name>
+    </author>
+    <author>
+      <name>Padhraic Smyth</name>
+    </author>
+    <author>
+      <name>Runze Li</name>
+    </author>
+    <author>
+      <name>Efi Foufoula-Georgiou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.05608v3</id>
+    <title>Scalable Diffusion Models with State Space Backbone</title>
+    <updated>2024-03-28T08:28:44Z</updated>
+    <link href="https://arxiv.org/abs/2402.05608v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.05608v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a new exploration into a category of diffusion models built upon state space architecture. We endeavor to train diffusion models for image data, wherein the traditional U-Net backbone is supplanted by a state space backbone, functioning on raw patches or latent space. Given its notable efficacy in accommodating long-range dependencies, Diffusion State Space Models (DiS) are distinguished by treating all inputs including time, condition, and noisy image patches as tokens. Our assessment of DiS encompasses both unconditional and class-conditional image generation scenarios, revealing that DiS exhibits comparable, if not superior, performance to CNN-based or Transformer-based U-Net architectures of commensurate size. Furthermore, we analyze the scalability of DiS, gauged by the forward pass complexity quantified in Gflops. DiS models with higher Gflops, achieved through augmentation of depth/width or augmentation of input tokens, consistently demonstrate lower FID. In addition to demonstrating commendable scalability characteristics, DiS-H/2 models in latent space achieve performance levels akin to prior diffusion models on class-conditional ImageNet benchmarks at the resolution of 256$\times$256 and 512$\times$512, while significantly reducing the computational burden. The code and models are available at: https://github.com/feizc/DiS.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-08T12:08:42Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Zhengcong Fei</name>
+    </author>
+    <author>
+      <name>Mingyuan Fan</name>
+    </author>
+    <author>
+      <name>Changqian Yu</name>
+    </author>
+    <author>
+      <name>Junshi Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.03845v1</id>
+    <title>On gauge freedom, conservativity and intrinsic dimensionality estimation in diffusion models</title>
+    <updated>2024-02-06T09:41:43Z</updated>
+    <link href="https://arxiv.org/abs/2402.03845v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.03845v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models are generative models that have recently demonstrated impressive performances in terms of sampling quality and density estimation in high dimensions. They rely on a forward continuous diffusion process and a backward continuous denoising process, which can be described by a time-dependent vector field and is used as a generative model. In the original formulation of the diffusion model, this vector field is assumed to be the score function (i.e. it is the gradient of the log-probability at a given time in the diffusion process). Curiously, on the practical side, most studies on diffusion models implement this vector field as a neural network function and do not constrain it be the gradient of some energy function (that is, most studies do not constrain the vector field to be conservative). Even though some studies investigated empirically whether such a constraint will lead to a performance gain, they lead to contradicting results and failed to provide analytical results. Here, we provide three analytical results regarding the extent of the modeling freedom of this vector field. {Firstly, we propose a novel decomposition of vector fields into a conservative component and an orthogonal component which satisfies a given (gauge) freedom. Secondly, from this orthogonal decomposition, we show that exact density estimation and exact sampling is achieved when the conservative component is exactly equals to the true score and therefore conservativity is neither necessary nor sufficient to obtain exact density estimation and exact sampling. Finally, we show that when it comes to inferring local information of the data manifold, constraining the vector field to be conservative is desirable.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-06T09:41:43Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Christian Horvat</name>
+    </author>
+    <author>
+      <name>Jean-Pascal Pfister</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.13192v3</id>
+    <title>Generative Design of Crystal Structures by Point Cloud Representations and Diffusion Model</title>
+    <updated>2024-08-30T06:49:51Z</updated>
+    <link href="https://arxiv.org/abs/2401.13192v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.13192v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficiently generating energetically stable crystal structures has long been a challenge in material design, primarily due to the immense arrangement of atoms in a crystal lattice. To facilitate the discovery of stable material, we present a framework for the generation of synthesizable materials, leveraging a point cloud representation to encode intricate structural information. At the heart of this framework lies the introduction of a diffusion model as its foundational pillar. To gauge the efficacy of our approach, we employ it to reconstruct input structures from our training datasets, rigorously validating its high reconstruction performance. Furthermore, we demonstrate the profound potential of Point Cloud-Based Crystal Diffusion (PCCD) by generating entirely new materials, emphasizing their synthesizability. Our research stands as a noteworthy contribution to the advancement of materials design and synthesis through the cutting-edge avenue of generative design instead of the conventional substitution or experience-based discovery.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-24T02:36:52Z</published>
+    <arxiv:comment>I have submitted to a journal</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>iScience 28, 111659, January 17, 2025</arxiv:journal_ref>
+    <author>
+      <name>Zhelin Li</name>
+    </author>
+    <author>
+      <name>Rami Mrad</name>
+    </author>
+    <author>
+      <name>Runxian Jiao</name>
+    </author>
+    <author>
+      <name>Guan Huang</name>
+    </author>
+    <author>
+      <name>Jun Shan</name>
+    </author>
+    <author>
+      <name>Shibing Chu</name>
+    </author>
+    <author>
+      <name>Yuanping Chen</name>
+    </author>
+    <arxiv:doi>10.1016/j.isci.2024.111659</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.isci.2024.111659" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.12052v3</id>
+    <title>A Dataset and Benchmark for Copyright Infringement Unlearning from Text-to-Image Diffusion Models</title>
+    <updated>2024-06-21T14:58:30Z</updated>
+    <link href="https://arxiv.org/abs/2403.12052v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.12052v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Copyright law confers upon creators the exclusive rights to reproduce, distribute, and monetize their creative works. However, recent progress in text-to-image generation has introduced formidable challenges to copyright enforcement. These technologies enable the unauthorized learning and replication of copyrighted content, artistic creations, and likenesses, leading to the proliferation of unregulated content. Notably, models like stable diffusion, which excel in text-to-image synthesis, heighten the risk of copyright infringement and unauthorized distribution.Machine unlearning, which seeks to eradicate the influence of specific data or concepts from machine learning models, emerges as a promising solution by eliminating the \enquote{copyright memories} ingrained in diffusion models. Yet, the absence of comprehensive large-scale datasets and standardized benchmarks for evaluating the efficacy of unlearning techniques in the copyright protection scenarios impedes the development of more effective unlearning methods. To address this gap, we introduce a novel pipeline that harmonizes CLIP, ChatGPT, and diffusion models to curate a dataset. This dataset encompasses anchor images, associated prompts, and images synthesized by text-to-image models. Additionally, we have developed a mixed metric based on semantic and style information, validated through both human and artist assessments, to gauge the effectiveness of unlearning approaches. Our dataset, benchmark library, and evaluation metrics will be made publicly available to foster future research and practical applications (https://rmpku.github.io/CPDM-page/, website / http://149.104.22.83/unlearning.tar.gz, dataset).</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-04T11:14:01Z</published>
+    <arxiv:comment>20 pages, 7 figures, 3 table</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Rui Ma</name>
+    </author>
+    <author>
+      <name>Qiang Zhou</name>
+    </author>
+    <author>
+      <name>Yizhu Jin</name>
+    </author>
+    <author>
+      <name>Daquan Zhou</name>
+    </author>
+    <author>
+      <name>Bangjun Xiao</name>
+    </author>
+    <author>
+      <name>Xiuyu Li</name>
+    </author>
+    <author>
+      <name>Yi Qu</name>
+    </author>
+    <author>
+      <name>Aishani Singh</name>
+    </author>
+    <author>
+      <name>Kurt Keutzer</name>
+    </author>
+    <author>
+      <name>Jingtong Hu</name>
+    </author>
+    <author>
+      <name>Xiaodong Xie</name>
+    </author>
+    <author>
+      <name>Zhen Dong</name>
+    </author>
+    <author>
+      <name>Shanghang Zhang</name>
+    </author>
+    <author>
+      <name>Shiji Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.06038v2</id>
+    <title>Correcting Diffusion Generation through Resampling</title>
+    <updated>2024-10-07T03:59:27Z</updated>
+    <link href="https://arxiv.org/abs/2312.06038v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.06038v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite diffusion models' superior capabilities in modeling complex distributions, there are still non-trivial distributional discrepancies between generated and ground-truth images, which has resulted in several notable problems in image generation, including missing object errors in text-to-image generation and low image quality. Existing methods that attempt to address these problems mostly do not tend to address the fundamental cause behind these problems, which is the distributional discrepancies, and hence achieve sub-optimal results. In this paper, we propose a particle filtering framework that can effectively address both problems by explicitly reducing the distributional discrepancies. Specifically, our method relies on a set of external guidance, including a small set of real images and a pre-trained object detector, to gauge the distribution gap, and then design the resampling weight accordingly to correct the gap. Experiments show that our methods can effectively correct missing object errors and improve image quality in various image generation tasks. Notably, our method outperforms the existing strongest baseline by 5% in object occurrence and 1.0 in FID on MS-COCO. Our code is publicly available at https://github.com/UCSB-NLP-Chang/diffusion_resampling.git.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-10T23:35:13Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yujian Liu</name>
+    </author>
+    <author>
+      <name>Yang Zhang</name>
+    </author>
+    <author>
+      <name>Tommi Jaakkola</name>
+    </author>
+    <author>
+      <name>Shiyu Chang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.01201v5</id>
+    <title>PAC Privacy Preserving Diffusion Models</title>
+    <updated>2024-12-06T17:16:54Z</updated>
+    <link href="https://arxiv.org/abs/2312.01201v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.01201v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Data privacy protection is garnering increased attention among researchers. Diffusion models (DMs), particularly with strict differential privacy, can potentially produce images with both high privacy and visual quality. However, challenges arise such as in ensuring robust protection in privatizing specific data attributes, areas where current models often fall short. To address these challenges, we introduce the PAC Privacy Preserving Diffusion Model, a model leverages diffusion principles and ensure Probably Approximately Correct (PAC) privacy. We enhance privacy protection by integrating a private classifier guidance into the Langevin Sampling Process. Additionally, recognizing the gap in measuring the privacy of models, we have developed a novel metric to gauge privacy levels. Our model, assessed with this new metric and supported by Gaussian matrix computations for the PAC bound, has shown superior performance in privacy protection over existing leading private generative models according to benchmark tests.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-02T18:42:52Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:2210.03458 by other authors</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Qipan Xu</name>
+    </author>
+    <author>
+      <name>Youlong Ding</name>
+    </author>
+    <author>
+      <name>Xinxi Zhang</name>
+    </author>
+    <author>
+      <name>Jie Gao</name>
+    </author>
+    <author>
+      <name>Hao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.02984v1</id>
+    <title>Diff-GO: Diffusion Goal-Oriented Communications to Achieve Ultra-High Spectrum Efficiency</title>
+    <updated>2023-11-13T17:52:44Z</updated>
+    <link href="https://arxiv.org/abs/2312.02984v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.02984v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The latest advances in artificial intelligence (AI) present many unprecedented opportunities to achieve much improved bandwidth saving in communications. Unlike conventional communication systems focusing on packet transport, rich datasets and AI makes it possible to efficiently transfer only the information most critical to the goals of message recipients. One of the most exciting advances in generative AI known as diffusion model presents a unique opportunity for designing ultra-fast communication systems well beyond language-based messages. This work presents an ultra-efficient communication design by utilizing generative AI-based on diffusion models as a specific example of the general goal-oriented communication framework. To better control the regenerated message at the receiver output, our diffusion system design includes a local regeneration module with finite dimensional noise latent. The critical significance of noise latent control and sharing residing on our Diff-GO is the ability to introduce the concept of "local generative feedback" (Local-GF), which enables the transmitter to monitor the quality and gauge the quality or accuracy of the message recovery at the semantic system receiver. To this end, we propose a new low-dimensional noise space for the training of diffusion models, which significantly reduces the communication overhead and achieves satisfactory message recovery performance. Our experimental results demonstrate that the proposed noise space and the diffusion-based generative model achieve ultra-high spectrum efficiency and accurate recovery of transmitted image signals. By trading off computation for bandwidth efficiency (C4BE), this new framework provides an important avenue to achieve exceptional computation-bandwidth tradeoff.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-13T17:52:44Z</published>
+    <arxiv:comment>Submitted to IEEE International Conference on Communications (ICC) 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Achintha Wijesinghe</name>
+    </author>
+    <author>
+      <name>Songyang Zhang</name>
+    </author>
+    <author>
+      <name>Suchinthaka Wanninayaka</name>
+    </author>
+    <author>
+      <name>Weiwei Wang</name>
+    </author>
+    <author>
+      <name>Zhi Ding</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.02218v1</id>
+    <title>Robustness and Generalizability of Deepfake Detection: A Study with Diffusion Models</title>
+    <updated>2023-09-05T13:22:41Z</updated>
+    <link href="https://arxiv.org/abs/2309.02218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.02218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rise of deepfake images, especially of well-known personalities, poses a serious threat to the dissemination of authentic information. To tackle this, we present a thorough investigation into how deepfakes are produced and how they can be identified. The cornerstone of our research is a rich collection of artificial celebrity faces, titled DeepFakeFace (DFF). We crafted the DFF dataset using advanced diffusion models and have shared it with the community through online platforms. This data serves as a robust foundation to train and test algorithms designed to spot deepfakes. We carried out a thorough review of the DFF dataset and suggest two evaluation methods to gauge the strength and adaptability of deepfake recognition tools. The first method tests whether an algorithm trained on one type of fake images can recognize those produced by other methods. The second evaluates the algorithm's performance with imperfect images, like those that are blurry, of low quality, or compressed. Given varied results across deepfake methods and image changes, our findings stress the need for better deepfake detectors. Our DFF dataset and tests aim to boost the development of more effective tools against deepfakes.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-05T13:22:41Z</published>
+    <arxiv:comment>8 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Haixu Song</name>
+    </author>
+    <author>
+      <name>Shiyu Huang</name>
+    </author>
+    <author>
+      <name>Yinpeng Dong</name>
+    </author>
+    <author>
+      <name>Wei-Wei Tu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.01728v3</id>
+    <title>Generative-based Fusion Mechanism for Multi-Modal Tracking</title>
+    <updated>2023-11-30T15:21:01Z</updated>
+    <link href="https://arxiv.org/abs/2309.01728v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.01728v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models (GMs) have received increasing research interest for their remarkable capacity to achieve comprehensive understanding. However, their potential application in the domain of multi-modal tracking has remained relatively unexplored. In this context, we seek to uncover the potential of harnessing generative techniques to address the critical challenge, information fusion, in multi-modal tracking. In this paper, we delve into two prominent GM techniques, namely, Conditional Generative Adversarial Networks (CGANs) and Diffusion Models (DMs). Different from the standard fusion process where the features from each modality are directly fed into the fusion block, we condition these multi-modal features with random noise in the GM framework, effectively transforming the original training samples into harder instances. This design excels at extracting discriminative clues from the features, enhancing the ultimate tracking performance. To quantitatively gauge the effectiveness of our approach, we conduct extensive experiments across two multi-modal tracking tasks, three baseline methods, and three challenging benchmarks. The experimental results demonstrate that the proposed generative-based fusion mechanism achieves state-of-the-art performance, setting new records on LasHeR and RGBD1K.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-04T17:22:10Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Zhangyong Tang</name>
+    </author>
+    <author>
+      <name>Tianyang Xu</name>
+    </author>
+    <author>
+      <name>Xuefeng Zhu</name>
+    </author>
+    <author>
+      <name>Xiao-Jun Wu</name>
+    </author>
+    <author>
+      <name>Josef Kittler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.14480v2</id>
+    <title>Priority-Centric Human Motion Generation in Discrete Latent Space</title>
+    <updated>2023-08-30T15:33:01Z</updated>
+    <link href="https://arxiv.org/abs/2308.14480v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.14480v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Text-to-motion generation is a formidable task, aiming to produce human motions that align with the input text while also adhering to human capabilities and physical laws. While there have been advancements in diffusion models, their application in discrete spaces remains underexplored. Current methods often overlook the varying significance of different motions, treating them uniformly. It is essential to recognize that not all motions hold the same relevance to a particular textual description. Some motions, being more salient and informative, should be given precedence during generation. In response, we introduce a Priority-Centric Motion Discrete Diffusion Model (M2DM), which utilizes a Transformer-based VQ-VAE to derive a concise, discrete motion representation, incorporating a global self-attention mechanism and a regularization term to counteract code collapse. We also present a motion discrete diffusion model that employs an innovative noise schedule, determined by the significance of each motion token within the entire motion sequence. This approach retains the most salient motions during the reverse diffusion process, leading to more semantically rich and varied motions. Additionally, we formulate two strategies to gauge the importance of motion tokens, drawing from both textual and visual indicators. Comprehensive experiments on the HumanML3D and KIT-ML datasets confirm that our model surpasses existing techniques in fidelity and diversity, particularly for intricate textual descriptions.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-28T10:40:16Z</published>
+    <arxiv:comment>Accepted by ICCV2023</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Hanyang Kong</name>
+    </author>
+    <author>
+      <name>Kehong Gong</name>
+    </author>
+    <author>
+      <name>Dongze Lian</name>
+    </author>
+    <author>
+      <name>Michael Bi Mi</name>
+    </author>
+    <author>
+      <name>Xinchao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.04391v2</id>
+    <title>A Variational Perspective on Solving Inverse Problems with Diffusion Models</title>
+    <updated>2023-09-29T18:22:58Z</updated>
+    <link href="https://arxiv.org/abs/2305.04391v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.04391v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models have emerged as a key pillar of foundation models in visual domains. One of their critical applications is to universally solve different downstream inverse tasks via a single diffusion prior without re-training for each task. Most inverse tasks can be formulated as inferring a posterior distribution over data (e.g., a full image) given a measurement (e.g., a masked image). This is however challenging in diffusion models since the nonlinear and iterative nature of the diffusion process renders the posterior intractable. To cope with this challenge, we propose a variational approach that by design seeks to approximate the true posterior distribution. We show that our approach naturally leads to regularization by denoising diffusion process (RED-Diff) where denoisers at different timesteps concurrently impose different structural constraints over the image. To gauge the contribution of denoisers from different timesteps, we propose a weighting mechanism based on signal-to-noise-ratio (SNR). Our approach provides a new variational perspective for solving inverse problems with diffusion models, allowing us to formulate sampling as stochastic optimization, where one can simply apply off-the-shelf solvers with lightweight iterates. Our experiments for image restoration tasks such as inpainting and superresolution demonstrate the strengths of our method compared with state-of-the-art sampling-based diffusion models.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-07T23:00:47Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Morteza Mardani</name>
+    </author>
+    <author>
+      <name>Jiaming Song</name>
+    </author>
+    <author>
+      <name>Jan Kautz</name>
+    </author>
+    <author>
+      <name>Arash Vahdat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.17908v2</id>
+    <title>Trade-offs in Fine-tuned Diffusion Models Between Accuracy and Interpretability</title>
+    <updated>2023-12-19T19:12:39Z</updated>
+    <link href="https://arxiv.org/abs/2303.17908v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.17908v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advancements in diffusion models have significantly impacted the trajectory of generative machine learning research, with many adopting the strategy of fine-tuning pre-trained models using domain-specific text-to-image datasets. Notably, this method has been readily employed for medical applications, such as X-ray image synthesis, leveraging the plethora of associated radiology reports. Yet, a prevailing concern is the lack of assurance on whether these models genuinely comprehend their generated content. With the evolution of text-conditional image generation, these models have grown potent enough to facilitate object localization scrutiny. Our research underscores this advancement in the critical realm of medical imaging, emphasizing the crucial role of interpretability. We further unravel a consequential trade-off between image fidelity as gauged by conventional metrics and model interpretability in generative diffusion models. Specifically, the adoption of learnable text encoders when fine-tuning results in diminished interpretability. Our in-depth exploration uncovers the underlying factors responsible for this divergence. Consequently, we present a set of design principles for the development of truly interpretable generative models. Code is available at https://github.com/MischaD/chest-distillation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-31T09:11:26Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Mischa Dombrowski</name>
+    </author>
+    <author>
+      <name>Hadrien Reynaud</name>
+    </author>
+    <author>
+      <name>Johanna P. Müller</name>
+    </author>
+    <author>
+      <name>Matthew Baugh</name>
+    </author>
+    <author>
+      <name>Bernhard Kainz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.03096v2</id>
+    <title>The Struggle for Existence: Time, Memory and Bloat</title>
+    <updated>2023-05-30T21:00:56Z</updated>
+    <link href="https://arxiv.org/abs/2302.03096v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.03096v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Combining a spatiotemporal, multi-agent based model of a foraging ecosystem with linear, genetically programmed rules for the agents' behaviors results in implicit, endogenous, objective functions and selection algorithms based on "natural selection". Use of this implicit optimization of genetic programs for study of biological systems is tested by application to an artificial foraging ecosystem, and compared with established biological, ecological, and stochastic gene diffusion models. Limited program memory and execution time constraints emulate real-time and concurrent properties of physical and biological systems, and stress test the optimization algorithms. Relative fitness of the agents' programs and efficiency of the resultant populations as functions of these constraints gauge optimization effectiveness and efficiency. Novel solutions confirm the creativity of the optimization process and provide an unique opportunity to experimentally test the neutral code bloating hypotheses. Use of this implicit, endogenous, evolutionary optimization of spatially interacting, genetically programmed agents is thus shown to be novel, consistent with biological systems, and effective and efficient in discovering fit and novel solutions.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-06T19:53:59Z</published>
+    <arxiv:comment>1 table, 4 figures, 1 PDL</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>John C Stevenson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.06948v2</id>
+    <title>Gauge transformations in the dual space, and pricing and estimation in the long run in affine jump-diffusion models</title>
+    <updated>2019-12-25T02:26:37Z</updated>
+    <link href="https://arxiv.org/abs/1912.06948v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.06948v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We suggest a simple reduction of pricing European options in affine jump-diffusion models to pricing options with modified payoffs in diffusion models. The procedure is based on the conjugation of the infinitesimal generator of the model with an operator of the form $e^{iΦ(-i\dd_x)}$ (gauge transformation in the dual space). A general procedure for the calculation of the function $Φ$ is given, with examples. As applications, we consider pricing in jump-diffusion models and their subordinated versions using the eigenfunction expansion technique, and estimation of the extremely rare jumps component. The beliefs of the market about yet unobserved extreme jumps and pricing kernel can be recovered: the market prices allow one to see "the shape of things to come".</summary>
+    <category term="q-fin.CP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.MF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-14T23:41:10Z</published>
+    <arxiv:comment>Several typos are corrected, Theorem 3.3 and Lemma 4.6 are added</arxiv:comment>
+    <arxiv:primary_category term="q-fin.CP"/>
+    <author>
+      <name>Svetlana Boyarchenko</name>
+    </author>
+    <author>
+      <name>Sergei Levendorskiĭ</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.09684v1</id>
+    <title>Ab initio study of phosphorus effect on vacancy-mediated process in nickel alloys - an insight into Ni2Cr ordering</title>
+    <updated>2019-04-22T00:19:38Z</updated>
+    <link href="https://arxiv.org/abs/1904.09684v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.09684v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The development of long range order in nickel-chromium alloys is of great technological interest but the kinetics and mechanisms of the transformation are poorly understood. The present research utilizes a combined computational and experimental approach to elucidate the mechanism by which phosphorus accelerates the ordering rate of stoichiometric Ni_2Cr in Ni-Cr alloys. A series of Ni-33%Cr-x%P samples (in atomic percent) were fabricated with phosphorus concentrations, x = &lt;0.005-0.1 at.% and aged between 373 and 470°C for times up to 3000 h. The first-principles modeling considers fcc Ni with dilute P as a reasonable approximation for the complex Ni-Cr-P alloy system. Calculation results show a pronounced enhancement of vacancy transport by vacancy-solute pair diffusion via consecutive exchange and rotation jumps of vacancies associated with the phosphorus atom. The energy barriers of these two migration paths are at least 0.35 eV lower than that of vacancy-atom exchange in pure Ni solvent. The analytical diffusion model predicts enhanced solvent diffusion by 2 orders of magnitude for 0.1 at.% P at 400-500°C. The model prediction is in good agreement with the evolution of micro-hardness. We characterize the micro-hardness result by a kinetic ordering model, showing a significant decrease of the activation energy of ordering transformation. These results help gauge the risk of industrial alloys developing long range order which increases strength but degrades ductility and toughness. Specifically, minor alloying additions that bind with excess vacancies and lower the vacancy migration barrier can greatly accelerate hardening via Ni_2Cr precipitation.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-22T00:19:38Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jia-Hong Ke</name>
+    </author>
+    <author>
+      <name>George A. Young</name>
+    </author>
+    <author>
+      <name>Julie D. Tucker</name>
+    </author>
+    <arxiv:doi>10.1016/j.actamat.2019.04.036</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.actamat.2019.04.036" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.04302v3</id>
+    <title>Advection-diffusion dynamics with nonlinear boundary flux as a model for crystal growth</title>
+    <updated>2019-09-05T11:24:12Z</updated>
+    <link href="https://arxiv.org/abs/1904.04302v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.04302v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze the effect of nonlinear boundary conditions on an advection-diffusion equation on the half-line. Our model is inspired by models for crystal growth where diffusion models diffusive relaxation of a displacement field, advection is induced by apical growth, and boundary conditions incorporate non-adiabatic effects on displacement at the boundary. The equation, in particular the boundary fluxes, possesses a discrete gauge symmetry, and we study the role of simple, entire solutions, here periodic, homoclinic, or heteroclinic relative to this gauge symmetry, in the global dynamics.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-08T19:11:48Z</published>
+    <arxiv:comment>30 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Antoine Pauthier</name>
+    </author>
+    <author>
+      <name>Arnd Scheel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.11509v2</id>
+    <title>Dynamic Localised Turbulent Diffusion and its Impact on the Galactic Ecosystem</title>
+    <updated>2018-12-10T19:00:01Z</updated>
+    <link href="https://arxiv.org/abs/1807.11509v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.11509v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modelling the turbulent diffusion of thermal energy, momentum, and metals is required in all galaxy evolution simulations due to the ubiquity of turbulence in galactic environments. The most commonly employed diffusion model, the Smagorinsky model, is known to be over-diffusive due to its strong dependence on the fluid velocity shear. We present a method for dynamically calculating a more accurate, locally appropriate, turbulent diffusivity: the dynamic localised Smagorinsky model. We investigate a set of standard astrophysically-relevant hydrodynamical tests, and demonstrate that the dynamic model curbs over-diffusion in non-turbulent shear flows and improves the density contrast in our driven turbulence experiments. In galactic discs, we find that the dynamic model maintains the stability of the disc by preventing excessive angular momentum transport, and increases the metal-mixing timescale in the interstellar medium. In both our isolated Milky Way-like galaxies and cosmological simulations, we find that the interstellar and circumgalactic media are particularly sensitive to the treatment of turbulent diffusion. We also examined the global gas enrichment fractions in our cosmological simulations, to gauge the potential effect on the formation sites and population statistics of Population III stars and supermassive black holes, since they are theorised to be sensitive to the metallicity of the gas out of which they form. The dynamic model is, however, not for galaxy evolution studies only. It can be applied to all astrophysical hydrodynamics simulations, including those modelling stellar interiors, planetary formation, and star formation.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-30T18:04:13Z</published>
+    <arxiv:comment>Accepted to MNRAS December 07 2018. 23 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>Douglas Rennehan</name>
+    </author>
+    <author>
+      <name>Arif Babul</name>
+    </author>
+    <author>
+      <name>Philip F. Hopkins</name>
+    </author>
+    <author>
+      <name>Romeel Davé</name>
+    </author>
+    <author>
+      <name>Belaid Moa</name>
+    </author>
+    <arxiv:doi>10.1093/mnras/sty3376</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/mnras/sty3376" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.00134v2</id>
+    <title>Dark Matter with multi-annihilation channels and AMS-02 positron excess and antiproton</title>
+    <updated>2016-01-13T08:24:01Z</updated>
+    <link href="https://arxiv.org/abs/1505.00134v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.00134v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AMS-02 provided the unprecedented statistics in the measurement of the positron fraction from cosmic rays. That may offer a unique opportunity to distinguish the positron spectrum coming from various dark matter (DM) annihilation channels, if DM is the source of this positron excess. Therefore, we consider the scenario that the DM can annihilate into leptonic, quark, and massive gauge boson channels simultaneously with floating branching ratios to test this hypothesis. We also study the impacts from MAX, MED, MIN, and DC diffusion models as well as from isothermal, NFW, and Einasto DM density profiles on our results. We found two parameter regions that can satisfy both AMS-02 $\frac{e^+}{e^++e^-}$ and $\bar{p}/p$ datasets at 95\% CL. i) Under the NFW-MIN combination with $M_χ\subset[10,30]$ TeV. ii) Under the Einasto-DC combination with $M_χ\subset[500,1500]$ GeV.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-01T09:46:49Z</published>
+    <arxiv:comment>25 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Yu-Heng Chen</name>
+    </author>
+    <author>
+      <name>Kingman Cheung</name>
+    </author>
+    <author>
+      <name>Po-Yan Tseng</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.93.015015</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.93.015015" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1304.2680v5</id>
+    <title>New Interpretation of the Recent Result of AMS-02 and Multi-component Decaying Dark Matters with non-Abelian Discrete Flavor Symmetry</title>
+    <updated>2013-12-23T13:54:51Z</updated>
+    <link href="https://arxiv.org/abs/1304.2680v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1304.2680v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently the AMS-02 experiment has released the data of positron fraction with much small statistical error. Because of the small error, it is no longer easy to fit the data with a single dark matter for a fixed diffusion model and dark matter profile. In this paper, we propose a new interpretation of the data that it originates from decay of two dark matter. This interpretation gives a rough threshold of the lighter DM component. When DM decays into leptons, the positron fraction in the cosmic ray depends on the flavor of the final states, and this is fixed by imposing non-Abelian discrete symmetry in our model. By assuming two gauge-singlet fermionic decaying DM particles, we show that a model with non-Abelian discrete flavor symmetry, e.g. $T_{13}$, can give a much better fitting to the AMS-02 data compared with single dark matter scenario. Few dimension six operators of universal leptonic decay of DM particles are allowed in our model since its decay operators are constrained by the $T_{13}$ symmetry. We also show that the lepton masses and mixings are consistent with current experimental data, due to the flavor symmetry.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-04-09T18:02:18Z</published>
+    <arxiv:comment>11 pages, 1 figure, 2 tables; version accepted for publication in European Physical Journal C</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Yuji Kajiyama</name>
+    </author>
+    <author>
+      <name>Hiroshi Okada</name>
+    </author>
+    <author>
+      <name>Takashi Toma</name>
+    </author>
+    <arxiv:doi>10.1140/epjc/s10052-014-2722-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1140/epjc/s10052-014-2722-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0802.0818v2</id>
+    <title>VHE emission from M82</title>
+    <updated>2008-05-23T13:50:52Z</updated>
+    <link href="https://arxiv.org/abs/0802.0818v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0802.0818v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Spurred by the improved measurement sensitivity in the very-high-energy (VHE: &gt;100 GeV) gamma-ray band, we assess the feasibility of detection of the nearby starburst galaxy M82. VHE emission is expected to be predominantly from the decay of neutral pions which are produced in energetic proton interactions with ambient protons. An estimate of VHE emission from this process is obtained by an approximate, semi-quantitative calculation, and also by a detailed numerical treatment based on a convection-diffusion model for energetic electron and proton propagation and energy losses. All relevant hadronic and leptonic processes are considered, gauged by the measured synchrotron radio emission from the inner disk region. We estimate an integrated flux f(&gt;100 GeV) 2E-12 1/(cm^2 s), possibly detectable by the current northern-hemisphere imaging air Cherenkov telescopes, MAGIC and VERITAS, and a good candidate for detection with the upcoming MAGIC II telescope. We also estimate f(&gt;100 MeV) E-8 1/(cm^2 s), a level of emission that can be detected by GLAST/LAT based on the projected sensitivity for a one-year observation.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-02-06T15:05:02Z</published>
+    <arxiv:comment>A&amp;A, in press. 8 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <author>
+      <name>M. Persic</name>
+      <arxiv:affiliation>INAF/INFN Trieste</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Y. Rephaeli</name>
+      <arxiv:affiliation>Tel-Aviv U., UCSD</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Y. Arieli</name>
+      <arxiv:affiliation>Tel-Aviv U.</arxiv:affiliation>
+    </author>
+  </entry>
+</feed>

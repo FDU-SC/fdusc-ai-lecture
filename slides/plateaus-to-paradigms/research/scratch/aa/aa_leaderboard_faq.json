@@ -1,0 +1,11 @@
+{
+ "Which AI model ranks #1 on the LLM Leaderboard?": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback) currently ranks #1 on the Artificial Analysis LLM Leaderboard with an Intelligence Index score of 53, out of 161 models ranked.",
+ "What are the top models on the LLM Leaderboard?": "The top models by Intelligence Index are: 1. Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback) (53), 2. Claude Fable 5.1 (Adaptive Reasoning, Xhigh Effort, Default Fallback) (53), 3. GPT-6 Astra (max) (53), 4. GPT-6 Astra (xhigh) (53), 5. Claude Fable 5.1 (Adaptive Reasoning, High Effort, Default Fallback) (51).",
+ "Which AI model has the fastest output speed?": "Celeris-1 is the fastest at 1,478.6 tokens per second, followed by Mercury 2 (630.1 t/s) and Gemini 2.5 Flash-Lite (Reasoning) (383.7 t/s).",
+ "Which AI model is the most affordable?": "Granite 4.2 3B has the lowest cost per Intelligence Index task at $0.01, followed by GPT-5.6 Luna (low) ($0.01) and GPT-5.6 Luna (Non-reasoning) ($0.01).",
+ "Which is the best open weights model on the leaderboard?": "GLM-5.3 (max) is the highest-ranked open weights model with an Intelligence Index score of 45. There are 80 open weights models out of 161 total on the leaderboard.",
+ "What are the top open weights models on the leaderboard?": "The top open weights models by Intelligence Index are: 1. GLM-5.3 (max) (45), 2. Kimi K3 (max) (44), 3. GLM 5.3 Flash (42).",
+ "Which is the best reasoning model on the leaderboard?": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback) leads among 141 reasoning models with an Intelligence Index score of 53. Reasoning models use extended thinking to solve complex problems before responding.",
+ "How do I filter models on the leaderboard?": "The leaderboard includes filters to narrow results by model type (reasoning vs non-reasoning), openness (open weights vs proprietary), and other criteria. You can also adjust prompt options to see how performance varies with different input lengths.",
+ "Where can I see more detailed metrics for a model?": "Click on any model name in the leaderboard to visit its dedicated comparison page with detailed charts covering intelligence, pricing, speed, latency, and more. You can also compare API providers for each model."
+}

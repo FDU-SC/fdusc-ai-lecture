@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/JmnznE31f4srui+eSIDucfLaOS8</id>
+  <title>arXiv Query: search_query=abs:"J1-J2" AND abs:"neural"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:43:55Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22J1-J2%22+AND+abs:%22neural%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07555v2</id>
+    <title>A Neural-Guided Variational Quantum Algorithm for Efficient Sign Structure Learning in Hybrid Architectures</title>
+    <updated>2026-03-09T15:04:35Z</updated>
+    <link href="https://arxiv.org/abs/2507.07555v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.07555v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational quantum algorithms hold great promise for unlocking the power of near-term quantum processors, yet high measurement costs, barren plateaus, and challenging optimization landscapes frequently hinder them. Here, we introduce sVQNHE, a neural-guided variational quantum algorithm that decouples amplitude and sign learning across classical and quantum modules, respectively. Our approach employs shallow quantum circuits composed of commuting diagonal gates to efficiently model quantum phase information, while a classical neural network learns the amplitude distribution and guides circuit optimization in a bidirectional feedback loop. This hybrid quantum-classical synergy not only reduces measurement costs but also achieves high expressivity with limited quantum resources and improves the convergence rate of the variational optimization. We demonstrate the advancements brought by sVQNHE through extensive numerical experiments. For the 6-qubit J1-J2 model, a prototypical system with a severe sign problem for Monte Carlo-based methods, it reduces the mean absolute error by 98.9% and suppresses variance by 99.6% relative to a baseline neural network, while requiring nearly 19x fewer optimization steps than a standard hardware-efficient VQE. Furthermore, for MaxCut problems on 45-vertex Erdos-Renyi graphs, sVQNHE improves solution quality by 19% and quantum resource efficiency by 85%. Importantly, this framework is designed to be scalable and robust against hardware noise and finite-sampling uncertainty, making it well-suited for both current NISQ processors and future high-quality quantum computers. Our results highlight a promising path forward for efficiently tackling complex many-body and combinatorial optimization problems by fully exploiting the synergy between classical and quantum resources in the NISQ era and beyond.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-10T08:54:49Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mengzhen Ren</name>
+    </author>
+    <author>
+      <name>Yu-Cheng Chen</name>
+    </author>
+    <author>
+      <name>Yangsen Ye</name>
+    </author>
+    <author>
+      <name>Min-Hsiu Hsieh</name>
+    </author>
+    <author>
+      <name>Alice Hu</name>
+    </author>
+    <author>
+      <name>Chang-Yu Hsieh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03466v2</id>
+    <title>Design principles of deep translationally-symmetric neural quantum states for frustrated magnets</title>
+    <updated>2025-10-27T09:18:28Z</updated>
+    <link href="https://arxiv.org/abs/2505.03466v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.03466v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep neural network quantum states have emerged as a leading method for studying the ground states of quantum magnets. Successful architectures exploit translational symmetry, but the root of their effectiveness and differences between architectures remain unclear. Here, we apply the ConvNext architecture, designed to incorporate elements of transformers into convolutional networks, to quantum many-body ground states. We find that it is remarkably similar to the factored vision transformer, which has been employed successfully for several frustrated spin systems, allowing us to relate this architecture to more conventional convolutional networks. Through a series of numerical experiments we design the ConvNext to achieve greatest performance at lowest computational cost, then apply this network to the Shastry-Sutherland and J1-J2 models, obtaining variational energies comparable to the state of the art, providing a blueprint for network design choices of translationally-symmetric architectures to tackle challenging ground-state problems in frustrated magnetism.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-06T12:08:59Z</published>
+    <arxiv:comment>15 pages, 8 figures, updated version</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Research 7, 043099 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Rajah P. Nutakki</name>
+    </author>
+    <author>
+      <name>Ahmedeo Shokry</name>
+    </author>
+    <author>
+      <name>Filippo Vicentini</name>
+    </author>
+    <arxiv:doi>10.1103/ybgv-35jm</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/ybgv-35jm" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.17140v2</id>
+    <title>Adiabatic Fine-Tuning of Neural Quantum States Enables Detection of Phase Transitions in Weight Space</title>
+    <updated>2025-04-18T13:30:49Z</updated>
+    <link href="https://arxiv.org/abs/2503.17140v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.17140v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states (NQS) have emerged as a powerful tool for approximating quantum wavefunctions using deep learning. While these models achieve remarkable accuracy, understanding how they encode physical information remains an open challenge. In this work, we introduce adiabatic fine-tuning, a scheme that trains NQS across a phase diagram, leading to strongly correlated weight representations across different models. This correlation in weight space enables the detection of phase transitions in quantum systems by analyzing the trained network weights alone. We validate our approach on the transverse field Ising model and the J1-J2 Heisenberg model, demonstrating that phase transitions manifest as distinct structures in weight space. Our results establish a connection between physical phase transitions and the geometry of neural network parameters, opening new directions for the interpretability of machine learning models in physics.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-21T13:42:11Z</published>
+    <arxiv:comment>Accepted at the ICLR Workshop on Neural Network Weights as a New Data Modality 2025. Code available at: https://gitlab.com/QMAI/papers/nqsweights</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Vinicius Hernandes</name>
+    </author>
+    <author>
+      <name>Thomas Spriggs</name>
+    </author>
+    <author>
+      <name>Saqar Khaleefah</name>
+    </author>
+    <author>
+      <name>Eliska Greplova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.23018v3</id>
+    <title>Optimizing Temperature Distributions for Training Neural Quantum States using Parallel Tempering</title>
+    <updated>2025-06-02T21:20:51Z</updated>
+    <link href="https://arxiv.org/abs/2410.23018v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.23018v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Parameterized artificial neural networks (ANNs) can be very expressive ansatzes for variational algorithms, reaching state-of-the-art energies on many quantum many-body Hamiltonians. Nevertheless, the training of the ANN can be slow and stymied by the presence of local minima in the parameter landscape. One approach to mitigate this issue is to use parallel tempering methods, and in this work we focus on the role played by the temperature distribution of the parallel tempering replicas. Using an adaptive method that adjusts the temperatures in order to equate the exchange probability between neighboring replicas, we show that this temperature optimization can significantly increase the success rate of the variational algorithm with negligible computational cost by eliminating bottlenecks in the replicas' random walk. We demonstrate this using two different neural networks, a restricted Boltzmann machine and a feedforward network, which we use to study a toy problem based on a permutation invariant Hamiltonian with a pernicious local minimum and the J1-J2 model on a rectangular lattice.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-30T13:48:35Z</published>
+    <arxiv:comment>13 pages, 9 figures. v2: Updated to published article</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. E 111, 055306 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Conor Smith</name>
+    </author>
+    <author>
+      <name>Quinn T. Campbell</name>
+    </author>
+    <author>
+      <name>Tameem Albash</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.111.055306</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.111.055306" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.16453v1</id>
+    <title>Phase diagram of the J1-J2 Heisenberg second-order topological quantum magnet</title>
+    <updated>2024-08-29T11:39:53Z</updated>
+    <link href="https://arxiv.org/abs/2408.16453v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.16453v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Competing interactions in quantum magnets lead to a variety of emergent states, including ordered phases, nematic magnets and quantum spin liquids. Among them, topological quantum magnets represent a promising platform to create topological excitations protected by the bulk many-body excitation gap. Here we establish the phase diagram of a breathing frustrated antiferromagnetic J1-J2-Heisenberg model, featuring both ordered states and a higher-order topological quantum magnet state. Using exact many-body methods based on neural network quantum states and tensor networks, we determine the existence of a first order phase transition between stripe order and the topological quantum magnet and the second order phase transition between the Neel order and quantum magnet phase, further corroborated by calculations of the many-body gap. Using an auxiliary fermion parton formalism, we show the emergence of topological spinon corner modes stemming from the breathing order parameter of the parent Heisenberg model. Our results establish the breathing frustrated square lattice Heisenberg model as a paradigmatic system to engineer topological quantum magnetism, as recently realized in Ti lattices at MgO.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-29T11:39:53Z</published>
+    <arxiv:comment>4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Research 7, 013194 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Pascal M. Vecsei</name>
+    </author>
+    <author>
+      <name>Jose L. Lado</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevResearch.7.013194</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevResearch.7.013194" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.15521v4</id>
+    <title>Scalable Imaginary Time Evolution with Neural Network Quantum States</title>
+    <updated>2023-11-16T10:08:56Z</updated>
+    <link href="https://arxiv.org/abs/2307.15521v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.15521v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The representation of a quantum wave function as a neural network quantum state (NQS) provides a powerful variational ansatz for finding the ground states of many-body quantum systems. Nevertheless, due to the complex variational landscape, traditional methods often employ the computation of quantum geometric tensor, consequently complicating optimization techniques. Contributing to efforts aiming to formulate alternative methods, we introduce an approach that bypasses the computation of the metric tensor and instead relies exclusively on first-order gradient descent with Euclidean metric. This allows for the application of larger neural networks and the use of more standard optimization methods from other machine learning domains. Our approach leverages the principle of imaginary time evolution by constructing a target wave function derived from the Schrödinger equation, and then training the neural network to approximate this target. We make this method adaptive and stable by determining the optimal time step and keeping the target fixed until the energy of the NQS decreases. We demonstrate the benefits of our scheme via numerical experiments with 2D J1-J2 Heisenberg model, which showcase enhanced stability and energy accuracy in comparison to direct energy loss minimization. Importantly, our approach displays competitiveness with the well-established density matrix renormalization group method and NQS optimization with stochastic reconfiguration.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-28T12:26:43Z</published>
+    <arxiv:comment>Submission to SciPost</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>SciPost Phys. 15, 229 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Eimantas Ledinauskas</name>
+    </author>
+    <author>
+      <name>Egidijus Anisimovas</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.15.6.229</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.15.6.229" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.06788v2</id>
+    <title>Optimizing Design Choices for Neural Quantum States</title>
+    <updated>2023-02-01T15:11:09Z</updated>
+    <link href="https://arxiv.org/abs/2301.06788v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.06788v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural quantum states are a new family of variational ansätze for quantum-many body wave functions with advantageous properties in the notoriously challenging case of two spatial dimensions. Since their introduction a wide variety of different network architectures has been employed to study paradigmatic models in quantum many-body physics with a particular focus on quantum spin models. Nonetheless, many questions remain about the effect that the choice of architecture has on the performance on a given task. In this work, we present a unified comparison of a selection of popular network architectures and symmetrization schemes employed for ground state searches of prototypical spin Hamiltonians, namely the two-dimensional transverse-field Ising model and the J1-J2 model. In the presence of a non-trivial sign structure of the ground states, we find that the details of symmetrization crucially influence the performance. We describe this effect in detail and discuss its consequences, especially for autoregressive models, as their direct sampling procedure is not compatible with the symmetrization procedure that we found to be optimal.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-17T10:30:05Z</published>
+    <arxiv:comment>7 + 3 pages, 3 figures; Fixed references and a typo in table 1</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Moritz Reh</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+    <author>
+      <name>Martin Gärttner</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.107.195115</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.107.195115" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.07236v1</id>
+    <title>Machine learning quantum criticality in the spin-1/2 quantum antiferromagnets on the square lattice with plaquette structure</title>
+    <updated>2021-03-12T12:27:17Z</updated>
+    <link href="https://arxiv.org/abs/2103.07236v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.07236v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The power of machine learning algorithms to automatically classify different phases of matter and detect quantum phase transitions without necessity to characterize phases by various quantities like local order parameters or topological invariants as in conventional approaches defined machine learning phases of matter as a new research frontier and basic research tool in condensed matter and statistical physics. We study quantum criticality in the spin-1/2 square-lattice J1-J2 model with additional plaquette structure by combination of reinforcement and supervised machine learning techniques. In our calculations the ground-state spin-spin correlation matrices for several system sizes are first found by restricted Boltzmann machine based variational Monte Carlo method, equivalent to reinforcement learning, and then used as a training data for convolutional neural network based supervised machine learning algorithm for phases classification. The model exhibits a quantum phase transition from paramagnetic plaquette resonating valence bond state to an antiferromagnetic state and has been a topic of great interest because of its close connection to cuprate superconductors and possibility of realization in cold atoms experiments. We consider both frustrated and unfrustrated regimes and compare our results with the results obtained previously with other methods. We find that our results are in good agreement with the results obtained by coupled cluster and real space renormalization group methods for both frustrated and unfrustrated regimes. The quantum Monte Carlo and finite-size scaling result for the unfrustrated case however slightly differs from our result for the critical value of the inter-plaquette coupling strength, although the results are still in reasonable agreement.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-12T12:27:17Z</published>
+    <arxiv:comment>15 pages, 15 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Tanja Duric</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.09246v1</id>
+    <title>Efficient neural-network based variational Monte Carlo scheme for direct optimization of excited energy states in frustrated quantum systems</title>
+    <updated>2020-02-21T12:35:32Z</updated>
+    <link href="https://arxiv.org/abs/2002.09246v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.09246v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We examine applicability of the valence bond basis correlator product state ansatz, equivalent to the restricted Boltzmann machine quantum artificial neural network ansatz, and variational Monte Carlo method for direct optimization of excited energy states to study properties of strongly correlated and frustrated quantum systems. The energy eigenstates are found by stochastic minimization of the variational function for the energy eigenstates which allows direct optimization of particular energy state without knowledge of the lower energy states. This approach combined with numerous tensor network or artificial neural network ansatz wavefunctions then allows further insight into quantum phases and phase transitions in various strongly correlated models by considering properties of these systems beyond the ground state properties. Also, the method is in general applicable to any dimension and has no sign instability. An example that we consider is the square lattice J1-J2 antiferromagnetic Heisenberg model. The model is one of the most studied models in frustrated quantum magnetism since it is closely related to the disappearance of the antiferromagnetic order in the high-Tc superconducting materials and there is still no agreement about the properties of the system in the highly frustrated regime near J2/J1 = 0.5. For J1-J2 model we write the variational ansatz in terms of the two site correlators and in the valence bond basis and calculate lowest energy eigenstates in the highly frustrated regime near J2/J1 = 0.5 where the system has a paramagnetic phase. We find that our results are in good agreement with previously obtained results which confirms applicability of the method to study frustrated spin systems.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-21T12:35:32Z</published>
+    <arxiv:comment>9 pages and 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 102, 085104 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Tanja Duric</name>
+    </author>
+    <author>
+      <name>Tomislav Seva</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.102.085104</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.102.085104" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.06713v1</id>
+    <title>Study of the Two-Dimensional Frustrated J1-J2 Model with Neural Network Quantum States</title>
+    <updated>2019-03-15T18:00:01Z</updated>
+    <link href="https://arxiv.org/abs/1903.06713v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.06713v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The use of artificial neural networks to represent quantum wave-functions has recently attracted interest as a way to solve complex many-body problems. The potential of these variational parameterizations has been supported by analytical and numerical evidence in controlled benchmarks. While approaching the end of the early research phase in this field, it becomes increasingly important to show how neural-network states perform for models and physical problems that constitute a clear open challenge for other many-body computational methods. In this paper we start addressing this aspect, concentrating on a presently unsolved model describing two-dimensional frustrated magnets. Using a fully convolutional neural network model as a variational ansatz, we study the frustrated spin-1/2 J1-J2 Heisenberg model on the square lattice. We demonstrate that the resulting predictions for both ground-state energies and properties are competitive with, and often improve upon, existing state-of-the-art methods. In a relatively small region in the parameter space, corresponding to the maximally frustrated regime, our ansatz exhibits comparatively good but not best performance. The gap between the complexity of the models adopted here and those routinely adopted in deep learning applications is, however, still substantial, such that further improvements in future generations of neural-network quantum states are likely to be expected.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-15T18:00:01Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 100, 125124 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Kenny Choo</name>
+    </author>
+    <author>
+      <name>Titus Neupert</name>
+    </author>
+    <author>
+      <name>Giuseppe Carleo</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.100.125124</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.100.125124" title="doi"/>
+  </entry>
+</feed>

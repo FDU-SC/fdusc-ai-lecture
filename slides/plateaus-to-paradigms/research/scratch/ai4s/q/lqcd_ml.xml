@@ -1,0 +1,964 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ggStGufnXJjAYai3ReBwEJayV5g</id>
+  <title>arXiv Query: search_query=abs:"lattice QCD" AND abs:"machine learning"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:44:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22lattice+QCD%22+AND+abs:%22machine+learning%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>45</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.15583v1</id>
+    <title>Generalized Parton Distributions: Phenomenology, Extraction, and Hadron Imaging</title>
+    <updated>2026-09-14T13:53:25Z</updated>
+    <link href="https://arxiv.org/abs/2609.15583v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.15583v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalized Parton Distributions (GPDs) provide a framework for investigating the correlated momentum and spatial structure of quarks and gluons in hadrons and for accessing fundamental properties such as angular momentum and the QCD energy-momentum tensor. In this review, we discuss the present status of GPD phenomenology, emphasizing the challenges involved in connecting deeply virtual exclusive measurements to the underlying partonic structure. We organize this problem in terms of two successive inverse problems: the extraction of Compton Form Factors (CFFs) from measured observables and the reconstruction of GPDs from the convolution integrals defining the CFFs. We review the theoretical description and phenomenological parametrizations of GPDs, current strategies for CFF and GPD extraction, and the role of lattice QCD, Bayesian inference, uncertainty quantification, and artificial intelligence, including neural networks and interpretable machine-learning approaches. We discuss the limitations of present determinations and the opportunities offered by the Jefferson Lab program, complementary exclusive processes, and the future Electron-Ion Collider. Finally, we consider how increasingly precise and multidimensional information, together with new statistical and AI methodologies, will transform GPD phenomenology in the emerging era of precision hadron imaging.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-14T13:53:25Z</published>
+    <arxiv:comment>31 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Simonetta Liuti</name>
+    </author>
+    <author>
+      <name>Zaki Panjsheeri</name>
+    </author>
+    <author>
+      <name>Kemal Tezgin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.30416v1</id>
+    <title>Bias-Corrected Machine-Learning Estimation of Chiral Condensate Cumulants: A Retrospective Lattice QCD Case Study</title>
+    <updated>2026-08-31T08:14:10Z</updated>
+    <link href="https://arxiv.org/abs/2608.30416v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.30416v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a retrospective case study of bias-corrected machine learning (ML) estimates of traces of the inverse Dirac operator, $\text{Tr}\,M^{-n}$ ($n=1,2,3,4$), using a fixed lattice QCD dataset and examining how the results depend on the relative proportions of the labeled and training sets. Two supervised learning approaches are examined: one using $\text{Tr}\,M^{-1}$ as the input feature, and the other employing gauge observables such as the plaquette and rectangle. Beyond the direct estimation of $\text{Tr}\,M^{-n}$, we further investigate two derived applications of the ML estimations: the evaluation of the cumulants of the chiral condensate within a single ensemble and that obtained through multi-ensemble reweighting across ensembles with different quark masses. Within this fixed dataset, the bias-corrected estimates show close agreement with the full-data reference under the adopted evaluation criteria, while the uncorrected estimates can exhibit amplified deviations after the nonlinear cumulant and reweighting steps. For the approach using $\text{Tr}\,M^{-1}$ as the input feature, nominal solve-count accounting suggests that the Dirac-inversion cost could be reduced to approximately $25.75\%$ of that of the conventional calculation in the present setup. This value is a cost projection rather than an end-to-end benchmark: it assumes comparable costs for successive inversions and excludes model-training and analysis overhead.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T08:14:10Z</published>
+    <arxiv:comment>27 pages, 16 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Benjamin J. Choi</name>
+    </author>
+    <author>
+      <name>Hiroshi Ohno</name>
+    </author>
+    <author>
+      <name>Akio Tomiya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.20244v1</id>
+    <title>Extraction of DVCS amplitudes off the nucleon</title>
+    <updated>2026-08-20T16:41:01Z</updated>
+    <link href="https://arxiv.org/abs/2608.20244v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.20244v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents a modern extraction of deeply virtual Compton scattering (DVCS) amplitudes off the proton and off the neutron through a global analysis of experimental data. These amplitudes serve as a crucial intermediate quantity linking generalized parton distributions (GPDs) to experimental observables. The analysis relies on a novel extraction framework recently integrated into the PARTONS software ecosystem. We employ two distinct modelling approaches for the DVCS amplitudes, both utilizing machine learning techniques: one model-agnostic and the other theory-augmented. For the first time, we incorporate the extraction of helicity-flip amplitudes, which are particularly sensitive to higher-twist effects. Furthermore, we compare our extracted amplitudes to timelike Compton scattering (TCS) data using the established relations between DVCS and TCS, serving as an important test of universality of GPDs. We also extract the DVCS subtraction constant, for which ab initio predictions from lattice QCD have been obtained. This allows us to confront these predictions with DVCS data for the first time, initiating a new virtuous cycle between first-principles theory and phenomenology.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T16:41:01Z</published>
+    <arxiv:comment>49 pages, 21 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>C. Mezrag</name>
+    </author>
+    <author>
+      <name>P. Sznajder</name>
+    </author>
+    <author>
+      <name>J. Wagner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.03311v1</id>
+    <title>Operator Learning in Lattice QCD: Spectral Reconstruction</title>
+    <updated>2026-07-03T13:28:09Z</updated>
+    <link href="https://arxiv.org/abs/2607.03311v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.03311v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we propose a novel supervised machine-learning-based strategy for extracting smeared spectral functions from Euclidean correlation functions. The strategy revisits the numerically ill-posed spectral reconstruction problem within the framework of Operator Learning through the use of DeepONet-like architectures. To illustrate the method, we construct an ensemble of neural networks trained on mock data generated from a specific class of functions. This ensemble is then employed to estimate the systematic uncertainty associated with the fact that a neural network provides only an approximation to the target operator. The procedure is fully validated on previously unseen noisy mock data. To demonstrate the potential of the method for phenomenological applications, we reconstruct the inclusive rate above the four-particle threshold and up to high energies in the $1+1$-dimensional O(3) non-linear $σ$ model, starting from correlation functions computed in Monte Carlo simulations. The final result is consistent with the known analytic spectral density and, compared with the state-of-the-art Hansen-Lupo-Tantalo algorithm, exhibits a significant reduction in the total uncertainty. While the extent to which this improvement persists in the absence of prior physical knowledge remains to be quantified, the proposed strategy can be naturally extended to more phenomenologically relevant observables and, more generally, to other operations commonly encountered in lattice QCD.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-03T13:28:09Z</published>
+    <arxiv:comment>30 pages, 16 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Alessandro De Santis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.27064v1</id>
+    <title>Flow-Based Global Proposals for Monte Carlo Sampling in SU(2) Lattice Gauge Theory</title>
+    <updated>2026-05-26T14:15:26Z</updated>
+    <link href="https://arxiv.org/abs/2605.27064v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.27064v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a formally valid machine-learning-assisted global proposal mechanism for Monte Carlo sampling in lattice gauge theory. The construction is based on a coupling-flow update on the SU(2) lattice-link manifold, in which active links are transformed conditionally on a frozen-link background. For fixed frozen links, the proposal is explicitly invertible and preserves the product Haar measure, so it can be embedded into a Metropolis-Hastings correction without requiring an explicit model of the full proposal density. We implement the method in two-dimensional pure SU(2) lattice gauge theory and benchmark it against a baseline local Metropolis algorithm used as a controlled reference kernel. In the present testbed, the learned proposal reproduces the target ensemble within statistical resolution across the tested configurations. In matched local-step comparisons, the learned proposal reproduces the target ensemble at a quality comparable to the baseline, but does not outperform the pure local baseline in the conservative matched-step case examined with seed-level statistics within this proof-of-principle setup. At the same time, a favorable mixed-step hybrid configuration yields a modest improvement in effective sample size per unit runtime. Because the learned transformation remains in a near-identity regime, the present results should be interpreted as a proof-of-principle demonstration of formal correctness and limited, configuration-dependent efficiency gain within a controlled comparison, rather than as evidence of superiority over optimized conventional update schemes. This work provides a concrete foundation for extending machine-learned nonlocal updates to larger lattices and non-Abelian gauge theories relevant to lattice QCD.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T14:15:26Z</published>
+    <arxiv:comment>13 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Seung-il Nam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.24290v2</id>
+    <title>Lattice field theories with a sign problem</title>
+    <updated>2026-05-06T09:42:21Z</updated>
+    <link href="https://arxiv.org/abs/2604.24290v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.24290v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The sign problem obstructs the determination of the QCD phase diagram in the temperature-baryon chemical potential plane using lattice QCD. We review the sign problem in QCD and related field theories, including applications to real-time dynamics. We focus on approaches where the sign problem can potentially be solved or controlled, irrespective of its severeness. These include holomorphic extensions -- Lefschetz thimbles, holomorphic flow, contour deformations, and complex Langevin dynamics --, and the introduction of new degrees of freedom -- dual variables and the tensor renormalisation group. We also highlight directions in which machine learning approaches have shown promise. Since many methods are first tested in simpler models, we provide an outlook on their feasibility for lattice systems.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-27T10:24:10Z</published>
+    <arxiv:comment>21 pages, Chapter for Encyclopedia of Nuclear Physics, Editor-in-Chief: Sanjay Reddy, Section Editor: Kenji Fukushima. v2: references added</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Dénes Sexty</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29269v1</id>
+    <title>Determining the NJL Coupling and AMM in Magnetized QCD Matter via Machine Learning</title>
+    <updated>2026-03-31T05:11:21Z</updated>
+    <link href="https://arxiv.org/abs/2603.29269v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29269v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this study, we investigate the phase structure of magnetized QCD matter by determining the field-dependent parameters of the Nambu-Jona-Lasinio (NJL) model through a physics-informed machine learning framework. Specifically, we focus on extracting the optimal functional forms for the running coupling constant $G(eB)$ and the quark anomalous magnetic moment (AMM) ratio $v_2(eB)$, utilizing lattice QCD-computed quark condensate data as the ``ground truth". By embedding the NJL gap equation as a differentiable physics-constrained module, our neural network pipeline identifies continuous parameter functions that accurately reproduce the inverse magnetic catalysis (IMC) effect. Our results demonstrate that the magnetic field smoothly suppresses both $G$ and $v_2$. This approach not only bridges the gap between effective models and lattice data but also provides new microscopic insights into the response of the QCD vacuum to strong magnetic fields.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T05:11:21Z</published>
+    <arxiv:comment>11pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Zigeng Ding</name>
+    </author>
+    <author>
+      <name>Fan Lin</name>
+    </author>
+    <author>
+      <name>Xinyang Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23731v2</id>
+    <title>A Machine Learning Approach for Lattice Gauge Fixing</title>
+    <updated>2026-03-04T08:01:36Z</updated>
+    <link href="https://arxiv.org/abs/2602.23731v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23731v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gauge fixing is an essential step in lattice QCD calculations, particularly for studying gauge-dependent observables. Traditional iterative algorithms are computationally expensive and often suffer from critical slowing down and scaling bottlenecks on large lattices. We present a novel machine learning framework for lattice gauge fixing, where Wilson lines are utilized to construct gauge transformation matrices within a convolutional neural network. The model parameters are optimized via backpropagation, and we introduce a hybrid strategy that combines a neural-network-based transformation with subsequent iterative methods. Preliminary tests on SU(3) gauge theory ensembles for Coulomb gauge demonstrate the potential of this approach to improve the efficiency of lattice gauge fixing. Furthermore, we show that the model exhibits lattice size transferability, where parameters optimized on smaller lattices remain effective for larger volumes without additional training. This framework provides a scalable path toward mitigating critical slowing down in high-precision gauge fixing.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-27T06:57:20Z</published>
+    <arxiv:comment>10 pages, 4 figures, 2 tables, Proceedings of the 42nd International Symposium on Lattice Field Theory (Lattice 2025), November 2nd - 8th, 2025, TIFR Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>PoS(LATTICE2025)041</arxiv:journal_ref>
+    <author>
+      <name>Ho Hsiao</name>
+    </author>
+    <author>
+      <name>Benjamin J. Choi</name>
+    </author>
+    <author>
+      <name>Hiroshi Ohno</name>
+    </author>
+    <author>
+      <name>Akio Tomiya</name>
+    </author>
+    <arxiv:doi>10.22323/1.518.0041</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22323/1.518.0041" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.22799v1</id>
+    <title>Complexity Growth in Flavor-Dependent Systems</title>
+    <updated>2025-11-27T23:11:46Z</updated>
+    <link href="https://arxiv.org/abs/2511.22799v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.22799v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we investigate holographic complexity growth in a flavor-dependent Einstein-Maxwell-Dilaton (EMD) model, where the parameters are determined through machine learning algorithms fitted to lattice QCD equation of state (EoS) and baryon number susceptibility data. Within the Complexity=Action (CA) conjecture, we introduce a probe string into the bulk geometry and evaluate the time derivative of its Nambu-Goto (NG) action on the Wheeler-DeWitt (WDW) patch as the holographic dual of complexity growth. Our analysis explores the dependence of complexity growth on string velocity, chemical potential, temperature, and the number of flavors. Results show maximum complexity growth for stationary strings, decreasing with string velocity. At zero chemical potential, complexity growth is largest in the pure gluon system and reduces with the addition of quark flavors. Increasing temperature and chemical potential consistently enhance complexity growth. Furthermore, complexity growth exhibits multi-valued behavior in regions corresponding to first-order transitions and single-valued behavior in crossover regimes, indicating that complexity can serve as a probe for phase transitions.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-27T23:11:46Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Wen-Bin Chang</name>
+    </author>
+    <author>
+      <name>Xun Chen</name>
+    </author>
+    <author>
+      <name>Defu Hou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.19127v1</id>
+    <title>Phase structure of 2+1-flavor QCD from an Einstein-dilaton-flavor holographic model</title>
+    <updated>2025-11-24T13:54:05Z</updated>
+    <link href="https://arxiv.org/abs/2511.19127v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.19127v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct a holographic QCD model based on the Einstein--dilaton--flavor framework with 2+1 flavors and investigate its phase structure using machine-learning techniques. At zero chemical potential, the model reproduces the equation of state and chiral transition in quantitative agreement with lattice QCD results. By varying the light and strange quark masses, we map out the quark-mass dependence of the transition order and obtain the corresponding phase diagram, which is consistent with phase structures extracted from lattice simulations and other nonperturbative approaches. In particular, the predicted first-order region is found to be small, in line with the most recent lattice QCD analyses. We also examine the critical behavior along the second-order boundaries and the tricritical region, finding that the critical exponents exhibit mean-field scaling characteristic of classical holographic constructions. Integrating machine learning with holographic QCD significantly enhances the efficiency of parameter optimization, providing a robust and practical strategy for improving the predictive power of holographic modeling of QCD thermodynamics.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-24T13:54:05Z</published>
+    <arxiv:comment>32 pages,17 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Jin-Yang Shen</name>
+    </author>
+    <author>
+      <name>Xin-Yi Liu</name>
+    </author>
+    <author>
+      <name>Jin-Rui Wu</name>
+    </author>
+    <author>
+      <name>Yue-Liang Wu</name>
+    </author>
+    <author>
+      <name>Zhen Fang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11273v2</id>
+    <title>Toward a holographic realization of the 2+1-flavor QCD phase structure</title>
+    <updated>2025-11-19T09:45:43Z</updated>
+    <link href="https://arxiv.org/abs/2511.11273v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11273v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a fully back-reacted Einstein--Maxwell--Dilaton--flavor model with dynamical light and strange sectors, calibrated to lattice QCD using a machine-learning--assisted spectral method. The model reproduces the 2+1-flavor equation of state and chiral dynamics with quantitative accuracy, and maps the Columbia plot with a tri-critical point at $m_s^{\mathrm{tri}} \simeq 21~\text{MeV}$ and a critical mass $m_c \simeq 0.785~\text{MeV}$, consistent with lattice results. At finite density, it yields a crossover-to-first-order transition and predicts a critical endpoint at $T_C = 75.4~\text{MeV}$ and $μ_C = 768~\text{MeV}$, within the reach of heavy-ion experiments. These findings establish a unified holographic framework for the QCD phase structure across quark masses and baryon density, providing the first consistent and quantitative description of both deconfinement and chiral transitions within a single holographic model.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T13:09:18Z</published>
+    <arxiv:comment>7 pages,5 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Jin-Yang Shen</name>
+    </author>
+    <author>
+      <name>Xin-Yi Liu</name>
+    </author>
+    <author>
+      <name>Jin-Rui Wu</name>
+    </author>
+    <author>
+      <name>Yue-Liang Wu</name>
+    </author>
+    <author>
+      <name>Zhen Fang</name>
+    </author>
+    <arxiv:doi>10.1103/3plt-wlt7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/3plt-wlt7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.27541v1</id>
+    <title>Holographic equation of state matched with hadron gas equation as a tool for the study of the quark-gluon plasma evolution</title>
+    <updated>2025-10-31T15:16:45Z</updated>
+    <link href="https://arxiv.org/abs/2510.27541v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.27541v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we discuss the matching of the holographic equation of state with the equation of Hadron Resonance Gas for studying the nuclear matter properties within the framework of relativistic heavy-ion collisions. Machine learning methods are applied to the calibration of model's free parameters using the lattice QCD results for the physical values of quark masses. One of the most advanced procedures for matching is used with the function that approximate behavior of both models on particular limit adopted from NEOS equation. Final hadronic spectra are obtained within multi-staged numerical approach of the iEBE-MUSIC and SMASH-vHLLE packages. The code of relativistic hydrodynamics is modified by implementing a tabulated holographic equation of state, enabling simulations of quark-gluon plasma evolution with dynamically generated initial conditions via the 3D Monte Carlo Glauber Model and SMASH. Hybrid iSS+UrQMD and Hadron Sampler+SMASH approaches are utilized at the freeze-out stage.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-31T15:16:45Z</published>
+    <arxiv:comment>8 pages, 3 figures, part of materials from XXVIth International Baldin Seminar on High Energy Physics Problems "Relativistic Nuclear Physics and Quantum Chromodynamics"</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>A. V. Anufriev</name>
+    </author>
+    <author>
+      <name>V. N. Kovalenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.24494v2</id>
+    <title>AI for Pattern Hunter: Application in Wilson Loop of 2D Lattice Yang-Mills Theory</title>
+    <updated>2026-06-24T02:06:06Z</updated>
+    <link href="https://arxiv.org/abs/2510.24494v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.24494v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We employ the Transformer to learn patterns in two-dimensional lattice Yang-Mills theory. Specifically, we represent both Wilson loops and their expectation values as tokenized sequences. Taking the shape of Wilson loops as input, the model successfully predicts expectation values with high accuracy, indicating a meaningful connection between loop geometry and physical results. Our study differs from prior machine learning applications in lattice QCD by emphasizing analytical structures rather than numerical computations. We explore model performance under varying hyperparameters, training data sizes, and sequence lengths. This work serves as a first step toward extending such methods to higher dimensions and inspiring rigorous analytical derivations.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-28T15:09:33Z</published>
+    <arxiv:comment>23 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Zeyu Li</name>
+    </author>
+    <author>
+      <name>Guorui Zhu</name>
+    </author>
+    <author>
+      <name>Wenjie He</name>
+    </author>
+    <author>
+      <name>Bo Feng</name>
+    </author>
+    <author>
+      <name>Jiaqi Chen</name>
+    </author>
+    <author>
+      <name>Ming-xing Luo</name>
+    </author>
+    <author>
+      <name>Gang Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14970v2</id>
+    <title>Melting of heavy quarkonia in QGP using deep neural networks</title>
+    <updated>2026-07-09T07:06:57Z</updated>
+    <link href="https://arxiv.org/abs/2509.14970v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.14970v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning techniques have emerged as powerful tools for tackling non-perturbative challenges in quantum chromodynamics. In this study, we introduce a data-driven framework employing deep neural networks to systematically predict the temperature-dependent behavior of the screening mass $m_D(T)$ and the strong coupling constant $α_s(T)$ within a quark-gluon plasma medium. These medium-sensitive quantities are subsequently employed to compute the thermal widths $Γ_{\text{n}}(T)$ and binding energies $E_B(T)$ of heavy quarkonia states, specifically charmonia and bottomonia, by numerically solving the Schrödinger equation with medium-modified heavy quark potentials. To estimate the dissociation temperatures $T_d$ of various quarkonia states, we employ two complementary dissociation criteria: the conventional one, where $2E_B(T_d) = Γ_{\text{n}}(T_d)$, and an additional lower bound criterion defined by $E_B(T_d) = 3T_d$. This dual-criterion approach provides a more constrained and physically motivated estimate of the temperature range over which quarkonia states dissolve in the QGP environment. Our machine learning-enhanced predictions show excellent agreement with available lattice QCD results, especially for the ground states $Υ(1S)$ and $J/ψ$, and offer new perspectives on the sequential suppression pattern detected in relativistic heavy-ion collision experiments. Overall, this work advances the quantitative description of quarkonium suppression and demonstrates the prospect of modern machine learning methods to bridge theoretical predictions and experimental observations, thereby contributing significantly to QGP tomography.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-18T14:02:10Z</published>
+    <arxiv:comment>15 pages, 14 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Phys. Rev. C 113, no.3, 034915 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Mohammad Yousuf Jamal</name>
+    </author>
+    <author>
+      <name>Fu-Peng Li</name>
+    </author>
+    <author>
+      <name>Long-Gang Pang</name>
+    </author>
+    <author>
+      <name>Guang-You Qin</name>
+    </author>
+    <arxiv:doi>10.1103/z3kh-zr1t</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/z3kh-zr1t" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.17810v1</id>
+    <title>Decoding the proton's gluonic density with lattice QCD-informed machine learning</title>
+    <updated>2025-07-23T18:00:01Z</updated>
+    <link href="https://arxiv.org/abs/2507.17810v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.17810v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a first machine learning-based decoding of the gluonic structure of the proton from lattice QCD using a variational autoencoder inverse mapper (VAIM). Harnessing the power of generative AI, we predict the parton distribution function (PDF) of the gluon given information on the reduced pseudo-Ioffe-time distributions (RpITDs) as calculated from an ensemble with lattice spacing $a\! \approx\! 0.09$ fm and a pion mass of $M_π\! \approx\! 310$ MeV. The resulting gluon PDF is consistent with phenomenological global fits within uncertainties, particularly in the intermediate-to-high-$x$ region where lattice data are most constraining. A subsequent correlation analysis confirms that the VAIM learns a meaningful latent representation, highlighting the potential of generative AI to bridge lattice QCD and phenomenological extractions within a unified analysis framework.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-23T18:00:01Z</published>
+    <arxiv:comment>7 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Brandon Kriesten</name>
+    </author>
+    <author>
+      <name>Alex NieMiera</name>
+    </author>
+    <author>
+      <name>William Good</name>
+    </author>
+    <author>
+      <name>T. J. Hobbs</name>
+    </author>
+    <author>
+      <name>Huey-Wen Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.06729v2</id>
+    <title>Data-Driven Einstein-Dilaton Model for Pure Yang-Mills Thermodynamics and Glueball Spectrum</title>
+    <updated>2025-12-05T16:28:08Z</updated>
+    <link href="https://arxiv.org/abs/2507.06729v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.06729v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a machine learning assisted holographic model that consistently describes both the equation of state and glueball spectrum of pure Yang-Mills theory, achieved through neural network reconstruction of Einstein-dilaton gravity. Our framework incorporates key non-perturbative constraints of lattice QCD data: the ground ($0^{++}$) and first-excited ($0^{++*}$) scalar glueball masses pins down the infrared (IR) geometry, while entropy density data anchors the ultraviolet (UV) behavior of the metric. A multi-stage neural network optimization then yields the full gravitational dual -- warp factor $A(z)$ and dilaton field $Φ(z)$ -- that satisfies both spectroscopic and thermodynamic constraints. The resulting model accurately reproduces the deconfinement phase transition thermodynamics (pressure, energy density, trace anomaly) and predicts higher glueball excitations ($0^{++**}$, $0^{++***}$) consistent with available lattice calculations. This work establishes a new paradigm for data-driven holographic reconstruction, solving the long-standing challenge of unified description of confinement thermodynamics and spectroscopy.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-09T10:40:37Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Xun Chen</name>
+    </author>
+    <author>
+      <name>Yidian Chen</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.02745v2</id>
+    <title>Dynamical coupled-channel models for hadron dynamics</title>
+    <updated>2025-10-14T04:54:10Z</updated>
+    <link href="https://arxiv.org/abs/2505.02745v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.02745v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamical coupled-channel (DCC) approaches parametrize the interactions and dynamics of two and more hadrons and their response to different electroweak probes. The inclusion of unitarity, three-body channels, and other properties from scattering theory allows for a reliable extraction of resonance spectra and their properties from data. We review the formalism and application of the ANL-Osaka, the Juelich-Bonn-Washington, and other DCC approaches in the context of light baryon resonances from meson, (virtual) photon, and neutrino-induced reactions, as well as production reactions, strange baryons, light mesons, heavy meson systems, exotics, and baryon-baryon interactions. Finally, we also provide a connection of the formalism to study finite-volume spectra obtained in Lattice QCD, and review applications involving modern statistical and machine learning tools.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-05T15:55:20Z</published>
+    <arxiv:comment>152 pages, 63 figures, commissioned review for Progress in Particle and Nuclear Physics, accepted version</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>Michael Döring</name>
+    </author>
+    <author>
+      <name>Johann Haidenbauer</name>
+    </author>
+    <author>
+      <name>Maxim Mai</name>
+    </author>
+    <author>
+      <name>Toru Sato</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.02670v2</id>
+    <title>Machine-learning approaches to accelerating lattice simulations</title>
+    <updated>2025-02-20T21:20:33Z</updated>
+    <link href="https://arxiv.org/abs/2502.02670v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.02670v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The last decade has seen an explosive growth of interest in exploiting developments in machine learning to accelerate lattice QCD calculations. On the sampling side, generative models are a promising approach to mitigating critical slowing down and topological freezing. Meanwhile, signal-to-noise problems have been shown to be improvable by the use of optimized improved observables. Both techniques can be made free of bias, resulting in trustworthy but reduced statistical errors. This talk reviews recent developments in this field.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-04T19:18:44Z</published>
+    <arxiv:comment>12 pages, 7 figures; contribution to the 41st International Symposium on Lattice Field Theory (Lattice 2024), 28 July - 3 August 2024, Liverpool, UK; added reference</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Scott Lawrence</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.21147v2</id>
+    <title>Using AI for Efficient Statistical Inference of Lattice Correlators Across Mass Parameters</title>
+    <updated>2025-01-14T01:19:22Z</updated>
+    <link href="https://arxiv.org/abs/2412.21147v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.21147v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice QCD is notorious for its computational expense. Modern lattice simulations require large-scale computational resources to handle the large number of Dirac operator inversions used to construct correlation functions. Machine learning (ML) techniques that can increase, at the analysis level, the information inferred from the correlation functions would therefore be beneficial. We apply supervised learning to infer two-point lattice correlation functions at different target masses. Our work proposes a new method for separating data into training and bias correction subsets for efficient uncertainty estimation. We also benchmark our ML models against a simple ratio method.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T18:26:46Z</published>
+    <arxiv:comment>7 pages, 3 figures. Contribution to the 41st International Symposium on Lattice Field Theory (LATTICE2024), 28 July - 3 August 2024, Liverpool, UK. Removed section numbers for acknowledgments and disclaimer, fixed bibliography formatting</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Octavio Vega</name>
+    </author>
+    <author>
+      <name>Andrew Lytle</name>
+    </author>
+    <author>
+      <name>Jiayu Shen</name>
+    </author>
+    <author>
+      <name>Aida X. El-Khadra</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.14902v3</id>
+    <title>Machine Learning Insights into Quark-Antiquark Interactions: Probing Field Distributions and String Tension in QCD</title>
+    <updated>2025-03-04T07:55:29Z</updated>
+    <link href="https://arxiv.org/abs/2411.14902v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.14902v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Understanding the interactions between quark-antiquark pairs is essential for elucidating quark confinement within the framework of quantum chromodynamics (QCD). This study investigates the field distribution patterns that arise between these pairs by employing advanced machine learning techniques, namely multilayer perceptrons (MLP) and Kolmogorov-Arnold networks (KAN), to analyze data obtained from lattice QCD simulations. The models developed through this training are then applied to calculate the string tension and width associated with chromo flux tubes, and these results are rigorously compared to those derived from lattice QCD. Moreover, we introduce a preliminary analytical expression that characterizes the field distribution as a function of quark separation, utilizing the KAN methodology. Our comprehensive quantitative analysis underscores the potential of integrating machine learning approaches into conventional QCD research.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-22T12:53:40Z</published>
+    <arxiv:comment>8 pages, 6 figures, minor modifications, add one figure</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Wei Kou</name>
+    </author>
+    <author>
+      <name>Xurong Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.17234v2</id>
+    <title>Polarized and unpolarized gluon PDFs: generative machine learning applications for lattice QCD matrix elements at short distance and large momentum</title>
+    <updated>2025-04-22T16:35:36Z</updated>
+    <link href="https://arxiv.org/abs/2409.17234v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.17234v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice quantum chromodynamics (QCD) calculations share a defining challenge by requiring a small finite range of spatial separation $z$ between quark/gluon bilinears for controllable power corrections in the perturbative QCD factorization, and a large hadron boost $p_z$ for a successful determination of collinear parton distribution functions (PDFs). However, these two requirements make the determination of PDFs from lattice data very challenging. We present the application of generative machine learning algorithms to estimate the polarized and unpolarized gluon correlation functions utilizing short-distance data and extending the correlation up to $zp_z \lesssim 14$, surpassing the current capabilities of lattice QCD calculations. We train physics-informed machine learning algorithms to learn from the short-distance correlation at $z\lesssim 0.36$ fm and take the limit, $p_z \to \infty$, thereby minimizing possible contamination from the higher-twist effects for a successful reconstruction of the polarized gluon PDF. We also expose the bias and problems with underestimating uncertainties associated with the use of model-dependent and overly constrained functional forms, such as $x^α(1-x)^β$ and its variants to extract PDFs from the lattice data. We propose the use of generative machine learning algorithms to mitigate these issues and present our determination of the polarized and unpolarized gluon PDFs in the nucleon.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-25T18:00:02Z</published>
+    <arxiv:comment>Published Version, 24 pages, 20 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 111 (2025) 7, 074509</arxiv:journal_ref>
+    <author>
+      <name>Talal Ahmed Chowdhury</name>
+    </author>
+    <author>
+      <name>Taku Izubuchi</name>
+    </author>
+    <author>
+      <name>Methun Kamruzzaman</name>
+    </author>
+    <author>
+      <name>Nikhil Karthik</name>
+    </author>
+    <author>
+      <name>Tanjib Khan</name>
+    </author>
+    <author>
+      <name>Tianbo Liu</name>
+    </author>
+    <author>
+      <name>Arpon Paul</name>
+    </author>
+    <author>
+      <name>Jakob Schoenleber</name>
+    </author>
+    <author>
+      <name>Raza Sabbir Sufian</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.111.074509</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.111.074509" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.00163v2</id>
+    <title>AI for Nuclear Physics: the EXCLAIM project</title>
+    <updated>2024-10-22T20:02:59Z</updated>
+    <link href="https://arxiv.org/abs/2408.00163v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.00163v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In overview of the recent activity of the newly funded EXCLusives with AI and Machine learning (EXCLAIM) collaboration is presented. The main goal of the collaboration is to develop a framework to implement AI and machine learning techniques in problems emerging from the phenomenology of high energy exclusive scattering processes from nucleons and nuclei, maximizing the information that can be extracted from various sets of experimental data, while implementing theoretical constraints from lattice QCD. A specific perspective embraced by EXCLAIM is to use the methods of theoretical physics to understand the working of ML, beyond its standardized applications to physics analyses which most often rely on industrially provided tools, in an automated way.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-31T21:15:43Z</published>
+    <arxiv:comment>9 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Simonetta Liuti</name>
+    </author>
+    <author>
+      <name>Douglas Adams</name>
+    </author>
+    <author>
+      <name>Marie Boër</name>
+    </author>
+    <author>
+      <name>Gia-Wei Chern</name>
+    </author>
+    <author>
+      <name>Marija Cuic</name>
+    </author>
+    <author>
+      <name>Michael Engelhardt</name>
+    </author>
+    <author>
+      <name>Gary R. Goldstein Brandon Kriesten</name>
+    </author>
+    <author>
+      <name>Yaohang Li</name>
+    </author>
+    <author>
+      <name>Huey-Wen Lin</name>
+    </author>
+    <author>
+      <name>Matt Sievert</name>
+    </author>
+    <author>
+      <name>Dennis Sivers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.09258v1</id>
+    <title>Extraction of Information from Polarized Deep Exclusive Scattering with Machine Learning</title>
+    <updated>2024-06-13T16:00:03Z</updated>
+    <link href="https://arxiv.org/abs/2406.09258v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.09258v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A framework defining benchmarks for the analysis of polarized exclusive scattering cross sections is proposed that uses physics symmetry constraints as well as lattice QCD predictions. These constraints are built into machine learning (ML) algorithms. Both physics driven and ML based benchmarks are applied to a wide range of deeply virtual exclusive processes through explainable ML techniques with controllable uncertainties. The observables, namely the Compton Form Factors (CFFs) which are convolutions of Generalized Parton Distributions (GPDs), are extracted using methods such as the random targets method to evaluate the separate contribution of the aleatoric and epistemic uncertainties in exclusive scattering analyses.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-13T16:00:03Z</published>
+    <arxiv:comment>10 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Simonetta Liuti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.06179v2</id>
+    <title>Flavor dependent Critical endpoint from holographic QCD through machine learning</title>
+    <updated>2025-01-23T04:02:37Z</updated>
+    <link href="https://arxiv.org/abs/2405.06179v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.06179v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>QCD phase diagram in the $T - μ$ plane and the equation of state for pure gluon, 2-flavor, 2+1-flavor systems, and 2+1+1-flavor systems have been investigated using the Einstein-Maxwell-Dilaton (EMD) framework at finite temperature and chemical potential. By inputting lattice QCD data for the equation of state and baryon number susceptibility at zero chemical potential into holographic model, all the parameters can be determined with the aid of machine learning algorithms. Our findings indicate that the deconfinement phase transition is of first order for the pure gluon system with critical temperature $T_c = 0.265$ GeV at vanishing chemical potential. The phase transition for the 2-flavor, 2+1-flavor systems, and 2+1+1-flavor systems are crossover at vanishing chemical potential and first-order at high chemical potential, and the critical endpoint (CEP) in the $T - μ$ plane locates at ($μ_B^c$=0.46 GeV, $T^c$=0.147 GeV), ($μ_B^c$ = 0.74 GeV, $T^c$ = 0.094 GeV), and ($μ_B^c$= 0.87 GeV,$T^c$ = 0.108 GeV), respectively. Additionally, the thermodynamic quantities of the system for different flavors at finite chemical potential are presented in this paper. It is observed that the difference between the 2+1-flavor and 2+1+1-flavor systems is invisible at vanishing chemical potential and low temperature. The location of CEP for 2+1+1-flavor system deviates explicitly from that of the 2+1-flavor system with the increase of chemical potential. Both 2+1-flavor and 2+1+1-flavor systems differ significantly from the 2-flavor system. Moreover, at zero temperature, the critical chemical potential is found to be $μ_B$ = 1.1 GeV, 1.6 GeV, 1.9 GeV for the 2-flavor, 2+1-flavor and 2+1+1-flavor systems, respectively.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-10T01:45:33Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Xun Chen</name>
+    </author>
+    <author>
+      <name>Mei Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.11674v1</id>
+    <title>Practical applications of machine-learned flows on gauge fields</title>
+    <updated>2024-04-17T18:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2404.11674v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.11674v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows are machine-learned maps between different lattice theories which can be used as components in exact sampling and inference schemes. Ongoing work yields increasingly expressive flows on gauge fields, but it remains an open question how flows can improve lattice QCD at state-of-the-art scales. We discuss and demonstrate two applications of flows in replica exchange (parallel tempering) sampling, aimed at improving topological mixing, which are viable with iterative improvements upon presently available flows.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-17T18:17:14Z</published>
+    <arxiv:comment>9 pages, 5 figures, proceedings of the 40th International Symposium on Lattice Field Theory (Lattice 2023)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.12176v1</id>
+    <title>Fine grinding localized updates via gauge equivariant flows in the 2D Schwinger model</title>
+    <updated>2024-02-19T14:29:43Z</updated>
+    <link href="https://arxiv.org/abs/2402.12176v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.12176v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>State-of-the-art simulations of discrete gauge theories are based on Markov chains with local changes in the field space, which however at very fine lattice spacings are notoriously difficult due to separated topological sectors of the gauge field. Hybrid Monte Carlo (HMC) algorithms, which are very efficient at coarser lattice spacings, suffer from increasing autocorrelation times. This makes simulation of lattice QCD close to the continuum infeasible even with exa-scale computing.
+  An approach, which can overcome long autocorrelation times, is based on trivializing maps, where a new gauge proposal is given by mapping a configuration from a trivial space to the target one, distributed via the associated Boltzmann factor. Using gauge equivariant coupling layers, the map can be approximated via machine learning techniques. However the deviations scale with the volume in case of local theories and extensive distributions, rendering a global update unfeasible for realistic box sizes.
+  In this proceeding, we will discuss the potential of localized updates in case of the 2D Schwinger Model. Using gauge-equivariant flow maps, a local update can be fine grained towards finer lattice spacing. Based on this we will present results on simulating the 2D Schwinger Model with dynamical Nf=2 Wilson fermions at fine lattice spacings using scalable global correction steps and compare the performance to the HMC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-19T14:29:43Z</published>
+    <arxiv:comment>10 pages, 9 figures, presented at the 40th International Symposium on Lattice Field Theory, (LATTICE2023), July 31st - August 4th, 2023, Fermilab, Batavia, Illinois, USA</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Jacob Finkenrath</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.07450v3</id>
+    <title>Machine learning mapping of lattice correlated data</title>
+    <updated>2024-08-30T17:05:37Z</updated>
+    <link href="https://arxiv.org/abs/2402.07450v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.07450v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We discuss a machine learning (ML) regression model to reduce the computational cost of disconnected diagrams in lattice QCD calculations. This method creates a mapping between the results of fermionic loops computed at different quark masses and flow times. The ML mapping, trained with just a small fraction of the complete data set, makes use of translational invariance and provides consistent result with comparable uncertainties over the calculation done over the whole ensemble, resulting in a significant computational gain.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-12T07:14:25Z</published>
+    <arxiv:comment>17 pages, 11 figures. Version accepted for publication</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Jangho Kim</name>
+    </author>
+    <author>
+      <name>Giovanni Pederiva</name>
+    </author>
+    <author>
+      <name>Andrea Shindler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.06417v2</id>
+    <title>Machine learning holographic black hole from lattice QCD equation of state</title>
+    <updated>2024-03-30T02:34:06Z</updated>
+    <link href="https://arxiv.org/abs/2401.06417v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.06417v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Based on lattice QCD results of equation of state (EOS) and baryon number susceptibility at zero baryon chemical potential, and supplemented by machine learning techniques, we construct the analytic form of the holographic black hole metric in the Einstein-Maxwell-Dilaton (EMD) framework for pure gluon, 2-flavor, and 2+1-flavor systems, respectively. The dilaton potentials solved from Einstein equations are in good agreement with the extended non-conformal DeWolfe-Gubser-Rosen (DGR) type dilaton potentials fixed by lattice QCD EOS, which indicates the robustness of the EMD framework. The predicted critical endpoint (CEP) in the 2+1-flavor system is located at $(T^c$=0.094GeV, $μ^c_B$=0.74GeV), which is close to the results from the realistic Polyakov-Nambu-Jona-Lasinio(PNJL) model, the functional renormalization group, and the holographic model with extended DeWolfe-Gubser-Rosen dilaton potential.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-12T07:26:10Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Xun Chen</name>
+    </author>
+    <author>
+      <name>Mei Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.03023v2</id>
+    <title>A study of topological quantities of lattice QCD by a modified DCGAN frame</title>
+    <updated>2024-02-18T04:47:47Z</updated>
+    <link href="https://arxiv.org/abs/2312.03023v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.03023v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A modified deep convolutional generative adversarial network (M-DCGAN) frame is proposed to study the N-dimensional (ND) topological quantities in lattice QCD based on the Monte Carlo (MC) simulations. We construct a new scaling structure including fully connected layers to support the generation of high-quality high-dimensional images for the M-DCGAN. Our results show that the M-DCGAN scheme of the Machine learning should be helpful for us to calculate efficiently the 1D distribution of topological charge and the 4D topological charge density compared with the case by the MC simulation alone.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-05T07:44:21Z</published>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Lin Gao</name>
+    </author>
+    <author>
+      <name>Heping Ying</name>
+    </author>
+    <author>
+      <name>Jianbo Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.05344v1</id>
+    <title>Extraction of lattice QCD spectral densities from an ensemble of trained machines</title>
+    <updated>2023-12-01T15:48:58Z</updated>
+    <link href="https://arxiv.org/abs/2401.05344v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.05344v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this talk we discuss a novel method, that we have presented in Ref. [1], to extract hadronic spectral densities from lattice correlators by using deep learning techniques. Hadronic spectral densities play a crucial role in the study of the phenomenology of strong-interacting particles and the problem of their extraction from Euclidean lattice correlators has already been approached in the literature by using machine learning techniques. A distinctive feature of our method is a model-independent training strategy that we implement by parametrizing the training sets over a functional space spanned by Chebyshev polynomials. The other distinctive feature is a reliable estimate of the systematic uncertainties that we obtain by introducing an ensemble of machines in order to study numerically the asymptotic limits of infinitely large networks and training sets. The method is validated on a very large set of random mock data and also in the case of lattice QCD data.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-01T15:48:58Z</published>
+    <arxiv:comment>Contribution to the 40th International Symposium on Lattice Field Theory, Lattice 2023, Fermilab, Batavia, Illinois, USA</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michele Buzzicotti</name>
+    </author>
+    <author>
+      <name>Alessandro De Santis</name>
+    </author>
+    <author>
+      <name>Nazario Tantalo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.10108v3</id>
+    <title>Study of topological quantities of lattice QCD with a modified Wasserstein generative adversarial network</title>
+    <updated>2024-06-10T13:41:14Z</updated>
+    <link href="https://arxiv.org/abs/2311.10108v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.10108v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a modified Wasserstein generative adversarial network (M-WGAN) to study the distribution of the topological charge in lattice QCD based on Monte Carlo simulations. We construct new generator and discriminator in M-WGAN to support the generation of high-quality distribution. Our results show that the M-WGAN scheme of machine learning should be helpful for us to calculate efficiently the 1D distribution of topological charge compared with the method by the MC simulation alone.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-15T12:52:42Z</published>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Lin Gao</name>
+    </author>
+    <author>
+      <name>Heping Ying</name>
+    </author>
+    <author>
+      <name>Jianbo Zhang</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.109.074509</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.109.074509" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.03381v1</id>
+    <title>Learning Trivializing Flows in a $φ^4$ theory from coarser lattices</title>
+    <updated>2023-10-05T08:32:16Z</updated>
+    <link href="https://arxiv.org/abs/2310.03381v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.03381v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The so-called trivializing flows were proposed to speed up Hybrid Monte Carlo simulations, where the Wilson flow was used as an approximation of a trivializing map, a transformation of the gauge fields which trivializes the theory. It was shown that the scaling of the computational costs towards the continuum did not change with respect to HMC. The introduction of machine learning tecniques, especially normalizing flows, for the sampling of lattice gauge theories has shed some hope on solving topology freezing in lattice QCD simulations. In this talk I will present our work in a $φ^{4}$ theory using normalizing flows as trivializing flows (given its similarity with the idea of a trivializing map), training from a trivial distribution as well as from coarser lattices, and study its scaling towards the continuum, comparing it with standard HMC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-05T08:32:16Z</published>
+    <arxiv:comment>7 pages of main content, 5 figures, 1 table. Talk presented at the 40th International Symposium on Lattice Field Theory (Lattice2023), July 31st - August 4th, 2023, Fermi National Accelerator Laboratory</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>David Albandea</name>
+    </author>
+    <author>
+      <name>Luigi Del Debbio</name>
+    </author>
+    <author>
+      <name>Pilar Hernández</name>
+    </author>
+    <author>
+      <name>Richard Kenway</name>
+    </author>
+    <author>
+      <name>Joe Marsh Rossney</name>
+    </author>
+    <author>
+      <name>Alberto Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.01647v1</id>
+    <title>Combining lattice QCD and phenomenological inputs on generalised parton distributions at moderate skewness</title>
+    <updated>2023-06-02T16:16:58Z</updated>
+    <link href="https://arxiv.org/abs/2306.01647v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.01647v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a systematic study demonstrating the impact of lattice QCD data on the extraction of generalised parton distributions (GPDs). For this purpose, we use a previously developed modelling of GPDs based on machine learning techniques fulfilling the theoretical requirements of polynomiality, a form of positivity constraint and known reduction limits. A special care is given to estimate the uncertainty stemming from the ill-posed character of the connection between GPDs and the experimental processes usually considered to constrain them, like deeply virtual Compton scattering (DVCS). Mock lattice QCD data inputs are included in a Bayesian framework to the prior model which is fitted to reproduce the most experimentally accessible information of a phenomenological model by Goloskov and Kroll. We highlight the impact of the precision, correlation and kinematic coverage of lattice data on GPD extraction at moderate $ξ$ which has only been brushed in the literature so far, paving the way for a joint extraction of GPDs.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-02T16:16:58Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Michael Joseph Riberdy</name>
+    </author>
+    <author>
+      <name>Hervé Dutrieux</name>
+    </author>
+    <author>
+      <name>Cédric Mezrag</name>
+    </author>
+    <author>
+      <name>Paweł Sznajder</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.07994v1</id>
+    <title>Deep-learning quasi-particle masses from QCD equation of state</title>
+    <updated>2022-11-15T09:03:21Z</updated>
+    <link href="https://arxiv.org/abs/2211.07994v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.07994v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The interactions of quarks and gluons are strong at non-perturbative region. The equation of state (EoS) of a strongly-interacting quantum chromodynamics (QCD) medium can only be studied using the first-principle lattice QCD calculations. However, the complicated QCD EoS can be reproduced using simple statistical formula by treating the medium as a free parton gas whose fundamental degree of freedoms are dressed quarks and gluons called quasi-particles, with temperature-dependent masses. We use deep neural network and auto differentiation to solve this variational problem in which the masses of quasi gluons, up/down and strange quarks are three unknown functions, whose forms are represented by deep neural network. We reproduce the QCD EoS using these machine learned quasi-particle masses, and calculate the shear viscosity over entropy density ($η/s$) as a function of temperature of the hot QCD matter.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-15T09:03:21Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Phys.Lett.B 844 (2023) 138088</arxiv:journal_ref>
+    <author>
+      <name>Fu-Peng Li</name>
+    </author>
+    <author>
+      <name>Hong-Liang Lü</name>
+    </author>
+    <author>
+      <name>Long-Gang Pang</name>
+    </author>
+    <author>
+      <name>Guang-You Qin</name>
+    </author>
+    <arxiv:doi>10.1016/j.physletb.2023.138088</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physletb.2023.138088" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.04638v2</id>
+    <title>Deriving dilaton potential in improved holographic QCD from chiral condensate</title>
+    <updated>2022-11-24T10:35:38Z</updated>
+    <link href="https://arxiv.org/abs/2209.04638v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.04638v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive an explicit form of the dilaton potential in improved holographic QCD (IHQCD) from the QCD lattice data of the chiral condensate as a function of the quark mass. This establishes a data-driven holographic modeling of QCD -- machine learning holographic QCD. The modeling consists of two steps for solving inverse problems. The first inverse problem is to find the emergent bulk geometry consistent with the lattice QCD simulation data at the boundary. We solve this problem with the refinement of neural ordinary differential equation, a machine learning technique. The second inverse problem is to derive a bulk gravity action with a dilaton potential such that its solution is the emergent bulk geometry. We solve this problem at non-zero temperature, and derive the explicit form of the dilaton potential. The dilaton potential determines the bulk action, the Einstein-dilaton system, thus we derive holographically the bulk system from the QCD chiral condensate data. The usefulness of the model is shown in the example of the prediction of the string breaking distance, whose value is found to be consistent with another lattice QCD data.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-10T10:56:24Z</published>
+    <arxiv:comment>14 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Koji Hashimoto</name>
+    </author>
+    <author>
+      <name>Keisuke Ohashi</name>
+    </author>
+    <author>
+      <name>Takayuki Sumimoto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.13590v1</id>
+    <title>Bayesian inference of real-time dynamics from lattice QCD</title>
+    <updated>2022-08-29T13:36:00Z</updated>
+    <link href="https://arxiv.org/abs/2208.13590v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.13590v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The computation of dynamical properties of nuclear matter, ranging from parton distribution functions of nucleons and nuclei to transport properties in the quark-gluon plasma, constitutes a central goal of modern theoretical physics. This real-time physics often defies a perturbative treatment and the most successful strategy so far is to deploy lattice QCD simulations. These numerical computations are based on Monte-Carlo sampling and formulated in an artificial Euclidean time. Real-time physics is most conveniently formulated in terms of spectral functions, which are hidden in lattice QCD behind an ill-posed inverse problem. I will discuss the current methods state-of-the art in the extraction of spectral functions from lattice QCD simulations, based on Bayesian inference and emphasize the importance of prior domain knowledge, vital to regularizing the otherwise ill-posed extraction task. With Bayesian inference allowing us to make explicit the uncertainty in both observations and in our prior knowledge, a systematic estimation of the total uncertainties in the extracted spectral functions is nowadays possible. Two implementations of the Bayesian Reconstruction (BR) method for spectral function extraction, one for MAP point estimates and one based on an open access Monte-Carlo sampler are provided.I will briefly touch on the use of machine learning for spectral function reconstruction and discuss some new insight it has brought to the Bayesian community.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-29T13:36:00Z</published>
+    <arxiv:comment>33 pages, 4 figures, invited review for the Frontiers in Physics collection "Uncertainty Quantification in Nuclear Physics"</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Front. Phys. 10:1028995 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Alexander Rothkopf</name>
+    </author>
+    <arxiv:doi>10.3389/fphy.2022.1028995</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3389/fphy.2022.1028995" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08903v2</id>
+    <title>GomalizingFlow.jl: A Julia package for Flow-based sampling algorithm for lattice field theory</title>
+    <updated>2023-10-04T09:53:56Z</updated>
+    <link href="https://arxiv.org/abs/2208.08903v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08903v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>GomalizingFlow.jl: is a package to generate configurations for quantum field theory on the lattice using the flow based sampling algorithm in Julia programming language. This software serves two main purposes: to accelerate research of lattice QCD with machine learning with easy prototyping, and to provide an independent implementation to an existing public Jupyter notebook in Python/PyTorch. GomalizingFlow.jl implements, the flow based sampling algorithm, namely, RealNVP and Metropolis-Hastings test for two dimension and three dimensional scalar field, which can be switched by a parameter file. HMC for that theory also implemented for comparison. This package has Docker image, which reduces effort for environment construction. This code works both on CPU and NVIDIA GPU.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-18T15:19:36Z</published>
+    <arxiv:comment>15 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Akio Tomiya</name>
+    </author>
+    <author>
+      <name>Satoshi Terasaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.05803v1</id>
+    <title>AI and Theoretical Particle Physics</title>
+    <updated>2022-05-11T23:45:19Z</updated>
+    <link href="https://arxiv.org/abs/2205.05803v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.05803v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Theoretical particle physicists continue to push the envelope in both high performance computing and in managing and analyzing large data sets. For example, the goals of sub-percent accuracy in predictions of quantum chromodynamics (QCD) using large scale simulations of lattice QCD and in finding signals of rare events and new physics in exabytes of data produced by experiments at the high luminosity large hadron collider (LHC) require new tools beyond just developments in hardware. Machine learning and artificial intelligence offer the promise of dramatically reducing the computational cost and time. This chapter reviews selected areas where AI/ML tools could have a major impact, provides an overview of the challenges, and discusses how new ideas such as normalizing flows can speed up the generation of gauge configurations needed in lattice QCD calculations; the growth of ML in surrogate models and pattern matching to reduce the cost of event generators and in the analysis of experimental data; and in the search for viable vacua in the landscape of string theories. While such approaches transform aspects of particle theory into computational problems, and thus black boxes, we argue that physics-aware development of these tools combined with algorithms that ensure that the results are bias free will continue to require a deep understanding of the physics. We see this broader transformation as akin to formulating and extracting observables from simulations of lattice QCD, a numerical integration of the path integral formulation of QCD that nevertheless requires a deep understanding of the underlying quantum field theory, the standard model of particle physics and effective field theory methods.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-11T23:45:19Z</published>
+    <arxiv:comment>23 pages, 6 figures. Contribution to a book on AI in sciences</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Rajan Gupta</name>
+    </author>
+    <author>
+      <name>Tanmoy Bhattacharya</name>
+    </author>
+    <author>
+      <name>Boram Yoon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.02120v1</id>
+    <title>Prediction and compression of lattice QCD data using machine learning algorithms on quantum annealer</title>
+    <updated>2021-12-03T19:04:35Z</updated>
+    <link href="https://arxiv.org/abs/2112.02120v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.02120v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present regression and compression algorithms for lattice QCD data utilizing the efficient binary optimization ability of quantum annealers. In the regression algorithm, we encode the correlation between the input and output variables into a sparse coding machine learning algorithm. The trained correlation pattern is used to predict lattice QCD observables of unseen lattice configurations from other observables measured on the lattice. In the compression algorithm, we define a mapping from lattice QCD data of floating-point numbers to the binary coefficients that closely reconstruct the input data from a set of basis vectors. Since the reconstruction is not exact, the mapping defines a lossy compression, but, a reasonably small number of binary coefficients are able to reconstruct the input vector of lattice QCD data with the reconstruction error much smaller than the statistical fluctuation. In both applications, we use D-Wave quantum annealers to solve the NP-hard binary optimization problems of the machine learning algorithms.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-03T19:04:35Z</published>
+    <arxiv:comment>9 pages, 3 figures, Proceedings of the 38th International Symposium on Lattice Field Theory, LATTICE2021</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>PoS(LATTICE2021)143</arxiv:journal_ref>
+    <author>
+      <name>Boram Yoon</name>
+    </author>
+    <author>
+      <name>Chia Cheng Chang</name>
+    </author>
+    <author>
+      <name>Garrett T. Kenyon</name>
+    </author>
+    <author>
+      <name>Nga T. T. Nguyen</name>
+    </author>
+    <author>
+      <name>Ermal Rrapaj</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.13521v3</id>
+    <title>Machine learning spectral functions in lattice QCD</title>
+    <updated>2022-11-22T13:44:19Z</updated>
+    <link href="https://arxiv.org/abs/2110.13521v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.13521v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the inverse problem of reconstructing spectral functions from Euclidean correlation functions via machine learning. We propose a novel neural network, SVAE, which is based on the variational autoencoder (VAE) and can be naturally applied to the inverse problem. The prominent feature of the SVAE is that a Shannon-Jaynes entropy term having the ground truth values of spectral functions as prior information is included in the loss function to be minimized. We train the network with general spectral functions produced from a Gaussian mixture model. As a test, we use correlators generated from four different types of physically motivated spectral functions made of one resonance peak, a continuum term and perturbative spectral function obtained using non-relativistic QCD. From the mock data test we find that the SVAE in most cases is comparable to the maximum entropy method (MEM) in the quality of reconstructing spectral functions and even outperforms the MEM in the case where the spectral function has sharp peaks with insufficient number of data points in the correlator. By applying to temporal correlation functions of charmonium in the pseudoscalar channel obtained in the quenched lattice QCD at 0.75 $T_c$ on $128^3\times96$ lattices and $1.5$ $T_c$ on $128^3\times48$ lattices, we find that the resonance peak of $η_c$ extracted from both the SVAE and MEM has a substantial dependence on the number of points in the temporal direction ($N_τ$) adopted in the lattice simulation and $N_τ$ larger than 48 is needed to resolve the fate of $η_c$ at 1.5 $T_c$.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-26T09:23:45Z</published>
+    <arxiv:comment>25 pages, 14 figures. Investigations on the dependences of output spectral functions on the noise model of mock correlators, and detailed derivation of formulae for the output spectral function are added</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>S. -Y. Chen</name>
+    </author>
+    <author>
+      <name>H. -T. Ding</name>
+    </author>
+    <author>
+      <name>F. -Y. Liu</name>
+    </author>
+    <author>
+      <name>G. Papp</name>
+    </author>
+    <author>
+      <name>C. -B. Yang</name>
+    </author>
+  </entry>
+</feed>

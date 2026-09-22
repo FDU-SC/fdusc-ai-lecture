@@ -1,0 +1,969 @@
+                                                Surpassing Human-Level Face Verification Performance on LFW with
+                                                                         GaussianFace
+
+                                                                                       Chaochao Lu                  Xiaoou Tang
+                                                                       Department of Information Engineering, The Chinese University of Hong Kong
+                                                                                            {lc013, xtang}@ie.cuhk.edu.hk
+arXiv:1404.3840v3 [cs.CV] 20 Dec 2014
+
+
+
+
+                                                                     Abstract                                  is well known as a challenging benchmark for face ver-
+                                                                                                               ification. The dataset provides a large set of relatively
+                                            Face verification remains a challenging problem in very            unconstrained face images with complex variations in pose,
+                                        complex conditions with large variations such as pose,                 lighting, expression, race, ethnicity, age, gender, clothing,
+                                        illumination, expression, and occlusions. This problem                 hairstyles, and other parameters. Not surprisingly, LFW
+                                        is exacerbated when we rely unrealistically on a single                has proven difficult for automatic face verification methods
+                                        training data source, which is often insufficient to cover             [23, 28]. Although there has been significant work [22, 9,
+                                        the intrinsically complex face variations. This paper pro-             5, 14, 47, 13, 59, 50, 51, 53] on LFW and the accuracy
+                                        poses a principled multi-task learning approach based on               rate has been improved from 60.02% [56] to 97.35% [53]
+                                        Discriminative Gaussian Process Latent Variable Model,                 since LFW is established in 2007, these studies have not
+                                        named GaussianFace, to enrich the diversity of training                closed the gap to human-level performance [28] in face
+                                        data. In comparison to existing methods, our model                     verification.
+                                        exploits additional data from multiple source-domains to                   Why could not we surpass the human-level perfor-
+                                        improve the generalization performance of face verification            mance? Two possible reasons are found as follows:
+                                        in an unknown target-domain. Importantly, our model                        1) Most existing face verification methods assume that
+                                        can adapt automatically to complex data distributions, and             the training data and the test data are drawn from the
+                                        therefore can well capture complex face variations inherent            same feature space and follow the same distribution. When
+                                        in multiple sources. Extensive experiments demonstrate                 the distribution changes, these methods may suffer a large
+                                        the effectiveness of the proposed model in learning from               performance drop [58]. However, many practical scenarios
+                                        diverse data sources and generalize to unseen domain.                  involve cross-domain data drawn from different facial
+                                        Specifically, the accuracy of our algorithm achieves an                appearance distributions. Learning a model solely on a
+                                        impressive accuracy rate of 98.52% on the well-known and               single source data often leads to overfitting due to dataset
+                                        challenging Labeled Faces in the Wild (LFW) benchmark                  bias [55]. Moreover, it is difficult to collect sufficient
+                                        [23]. For the first time, the human-level performance in               and necessary training data to rebuild the model in new
+                                        face verification (97.53%) [28] on LFW is surpassed. 1                 scenarios, for highly accurate face verification specific to
+                                                                                                               the target domain. In such cases, it becomes critical to
+                                                                                                               exploit more data from multiple source-domains to improve
+                                        1. Introduction                                                        the generalization of face verification methods in the target-
+                                                                                                               domain.
+                                           Face verification, which is the task of determining
+                                                                                                                   2) Modern face verification methods are mainly divided
+                                        whether a pair of face images are from the same person,
+                                                                                                               into two categories: extracting low-level features [36, 3,
+                                        has been an active research topic in computer vision for
+                                                                                                               34, 10, 24], and building classification models [62, 50,
+                                        decades [28, 22, 46, 5, 47, 31, 14, 9]. It has many important
+                                                                                                               13, 37, 31, 56, 5, 28, 47, 33]. Although these existing
+                                        applications, including surveillance, access control, image
+                                                                                                               methods have made great progress in face verification, most
+                                        retrieval, and automatic log-on for personal computer or
+                                                                                                               of them are less flexible when dealing with complex data
+                                        mobile devices. However, various visual complications
+                                                                                                               distributions. For the methods in the first category, for
+                                        deteriorate the performance of face verification, as shown
+                                                                                                               example, low-level features such as SIFT [36], LBP [3],
+                                        by numerous studies on real-world face images from the
+                                                                                                               and Gabor [34] are handcrafted. Even for features learned
+                                        wild [23]. The Labeled Faces in the Wild (LFW) dataset
+                                                                                                               from data [10, 24], the algorithm parameters (such as the
+                                          1 For project update, please refer to mmlab.ie.cuhk.edu.hk.          depth of random projection tree, or the number of centers
+
+
+                                                                                                           1
+in k-means) also need to be specified by users. Similarly,                  information, and take advantage of multiple source-
+for the methods in the second category, the architectures of                domains data.
+deep networks in [62, 50, 63, 51] (for example, the number
+of layers, the number of nodes in each layer, etc.), and the             • We introduce a computationally more efficient equiva-
+parameters of the models in [31, 5, 28, 47] (for example,                  lent form of KFDA to DGPLVM. This equivalent form
+the number of Gaussians, the number of classifiers, etc.)                  reformulates KFDA to the kernel version consistent
+must also be determined in advance. Since most existing                    with the covariance function in GPs, which greatly
+methods require some assumptions to be made about the                      simplifies calculations.
+structures of the data, they cannot work well when the
+assumptions are not valid. Moreover, due to the existence of             • We introduce approximation in GPs and anchor graphs
+the assumptions, it is hard to capture the intrinsic structures            to speed up the process of inference and prediction.
+of data using these methods.
+    To this end, we propose the Multi-Task Learning ap-                  • We achieve superior performance on the challeng-
+proach based on Discriminative Gaussian Process Latent                     ing LFW benchmark [23], with an accuracy rate of
+Variable Model (DGPLVM) [57], named GaussianFace, for                      98.52%, beyond human-level performance reported in
+face verification. Unlike most existing studies [22, 5, 14, 47,            [28].
+13] that rely on a single training data source, in order to take
+advantage of more data from multiple source-domains to                 2. Related Work
+improve the performance in the target-domain, we introduce
+                                                                           Human and computer performance on face recognition
+the multi-task learning constraint to DGPLVM. Here, we
+                                                                       has been compared extensively [40, 38, 2, 54, 41, 8]. These
+investigate the asymmetric multi-task learning because we
+                                                                       studies have shown that computer-based algorithms were
+only focus on the performance improvement of the target
+                                                                       more accurate than humans in well-controlled environ-
+task. From the perspective of information theory, this
+                                                                       ments (e.g., frontal view, natural expression, and controlled
+constraint aims to maximize the mutual information be-
+                                                                       illumination), whilst still comparable to humans in the
+tween the distributions of target-domain data and multiple
+                                                                       poor condition (e.g., frontal view, natural expression, and
+source-domains data. Moreover, the GaussianFace model
+                                                                       uncontrolled illumination). However, the above conclusion
+is a reformulation based on the Gaussian Processes (GPs)
+                                                                       is only verified on face datasets with controlled variations,
+[42], which is a non-parametric Bayesian kernel method.
+                                                                       where only one factor changes at a time [40, 38]. To date,
+Therefore, our model also can adapt its complexity flexibly
+                                                                       there has been virtually no work showing that computer-
+to the complex data distributions in the real-world, without
+                                                                       based algorithms could surpass human performance on
+any heuristics or manual tuning of parameters.
+                                                                       unconstrained face datasets, such as LFW, which exhibits
+    Reformulating GPs for large-scale multi-task learning is
+                                                                       natural (multifactor) variations in pose, lighting, expression,
+non-trivial. To simplify calculations, we introduce a more
+                                                                       race, ethnicity, age, gender, clothing, hairstyles, and other
+efficient equivalent form of Kernel Fisher Discriminant
+                                                                       parameters.
+Analysis (KFDA) to DGPLVM. Despite that the Gaussian-
+Face model can be optimized effectively using the Scaled                   There has been much work dealing with multifactor
+Conjugate Gradient (SCG) technique, the inference is slow              variations in face verification. For example, Simonyan
+for large-scale data. We make use of GP approximations                 et al. applied the Fisher vector to face verification and
+[42] and anchor graphs [35] to speed up the process of                 achieved a good performance [47]. However, the Fisher
+inference and prediction, so as to scale our model to large-           vector is derived from the Gaussian mixture model (GMM),
+scale data. Our model can be applied to face verification in           where the number of Gaussians need to be specified by
+two different ways: as a binary classifier and as a feature            users, which means it cannot cover complex data auto-
+extractor. In the former mode, given a pair of face images,            matically. Li et al. proposed a non-parametric subspace
+we can directly compute the posterior likelihood for each              analysis [33, 32], but it is only a linear transformation
+class to make a prediction. In the latter mode, our model can          and cannot cover the complex distributions. Besides, there
+automatically extract high-dimensional features for each               also exist some approaches for utilizing plentiful source-
+pair of face images, and then feed them to a classifier to             domain data. Based on the Joint Bayesian algorithm [13],
+make the final decision.                                               Cao et al. proposed a transfer learning approach [9] by
+    The main contributions of this paper are as follows:               merging source-domain data with limited target-domain
+                                                                       data. Since this transfer learning approach is based on
+  • We propose a novel GaussianFace model for face                     the joint Bayesian model of original visual features, it is
+    verification by virtue of the multi-task learning con-             not suitable for handling the complex nonlinear data and
+    straint to DGPLVM. Our model can adapt to complex                  the data with complex manifold structures. Moreover,
+    distributions, avoid over-fitting, exploit discriminative          the transfer learning approach in [9] only considered two
+
+                                                                   2
+different domains, restricting its wider applications in large-       rules, resulting in robustness to overfitting. We recommend
+scale data from multiple domains. More recently, Zhu                  Rasmussen and Williams’s excellent monograph for further
+et al. [63] learned the transformation from face images               reading [42].
+under various poses and lighting conditions to a canonical
+view with a deep convolutional network. Sun et al. [51]               3.1. Gaussian Processes for Binary Classification
+learned face representation with a deep model through face               Formally, for two-class classification, suppose that we
+identification, which is a challenging multi-class prediction         have a training set D of N observations, D = {(xi , yi )}N    i=1 ,
+task. Taigman et al. [52] first utilized explicit 3D face             where the i-th input point xi ∈ RD and its corresponding
+modeling to apply a piecewise affine transformation, and              output yi is binary, with y = 1i for one class and yi = −1
+then derived a face representation from a nine-layer deep             for the other. Let X be the N × D matrix, where the row
+neural network. Although these methods have achieved                  vectors represent all n input points, and y be the column
+high performances on LFW, many parameters of them must                vector of all n outputs. We define a latent variable fi for
+be determined in advance so that they are less flexible when          each input point xi , and let f = [f1 , . . . , fN ]> . A sigmoid
+dealing with complex data distributions.                              function π(·) is imposed to squash the output of the latent
+   The core of our algorithm is GPs. To the best of our               function into [0, 1], π(fi ) = p(yi = 1|fi ). Assuming the
+knowledge, GPs methods and Multi-task learning with re-               data set is i.i.d, then the joint likelihood factorizes to
+lated GPs methods (MTGP) have not been applied for face                                       N                    N
+verification. Actually, MTGP/GPs have been extensively
+                                                                                              Y                    Y
+                                                                                  p(y|f ) =         p(yi |fi ) =         π(yi fi ).       (1)
+studied in machine learning and computer vision in recent                                     i=1                  i=1
+years [6, 60, 11, 25, 30, 44, 49, 61, 26]. However, most
+of them [60, 11, 6, 44, 25, 49, 61] have only considered              Moreover, the posterior distribution over latent functions is
+the symmetric multi-task learning, which means that all                                              p(y|f )p(f |X)
+tasks have been assumed to be of equal importance, whereas                         p(f |X, y, θ) =                  .           (2)
+                                                                                                       p(y|X, θ)
+our purpose is to enhance performance on a target task
+given all other source tasks. Leen et al. proposed a                  Since neither p(f |X, y, θ) nor p(y|f ) can be computed
+MTGP model in the asymmetric setting [30] to focus on                 analytically, the Laplace method is utilized to approximate
+improving performance on the target task, and Kim et al.              the posterior
+developed a GP model for clustering [26], but their methods
+do not take the discriminative information of the covariance                     p(f |X, y, θ) = N (f̂ , (K−1 + W)−1 ),                   (3)
+function into special account like DGPLVM. Although the
+discriminative information is considered in [57], it does             where f̂     =     arg maxf p(f |X, y, θ) and W                     =
+not apply multi-task learning to improve its performance.             −OO log p(f |X, y, θ)|f =f̂ . Then, we can obtain
+Salakhutdinov et al. used a deep belief net to learn a good                             1                            1
+                                                                       log p(y|X, θ) = − f̂ > K−1 f̂ + log p(y|f̂ ) − log |B|.
+covariance kernel for GPs [45]. The limitation of such deep                             2                            2
+methods is that it is hard to determine which architecture for                                                              (4)
+this network is optimal. Also, multi-task learning constraint                                                                  1      1
+was not considered in [45].                                           where |B| = |K| · |K−1 + W| = |In + W 2 KW 2 |. The
+                                                                      optimal value of θ can be acquired by using the gradient
+3. Preliminary                                                        method to maximize Equation (4). Given any unseen test
+                                                                      point x∗ , the probability of its latent function f∗ is
+   In this section, we briefly review Gaussian Processes
+(GPs) for classification and clustering [26], and Gaussian               f∗ |X, y, x∗ ∼ N (K∗ K−1 f̂ , K∗∗ − K∗ K̃−1 K>
+                                                                                                                      ∗ ),                (5)
+Process Latent Variable Model (GPLVM) [29]. We use
+GPs method mainly due to the following three notable                  where K̃ = K + W−1 . Finally, we squash f∗ to find the
+advantages. Firstly, as mentioned previously, it is a non-            probability of class membership as follows
+parametric method, which means it adapts its complexity                                    Z
+flexibly to the complex data distributions in the real-world,                    π̄(f∗ ) = π(f∗ )p(f∗ |X, y, x∗ )df∗ .   (6)
+without any heuristics or manual tuning of parameters.
+Secondly, GPs method can be computed effectively because
+                                                                      3.2. Gaussian Processes for Clustering
+of its closed-form marginal probability computation. Fur-
+thermore, its hyper-parameters can be learned from data                  The principle of GP clustering is based on the key ob-
+automatically without using model selection methods such              servation that the variances of predictive values are smaller
+as cross validation, thereby avoiding the high computational          in dense areas and larger in sparse areas. The variances
+cost. Thirdly, the inference of GPs is based on Bayesian              can be employed as a good estimate of the support of a
+
+
+                                                                  3
+probability density function, where each separate support              4. GaussianFace
+domain can be considered as a cluster. This observation can
+be explained from the variance function of any predictive                 In order to automatically learn discriminative features
+data point x∗                                                          or covariance function, and to take advantage of source-
+                                                                       domain data to improve the performance in face verifi-
+               σ 2 (x∗ ) = K∗∗ − K∗ K̃−1 K>                            cation, we develop a principled GaussianFace model by
+                                          ∗.                (7)
+                                                                       including the multi-task learning constraint into Discrimi-
+                                                                       native Gaussian Process Latent Variable Model (DGPLVM)
+If x∗ is in a sparse region, then K∗ K̃−1 K>       ∗ becomes           [57].
+small, which leads to large variance σ 2 (x∗ ), and vice versa.
+Another good property of Equation (7) is that it does not
+                                                                       4.1. DGPLVM Reformulation
+depend on the labels, which means it can be applied to the
+unlabeled data.                                                            The DGPLVM is an extension of GPLVM, where the dis-
+   To perform clustering, the following dynamic system                 criminative prior is placed over the latent positions, rather
+associated with Equation (7) can be written as                         than a simple spherical Gaussian prior. The DGPLVM uses
+                                                                       the discriminative prior to encourage latent positions of the
+                     F (x) = −Oσ 2 (x).                     (8)        same class to be close and those of different classes to be far.
+                                                                       Since face verification is a binary classification problem and
+The theorem in [26] guarantees that almost all the tra-                the GPs mainly depend on the kernel function, it is natural
+jectories approach one of the stable equilibrium points                to use Kernel Fisher Discriminant Analysis (KFDA) [27]
+detected from Equation (8). After each data point finds                to model class structures in kernel spaces. For simplicity of
+its corresponding stable equilibrium point, we can employ              inference in the followings, we introduce another equivalent
+a complete graph [4, 26] to assign cluster labels to data              formulation of KFDA to replace the one in [57].
+points with the stable equilibrium points. Obviously, the                  KFDA is a kernelized version of linear discriminant
+variance function in Equation (7) completely determines the            analysis method. It finds the direction defined by a kernel in
+performance of clustering.                                             a feature space, onto which the projections of positive and
+                                                                       negative classes are well separated by maximizing the ratio
+3.3. Gaussian Process Latent Variable Model                            of the between-class variance to the within-class variance.
+                                                                       Formally, let {z1 , . . . , zN+ } denote the positive class and
+   Let Z = [z1 , . . . , zN ]> denote the matrix whose rows
+                                                                       {zN+ +1 , . . . , zN } the negative class, where the numbers of
+represent corresponding positions of X in latent space,
+                                                                       positive and negative classes are N+ and N− = N − N+ ,
+where zi ∈ Rd (d  D). The Gaussian Process Latent
+                                                                       respectively. Let K be the kernel matrix. Therefore, in
+Variable Model (GPLVM) can be interpreted as a Gaussian
+                                                                       the feature space, the two sets {φK (z1 ), . . . , φK (zN+ )} and
+process mapping from a low dimensional latent space to a
+                                                                       {φK (zN+ +1 ), . . . , φK (zN )} represent the positive class
+high dimensional data set, where the locale of the points
+                                                                       and the negative class, respectively. The optimization
+in latent space is determined by maximizing the Gaussian
+                                                                       criterion of KFDA is to maximize the ratio of the between-
+process likelihood with respect to Z. Given a covariance
+                                                                       class variance to the within-class variance
+function for the Gaussian process, denoted by k(·, ·), the
+likelihood of the data given the latent positions is as follows,                                  (w> (µ+    − 2
+                                                                                                        K − µK ))
+                                                                                 J(ω, K) =                −         ,              (11)
+                        1       1                                                            w> (Σ+
+                                                                                                    K + ΣK + λIN )w
+ p(X|Z, θ) = p             exp − tr(K−1 XX> ) ,
+              (2π)N D |K|D      2
+                                                                       where λ is a positive regularization parameter, µ+       K =
+                                             (9)                        1
+                                                                            PN+              −       1
+                                                                                                        PN                       +
+                                                                       N+     i=1 φK (zi ), µK = N−        i=N+ +1 φK (zi ), ΣK =
+                                                                        1
+                                                                            P N +               +                + >            −
+where Ki,j = k(zi , zj ). Therefore, the posterior can be              N+     i=1 (φK (zi ) − µK )(φK (zi ) − µK ) , and ΣK =
+written as                                                               1
+                                                                            P N                    −                − >
+                                                                       N−     i=N+ +1 (φK (zi ) − µK )(φK (zi ) − µK ) .
+                            1                                              In this paper, however, we focus on the covariance
+           p(Z, θ|X) =         p(X|Z, θ)p(Z)p(θ),          (10)        function rather than the latent positions. To simplify
+                            Za
+                                                                       calculations, we represent Equation (11) with the kernel
+where Za is a normalization constant, the uninformative                function, and let the kernel function have the same form as
+priors over θ, and the simple spherical Gaussian priors over           the covariance function. Therefore, it is natural to introduce
+Z are introduced [57]. To obtain the optimal θ and Z, we               a more efficient equivalent form of KFDA with certain
+need to optimize the above likelihood (10) with respect to θ           assumptions as Kim et al. points out [27], i.e., maximizing
+and Z, respectively.                                                   Equation (11) is equivalent to maximizing the following
+
+
+                                                                   4
+equation                                                               source-domain data or target-domain data Xi , according to
+                                                                       Equation (9), we write its marginal likelihood
+        1 >
+ J∗ =     a Ka − a> KA(λIn + AKA)−1 AKa , (12)
+                                       
+        λ                                                                                    1               1                 
+                                                                       p(Xi |Zi , θ) = p               exp − tr(K−1 Xi X>   i  ) .
+                                                                                         (2π)N D |K|D            2
+where                                                                                                                         (15)
+                1 >      1 >
+           a =[   1 ,−      1 ]                                        where Zi represents the domain-relevant latent space. For
+               n+ N+ N− N−                                             each source-domain data and target-domain data, their
+                   1            1
+           A =diag p     IN+ −     1N+ 1>
+                                                                      covariance functions K have the same form because they
+                                        N+ ,
+                     N+        N+                                      share the same hyper-parameters θ. In this paper, we use a
+                    1           1                                    widely used kernel
+                   p    IN − −     1N− 1>
+                                        N−    .
+                     N−        N−                                                                    1 X d                 
+                                                                        Ki,j = kθ (zi , zj ) =θ0 exp −       θm (zm
+                                                                                                                  i − z m 2
+                                                                                                                        j )
+Here, IN denotes the N ×N identity matrix and 1N denotes                                               2 m=1
+the length-N vector of all ones in RN .                                                                    δzi ,zj
+   Therefore, the discriminative prior over the latent posi-                                   + θd+1 +            ,            (16)
+                                                                                                           θd+2
+tions in DGPLVM can be written as
+                        1           1                                where θ = {θi }d+2 i=0 and d is the dimension of the data
+               p(Z) =       exp − 2 J ∗ ,               (13)           point. Then, from Equations (10), learning the DGPLVM
+                        Zb          σ
+                                                                       is equivalent to optimizing
+where Zb is a normalization constant, and σ 2 represents a                                        1
+global scaling of the prior.                                                    p(Zi , θ|Xi ) =      p(Xi |Zi , θ)p(Zi )p(θ),   (17)
+                                                                                                  Za
+   The covariance matrix obtained by DGPLVM is discrim-
+inative and more flexible than the one used in conventional            where p(Xi |Zi , θ) and p(Zi ) are respectively represented
+GPs for classification (GPC), since they are learned based             in (15) and (13). According to the multi-task learning
+on a discriminative criterion, and more degrees of freedom             constraint in Equation (14), we can attain
+are estimated than conventional kernel hyper-parameters.
+                                                                           M =H(p(ZT , θ|XT ))
+4.2. Multi-task Learning Constraint                                                  1X
+                                                                                         S
+                                                                                 −         H(p(ZT , θ|XT )|p(Zi , θ|Xi )).      (18)
+   From an asymmetric multi-task learning perspective, the                           S i=1
+tasks should be allowed to share common hyper-parameters
+of the covariance function. Moreover, from an information              From Equations (15), (17), and (18), we know that learning
+theory perspective, the information cost between target task           the GaussianFace model amounts to minimizing the follow-
+and multiple source tasks should be minimized. A natural               ing marginal likelihood
+way to quantify the information cost is to use the mutual
+                                                                                 LM odel = − log p(ZT , θ|XT ) − βM,            (19)
+entropy, because it is the measure of the mutual dependence
+of two distributions. For multi-task learning, we extend the           where the parameter β balances the relative importance
+mutual entropy to multiple distributions as follows                    between the target-domain data and the multi-task learning
+                                   S
+                                                                       constraint.
+                               1X
+               M = H(pt ) −          H(pt |pi ),           (14)        4.4. Optimization
+                               S i=1
+                                                                          For the model optimization, we first expand Equation
+where H(·) is the marginal entropy, H(·|·) is the conditional          (19) to obtain the following equation (ignoring the constant
+entropy, S is the number of source tasks, {pi }Si=1 , and pt are       items)
+the probability distributions of source tasks and target task,
+respectively.                                                            LM odel = − log PT + βPT log PT
+                                                                                            S
+                                                                                         βX                               
+4.3. GaussianFace Model                                                              +         PT,i log Pi − PT,i log PT,i ,    (20)
+                                                                                         S i=1
+   In this section, we describe our GaussianFace model
+in detail. Suppose we have S source-domain datasets                    where Pi = p(Zi , θ|Xi ) and Pi,j means that its correspond-
+{X1 , . . . , XS } and a target-domain data XT . For each              ing covariance function is computed on both Xi and Xj .
+
+
+                                                                   5
+We can now optimize Equation (20) with respect to the                K ≈ QQ> . Using the Woodbury identity [21], computing
+hyper-parameters θ and the latent positions Zi by the Scaled         the n × n matrix QQ> can be transformed into computing
+Conjugate Gradient (SCG) technique. Since we focus on                the q × q matrix Q> Q, which is more efficient.
+the covariance matrix in this paper, here we only present
+the derivations of hyper-parameters. It is easy to get                  Speedup on Inference When optimizing Equation (19),
+                                                                     we need to invert the matrix (λIn + AKA). During
+   ∂LM odel                  1  ∂PT                                inference, we take q k-means clustering centers as anchors
+           = β(log PT + 1) −
+     ∂θj                     PT ∂θj                                  to form Q. Substituting K ≈ QQ> into (λIn + AKA),
+                       S                                             and then using the Woodbury identity, we get
+                    β X PT,i ∂Pi
+                +            ·
+                    S i=1 Pi ∂θj                                     (λIn + AKA)−1 ≈ (λIn + AQQ> A)−1
+                       S
+                    βX                            ∂PT,i                         = λ−1 In − λ−1 AQ(λIq + Q> AAQ)−1 Q> A.
+                +         (log Pi − log PT,i − 1)       .
+                    S i=1                          ∂θj
+                                                                     Similarly, let K−1 ≈ (K + τ I)−1 where τ a constant term,
+                                                                     then we can get
+The above equation depends on the form ∂P
+                                       ∂θj as follows
+                                         i
+
+
+(ignoring the constant items)                                        K−1 ≈ (K + τ I)−1 ≈ τ −1 In − τ −1 Q(τ Iq + Q> Q)−1 Q> .
+∂Pi     ∂ log Pi                                                        Speedup on Prediction When we compute the predic-
+    =Pi
+∂θj       ∂θj                                                        tive variance σ(z∗ ), we need to invert the matrix (K +
+         ∂ log p(X |Z , θ) ∂ log p(Z ) ∂ log p(θ) 
+                   i i               i                               W−1 ). At this time, we can use the method in Section 3.2 to
+    ≈Pi                    +           +             .               calculate the accurate clustering centers that can be regarded
+                 ∂θj            ∂θj         ∂θj
+                                                                     as the anchors. Using the Woodbury identity again, we
+The above three terms can be easily obtained (ignoring the           obtain
+constant items) by
+                                                                      (K + W−1 )−1 ≈ W − WQ(Iq + Q> WQ)−1 Q> W,
+∂ log p(Xi |Zi , θ)      D          ∂K 
+                    ≈ − Tr K−1
+       ∂θj               2           ∂θj                             where (Iq + Q> WQ) is only a q × q matrix, and its inverse
+                         1  −1                                      matrix can be computed more efficiently.
+                                            −1 ∂K
+                                                   
+                      + Tr K Xi X>      i K          ,
+                         2                     ∂θj
+                                                                     5. GaussianFace Model for Face Verification
+      ∂ log p(Zi )        1 ∂J ∗
+                    ≈− 2 i                                               In this section, we describe two applications of the
+          ∂θj            σ ∂θj
+                           1  > ∂K           ∂K                     GaussianFace model to face verification: as a binary
+                    =−      2
+                              a        a − a>      Ãa               classifier and as a feature extractor.
+                         λσ       ∂θj         ∂θj
+                                                                         Each face image is first normalized to 150 × 120 size
+                                 ∂K                    ∂K           by an affine transformation based on five landmarks (two
+                      + a> KÃ       ÃKa − a> KÃ         a ,
+                                 ∂θj                   ∂θj           eyes, nose, and two mouth corners). The image is then
+       ∂ log p(θ) 1                                                  divided into overlapped patches of 25 × 25 pixels with a
+                    = ,
+           ∂θj        θj                                             stride of 2 pixels. Each patch within the image is mapped to
+                                                                     a vector by a certain descriptor, and the vector is regarded
+where Ã = A(λIn + AKA)−1 A. Thus, the desired                       as the feature of the patch, denoted by {xA     P
+                                                                                                                  p }p=1 where P
+derivatives have been obtained.                                      is the number of patches within the face image A. In this
+                                                                     paper, the multi-scale LBP feature of each patch is extracted
+4.5. Speedup                                                         [14]. The difference is that the multi-scale LBP descriptors
+   In the GaussianFace model, we need to invert the                  are extracted at the center of each patch instead of accurate
+large matrix when doing inference and prediction. For                landmarks.
+large problems, both storing the matrix and solving the
+                                                                     5.1. GaussianFace Model as a Binary Classifier
+associated linear systems are computationally prohibitive.
+In this paper, we use the anchor graphs method [35] to                  For classification, our model can be regarded as an
+speed up this process. To put it simply, we first select q           approach to learn a covariance function for GPC, as shown
+(q  n) anchors to cover a cloud of n data points, and               in Figure 1 (a). Here, for a pair of face images A and B
+form an n × q matrix Q, where Qi,j = kθ (zi , zj ). zi and           from the same (or different) person, let the similarity vector
+zj are from n latent data points and q anchors, respectively.        xi = [s1 , . . . , sp , . . . , sP ]> be the input data point of the
+Then the original kernel matrix K can be approximated as             GaussianFace model, where sp is the similarity of xA          p and
+
+
+                                                                 6
+xBp , and its corresponding output is yi = 1 (or −1). With                                              ⋯
+the learned hyper-parameters of covariance function from                                                                𝑺𝟏
+
+
+
+
+                                                                                                   ⋯
+the training data, given any un-seen pair of face images,                                               ⋯
+                                                                                                                              GaussianFace Model         Same
+                                                                                         A
+
+
+
+
+                                                                                                                 ⋯
+we first compute its similarity vector x∗ using the above                                                                     As a Binary Classifier       Or
+                                                                                                        ⋯                                               Different
+method, then estimate its latent representation z∗ using the                                                            𝑺𝑷
+
+
+
+
+                                                                                                   ⋯
+same method in [57], and finally predict whether the pair                                B               ⋯
+is from the same person through Equation (6). In this                                Image pair
+                                                                                                   Multi-scale       Similarity
+paper, we prescribe the sigmoid function π(·) to be the                                             Feature           Vector
+                                                                                                                             (a)
+                           ¯ Φ(·),which can be solved
+cumulative Gaussian distribution
+                                                                                                    ⋯
+analytically as π̄∗ = Φ √ f∗ (z2∗ )      , where σ 2 (z∗ ) =                                                     ⋯    ⋯                        ⋯
+                                     1+σ (z∗ )
+
+
+
+
+                                                                                               ⋯
+                                                                                                                 ⋯    ⋯
+                                                                                                                              GaussianFace
+K∗∗ − K∗ K̃     −1
+                     K>     ¯              −1                                                       ⋯                                          ⋯
+                      ∗ and f∗ (z∗ ) = K∗ K   f̂ from Equation                           A                                       Model
+
+
+
+
+                                                                                                             ⋯
+
+
+
+
+                                                                                                                                          ⋯
+(5) [42]. We call the method GaussianFace-BC.                                                                                 As a Feature                  ⋯
+                                                                                                   ⋯             ⋯    ⋯        Extractor       ⋯       Concatenated
+
+
+
+
+                                                                                              ⋯
+                                                                                                                 ⋯    ⋯                                  Feature
+5.2. GaussianFace Model as a Feature Extractor                                           B         ⋯
+                                                                                                                                               ⋯
+
+                                                                                     Image pair            Joint Feature Vector
+                                                                                              Multi-scale and Its Flipped version      High-dimensional
+     As a feature extractor, our model can be regarded as an                                                                               Feature
+                                                                                                Feature
+approach to automatically extract facial features, shown in
+                                                                                                                             (b)
+Figure 1 (b). Here, for a pair of face images A and B from
+the same (or different) person, we regard the joint feature                       Figure 1. Two approaches based on GaussianFace model for face
+                            >        B > >
+vector xi = [(xA        i ) , (xi ) ]         as the input data point of          verification. (a) GaussianFace model as a binary classifier. (b)
+the GaussianFace model, and its corresponding output is                           GaussianFace model as a feature extractor.
+yi = 1 (or −1). To enhance the robustness of our approach,
+the flipped form of xi is also included; for example,                             not only describe how the distribution of features of an
+                  >       A > >
+xi = [(xB     i ) , (xi ) ] . After the hyper-parameters of                       un-seen face image differs from the distribution fitted to
+covariance function are learnt from the training data, we                         the features of all training images, but also encode the
+first estimate the latent representations of the training data                    predictive information including the probabilities of label
+using the same method in [57], then can use the method                            and uncertainty. We call this approach GaussianFace-FE.
+in Section 3.2 to group the latent data points into different
+clusters automatically. Suppose that we finally obtain C
+                                                                                  6. Experimental Settings
+clusters. The centers of these clusters are denoted by
+{ci }Ci=1 , the variances of these clusters by {Σi }i=1 , and
+                                                              2 C
+                                                                                      In this section, we conduct experiments on face verifi-
+                                  C
+their weights by {wi }i=1 where wi is the ratio of the                            cation. We start by introducing the source-domain datasets
+number of latent data points from the i-th cluster to the                         and the target-domain dataset in all of our experiments (see
+number of all latent data points. Then we refer to each                           Figure 2 for examples). The source-domain datasets include
+ci as the input of Equation (5), and we can obtain its                            four different types of datasets as follows:
+corresponding probability pi and variance σi2 . In fact,                          Multi-PIE [19]. This dataset contains face images from
+{ci }Ci=1 can be regarded as a codebook generated by our                          337 subjects under 15 view points and 19 illumination
+model.                                                                            conditions in four recording sessions. These images are
+     For any un-seen pair of face images, we also first                           collected under controlled conditions.
+compute its joint feature vector x∗ for each pair of patches,                     MORPH [43]. The MORPH database contains 55,000
+and estimate its latent representation z∗ . Then we compute                       images of more than 13,000 people within the age ranges of
+its first-order and second-order statistics to the centers.                       16 to 77. There are an average of 4 images per individual.
+Similarly, we regard z∗ as the input of Equation (5), and can                     Web Images2 . This dataset contains around 40,000 facial
+also obtain its corresponding probability p∗ and variance                         images from 3261 subjects; that is, approximately 10
+σ∗2 . The statistics and variance of z∗ are represented                           images for each person. The images were collected from
+as its high-dimensional facial features, denoted by ẑ∗ =                         the Web with significant variations in pose, expression, and
+[∆11 , ∆21 , ∆31 , ∆41 , . . . , ∆1C , ∆2C , ∆3C , ∆4C ]> , where ∆1i =           illumination conditions.
+                                                                                  Life Photos2 . This dataset contains approximately 5000
+                                           2
+wi z∗Σ−c    i
+                ,  ∆ 2
+                     i    =      w i
+                                       z∗ −ci
+                                         Σi      , ∆3i = log ppi∗(1−p
+                                                                  (1−pi )
+                                                                      ∗)
+                                                                          ,
+         i                                                                        images of 400 subjects collected online. Each subject has
+                  σ2
+and ∆4i = σ∗2 . We then concatenate all of the new                                roughly 10 images.
+               i
+high-dimensional features from each pair of patches to                               2 These two datasets are collected by our own from the Web. It is
+form the final new high-dimensional feature for the pair                          guaranteed that these two datasets are mutually exclusive with the LFW
+of face images. The new high-dimensional facial features                          dataset.
+
+
+                                                                              7
+                                                                            the same setting in [27], the regularization parameter λ in
+                                                                            (12) is fixed to 10−8 . σ reflects the tradeoff between our
+                                                                            method’s ability to discriminate (small σ) and its ability to
+                                                                            generalize (large σ), and β balances the relative importance
+                                                                            between the target-domain data and the multi-task learning
+                                                                            constraint. Therefore, the validation set (the test set in View
+                                                                            1 of LFW) is used for selecting σ and β. Each time we use
+                                                                            different number of source-domain datasets for training, the
+Figure 2. Samples of the datasets in our experiments. From left to          corresponding optimal σ and β should be selected on the
+right: LFW, Multi-PIE, MORPH, Web Images, and Life Photos.                  validation set.
+                                                                                Since we collected a large number of image pairs for
+                                                                            training (20,000 matched pairs and 20,000 mismatched
+    If not otherwise specified, the target-domain dataset is                pairs from each source-domain dataset), and our model is
+the benchmark of face verification as follows:                              based on the kernel method, thus an important consideration
+LFW [23]. This dataset contains 13,233 uncontrolled face                    is how to efficiently approximate the kernel matrix using
+images of 5749 public figures with variety of pose, lighting,               a low-rank method in the limited space and time. We
+expression, race, ethnicity, age, gender, clothing, hairstyles,             adopt the anchor graphs method (see Section 4.5) for kernel
+and other parameters. All of these images are collected                     approximation. In our experiments, we take two steps to
+from the Web.                                                               determine the number of anchor points. In the first step,
+    We use the LFW dataset as the target-domain dataset                     the optimal σ and β are selected on the validation set in
+because it is well known as a challenging benchmark. Using                  each experiment. In the second step, we fix σ and β,
+it also allows us to compare directly with other existing                   and then tune the number of anchor points. We vary the
+face verification methods [9, 5, 14, 47, 13, 59, 1, 20, 16].                number of anchor points to train our model on the training
+Besides, this dataset provides a large set of relatively uncon-             set, and test it on the validation set. We report the average
+strained face images with complex variations as described                   accuracy for our model over 10 trials. After we consider the
+above, and has proven difficult for automatic face verifica-                trade-off between memory and running time in practice, the
+tion methods [23, 28]. In all the experiments conducted on                  number of anchor points with the best average accuracy is
+LFW, we strictly follow the standard unrestricted protocol                  determined in each experiments.
+of LFW [23]. More precisely, during the training procedure,
+the four source-domain datasets are: Web Images, Multi-                     7. Experimental Results
+PIE, MORPH, and Life Photos, the target-domain dataset is
+the training set in View 1 of LFW, and the validation set is                   In this section, we conduct five experiments to demon-
+the test set in View 1 of LFW. At the test time, we follow the              strate the validity of the GaussianFace model.
+standard 10-fold cross-validation protocol to test our model
+                                                                            7.1. Comparisons with Other MTGP/GP Methods
+in View 2 of LFW.
+    For each one of the four source-domain datasets, we                        Since our model is based on GPs, it is natural to compare
+randomly sample 20,000 pairs of matched images and                          our model with four popular GP models: GPC [42], MTGP
+20,000 pairs of mismatched images. The training partition                   prediction [6], GPLVM [29], and DGPLVM [57]. For
+and the testing partition in all of our experiments are                     fair comparisons, all these models are trained on multiple
+mutually exclusive. In other words, there is no identity                    source-domain datasets using the same two methods as
+overlap among the two partitions.                                           our GaussianFace model described in Section 5. After the
+    For the experiments below, “The Number of SD” means                     hyper-parameters of covariance function are learnt for each
+“the Number of Source-Domain datasets that are fed                          model, we can regard each model as a binary classifier and
+into the GaussianFace model for training”. By parity of                     a feature extractor like ours, respectively. Figure 3 shows
+reasoning, if “The Number of SD” is i, that means the                       that our model significantly outperforms the other four GPs
+first i source-domain datasets are used for model training.                 models, and the superiority of our model becomes more
+Therefore, if “The Number of SD” is 0, models are trained                   obvious as the number of source-domain datasets increases.
+with the training data from target-domain data only.
+                                                                            7.2. Comparisons with Other Binary Classifiers
+  Implementation details. Our model involves four                             Since our model can be regarded as a binary classifier,
+important parameters: λ in (12), σ in (13), β in (19), and the              we have also compared our method with other classical
+number of anchors q in Speedup on Inference 3 . Following
+                                                                            function and the number of anchors in Speedup on Prediction, can be
+   3 The other parameters, such as the hyper-parameters in the kernel       automatically learned from the data.
+
+
+                                                                        8
+                           0.96   GPC-BC
+                                                                                                                1    GPC-FE
+                           0.94   MTGP prediction-BC                                                                 MTGP prediction-FE
+                                  GPLVM-BC                                                                           GPLVM-FE
+                           0.92   DGPLVM-BC                                                                   0.95   DGPLVM-FE
+                                  GaussianFace-BC                                                                    GaussianFace-FE
+                            0.9
+                           0.88
+                                                                                                               0.9
+
+
+
+
+                                                                                      Accuracy
+     Accuracy
+
+
+
+
+                           0.86
+                           0.84
+                                                                                                              0.85
+                           0.82
+                            0.8
+                           0.78                                                                                0.8
+                           0.76
+                           0.74                                                                               0.75
+                                   0             1               2        3   4                                       0             1             2         3        4
+                                                       The Number of SD                                                                    The Number of SD
+
+                                                           (a)                                                                                   (b)
+                           0.08                                                                               0.09
+                                  GPC-BC                                                                              GPC-FE
+                                  MTGP prediction-BC                                                                  MTGP prediction-FE
+                           0.07                                                                               0.08
+                                  GPLVM-BC                                                                            GPLVM-FE
+                                  DGPLVM-BC                                                                   0.07    DGPLVM-FE
+                           0.06
+    Relative Improvement
+
+
+
+
+                                                                                       Relative Improvement
+                                  GaussianFace-BC                                                                     GaussianFace-FE
+                                                                                                              0.06
+                           0.05
+                                                                                                              0.05
+                           0.04
+                                                                                                              0.04
+                           0.03
+                                                                                                              0.03
+                           0.02                                                                               0.02
+                           0.01                                                                               0.01
+                             0                                                                                   0
+                                   0             1            2           3   4                                        0             1            2         3        4
+                                                       The Number of SD                                                                    The Number of SD
+                                                           (c)                                                                                   (d)
+Figure 3. (a) The accuracy rate (%) of the GaussianFace-BC model and other competing MTGP/GP methods as a binary classifier. (b)
+The accuracy rate (%) of the GaussianFace-FE model and other competing MTGP/GP methods as a feature extractor. (c) The relative
+improvement of each method as a binary classifier with the increasing number of SD, compared to their performance when the number
+of SD is 0. (d) The relative improvement of each method as a feature extractor with the increasing number of SD, compared to their
+performance when the number of SD is 0.
+
+
+binary classifiers. For this paper, we chose three pop-                                                       The Number of SD             0       1        2       3       4
+ular representatives: SVM [12], logistic regression (LR)                                                          SVM [12]               83.21   84.32    85.06   86.43   87.31
+[17], and Adaboost [18]. Table 1 demonstrates that the                                                             LR [17]               81.14   81.92    82.65   83.84   84.75
+performance of our method GaussianFace-BC is much                                                               Adaboost [18]            82.91   83.62    84.80   86.30   87.21
+better than those of the other classifiers. Furthermore,                                                      GaussianFace-BC            86.25   88.24    90.01   92.22   93.73
+these experimental results demonstrates the effectiveness
+                                                                                                  Table 1. The accuracy rate (%) of our methods as a binary classifier
+of the multi-task learning constraint. For example, our
+                                                                                                  and other competing methods on LFW using the increasing
+GaussianFace-BC has about 7.5% improvement when all                                               number of source-domain datasets.
+four source-domain datasets are used for training, while the
+best one of the other three binary classifiers has only around
+4% improvement.
+                                                                                                  it with three popular clustering methods: K-means [24],
+7.3. Comparisons with Other Feature Extractors                                                    Random Projection (RP) tree [15], and Gaussian Mixture
+                                                                                                  Model (GMM) [47]. Since our method can determine the
+  Our model can also be regarded as a feature extractor,                                          number of clusters automatically, for fair comparison, all
+which is implemented by clustering to generate a code-                                            the other methods generate the same number of clusters as
+book. Therefore, we evaluate our method by comparing                                              ours. As shown in Table 2, our method GaussianFace-FE
+
+
+                                                                                  9
+      The Number of SD            0        1             2             3          4
+        K-means [24]            84.71    85.20         85.74         86.81      87.68
+        RP Tree [15]            85.11    85.70         86.45         87.52      88.34
+         GMM [47]               86.63    87.02         87.58         88.60      89.21
+      GaussianFace-FE           89.33    91.04         93.31         95.62      97.79
+
+Table 2. The accuracy rate (%) of our methods as a feature ex-
+tractor and other competing methods on LFW using the increasing
+number of source-domain datasets.
+
+                       1
+                     0.98                                                                    Figure 5. The two rows present examples of matched and
+                                                                                             mismatched pairs respectively from LFW that were incorrectly
+                     0.96
+                                                                                             classified by the GaussianFace model.
+                     0.94
+true positive rate
+
+
+
+
+                                        Tom-vs-Pete + Attribute (93.30%) [5]
+                     0.92               High dimensional LBP (95.17%) [14]
+                                        Fisher Vector Faces (93.03%) [47]
+                                                                                             classified by our model. Obviously, even for humans, it is
+                      0.9
+                                        combined Joint Bayesian (92.42%) [13]                also difficult to verify some of them. Here, we emphasize
+                                        Associate-Predict (90.57%) [59]
+                     0.88                                                                    that the centers of patches, instead of the accurate and dense
+                                        TL Joint Bayesian (96.33%) [9]
+                     0.86               VisionLabs (92.90%) [1]                              facial landmarks like [9], are utilized to extract multi-scale
+                                        Aurora (93.24%) [20]
+                     0.84               Face++ (97.27%) [16]
+                                                                                             features in our method. This makes our method simpler and
+                                        Human, cropped (97.53%) [28]                         easier to use.
+                     0.82               DeepFace-ensemble (97.35%) [53]
+                                        GaussianFace-FE + GaussianFace-BC (98.52%)
+                      0.8                                                                    7.5. Further Validations: Shuffling the Source-
+                         0   0.05           0.1                   0.15            0.2
+                                                                                                  Target
+                                    false positive rate
+                                                                                                To further prove the validity of our model, we also
+Figure 4. The ROC curve on LFW. Our method achieves the best
+                                                                                             consider to treat Multi-PIE and MORPH respectively as
+performance, beating human-level performance.
+                                                                                             the target-domain dataset and the others as the source-
+                                                                                             domain datasets. The target-domain dataset is split into two
+significantly outperforms all of the compared approaches,                                    mutually exclusive parts: one consisting of 20,000 matched
+which verifies the effectiveness of our method as a feature                                  pairs and 20,000 mismatched pairs is used for training, the
+extractor. The results have also proved that the multi-task                                  other is used for test. In the test set, similar to the protocol of
+learning constraint is effective. Each time one different type                               LFW, we select 10 mutually exclusive subsets, where each
+of source-domain dataset is added for training, the perfor-                                  subset consists of 300 matched pairs and 300 mismatched
+mance can be improved significantly. Our GaussianFace-FE                                     pairs. The experimental results are presented in Figure
+model achieves over 8% improvement when the number of                                        6. Each time one dataset is added to the training set, the
+SD varies from 0 to 4, which is much higher than the ∼3%                                     performance can be improved, even though the types of data
+improvement of the other methods.                                                            are very different in the training set.
+
+7.4. Comparison with the state-of-art Methods                                                8. General Discussion
+    Motivated by the appealing performance of both                                               There is an implicit belief among many psychologists
+GaussianFace-BC and GaussianFace-FE, we further com-                                         and computer scientists that human face verification abili-
+bine them for face verification. Specifically, after facial fea-                             ties are currently beyond existing computer-based face ver-
+tures are extracted using GaussianFace-FE, GaussianFace-                                     ification algorithms [39]. This belief, however, is supported
+BC 4 is used to make the final decision. Figure 4 shows                                      more by anecdotal impression than by scientific evidence.
+the results of this combination compared with state-of-the-                                  By contrast, there have already been a number of papers
+art methods [9, 5, 14, 47, 13, 53, 59, 1, 20, 16]. The best                                  comparing human and computer-based face verification
+published result on the LFW benchmark is 97.35%, which                                       performance [2, 54, 40, 41, 38, 8]. It has been shown that
+is achieved by [53]. Our GaussianFace model can improve                                      the best current face verification algorithms perform better
+the accuracy to 98.52%, which for the first time beats the                                   than humans in the good and moderate conditions. So, it is
+human-level performance (97.53%, cropped) [28]. Figure                                       really not that difficult to beat human performance in some
+5 presents some example pairs that were always incorrectly                                   specific scenarios.
+   4 Here, the GaussianFace BC is trained with the extracted high-                               As pointed out by [38, 48], humans and computer-based
+dimensional features using GaussianFace-FE.                                                  algorithms have different strategies in face verification.
+
+
+                                                                                        10
+                 1    GaussianFace-BC                                                    GaussianFace-BC
+                      GaussianFace-FE
+                                                                                  0.96   GaussianFace-FE
+               0.98   GaussianFace-FE + GaussianFace-BC                           0.94   GaussianFace-FE + GaussianFace-BC
+
+                                                                                  0.92
+               0.96
+                                                                                   0.9
+               0.94
+
+
+
+
+                                                                       Accuracy
+                                                                                  0.88
+    Accuracy
+
+
+
+
+               0.92                                                               0.86
+                                                                                  0.84
+                0.9
+                                                                                  0.82
+               0.88
+                                                                                   0.8
+               0.86                                                               0.78
+                        0             1         2         3   4                            0             1          2         3   4
+                                       The Number of SD                                                      The Number of SD
+                                                 (a)                                                                  (b)
+Figure 6. (a) The accuracy rate (%) of the GaussianFace model on Multi-PIE. (b) The accuracy rate (%) of the GaussianFace model on
+MORPH.
+
+
+Indeed, by contrast to performance with unfamiliar faces,                  Variable Model, named GaussianFace, for face verification
+human face verification abilities for familiar faces are                   by including a computationally more efficient equivalent
+relatively robust to changes in viewing parameters such                    form of KFDA and the multi-task learning constraint to
+as illumination and pose. For example, Bruce [7] found                     the DGPLVM model. We use Gaussian Processes approx-
+human recognition memory for unfamiliar faces dropped                      imation and anchor graphs to speed up the inference and
+substantially when there were changes in viewing param-                    prediction of our model. Based on the GaussianFace model,
+eters. Besides, humans can take advantages of non-face                     we propose two different approaches for face verification.
+configurable information from the combination of the face                  Extensive experiments on challenging datasets validate the
+and body (e.g., neck, shoulders). It has also been examined                efficacy of our model. The GaussianFace model finally
+in [28], where the human performance drops from 99.20%                     surpassed human-level face verification accuracy, thanks to
+(tested using the original LFW images) to 97.53% (tested                   exploiting additional data from multiple source-domains to
+using the cropped LFW images). Hence, the experiments                      improve the generalization performance of face verification
+comparing human and computer performance may not show                      in the target-domain and adapting automatically to complex
+human face verification skill at their best, because humans                face variations.
+were asked to match the cropped faces of people previously                     Although several techniques such as the Laplace approx-
+unfamiliar to them. To the contrary, those experiments                     imation and anchor graph are introduced to speed up the
+can fully show the performance of computer-based face                      process of inference and prediction in our GaussianFace
+verification algorithms. First, the algorithms can exploit                 model, it still takes a long time to train our model for
+information from enough training images with variations in                 the high performance. In addition, large memory is also
+all viewing parameters to improve face verification perfor-                necessary. Therefore, for specific application, one needs to
+mance, which is similar to information humans acquire in                   balance the three dimensions: memory, running time, and
+developing face verification skills and in becoming familiar               performance. Generally speaking, higher performance re-
+with individuals. Second, the algorithms might exploit                     quires more memory and more running time. In the future,
+useful, but subtle, image-based detailed information that                  the issue of running time can be further addressed by the
+give them a slight, but consistent, advantage over humans.                 distributed parallel algorithm or the GPU implementation
+    Therefore, surpassing the human-level performance may                  of large matrix inversion. To address the issue of memory,
+only be symbolically significant. In reality, a lot of                     some online algorithms for training need to be developed.
+challenges still lay ahead. To compete successfully with                   Another more intuitive method is to seek a more efficient
+humans, more factors such as the robustness to familiar                    sparse representation for the large covariance matrix.
+faces and the usage of non-face information, need to be con-
+sidered in developing future face verification algorithms.                 Acknowledgements
+9. Conclusion and Future Work                                                 We would like to thank Deli Zhao and Chen Change
+                                                                           Loy for their insightful discussions. This work is partially
+   This paper presents a principled Multi-Task Learning                    supported by ”CUHK Computer Vision Cooperation” grant
+approach based on Discriminative Gaussian Process Latent                   from Huawei, and by the General Research Fund sponsored
+
+
+                                                                  11
+by the Research Grants Council of Hong Kong (Project               [16] H. Fan, Z. Cao, Y. Jiang, Q. Yin, and C. Doudou.
+No.CUHK 416510 and 416312) and Guangdong Innovative                     Learning deep face representation. arXiv preprint
+Research Team Program (No.201001D0104648280).                           arXiv:1403.2802, 2014.
+                                                                   [17] R.-E. Fan, K.-W. Chang, C.-J. Hsieh, X.-R. Wang,
+References                                                              and C.-J. Lin. Liblinear: A library for large linear
+                                                                        classification. JMLR, 9:1871–1874, 2008.
+ [1] Visionlabs. In Website: http://www.visionlabs.ru/face-
+                                                                   [18] Y. Freund, R. Schapire, and N. Abe. A short
+     recognition.
+                                                                        introduction to boosting. Journal-Japanese Society
+ [2] A. Adler and M. E. Schuckers. Comparing human                      For Artificial Intelligence, 14(771-780):1612, 1999.
+     and automatic face recognition performance. IEEE              [19] R. Gross, I. Matthews, J. Cohn, T. Kanade, and
+     Transactions on Systems, Man, and Cybernetics, Part                S. Baker. Multi-pie. Image and Vision Computing,
+     B: Cybernetics, 37(5):1248–1255, 2007.                             28(5):807–813, 2010.
+ [3] T. Ahonen, A. Hadid, and M. Pietikainen. Face                 [20] T. Heseltine, P. Szeptycki, J. Gomes, M. Ruiz, and
+     description with local binary patterns: Application to             P. Li. Aurora face recognition technical report:
+     face recognition. TPAMI, 28(12):2037–2041, 2006.                   Evaluation of algorithm aurora-c-2014-1 on labeled
+ [4] A. Ben-Hur, D. Horn, H. T. Siegelmann, and V. Vap-                 faces in the wild.
+     nik. Support vector clustering. JMLR, 2, 2002.                [21] N. J. Higham. Accuracy and Stability of Numberical
+ [5] T. Berg and P. N. Belhumeur. Tom-vs-pete classifiers               Algorithms. Number 48. Siam, 1996.
+     and identity-preserving alignment for face verifica-          [22] G. Huang, H. Lee, and E. Learned-Miller. Learning
+     tion. In BMVC, volume 1, page 5, 2012.                             hierarchical representations for face verification with
+                                                                        convolutional deep belief networks. In CVPR, 2012.
+ [6] E. Bonilla, K. M. Chai, and C. Williams. Multi-task
+     gaussian process prediction. In NIPS, 2008.                   [23] G. B. Huang, M. Ramesh, T. Berg, and E. Learned-
+                                                                        Miller. Labeled faces in the wild: A database
+ [7] V. Bruce. Changing faces: Visual and non-visual                    for studying face recognition in unconstrained en-
+     coding processes in face recognition. British Journal              vironments. Technical Report 07-49, University of
+     of Psychology, 73(1):105–116, 1982.                                Massachusetts, Amherst, 2007.
+ [8] V. Bruce, P. J. Hancock, and A. M. Burton. Com-               [24] S. U. Hussain, T. Napoléon, F. Jurie, et al. Face
+     parisons between human and computer recognition of                 recognition using local quantized patterns. In BMVC,
+     faces. In Automatic Face and Gesture Recognition,                  2012.
+     pages 408–413, 1998.                                          [25] H.-C. Kim, D. Kim, Z. Ghahramani, and S. Y. Bang.
+ [9] X. Cao, D. Wipf, F. Wen, and G. Duan. A practical                  Appearance-based gender classification with gaussian
+     transfer learning algorithm for face verification. In              processes. Pattern Recognition Letters, 27(6):618–
+     ICCV. 2013.                                                        626, 2006.
+[10] Z. Cao, Q. Yin, X. Tang, and J. Sun. Face recognition         [26] H.-C. Kim and J. Lee. Clustering based on gaussian
+     with learning-based descriptor. In CVPR, pages 2707–               processes. Neural computation, 19(11), 2007.
+     2714, 2010.                                                   [27] S.-J. Kim, A. Magnani, and S. Boyd. Optimal kernel
+[11] K. M. Chai.     Multi-task learning with gaussian                  selection in kernel fisher discriminant analysis. In
+     processes. The University of Edinburgh, 2010.                      ICML, pages 465–472, 2006.
+                                                                   [28] N. Kumar, A. C. Berg, P. N. Belhumeur, and S. K.
+[12] C.-C. Chang and C.-J. Lin. Libsvm: a library for
+                                                                        Nayar. Attribute and simile classifiers for face verifi-
+     support vector machines. ACM TIST, 2(3):27, 2011.
+                                                                        cation. In ICCV, pages 365–372, 2009.
+[13] D. Chen, X. Cao, L. Wang, F. Wen, and J. Sun.                 [29] N. D. Lawrence. Gaussian process latent variable
+     Bayesian face revisited: A joint formulation. In                   models for visualisation of high dimensional data. In
+     ECCV, pages 566–579. 2012.                                         NIPS, volume 2, page 5, 2003.
+[14] D. Chen, X. Cao, F. Wen, and J. Sun. Blessing                 [30] G. Leen, J. Peltonen, and S. Kaski. Focused multi-
+     of dimensionality: High-dimensional feature and its                task learning using gaussian processes. In Machine
+     efficient compression for face verification. In CVPR.              Learning and Knowledge Discovery in Databases,
+     2013.                                                              pages 310–325. 2011.
+[15] S. Dasgupta and Y. Freund. Random projection                  [31] H. Li, G. Hua, Z. Lin, J. Brandt, and J. Yang.
+     trees for vector quantization. IEEE Transactions on                Probabilistic elastic matching for pose variant face
+     Information Theory, 55(7):3229–3242, 2009.                         verification. In CVPR. 2013.
+
+
+                                                              12
+[32] Z. Li, D. Lin, and X. Tang. Nonparametric discrimi-           [48] P. Sinha, B. Balas, Y. Ostrovsky, and R. Russell. Face
+     nant analysis for face recognition. TPAMI, 31(4):755–              recognition by humans: 20 results all computer vision
+     761, 2009.                                                         researchers should know about. Department of Brain
+[33] Z. Li, W. Liu, D. Lin, and X. Tang. Nonparametric                  and Cognitive Sciences, MIT, Cambridge, MA, 2005.
+     subspace analysis for face recognition. In CVPR,              [49] G. Skolidis and G. Sanguinetti. Bayesian multitask
+     volume 2, pages 961–966, 2005.                                     classification with gaussian process priors. IEEE
+[34] C. Liu and H. Wechsler. Gabor feature based classi-                Transactions on Neural Networks, 22(12), 2011.
+     fication using the enhanced fisher linear discriminant        [50] Y. Sun, X. Wang, and X. Tang. Hybrid deep learning
+     model for face recognition. TIP, 2002.                             for face verification. In ICCV. 2013.
+[35] W. Liu, J. He, and S.-F. Chang.          Large graph          [51] Y. Sun, X. Wang, and X. Tang. Deep learning face
+     construction for scalable semi-supervised learning. In             representation from predicting 10,000 classes. In
+     ICML, pages 679–686, 2010.                                         CVPR, 2014.
+[36] D. G. Lowe. Distinctive image features from scale-            [52] Y. Taigman, L. Wolf, and T. Hassner. Multiple one-
+     invariant keypoints. IJCV, 60(2):91–110, 2004.                     shots for utilizing class label information. In BMVC,
+[37] B. Moghaddam, T. Jebara, and A. Pentland. Bayesian                 pages 1–12, 2009.
+     face recognition. Pattern Recognition, 33(11):1771–           [53] Y. Taigman, M. Yang, M. Ranzato, and L. Wolf. Deep-
+     1782, 2000.                                                        Face: Closing the Gap to Human-Level Performance
+[38] A. J. O’Toole, X. An, J. Dunlop, V. Natu, and P. J.                in Face Verification. CVPR, 2014.
+     Phillips. Comparing face recognition algorithms to            [54] X. Tang and X. Wang. Face sketch recognition.
+     humans on challenging tasks. ACM Transactions on                   IEEE Transactions on Circuits and Systems for Video
+     Applied Perception, 9(4):16, 2012.                                 Technology, 14(1):50–57, 2004.
+[39] A. J. OToole, F. Jiang, D. Roark, and H. Abdi.                [55] A. Torralba and A. A. Efros. Unbiased look at dataset
+     Predicting human performance for face recognition.                 bias. In CVPR, pages 1521–1528, 2011.
+     Face Processing: Advanced Methods and Models.                 [56] M. A. Turk and A. P. Pentland. Face recognition using
+     Elsevier, Amsterdam, 2006.                                         eigenfaces. In CVPR, pages 586–591, 1991.
+[40] A. J. O’Toole, P. J. Phillips, F. Jiang, J. Ayyad,            [57] R. Urtasun and T. Darrell. Discriminative gaussian
+     N. Pénard, and H. Abdi. Face recognition algorithms               process latent variable model for classification. In
+     surpass humans matching faces over changes in illu-                ICML, pages 927–934, 2007.
+     mination. TPAMI, 29(9):1642–1646, 2007.
+                                                                   [58] J. Wright and G. Hua. Implicit elastic matching with
+[41] P. J. Phillips and A. J. O’Toole. Comparison of human              random projections for pose-variant face recognition.
+     and computer performance across face recognition                   In CVPR, pages 1502–1509, 2009.
+     experiments. Image and Vision Computing, 32(1):74–
+                                                                   [59] Q. Yin, X. Tang, and J. Sun. An associate-predict
+     85, 2014.
+                                                                        model for face recognition. In CVPR, pages 497–504,
+[42] C. E. Rasmussen and C. K. I. Williams. Gaussian                    2011.
+     processes for machine learning. 2006.
+                                                                   [60] K. Yu, V. Tresp, and A. Schwaighofer. Learning
+[43] K. Ricanek and T. Tesafaye. Morph: A longitudinal                  gaussian processes from multiple tasks. In ICML,
+     image database of normal adult age-progression. In                 pages 1012–1019, 2005.
+     Automatic Face and Gesture Recognition, pages 341–
+     345, 2006.                                                    [61] Y. Zhang and D.-Y. Yeung.         Multi-task warped
+                                                                        gaussian process for personalized age estimation. In
+[44] O. Rudovic, I. Patras, and M. Pantic. Coupled                      CVPR, pages 2622–2629, 2010.
+     gaussian process regression for pose-invariant facial
+     expression recognition. In ECCV. 2010.                        [62] Z. Zhu, P. Luo, X. Wang, and X. Tang. Deep learning
+                                                                        identity preserving face space. In ICCV. 2013.
+[45] R. Salakhutdinov and G. E. Hinton. Using deep
+     belief nets to learn covariance kernels for gaussian          [63] Z. Zhu, P. Luo, X. Wang, and X. Tang. Recover
+     processes. In NIPS, 2007.                                          canonical-view faces in the wild with deep neural
+                                                                        networks. arXiv:1404.3543, 2014.
+[46] H. J. Seo and P. Milanfar. Face verification using the
+     lark representation. TIFS, 6(4):1275–1286, 2011.
+[47] K. Simonyan, O. M. Parkhi, A. Vedaldi, and A. Zisser-
+     man. Fisher vector faces in the wild. IJCV, 60(2):91–
+     110, 2004.
+
+
+                                                              13
+

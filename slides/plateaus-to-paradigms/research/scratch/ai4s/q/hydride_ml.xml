@@ -1,0 +1,514 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/pGx2SnslF0w7qNmZkKfA+BOaPcM</id>
+  <title>arXiv Query: search_query=abs:"hydride" AND abs:"superconduct" AND abs:"machine learning"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:47:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22hydride%22+AND+(abs:%22superconduct%22+AND+abs:%22machine+learning%22)&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>18</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2603.25373v1</id>
+    <title>Hessian-informed machine learning interatomic potential towards bridging theory and experiments</title>
+    <updated>2026-03-26T12:23:49Z</updated>
+    <link href="https://arxiv.org/abs/2603.25373v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.25373v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Local curvature of potential energy surfaces is critical for predicting certain experimental observables of molecules and materials from first principles, yet it remains far beyond reach for complex systems. In this work, we introduce a Hessian-informed Machine Learning Interatomic Potential (Hi-MLIP) that captures such curvature reliably, thereby enabling accurate analysis of associated thermodynamic and kinetic phenomena. To make Hessian supervision practically viable, we develop a highly efficient training protocol, termed Hessian INformed Training (HINT), achieving two to four orders of magnitude reduction for the requirement of expensive Hessian labels. HINT integrates critical techniques, including Hessian pre-training, configuration sampling, curriculum learning and stochastic projection Hessian loss. Enabled by HINT, Hi-MLIP significantly improves transition-state search and brings Gibbs free-energy predictions close to chemical accuracy especially in data-scarce regimes. Our framework also enables accurate treatment of strongly anharmonic hydrides, reproducing phonon renormalization and superconducting critical temperatures in close agreement with experiment while bypassing the computational bottleneck of anharmonic calculations. These results establish a practical route to enhancing curvature awareness of machine learning interatomic potentials, bridging simulation and experimental observables across a wide range of systems.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-26T12:23:49Z</published>
+    <arxiv:comment>13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bangchen Yin</name>
+    </author>
+    <author>
+      <name>Jian Ouyang</name>
+    </author>
+    <author>
+      <name>Zhen Fan</name>
+    </author>
+    <author>
+      <name>Kailai Lin</name>
+    </author>
+    <author>
+      <name>Hanshi Hu</name>
+    </author>
+    <author>
+      <name>Dingshun Lv</name>
+    </author>
+    <author>
+      <name>Weiluo Ren</name>
+    </author>
+    <author>
+      <name>Hai Xiao</name>
+    </author>
+    <author>
+      <name>Ji Chen</name>
+    </author>
+    <author>
+      <name>Changsu Cao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.11590v1</id>
+    <title>High-pressure phase stability and superconductivity in La-Zr-H hydrides</title>
+    <updated>2026-03-12T06:24:53Z</updated>
+    <link href="https://arxiv.org/abs/2603.11590v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.11590v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hydrogen-rich ternary hydrides are promising candidates for high-Tc superconductivity at megabar pressures, yet their chemical space is vast and largely unexplored. Combining evolutionary structure searches with first-principles calculations, we comprehensively investigate the La-Zr-H ternary system in the 150-300 GPa pressure range. Zero-point energy-corrected convex hull analysis identifies multiple stable superconducting phases, including R3m-Zr2H17 at 300 GPa and P6/mmm-LaZr2H24 at 200 GPa, both of which are thermodynamically and dynamically stable and exhibit strong electron-phonon coupling. Solution of the Eliashberg equations predicts high superconducting transition temperatures of Tc = 209 K for R3m-Zr2H17 at 300 GPa and Tc = 202 K for P6/mmm-LaZr2H24 at 200 GPa. In addition to these stable phases, we identify a high-symmetry metastable compound, P6m2-LaZrH18, which lies just 0.027 eV/atom above the convex hull yet remains dynamically stable and exhibits a high predicted Tc of 206 K at 300 GPa. We find that, across all phases, the elevated Tc correlates with the high-symmetry structure with dense hydrogen cages, favorable electron counts per hydrogen, and a large hydrogen-derived density of states at the Fermi level. Finally, a random- forest machine learning model, trained on diverse hydrides superconductivity data, reproduces these structure-property trends across predicted structures, enabling to identify potential hydrides with high predicted Tc for targeted follow-up calculations and future high-pressure experiments.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T06:24:53Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Ijaz shahid</name>
+    </author>
+    <author>
+      <name>Maxim A. Grebeniuk</name>
+    </author>
+    <author>
+      <name>Jinbin Zhao</name>
+    </author>
+    <author>
+      <name>Ergen Bao</name>
+    </author>
+    <author>
+      <name>Tianye Yu</name>
+    </author>
+    <author>
+      <name>Xiangyang Liu</name>
+    </author>
+    <author>
+      <name>Yi-Chi Zhang</name>
+    </author>
+    <author>
+      <name>Artem R. Oganov</name>
+    </author>
+    <author>
+      <name>Yan Sun</name>
+    </author>
+    <author>
+      <name>Peitao Liu</name>
+    </author>
+    <author>
+      <name>Xing-Qiu Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.24849v2</id>
+    <title>SSCHA-based evolutionary crystal structure prediction at finite temperatures with account for quantum nuclear motion</title>
+    <updated>2026-09-09T07:20:55Z</updated>
+    <link href="https://arxiv.org/abs/2512.24849v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.24849v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reliable crystal structure prediction (CSP) at finite temperatures, including quantum anharmonic effects, remains challenging but is particularly important for systems containing light atoms such as superconducting hydrides. Here, we integrate machine-learned interatomic potentials (MLIPs) with the stochastic self-consistent harmonic approximation (SSCHA) to enable evolutionary CSP on the quantum anharmonic free-energy landscape. Using LaH10 as a test case, we compare three approaches: (i) active-learning MLIPs (AL-MLIPs) trained on the fly, (ii) universal MLIPs (uMLIPs), and (iii) temperature-dependent effective potentials (TDEPs) trained on SSCHA ensemble data. AL-MLIPs correctly predict the cubic Fm-3m phase but require thermodynamic perturbation theory corrections for consistent results. The foundation uMLIP Mattersim-5m enables SSCHA-based CSP without per-structure training, but fine-tuning is required for higher accuracy. Temperature-dependent effective potentials trained on SSCHA data enable accurate and very efficient CSP for large unit cells on the quantum anharmonic free-energy landscape. We demonstrate that quantum anharmonicity simplifies the free-energy landscape and is essential for the correct energy ranking of LaH10 structures.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-31T13:17:49Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Daniil Poletaev</name>
+    </author>
+    <author>
+      <name>Artem R. Oganov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.20424v1</id>
+    <title>Iterative learning scheme for crystal structure prediction with anharmonic lattice dynamics</title>
+    <updated>2025-12-23T15:08:43Z</updated>
+    <link href="https://arxiv.org/abs/2512.20424v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.20424v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>First-principles based crystal structure prediction (CSP) methods have revealed an essential tool for the discovery of new materials. However, in solids close to displacive phase transitions, which are common in ferroelectrics, thermoelectrics, charge-density wave systems, or superconducting hydrides, the ionic contribution to the free energy and lattice anharmonicity become essential, limiting the capacity of CSP techniques to determine the thermodynamical stability of competing phases. While variational methods like the stochastic self-consistent harmonic approximation (SSCHA) accurately account for anharmonic lattice dynamics \emph{ab initio}, their high computational cost makes them impractical for CSP. Machine-learning interatomic potentials offer accelerated sampling of the energy landscape compared to purely first-principles approaches, but their reliance on extensive training data and limited generalization restricts practical applications. Here, we propose an iterative learning framework combining evolutionary algorithms, atomic foundation models, and SSCHA to enable CSP with anharmonic lattice dynamics. Foundation models enable robust relaxations of random structures, drastically reducing required training data. Applied to the highly anharmonic H$_3$S system, our framework achieves good agreement with the benchmarks based on density functional theory, accurately predicting phase stability and vibrational properties from 50 to 200 GPa. Importantly, we find that the statistical averaging in the SSCHA reduces the error in the free energy evaluation, avoiding the need for extremely high accuracy of machine-learning potentials. This approach bridges the gap between data efficiency and predictive power, establishing a practical pathway for CSP with anharmonic lattice dynamics.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-23T15:08:43Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Hao Gao</name>
+    </author>
+    <author>
+      <name>Yue-Wen Fang</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <arxiv:doi>10.1103/fcrd-8zzf</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/fcrd-8zzf" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.20228v1</id>
+    <title>Composition-Based Machine Learning for Screening Superconducting Ternary Hydrides from a Curated Dataset</title>
+    <updated>2025-12-23T10:40:50Z</updated>
+    <link href="https://arxiv.org/abs/2512.20228v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.20228v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an ensemble machine-learning approach for composition-based, structure-agnostic screening of candidate superconductors among ternary hydrides under high pressure. Hydrogen-rich hydrides are known to exhibit high superconducting transition temperatures, and ternary or multinary hydrides can stabilize superconducting phases at reduced pressures through chemical compression. To systematically explore this vast compositional space, we construct an ensemble of 30 XGBoost regression models trained on a curated dataset of approximately 2000 binary and ternary hydride entries. The model ensemble is used to screen a broad set of A-B-H compositions at pressures of 100, 200, and 300 GPa, with screening outcomes evaluated statistically based on prediction consistency across ensemble members. This analysis highlights several high-scoring compositional systems, including Ca-Ti-H, Li-K-H, and Na-Mg-H, which were not explicitly included in the training dataset. In addition, feature-importance analysis indicates that elemental properties such as ionization energy and atomic radius contribute significantly to the learned composition-level trends in superconducting transition temperature. Overall, these results demonstrate the utility of ensemble-based machine learning as a primary screening tool for identifying promising regions of chemical space in superconducting hydrides.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-23T10:40:50Z</published>
+    <arxiv:comment>8 pages, 4 figures; CSV files attached</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>APL Mach. Learn. 4, 026109 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Kazuaki Tokuyama</name>
+    </author>
+    <author>
+      <name>Souta Miyamoto</name>
+    </author>
+    <author>
+      <name>Taichi Masuda</name>
+    </author>
+    <author>
+      <name>Katsuaki Tanabe</name>
+    </author>
+    <arxiv:doi>10.1063/5.0319573</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0319573" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.25971v1</id>
+    <title>Superconductor discovery in the emerging paradigm of Materials Informatics</title>
+    <updated>2025-10-29T21:15:26Z</updated>
+    <link href="https://arxiv.org/abs/2510.25971v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.25971v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The last two decades have witnessed a tremendous number of computational predictions of hydride-based (phonon-mediated) superconductors, mostly at extremely high pressures, i.e., hundreds of GPa. These discoveries were heavily driven by Migdal-Éliashberg theory (and its first-principles computational implementations) for electron-phonon interactions, the key concept of phonon-mediated superconductivity. Dozens of predictions were experimentally synthesized and characterized, triggering not only enormous excitement in the community but also some debates. In this Article, we review the computational-driven discoveries and the recent developments in the field from various essential aspects, including the theoretical, computational, and, specifically, artificial intelligence (AI)/machine learning (ML) based approaches emerging within the paradigm of materials informatics. While challenges and critical gaps can be found in all of these approaches, AI/ML efforts specifically remain in its infant stage for good reasons. However, opportunities exist when these approaches can be further developed and integrated in concerted efforts, in which AI/ML approaches could play more important roles.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-29T21:15:26Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Chem. Mater. 36, 10939-10966 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Huan Tran</name>
+    </author>
+    <author>
+      <name>Hieu-Chi Dam</name>
+    </author>
+    <author>
+      <name>Christopher Kuenneth</name>
+    </author>
+    <author>
+      <name>Tuoc N. Vu</name>
+    </author>
+    <author>
+      <name>Hiori Kino</name>
+    </author>
+    <arxiv:doi>10.1021/acs.chemmater.4c01757</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.chemmater.4c01757" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19781v3</id>
+    <title>Search for thermodynamically stable ambient-pressure superconducting hydrides in GNoME database</title>
+    <updated>2026-03-17T12:31:10Z</updated>
+    <link href="https://arxiv.org/abs/2508.19781v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.19781v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hydrides are considered to be one of the most promising families of compounds for achieving high temperature superconductivity. However, there are very few experimental reports of ambient-pressure hydride superconductivity, and the superconducting critical temperatures ($T_{\rm c}$) are typically less than 10 K. At the same time several hydrides have been predicted to exhibit superconductivity around 100 K at ambient pressure but in thermodynamically unfavorable phases. In this work we aim at assessing the superconducting properties of thermodynamically stable hydride superconductors at room pressure by investigating the GNoME material database, which has been recently released and includes thousands of hydrides thermodynamically stable at 0K. To scan this large material space we have adopted a multi stage approach which combines machine learning for a fast initial evaluation and cutting edge ab initio methods to obtain a reliable estimation of ($T_{\rm c}$). Ultimately we have identified 25 cubic hydrides with ($T_{\rm c}$) above 4.2~K and reach a maximum ($T_{\rm c}$) of 17 K. While these critical temperatures are modest in comparison to some recent predictions, the systems where they are found, being stable, are likely to be experimentally accessible and of potential technological relevance.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-27T11:04:09Z</published>
+    <arxiv:comment>11 pages, 5 figures in main text</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Commun Phys 9, 94 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Antonio Sanna</name>
+    </author>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+    </author>
+    <author>
+      <name>Ekin Dogus Cubuk</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <author>
+      <name>Yue-Wen Fang</name>
+    </author>
+    <arxiv:doi>10.1038/s42005-026-02552-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s42005-026-02552-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.04984v1</id>
+    <title>FF7: A Code Package for High-throughput Calculations and Constructing Materials Database</title>
+    <updated>2025-02-07T15:03:47Z</updated>
+    <link href="https://arxiv.org/abs/2502.04984v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.04984v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Decades accumulation of theory simulations lead to boom in material database, which combined with machine learning methods has been a valuable driver for the data-intensive material discovery, i.e., the fourth research paradigm. However, construction of segmented databases and data reuse in generic databases with uniform parameters still lack easy-to-use code tools. We herein develop a code package named FF7 (Fast Funnel with 7 modules) to provide command-line based interactive interface for performing customized high-throughput calculations and building your own handy databases. Data correlation studies and material property prediction can progress by built-in installation-free artificial neural network module and various post processing functions are also supported by auxiliary module. This paper shows the usage of FF7 code package and demonstrates its usefulness by example of database driven thermodynamic stability high-throughput calculation and machine learning model for predicting the superconducting critical temperature of clathrate hydrides.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-07T15:03:47Z</published>
+    <arxiv:comment>9 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Tiancheng Ma</name>
+    </author>
+    <author>
+      <name>Zihan Zhang</name>
+    </author>
+    <author>
+      <name>Shuting Wu</name>
+    </author>
+    <author>
+      <name>Defang Duan</name>
+    </author>
+    <author>
+      <name>Tian Cui</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.13496v1</id>
+    <title>Searching Materials Space for Hydride Superconductors at Ambient Pressure</title>
+    <updated>2024-03-20T10:55:06Z</updated>
+    <link href="https://arxiv.org/abs/2403.13496v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.13496v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We employed a machine-learning assisted approach to search for superconducting hydrides under ambient pressure within an extensive dataset comprising over 150 000 compounds. Our investigation yielded around 50 systems with transition temperatures surpassing 20 K, and some even reaching above 70 K. These compounds have very different crystal structures, with different dimensionality, chemical composition, stoichiometry, and arrangement of the hydrogens. Interestingly, most of these systems displayed slight thermodynamic instability, implying that their synthesis would require conditions beyond ambient equilibrium. Moreover, we found a consistent chemical composition in the majority of these systems, which combines alkali or alkali-earth elements with noble metals. This observation suggests a promising avenue for future experimental investigations into high-temperature superconductivity within hydrides at ambient pressure.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-20T10:55:06Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+    </author>
+    <author>
+      <name>Yue-Wen Fang</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <author>
+      <name>Antonio Sanna</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.12694v4</id>
+    <title>Data-driven Design of High Pressure Hydride Superconductors using DFT and Deep Learning</title>
+    <updated>2024-05-31T18:03:33Z</updated>
+    <link href="https://arxiv.org/abs/2312.12694v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.12694v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The observation of superconductivity in hydride-based materials under ultrahigh pressures (for example, H$_3$S and LaH$_{10}$) has fueled the interest in a more data-driven approach to discovering new high-pressure hydride superconductors. In this work, we performed density functional theory (DFT) calculations to predict the critical temperature ($T_c$) of over 900 hydride materials under a pressure range of (0 to 500) GPa, where we found 122 dynamically stable structures with a $T_c$ above MgB$_2$ (39 K). To accelerate screening, we trained a graph neural network (GNN) model to predict $T_c$ and demonstrated that a universal machine learned force-field can be used to relax hydride structures under arbitrary pressures, with significantly reduced cost. By combining DFT and GNNs, we can establish a more complete map of hydrides under pressure.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-20T01:40:24Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Daniel Wines</name>
+    </author>
+    <author>
+      <name>Kamal Choudhary</name>
+    </author>
+    <arxiv:doi>10.1088/2752-5724/ad4a94</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2752-5724/ad4a94" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.06804v1</id>
+    <title>Prediction of Ambient Pressure Conventional Superconductivity above 80K in Thermodynamically Stable Hydride Compounds</title>
+    <updated>2023-10-10T17:21:52Z</updated>
+    <link href="https://arxiv.org/abs/2310.06804v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.06804v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The primary challenge in the field of high-temperature superconductivity in hydrides is to achieve a superconducting state at ambient pressure rather than the extreme pressures that have been required in experiments so far. Here, we propose a family of compounds, of composition Mg$_2$XH$_6$ with X$=$Rh, Ir, Pd, or Pt, that achieves this goal. These materials were identified by scrutinizing more than a million compounds using a machine-learning accelerated high-throughput workflow. They are thermodynamically stable, indicating that they are serious candidates for experimental synthesis. We predict that their superconducting transition temperatures are in the range of 45-80K, or even above 100K with appropriate electron doping of the Pt compound. These results indicate that, although very rare, high-temperature superconductivity in thermodynamically stable hydrides is achievable at room pressure.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-10T17:21:52Z</published>
+    <arxiv:comment>9 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>npj Comput Mater 10, 44 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Antonio Sanna</name>
+    </author>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+    </author>
+    <author>
+      <name>Yue-Wen Fang</name>
+    </author>
+    <author>
+      <name>Ion Errea</name>
+    </author>
+    <author>
+      <name>Alfred Ludwig</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+    <arxiv:doi>10.1038/s41524-024-01214-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41524-024-01214-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.03619v2</id>
+    <title>Evidence of Molecular Hydrogen in the N-doped LuH3 System: a Possible Path to Superconductivity?</title>
+    <updated>2024-05-22T12:40:28Z</updated>
+    <link href="https://arxiv.org/abs/2308.03619v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.03619v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The discovery of ambient superconductivity would mark an epochal breakthrough long-awaited for over a century, potentially ushering in unprecedented scientific and technological advancements. The recent findings on high-temperature superconducting phases in various hydrides under high pressure have ignited optimism, suggesting that the realization of near-ambient superconductivity might be on the horizon. However, the preparation of hydride samples tends to promote the emergence of various metastable phases, marked by a low level of experimental reproducibility. Identifying these phases through theoretical and computational methods entails formidable challenges, often resulting in controversial outcomes. In this paper, we consider N-doped LuH3 as a prototypical complex hydride: By means of machine-learning-accelerated force-field molecular dynamics, we have identified the formation of H2 molecules stabilized at ambient pressure by nitrogen impurities. Importantly, we demonstrate that this molecular phase plays a pivotal role in the emergence of a dynamically stable, low-temperature, experimental-ambient-pressure superconductivity. The potential to stabilize hydrogen in molecular form through chemical doping opens up a novel avenue for investigating disordered phases in hydrides and their transport properties under near-ambient conditions.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-07T14:23:32Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Nat. Comm. 2024</arxiv:journal_ref>
+    <author>
+      <name>Cesare Tresca</name>
+    </author>
+    <author>
+      <name>Pietro Maria Forcella</name>
+    </author>
+    <author>
+      <name>Andrea Angeletti</name>
+    </author>
+    <author>
+      <name>Luigi Ranalli</name>
+    </author>
+    <author>
+      <name>Cesare Franchini</name>
+    </author>
+    <author>
+      <name>Michele Reticcioli</name>
+    </author>
+    <author>
+      <name>Gianni Profeta</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-024-51348-z</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-024-51348-z" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.10728v1</id>
+    <title>Sampling the Whole Materials Space for Conventional Superconducting Materials</title>
+    <updated>2023-07-20T09:41:08Z</updated>
+    <link href="https://arxiv.org/abs/2307.10728v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.10728v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We perform a large scale study of conventional superconducting materials using a machine-learning accelerated high-throughput workflow. We start by creating a comprehensive dataset of around 7000 electron-phonon calculations performed with reasonable convergence parameters. This dataset is then used to train a robust machine learning model capable of predicting the electron-phonon and superconducting properties based on structural, compositional, and electronic ground-state properties. Using this machine, we evaluate the transition temperature (Tc ) of approximately 200000 metallic compounds, all of which on the convex hull of thermodynamic stability (or close to it) to maximize the probability of synthesizability. Compounds predicted to have Tc values exceeding 5 K are further validated using density-functional perturbation theory. As a result, we identify 545 compounds with Tc values surpassing 10 K, encompassing a variety of crystal structures and chemical compositions. This work is complemented with a detailed examination of several interesting materials, including nitrides, hydrides, and intermetallic compounds. Particularly noteworthy is LiMoN2 , which we predict to be superconducting in the stoichiometric trigonal phase, with a Tc exceeding 38 K. LiMoN2 has been previously synthesized in this phase, further heightening its potential for practical applications.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-20T09:41:08Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Tiago F. T. Cerqueira</name>
+    </author>
+    <author>
+      <name>Antonio Sanna</name>
+    </author>
+    <author>
+      <name>Miguel A. L. Marques</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.12977v2</id>
+    <title>Machine learning the relationship between Debye temperature and superconducting transition temperature</title>
+    <updated>2023-11-27T18:05:53Z</updated>
+    <link href="https://arxiv.org/abs/2305.12977v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.12977v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently a relationship between the Debye temperature $Θ_D$ and the superconducting transition temperature $T_c$ of conventional superconductors has been proposed [npj Quantum Materials $\mathbf{3}$, 59 (2018)]. The relationship indicates that $T_c \le A Θ_D$ for phonon-mediated BCS superconductors, with $A$ being a pre-factor of order $\sim 0.1$. In order to verify this bound, we train machine learning (ML) models with 10,330 samples in the Materials Project database to predict $Θ_D$. By applying our ML models to 9,860 known superconductors in the NIMS SuperCon database, we find that the conventional superconductors in the database indeed follow the proposed bound. We also perform first-principles phonon calculations for H$_{3}$S and LaH$_{10}$ at 200 GPa. The calculation results indicate that these high-pressure hydrides essentially saturate the bound of $T_c$ versus $Θ_D$.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-22T12:32:36Z</published>
+    <arxiv:comment>10 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. B 108, 174514 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Adam D. Smith</name>
+    </author>
+    <author>
+      <name>Sumner B. Harris</name>
+    </author>
+    <author>
+      <name>Renato P. Camata</name>
+    </author>
+    <author>
+      <name>Da Yan</name>
+    </author>
+    <author>
+      <name>Cheng-Chien Chen</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.108.174514</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.108.174514" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.03265v2</id>
+    <title>Machine-learning approach for discovery of conventional superconductors</title>
+    <updated>2023-04-11T14:39:42Z</updated>
+    <link href="https://arxiv.org/abs/2211.03265v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.03265v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>First-principles computations are the driving force behind numerous discoveries of hydride-based superconductors, mostly at high pressures, during the last decade. Machine-learning (ML) approaches can further accelerate the future discoveries if their reliability can be improved. The main challenge of current ML approaches, typically aiming at predicting the critical temperature $T_{\rm c}$ of a solid from its chemical composition and target pressure, is that the correlations to be learned are deeply hidden, indirect, and uncertain. In this work, we showed that predicting superconductivity at any pressure from the atomic structure is sustainable and reliable. For a demonstration, we curated a diverse dataset of 584 atomic structures for which $λ$ and $ω_{\log}$, two parameters of the electron-phonon interactions, were computed. We then trained some ML models to predict $λ$ and $ω_{\log}$, from which $T_{\rm c}$ can be computed in a post-processing manner. The models were validated and used to identify two possible superconductors whose $T_{\rm c}\simeq 10-15$K at zero pressure. Interestingly, these materials have been synthesized and studied in some other contexts. In summary, the proposed ML approach enables a pathway to directly transfer what can be learned from the high-pressure atomic-level details that correlate with high-$T_{\rm c}$ superconductivity to zero pressure. Going forward, this strategy will be improved to better contribute to the discoveries of new superconductors.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-07T02:21:11Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. Materials 7, 054805 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Huan Tran</name>
+    </author>
+    <author>
+      <name>Tuoc N. Vu</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevMaterials.7.054805</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevMaterials.7.054805" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.06503v2</id>
+    <title>Electron-phonon coupling strength from ab initio frozen-phonon approach</title>
+    <updated>2022-07-05T15:54:32Z</updated>
+    <link href="https://arxiv.org/abs/2206.06503v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.06503v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a fast method for high-throughput screening of potential superconducting materials. The method is based on calculating metallic screening of zone-center phonon modes, which provides an accurate estimate for the electron-phonon coupling strength. This method is complementary to the recently proposed Rigid Muffin Tin (RMT) method, which amounts to integrating the electron-phonon coupling over the entire Brillouin zone (as opposed to the zone center), but in a relatively inferior approximation. We illustrate the use of this method by applying it to MgB$_\text{2}$, where the high-temperature superconductivity is known to be driven largely by the zone-center modes, and compare it to a sister compound AlB$_\text{2}$. We further illustrate the usage of this descriptor by screening a large number of binary hydrides, for which accurate first-principle calculations of electron-phonon coupling have been recently published. Together with the RMT descriptor, this method opens a way to perform initial high-throughput screening in search of conventional superconductors via machine learning or data mining.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-13T22:17:35Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. Materials 6, 074801 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Yang Sun</name>
+    </author>
+    <author>
+      <name>Feng Zhang</name>
+    </author>
+    <author>
+      <name>Cai-Zhuang Wang</name>
+    </author>
+    <author>
+      <name>Kai-Ming Ho</name>
+    </author>
+    <author>
+      <name>Igor I. Mazin</name>
+    </author>
+    <author>
+      <name>Vladimir Antropov</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevMaterials.6.074801</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevMaterials.6.074801" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.08140v2</id>
+    <title>Ephemeral data derived potentials for random structure search</title>
+    <updated>2022-07-01T13:06:41Z</updated>
+    <link href="https://arxiv.org/abs/2201.08140v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.08140v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Structure prediction has become a key task of the modern atomistic sciences, and depends on the rapid and reliable computation of the energy landscape. First principles density functional based calculations are highly reliable, faithfully describing the entire energy landscape. They are, however, computationally intensive and slow compared to interatomic potentials. Great progress has been made in the development of machine learning, or data derived, potentials, which promise to describe the entire energy landscape at first principles quality. However, compared to first principles approaches, their preparation can be time consuming and delay searching. Ab initio random structure searching (AIRSS) is a straightforward and powerful approach to structure prediction, based on the stochastic generation of sensible initial structures, and their repeated local optimisation. Here, a scheme, compatible with AIRSS, for the rapid construction of disposable, or ephemeral, data derived potentials (EDDPs) is described. These potentials are constructed using a homogeneous, separable manybody environment vector, and iterative neural network fits, sparsely combined through non-negative least squares. The approach is first tested on methane, boron nitride, elemental boron and urea. In the case of boron, an EDDP generated using data from small unit cells is used to rediscover the complex $γ$-boron structure without recourse to symmetry or fragments. Finally, an EDDP generated for silane (SiH$_4$) at 500 GPa enables the discovery of an extremely complex, dense, structure which significantly modifies silane's high pressure phase diagram. This has implications for the theoretical exploration for high temperature superconductivity in the dense hydrides, which have so far largely depended on searches in smaller unit cells.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-20T12:32:57Z</published>
+    <arxiv:comment>17 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Phys. Rev. B 106, 014102 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Chris J. Pickard</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.106.014102</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.106.014102" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.09852v2</id>
+    <title>Predicting novel superconducting hydrides using machine learning approaches</title>
+    <updated>2020-04-08T18:25:54Z</updated>
+    <link href="https://arxiv.org/abs/2001.09852v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.09852v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Searching for superconducting hydrides has so far largely focused on finding materials exhibiting the highest possible critical temperatures ($T_c$). This has led to a bias towards materials stabilised at very high pressures, which introduces a number of technical difficulties in experiment. Here we apply machine learning methods in an effort to identify superconducting hydrides which can operate closer to ambient conditions. The output of these models informs structure searches, from which we identify and screen stable candidates before performing electron-phonon calculations to obtain $T_c$. Hydrides of alkali and alkaline earth metals are identified as particularly promising; a $T_c$ of up to 115 K is calculated for RbH$_{12}$ at 50 GPa and a $T_c$ of up to 90 K is calculated for CsH$_7$ at 100 GPa.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-27T15:15:04Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. B 101, 144505 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Michael J. Hutcheon</name>
+    </author>
+    <author>
+      <name>Alice M. Shipley</name>
+    </author>
+    <author>
+      <name>Richard J. Needs</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.101.144505</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.101.144505" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/1YbXoaESlcAHn4hhacqX4kCzdF8</id>
+  <title>arXiv Query: search_query=abs:"foundation model" AND abs:"phonon"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:45:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22foundation+model%22+AND+abs:%22phonon%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28100v2</id>
+    <title>uMOF: A Universal Database, Benchmark, and Machine Learning Interatomic Potentials for Metal-Organic Frameworks</title>
+    <updated>2026-09-08T21:05:35Z</updated>
+    <link href="https://arxiv.org/abs/2608.28100v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28100v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation machine learning interatomic potentials (MLIPs) deliver near-ab-initio accuracy at a fraction of the computational cost, yet their promise for Metal-organic Frameworks (MOFs) remains largely unrealized as large unit cells make first-principles training data expensive to generate, fine-tuned models are scarce, and experimentally grounded benchmarks are scarcer still. We introduce uMOF, a three-part contribution addressing this gap. First, we release the largest and most accurate density functional theory dataset for MOFs to date, computed at the r$^2$SCAN-D4 level of theory across 85524 configurations spanning 19950 unique frameworks and 79 elements, covering empty and gas-loaded structures, geometry optimizations, equations of state, and finite-temperature molecular dynamics. Second, we release a literature-mined benchmark of 3986 verified property values (3146 experimental) extracted from 626 papers by a seven-stage, checkpointed multi-pass large language model pipeline, linked to more than 650 crystallographic information files. Third, we release two universal MLIPs for MOFs, uMOF-MH and uMOF-POLAR, fine-tuned from two architecturally distinct MACE foundation models on the uMOF dataset. On near-equilibrium, ``Tier-1'' properties (bulk modulus, phonon-derived heat capacity) the uMOF models perform comparably to existing foundation and fine-tuned baselines. On harder, dynamics-sensitive properties like gas adsorption enthalpies via Widom insertion and adsorption isotherms, the uMOF models outperform every baseline we test, including MOF-specialized gas-capture models trained on datasets up to three orders of magnitude larger, cutting error by more than 80% to within experimental uncertainty. We trace this advantage to the physical diversity of the training data and to level of theory where a small (1.7%) fraction of MD simulations is decisive for MLIP stability.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T09:08:23Z</published>
+    <arxiv:comment>19 pages, 5 figures, 7 tables</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Théo Jaffrelot Inizan</name>
+    </author>
+    <author>
+      <name>Prathami Divakar Kamath</name>
+    </author>
+    <author>
+      <name>Alin Marin Elena</name>
+    </author>
+    <author>
+      <name>Kristin A. Persson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.22234v1</id>
+    <title>Fine-Tuned Machine-Learned Interatomic Potentials for Structural and Vibrational Properties of Twisted 2D Materials</title>
+    <updated>2026-06-20T21:29:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.22234v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.22234v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Twisted van der Waals bilayers form moiré superlattices whose structural and vibrational properties are highly sensitive to variations in local stacking registry and the degree of atomic reconstruction, yet accurate atomistic modeling of these systems at the DFT level remains computationally prohibitive at small twist angles. We investigate machine-learned interatomic potentials for moiré systems, using twisted bilayer graphene, \textit{h}-BN, and MoS$_2$ as representative materials spanning a broad spectrum of mechanical compliance and atomic reconstruction behavior. We show that fine-tuning universal atomistic foundation models is essential to achieve DFT accuracy for layered materials, as broadly trained foundation models prove insufficient for resolving the subtle interlayer energetics that govern atomic reconstruction. Through local strain tensor analysis and the phonon band unfolding technique, our fine-tuned MACE model reveals a consistent reconstruction-induced strain landscape in all three materials, with extended low-energy stacking domains separated by narrow soliton lines where deformation concentrates. The system progressively optimizes the local stacking registry within each domain, giving rise to a spatially structured deformation field whose amplitude scales with the mechanical compliance of the material and can be further tuned by external perturbation. The obtained results of both atomic reconstructed structures and moiré phonon spectra present a good agreement with the reported experiments, thereby demonstrating the accuracy and efficiency of our methodology in modeling of these large scale nanomaterials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-20T21:29:02Z</published>
+    <arxiv:comment>35 pages, 14 figures, Supplementary Materials</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Viet-Anh Tran</name>
+    </author>
+    <author>
+      <name>Viet-Hung Nguyen</name>
+    </author>
+    <author>
+      <name>Wei Chen</name>
+    </author>
+    <author>
+      <name>Gian-Marco Rignanese</name>
+    </author>
+    <author>
+      <name>Jean-Christophe Charlier</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.07927v2</id>
+    <title>MatterSim-MT: A multi-task foundation model for in silico materials characterization</title>
+    <updated>2026-05-28T21:59:19Z</updated>
+    <link href="https://arxiv.org/abs/2605.07927v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.07927v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate property characterization is a major bottleneck in materials design. While first-principles methods and task-specific machine-learning models have driven important progress, they remain fundamentally limited in scalability and generalizability across the vast space of structures and properties relevant to real-world materials design. We present MatterSim-MT, a multi-task foundation model for in silico materials simulation and property characterization. The model is pretrained on over 35 million first-principles-labeled structures covering 89 elements, temperatures up to 5000 K and pressures up to 1000 GPa, and is fine-tuned on various properties including Bader charges, magnetic moments, Born effective charges, and dielectric matrices. Out of the box, MatterSim-MT not only serves as a foundation model for predicting material structure, dynamics and thermodynamics, its multi-task architecture also enables a wide range of complex simulations that cannot be captured by potential energy surfaces alone. For example, we demonstrate pressure-dependent LO-TO phonon splitting in SiC with close agreement with experiment, electric hysteresis in ferroelectric BaTiO3, and the cationic-to-anionic redox transition during delithiation of a Li-rich cathode material. Finally, we show that MatterSim-MT scales well with more data and parameters, can be efficiently fine-tuned to higher levels of theory, and can be efficiently extended to new systems via active learning. Overall, we believe this approach provides a scalable route to accurate in silico materials characterization.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T16:01:20Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Han Yang</name>
+    </author>
+    <author>
+      <name>Xixian Liu</name>
+    </author>
+    <author>
+      <name>Chenxi Hu</name>
+    </author>
+    <author>
+      <name>Yichi Zhou</name>
+    </author>
+    <author>
+      <name>Yu Shi</name>
+    </author>
+    <author>
+      <name>Chang Liu</name>
+    </author>
+    <author>
+      <name>Junfu Tan</name>
+    </author>
+    <author>
+      <name>Jielan Li</name>
+    </author>
+    <author>
+      <name>Guanzhi Li</name>
+    </author>
+    <author>
+      <name>Qian Wang</name>
+    </author>
+    <author>
+      <name>Yu Zhu</name>
+    </author>
+    <author>
+      <name>Zekun Chen</name>
+    </author>
+    <author>
+      <name>Shuizhou Chen</name>
+    </author>
+    <author>
+      <name>Fabian Thiemann</name>
+    </author>
+    <author>
+      <name>Claudio Zeni</name>
+    </author>
+    <author>
+      <name>Matthew Horton</name>
+    </author>
+    <author>
+      <name>Robert Pinsler</name>
+    </author>
+    <author>
+      <name>Andrew Fowler</name>
+    </author>
+    <author>
+      <name>Daniel Zügner</name>
+    </author>
+    <author>
+      <name>Tian Xie</name>
+    </author>
+    <author>
+      <name>Lixin Sun</name>
+    </author>
+    <author>
+      <name>Yicheng Chen</name>
+    </author>
+    <author>
+      <name>Lingyu Kong</name>
+    </author>
+    <author>
+      <name>Yeqi Bai</name>
+    </author>
+    <author>
+      <name>Deniz Gunceler</name>
+    </author>
+    <author>
+      <name>Frank Noé</name>
+    </author>
+    <author>
+      <name>Hongxia Hao</name>
+    </author>
+    <author>
+      <name>Ziheng Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.16347v1</id>
+    <title>Tuning Cu/Diamond Interfacial Thermal Conductance via Nitrogen-Termination Engineering</title>
+    <updated>2026-03-17T10:31:27Z</updated>
+    <link href="https://arxiv.org/abs/2603.16347v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.16347v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cu-diamond composites are recognized as promising high-thermal-conductivity candidates for electronic cooling, offering tunable properties and competitive cost. However, their performance is significantly limited by the poor Cu/diamond interfacial thermal conductance (ITC). Here, we propose a nitrogen-termination strategy to tune the ITC of Cu/diamond interfaces and unravel atomistic mechanisms by which nitride interlayers tailor phonon transport. Based on the MACE machine-learning interatomic potential (MLIP) framework, we fine-tune the pre-trained MACE-MPA-0 foundation model by incorporating customized C-N-Cu training datasets. Through MLIP-driven lattice dynamics simulations, we demonstrate that an atomically flat N-termination on diamond enhances the ITC by 21% compared to the bare Cu/diamond interface. Mode-resolved phonon spectroscopy reveals that the LA phonons with frequency above 4 THz and wavevectors near Γ-X and Γ-U directions are selectively modulated by N-termination engineering. Analyses of local vibrational states and interfacial bonding further indicate that the N-termination on diamond tunes the interfacial heat conduction via surficial mass modification and bonding regulation, as evidenced by variations in LDOS overlap and COHP spectra. These findings open venues for tuning heat transfer across Cu/diamond interfaces via non-metallic modification, which avoids the graphitization issues associated with metallic coatings, and provide novel guidelines for upgrading the phonon-mediated heat transfer in Cu-diamond composites.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-17T10:31:27Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Guang Yang</name>
+    </author>
+    <author>
+      <name>Xinling Tang</name>
+    </author>
+    <author>
+      <name>Zhongkang Lin</name>
+    </author>
+    <author>
+      <name>Yulin Gu</name>
+    </author>
+    <author>
+      <name>Wei Hao</name>
+    </author>
+    <author>
+      <name>Yujie Du</name>
+    </author>
+    <author>
+      <name>Xiaoguang Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.00133v1</id>
+    <title>In context learning Foundation models for Materials Property Prediction with Small datasets</title>
+    <updated>2025-12-31T22:29:52Z</updated>
+    <link href="https://arxiv.org/abs/2601.00133v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.00133v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation models (FMs) have recently shown remarkable in-context learning (ICL) capabilities across diverse scientific domains. In this work, we introduce a unified in-context learning foundation model (ICL-FM) framework for materials property prediction that integrates both composition-based and structure-aware representations. The proposed approach couples the pretrained TabPFN transformer with graph neural network (GNN)-derived embeddings and our novel MagpieEX descriptors. MagpieEX augments traditional features with cation-anion interaction data to explicitly measure bond ionicity and charge-transfer asymmetry, capturing interatomic bonding characteristics that influence vibrational and thermal transport properties. Comprehensive experiments on the MatBench benchmark suite and a standalone lattice thermal conductivity (LTC) dataset demonstrate that ICL-FM achieves competitive or superior performance to state-of-the-art (SOTA) models with significantly reduced training costs. Remarkably, the training-free ICL-FM outperformed sophisticated SOTA GNN models in five out of six representative composition-based tasks, including a significant 9.93\% improvement in phonon frequency prediction. On the LTC dataset, the FM effectively models complex phenomena such as phonon-phonon scattering and atomic mass contrast. t-SNE analysis reveals that the FM acts as a physics-aware feature refiner, transforming raw, disjoint feature clusters into continuous manifolds with gradual property transitions. This restructured latent space enhances interpolative prediction accuracy while aligning learned representations with underlying physical laws. This study establishes ICL-FM as a generalizable, data-efficient paradigm for materials informatics.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-31T22:29:52Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Qinyang Li</name>
+    </author>
+    <author>
+      <name>Rongzhi Dong</name>
+    </author>
+    <author>
+      <name>Nicholas Miklaucic</name>
+    </author>
+    <author>
+      <name>Jeffrey Hu</name>
+    </author>
+    <author>
+      <name>Sadman Sadeed Omee</name>
+    </author>
+    <author>
+      <name>Lai Wei</name>
+    </author>
+    <author>
+      <name>Sourin Dey</name>
+    </author>
+    <author>
+      <name>Ming Hu</name>
+    </author>
+    <author>
+      <name>Jianjun Hu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05489v1</id>
+    <title>Beyond Adam: Disentangling Optimizer Effects in the Fine-Tuning of Atomistic Foundation Models</title>
+    <updated>2025-12-05T07:29:42Z</updated>
+    <link href="https://arxiv.org/abs/2512.05489v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05489v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomistic foundation models constitute a paradigm shift in computational materials science by providing universal machine-learned interatomic potentials with broad transferability across chemical spaces. Although fine-tuning is essential for adapting these pretrained models to specific target systems, the influence of the optimization algorithm on this process remains insufficiently characterized. In this work, we perform a rigorous benchmark of seven first-order optimizers, including Adam, AdamW, RAdam, SGD, LAMB, Ranger, and ScheduleFree, for the fine-tuning of foundation models across molecular, crystalline, and liquid regimes. We evaluate these algorithms based on energy and force accuracy for both in-distribution and out-of-distribution configurations, as well as their impact on downstream physical properties such as elastic moduli, phonon spectra, and interfacial dynamics. We interpret these empirical results through a preconditioning framework that views each optimizer as a data-dependent linear transformation of the gradient. This analysis clarifies how different update rules impose specific spectral filters on the effective loss Hessian. Across all regimes, AdamW and ScheduleFree achieve superior curvature conditioning and force accuracy, whereas stochastic gradient descent exhibits slow convergence and instability. Furthermore, we demonstrate that a brief second-order refinement stage reduces residual anisotropy in the loss landscape and enhances the fidelity of physical observables without increasing inference costs. These findings provide conceptual insight and practical guidance for selecting and designing optimizers to ensure the stable and efficient fine-tuning of universal interatomic potentials.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T07:29:42Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Xiaoqing Liu</name>
+    </author>
+    <author>
+      <name>Yangshuai Wang</name>
+    </author>
+    <author>
+      <name>Teng Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.05349v1</id>
+    <title>Platonic representation of foundation machine learning interatomic potentials</title>
+    <updated>2025-12-05T01:12:49Z</updated>
+    <link href="https://arxiv.org/abs/2512.05349v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.05349v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation machine learning interatomic potentials (MLIPs) are trained on overlapping chemical spaces, yet their latent representations remain model-specific. Here, we show that independently developed MLIPs exhibit statistically consistent geometric organisation of atomic environments, which we term the Platonic representation. By projecting embeddings relative to a set of atomic anchors, we unify the latent spaces of seven MLIPs (spanning equivariant, non-equivariant, conservative, and non-conservative architectures) into a common metric space that preserves chemical periodicity and structural invariants. This unified framework enables direct cross-model optimal transport, interpretable embedding arithmetic, and the detection of representational biases. Furthermore, we demonstrate that geometric distortions in this space can indicate physical prediction failures, including symmetry breaking and incorrect phonon dispersions. Our results show that the latent spaces of diverse MLIPs present consistent statistical geometry shaped by shared physical and chemical constraints, suggesting that the Platonic representation offers a practical route toward interoperable, comparable, and interpretable foundation models for materials science.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-05T01:12:49Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Zhenzhu Li</name>
+    </author>
+    <author>
+      <name>Aron Walsh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.18178v1</id>
+    <title>MACE Foundation Models for Lattice Dynamics: A Benchmark Study on Double Halide Perovskites</title>
+    <updated>2025-10-21T00:05:41Z</updated>
+    <link href="https://arxiv.org/abs/2510.18178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.18178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent developments in materials informatics and artificial intelligence has led to the emergence of foundational energy models for material chemistry, as represented by the suite of MACE-based foundation models, bringing a significant breakthrough in universal potentials for inorganic solids. As to all method developments in computational materials science, performance benchmarking against existing high-level data with focusing on specific applications, is critically needed to understand the limitations in the models, thus facilitating the ongoing improvements in the model development process, and occasionally, leading to significant conceptual leaps in materials theory. Here, using our own published DFT (Density Functional Theory) database of room-temperature dynamic stability and vibrational anharmonicity for $\sim2000$ cubic halide double perovskites, we benchmarked the performances of four different variants of the MACE foundation models for screening the dynamic stabilities of inorganic solids. Our analysis shows that, as anticipated, the model accuracy improves with more training data. The dynamic stabilities of weakly anharmonic materials (as predicted by DFT) are more accurately reproduced by the foundation model, than those highly anharmonic and dynamically unstable ones. The predominant source of error in predicting the dynamic stability arises predominantly from the amplification of errors in atomic forces when predicting the harmonic phonon properties through the computation of the Hessian matrix, less so is the contribution from possible differences in the range of the configurational spaces that are sampled by DFT and the foundation model in molecular dynamics. We hope that our present findings will stimulate future works towards more physics-inspired approaches in assessing the accuracy of foundation models for atomistic modelling.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-21T00:05:41Z</published>
+    <arxiv:comment>21 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Jack Yang</name>
+    </author>
+    <author>
+      <name>Ziqi Yin</name>
+    </author>
+    <author>
+      <name>Lei Ao</name>
+    </author>
+    <author>
+      <name>Sean Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.13798v1</id>
+    <title>Thermal Conductivity Limits of MoS$_2$ and MoSe$_2$: Revisiting High-Order Anharmonic Lattice Dynamics with Machine Learning Potentials</title>
+    <updated>2025-09-17T08:07:33Z</updated>
+    <link href="https://arxiv.org/abs/2509.13798v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.13798v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Group-VI transition metal dichalcogenides (TMDs), MoS$_2$ and MoSe$_2$, have emerged as prototypical low-dimensional systems with distinctive phononic and electronic properties, making them attractive for applications in nanoelectronics, optoelectronics, and thermoelectrics. Yet, their reported lattice thermal conductivities ($κ$) remain highly inconsistent, with experimental values and theoretical predictions differing by more than an order of magnitude. These discrepancies stem from uncertainties in measurement techniques, variations in computational protocols, and ambiguities in the treatment of higher-order anharmonic processes. In this study, we critically review these inconsistencies, first by mapping the spread of experimental and modeling results, and then by identifying the methodological origins of divergence. To this end, we bridge first-principles calculations, molecular dynamics simulations, and state-of-the-art machine learning force fields (MLFFs) including recently developed foundation models. %MACE-OMAT-0, UMA, and NEP89. We train and benchmark GAP, MACE, NEP, and \textsc{HIPHIVE} against density functional theory (DFT) and rigorously evaluate the impact of third- and fourth-order phonon scattering processes on $κ$. The computational efficiency of MLFFs enables us to extend convergence tests beyond conventional limits and to validate predictions through homogeneous nonequilibrium molecular dynamics as well. Our analysis demonstrates that, contrary to some recent claims, fully converged four-phonon processes contribute negligibly to the intrinsic thermal conductivity of both MoS$_2$ and MoSe$_2$. These findings not only refine the intrinsic transport limits of 2D TMDs but also establish MLFF-based approaches as a robust and scalable framework for predictive modeling of phonon-mediated thermal transport in low-dimensional materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-17T08:07:33Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Tugbey Kocabas</name>
+    </author>
+    <author>
+      <name>Murat Keceli</name>
+    </author>
+    <author>
+      <name>Tanju Gurel</name>
+    </author>
+    <author>
+      <name>Milorad Milosevic</name>
+    </author>
+    <author>
+      <name>Cem Sevik</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.00498v1</id>
+    <title>"One defect, one potential" strategy for accurate machine learning prediction of defect phonons</title>
+    <updated>2025-08-30T13:39:47Z</updated>
+    <link href="https://arxiv.org/abs/2509.00498v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.00498v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomic vibrations play a critical role in phonon-assisted electron transitions at defects in solids. However, accurate phonon calculations in defect systems are often hindered by the high computational cost of large-supercell first-principles calculations. Recently, foundation models, such as universal machine learning interatomic potentials (MLIPs), emerge as a promising alternative for rapid phonon calculations, but the quantitatively low accuracy restricts its fundamental applicability for high-level defect phonon calculations, such as nonradiative carrier capture rates. In this paper, we propose a "one defect, one potential" strategy in which an MLIP is trained on a limited set of perturbed supercells. We demonstrate that this strategy yields phonons with accuracy comparable to density functional theory (DFT), regardless of the supercell size. The predicted accuracy of defect phonons is validated by phonon frequencies, Huang-Rhys factors, and phonon dispersions. Further calculations of photoluminescence (PL) spectra and nonradiative capture rates based on this defect-specific model also show good agreements with DFT results, meanwhile reducing the computational expenses by more than an order of magnitude. Our approach provides a practical pathway for studying defect phonons in 10$^4$-atom large supercell with high accuracy and efficiency.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-30T13:39:47Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Phys. Rev. B 112, 235205 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Junjie Zhou</name>
+    </author>
+    <author>
+      <name>Xinpeng Li</name>
+    </author>
+    <author>
+      <name>Menglin Huang</name>
+    </author>
+    <author>
+      <name>Shiyou Chen</name>
+    </author>
+    <arxiv:doi>10.1103/kr3z-4nzv</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/kr3z-4nzv" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.16067v2</id>
+    <title>Training a Foundation Model for Materials on a Budget</title>
+    <updated>2025-10-09T17:45:15Z</updated>
+    <link href="https://arxiv.org/abs/2508.16067v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.16067v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation models for materials modeling are advancing quickly, but their training remains expensive, often placing state-of-the-art methods out of reach for many research groups. We introduce Nequix, a compact E(3)-equivariant potential that pairs a simplified NequIP design with modern training practices, including equivariant root-mean-square layer normalization and the Muon optimizer, to retain accuracy while substantially reducing compute requirements. Nequix has 700K parameters and was trained in 100 A100 GPU-hours. On the Matbench-Discovery and MDR Phonon benchmarks, Nequix ranks third overall while requiring a 20 times lower training cost than most other methods, and it delivers two orders of magnitude faster inference speed than the current top-ranked model. We release model weights and fully reproducible codebase at https://github.com/atomicarchitects/nequix.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-22T03:38:06Z</published>
+    <arxiv:comment>To appear at the NeurIPS 2025 Workshop on AI for Accelerated Materials Discovery</arxiv:comment>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Teddy Koker</name>
+    </author>
+    <author>
+      <name>Mit Kotak</name>
+    </author>
+    <author>
+      <name>Tess Smidt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.17345v1</id>
+    <title>CLOUD: A Scalable and Physics-Informed Foundation Model for Crystal Representation Learning</title>
+    <updated>2025-06-19T15:45:24Z</updated>
+    <link href="https://arxiv.org/abs/2506.17345v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.17345v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The prediction of crystal properties is essential for understanding structure-property relationships and accelerating the discovery of functional materials. However, conventional approaches relying on experimental measurements or density functional theory (DFT) calculations are often resource-intensive, limiting their scalability. Machine learning (ML) models offer a promising alternative by learning complex structure-property relationships from data, enabling faster predictions. Yet, existing ML models often rely on labeled data, adopt representations that poorly capture essential structural characteristics, and lack integration with physical principles--factors that limit their generalizability and interpretability. Here, we introduce CLOUD (Crystal Language mOdel for Unified and Differentiable materials modeling), a transformer-based framework trained on a novel Symmetry-Consistent Ordered Parameter Encoding (SCOPE) that encodes crystal symmetry, Wyckoff positions, and composition in a compact, coordinate-free string representation. Pre-trained on over six million crystal structures, CLOUD is fine-tuned on multiple downstream tasks and achieves competitive performance in predicting a wide range of material properties, demonstrating strong scaling performance. Furthermore, as proof of concept of differentiable materials modeling, CLOUD is applied to predict the phonon internal energy and heat capacity, which integrates the Debye model to preserve thermodynamic consistency. The CLOUD-DEBYE framework enforces thermodynamic consistency and enables temperature-dependent property prediction without requiring additional data. These results demonstrate the potential of CLOUD as a scalable and physics-informed foundation model for crystalline materials, unifying symmetry-consistent representations with physically grounded learning for property prediction and materials discovery.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-19T15:45:24Z</published>
+    <arxiv:comment>36 pages, 11 pages of Supporting Information</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Changwen Xu</name>
+    </author>
+    <author>
+      <name>Shang Zhu</name>
+    </author>
+    <author>
+      <name>Venkatasubramanian Viswanathan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.00725v1</id>
+    <title>A Foundation Model for Non-Destructive Defect Identification from Vibrational Spectra</title>
+    <updated>2025-05-31T21:51:51Z</updated>
+    <link href="https://arxiv.org/abs/2506.00725v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.00725v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Defects are ubiquitous in solids and strongly influence materials' mechanical and functional properties. However, non-destructive characterization and quantification of defects, especially when multiple types coexist, remain a long-standing challenge. Here we introduce DefectNet, a foundation machine learning model that predicts the chemical identity and concentration of substitutional point defects with multiple coexisting elements directly from vibrational spectra, specifically phonon density-of-states (PDoS). Trained on over 16,000 simulated spectra from 2,000 semiconductors, DefectNet employs a tailored attention mechanism to identify up to six distinct defect elements at concentrations ranging from 0.2% to 25%. The model generalizes well to unseen crystals across 56 elements and can be fine-tuned on experimental data. Validation using inelastic scattering measurements of SiGe alloys and MgB$_2$ superconductor demonstrates its accuracy and transferability. Our work establishes vibrational spectroscopy as a viable, non-destructive probe for point defect quantification in bulk materials, and highlights the promise of foundation models in data-driven defect engineering.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-31T21:51:51Z</published>
+    <arxiv:comment>14 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Mouyang Cheng</name>
+    </author>
+    <author>
+      <name>Chu-Liang Fu</name>
+    </author>
+    <author>
+      <name>Bowen Yu</name>
+    </author>
+    <author>
+      <name>Eunbi Rha</name>
+    </author>
+    <author>
+      <name>Abhijatmedhi Chotrattanapituk</name>
+    </author>
+    <author>
+      <name>Douglas L Abernathy</name>
+    </author>
+    <author>
+      <name>Yongqiang Cheng</name>
+    </author>
+    <author>
+      <name>Mingda Li</name>
+    </author>
+  </entry>
+</feed>

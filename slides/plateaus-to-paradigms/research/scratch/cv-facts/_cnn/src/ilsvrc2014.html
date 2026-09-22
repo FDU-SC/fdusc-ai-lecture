@@ -1,0 +1,717 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">-->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ILSVRC2014 Results</title>
+<link rel="stylesheet" type="text/css" href="/static_files/style.css">
+<link rel="shortcut icon" href="/static_files/favicon.ico" />
+<link rel="icon" href="/static_files/favicon.png" type="image/png" />
+  <script type="text/javascript"> function showemail(d,u)
+{
+  var email = u + "@" + d;
+  document.write("<a href=mailto:"+email+">"+email+"</a>");
+}
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    "HTML-CSS": { scale: 100 }
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  <style type="text/css">
+    div:lang(latex) { text-align: center;}
+  </style>
+
+</head>
+
+<BODY>
+<div id="wrap">
+  <div id="header">
+    <div id="t"><h1><a href="/"><img height=20px src="/static_files/index_files/logo.jpg"></a> Large Scale Visual Recognition Challenge 2014 (ILSVRC2014)</h1></div>
+</div>
+  <div id="main">
+
+<a href="index">Back to Main page</a> &nbsp
+<a href='results#det'>Object detection </a>&nbsp; &nbsp; <a href='results#clsloc'>Classification+Localization </a>&nbsp; &nbsp;<a href='results#info'><b>Team information</b></a>&nbsp;&nbsp; <a href='ilsvrc2014_perclass_results.zip'>Per-class results</a><p>Legend:<br>Yellow background = winner in this task according to this metric; authors are willing to reveal the method<br>White background = authors are willing to reveal the method<br>Grey background = authors chose not to reveal the method<br><i>Italics = authors requested entry not participate in competition</i>
+																																														   <p><h1><a name='det'>Object detection</a></h1><p><h2><a name='detin'>Task 1a: Object detection with provided training data</a></h2><h4>Object detection with provided training data: Ordered by number of categories won</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td><b>Number of object categories won</b></td><td>mean AP</td></tr>
+<tr><td bgcolor='FFD700' >NUS</td><td bgcolor='FFD700' >Multiple Model Fusion with Context Rescoring</td><td bgcolor='FFD700' >106</td><td bgcolor='FFD700' >0.37212</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >A combination of multiple SPP-net-based models (no outside data)</td><td  >45</td><td  >0.351103</td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Deep learning with provided data</td><td bgcolor='c0c0c0' >21</td><td bgcolor='c0c0c0' >0.320253</td></tr>
+<tr><td  >1-HKUST</td><td  >run 2</td><td  >18</td><td  >0.288669</td></tr>
+<tr><td  >Southeast-CASIA</td><td  >CNN-based proposal classification with proposal filtration and model combination</td><td  >4</td><td  >0.304022</td></tr>
+<tr><td  >1-HKUST</td><td  >run 4</td><td  >4</td><td  >0.285616</td></tr>
+<tr><td  >Southeast-CASIA</td><td  >CNN-based proposal classification with proposal filtration and sample balance</td><td  >2</td><td  >0.304783</td></tr>
+<tr><td  >1-HKUST</td><td  >run 2</td><td  >0</td><td  >0.288669</td></tr>
+<tr><td  >CASIA_CRIPAC_2</td><td  >CNN-based proposal classification with part classification and object regression</td><td  >0</td><td  >0.286158</td></tr>
+<tr><td  >1-HKUST</td><td  >run 3</td><td  >0</td><td  >0.284595</td></tr>
+<tr><td  >1-HKUST</td><td  >run 1</td><td  >0</td><td  >0.261543</td></tr>
+<tr><td  ><i><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></i></td><td  ><i>A single SPP-net model for detection (no outside data)</i></td><td  ><i>---</i></td><td  ><i>0.318403</i></td></tr>
+																																														   </tbody></table><h4>Object detection with provided training data: Ordered by mean average precision</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td><b>mean AP</b></td><td>Number of object categories won</td></tr>
+<tr><td bgcolor='FFD700' >NUS</td><td bgcolor='FFD700' >Multiple Model Fusion with Context Rescoring</td><td bgcolor='FFD700' >0.37212</td><td bgcolor='FFD700' >106</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >A combination of multiple SPP-net-based models (no outside data)</td><td  >0.351103</td><td  >45</td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Deep learning with provided data</td><td bgcolor='c0c0c0' >0.320253</td><td bgcolor='c0c0c0' >21</td></tr>
+<tr><td  ><i><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></i></td><td  ><i>A single SPP-net model for detection (no outside data)</i></td><td  ><i>0.318403</i></td><td  ><i>---</i></td></tr>
+<tr><td  >Southeast-CASIA</td><td  >CNN-based proposal classification with proposal filtration and sample balance</td><td  >0.304783</td><td  >2</td></tr>
+<tr><td  >Southeast-CASIA</td><td  >CNN-based proposal classification with proposal filtration and model combination</td><td  >0.304022</td><td  >4</td></tr>
+<tr><td  >1-HKUST</td><td  >run 2</td><td  >0.288669</td><td  >0</td></tr>
+<tr><td  >1-HKUST</td><td  >run 2</td><td  >0.288669</td><td  >18</td></tr>
+<tr><td  >CASIA_CRIPAC_2</td><td  >CNN-based proposal classification with part classification and object regression</td><td  >0.286158</td><td  >0</td></tr>
+<tr><td  >1-HKUST</td><td  >run 4</td><td  >0.285616</td><td  >4</td></tr>
+<tr><td  >1-HKUST</td><td  >run 3</td><td  >0.284595</td><td  >0</td></tr>
+<tr><td  >1-HKUST</td><td  >run 1</td><td  >0.261543</td><td  >0</td></tr>
+																																														   </tbody></table><p><h2><a name='detout'>Task 1b: Object detection with additional training data</a></h2><h4>Object detection with additional training data: Ordered by number of categories won</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td>Description of outside data used</td><td><b>Number of object categories won</b></td><td>mean AP</td></tr>
+<tr><td bgcolor='FFD700' >GoogLeNet</td><td bgcolor='FFD700' >Ensemble of detection models. Validation is 44.5% mAP</td><td bgcolor='FFD700' >Pretraining on ILSVRC12 classification data.</td><td bgcolor='FFD700' >142</td><td bgcolor='FFD700' >0.439329</td></tr>
+<tr><td  ><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net</a></td><td  >Combine multiple models described in the abstract without contextual modeling</td><td  >ImageNet classification and localization data</td><td  >29</td><td  >0.406659</td></tr>
+<tr><td  >Deep Insight</td><td  >Combination of three detection models</td><td  >Three CNNs from classification task are used for initialization.</td><td  >27</td><td  >0.404517</td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Deep learning with outside data</td><td bgcolor='c0c0c0' >ImageNet 1000</td><td bgcolor='c0c0c0' >1</td><td bgcolor='c0c0c0' >0.354213</td></tr>
+<tr><td  ><a href="https://github.com/rbgirshick/rcnn">Berkeley Vision</a></td><td  >R-CNN baseline</td><td  >The CNN was pre-trained on the ILSVRC 2013 CLS dataset.</td><td  >1</td><td  >0.345213</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Two models combined with nms </td><td  >ILSVRC2012 classification data</td><td  >0</td><td  >0.337485</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Four models combination</td><td  >ILSVRC2012 classification data</td><td  >0</td><td  >0.332469</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine SS regions and RP regions to train a new regressor.</td><td  >ILSVRC2012 classification data</td><td  >0</td><td  >0.317869</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Single model trained with RP regions.</td><td  >ILSVRC2012 classification data</td><td  >0</td><td  >0.315643</td></tr>
+<tr><td  >MIL</td><td  >RCNN + FV Rescoring</td><td  >We used pretrained codebooks (trained on Imageclef) for PQ coding of fisher vectors</td><td  >0</td><td  >0.303669</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset,bounding box regresssion</td><td  >Classification Training Set</td><td  >0</td><td  >0.27703</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset,bounding box regresssion</td><td  >Classification Training Set</td><td  >0</td><td  >0.271499</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset</td><td  >Classification Training Set</td><td  >0</td><td  >0.269317</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2013 dataset,bounding box regresssion</td><td  >Classification Training Set</td><td  >0</td><td  >0.265701</td></tr>
+<tr><td  >MPG_UT</td><td  >SS, OB, TR proposals + RCNN</td><td  >RCNN and Caffe pre-trained models</td><td  >0</td><td  >0.264344</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset</td><td  >Classification Training Set</td><td  >0</td><td  >0.264307</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >A simple method which use our localization pipline plus nms.</td><td  >ILSVRC2012 classification data</td><td  >0</td><td  >0.201702</td></tr>
+<tr><td  >MPG_UT</td><td  >SS, OB, TR proposals + RCNN</td><td  >RCNN and Caffe pre-trained models</td><td  >0</td><td  >0.159337</td></tr>
+<tr><td  >MPG_UT</td><td  >SS, OB, TR proposals + RCNN</td><td  >RCNN and Caffe pre-trained models</td><td  >0</td><td  >0.156382</td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net</a></i></td><td  ><i>Combine multiple models described in the abstract without contextual modeling. The training data includes the validation dataset 2. </i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>---</i></td><td  ><i>0.406998</i></td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net2</a></i></td><td  ><i>Combine multiple models described in the abstract without contextual modeling. The training data includes the validation dataset 2.</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>---</i></td><td  ><i>0.40352</i></td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net2</a></i></td><td  ><i>Combine multiple models described in the abstract without contextual modeling</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>---</i></td><td  ><i>0.403417</i></td></tr>
+<tr><td  ><i>Deep Insight</i></td><td  ><i>A single detection model.</i></td><td  ><i>A CNN from classification task is used for initialization.</i></td><td  ><i>---</i></td><td  ><i>0.401568</i></td></tr>
+<tr><td  ><i>Deep Insight</i></td><td  ><i>Another single detection model.</i></td><td  ><i>A CNN from classification task is used for initialization.</i></td><td  ><i>---</i></td><td  ><i>0.396982</i></td></tr>
+<tr><td  ><i>GoogLeNet</i></td><td  ><i>Single detection model. Validation is 38.75% mAP</i></td><td  ><i>Pretraining on ILSVRC12 classification data.</i></td><td  ><i>---</i></td><td  ><i>0.380277</i></td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net2</a></i></td><td  ><i>Multi-stage deep CNN without contextual modeling</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>---</i></td><td  ><i>0.377471</i></td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net</a></i></td><td  ><i>A single deep CNN with deformation layers and without contextual modeling</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>---</i></td><td  ><i>0.349798</i></td></tr>
+<tr><td  ><i>Virginia Tech</i></td><td  ><i>RCNN with finetuning</i></td><td  ><i>ILSVRC 2012 Classification data (Training)</i></td><td  ><i>---</i></td><td  ><i>0.303374</i></td></tr>
+<tr><td bgcolor='c0c0c0' ><i>lffall</i></td><td bgcolor='c0c0c0' ><i>RCNN trained on val+train1k, tested on test</i></td><td bgcolor='c0c0c0' ><i>ILSVRC 2012 classification data</i></td><td bgcolor='c0c0c0' ><i>---</i></td><td bgcolor='c0c0c0' ><i>0.303068</i></td></tr>
+</tbody></table><h4>Ordered by mean average precision</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td>Description of outside data used</td><td><b>mean AP</b></td><td>Number of object categories won</td></tr>
+<tr><td bgcolor='FFD700' >GoogLeNet</td><td bgcolor='FFD700' >Ensemble of detection models. Validation is 44.5% mAP</td><td bgcolor='FFD700' >Pretraining on ILSVRC12 classification data.</td><td bgcolor='FFD700' >0.439329</td><td bgcolor='FFD700' >142</td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net</a></i></td><td  ><i>Combine multiple models described in the abstract without contextual modeling. The training data includes the validation dataset 2. </i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>0.406998</i></td><td  ><i>---</i></td></tr>
+<tr><td  ><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net</a></td><td  >Combine multiple models described in the abstract without contextual modeling</td><td  >ImageNet classification and localization data</td><td  >0.406659</td><td  >29</td></tr>
+<tr><td  >Deep Insight</td><td  >Combination of three detection models</td><td  >Three CNNs from classification task are used for initialization.</td><td  >0.404517</td><td  >27</td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net2</a></i></td><td  ><i>Combine multiple models described in the abstract without contextual modeling. The training data includes the validation dataset 2.</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>0.40352</i></td><td  ><i>---</i></td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net2</a></i></td><td  ><i>Combine multiple models described in the abstract without contextual modeling</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>0.403417</i></td><td  ><i>---</i></td></tr>
+<tr><td  ><i>Deep Insight</i></td><td  ><i>A single detection model.</i></td><td  ><i>A CNN from classification task is used for initialization.</i></td><td  ><i>0.401568</i></td><td  ><i>---</i></td></tr>
+<tr><td  ><i>Deep Insight</i></td><td  ><i>Another single detection model.</i></td><td  ><i>A CNN from classification task is used for initialization.</i></td><td  ><i>0.396982</i></td><td  ><i>---</i></td></tr>
+<tr><td  ><i>GoogLeNet</i></td><td  ><i>Single detection model. Validation is 38.75% mAP</i></td><td  ><i>Pretraining on ILSVRC12 classification data.</i></td><td  ><i>0.380277</i></td><td  ><i>---</i></td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net2</a></i></td><td  ><i>Multi-stage deep CNN without contextual modeling</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>0.377471</i></td><td  ><i>---</i></td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Deep learning with outside data</td><td bgcolor='c0c0c0' >ImageNet 1000</td><td bgcolor='c0c0c0' >0.354213</td><td bgcolor='c0c0c0' >1</td></tr>
+<tr><td  ><i><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net</a></i></td><td  ><i>A single deep CNN with deformation layers and without contextual modeling</i></td><td  ><i>ImageNet classification and localization data</i></td><td  ><i>0.349798</i></td><td  ><i>---</i></td></tr>
+<tr><td  ><a href="https://github.com/rbgirshick/rcnn">Berkeley Vision</a></td><td  >R-CNN baseline</td><td  >The CNN was pre-trained on the ILSVRC 2013 CLS dataset.</td><td  >0.345213</td><td  >1</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Two models combined with nms </td><td  >ILSVRC2012 classification data</td><td  >0.337485</td><td  >0</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Four models combination</td><td  >ILSVRC2012 classification data</td><td  >0.332469</td><td  >0</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine SS regions and RP regions to train a new regressor.</td><td  >ILSVRC2012 classification data</td><td  >0.317869</td><td  >0</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Single model trained with RP regions.</td><td  >ILSVRC2012 classification data</td><td  >0.315643</td><td  >0</td></tr>
+<tr><td  >MIL</td><td  >RCNN + FV Rescoring</td><td  >We used pretrained codebooks (trained on Imageclef) for PQ coding of fisher vectors</td><td  >0.303669</td><td  >0</td></tr>
+<tr><td  ><i>Virginia Tech</i></td><td  ><i>RCNN with finetuning</i></td><td  ><i>ILSVRC 2012 Classification data (Training)</i></td><td  ><i>0.303374</i></td><td  ><i>---</i></td></tr>
+<tr><td bgcolor='c0c0c0' ><i>lffall</i></td><td bgcolor='c0c0c0' ><i>RCNN trained on val+train1k, tested on test</i></td><td bgcolor='c0c0c0' ><i>ILSVRC 2012 classification data</i></td><td bgcolor='c0c0c0' ><i>0.303068</i></td><td bgcolor='c0c0c0' ><i>---</i></td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset,bounding box regresssion</td><td  >Classification Training Set</td><td  >0.27703</td><td  >0</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset,bounding box regresssion</td><td  >Classification Training Set</td><td  >0.271499</td><td  >0</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset</td><td  >Classification Training Set</td><td  >0.269317</td><td  >0</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2013 dataset,bounding box regresssion</td><td  >Classification Training Set</td><td  >0.265701</td><td  >0</td></tr>
+<tr><td  >MPG_UT</td><td  >SS, OB, TR proposals + RCNN</td><td  >RCNN and Caffe pre-trained models</td><td  >0.264344</td><td  >0</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >selective search, models trained in 2014 dataset</td><td  >Classification Training Set</td><td  >0.264307</td><td  >0</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >A simple method which use our localization pipline plus nms.</td><td  >ILSVRC2012 classification data</td><td  >0.201702</td><td  >0</td></tr>
+<tr><td  >MPG_UT</td><td  >SS, OB, TR proposals + RCNN</td><td  >RCNN and Caffe pre-trained models</td><td  >0.159337</td><td  >0</td></tr>
+<tr><td  >MPG_UT</td><td  >SS, OB, TR proposals + RCNN</td><td  >RCNN and Caffe pre-trained models</td><td  >0.156382</td><td  >0</td></tr>
+     </tbody></table><p><h1><a name='clsloc'>Classification+localization</a></h1><p><h2><a name='locin'>Task 2a: Classification+localization with provided training data</a></h2><h4>Classification+localization with provided training data: Ordered by localization error</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td><b>Localization error</b></td><td>Classification error</td></tr>
+<tr><td bgcolor='FFD700' ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td bgcolor='FFD700' >a combination of multiple ConvNets (by averaging)</td><td bgcolor='FFD700' >0.253231</td><td bgcolor='FFD700' >0.07405</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a combination of multiple ConvNets (fusion weights learnt on the validation set)</td><td  >0.253501</td><td  >0.07407</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a combination of multiple ConvNets, including a net trained on images of different size (fusion done by averaging); detected boxes were not updated</td><td  >0.255431</td><td  >0.07337</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a combination of multiple ConvNets, including a net trained on images of different size (fusion weights learnt on the validation set); detected boxes were not updated</td><td  >0.256167</td><td  >0.07325</td></tr>
+<tr><td  >GoogLeNet</td><td  >Model with localization ~26% top5 val error.</td><td  >0.264414</td><td  >0.14828</td></tr>
+<tr><td  >GoogLeNet</td><td  >Model with localization ~26% top5 val error, limiting number of classes.</td><td  >0.264425</td><td  >0.12724</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a single ConvNet (13 convolutional and 3 fully-connected layers)</td><td  >0.267184</td><td  >0.08434</td></tr>
+<tr><td  >SYSU_Vision</td><td  >We compared the class-specific localization accuracy of solution 1 and solution 2 by the validation set. Then we chosen better solution on each class based on the accuracy. General speaking, solution 2 outformed solution 1 when there were multiple objects in the image or the objects are relatively small.</td><td  >0.31899</td><td  >0.14446</td></tr>
+<tr><td  >MIL</td><td  >5 top instances predicted using FV-CNN</td><td  >0.337414</td><td  >0.20734</td></tr>
+<tr><td  >MIL</td><td  >5 top instances predicted using FV-CNN + class specific window size rejection. Flipped training images are added.</td><td  >0.33843</td><td  >0.21023</td></tr>
+<tr><td  >SYSU_Vision</td><td  >We just simply averaged the result between solution 1 and solution 2 to form our solution 4. </td><td  >0.338741</td><td  >0.14446</td></tr>
+<tr><td  >MIL</td><td  >5 top instances predicted using FV-CNN + class specific window size rejection</td><td  >0.340038</td><td  >0.20823</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets further tuned on validation set (A)</td><td  >0.354769</td><td  >0.08062</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets further tuned on validation set (B)</td><td  >0.354924</td><td  >0.0806</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets (B)</td><td  >0.355568</td><td  >0.082</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets (A)</td><td  >0.3562</td><td  >0.08307</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >A single SPP-net</td><td  >0.36118</td><td  >0.09079</td></tr>
+<tr><td  >SYSU_Vision</td><td  >Our solution 2 was got idea by R-CNN's framework. For testing each image, we: Firstly, used the classification model in solution 1 to get the top 5 class-predictions. Secondly, applyed Selective Search get the candidate regions. Thirdly, fine-tuned another classfication model specific for classifying regions based the classification model above, then used it to find out the scores of each regions. Fourthly, got the highest-score-region in each top 5 class-predictions to form the final result.</td><td  >0.363441</td><td  >0.14446</td></tr>
+<tr><td  >SYSU_Vision</td><td  >Our algorithm employed the classification-localization framework. For classification, we train a one-thousand-class classification model based on Alex network published on NIP 2012. For localization, we first train a one-thousand-class localization model based on Alex network. However, such a localization model is inclined to localize the saliency region, which can not work well for ImageNet localization. So we fine tune one thousand class-specific models based on the pre-train one-thousand-class localization model, one for each class. But because of the shortage of training images for each class, the over-fitting problem is very serious. To reduce this problem, we design a similarity-sorted fine tuning method. First, we choose one class to fine tune the pre-trian one-thousand-class localization model, and get a localization model for this chosen class. Then we choose the class most similar to the pre-chosen class and fine tune this class based on pre-chosen class localization model. In this way, the training image of similar classed are shared.</td><td  >0.363483</td><td  >0.14446</td></tr>
+<tr><td  >MIL</td><td  >5 top class labels predicted using FV-CNN</td><td  >0.402965</td><td  >0.18278</td></tr>
+<tr><td  >MIL</td><td  >5 top class labels predicted using FV-CNN + class specific window size rejection</td><td  >0.405537</td><td  >0.18396</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) ,one classification has one region</td><td  >0.428277</td><td  >0.18898</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) , one classification has one region</td><td  >0.443422</td><td  >0.15158</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip and crop),one classification has one region</td><td  >0.449397</td><td  >0.16137</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble) + re-weighting 1, 2</td><td  >0.468713</td><td  >0.13949</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble) + re-weighting 1</td><td  >0.469408</td><td  >0.14115</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble) + re-weighting 2</td><td  >0.47002</td><td  >0.14214</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble)</td><td  >0.470726</td><td  >0.14372</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble)</td><td  >0.471784</td><td  >0.14847</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision4: EpitomicVision2 with fixed mapping of the best matching mosaic position to bounding box</td><td  >0.482915</td><td  >0.10563</td></tr>
+<tr><td  >Brno University of Technology</td><td  >weighted average over 17 CNNs with 20 transformations</td><td  >0.519949</td><td  >0.17647</td></tr>
+<tr><td  >GoogLeNet</td><td  >No localization. Top5 val score is 6.66% error.</td><td  >0.606257</td><td  >0.06656</td></tr>
+<tr><td  >Andrew Howard</td><td  >Combination of Convolutional Nets with Validation set adaptation + KNN</td><td  >0.610365</td><td  >0.08111</td></tr>
+<tr><td  >Andrew Howard</td><td  >Combination of Convolutional Nets with Validation set adaptation</td><td  >0.611019</td><td  >0.08226</td></tr>
+<tr><td  >Andrew Howard</td><td  >Combination of Convolutional Nets + KNN</td><td  >0.612305</td><td  >0.0853</td></tr>
+<tr><td  >NUS-BST</td><td  >Three (NIN + fc) + traditional feature + kernel regression fusion</td><td  >0.612876</td><td  >0.09794</td></tr>
+<tr><td  >Andrew Howard</td><td  >Baseline Combination of Convolutional Nets</td><td  >0.614307</td><td  >0.08919</td></tr>
+<tr><td  >NUS-BST</td><td  >Three (NIN + fc) combined</td><td  >0.614909</td><td  >0.10267</td></tr>
+<tr><td  >NUS-BST</td><td  >Single (NIN + fc)</td><td  >0.617015</td><td  >0.10913</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision3: Weighted average of probabilities assigned by EpitomicVision1 and EpitomicVision2</td><td  >0.617129</td><td  >0.10222</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >fusion of 4 models</td><td bgcolor='c0c0c0' >0.617191</td><td bgcolor='c0c0c0' >0.11229</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >fusion of 5 models</td><td bgcolor='c0c0c0' >0.617212</td><td bgcolor='c0c0c0' >0.11239</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >fusion of 3 models</td><td bgcolor='c0c0c0' >0.617606</td><td bgcolor='c0c0c0' >0.11359</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision2 (finetuned model w. scale and position search): Image classification with a single deep epitomic neural network, including search over scale and position. No localization attempted.</td><td  >0.618685</td><td  >0.10563</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >single ZF net</td><td bgcolor='c0c0c0' >0.621123</td><td bgcolor='c0c0c0' >0.12375</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision1 (fast standard model): Image classification with a single deep epitomic neural network. No localization attempted.</td><td  >0.621559</td><td  >0.11941</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >single "Network in Network" net</td><td bgcolor='c0c0c0' >0.62605</td><td bgcolor='c0c0c0' >0.1348</td></tr>
+<tr><td  >Fengjun Lv</td><td  >average of 3 CNNs, for classification task only</td><td  >0.636642</td><td  >0.17352</td></tr>
+<tr><td  >Fengjun Lv</td><td  >single CNN, for classification task only</td><td  >0.636808</td><td  >0.17433</td></tr>
+<tr><td  >SCUT_GLH</td><td  >Fusion of CNN network</td><td  >0.637285</td><td  >0.18784</td></tr>
+<tr><td  >SCUT_GLH</td><td  >CNN network and rerank by the relation of labels</td><td  >0.641051</td><td  >0.19936</td></tr>
+<tr><td  >BREIL_KAIST</td><td  >1 Convnet trained on original data</td><td  >0.761188</td><td  >0.16044</td></tr>
+<tr><td  >DeeperVision</td><td  >Simple average ensemble and box</td><td  >0.842953</td><td  >0.09508</td></tr>
+<tr><td  >DeeperVision</td><td  >Weighted ensemble and box</td><td  >0.843161</td><td  >0.09556</td></tr>
+<tr><td  >DeeperVision</td><td  >Best single model</td><td  >0.95141</td><td  >0.10515</td></tr>
+<tr><td bgcolor='c0c0c0' >UI</td><td bgcolor='c0c0c0' >---</td><td bgcolor='c0c0c0' >0.99973</td><td bgcolor='c0c0c0' >0.99525</td></tr>
+<tr><td  >DeeperVision</td><td  >Simple average ensemble</td><td  >1.0</td><td  >0.09508</td></tr>
+<tr><td  >DeeperVision</td><td  >Weighted ensemble </td><td  >1.0</td><td  >0.09556</td></tr>
+<tr><td bgcolor='c0c0c0' >BDC-I2R,UPMC</td><td bgcolor='c0c0c0' >Adaptive fusion of multiple CNN models with output rectification (original training data)</td><td bgcolor='c0c0c0' >1.0</td><td bgcolor='c0c0c0' >0.11326</td></tr>
+<tr><td bgcolor='c0c0c0' >BDC-I2R,UPMC</td><td bgcolor='c0c0c0' >Adaptive fusion of multiple CNN models (original training data)</td><td bgcolor='c0c0c0' >1.0</td><td bgcolor='c0c0c0' >0.11403</td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Multi with classification only</td><td bgcolor='c0c0c0' >1.0</td><td bgcolor='c0c0c0' >0.12117</td></tr>
+<tr><td bgcolor='c0c0c0' >BDC-I2R,UPMC</td><td bgcolor='c0c0c0' >A single CNN model (original training data)</td><td bgcolor='c0c0c0' >1.0</td><td bgcolor='c0c0c0' >0.12128</td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Single with classification only</td><td bgcolor='c0c0c0' >1.0</td><td bgcolor='c0c0c0' >0.12376</td></tr>
+<tr><td  ><a href="http://libccv.org/">libccv</a></td><td  >1 convnet, MattNet, 16-bit half precision parameters</td><td  >1.0</td><td  >0.16032</td></tr>
+<tr><td  >PassBy</td><td  >Combine two different model, using the scheme in our previous submit.</td><td  >1.0</td><td  >0.16705</td></tr>
+<tr><td  >PassBy</td><td  >Using just one convolutional neural network. Proposed weighted averaged scheme over several salient images obtained from original images and combine them with the standard 10 crops (4 corners plus one center). No outside training data are used. </td><td  >1.0</td><td  >0.16894</td></tr>
+<tr><td  >PassBy</td><td  >Using just one convolutional neural network. Averaged over several salient images obtained from original images and combine them with the standard 10 crops. No outside training data are used. (no location information included)</td><td  >1.0</td><td  >0.17092</td></tr>
+<tr><td  >DeepCNet</td><td  >Brief description. Deep ConvNet with 8 layers of 2x2 max-pooling; trained on supplied data.</td><td  >1.0</td><td  >0.17481</td></tr>
+<tr><td bgcolor='c0c0c0' >UI</td><td bgcolor='c0c0c0' >---</td><td bgcolor='c0c0c0' >1.0</td><td bgcolor='c0c0c0' >0.99504</td></tr>
+</tbody></table><a name='clsin'><h4>Classification+localization with provided training data: Ordered by classification error</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td><b>Classification error</b></td><td>Localization error</td></tr>
+<tr><td bgcolor='FFD700' >GoogLeNet</td><td bgcolor='FFD700' >No localization. Top5 val score is 6.66% error.</td><td bgcolor='FFD700' >0.06656</td><td bgcolor='FFD700' >0.606257</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a combination of multiple ConvNets, including a net trained on images of different size (fusion weights learnt on the validation set); detected boxes were not updated</td><td  >0.07325</td><td  >0.256167</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a combination of multiple ConvNets, including a net trained on images of different size (fusion done by averaging); detected boxes were not updated</td><td  >0.07337</td><td  >0.255431</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a combination of multiple ConvNets (by averaging)</td><td  >0.07405</td><td  >0.253231</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a combination of multiple ConvNets (fusion weights learnt on the validation set)</td><td  >0.07407</td><td  >0.253501</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets further tuned on validation set (B)</td><td  >0.0806</td><td  >0.354924</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets further tuned on validation set (A)</td><td  >0.08062</td><td  >0.354769</td></tr>
+<tr><td  >Andrew Howard</td><td  >Combination of Convolutional Nets with Validation set adaptation + KNN</td><td  >0.08111</td><td  >0.610365</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets (B)</td><td  >0.082</td><td  >0.355568</td></tr>
+<tr><td  >Andrew Howard</td><td  >Combination of Convolutional Nets with Validation set adaptation</td><td  >0.08226</td><td  >0.611019</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Multiple SPP-nets (A)</td><td  >0.08307</td><td  >0.3562</td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >a single ConvNet (13 convolutional and 3 fully-connected layers)</td><td  >0.08434</td><td  >0.267184</td></tr>
+<tr><td  >Andrew Howard</td><td  >Combination of Convolutional Nets + KNN</td><td  >0.0853</td><td  >0.612305</td></tr>
+<tr><td  >Andrew Howard</td><td  >Baseline Combination of Convolutional Nets</td><td  >0.08919</td><td  >0.614307</td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >A single SPP-net</td><td  >0.09079</td><td  >0.36118</td></tr>
+<tr><td  >DeeperVision</td><td  >Simple average ensemble</td><td  >0.09508</td><td  >1.0</td></tr>
+<tr><td  >DeeperVision</td><td  >Simple average ensemble and box</td><td  >0.09508</td><td  >0.842953</td></tr>
+<tr><td  >DeeperVision</td><td  >Weighted ensemble </td><td  >0.09556</td><td  >1.0</td></tr>
+<tr><td  >DeeperVision</td><td  >Weighted ensemble and box</td><td  >0.09556</td><td  >0.843161</td></tr>
+<tr><td  >NUS-BST</td><td  >Three (NIN + fc) + traditional feature + kernel regression fusion</td><td  >0.09794</td><td  >0.612876</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision3: Weighted average of probabilities assigned by EpitomicVision1 and EpitomicVision2</td><td  >0.10222</td><td  >0.617129</td></tr>
+<tr><td  >NUS-BST</td><td  >Three (NIN + fc) combined</td><td  >0.10267</td><td  >0.614909</td></tr>
+<tr><td  >DeeperVision</td><td  >Best single model</td><td  >0.10515</td><td  >0.95141</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision2 (finetuned model w. scale and position search): Image classification with a single deep epitomic neural network, including search over scale and position. No localization attempted.</td><td  >0.10563</td><td  >0.618685</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision4: EpitomicVision2 with fixed mapping of the best matching mosaic position to bounding box</td><td  >0.10563</td><td  >0.482915</td></tr>
+<tr><td  >NUS-BST</td><td  >Single (NIN + fc)</td><td  >0.10913</td><td  >0.617015</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >fusion of 4 models</td><td bgcolor='c0c0c0' >0.11229</td><td bgcolor='c0c0c0' >0.617191</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >fusion of 5 models</td><td bgcolor='c0c0c0' >0.11239</td><td bgcolor='c0c0c0' >0.617212</td></tr>
+<tr><td bgcolor='c0c0c0' >BDC-I2R,UPMC</td><td bgcolor='c0c0c0' >Adaptive fusion of multiple CNN models with output rectification (original training data)</td><td bgcolor='c0c0c0' >0.11326</td><td bgcolor='c0c0c0' >1.0</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >fusion of 3 models</td><td bgcolor='c0c0c0' >0.11359</td><td bgcolor='c0c0c0' >0.617606</td></tr>
+<tr><td bgcolor='c0c0c0' >BDC-I2R,UPMC</td><td bgcolor='c0c0c0' >Adaptive fusion of multiple CNN models (original training data)</td><td bgcolor='c0c0c0' >0.11403</td><td bgcolor='c0c0c0' >1.0</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >EpitomicVision1 (fast standard model): Image classification with a single deep epitomic neural network. No localization attempted.</td><td  >0.11941</td><td  >0.621559</td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Multi with classification only</td><td bgcolor='c0c0c0' >0.12117</td><td bgcolor='c0c0c0' >1.0</td></tr>
+<tr><td bgcolor='c0c0c0' >BDC-I2R,UPMC</td><td bgcolor='c0c0c0' >A single CNN model (original training data)</td><td bgcolor='c0c0c0' >0.12128</td><td bgcolor='c0c0c0' >1.0</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >single ZF net</td><td bgcolor='c0c0c0' >0.12375</td><td bgcolor='c0c0c0' >0.621123</td></tr>
+<tr><td bgcolor='c0c0c0' >UvA-Euvision</td><td bgcolor='c0c0c0' >Single with classification only</td><td bgcolor='c0c0c0' >0.12376</td><td bgcolor='c0c0c0' >1.0</td></tr>
+<tr><td  >GoogLeNet</td><td  >Model with localization ~26% top5 val error, limiting number of classes.</td><td  >0.12724</td><td  >0.264425</td></tr>
+<tr><td bgcolor='c0c0c0' >XYZ</td><td bgcolor='c0c0c0' >single "Network in Network" net</td><td bgcolor='c0c0c0' >0.1348</td><td bgcolor='c0c0c0' >0.62605</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble) + re-weighting 1, 2</td><td  >0.13949</td><td  >0.468713</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble) + re-weighting 1</td><td  >0.14115</td><td  >0.469408</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble) + re-weighting 2</td><td  >0.14214</td><td  >0.47002</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble) + Deep CNN-based Fisher framework (4 networks ensemble)</td><td  >0.14372</td><td  >0.470726</td></tr>
+<tr><td  >SYSU_Vision</td><td  >Our algorithm employed the classification-localization framework. For classification, we train a one-thousand-class classification model based on Alex network published on NIP 2012. For localization, we first train a one-thousand-class localization model based on Alex network. However, such a localization model is inclined to localize the saliency region, which can not work well for ImageNet localization. So we fine tune one thousand class-specific models based on the pre-train one-thousand-class localization model, one for each class. But because of the shortage of training images for each class, the over-fitting problem is very serious. To reduce this problem, we design a similarity-sorted fine tuning method. First, we choose one class to fine tune the pre-trian one-thousand-class localization model, and get a localization model for this chosen class. Then we choose the class most similar to the pre-chosen class and fine tune this class based on pre-chosen class localization model. In this way, the training image of similar classed are shared.</td><td  >0.14446</td><td  >0.363483</td></tr>
+<tr><td  >SYSU_Vision</td><td  >We just simply averaged the result between solution 1 and solution 2 to form our solution 4. </td><td  >0.14446</td><td  >0.338741</td></tr>
+<tr><td  >SYSU_Vision</td><td  >Our solution 2 was got idea by R-CNN's framework. For testing each image, we: Firstly, used the classification model in solution 1 to get the top 5 class-predictions. Secondly, applyed Selective Search get the candidate regions. Thirdly, fine-tuned another classfication model specific for classifying regions based the classification model above, then used it to find out the scores of each regions. Fourthly, got the highest-score-region in each top 5 class-predictions to form the final result.</td><td  >0.14446</td><td  >0.363441</td></tr>
+<tr><td  >SYSU_Vision</td><td  >We compared the class-specific localization accuracy of solution 1 and solution 2 by the validation set. Then we chosen better solution on each class based on the accuracy. General speaking, solution 2 outformed solution 1 when there were multiple objects in the image or the objects are relatively small.</td><td  >0.14446</td><td  >0.31899</td></tr>
+<tr><td  >GoogLeNet</td><td  >Model with localization ~26% top5 val error.</td><td  >0.14828</td><td  >0.264414</td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Deep CNN framework (4 networks ensemble)</td><td  >0.14847</td><td  >0.471784</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) , one classification has one region</td><td  >0.15158</td><td  >0.443422</td></tr>
+<tr><td  ><a href="http://libccv.org/">libccv</a></td><td  >1 convnet, MattNet, 16-bit half precision parameters</td><td  >0.16032</td><td  >1.0</td></tr>
+<tr><td  >BREIL_KAIST</td><td  >1 Convnet trained on original data</td><td  >0.16044</td><td  >0.761188</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip and crop),one classification has one region</td><td  >0.16137</td><td  >0.449397</td></tr>
+<tr><td  >PassBy</td><td  >Combine two different model, using the scheme in our previous submit.</td><td  >0.16705</td><td  >1.0</td></tr>
+<tr><td  >PassBy</td><td  >Using just one convolutional neural network. Proposed weighted averaged scheme over several salient images obtained from original images and combine them with the standard 10 crops (4 corners plus one center). No outside training data are used. </td><td  >0.16894</td><td  >1.0</td></tr>
+<tr><td  >PassBy</td><td  >Using just one convolutional neural network. Averaged over several salient images obtained from original images and combine them with the standard 10 crops. No outside training data are used. (no location information included)</td><td  >0.17092</td><td  >1.0</td></tr>
+<tr><td  >Fengjun Lv</td><td  >average of 3 CNNs, for classification task only</td><td  >0.17352</td><td  >0.636642</td></tr>
+<tr><td  >Fengjun Lv</td><td  >single CNN, for classification task only</td><td  >0.17433</td><td  >0.636808</td></tr>
+<tr><td  >DeepCNet</td><td  >Brief description. Deep ConvNet with 8 layers of 2x2 max-pooling; trained on supplied data.</td><td  >0.17481</td><td  >1.0</td></tr>
+<tr><td  >Brno University of Technology</td><td  >weighted average over 17 CNNs with 20 transformations</td><td  >0.17647</td><td  >0.519949</td></tr>
+<tr><td  >MIL</td><td  >5 top class labels predicted using FV-CNN</td><td  >0.18278</td><td  >0.402965</td></tr>
+<tr><td  >MIL</td><td  >5 top class labels predicted using FV-CNN + class specific window size rejection</td><td  >0.18396</td><td  >0.405537</td></tr>
+<tr><td  >SCUT_GLH</td><td  >Fusion of CNN network</td><td  >0.18784</td><td  >0.637285</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) ,one classification has one region</td><td  >0.18898</td><td  >0.428277</td></tr>
+<tr><td  >SCUT_GLH</td><td  >CNN network and rerank by the relation of labels</td><td  >0.19936</td><td  >0.641051</td></tr>
+<tr><td  >MIL</td><td  >5 top instances predicted using FV-CNN</td><td  >0.20734</td><td  >0.337414</td></tr>
+<tr><td  >MIL</td><td  >5 top instances predicted using FV-CNN + class specific window size rejection</td><td  >0.20823</td><td  >0.340038</td></tr>
+<tr><td  >MIL</td><td  >5 top instances predicted using FV-CNN + class specific window size rejection. Flipped training images are added.</td><td  >0.21023</td><td  >0.33843</td></tr>
+<tr><td bgcolor='c0c0c0' >UI</td><td bgcolor='c0c0c0' >---</td><td bgcolor='c0c0c0' >0.99504</td><td bgcolor='c0c0c0' >1.0</td></tr>
+<tr><td bgcolor='c0c0c0' >UI</td><td bgcolor='c0c0c0' >---</td><td bgcolor='c0c0c0' >0.99525</td><td bgcolor='c0c0c0' >0.99973</td></tr>
+</tbody></table><p><h2><a name='locout'>Task 2b: Classification+localization with additional training data</a></h2><h4>Classification+localization with additional training data: Ordered by localization error</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td>Description of outside data used</td><td><b>Localization error</b></td><td>Classification error</td></tr>
+<tr><td bgcolor='FFD700' >Adobe-UIUC</td><td bgcolor='FFD700' >CLS+LOC try #3</td><td bgcolor='FFD700' >2000 additional ImageNet classes to train the classifiers</td><td bgcolor='FFD700' >0.300961</td><td bgcolor='FFD700' >0.13456</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS+LOC try #2</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.307486</td><td  >0.13042</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS+LOC try #4</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.333254</td><td  >0.11883</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS+LOC try #1</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.334343</td><td  >0.11578</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine three big models plus one complementary model</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.422208</td><td  >0.1146</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine five models plus one complementary model</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.422592</td><td  >0.11469</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine four models</td><td  >300000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.422623</td><td  >0.11583</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) , five confident regions</td><td  >50,000 images in validation set</td><td  >0.427042</td><td  >0.18593</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine nine models</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.42783</td><td  >0.11616</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Single model</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.430289</td><td  >0.12088</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) , five confident regions</td><td  >50,000 images in validation set</td><td  >0.442198</td><td  >0.14797</td></tr>
+<tr><td  >CASIA_CRIPAC_Weak_Supervision</td><td  >Weakly supervised localization+convolutional networks</td><td  >MCG proposals pretrained on PASCAL VOC 2012</td><td  >0.619619</td><td  >0.11358</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS w/o LOC</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >1.0</td><td  >0.11733</td></tr>
+     </tbody></table><a name='clsout'><h4>Classification+localization with additional training data: Ordered by classification error</h4><p><table border=1><tbody><tr><td>Team name</td><td>Entry description</td><td>Description of outside data used</td><td><b>Classification error</b></td><td>Localization error</td></tr>
+<tr><td bgcolor='FFD700' >CASIA_CRIPAC_Weak_Supervision</td><td bgcolor='FFD700' >Weakly supervised localization+convolutional networks</td><td bgcolor='FFD700' >MCG proposals pretrained on PASCAL VOC 2012</td><td bgcolor='FFD700' >0.11358</td><td bgcolor='FFD700' >0.619619</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine three big models plus one complementary model</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.1146</td><td  >0.422208</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine five models plus one complementary model</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.11469</td><td  >0.422592</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS+LOC try #1</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.11578</td><td  >0.334343</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine four models</td><td  >300000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.11583</td><td  >0.422623</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Combine nine models</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.11616</td><td  >0.42783</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS w/o LOC</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.11733</td><td  >1.0</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS+LOC try #4</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.11883</td><td  >0.333254</td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Single model</td><td  >396000 external images from ILSVRC2010 and  ILSVRC2011 training data</td><td  >0.12088</td><td  >0.430289</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS+LOC try #2</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.13042</td><td  >0.307486</td></tr>
+<tr><td  >Adobe-UIUC</td><td  >CLS+LOC try #3</td><td  >2000 additional ImageNet classes to train the classifiers</td><td  >0.13456</td><td  >0.300961</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) , five confident regions</td><td  >50,000 images in validation set</td><td  >0.14797</td><td  >0.442198</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >seven models, augmentation(flip, scale and crop) , five confident regions</td><td  >50,000 images in validation set</td><td  >0.18593</td><td  >0.427042</td></tr>
+</tbody></table><p><h1><a name='info'>Team information</a></h1><p><table border=1><tbody><tr><td>Team name (with project link where available)</td><td>Team members</td><td>Abstract</td></tr>
+<tr><td  >1-HKUST</td><td  >Cewu Lu (Hong Kong University of Science and Technology)
+<br>Hei Law* (Hong Kong University of Science and Technology)
+<br>Hao Chen* (The Chinese University of Hong Kong)
+<br>Qifeng Chen* (Stanford University)
+<br>Yao Xiao* (Hong Kong University of Science and Technology)
+<br>Chi Keung Tang (Hong Kong University of Science and Technology)
+<br>(* indexes equal contribution, by Alphabets)
+<br>
+<br>
+<br></td><td  >For the detection task, we first generate some candidate bounding boxes, and then our system recognizes objects on these candidate proposals. We try to improve both localization and recognition. On the localization side, initial candidate proposals are generated from selective search [1], and a novel bounding boxes regression method is used for better object localization. On the recognition side, to represent a candidate proposal, we adopt many features such as RCNN features [2], IFV features [3], DPM features [4], to name a few. Given these features, category-specific combination functions are learnt to improve object recognition. Background priors and object interaction priors are also learnt and applied into our system. In addition, our framework involves some other novel techniques. The pertinent technical details for the submission are in preparation. In the ILSVRC2014 competition, we do not use any outside training data. 
+<br>
+<br>
+<br>[1]Uijlings J R R, van de Sande K E A, Gevers T, et al. Selective search for object recognition[J]. International journal of computer vision, 2013, 104(2): 154-171. 
+<br>
+<br>[2]Girshick R, Donahue J, Darrell T, et al. Rich feature hierarchies for accurate object detection and semantic segmentation[J]. arXiv preprint arXiv:1311.2524, 2013. 
+<br>
+<br>[3]Perronnin F, Sánchez J, Mensink T. Improving the fisher kernel for large-scale image classification[M]//Computer Vision–ECCV 2010. Springer Berlin Heidelberg, 2010: 143-156. 
+<br>
+<br>[4]Felzenszwalb P, McAllester D, Ramanan D. A discriminatively trained, multiscale, deformable part model[C]//Computer Vision and Pattern Recognition, 2008. CVPR 2008. IEEE Conference on. IEEE, 2008: 1-8. 
+<br>Conference on. IEEE, 2008: 1-8. </td></tr>
+<tr><td  >Adobe-UIUC</td><td  >Hailin Jin (Adobe)
+<br>Zhaowen Wang (UIUC)
+<br>Jianchao Yang (Adobe)
+<br>Zhe Lin (Adobe)</td><td  >Our algorithm is based on an integrated convolutional neural network framework for both classification and localization. We train several 6-layer convnets using 3000 ImageNet classes for classification and then adapt one model for bounding box regression. At test time, we use k-means to find bounding box clusters and rank the clusters according to the classification scores.</td></tr>
+<tr><td  >Andrew Howard</td><td  >Andrew Howard - Howard Vision Technologies</td><td  >Deep convolutional neural networks are very costly to train so my submission focuses on reusing networks through retraining and by using the same network to make multiple predictions.
+<br>
+<br>I started with a deeper and wider Zeiler/Fergus net (ZF) [1]. The differences from the base ZF model are that I use 7 convolutional layers with convolutional layer 3-7 having 512 filters. It took over 6 weeks to train on a GTX Titan using cuda-convnet [2]. This base model is trained using 224x224 crops from the full 256xN image [3] with random horizontal flips [4]. Each training crop is further perturbed with color channel noise [4] and random variation in photometric properties (lighting,contrast,color) [3]. This base model is then adapted to build a high resolution [3] and a low resolution model. The high resolution model is retrained on 224x224 crops from a 448xN sized image with random variation in size (448 +- 10%) and no drop out due to the large number of training crops available. The low resolution model embeds the entire image resized to 150xN into a random location in the 224x224 crop for retraining. I also retrain the base model to increase the size of the fully connected layers to a size larger than would fit in GPU memory if the model was trained together (the fully connected layer is grown from 4096x4096 to 12288x12288 and trained from scratch while the convolutional layers are held fixed). When the new fully connected layers are retrained, I use a slow form of Polyak averaging which averages the model parameters after each epoch rather than after each iterate. Each retrained model takes roughly 1/3 the time that training a model from scratch would.
+<br>
+<br>At test time predictions are made at 6 resolutions each one roughly 30% larger than the next smaller size. Each of the 3 models are responsible for 2 resolutions. The base resolution model acts on images scaled at 256xN and 340xN. The high resolution model acts on 448xN and 576xN and the low resolution acts on 150xN and 200xN. Each resolution uses locations selected on a dense spatial grid on the entire image similar to [5]. Predictions at each spatial location are averaged into a prediction for a given resolution and then predictions are each resolution are combined evenly.
+<br>
+<br>I further build a KNN model on the validation set as suggested by the NUS team last year [6]. For features, I use the final 1000 dimension aggregate predictions. I use leave one out cross validation on the validation set to choose K (the number of neighbors) and the weighting between the final neural network prediction and the KNN prediction.
+<br>
+<br>Finally I adapt the neural networks to the validation set distribution as suggested by the NUS team last year [6]. To do this, I hold fixed the convolutional layers and adapt the fully connected layers to the validation set. Each neural network model is adapted on a different random 80% subset of the validation set with early stopping based on the remaining 20% of the validation.
+<br>
+<br>The final submission is made up of 2 sets of 3 networks plus 1 KNN prediction. The second set of networks are a smaller earlier version and only add a little value.  
+<br>   
+<br>[1] M.D. Zei, R. Fergus, "Visualizing and Understanding Convolutional Networks." ECCV 2014. 
+<br>
+<br>[2] https://code.google.com/p/cuda-convnet 
+<br>
+<br>[3] A.G. Howard,  "Some Improvements on Deep Convolutional Neural Network Based Image Classification." ICLR 2014.
+<br>
+<br>[4] A. Krizhevsky, I. Sutskever, and G. E. Hinton, "Imagenet classification with deep convolutional neural networks." NIPS 2012.
+<br>
+<br>[5] P. Sermanet, D. Eigen, X. Zhang, M. Mathieu, R. Fergus, and Y. LeCun, "Overfeat: Integrated recognition, localization and detection using convolutional networks." ICLR 2014.
+<br>
+<br>[6] M. Lin, Q. Chen, J. Dong, J. Huang, W. Xia, "Adaptive Non-parametric Rectification of Shallow and Deep Experts." ILSVRC 2013.and evenly weights the predictions at each spatial location. Each resolution gets even weighting in the final prediction.</td></tr>
+<tr><td  >BDC-I2R,UPMC</td><td  >Big Deep Computing Team
+<br>
+<br>Olivier Morère (1,2),
+<br>Hanlin Goh (1),
+<br>Antoine Veillard (2),
+<br>Vijay Chandrasekhar (1)
+<br>
+<br>1: Institute for Infocomm Research, Singapore
+<br>2: Université Pierre et Marie Curie, Paris, France</td><td  >Multiple deep convolutional neural networks (CNN) [Krizhevsky et al. 2012], each trained with a different set of parameters. The deep representations are extracted across multiple scales and positions within an image. Model fusion is adaptively performed within each CNN model, and subsequently across the different models. Class distribution priors are used to rectify the outputs of the model. The CNN features are extracted across a GPU cluster, while a CPU cluster is used to optimize parameters in a MapReduce framework.
+<br>
+<br>We submit three runs for the classification-only task. No external data was used in our models.
+<br>Run 1: A single CNN model.
+<br>Run 2: Adaptive fusion of multiple CNN models.
+<br>Run 3: Adaptive fusion of multiple CNN models with output rectification.</td></tr>
+<tr><td  ><a href="https://github.com/rbgirshick/rcnn">Berkeley Vision</a></td><td  >Ross Girshick, UC Berkeley
+<br>Jeff Donahue, UC Berkeley
+<br>Sergio Guadarrama, UC Berkeley
+<br>Trevor Darrell, UC Berkeley
+<br>Jitendra Malik, UC Berkeley</td><td  >Our detection entry is a baseline for R-CNN [1] on the expanded ILSVRC 2014 detection dataset. We followed the approach for training on ILSVRC 2013 detection described in the R-CNN tech report [2], but with two small changes.
+<br>
+<br>1) We used the additional training annotations for the 2014 detection dataset.
+<br>
+<br>2) We used a slightly larger convolutional neural network than in [1, 2]. In this network, convolutional layers one through five have 96, 384, 512, 512, and 384 filters, respectively. The two fully connected layers (before the linear classifiers) both have 4096 output units. This network was pre-trained on the ILSVRC 2013 CLS dataset before fine-tuning for detection. 
+<br>
+<br>We performed control experiments to compare these changes to the results in [2]. On the val2 validation set (see [2]), the new training data added for 2014 improved results from 29.7% to 31.2% mAP, using the same CNN as in [2] in both cases. Using the slightly larger CNN improved results on val2 to 32.1%. Bounding-box regression further increased this to 33.4% (compared to 31.0% in [2]).
+<br>
+<br>[1] Ross Girshick, Jeff Donahue, Trevor Darrell, Jitendra Malik. Rich feature hierarchies for accurate object detection and semantic segmentation. CVPR 2014.
+<br>
+<br>[2] Ross Girshick, Jeff Donahue, Trevor Darrell, Jitendra Malik. Rich feature hierarchies for accurate object detection and semantic segmentation. Technical report. http://arxiv.org/abs/1311.2524v4.</td></tr>
+<tr><td  >BREIL_KAIST</td><td  >KAIST department of EE
+<br>
+<br>Jun-Cheol Park, Yunhun Jang, Hyungwon Choi, JaeYoung Jun</td><td  >Our team trained a deep convolutional neural network with similar architecture introduced in[1]. The overall training details are based on [2]. We used caffe[3] as our development environment. For localization, we computed image specific class saliency as in [4].
+<br>
+<br>[1] Chatfield, Ken, et al. "Return of the Devil in the Details: Delving Deep into Convolutional Nets." arXiv preprint arXiv:1405.3531 (2014).
+<br>[2] Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012.
+<br>[3] Jia, Yangqing. "Caffe: An open source convolutional architecture for fast feature embedding." h ttp://caffe. berkeleyvision. org (2013).
+<br>[4] Simonyan, Karen, Andrea Vedaldi, and Andrew Zisserman. "Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps." arXiv preprint arXiv:1312.6034 (2013).</td></tr>
+<tr><td  >Brno University of Technology</td><td  >Martin Kolář, Michal Hradiš, Pavel Svoboda</td><td  >Our method is based on calculating the weighted average of multiple architectures of standard Convolutional Neural Networks (Krizhevsky et al. 2012) on randomly transformed images (color and geometry). Results were optimised using textual associations between synsets (Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. Efficient Estimation of Word Representations in Vector Space. In Proceedings of Workshop at ICLR, 2013.). We used code based on Caffe by Yangqing Jia on the IT4I computing cluster, and trained 17 CNNs on Kepler K20 GPUs.</td></tr>
+<tr><td  >CASIA_CRIPAC_2</td><td  >Peihao Huang, Institute of Automation, Chinese Academy of Sciences
+<br>Yongzhen Huang, Institute of Automation, Chinese Academy of Sciences 
+<br>Feng Liu, School of Automation, Southeast University
+<br>Zifeng Wu, Institute of Automation, Chinese Academy of Sciences
+<br>Fang Zhao, Institute of Automation, Chinese Academy of Sciences
+<br>Liang Wang, Institute of Automation, Chinese Academy of Sciences
+<br>Tieniu Tan, Institute of Automation, Chinese Academy of Sciences
+<br></td><td  >Our method is mainly based on the framework of R-CNN for object detection. However, the object proposals are different from those used in R-CNN, explained as follows.
+<br>(1) We train a part classification model using CNN, to judge that a proposal (obtained by the selective search algorithm) belongs to an object or not.
+<br>(2) We train an object regression model using CNN, to estimate the location and the size of the object from a part.
+<br>(3) For each image, we use the K-means algorithm for clustering over the locations and the sizes estimated in (2).
+<br>(4) We choose the proposals close to the clustering centers.     
+<br>
+<br>Another difference is that, to obtain the pre-training CNN model, we use the 200 categories images on dataset 1 for training rather than the 1000 categories images on dataset 2.
+<br></td></tr>
+<tr><td  >CASIA_CRIPAC_Weak_Supervision</td><td  >Weiqiang Ren, CRIPAC, CASIA
+<br>Chong Wang, CRIPAC, CASIA
+<br>Yanhua Cheng, CRIPAC, CASIA
+<br>Kaiqi Huang, CRIPAC, CASIA
+<br>Tieniu Tan, CRIPAC, CASIA</td><td  >We use the weakly supervised object localization from only classification labels to enhance classification task. First, MCG proposal pre-trained on PASCAL VOC 2012 is used to extract the region proposals and each region proposal is represented using pre-trained convolutional networks.
+<br>Then, a multiple instance learning strategy is adopted to learn the object detectors with weak supervision. Using the learned object detectors, we are able to learn object classifiers instead of global image classifiers using multi-class softmax model. Finally, the detection models and classification models are fused to produce the final classification results.
+<br></td></tr>
+<tr><td  >Cldi-KAIST</td><td  >Kyunghyun Paeng (KAIST), Donggeun Yoo (KAIST), Sunggyun Park (KAIST), Jungin Lee (Cldi Inc.), Anthony S. Paek (Cldi Inc.), In So Kweon (KAIST), Seong Dae Kim (KAIST)</td><td  >Our submission is based on a combination of two methodologies – the Deep Convolutional Neural Network (DCNN) framework [1] as a global expert and the DCNN-based Fisher framework as a local expert. Simple reweighting techniques are used as well. Our localization method is a bounding box regression.
+<br>
+<br>In order to train a global expert, we have used 10 networks under different settings: using various preprocessing methods, and/or different network architectures. We selected the best ensemble of the networks that demonstrate the best accuracy in the validation dataset. 
+<br>
+<br>Our local expert is trained using local features composed of DCNN responses from mid-layers. We encoded the local features into Fisher vectors [2] and trained SVM classifiers. In order to prevent overfitting, we trained our network using 0.9 million from the entire set of training images, and the remaining 0.3 million were used for Fisher encoding and SVM training. 
+<br>
+<br>[1] Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoff, "Imagenet classification with deep convolutional neural networks." NIPS 2012.
+<br>
+<br>[2] Perronnin, Florent, Jorge Sánchez, and Thomas Mensink. "Improving the fisher kernel for large-scale image classification."  ECCV 2010.
+<br>
+<br>
+<br></td></tr>
+<tr><td  ><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net</a></td><td  >Wanli Ouyang, Ping Luo, Xingyu Zeng, Shi Qiu, Yonglong Tian, Hongsheng Li, Shuo Yang, Zhe Wang, Yuanjun Xiong, Chen Qian, Zhenyao Zhu, Ruohui Wang, Chen-Change Loy, Xiaogang Wang, Xiaoou Tang
+<br>
+<br>Multimedia Laboratory, The Chinese University of Hong Kong
+<br></td><td  >The work uses ImageNet classification training set (1000 classes) to pre-train features, and fine tunes features on ImageNet detection training set (200 classes). This detection work is based on deep CNN with proposed new deformation layers, feature pre-training strategy, sub-region pooling and model combination. The effectiveness of learning deformation models of object parts has been proved in object detection by many existing non-deep-learning detectors, e.g. [a]. However, it is missed in current deep learning models. In deep CNN models, max pooling and average pooling are useful in handling deformation but cannot learn the deformation penalty and geometric model of object parts. We design the deformation layer for deep models so that the deformation penalty of objects can be learned by deep models. The deformation layer was first proposed in our recently published work [b], which showed significant improvement in pedestrian detection. In this submission, we extend it to general object detection on ImageNet. In [b], the deformation layer was only applied to a single level corresponding to body parts, while in this work the deformation layer was applied to every convolutional layer to capture geometric deformation at all the levels. In [b], it was assumed that a pedestrian only has one instance of a body part, so each part filter only has one optimal response in a detection window. In this work, it is assumed that an object has multiple instances of body part (e.g. a building has many windows),  so each part filter is allowed to have multiple response peaks in a detection window. This new model is more suitable for general object detection. 
+<br>
+<br>The whole detection pipeline is much more complex than [b]. In addition to the above improvement, we also added several new components in the pipeline, including feature pre-training on the ImageNet classification dataset (objective function is the image classification task), feature fine-tuning on the ImageNet detection dataset (objective function is the object detection task), a proposed new sub-region pooling step, contextual modeling (which uses the whole image prediction scores over 1000 classes as contextual features to combine with features extracted from a detection window with deep CNN), SVM classification by using the extracted features. We also adopted bounding box regression [c]. 
+<br>
+<br>A new sub-region pooling strategy is proposed. It divides the detection window into sub-regions, and applies max-pooling or average pooling across feature vectors extracted from different sub-regions. It improves the performance and also increases the model diversity.
+<br>
+<br>Different from the state-of-the-art deep learning detection framework [c], which pretrain the net on ImageNet classification data (1000 classes), We proposed a new strategy of doing pre-training on the ImageNet classification data (1000 classes), such that the pre-trained features are much more effective on the detection task and with better discriminative power on object localization.
+<br>
+<br>By changing the configuration of each component of the detection pipeline, multiple models with large diversity are generated. Multiple models are automatically selected and combined to generate the final detection result. 
+<br>We have submitted the results of five different approaches. The first two results report the best performance to be achieved with a single model. Their difference is whether using contextual features from image classification or not. The remaining three results report the best performance to be achieved with model combination. Their differences are using contextual modeling or not, and whether using validation 2 dataset from ImageNet as part of training or not.  
+<br>
+<br>
+<br>[a] P. Felzenszwalb, R. B. Grishick, D.McAllister, and D. Ramanan. Object detection with discriminatively trained part based models. IEEE Trans. PAMI, 32:1627–1645, 2010.
+<br>
+<br>[b] Wanli Ouyang, Xiaogang Wang, "Joint Deep Learning for Pedestrian Detection ", In Proc. IEEE ICCV 2013.
+<br>
+<br>[c] R. Girshick, J. Donahue, T. Darrell, J. Malik, "Rich feature hierarchies for accurate object detection and semantic segmentation", CVPR 2014.</td></tr>
+<tr><td  ><a href="http://www.ee.cuhk.edu.hk/~wlouyang/projects/imagenetDeepId/index.html">CUHK DeepID-Net2</a></td><td  >Wanli Ouyang, Xingyu Zeng, Shi Qiu, Ping Luo, Yonglong Tian, Hongsheng Li, Shuo Yang, Zhe Wang, Yuanjun Xiong, Chen Qian, Zhenyao Zhu, Ruohui Wang, Chen-Change Loy, Xiaogang Wang, Xiaoou Tang
+<br>
+<br>Multimedia Laboratory, The Chinese University of Hong Kong</td><td  >The work uses ImageNet classification training set (1000 classes) to pre-train features, and fine tunes features on ImageNet detection training set (200 classes). This detection work is based on multi-stage deep CNN and model combination. Multi-Stage classifiers have been widely used in object detection and achieved great success. With a cascaded structure, each classifier processes a different subset of data. However, these classifiers are usually trained sequentially without joint optimization. In this submission, we proposed a new deep architecture that can jointly train multiple classifiers through several stages of back-propagation. Each stage handles samples at a different difficulty levels. Specifically the first stage of deep CNN handles easy samples, the second state of deep CNN process more difficult samples which can’t be handled in the first stage, and so on. Through a specific design of the training strategy, this deep architecture is able to simulate the cascaded classifiers by mining hard samples to train the network stage-by-stage. The group of classifiers in the deep model choose training samples stage by stage. The training is split into several back-propagation (BP) stages. Due to the design of our training procedure, the gradients of classifier parameters at the current stage are mainly influenced by the samples misclassified by the classifiers at the previous stages. At each BP stage, the whole deep model has been initialized with a good starting point learned at the previous stage and the additional classifiers focus on the misclassified hard samples. Direct back-propagation on the multi-stage deep CNN easily lead to the overfitting problem. We design stage-wise supervised training to regularize the optimization problem. At each BP stage, classifiers at the previous stages jointly work with the classifier at the current stage in dealing with misclassified samples. Existing cascaded classifiers only pass a single score to the next stage, while our deep model keeps the score map within a local region and it serves as contextual information to support the decision at the next stage. Our recent work [1] has explored the idea of multi-stage deep learning, but it was only applied to pedestrian detection. In this submission, we apply it to general object detection on ImageNet. 
+<br>
+<br>The detection pipeline is much more complex than [1]. It includes feature pre-training, multi-stage deep CNN fine-tuning, sub-region pooling, contextual modeling , SVM classification, and bounding box regression. The state-of-the-art deep learning object detection framework in [2] pretrain the net on ImageNet classification data (1000 classes) and then fine-tune on ImageNet detection data (200 classes). We proposed a new strategy of doing pre-training on the ImageNet classification data (1000 classes), such that the pre-trained features are much more effective on the detection task and with better discriminative power on object localization. A new sub-region pooling strategy is proposed. It divides the detection window into sub-regions, and applies max-pooling or average pooling across feature vectors extracted from different sub-regions. Context modeling uses the whole image prediction scores over 1000 classes as contextual features to combine with features extracted from a detection window with deep CNN.
+<br>
+<br>By changing the configuration of each step, we can generate multiple deep models. For example, the features can be pre-trained with Alex’s net or Clarifai. With extracted features, bounding boxes can be classified with fully connected networks with hinge loss or SVM, including sub-region pooling or not. Therefore, different models can be generated. Top N models with the highest accuracies are combined by averaging. The work uses ImageNet classification training set (1000 classes) to pre-train features, and fine tunes features on ImageNet detection training set (200 classes). No other training data is used.
+<br>
+<br>[1] Xingyu Zeng, Wanli Ouyang, Xiaogang Wang, "Multi-Stage Contextual Deep Learning for Pedestrian Detection ", In Proc. IEEE ICCV 2013.
+<br>
+<br>[2] Girshick, Ross, et al. "Rich feature hierarchies for accurate object detection and semantic segmentation", In Proc. CVPR, 2014.</td></tr>
+<tr><td  >Deep Insight</td><td  >Junjie Yan (NLPR)
+<br>Naiyan Wang (HKUST)
+<br>Stan Z. Li (NLPR)
+<br>Dit-Yan Yeung (HKUST)
+<br>
+<br></td><td  >We use the region proposal, CNN Feature and SVM classifier for object detection (similar to the framework RCNN ). In our entry, we use the selective search and structure edge to generate around 4000 object proposals for each image. The features of each object proposal are extracted from three CNNs, which are trained on the classification task and tuned on the detection task. The three CNNs are different in the depth of convolution layer. Deeper model always achieves better result according to the validation set. The bounding box regression uses the output of the final layer as the input to refine the result. For the context, we train 200 binary classifiers on the detection data and use them to re-score the detection.</td></tr>
+<tr><td  >DeepCNet</td><td  >Ben Graham-University of Warwick</td><td  >We trained a deep convolutional network with the architecture
+<br>
+<br>(input=768x768x3)-200C3-MP2-400C2-MP2-600C2-MP2-800C2-MP2-1000C2-MP2-1750C2-MP2-2500C2-MP2-3250C2-MP2-4000C2-(output=1000N softmax layer)
+<br>
+<br>The architecture is inspired by the paper (Ciresan, et al. Multi-column deep neural networks for image classification, 2012).
+<br>Input images are scaled to have approximately 2^16 pixel, maintaining aspect ratio, and placed in the centre of the input field.
+<br>Sparsity is used to accelerate the training process (Graham, Sparse arrays of signatures for online character recognition http://arxiv.org/abs/1308.0371, 2013).
+<br>For training, affine transformations are used. For testing, each image is fed forward through the network only once.
+<br>
+<br>Regarding Q3 in the FAQ "Do teams have to submit both classification and localization results in order to participate in Task 2?"
+<br>Do to lack of time, I have not attempted the localization part of the challenge; but I hope to work on that in future.
+<br>
+<br>Thank you to all the organisers.
+<br></td></tr>
+<tr><td  >DeeperVision</td><td  >DeeperVision</td><td  >We use very deep convolutional neural network which consists of 10+ layers in the competition. To fully optimize such a deep model, we adopt a Nesterov based optimization method which is shown to be superior to the conventional SGD. We also exploit more advanced data augmentation technique such as using various resolution, lightness and contrast variation, etc. For model ensemble, we directly use discrete optimization to optimize top 5 error rate. </td></tr>
+<tr><td  >Fengjun Lv</td><td  >Fengjun Lv - Fengjun Lv Consulting</td><td  >We followed the approach by Krizhevsky et al. in their NIPS 2012 paper but with a different pre-processing step. For non-square images, instead of using central crop (which in many cases, does not contain the object of interest at all or the object is incomplete), we apply Graph-Based Visual Saliency (by Harel et al. NIPS 2006) to the original image (both in training and testing) and use integral image to get a square crop that maximizes the visual saliency. One of the two submissions is from a single CNN. The other combines multiple CNNs.
+<br></td></tr>
+<tr><td  >GoogLeNet</td><td  >Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Drago Anguelov, Dumitru Erhan, Andrew Rabinovich</td><td  >We explore an improved convolutional neural network architecture which combines the multi-scale idea with intuitions gained from the Hebbian principle. Additional dimension reduction layers based on embedding learning intuition allow us to increase both the depth and the width of the network significantly without incurring significant computational overhead. Combining these ideas allow for increasing the number of parameters in convolutional layers significantly while cutting the total number of parameters and resulting in improved generalization. Various incarnations of this architecture are trained for and applied at various scales and the resulting scores are averaged for each image.</td></tr>
+<tr><td  >lffall</td><td  >Feng Liu, Southeast University, China</td><td  >This track is just for testing some off-the-shelf algorithms to provide a baseline for our subsequent researches and studies. In particular, we want to compare the results of different algorithms that can produce region proposals, and to find out which is the most important factor that influence the following classification. 
+<br>DET entry 1 is our reproduction of the RCNN[1] algorithm trained on val + train1k set, whose region proposals are provided by selective search[2].
+<br>[1] Girshick, Ross, et al. "Rich feature hierarchies for accurate object detection and semantic segmentation." arXiv preprint arXiv:1311.2524 (2013).
+<br>[2] Van de Sande, Koen EA, et al. "Segmentation as selective search for object recognition." Computer Vision (ICCV), 2011 IEEE International Conference on. IEEE, 2011.
+<br></td></tr>
+<tr><td  ><a href="http://libccv.org/">libccv</a></td><td  >Liu Liu, libccv.org</td><td  >Open-source implementation of MattNet (Visualizing and Understanding Convolutional Networks, Matthew D. Zeiler, and Rob Fergus) trained with 1 convnet, detailed in: http://libccv.org/doc/doc-convnet/</td></tr>
+<tr><td  >MIL</td><td  >Senthil Purushwalkam (The Univ. of Tokyo[intern] and IIT Guwahati)
+<br>Yuichiro Tsuchiya (The Univ. of Tokyo)
+<br>Atsushi Kanehira (The Univ. of Tokyo)
+<br>Asako Kanezaki (The Univ. of Tokyo)
+<br>Tatsuya Harada (The Univ. of Tokyo)</td><td  >Classification-Localisation Task
+<br>
+<br>	We combine two models - one based on fisher vectors extracted from two feature descriptors and the other using a special classifier trained on CNN features extracted using selective search boxes.
+<br>	For the fisher based model [1], fisher vectors were extracted using local feature descriptors. Linear classifiers were trained for these fisher vectors using the averaged passive-aggressive algorithm.
+<br>	For the CNN based model, CNN features were extracted on selective search windows. The classifier was trained using [2] which trains a multiclass classifier by creating 'negative classes' for each class. This optimises the separation between positive and negative features while simultaneously optimising the separation between classes.
+<br>
+<br>
+<br>Detection Task:
+<br>We use RCNN[3] as the base detector. We train separate fisher based classifiers for each class using the Passive Aggressive algorithm. The scores from these classifiers for each image is collected and is used for rescoring the detections.
+<br>
+<br>
+<br>1) N. Gunji, T. Higuchi, K. Yasumoto, H. Muraoka, Y. Ushiku, T. Harada, and Y. Kuniyoshi. Scalable Multiclass Object Categorization with Fisher Based Features. ILSVRC2012, 2012.
+<br>
+<br>2) Asako Kanezaki, Sho Inaba, Yoshitaka Ushiku, Yuya Yamashita, Hiroshi Muraoka, Yasuo Kuniyoshi, and Tatsuya Harada. Hard Negative Classes for Multiple Object Detection. 2014 IEEE International Conference on Robotics and Automation (ICRA 2014), pp.3066-3073, 2014.
+<br>
+<br>3) Girshick, Ross, Jeff Donahue, Trevor Darrell, and Jitendra Malik. "Rich feature hierarchies for accurate object detection and semantic segmentation." arXiv preprint arXiv:1311.2524 (2013).</td></tr>
+<tr><td  >MPG_UT</td><td  >Riku Togashi (The University of Tokyo)
+<br>Keita Iwamoto (The University of Tokyo)
+<br>Tomoaki Iwase (The University of Tokyo)
+<br>Hideki Nakayama (The University of Tokyo)
+<br></td><td  >In this challenge, we focused on integrating object region proposals obtained from different methods to use as the inputs for the RCNN system [1]. Namely, we used objectness (OB) [2], selective search (SS) [3], and bounding box transfer (TR) [4]. We used public codes of RCNN, OB, SS (bundled in RCNN). For implementing TR, we extracted 4096-dimensional global CNN features by Caffe [5] and retrieved nearest training samples in terms of L2 distance. 
+<br>We computed 500 to 1000 windows for each object region proposal method and then put them together for RCNN. Using pre-trained CNN and SVM models provided by RCNN software, we computed scores for each proposal and ran non-maxima suppression (without distinguishing proposal methods) to determine the final predictions. We did not perform bounding box regression (refinement) as the original RCNN paper does.
+<br>
+<br>We observed that combining different object proposal methods worked better than just computing more proposals by one method. Particularly, TR method could greatly improve the performance from the original RCNN (based on SS), probably because TR can implicitly utilize global dataset statistics and conceptually very different from OB and SS.
+<br>
+<br>
+<br>[1] Ross Girshick, Jeff Donahue, Trevor Darrell, and Jitendra Malik, Rich feature hierarchies for accurate object detection and semantic segmentation, In Proc. IEEE CVPR, 2014.
+<br>
+<br>[2] Bogdan Alexe, Thomas Deselaers, and Vittorio Ferrari , Measuring the objectness of image windows, IEEE Trans. PAMI, vol. 34, no. 11, pp. 2189-2202, 2012.
+<br>
+<br>[3] Jasper R. R. Uijlings, Koen E. A. van de Sande, Theo Gevers, and Arnold W. M. Smeulders, Selective Search for Object Recognition, International Journal of Computer Vision, Volume 104 (2), page 154-171, 2013.
+<br>
+<br>[4] Jose A. Rodriguez-Serrano and Diane Larlus, Predicting an Object Location using a Global Image Representation, In Proc. IEEE ICCV, 2013.
+<br>  
+<br>[5] Yangqing Jia, Caffe:An Open Source Convolutional Architecture for Fast Feature Embedding, 2013.
+<br></td></tr>
+<tr><td  ><a href="http://research.microsoft.com/en-us/um/people/kahe/">MSRA Visual Computing</a></td><td  >Kaiming He (Microsoft Research)
+<br>Xiangyu Zhang (Xi'an Jiaotong University)
+<br>Shaoqing Ren (University of Science and Technology of China)
+<br>Jian Sun (Microsoft Research)</td><td  >Our CLS and DET methods are both based on the SPP-net in our ECCV 2014 paper “Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition”. SPP (SPM) is a flexible solution for handling image scales/sizes, and is also robust to deformations. The usage of the SPP layer is independent of the CNN designs, and we show that SPP improves the classification accuracy of various CNNs, regardless of the network depth, width, strides, and other designs.
+<br>
+<br>The SPP-net is also a fast and accurate solution to object detection. We compute the convolutional feature maps from the images only once, and use SPP to pool features from arbitrary proposal windows for training SVM detectors. Our method is tens of times faster than R-CNN. Our network is pre-trained only using the DET-200 data (without outside data such as CLS-1000). A few strategies are proposed to improve the pre-training, driven by the different statistical properties of the DET-200 set.
+<br>
+<br>The algorithm details have been described in our ECCV paper. An extended technical report will be updated. The code will be released.
+<br></td></tr>
+<tr><td  >NUS</td><td  >Jian DONG(1), Yunchao WEI(1), min LIN(1), Qiang CHEN(2), Wei XIA(1), Shuicheng YAN(1) 
+<br>
+<br>(1) National University of Singapore 
+<br>(2) IBM Research, Australia</td><td  >There are four major components for improving detection performance:
+<br>
+<br>Network In Network (NIN) [Key Contribution]:
+<br>We trained an NIN which is a special modification of CNN [1] with 14 parameterized layers. NIN uses a shared multilayer perceptron as the convolution kernel to convolve the underlying input, the resulting structure is equivalent to adding cascaded cross channel parametric (CCCP) pooling on top of convolutional layer. Adding CCCP layer significantly improves the performance as compared to vanilla convolution. 
+<br>
+<br>Augmented training and testing sample:
+<br>This improvement was first described by Andrew Howard [Andrew 2014]. Instead of resizing and cropping the image to 256x256, the image is proportionally resized to 256xN(Nx256) with the short edge to 256. Subcrops of 224x224 are then randomly extracted for training.
+<br>
+<br>Traditional framework with SVM:
+<br>Traditional classification framework can provide complementary information, such as scene-level information, to CNN network. Hence, we integrate the outputs from the traditional framework (based on our PASCAL VOC2012 winning solutions, with the new extension of high-order parametric coding in which the first and second order parameters of the adapted GMM for each instance are both considered) to further improve the performance.
+<br> 
+<br>Kernel regression for rescoring:
+<br>Finally, we employ non-parametric rectification method to correct/rectify the outputs from multiple models for obtaining more accurate prediction. Basically for each sample in the training and validation sets, we have a pair of outputs-from-multi-models and ground-truth label. For a testing sample, we use regularized kernel regression method to determine the affinities between the test sample and its auto-selected training/validation samples, and then the affinities are utilized to fuse the ground-truth labels of these selected samples to produce a rectified prediction.
+<br>
+<br>Detection (Task 1) ------
+<br>The basic method is based on Ross Girshick's RCNN framework. We employ Network in Network as the feature extractor to improve the model discriminative capability. Features from multiple NINs are concatenated for both model training and bounding box regression. Raw detection scores are calculated based on the features from the refined bounding boxes.
+<br>To integrate the global context information beyond the information within the target bounding box, we concatenate all the raw detection scores and then combine them with the outputs from the traditional classification framework by context refinement [2]. Finally, the refined detection results are further updated through the adaptive kernel regression.
+<br>
+<br>[1] Min Lin, Qiang Chen, Shuicheng Yan. Network In Network. In ICLR 2014.
+<br>[2] Qiang Chen, Zheng Song, Jian Dong, Zhongyang Huang, Yang Hua, Shuicheng Yan. Contextualizing Object Detection and Classification. In TPAMI 2014.
+<br></td></tr>
+<tr><td  >NUS-BST</td><td  >Min Lin(1), Jian Dong(1), Hanjiang Lai(1), Junjun Xiong(2), Shuicheng Yan(1)
+<br>
+<br>(1) National University of Singapore
+<br>(2) Beijing Samsung Telecom R&D Center</td><td  >This submission is based on our recent ICLR’14 work called “Network in Network”, and there are four major components for the whole solution:
+<br> 
+<br>Network In Network (NIN) [key contribution]:
+<br>We trained an NIN which is a special modification of CNN [Min et al. 2014] with 14 parameterized layers. NIN uses a shared multilayer perceptron as the convolution kernel to convolve the underlying input, the resulting structure is equivalent to adding cascaded cross channel parametric (CCCP) pooling on top of convolutional layer. Adding CCCP layer significantly improves the performance as compared to vanilla convolution.
+<br> 
+<br>Augmented training and testing sample:
+<br>This improvement is first described by Andrew Howard [Andrew 2014]. Instead of resizing and cropping the image to 256x256, the image is proportionally resized to 256xN (or Nx256) with the short edge to 256. Subcrops of 224x224 are then randomly extracted for training. During testing, 3 views of 256x256 are extracted and each view goes through the 10 view testing described by [Alex et al. 2013].
+<br> 
+<br>Traditional features with SVM:
+<br>Traditional classification framework can provide complementary information, such as scene level information, to NIN network. Hence, we integrate the outputs from the traditional framework (based on our PASCAL VOC2012 winning solutions, with the new extension of high-order parametric coding in which the first and second order parameters of the adapted GMM for each instance are both considered) to further improve the performance.
+<br> 
+<br>Kernel regression for fusion of results:
+<br>Finally, we employ non-parametric rectification method to correct/rectify the outputs from multiple models for obtaining more accurate prediction. Basically for each sample in the training and validation sets, we have a pair of outputs-from-multi-models and ground-truth label. For a testing sample, we use regularized kernel regression method to determine the affinities between the test sample and its auto-selected training/validation samples, and then the affinities are utilized to fuse the ground-truth labels of these selected samples to produce a rectified prediction.
+<br>
+<br>Min Lin, Qiang Chen, and Shuicheng Yan. "Network In Network." International Conference on Learning Representations. 2014.
+<br>
+<br>Howard, Andrew G. "Some Improvements on Deep Convolutional Neural Network Based Image Classification." International Conference on Learning Representations. 2014.
+<br>
+<br>Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012.</td></tr>
+<tr><td  ><a href="http://123.127.237.160/deepClassify/index.php">ORANGE-BUPT</a></td><td  >Hongliang BAI, Orange Labs Beijing
+<br>Yinan LIU, Orange Labs Beijing
+<br>Bo LIU, BUPT, CHINA
+<br>Yanchao FENG, BUPT, CHINA
+<br>Kun TAO, Orange Labs Beijing
+<br>Yuan DONG, Orange Labs Beijing 
+<br></td><td  >It is the second time that we participate in ILSVRC. In this year, we submit maximal ten runs in the DET and LOC tasks. In DET, inspired by Ross’s rcnn method, we detect 200 classes in test images with selective search, pretrained CNN models in training set of LOC task, fine-tuning in the detection training set, neural network-based classification (201 classes including background) , and bounding box regression. In the validation dataset, we get 0.272 mAP.  Three steps are conducted in LOC, (1) train seven classification models by deep learning in different network structure and parameters, and test with data augmentations (crop, flip and scale) (2)test images are segmented into ~2000 regions by selective search algorithm, then the regions are classified by the above classifiers into one of 1000 classes. (3) regions with highest possibility classes generated by the classification model are selected as the final output. In validation set of classification, the top-5/1 error rate is 0.3680 and 0.1526 compared with the last year’s 0.25194. For location task, the best performance is about 0.45 in validation data set. </td></tr>
+<tr><td  >PassBy</td><td  >Lin SUN(LENOVO/HKUST)
+<br>Zhanghui Kuang(LENOVO)
+<br>Cong Zhao(LENOVO)
+<br>Kui Jia (University of Macao)
+<br>Oscar C.Au (HKUST)</td><td  >Since the time limited, we do not obtain a good CNN baseline, about 80% on validation dataset. However, we want to indicate that we could apply some traditional computer vision methods to boost the performance even the tools at hand are poor. In this submission, we propose a saliency based method in order to better present the images when single CNN fails. Average and novel weighted average methods are applied to obtain the final prediction. We believe our method will be better if we get enough time to train and tune.   
+<br>
+<br>Reference: 
+<br>1.DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition, ICML, 2014
+<br>2. ImageNet Classification with Deep Convolutional Neural Networks, NIPS, 2012</td></tr>
+<tr><td  >SCUT_GLH</td><td  >Guo Lihua (south china university of technology)
+<br>Liao Qijun (south china university of technology)
+<br>Ma Qianli (south china university of technology)
+<br>Lin Junbin (south china university of technology)
+<br></td><td  >Deep Neural networks have very stronger power to automatically learn the complex relation between the input and output than some traditional shallow model, such as SVM, PCA, and so on. Currently, the most widely used network which achieves better performance is CNN. CNN has been successfully applied to image classification, scene recognition, and natural speech analysis and other areas. This method uses the CNN network to train imagenet training image. We calculate the average accuracy of top20 in validation sets, and find that the average accuracy of validation sets has above 90%. Based on this, firstly, we establish the semantic relation of all the labels. Then, use CNN network to extract the top 20 candidated labels. Finally, rerank the result based on the semantic relation of the candidated labels.</td></tr>
+<tr><td  >Southeast-CASIA</td><td  >Feng Liu, School of Automation, Southeast University
+<br>Zifeng Wu, Institute of Automation, Chinese Academy of Sciences
+<br>Yongzhen Huang, Institute of Automation, Chinese Academy of Sciences</td><td  >Our algorithm is composed of five components:
+<br>(1) Using the selective search algorithm to generate about 2400 proposals for every image.
+<br>(2) Training a two-category proposal classification model using CNN on dataset 1 to remove proposals more likely from backgrounds. 700 proposals are preserved after this step.
+<br>(3) Training an initial 200-category image classification model using CNN on dataset 1.
+<br>(4) Fine-tuning the initial model using 700 proposals. We consider two strategies: with sample balance and without sample balance over categories in fine-tuning, and accordingly obtain two proposal representation models. The final proposal representation is the combination of these two models.
+<br>(5) Training 200 two-category proposal classification models using SVM, and using bounding box regression to obtain the final detection results.
+<br></td></tr>
+<tr><td  >SYSU_Vision</td><td  >Liliang Zhang, Tianshui Chen, Shuye Zhang, Wanglan He, Liang Lin, Dengguang Pang, Lingbo Liu. Sun Yat-Sen University, China.</td><td  >Solution 1:
+<br>Our solution 1 employed the classification-localization framework. For classification, we train a one-thousand-class classification model based on Alex network published on NIP 2012. For localization, we first train a one-thousand-class localization model based on Alex network. However, such a localization model is inclined to localize the saliency region, which can not work well for ImageNet localization. So we fine tune one thousand class-specific models based on the pre-train one-thousand-class localization model, one for each class. But because of the shortage of training images for each class, the over-fitting problem is very serious. To reduce this problem, we design a similarity-sorted fine tuning method. First, we choose one class to fine tune the pre-trian one-thousand-class localization model, and get a localization model for this chosen class. Then we choose the class most similar to the pre-chosen class and fine tune this class based on pre-chosen class localization model. In this way, the training image of similar classed are shared.
+<br>Solution 2:
+<br>Our solution 2 was got idea by R-CNN's framework. For testing each image, we: Firstly, used the classification model in solution 1 to get the top 5 class-predictions. Secondly, applyed Selective Search get the candidate regions. Thirdly, fine-tuned another classfication model specific for classifying regions based the classification model above, then used it to find out the scores of each regions. Fourthly, got the highest-score-region in each top 5 class-predictions to form the final result.
+<br>Solution 3:
+<br>We compared the class-specific localization accuracy of solution 1 and solution 2 by the validation set. Then we chosen better solution on each class based on the accuracy. General speaking, solution 2 outformed solution 1 when there were multiple objects in the image or the objects are relatively small.
+<br>Solution 4:
+<br>We just simply averaged the result between solution 1 and solution 2 to form our solution 4. 
+<br></td></tr>
+<tr><td  >Trimps-Soushen</td><td  >Jie Shao, Xiaoteng Zhang, JianYing Zhou, Jian Wang, Jian Chen, Yanfeng Shang, Wenfei Wang, Lin Mei, Chuanping Hu. 
+<br>The Third Research Institute of the Ministry of Public Security, P.R. China.</td><td  >Task 1: Detection
+<br>Our work is based on the R-CNN paper in CVPR2014. We use another region selection method called RP from ICCV 2013 paper, this method generate less regions without significant precision reduction. We use these new regions to train a new model with less space and time. Besides this, we try several combine methods. First, we combine the regions generated by selective search and RP on a single model. We individually train R-CNN on selective search regions and RP regions, then we just combine the results of different models using nms. In the training stage, we fine-tune the CNN model trained on ILSVRC2012 classification data with ILSVRC2014 detection data. We do not use any other outside data. We also try a simple method which use our localization pipline plus nms for object detection.
+<br>
+<br>Task 2: Classification and localization
+<br>Our model is based on large deep convolutional neural network. We use several methods to improve the performance. 1. Data Augmentation. Some of our models are trained on original data plus about 396000 external images from ILSVRC2010 and  ILSVRC2011 training data. All training data belong to original 1000 object categories. Other data augmentation methods include random crops from Nx256 resized images, contrast and color jittering, and Gaussian noise. We use opencv to resize images with cubic interpolation, which we found very useful. 2. Model Details. The biggest model we trained has about 120M parameters. To encourage model diversity, we use different normalization and pooling method, with partly random selected external data. We also train two kind of complementary models, supervised CNN pre-train model and vary resolution model (normal resolution --> high resolution (fine-tuning) --> normal resolution (fine-tuning)). Both of these models have lower accuracy, but play very important role in model voting. 3. Testing. We make predictions at multiscale, each scale with 7 cropped images and their horizontal flips.
+<br>
+<br>For Localization task, a simple pipeline is taken. First, we use RP to extract region proposals, regions with IOU greater than 0.8 are used as positive samples, and regions with IOU between 0.2 and 0.3 (Localization data are not fully annotated) are used as background. Second, we fine-tune a classification model with these regions. Finally, for a test image, extracted region proposals are feed to the fine-tuned model to get region confidence and corresponding coordinates. Base on the result from Classification task, we select the top-k regions and averaging their coordinates as output.
+<br>
+<br>
+<br>[1] Rich feature hierarchies for accurate object detection and semantic segmentation. Girshick, Ross and Donahue, Jeff and Darrell, Trevor and Malik, Jitendra. Computer Vision and Pattern Recognition 2014.
+<br>[2]Prime Object Proposals with Randomized Prim's Algorithm, Santiago Manen, Matthieu Guillaumin, Luc Van Gool, International Conference on Computer Vision (ICCV) 2013.
+<br>[3] Some Improvements on Deep Convolutional Neural Network Based Image Classification. Andrew G. Howard. http://arxiv.org/abs/1312.5402</td></tr>
+<tr><td  ><a href="http://ttic.uchicago.edu/~gpapan/">TTIC_ECP - EpitomicVision</a></td><td  >George Papandreou, Toyota Technological Institute at Chicago (TTIC)
+<br>Iasonas Kokkinos, Ecole Centrale Paris (ECP)</td><td  >These entries showcase deep epitomic neural nets [1]. An epitomic convolution layer replaces a pair of consecutive convolution and max-pooling layers found in standard deep convolutional neural networks (CNNs). The model uses mini-epitomes [2] in place of filters and computes responses invariant to small translations by epitomic search instead of max-pooling over image positions. Epitomic search returns the maximum response of each image patch with all patches extracted from a larger epitome [3]. The model parameters (mini-epitome filters) are learned by error backpropagation in a supervised fashion, similar to standard CNNs [4, 5]. We have submitted the following entries:
+<br>
+<br>EpitomicVision1 (vanilla epitomic NN):
+<br>
+<br>This entry has been obtained with the EPITOMIC-NORM variant of the epitomic model described in detail in [1]. The only difference with [1] is that the current network has more hidden units in layers 1 to 6. A single large net has been used (no averaging over different nets). No attempt has been done for localization (we report the whole image as bounding box prediction).
+<br>
+<br>EpitomicVision2 (+ scale and position search):
+<br>
+<br>This model also searches over scale and position for the best match. This is implemented by building a mosaic with multiple versions of the image at different scales [6, 7], running the epitomic classifier in a convolutional fashion similar to [5], and selecting the position on the mosaic that gives the maximum response. The parameters of the model were initialized from a model similar to EpitomicVision1 and were fine-tuned. A single large net has been used (no averaging over different nets). No attempt has been done for localization (we report the whole image as bounding box prediction).
+<br>
+<br>EpitomicVision3 (fusion of EpitomicVision1 + EpitomicVision2):
+<br>
+<br>The class probabilities for this model are weighted averages of the EpitomicVision1 (w=0.4) and EpitomicVision (w=0.6) models. No attempt has been done for localization (we report the whole image as bounding box prediction).
+<br>
+<br>EpitomicVision4 (EpitomicVision2 with fixed mapping of the best matching mosaic position to bounding box):
+<br>
+<br>This is a simple attempt to equip the EpitomicVision2 predictions with localization estimates.
+<br>
+<br>
+<br>All models have been trained using the supplied CLOC training set alone.
+<br>
+<br>Acknowledgments:
+<br>
+<br>We implemented the methods by extending the excellent Caffe software framework [8]. We gratefully acknowledge the support of NVIDIA Corporation with the donation of GPUs used for this research.
+<br>
+<br>References:
+<br>
+<br>[1] G. Papandreou, "Deep Epitomic Convolutional Neural Networks,"
+<br>arXiv:1406.2732, June 2014.
+<br>
+<br>[2] G. Papandreou, L.-C. Chen, and A. Yuille, "Modeling image patches with a generic dictionary of mini-epitomes," in Proc. CVPR 2014.
+<br>
+<br>[3] N. Jojic, B. Frey, and A. Kannan, "Epitomic analysis of appearance and shape", in Proc. ICCV 2003.
+<br>
+<br>[4] A. Krizhevsky, I. Sutskever, and G. Hinton, "ImageNet classification with deep convolutional neural networks," in Proc. NIPS 2013.
+<br>
+<br>[5] P. Sermanet, D. Eigen, X. Zhang, M. Mathieu, R. Fergus, and Y. LeCun, "Overfeat: Integrated recognition, localization and detection using convolutional networks," in Proc. ICLR 2014.
+<br>
+<br>[6] C. Dubout and F. Fleuret, "Exact acceleration of linear object detectors," in Proc. ECCV 2012.
+<br>
+<br>[7] F. Iandola, M. Moskewicz, S. Karayev, R. Girshick, T. Darrell, K. Keutzer, "DenseNet: Implementing efficient ConvNet descriptor pyramids," arXiv:1404.1869, April 2014.
+<br>
+<br>[8] Y. Jia, "Caffe: An open source convolutional architecture for fast feature embedding," 2013.</td></tr>
+<tr><td  >UI</td><td  >Fatemeh Shafizadegan, Msc student of Artificial Intelligence, University of Isfahan.
+<br>Elham Shabaninia, PhD candidate of Artificial Intelligence,University of Isfahan.</td><td  >Our model is based on Spatial Pyramid Matching (SPM), similar to [1]. This is an extension of SPM using sparse codes of SIFT features that propose a linear kernel. SIFT features are robust in rotation, scale, affine and different intensities. This approach reduce the complexity of SVM in training phase to O(n) and the complexity in testing phase doesn’t change. This approach uses max spatial pooling that is robust to local spatial translations. The image representation turns out to work well with linear SVM classifiers.
+<br>
+<br>
+<br>
+<br>[1] Linear Spatial Pyramid Matching Using Sparse Coding for Image Classification, J.Yang, K.Yu, Y.Gong, T.Huang, CVPR 2009.
+<br>
+<br>
+<br></td></tr>
+<tr><td  >UvA-Euvision</td><td  >Koen van de Sande
+<br>Daniel Fontijne
+<br>Cees Snoek
+<br>Harro Stokman
+<br>Arnold Smeulders
+<br>
+<br>University of Amsterdam and Euvision Technologies</td><td  >Task 1 Detection
+<br>================
+<br>Our first run is based on deep learning in combination with selective search. It is trained using some additional data from ImageNet.
+<br>Our second run is based on deep learning in combination with selective search. It is trained on just the provided data.
+<br>Our third run is Fisher with FLAIR. It is the equivalent of our top entry in 2013 with improved training procedure. See Van de Sande et al., "Fisher and VLAD with FLAIR", CVPR 2014 for algorithm details. It is trained on just the provided data. This run has a speed advantage over the previous two runs.
+<br>
+<br>Task 2 CLS+LOC
+<br>==============
+<br>We participate in just the classification task using deep learning. No outside data is used. </td></tr>
+<tr><td  ><a href="http://arxiv.org/pdf/1409.1556">VGG</a></td><td  >Karen Simonyan, University of Oxford
+<br>Andrew Zisserman, University of Oxford</td><td  >In this submission we explore the effect of the convolutional network (ConvNet) depth on its accuracy. We have used three ConvNet architectures with the following weight layer configurations:
+<br>1) ten 3x3 convolutional layers, three 1x1 convolutional layers, and three fully-connected layers - 16 weight layers in total;
+<br>2) thirteen 3x3 convolutional layers and three fully-connected layers - 16 weight layers in total;
+<br>3) sixteen 3x3 convolutional layers and three fully-connected layers - 19 weight layers in total.
+<br>All convolutional layers have stride 1 and are followed by ReLU non-linearity. The fully-connected layers are regularised with dropout. The networks were trained on fixed-size image crops, but at test time they were applied densely over the whole uncropped images.
+<br>
+<br>For localisation, we used per-class bounding box regression similar to OverFeat, but over a smaller number of scales and without multiple max-pooling offsets.
+<br>
+<br>Our implementation is derived from the Caffe toolbox, but contains a number of significant modifications, including parallel training on multiple GPUs installed in a single system. Training a single ConvNet on 4 NVIDIA Titan GPUs took from 2 to 3 weeks (depending on the ConvNet configuration).</td></tr>
+<tr><td  >Virginia Tech</td><td  >Akrit Mohapatra, Neelima Chavali
+<br>
+<br>Virginia Tech</td><td  >An undergraduate summer research project by Akrit Mohapatra in collaboration with Neelima Chavali based on the RCNN paper (arXiv:1311.2524v4) (Ross B. Girshick, Jeff Donahue, Trevor Darrell, Jitendra Malik: Rich feature hierarchies for accurate object detection and semantic segmentation.) The algorithm and code from the paper were used and models were created by changing various hyper-parameters.</td></tr>
+<tr><td  >XYZ</td><td  >Zhongwen Xu and Yi Yang, The University of Queensland</td><td  >These submissions are trained by modified version of cuda-convnet[1] and caffe[2]. The basic structures follow ZFnet[3][6] with smaller size of kernels in the first convolutional layer. One exception is the Network in Network[4] net proposed by Min Lin from National University of Singapore. The network only takes 50 Megabytes, and can achieve good performance. Results from multiple models are fused in simple way. And for enriching the transformation, we apply multiple scales, multiple views and multiple transformations used by Andrew Howard last year[5].
+<br>
+<br>[1] https://code.google.com/p/cuda-convnet
+<br>[2] Yangqing Jia, http://caffe.berkeleyvision.org/
+<br>[3] Matthew D Zeiler, Rob Fergus, Visualizing and Understanding Convolutional Networks
+<br>[4] Min Lin, Qiang Chen, Shuicheng Yan, Network In Network
+<br>[5] Andrew G. Howard, Some Improvements on Deep Convolutional Neural Network Based Image Classification
+<br>[6] K. Chatfield, K. Simonyan, A. Vedaldi, A. Zisserman, Return of the Devil in the Details: Delving Deep into Convolutional Nets  
+<br></td></tr>
+</tbody></table><? include('footer.php'); ?>

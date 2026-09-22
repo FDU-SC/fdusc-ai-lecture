@@ -1,0 +1,223 @@
+Unconstrained Face Recognition:
+Establishing Baseline Human
+Performance via Crowdsourcing
+Lacey Best-Rowden1, Shiwani Bisht2,
+Joshua Klontz3, and Anil K. Jain1
+1Michigan State University, 2Cornell University, 3Noblis, Inc.
+
+2nd International Joint Conference on Biometrics
+September 18, 2014 – Clearwater, Florida
+                         Unconstrained Face Recognition
+    • Identifying a person of
+      interest based on
+      unconstrained face
+      imagery
+    • Challenges                                                       2011 London riots
+                                                                                                 2013 Boston bombings
+
+
+            – Low-quality CCTV
+            – Non-frontal faces                                                                                            2014 Chicago
+                                                                                                                           robbery
+            – Illumination
+            – Occlusion
+
+
+
+http://www.fbi.gov/news/updates-on-investigation-into-multiple-explosions-in-boston/photos
+http://usnews.nbcnews.com/_news/2013/05/06/18086503-funeral-director-in-boston-bombing-case-used-to-serving-the-unwanted
+http://www.suntimes.com/news/27895985-761/armed-robber-identified-by-facial-recognition-technology-gets-22-years.html
+http://www.bbc.co.uk/news/uk-england-london-14462271
+         “Human-in-the-Loop”
+
+                            Automatic             Database
+                           Face Matcher        (IDs are known)
+
+
+
+
+Important to analyze the
+ accuracies achieved by               Top K
+   both face matching                Matches
+algorithms and humans.
+          Unconstrained Face Databases
+• Labeled Faces in the Wild (LFW)
+   – 13,233 images of 5,749 people
+• YouTube Faces (YTF)
+   – 3,425 videos of 1,595 people
+   – All subjects are also in LFW database
+• Experimental Protocols
+   – Face verification protocols
+   – Work on LFW is extensive
+       • Current performance: TAR > 99% at
+         FAR = 1.0% (DeepFace)
+   – Work on YTF is less extensive but
+     gaining popularity
+          Prior Work on Human Performance
+    • Recent summary paper1
+          – FRVT 2006                                                                           99.2%
+          – FRGC
+          – GBU
+          – FOCS Video Challenge
+                                                                                                97.5%
+
+    • Kumar et al. on LFW2
+
+                                                                                                94.3%
+
+
+
+
+1 P. J. Phillips and A. J. O’Toole. “Comparison of human and computer performance across face
+
+  recognition experiments.” Image and Vision Computing, 32(1):74-85, Jan. 2014.
+2 N. Kumar, A. C. Berg, P. N. Belhumeur, and S. K. Nayar. “Attribute and Simile Classifiers for Face
+
+  Verification.” ICCV, 2009.
+Crowdsourcing on Amazon Mechanical Turk (MTurk)
+• A large number of workers (a crowd) complete Human
+  Intelligence Tasks (HITs) for requesters
+
+
+
+
+http://www.mturk.com
+           Experimental Details
+• Verification protocols
+  – LFW: 6,000 face pairs of same vs. not-same
+  – YTF: 5,000 face pairs of same vs. not-same
+• Human responses are mapped to confidence
+  scores 1 to 5 (similarity)
+  – Human responses are averaged to obtain a
+    smoothed score for each face image/video pair
+     • 10 responses per pair for LFW
+     • 20 responses per pair for YTF
+  – Performance reported as ROC and accuracy of the
+    binary decision (same vs. not same)
+       LFW Protocol Results
+
+                         TAR @ TAR @
+                                        Accuracy
+                         1% FAR 10% FAR
+Humans: Our Study          97.9    99.9     99.2
+Humans: Kumar et al.       99.4   100.0     98.3
+DeepFace: Taigman et al.   93.3    99.4     97.4
+DeepID: Sun et al.         94.7    99.3     97.5
+COTS                       77.1    90.3      n/a
+Data Collection Details
+
+             169 India
+              84 USA
+              20 other
+              34 blank
+Data Collection Details
+
+             169 India
+              84 USA
+              20 other
+              34 blank
+              Crowdsourcing on YTF Database
+Compare each pair of videos. Please follow the directions below for each pair.
+• First: View each video.
+      • You can press the middle play button for each pair to start both videos simultaneously, or press each
+         video to play them separately.
+      • Is the same individual in both videos? Pick the answer that best describes your decision.
+• Second: Is the face in either video familiar to you? If this statement is true, click the checkbox labeled
+  “Familiar.” If you know the individual’s name, enter the name in the corresponding textbox. Can’t remember
+   the name? Enter any identifying information about the individual depicted, or leave the textbox blank.
+• There are five pairs below.
+• IMPORTANT: if any videos do not load correctly, please return this HIT. Thank you.
+
+
+
+                                                                         Looking at the pair of videos, is the same
+                                                                         person in both videos?
+                                   Play
+                                                                         o I am sure they are the same.
+                                                                         o I think they are the same.
+                                                                         o I cannot tell whether they are the same.
+                                                                         o I do not think they are the same.
+            Familiar? ☐                            Familiar? ☐           o I am sure they are not the same.
+    Name:                                  Name:
+         YTF Protocol Results
+           (Cropped Face Videos)
+
+                         TAR @ TAR @
+                                        Accuracy
+                         1% FAR 10% FAR
+Humans (USA)               80.6    96.7     89.7
+Humans (India)             63.7    92.4     88.6
+DeepFace: Taigman et al.   54.8    92.0     91.4
+COTS                       54.4    81.4      n/a
+          YTF Database Labeling Errors
+
+
+
+
+               111 of 2,500 genuine face pairs in the
+                YTF protocol are actually impostors.
+*** YTF database errors are publicly available: http://www.cs.tau.ac.il/~wolf/ytfaces/
+          YTF Results
+(Original vs. Cropped Face Videos)
+Context Assists with Recognition
+                                  @ FAR = 1%
+
+
+
+
+                            Athletic uniform
+                            helps in original
+                                 videos
+
+
+
+
+                            Hair vs. no hair
+                            helps in original
+                                videos
+              Other-Race Effect?
+
+
+
+      62% of all subjects in the LFW database are White males.
+4,350 White-to-White pairs, 168 Asian-to-Asian pairs in YTF protocol.
+  Average accuracies (%) of individual MTurk worker responses for
+   unfamiliar YTF face videos with respect to race demographics
+                       Familiarity
+
+
+
+
+ Frequencies (%) of     Average accuracies (%) of individual MTurk worker
+responses that were               responses for YTF face videos
+reported as familiar
+         USA Indi
+               a
+Original 16.4    8.8
+Croppe   11.1    1.2
+d
+Crowd Performance > COTS
+                       Scores and Decisions
+                           @ FAR = 1%
+    Single Human vs. Crowd Performance
+• Randomly select a single response per face pair (100 times)
+
+
+
+
+• Accuracies of the 20 humans who completed the most HITs
+  for each YTF study
+                    Conclusions
+• Human performance on face recognition can
+  depend on country of origin of workers
+  – Familiarity and/or other-race effect
+• Machines are reaching “human” performance
+  but…
+  – Crowd response appears better than single human
+  – The performance of trained face examiners is likely
+    much higher than that measured via crowdsourcing
+     • Examiners typically review the top K highest matches
+• Crowdsourcing can be used to help verify the
+  ground truth labels of a large database
+Thank you!
+

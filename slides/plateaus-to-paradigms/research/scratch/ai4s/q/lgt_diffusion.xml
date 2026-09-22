@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fE2DT4mZB8Ogjj4+PqJSqQ1K30Q</id>
+  <title>arXiv Query: search_query=abs:"diffusion" AND abs:"lattice field theory"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T15:03:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22diffusion%22+AND+abs:%22lattice+field+theory%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2512.19877v1</id>
+    <title>Spectral Diffusion for Sampling on ${\rm SU}(N)$</title>
+    <updated>2025-12-22T21:03:47Z</updated>
+    <link href="https://arxiv.org/abs/2512.19877v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.19877v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although ensemble generation remains a central challenge in lattice field theory simulations, recent advances in generative modeling may offer a path to accelerated sampling in these contexts. In this work, we implement a framework for efficiently training diffusion models acting on ${\rm SU}(N)$ degrees of freedom, adapting the traditional score matching technique to the group manifold. We demonstrate that our models can effectively reproduce several target densities, resulting in precise unbiased expectation values. These results mark a step for diffusion models towards modeling full ${\rm SU}(N)$ lattice field theories, including lattice Quantum Chromodynamics.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-22T21:03:47Z</published>
+    <arxiv:comment>10 pages, 4 figures; Proceedings of the 42nd International Symposium on Lattice Field Theory (LATTICE2025), 2-8 November 2025, Mumbai, India. Code available at https://github.com/ovega14/sun_diffusion/</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Octavio Vega</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26081v2</id>
+    <title>Group-Equivariant Diffusion Models for Lattice Field Theory</title>
+    <updated>2026-08-05T06:23:42Z</updated>
+    <link href="https://arxiv.org/abs/2510.26081v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.26081v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Near the critical point, Markov Chain Monte Carlo (MCMC) simulations of lattice quantum field theories (LQFT) become increasingly inefficient due to critical slowing down. In this work, we investigate score-based symmetry-preserving diffusion models as an alternative strategy to sample two-dimensional $φ^4$ and ${\rm U}(1)$ lattice field theories. We develop score networks that are equivariant to a range of group transformations, including global $\mathbb{Z}_2$ reflections, local ${\rm U}(1)$ rotations, and periodic translations $\mathbb{T}$. The score networks are trained using an augmented training scheme, which significantly improves sample quality in the simulated field theories. We also demonstrate empirically that our symmetry-aware models outperform generic score networks in sample quality, expressivity, and effective sample size.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-30T02:34:01Z</published>
+    <arxiv:comment>Updated to match published version in JHEP. 45 pages, 12 figures. Code available at https://gitlab.com/ovega141/diffusion_for_lqft</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 07 (2026) 213</arxiv:journal_ref>
+    <author>
+      <name>Octavio Vega</name>
+    </author>
+    <author>
+      <name>Javad Komijani</name>
+    </author>
+    <author>
+      <name>Aida El-Khadra</name>
+    </author>
+    <author>
+      <name>Marina Marinkovic</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP07(2026)213</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP07(2026)213" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.21212v2</id>
+    <title>On learning higher-order cumulants in diffusion models</title>
+    <updated>2025-03-27T09:59:55Z</updated>
+    <link href="https://arxiv.org/abs/2410.21212v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.21212v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To analyse how diffusion models learn correlations beyond Gaussian ones, we study the behaviour of higher-order cumulants, or connected n-point functions, under both the forward and backward process. We derive explicit expressions for the moment- and cumulant-generating functionals, in terms of the distribution of the initial data and properties of forward process. It is shown analytically that during the forward process higher-order cumulants are conserved in models without a drift, such as the variance-expanding scheme, and that therefore the endpoint of the forward process maintains nontrivial correlations. We demonstrate that since these correlations are encoded in the score function, higher-order cumulants are learnt in the backward process, also when starting from a normal prior. We confirm our analytical results in an exactly solvable toy model with nonzero cumulants and in scalar lattice field theory.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-28T16:57:02Z</published>
+    <arxiv:comment>21 pages, many figures. Extended version of contribution awarded "best 'physics for AI' paper award" in the NeurIPS 2024 workshop "Machine Learning and the Physical Sciences"; v2: references and minor clarifications added, version to appear in Machine Learning: Science and Technology</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Mach.Learn.Sci.Tech. 6 (2025) 025004</arxiv:journal_ref>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Diaa E. Habibi</name>
+    </author>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+    <arxiv:doi>10.1088/2632-2153/adc53a</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2632-2153/adc53a" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.02711v3</id>
+    <title>NETS: A Non-Equilibrium Transport Sampler</title>
+    <updated>2025-01-12T17:05:16Z</updated>
+    <link href="https://arxiv.org/abs/2410.02711v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.02711v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose an algorithm, termed the Non-Equilibrium Transport Sampler (NETS), to sample from unnormalized probability distributions. NETS can be viewed as a variant of annealed importance sampling (AIS) based on Jarzynski's equality, in which the stochastic differential equation used to perform the non-equilibrium sampling is augmented with an additional learned drift term that lowers the impact of the unbiasing weights used in AIS. We show that this drift is the minimizer of a variety of objective functions, which can all be estimated in an unbiased fashion without backpropagating through solutions of the stochastic differential equations governing the sampling. We also prove that some these objectives control the Kullback-Leibler divergence of the estimated distribution from its target. NETS is shown to be unbiased and, in addition, has a tunable diffusion coefficient which can be adjusted post-training to maximize the effective sample size. We demonstrate the efficacy of the method on standard benchmarks, high-dimensional Gaussian mixture distributions, and a model from statistical lattice field theory, for which it surpasses the performances of related work and existing baselines.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-03T17:35:38Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Eric Vanden-Eijnden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.03578v1</id>
+    <title>Generative Diffusion Models for Lattice Field Theory</title>
+    <updated>2023-11-06T22:24:28Z</updated>
+    <link href="https://arxiv.org/abs/2311.03578v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.03578v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This study delves into the connection between machine learning and lattice field theory by linking generative diffusion models (DMs) with stochastic quantization, from a stochastic differential equation perspective. We show that DMs can be conceptualized by reversing a stochastic process driven by the Langevin equation, which then produces samples from an initial distribution to approximate the target distribution. In a toy model, we highlight the capability of DMs to learn effective actions. Furthermore, we demonstrate its feasibility to act as a global sampler for generating configurations in the two-dimensional $φ^4$ quantum lattice field theory.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-06T22:24:28Z</published>
+    <arxiv:comment>6 pages, 3 figures, accepted at the NeurIPS 2023 workshop "Machine Learning and the Physical Sciences". Some contents overlap with arXiv:2309.17082</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.17082v2</id>
+    <title>Diffusion Models as Stochastic Quantization in Lattice Field Theory</title>
+    <updated>2024-05-09T00:56:24Z</updated>
+    <link href="https://arxiv.org/abs/2309.17082v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.17082v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we establish a direct connection between generative diffusion models (DMs) and stochastic quantization (SQ). The DM is realized by approximating the reversal of a stochastic process dictated by the Langevin equation, generating samples from a prior distribution to effectively mimic the target distribution. Using numerical simulations, we demonstrate that the DM can serve as a global sampler for generating quantum lattice field configurations in two-dimensional $φ^4$ theory. We demonstrate that DMs can notably reduce autocorrelation times in the Markov chain, especially in the critical region where standard Markov Chain Monte-Carlo (MCMC) algorithms experience critical slowing down. The findings can potentially inspire further advancements in lattice field theory simulations, in particular in cases where it is expensive to generate large ensembles.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-29T09:26:59Z</published>
+    <arxiv:comment>30 pages, 15 figures. The open code can be found at https://github.com/Anguswlx/DMasSQ</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Lingxiao Wang</name>
+    </author>
+    <author>
+      <name>Gert Aarts</name>
+    </author>
+    <author>
+      <name>Kai Zhou</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP05(2024)060</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP05(2024)060" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.12355v2</id>
+    <title>Renormalizing Diffusion Models</title>
+    <updated>2023-09-05T20:50:26Z</updated>
+    <link href="https://arxiv.org/abs/2308.12355v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.12355v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We explain how to use diffusion models to learn inverse renormalization group flows of statistical and quantum field theories. Diffusion models are a class of machine learning models which have been used to generate samples from complex distributions, such as the distribution of natural images. These models achieve sample generation by learning the inverse process to a diffusion process which adds noise to the data until the distribution of the data is pure noise. Nonperturbative renormalization group schemes in physics can naturally be written as diffusion processes in the space of fields. We combine these observations in a concrete framework for building ML-based models for studying field theories, in which the models learn the inverse process to an explicitly-specified renormalization group scheme. We detail how these models define a class of adaptive bridge (or parallel tempering) samplers for lattice field theory. Because renormalization group schemes have a physical meaning, we provide explicit prescriptions for how to compare results derived from models associated to several different renormalization group schemes of interest. We also explain how to use diffusion models in a variational method to find ground states of quantum systems. We apply some of our methods to numerically find RG flows of interacting statistical field theories. From the perspective of machine learning, our work provides an interpretation of multiscale diffusion models, and gives physically-inspired suggestions for diffusion models which should have novel properties.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-23T18:02:31Z</published>
+    <arxiv:comment>69+15 pages, 8 figures; v2: figure and references added, typos corrected</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Jordan Cotler</name>
+    </author>
+    <author>
+      <name>Semon Rezchikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.14676v1</id>
+    <title>Spectral and transport properties from lattice QCD</title>
+    <updated>2022-06-29T14:29:15Z</updated>
+    <link href="https://arxiv.org/abs/2206.14676v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.14676v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In these lecture notes we will discuss recent progress in extracting spectral and transport properties from lattice QCD. We will focus on results of probes of the thermal QCD medium as well as transport coefficients which are important ingredients for hydrodynamic and transport models that describe the evolution of the produced medium. These include electromagnetic probes, like the rates of emitted photons and dileptons, quarkonium spectral functions as well as transport coefficients like the electrical conductivity or heavy flavor diffusion coefficients of the quark gluon plasma (QGP). All these real time quantities are encoded in the vector meson spectral function. A direct determination of the spectral functions is not possible in Euclidean lattice QCD calculations but they can be analytically continued from imaginary to real time. Therefore it is possible to relate the spectral function to the corresponding Euclidean correlation functions. In the following sections we will discuss the procedure to determine the required correlation functions and the extraction of the spectral functions from lattice QCD correlators. We will illustrate the concepts and methods to obtain spectral functions and related physical observables from continuum extrapolated correlation functions. We will focus here on results obtained from continuum extrapolated lattice correlation functions, which requires large and fine lattices, which so far was only possible in quenched approximation. We will only give a brief introduction to lattice QCD and refer to the textbooks [1,2,3,4] and lecture notes [5] for more detailed introductions to lattice field theory. For the topics addressed in this lecture note we also like to refer to the overview articles on QCD thermodynamics and the QCD phase transition [5,6,7] and quarkonium in extreme conditions [8].</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-29T14:29:15Z</published>
+    <arxiv:comment>Lectures delivered at the 53rd Karpacz Winter School of Theoretical Physics, February 26th - March 4th, 2017, Karpacz, Poland; submitted to Lecture Notes in Physics (LNP, volume 999), ISBN: 978-3-030-95490-1</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Lect.Notes Phys. 999 (2022) 307</arxiv:journal_ref>
+    <author>
+      <name>Olaf Kaczmarek</name>
+    </author>
+    <author>
+      <name>Hai-Tao Shu</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-030-95491-8_8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-030-95491-8_8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0706.1261v1</id>
+    <title>Partitioning of a polymer chain between a confining cavity and a gel</title>
+    <updated>2007-06-08T21:34:20Z</updated>
+    <link href="https://arxiv.org/abs/0706.1261v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0706.1261v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A lattice field theory approach to the statistical mechanics of charged polymers in electrolyte solutions [S. Tsonchev, R. D. Coalson, and A. Duncan, Phys. Rev. E 60, 4257, (1999)] is applied to the study of a polymer chain contained in a spherical cavity but able to diffuse into a surrounding gel. The distribution of the polymer chain between the cavity and the gel is described by its partition coefficient, which is computed as a function of the number of monomers in the chain, the monomer charge, and the ion concentrations in the solution.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-06-08T21:34:20Z</published>
+    <arxiv:comment>17 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Stefan Tsonchev</name>
+    </author>
+    <author>
+      <name>Rob D. Coalson</name>
+    </author>
+    <author>
+      <name>Anthony Duncan</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.76.041804</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.76.041804" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/9604133v2</id>
+    <title>Coherent State path-integral simulation of many particle systems</title>
+    <updated>1996-05-03T06:52:25Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/9604133v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/9604133v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The coherent state path integral formulation of certain many particle systems allows for their non perturbative study by the techniques of lattice field theory. In this paper we exploit this strategy by simulating the explicit example of the diffusion controlled reaction $A+A\to 0$. Our results are consistent with some renormalization group-based predictions thus clarifying the continuum limit of the action of the problem.</summary>
+    <category term="cond-mat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1996-04-22T07:22:53Z</published>
+    <arxiv:comment>20 pages, 4 figures. Minor corrections. Acknowledgement and reference corrected</arxiv:comment>
+    <arxiv:primary_category term="cond-mat"/>
+    <arxiv:journal_ref>Phys.Rev. E55 (1997) 3870-3877</arxiv:journal_ref>
+    <author>
+      <name>M. Beccaria</name>
+    </author>
+    <author>
+      <name>B. Alles</name>
+    </author>
+    <author>
+      <name>F. Farchioni</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.55.3870</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.55.3870" title="doi"/>
+  </entry>
+</feed>

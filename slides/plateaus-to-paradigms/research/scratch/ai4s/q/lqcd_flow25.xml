@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/NjIo+uFj4+YGp4cWtKZpQy2WTDk</id>
+  <title>arXiv Query: search_query=abs:"flow" AND abs:"lattice QCD" AND abs:"sampling"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T15:00:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22flow%22+AND+(abs:%22lattice+QCD%22+AND+abs:%22sampling%22)&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.27064v1</id>
+    <title>Flow-Based Global Proposals for Monte Carlo Sampling in SU(2) Lattice Gauge Theory</title>
+    <updated>2026-05-26T14:15:26Z</updated>
+    <link href="https://arxiv.org/abs/2605.27064v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.27064v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a formally valid machine-learning-assisted global proposal mechanism for Monte Carlo sampling in lattice gauge theory. The construction is based on a coupling-flow update on the SU(2) lattice-link manifold, in which active links are transformed conditionally on a frozen-link background. For fixed frozen links, the proposal is explicitly invertible and preserves the product Haar measure, so it can be embedded into a Metropolis-Hastings correction without requiring an explicit model of the full proposal density. We implement the method in two-dimensional pure SU(2) lattice gauge theory and benchmark it against a baseline local Metropolis algorithm used as a controlled reference kernel. In the present testbed, the learned proposal reproduces the target ensemble within statistical resolution across the tested configurations. In matched local-step comparisons, the learned proposal reproduces the target ensemble at a quality comparable to the baseline, but does not outperform the pure local baseline in the conservative matched-step case examined with seed-level statistics within this proof-of-principle setup. At the same time, a favorable mixed-step hybrid configuration yields a modest improvement in effective sample size per unit runtime. Because the learned transformation remains in a near-identity regime, the present results should be interpreted as a proof-of-principle demonstration of formal correctness and limited, configuration-dependent efficiency gain within a controlled comparison, rather than as evidence of superiority over optimized conventional update schemes. This work provides a concrete foundation for extending machine-learned nonlocal updates to larger lattices and non-Abelian gauge theories relevant to lattice QCD.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T14:15:26Z</published>
+    <arxiv:comment>13 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Seung-il Nam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.07262v1</id>
+    <title>Testing machine-learned distributions against Monte Carlo data for the QCD chiral phase transition</title>
+    <updated>2026-05-08T05:27:26Z</updated>
+    <link href="https://arxiv.org/abs/2605.07262v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.07262v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We demonstrate that conditional Masked Autoregressive Flows constitute a flexible interpolation tool for lattice QCD observables, conditioned on bare lattice parameters. As a benchmark, we use the chiral phase structure of QCD with five degenerate light quark flavours, which on coarse lattices exhibits a region of first-order chiral transitions terminating in a critical quark mass. The method successfully reproduces standard reweighting in the gauge coupling, and naturally extends to interpolation in quark mass and spatial volume, for which reweighting is computationally prohibitive or inapplicable, respectively. Once trained, the model generates samples across the full parameter space in minutes, which can be used to obtain consistent first estimates of the critical quark mass without simulating all intermediate parameter values. This offers a concrete reduction in the number of lattice ensembles required. Precision on the critical mass from learned distributions is so far prohibited by the mode-covering effect inherent to maximum-likelihood-based training, which introduces a systematic bias near first-order transitions. At the current stage, the method is well-suited for a range of practical applications: localising phase boundaries, identifying the universal scaling axes at a critical point, and accelerating informed determinations of parameter values ahead of high-precision Monte Carlo campaigns.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T05:27:26Z</published>
+    <arxiv:comment>35 pages, 17 figures and 4 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Reinhold Kaiser</name>
+    </author>
+    <author>
+      <name>Frithjof Karsch</name>
+    </author>
+    <author>
+      <name>Jan Philipp Klinger</name>
+    </author>
+    <author>
+      <name>Owe Philipsen</name>
+    </author>
+    <author>
+      <name>Christian Schmidt</name>
+    </author>
+    <author>
+      <name>Simran Singh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.11674v1</id>
+    <title>Practical applications of machine-learned flows on gauge fields</title>
+    <updated>2024-04-17T18:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2404.11674v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.11674v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows are machine-learned maps between different lattice theories which can be used as components in exact sampling and inference schemes. Ongoing work yields increasingly expressive flows on gauge fields, but it remains an open question how flows can improve lattice QCD at state-of-the-art scales. We discuss and demonstrate two applications of flows in replica exchange (parallel tempering) sampling, aimed at improving topological mixing, which are viable with iterative improvements upon presently available flows.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-17T18:17:14Z</published>
+    <arxiv:comment>9 pages, 5 figures, proceedings of the 40th International Symposium on Lattice Field Theory (Lattice 2023)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.03381v1</id>
+    <title>Learning Trivializing Flows in a $φ^4$ theory from coarser lattices</title>
+    <updated>2023-10-05T08:32:16Z</updated>
+    <link href="https://arxiv.org/abs/2310.03381v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.03381v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The so-called trivializing flows were proposed to speed up Hybrid Monte Carlo simulations, where the Wilson flow was used as an approximation of a trivializing map, a transformation of the gauge fields which trivializes the theory. It was shown that the scaling of the computational costs towards the continuum did not change with respect to HMC. The introduction of machine learning tecniques, especially normalizing flows, for the sampling of lattice gauge theories has shed some hope on solving topology freezing in lattice QCD simulations. In this talk I will present our work in a $φ^{4}$ theory using normalizing flows as trivializing flows (given its similarity with the idea of a trivializing map), training from a trivial distribution as well as from coarser lattices, and study its scaling towards the continuum, comparing it with standard HMC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-05T08:32:16Z</published>
+    <arxiv:comment>7 pages of main content, 5 figures, 1 table. Talk presented at the 40th International Symposium on Lattice Field Theory (Lattice2023), July 31st - August 4th, 2023, Fermi National Accelerator Laboratory</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>David Albandea</name>
+    </author>
+    <author>
+      <name>Luigi Del Debbio</name>
+    </author>
+    <author>
+      <name>Pilar Hernández</name>
+    </author>
+    <author>
+      <name>Richard Kenway</name>
+    </author>
+    <author>
+      <name>Joe Marsh Rossney</name>
+    </author>
+    <author>
+      <name>Alberto Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08903v2</id>
+    <title>GomalizingFlow.jl: A Julia package for Flow-based sampling algorithm for lattice field theory</title>
+    <updated>2023-10-04T09:53:56Z</updated>
+    <link href="https://arxiv.org/abs/2208.08903v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08903v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>GomalizingFlow.jl: is a package to generate configurations for quantum field theory on the lattice using the flow based sampling algorithm in Julia programming language. This software serves two main purposes: to accelerate research of lattice QCD with machine learning with easy prototyping, and to provide an independent implementation to an existing public Jupyter notebook in Python/PyTorch. GomalizingFlow.jl implements, the flow based sampling algorithm, namely, RealNVP and Metropolis-Hastings test for two dimension and three dimensional scalar field, which can be switched by a parameter file. HMC for that theory also implemented for comparison. This package has Docker image, which reduces effort for environment construction. This code works both on CPU and NVIDIA GPU.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-18T15:19:36Z</published>
+    <arxiv:comment>15 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Akio Tomiya</name>
+    </author>
+    <author>
+      <name>Satoshi Terasaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.06523v1</id>
+    <title>Nucleon axial coupling from Lattice QCD</title>
+    <updated>2017-10-17T23:10:26Z</updated>
+    <link href="https://arxiv.org/abs/1710.06523v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.06523v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present state-of-the-art results from a lattice QCD calculation of the nucleon axial coupling, $g_A$, using Möbius Domain-Wall fermions solved on the dynamical $N_f = 2 + 1 + 1$ HISQ ensembles after they are smeared using the gradient-flow algorithm. Relevant three-point correlation functions are calculated using a method inspired by the Feynman-Hellmann theorem, and demonstrate significant improvement in signal for fixed stochastic samples. The calculation is performed at five pion masses of $m_π\sim \{400, 350, 310, 220, 130\}$~MeV, three lattice spacings of $a\sim\{0.15, 0.12, 0.09\}$~fm, and we do a dedicated volume study with $m_πL\sim\{3.22, 4.29, 5.36\}$. Control over all relevant sources of systematic uncertainty are demonstrated and quantified. We achieve a preliminary value of $g_A = 1.285(17)$, with a relative uncertainty of 1.33\%.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-17T23:10:26Z</published>
+    <arxiv:comment>18 pages, 8 figures, Lattice 2017 Proceedings</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Chia Cheng Chang</name>
+    </author>
+    <author>
+      <name>Amy Nicholson</name>
+    </author>
+    <author>
+      <name>Enrico Rinaldi</name>
+    </author>
+    <author>
+      <name>Evan Berkowitz</name>
+    </author>
+    <author>
+      <name>Nicolas Garron</name>
+    </author>
+    <author>
+      <name>David Brantley</name>
+    </author>
+    <author>
+      <name>Henry Monge-Camacho</name>
+    </author>
+    <author>
+      <name>Chris Monahan</name>
+    </author>
+    <author>
+      <name>Chris Bouchard</name>
+    </author>
+    <author>
+      <name>M. A. Clark</name>
+    </author>
+    <author>
+      <name>Balint Joo</name>
+    </author>
+    <author>
+      <name>Thorsten Kurth</name>
+    </author>
+    <author>
+      <name>Kostas Orginos</name>
+    </author>
+    <author>
+      <name>Pavlos Vranas</name>
+    </author>
+    <author>
+      <name>Andre Walker-Loud</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.10191v2</id>
+    <title>Anisotropic hydrodynamic modeling of 2.76 TeV Pb-Pb collisions</title>
+    <updated>2017-10-23T20:18:19Z</updated>
+    <link href="https://arxiv.org/abs/1705.10191v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.10191v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We compare phenomenological results from 3+1d quasiparticle anisotropic hydrodynamics (aHydroQP) with experimental data collected in LHC 2.76 TeV Pb-Pb collisions. In particular, we present comparisons of particle spectra, average transverse momentum, elliptic flow, and HBT radii. The aHydroQP model relies on the introduction of a single temperature-dependent quasiparticle mass which is fit to lattice QCD data. By taking moments of the resulting Boltzmann equation, we obtain the dynamical equations used in the hydrodynamic stage which include the effects of both shear and bulk viscosities. At freeze-out, we use anisotropic Cooper-Frye freeze-out performed on a fixed-energy-density hypersurface to convert to hadrons. To model the production and decays of the hadrons we use THERMINATOR 2 which is customized to sample from ellipsoidal momentum-space distribution functions. Using smooth Glauber initial conditions, we find very good agreement with many heavy-ion collision observables.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-25T23:27:46Z</published>
+    <arxiv:comment>31 pages, 9 figures. v2 - improvements to HBT calculation + typos fixed; PRC version. arXiv admin note: text overlap with arXiv:1703.05808</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <arxiv:journal_ref>Phys. Rev. C 96, 044910 (2017)</arxiv:journal_ref>
+    <author>
+      <name>Mubarak Alqahtani</name>
+    </author>
+    <author>
+      <name>Mohammad Nopoush</name>
+    </author>
+    <author>
+      <name>Radoslaw Ryblewski</name>
+    </author>
+    <author>
+      <name>Michael Strickland</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevC.96.044910</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevC.96.044910" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1512.02189v2</id>
+    <title>Hydrodynamic simulations of relativistic heavy-ion collisions with different lattice QCD calculations of the equation of state</title>
+    <updated>2016-01-22T18:26:15Z</updated>
+    <link href="https://arxiv.org/abs/1512.02189v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1512.02189v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hydrodynamic calculations of ultra-relativistic heavy ion collisions are performed using the iEBE-VISHNU 2+1D code with fluctuating initial conditions and three different parameterizations of the Lattice QCD equations of state: continuum extrapolations for stout and HISQ/tree actions, as well as the s95p-v1 parameterization based upon calculations using the p4 action. All parameterizations are matched to a hadron resonance gas equation of state at T = 155 MeV, at which point the calculations are continued using the UrQMD hadronic cascade. Calculations for $\sqrt{s_{NN}}=200$ GeV Au+Au collisions in three centrality classes are compared to experimental data for final state particle spectra and anisotropic flow coefficients $v_2$ and $v_3$ as well as for pion HBT radii. Experimental observables for the stout and HISQ/tree equations of state are observed to differ by less than a few percent for all observables, while the s95p-v1 equation of state generates spectra and flow coefficients which differ by ~10-20%. Calculations in which the HISQ/tree equation of state is sampled from the published error distribution are also observed to differ by less than a few percent.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-12-07T19:49:33Z</published>
+    <arxiv:comment>11 pages, 9 figures. Calculations of the HBT radii have been updated to include increased statistics and correct an inconsistency in the UrQMD particle output</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <arxiv:journal_ref>Phys. Rev. C 93, 044913 (2016)</arxiv:journal_ref>
+    <author>
+      <name>J. Scott Moreland</name>
+    </author>
+    <author>
+      <name>Ron A. Soltz</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevC.93.044913</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevC.93.044913" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1204.5814v2</id>
+    <title>Integrated Dynamical Approach to Relativistic Heavy Ion Collisions</title>
+    <updated>2013-02-12T01:34:20Z</updated>
+    <link href="https://arxiv.org/abs/1204.5814v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1204.5814v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We review integrated dynamical approaches to describe heavy ion reaction as a whole at ultrarelativistic energies. Since final observables result from all the history of the reaction, it is important to describe all the stages of the reaction to obtain the properties of the quark gluon plasma from experimental data. As an example of these approaches, we develop an integrated dynamical model, which is composed of a fully (3+1) dimensional ideal hydrodynamic model with the state-of-the-art equation of state based on lattice QCD, and subsequent hadronic cascade in the late stage. Initial conditions are obtained employing Monte Carlo versions of the Kharzeev-Levin-Nardi model (MC-KLN) or the Glauber model (MC-Glauber). Using this integrated model, we first simulate relativistic heavy ion collisions at the RHIC and LHC energies starting from conventional smooth initial conditions. We next utilise each Monte Carlo samples of initial conditions on an event-by-event basis and perform event-by-event dynamical simulations to accumulate a large number of minimum bias events. A special attention is paid to performing the flow analysis as in experiments toward consistent comparison of theoretical results with experimental data.</summary>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-04-26T02:21:55Z</published>
+    <arxiv:comment>v2: 70 pages, 59 figures, two sections on overviews included, conclusion unchanged, version accepted for publication in Progress in Particle and Nuclear Physics</arxiv:comment>
+    <arxiv:primary_category term="nucl-th"/>
+    <author>
+      <name>Tetsufumi Hirano</name>
+    </author>
+    <author>
+      <name>Pasi Huovinen</name>
+    </author>
+    <author>
+      <name>Koichi Murase</name>
+    </author>
+    <author>
+      <name>Yasushi Nara</name>
+    </author>
+    <arxiv:doi>10.1016/j.ppnp.2013.02.002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.ppnp.2013.02.002" title="doi"/>
+  </entry>
+</feed>

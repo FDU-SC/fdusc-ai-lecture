@@ -1,0 +1,1111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/zWu57mnPowWmQPdNTiMz+YPXj18</id>
+  <title>arXiv Query: search_query=abs:"normalizing flows" AND abs:"lattice"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:44:05Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22normalizing+flows%22+AND+abs:%22lattice%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>65</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28581v1</id>
+    <title>Renormalization-guided cascade upscaling for lattice field generation</title>
+    <updated>2026-08-28T17:55:59Z</updated>
+    <link href="https://arxiv.org/abs/2608.28581v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28581v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a renormalization-group (RG) guided machine-learning algorithm for lattice field generation based on approximate inversion of an RG transformation. A ``perfect blocking'' construction supplies equilibrated long-distance modes, while a conditional normalizing flow reconstructs short-distance details and brief rethermalization removes residual errors. In 2D $φ^4$ theory at criticality, a flow trained at $L\le32$ is reused recursively in cascades reaching $L=2048$ with correct long-distance physics.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T17:55:59Z</published>
+    <arxiv:comment>7 pages, 4 figures. Submitted to Phys. Rev. Lett</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Anna Hasenfratz</name>
+    </author>
+    <author>
+      <name>Ethan T. Neil</name>
+    </author>
+    <author>
+      <name>Letizia Parato</name>
+    </author>
+    <author>
+      <name>Noah Schwartz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28580v1</id>
+    <title>Renormalization-guided inverse blocking for lattice field generation: construction and validation</title>
+    <updated>2026-08-28T17:55:55Z</updated>
+    <link href="https://arxiv.org/abs/2608.28580v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28580v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose an algorithm for generating lattice field configurations based on the approximate inversion of a renormalization-group blocking transformation. We optimize the blocking transformation using a ``perfect blocking'' condition so that the blocked lattice distribution is well approximated by a simple coarse action. The blocking is separated into an invertible smoothing transformation followed by decimation. Machine learning, in the form of a conditional normalizing flow, is used to reconstruct the short-distance degrees of freedom removed by the decimation. A short fine-action rethermalization then removes the residual mismatch. Because the coarse ensemble supplies the long-distance modes, the same blocking transformation and conditional flow can be reused recursively on larger lattices, producing a cascade of configurations from an initial small-volume ensemble. We test the method in two-dimensional $φ^4$ theory with $λ=1$ at criticality and demonstrate stable cascade upscaling from $16^2$ to $2048^2$ lattices on local computational resources. Controlled rethermalization tests show that short-distance mismatches relax rapidly, whereas a deliberately introduced mismatch in the relevant thermal direction relaxes much more slowly. The construction uses ingredients that admit natural extensions to higher-dimensional systems and, ultimately, to gauge and fermionic degrees of freedom.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T17:55:55Z</published>
+    <arxiv:comment>24 pages, 15 figures. Submitted to Phys. Rev. D</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Anna Hasenfratz</name>
+    </author>
+    <author>
+      <name>Ethan T. Neil</name>
+    </author>
+    <author>
+      <name>Letizia Parato</name>
+    </author>
+    <author>
+      <name>Noah Schwartz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07127v1</id>
+    <title>Weight-Space Physics: Interpretable Hypernetworks for Lattice Quantum Field Theories</title>
+    <updated>2026-07-08T08:14:21Z</updated>
+    <link href="https://arxiv.org/abs/2607.07127v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07127v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice field theory is the workhorse of non-perturbative physics, used to simulate phenomena from the strong nuclear force to critical phenomena in materials. Its Boltzmann distributions are parametrized analytically by coupling constants, but these bare parameters are weak predictors of observables -- extracting physics typically requires extensive simulation. While normalizing flows have emerged as effective samplers at fixed couplings, it remains difficult to interpret what these networks have learned. This raises a natural question: can the physics be read off directly from the flow network parameters themselves, and can those parameters be generated for unseen theories? We propose lattice field theory as a testbed for neural network interpretability: because the target physics is qualitatively well-understood and smoothly varying, it provides ideal synthetic data with known ground truth. To this end, we introduce JEPAWG, a Joint-Embedding Predictive Architecture-based Weight Generator that maps couplings directly to flow weights via a learned latent space. On a scalar theory at lattices of size $6^2$ to $11^2$, the JEPAWG latent space recovers the correct intrinsic dimension of the underlying manifold, locates the phase transition, and encodes a finite-size shift aligned with the 2D Ising exponent $ν\approx 1$, allowing us to uncover physical structure by studying the network weights alone. This suggests the fascinating idea of treating the network weights as a new type of physical observable. As a generator, JEPAWG also interpolates and extrapolates to unseen couplings effectively and remains robust to weight-space discontinuities introduced by multi-seed training data, outperforming PCA, AE, and VAE baselines.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T08:14:21Z</published>
+    <arxiv:comment>9 + 13 pages, 4 + 8 figures, 3 + 5 tables</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Tobias Göbel</name>
+    </author>
+    <author>
+      <name>Julian R. Ebelt</name>
+    </author>
+    <author>
+      <name>Zier Mensch</name>
+    </author>
+    <author>
+      <name>Mathis Gerdes</name>
+    </author>
+    <author>
+      <name>Miranda C. N. Cheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.15986v1</id>
+    <title>Learning the generating functional for variance reduction in lattice QCD</title>
+    <updated>2026-06-14T19:24:19Z</updated>
+    <link href="https://arxiv.org/abs/2606.15986v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.15986v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generating functional in quantum field theory provides the natural framework for constructing correlation functions as derivatives with respect to source operators. We present a methodology that leverages machine-learned normalizing flows to reduce the variance of arbitrary $N$-point correlation functions of bosonic operators in lattice gauge field theory calculations by encoding a representation of the generating functional. We show that it is possible to systematically approach noiseless estimators of correlation functions in this framework. We demonstrate this methodology with applications to calculations of glueball correlation functions and Wilson loops in Quantum Chromodynamics and Yang-Mills theory. The results show up to three orders of magnitude variance reduction.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-14T19:24:19Z</published>
+    <arxiv:comment>8 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Yang Fu</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.22444v1</id>
+    <title>Normalizing flows for all-orders QED corrections in lattice field theory</title>
+    <updated>2026-05-21T13:11:58Z</updated>
+    <link href="https://arxiv.org/abs/2605.22444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.22444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work develops a framework to apply normalizing-flow transformations of field configurations for all-orders Quantum Electrodynamics (QED) corrections in lattice field theory. This opens a new possibility to determine all-order corrections without the need for additional Monte Carlo sampling, generally bypassing the complexity in Wick-contraction diagrams needed at fixed order. The new method is applied to lattice scalar QED in two, three, and four spacetime dimensions, using both analytical and machine-learned flows, with both approaches yielding estimates with significantly reduced variance with respect to standard methods. It is further shown that flows can be trained using small lattice geometries and subsequently evaluated on much larger lattice geometries while maintaining good efficiency. A generalization to theories with fermions is envisaged, suggesting a path to applications in challenging field theories including lattice Quantum Chromodynamics.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-21T13:11:58Z</published>
+    <arxiv:comment>16 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Nils Hermansson-Truedsson</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.12416v1</id>
+    <title>Machine learning for four-dimensional SU(3) lattice gauge theories</title>
+    <updated>2026-04-14T08:02:16Z</updated>
+    <link href="https://arxiv.org/abs/2604.12416v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.12416v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this review I summarize how machine learning can be used in lattice gauge theory simulations and what ap\-proaches are currently available to improve the sampling of gauge field configurations, with a focus on applications in four-dimensional SU(3) gauge theories. These include approaches based on generative machine-learning models such as (stochastic) normalizing flows and diffusion processes, and an approach based on renormalization group (RG) transformations, more specifically the machine learning of RG-improved gauge actions using gauge-equivariant convolutional neural networks. In particular, I present scaling results for a machine-learned fixed-point action in four-dimensional SU(3) gauge theory towards the continuum limit. The results include observables based on the classically perfect gradient-flow scales, which are free of tree-level lattice artefacts to all orders, and quantities related to the static potential and the deconfinement transition.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-14T08:02:16Z</published>
+    <arxiv:comment>18 pages, 9 figure; Plenary talk at the 42nd International Symposium on Lattice Field Theory (LATTICE2025), Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Urs Wenger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.10209v1</id>
+    <title>Scalable Generative Sampling and Multilevel Estimation for Lattice Field Theories Near Criticality</title>
+    <updated>2026-04-11T13:35:19Z</updated>
+    <link href="https://arxiv.org/abs/2604.10209v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.10209v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sampling lattice field theories near criticality is severely hindered by critical slowing down, which makes standard Markov chain methods increasingly inefficient at large lattice volumes. We introduce a multiscale generative sampler, inspired by renormalization-group ideas, that models the Boltzmann distribution through a coarse-to-fine hierarchy across length scales. At each level, a conditional Gaussian mixture model captures the main local dependence of newly introduced variables on the already-sampled coarse field, while a masked continuous normalizing flow refines the remaining conditional structure. Coarse levels encode the dominant long-wavelength modes, and finer levels progressively add short-distance fluctuations. In addition, because the architecture preserves coarse fields exactly during refinement, it provides exact restriction maps at no additional computational cost and directly enables unbiased Multilevel Monte Carlo (MLMC) variance reduction. For the two-dimensional scalar $φ^4$ theory at criticality, the method achieves integrated autocorrelation times orders of magnitude smaller than Hybrid Monte Carlo (HMC) on large volumes, maintains high importance-sampling efficiency relative to other generative baselines, and reproduces unbiased physical observables in statistical agreement with long HMC simulations.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-11T13:35:19Z</published>
+    <arxiv:comment>15 pages, 8 figures, 8 tables. Code to be released soon</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>A. Singha</name>
+    </author>
+    <author>
+      <name>J. Kauffmann</name>
+    </author>
+    <author>
+      <name>E. Cellini</name>
+    </author>
+    <author>
+      <name>K. Jansen</name>
+    </author>
+    <author>
+      <name>S. Nakajima</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12501v1</id>
+    <title>Normalizing-flow-based density of states for (1+1)D U(1) lattice gauge theory with a $θ$-term</title>
+    <updated>2026-03-12T22:44:08Z</updated>
+    <link href="https://arxiv.org/abs/2603.12501v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12501v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A normalizing-flow-based implementation of the density-of-states approach has recently been used to successfully reconstruct the partition function of (1+1)D scalar lattice field theory. In this preliminary work, we extend this framework to a lattice gauge theory by employing gauge-equivariant normalizing flows to reconstruct the density of states of pure (1+1)D U(1) lattice gauge theory, both with and without a $θ$-term. In the absence of a $θ$-term, we first demonstrate that the normalizing-flow-based reconstruction of the density of states reproduces the known analytic results for this theory. We further show that, in the presence of a $θ$-term, this formulation enables the generation of gauge-field configurations at fixed values of the topological charge.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T22:44:08Z</published>
+    <arxiv:comment>10 pages, 3 figures, Contribution to the 42nd International Symposium on Lattice Field Theory (LATTICE2025), 2-8 Nov. 2025, Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Simran Singh</name>
+    </author>
+    <author>
+      <name>Lena Funcke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.02984v2</id>
+    <title>Variance reduction in lattice QCD observables via normalizing flows</title>
+    <updated>2026-08-09T20:20:41Z</updated>
+    <link href="https://arxiv.org/abs/2603.02984v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.02984v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows can be used to construct unbiased, reduced-variance estimators for lattice field theory observables that are defined by a derivative with respect to action parameters. This work implements the approach for observables involving gluonic operator insertions in the SU(3) Yang-Mills theory and two-flavor Quantum Chromodynamics (QCD) in four space-time dimensions. Variance reduction by factors of $10$-$60$ is achieved in glueball correlation functions and in gluonic matrix elements related to hadron structure, with demonstrated computational advantages. The observed variance reduction is found to be approximately independent of the lattice volume, so that volume transfer can be utilized to minimize training costs.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-03T13:36:29Z</published>
+    <arxiv:comment>15 pages, 4 figures, 2 tables. v2: update to match published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Yang Fu</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+    <arxiv:doi>10.1103/5xns-7qmj</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/5xns-7qmj" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.20708v1</id>
+    <title>A scalable flow-based approach to mitigate topological freezing</title>
+    <updated>2026-01-28T15:40:46Z</updated>
+    <link href="https://arxiv.org/abs/2601.20708v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.20708v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As lattice gauge theories with non-trivial topological features are driven towards the continuum limit, standard Markov Chain Monte Carlo simulations suffer for topological freezing, i.e., a dramatic growth of autocorrelations in topological observables. A widely used strategy is the adoption of Open Boundary Conditions (OBC), which restores ergodic sampling of topology but at the price of breaking translation invariance and introducing unphysical boundary artifacts. In this contribution we summarize a scalable, exact flow-based strategy to remove them by transporting configurations from a prior with a OBC defect to a fully periodic ensemble, and apply it to 4d SU(3) Yang--Mills theory. The method is based on a Stochastic Normalizing Flow (SNF) that alternates non-equilibrium Monte Carlo updates with localized, gauge-equivariant defect coupling layers implemented via masked parametric stout smearing. Training is performed by minimizing the average dissipated work, equivalent to a Kullback--Leibler divergence between forward and reverse non-equilibrium path measures, to achieve more reversible trajectories and improved efficiency. We discuss the scaling with the number of degrees of freedom affected by the defect and show that defect SNFs achieve better performances than purely stochastic non-equilibrium methods at comparable cost. Finally, we validate the approach by reproducing reference results for the topological susceptibility.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-28T15:40:46Z</published>
+    <arxiv:comment>1+9 pages, 3 figures, contribution to the 42nd International Symposium on Lattice Field Theory (Lattice 2025), 2-8 November 2025, Mumbai, India</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Dario Panfalone</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+    <author>
+      <name>Lorenzo Verzichelli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.18273v1</id>
+    <title>Toward Scalable Normalizing Flows for the Hubbard Model</title>
+    <updated>2026-01-26T08:58:08Z</updated>
+    <link href="https://arxiv.org/abs/2601.18273v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.18273v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows have recently demonstrated the ability to learn the Boltzmann distribution of the Hubbard model, opening new avenues for generative modeling in condensed matter physics. In this work, we investigate the steps required to extend such simulations to larger lattice sizes and lower temperatures, with a focus on enhancing stability and efficiency. Additionally, we present the scaling behavior of stochastic normalizing flows and non-equilibrium Markov chain Monte Carlo methods for this fermionic system.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-26T08:58:08Z</published>
+    <arxiv:comment>10 pages, 5 figues, The 42nd International Symposium on Lattice Field Theory</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Janik Kreit</name>
+    </author>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Lena Funcke</name>
+    </author>
+    <author>
+      <name>Thomas Luu</name>
+    </author>
+    <author>
+      <name>Dominic Schuh</name>
+    </author>
+    <author>
+      <name>Simran Singh</name>
+    </author>
+    <author>
+      <name>Lorenzo Verzichelli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.10774v2</id>
+    <title>Analytic Bijections for Smooth and Interpretable Normalizing Flows</title>
+    <updated>2026-06-09T19:36:35Z</updated>
+    <link href="https://arxiv.org/abs/2601.10774v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.10774v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A key challenge in normalizing flows is finding expressive invertible scalar bijections. Existing approaches face trade-offs: affine transformations are smooth and analytically invertible but lack expressivity; monotonic splines offer local control but are only piecewise smooth and act on bounded domains; residual flows achieve smoothness but need numerical inversion. We introduce three families of analytic bijections that are globally smooth ($C^\infty$), defined on all of $\mathbb{R}$, and analytically invertible in closed form, combining the favorable properties of prior approaches. Beyond serving as drop-in replacements in coupling flows, where they match or exceed spline performance, we develop radial flows: a novel architecture using direct parametrization that transforms the radial coordinate while preserving angular direction. Radial flows exhibit exceptional training stability, produce geometrically interpretable transformations, and on targets with radial structure can achieve comparable quality to coupling flows with $1000\times$ fewer parameters. We provide comprehensive evaluation on 1D and 2D benchmarks, and demonstrate applicability to higher-dimensional physics problems through experiments on $φ^4$ lattice field theory, where our bijections outperform affine baselines and enable problem-specific designs that address mode collapse.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-15T16:09:02Z</published>
+    <arxiv:comment>Final ICML 2026 version. 9 + 14 pages, 10 + 11 figures, 3 + 2 tables. New CIFAR-10 and tabular-data results; main text shortened for readability</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mathis Gerdes</name>
+    </author>
+    <author>
+      <name>Miranda C. N. Cheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.25704v2</id>
+    <title>Scaling flow-based approaches for topology sampling in $\mathrm{SU}(3)$ gauge theory</title>
+    <updated>2026-04-10T12:30:09Z</updated>
+    <link href="https://arxiv.org/abs/2510.25704v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.25704v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a methodology based on out-of-equilibrium simulations to mitigate topological freezing when approaching the continuum limit of lattice gauge theories. We reduce the autocorrelation of the topological charge employing open boundary conditions, while removing exactly their unphysical effects using a non-equilibrium Monte Carlo approach in which periodic boundary conditions are gradually switched on. We perform a detailed analysis of the computational costs of this strategy in the case of the four-dimensional $\mathrm{SU}(3)$ Yang-Mills theory. After achieving full control of the scaling, we outline a clear strategy to sample topology efficiently in the continuum limit, which we check at lattice spacings as small as $0.045$ fm. We also generalize this approach by designing a customized Stochastic Normalizing Flow for evolutions in the boundary conditions, obtaining superior performances with respect to the purely stochastic non-equilibrium approach, and paving the way for more efficient future flow-based solutions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-29T17:12:21Z</published>
+    <arxiv:comment>1+39 pages, 14 figures; v1: 1+40 pages, 14 figures, expanded discussions in section 4 and 5, matches published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 04 (2026) 051</arxiv:journal_ref>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Dario Panfalone</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+    <author>
+      <name>Lorenzo Verzichelli</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP04(2026)051</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP04(2026)051" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.21330v1</id>
+    <title>SCORENF: Score-based Normalizing Flows for Sampling Unnormalized distributions</title>
+    <updated>2025-10-24T10:43:19Z</updated>
+    <link href="https://arxiv.org/abs/2510.21330v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.21330v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Unnormalized probability distributions are central to modeling complex physical systems across various scientific domains. Traditional sampling methods, such as Markov Chain Monte Carlo (MCMC), often suffer from slow convergence, critical slowing down, poor mode mixing, and high autocorrelation. In contrast, likelihood-based and adversarial machine learning models, though effective, are heavily data-driven, requiring large datasets and often encountering mode covering and mode collapse. In this work, we propose ScoreNF, a score-based learning framework built on the Normalizing Flow (NF) architecture, integrated with an Independent Metropolis-Hastings (IMH) module, enabling efficient and unbiased sampling from unnormalized target distributions. We show that ScoreNF maintains high performance even with small training ensembles, thereby reducing reliance on computationally expensive MCMC-generated training data. We also present a method for assessing mode-covering and mode-collapse behaviours. We validate our method on synthetic 2D distributions (MOG-4 and MOG-8) and the high-dimensional $φ^4$ lattice field theory distribution, demonstrating its effectiveness for sampling tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-24T10:43:19Z</published>
+    <arxiv:comment>\c{opyright} 20XX IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Vikas Kanaujia</name>
+    </author>
+    <author>
+      <name>Vipul Arora</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.13112v1</id>
+    <title>Neural Triangular Transport Maps: A New Approach Towards Sampling in Lattice QCD</title>
+    <updated>2025-10-15T03:15:10Z</updated>
+    <link href="https://arxiv.org/abs/2510.13112v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.13112v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice field theories are fundamental testbeds for computational physics; yet, sampling their Boltzmann distributions remains challenging due to multimodality and long-range correlations. While normalizing flows offer a promising alternative, their application to large lattices is often constrained by prohibitive memory requirements and the challenge of maintaining sufficient model expressivity. We propose sparse triangular transport maps that explicitly exploit the conditional independence structure of the lattice graph under periodic boundary conditions using monotone rectified neural networks (MRNN). We introduce a comprehensive framework for triangular transport maps that navigates the fundamental trade-off between \emph{exact sparsity} (respecting marginal conditional independence in the target distribution) and \emph{approximate sparsity} (computational tractability without fill-ins). Restricting each triangular map component to a local past enables site-wise parallel evaluation and linear time complexity in lattice size $N$, while preserving the expressive, invertible structure. Using $φ^4$ in two dimensions as a controlled setting, we analyze how node labelings (orderings) affect the sparsity and performance of triangular maps. We compare against Hybrid Monte Carlo (HMC) and established flow approaches (RealNVP).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-15T03:15:10Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Andrey Bryutkin</name>
+    </author>
+    <author>
+      <name>Youssef Marzouk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.12812v1</id>
+    <title>Efficient lattice field theory simulation using adaptive normalizing flow on a resistive memory-based neural differential equation solver</title>
+    <updated>2025-09-16T08:30:58Z</updated>
+    <link href="https://arxiv.org/abs/2509.12812v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.12812v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lattice field theory (LFT) simulations underpin advances in classical statistical mechanics and quantum field theory, providing a unified computational framework across particle, nuclear, and condensed matter physics. However, the application of these methods to high-dimensional systems remains severely constrained by several challenges, including the prohibitive computational cost and limited parallelizability of conventional sampling algorithms such as hybrid Monte Carlo (HMC), the substantial training expense associated with traditional normalizing flow models, and the inherent energy inefficiency of digital hardware architectures. Here, we introduce a software-hardware co-design that integrates an adaptive normalizing flow (ANF) model with a resistive memory-based neural differential equation solver, enabling efficient generation of LFT configurations. Software-wise, ANF enables efficient parallel generation of statistically independent configurations, thereby reducing computational costs, while low-rank adaptation (LoRA) allows cost-effective fine-tuning across diverse simulation parameters. Hardware-wise, in-memory computing with resistive memory substantially enhances both parallelism and energy efficiency. We validate our approach on the scalar phi4 theory and the effective field theory of graphene wires, using a hybrid analog-digital neural differential equation solver equipped with a 180 nm resistive memory in-memory computing macro. Our co-design enables low-cost computation, achieving approximately 8.2-fold and 13.9-fold reductions in integrated autocorrelation time over HMC, while requiring fine-tuning of less than 8% of the weights via LoRA. Compared to state-of-the-art GPUs, our co-design achieves up to approximately 16.1- and 17.0-fold speedups for the two tasks, as well as 73.7- and 138.0-fold improvements in energy efficiency.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-16T08:30:58Z</published>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Meng Xu</name>
+    </author>
+    <author>
+      <name>Jichang Yang</name>
+    </author>
+    <author>
+      <name>Ning Lin</name>
+    </author>
+    <author>
+      <name>Qundao Xu</name>
+    </author>
+    <author>
+      <name>Siqi Tang</name>
+    </author>
+    <author>
+      <name>Han Wang</name>
+    </author>
+    <author>
+      <name>Xiaojuan Qi</name>
+    </author>
+    <author>
+      <name>Zhongrui Wang</name>
+    </author>
+    <author>
+      <name>Ming Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.10553v2</id>
+    <title>Flowing Through Hilbert Space: Quantum-Enhanced Generative Models for Lattice Field Theory</title>
+    <updated>2026-02-08T12:47:14Z</updated>
+    <link href="https://arxiv.org/abs/2505.10553v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.10553v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sampling from high-dimensional and structured probability distributions is a fundamental challenge in computational physics, particularly in the context of lattice field theory (LFT), where generating field configurations efficiently is critical, yet computationally intensive. In this work, we apply a previously developed hybrid quantum-classical normalizing flow model to explore quantum-enhanced sampling in such regimes. Our approach embeds parameterized quantum circuits within a classical normalizing flow architecture, leveraging amplitude encoding and quantum entanglement to enhance expressivity in the generative process. The quantum circuit serves as a trainable transformation within the flow, while classical networks provide adaptive coupling and compensate for quantum hardware imperfections. This design enables efficient density estimation and sample generation, potentially reducing the resources required compared to purely classical methods. While LFT provides a representative and physically meaningful application for benchmarking, our focus is on improving the sampling efficiency of generative models through quantum components. This work contributes toward the development of quantum-enhanced generative modeling frameworks that address the sampling bottlenecks encountered in physics and beyond.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-15T17:58:16Z</published>
+    <arxiv:comment>8 pages, 6 figures, Submitted to QCE Quantum Week 2025</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Jehu Martinez</name>
+    </author>
+    <author>
+      <name>Andrea Delgado</name>
+    </author>
+    <arxiv:doi>10.1109/QCE65121.2025.00266</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/QCE65121.2025.00266" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.18126v1</id>
+    <title>Lecture Notes on Normalizing Flows for Lattice Quantum Field Theories</title>
+    <updated>2025-04-25T07:22:11Z</updated>
+    <link href="https://arxiv.org/abs/2504.18126v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.18126v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Numerical simulations of quantum field theories on lattices serve as a fundamental tool for studying the non-perturbative regime of the theories, where analytic tools often fall short. Challenges arise when one takes the continuum limit or as the system approaches a critical point, especially in the presence of non-trivial topological structures in the theory. Rapid recent advances in machine learning provide a promising avenue for progress in this area. These lecture notes aim to give a brief account of lattice field theories, normalizing flows, and how the latter can be applied to study the former. The notes are based on the lectures given by the first author in various recent research schools.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-25T07:22:11Z</published>
+    <arxiv:comment>70 pages</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>SciPost Phys. Lect. Notes 110 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Miranda C. N. Cheng</name>
+    </author>
+    <author>
+      <name>Niki Stratikopoulou</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhysLectNotes.110</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhysLectNotes.110" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.11482v1</id>
+    <title>NeuMC -- a package for neural sampling for lattice field theories</title>
+    <updated>2025-03-14T15:07:04Z</updated>
+    <link href="https://arxiv.org/abs/2503.11482v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.11482v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the \texttt{NeuMC} software package, based on \pytorch, aimed at facilitating the research on neural samplers in lattice field theories. Neural samplers based on normalizing flows are becoming increasingly popular in the context of Monte-Carlo simulations as they can effectively approximate target probability distributions, possibly alleviating some shortcomings of the Markov chain Monte-Carlo methods. Our package provides tools to create such samplers for two-dimensional field theories.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-14T15:07:04Z</published>
+    <arxiv:comment>42 pages, 15 figures, for associated code repository, see https://github.com/nmcmc/neumc.git</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>SoftwareX, Vol. 31 (2025) 102253</arxiv:journal_ref>
+    <author>
+      <name>Piotr Bialas</name>
+    </author>
+    <author>
+      <name>Piotr Korcyl</name>
+    </author>
+    <author>
+      <name>Tomasz Stebel</name>
+    </author>
+    <author>
+      <name>Dawid Zapolski</name>
+    </author>
+    <arxiv:doi>10.1016/j.softx.2025.102253</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.softx.2025.102253" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.00263v1</id>
+    <title>Progress in Normalizing Flows for 4d Gauge Theories</title>
+    <updated>2025-02-01T01:43:58Z</updated>
+    <link href="https://arxiv.org/abs/2502.00263v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.00263v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows have arisen as a tool to accelerate Monte Carlo sampling for lattice field theories. This work reviews recent progress in applying normalizing flows to 4-dimensional nonabelian gauge theories, focusing on two advancements: an architectural improvement referred to as learned active loops, and the application of correlated ensemble methods to QCD with $N_f=2$ dynamical fermions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-01T01:43:58Z</published>
+    <arxiv:comment>10 pages, 2 figures, Contribution to the 41st International Symposium on Lattice Field Theory, July 28th - August 3rd 2024, Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.18288v1</id>
+    <title>Normalizing flows for SU($N$) gauge theories employing singular value decomposition</title>
+    <updated>2025-01-30T11:56:16Z</updated>
+    <link href="https://arxiv.org/abs/2501.18288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.18288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a progress report on the use of normalizing flows for generating gauge field configurations in pure SU(N) gauge theories. We discuss how the singular value decomposition can be used to construct gauge-invariant quantities, which serve as the building blocks for designing gauge-equivariant transformations of SU(N) gauge links. Using this novel approach, we build representative models for the SU(3) Wilson action on a \( 4^4 \) lattice with \( β= 1 \). We train these models and provide an analysis of their performance, highlighting the effectiveness of the new technique for gauge-invariant transformations. We also provide a comparison between the efficiency of the proposed algorithm and the spectral flow of Wilson loops.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-30T11:56:16Z</published>
+    <arxiv:comment>9 pages, 4 figures; contribution to the 41th International Symposium on Lattice Field Theory, 2024, Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Javad Komijani</name>
+    </author>
+    <author>
+      <name>Marina K. Marinkovic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.07371v1</id>
+    <title>Simulating the Hubbard Model with Equivariant Normalizing Flows</title>
+    <updated>2025-01-13T14:40:42Z</updated>
+    <link href="https://arxiv.org/abs/2501.07371v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.07371v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models, particularly normalizing flows, have shown exceptional performance in learning probability distributions across various domains of physics, including statistical mechanics, collider physics, and lattice field theory. In the context of lattice field theory, normalizing flows have been successfully applied to accurately learn the Boltzmann distribution, enabling a range of tasks such as direct estimation of thermodynamic observables and sampling independent and identically distributed (i.i.d.) configurations.
+  In this work, we present a proof-of-concept demonstration that normalizing flows can be used to learn the Boltzmann distribution for the Hubbard model. This model is widely employed to study the electronic structure of graphene and other carbon nanomaterials. State-of-the-art numerical simulations of the Hubbard model, such as those based on Hybrid Monte Carlo (HMC) methods, often suffer from ergodicity issues, potentially leading to biased estimates of physical observables. Our numerical experiments demonstrate that leveraging i.i.d.\ sampling from the normalizing flow effectively addresses these issues.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-13T14:40:42Z</published>
+    <arxiv:comment>14 pages, 5 figures, contribution to the 41st International Symposium on Lattice Field Theory (Lattice 2024), July 28th - August 3rd, 2024, Liverpool, UK</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Dominic Schuh</name>
+    </author>
+    <author>
+      <name>Janik Kreit</name>
+    </author>
+    <author>
+      <name>Evan Berkowitz</name>
+    </author>
+    <author>
+      <name>Lena Funcke</name>
+    </author>
+    <author>
+      <name>Thomas Luu</name>
+    </author>
+    <author>
+      <name>Kim A. Nicoli</name>
+    </author>
+    <author>
+      <name>Marcel Rodekamp</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.19109v2</id>
+    <title>Stochastic normalizing flows for Effective String Theory</title>
+    <updated>2025-01-08T09:48:02Z</updated>
+    <link href="https://arxiv.org/abs/2412.19109v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.19109v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Effective String Theory (EST) is a powerful tool used to study confinement in pure gauge theories by modeling the confining flux tube connecting a static quark-anti-quark pair as a thin vibrating string. Recently, flow-based samplers have been applied as an efficient numerical method to study EST regularized on the lattice, opening the route to study observables previously inaccessible to standard analytical methods. Flow-based samplers are a class of algorithms based on Normalizing Flows (NFs), deep generative models recently proposed as a promising alternative to traditional Markov Chain Monte Carlo methods in lattice field theory calculations. By combining NF layers with out-of-equilibrium stochastic updates, we obtain Stochastic Normalizing Flows (SNFs), a scalable class of machine learning algorithms that can be explained in terms of stochastic thermodynamics. In this contribution, we outline EST and SNFs, and report some numerical results for the shape of the flux tube.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-26T07:58:09Z</published>
+    <arxiv:comment>1+ 10 pages, 2 figures, contribution for the 41st International Symposium on Lattice Field Theory (Lattice 2024), 28 July - 3 August 2024, Liverpool, UK; v2: 1+ 10 pages, 2 figures, reference added</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michele Caselle</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.11693v4</id>
+    <title>CrystalFlow: A Flow-Based Generative Model for Crystalline Materials</title>
+    <updated>2025-02-24T05:33:40Z</updated>
+    <link href="https://arxiv.org/abs/2412.11693v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.11693v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep learning-based generative models have emerged as powerful tools for modeling complex data distributions and generating high-fidelity samples, offering a transformative approach to efficiently explore the configuration space of crystalline materials. In this work, we present CrystalFlow, a flow-based generative model specifically developed for the generation of crystalline materials. CrystalFlow constructs Continuous Normalizing Flows to model lattice parameters, atomic coordinates, and/or atom types, which are trained using Conditional Flow Matching techniques. Through an appropriate choice of data representation and the integration of a graph-based equivariant neural network, the model effectively captures the fundamental symmetries of crystalline materials, which ensures data-efficient learning and enables high-quality sampling. Our experiments demonstrate that CrystalFlow achieves state-of-the-art performance across standard generation benchmarks, and exhibits versatile conditional generation capabilities including producing structures optimized for specific external pressures or desired material properties. These features highlight the model's potential to address realistic crystal structure prediction challenges, offering a robust and efficient framework for advancing data-driven research in condensed matter physics and material science.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-16T12:12:30Z</published>
+    <arxiv:comment>Update references and acknowledgments</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Xiaoshan Luo</name>
+    </author>
+    <author>
+      <name>Zhenyu Wang</name>
+    </author>
+    <author>
+      <name>Qingchang Wang</name>
+    </author>
+    <author>
+      <name>Jian Lv</name>
+    </author>
+    <author>
+      <name>Lei Wang</name>
+    </author>
+    <author>
+      <name>Yanchao Wang</name>
+    </author>
+    <author>
+      <name>Yanming Ma</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-025-64364-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-025-64364-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.00200v3</id>
+    <title>Scaling of Stochastic Normalizing Flows in $\mathrm{SU}(3)$ lattice gauge theory</title>
+    <updated>2025-05-05T08:01:32Z</updated>
+    <link href="https://arxiv.org/abs/2412.00200v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.00200v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Non-equilibrium Markov Chain Monte Carlo (NE-MCMC) simulations provide a well-understood framework based on Jarzynski's equality to sample from a target probability distribution. By driving a base probability distribution out of equilibrium, observables are computed without the need to thermalize. If the base distribution is characterized by mild autocorrelations, this approach provides a way to mitigate critical slowing down. Out-of-equilibrium evolutions share the same framework of flow-based approaches and they can be naturally combined into a novel architecture called Stochastic Normalizing Flows (SNFs). In this work we present the first implementation of SNFs for $\mathrm{SU}(3)$ lattice gauge theory in 4 dimensions, defined by introducing gauge-equivariant layers between out-of-equilibrium Monte Carlo updates. The core of our analysis is focused on the promising scaling properties of this architecture with the degrees of freedom of the system, which are directly inherited from NE-MCMC. Finally, we discuss how systematic improvements of this approach can realistically lead to a general and yet efficient sampling strategy at fine lattice spacings for observables affected by long autocorrelation times.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-29T19:01:05Z</published>
+    <arxiv:comment>14 pages, 12 figures. v2: 14 pages, 13 figures, added comments and improved discussion in section 5, matches published version. v3: fixed figure 7, added missing footnote</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 111 7, 074517 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.111.074517</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.111.074517" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.13161v2</id>
+    <title>Non-Perturbative Trivializing Flows for Lattice Gauge Theories</title>
+    <updated>2025-12-19T12:40:33Z</updated>
+    <link href="https://arxiv.org/abs/2410.13161v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.13161v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuous normalizing flows are known to be highly expressive and flexible, which allows for easier incorporation of large symmetries and makes them a powerful computational tool for lattice field theories. Building on previous work, we present a general continuous normalizing flow architecture for matrix Lie groups that is equivariant under group transformations. We apply this to lattice gauge theories in two dimensions as a proof of principle and demonstrate competitive performance, showing its potential as a tool for future lattice computations.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-17T02:30:44Z</published>
+    <arxiv:comment>7+7 pages, 5 figures, 4 tables; expanded published version, added 2 appendices with computational cost analysis and numerical evaluations (added 1 table and 2 figures)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys. Rev. D 112, 094516 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Mathis Gerdes</name>
+    </author>
+    <author>
+      <name>Pim de Haan</name>
+    </author>
+    <author>
+      <name>Roberto Bondesan</name>
+    </author>
+    <author>
+      <name>Miranda C. N. Cheng</name>
+    </author>
+    <arxiv:doi>10.1103/31d5-hvp6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/31d5-hvp6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.18861v2</id>
+    <title>Sampling SU(3) pure gauge theory with Stochastic Normalizing Flows</title>
+    <updated>2024-10-04T13:57:13Z</updated>
+    <link href="https://arxiv.org/abs/2409.18861v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.18861v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Non-equilibrium Monte Carlo simulations based on Jarzynski's equality are a well-understood method to compute differences in free energy and also to sample from a target probability distribution without the need to thermalize the system under study. In each evolution, the system starts from a given base distribution at equilibrium and it is gradually driven out-of-equilibrium while evolving towards the target parameters. If the target distribution suffers from long autocorrelation times, this approach represents a promising candidate to mitigate critical slowing down. Out-of-equilibrium evolutions are conceptually similar to Normalizing Flows and they can be combined into a recently-developed architecture called Stochastic Normalizing Flows (SNFs). In this contribution we first focus on the promising scaling with the volume guaranteed by the purely stochastic approach in the $\mathrm{SU}(3)$ lattice gauge theory in 4 dimensions; then, we define an SNF by introducing gauge-equivariant layers between the out-of-equilibrium Monte Carlo updates, and we analyse the improvement obtained as well as the inherited scaling with the volume. Finally, we discuss how this approach can be systematically improved and how simulations of lattice gauge theories in four dimensions for large volumes and close to criticality can be realistically achieved.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-27T15:55:22Z</published>
+    <arxiv:comment>1+8 pages, 6 figures, contribution for the 41st International Symposium on Lattice Field Theory (Lattice 2024), 28 July - 3 August 2024, Liverpool, UK; v2: 1+9 pages, 6 figures, reference added</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Andrea Bulgarelli</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.15937v2</id>
+    <title>Numerical determination of the width and shape of the effective string using Stochastic Normalizing Flows</title>
+    <updated>2025-02-15T13:48:54Z</updated>
+    <link href="https://arxiv.org/abs/2409.15937v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.15937v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow-based architectures have recently proved to be an efficient tool for numerical simulations of Effective String Theories regularized on the lattice that otherwise cannot be efficiently sampled by standard Monte Carlo methods. In this work we use Stochastic Normalizing Flows, a state-of-the-art deep learning architecture based on non-equilibrium Monte Carlo simulations, to study different effective string models. After testing the reliability of this approach through a comparison with exact results for the Nambu-Gotō model, we discuss results on observables that are challenging to study analytically, such as the width of the string and the shape of the flux density. Furthermore, we perform a novel numerical study of Effective String Theories with terms beyond the Nambu-Gotō action, including a broader discussion on their significance for lattice gauge theories. The combination of these findings enables a quantitative description of the fine details of the confinement mechanism in different lattice gauge theories. The results presented in this work establish the reliability and feasibility of flow-based samplers for Effective String Theories and pave the way for future applications on more complex models.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-24T09:59:44Z</published>
+    <arxiv:comment>1+28 pages, 11 figures, 8 tables; v2 1+28 pages, 11 figures, 8 tables, abstract slightly modified, matches published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 02 (2025) 090</arxiv:journal_ref>
+    <author>
+      <name>Michele Caselle</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP02(2025)090</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP02(2025)090" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.18323v2</id>
+    <title>Flow-based Nonperturbative Simulation of First-order Phase Transitions</title>
+    <updated>2025-05-29T05:27:54Z</updated>
+    <link href="https://arxiv.org/abs/2404.18323v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.18323v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a flow-based method for simulating and calculating nucleation rates of first-order phase transitions in scalar field theory on a lattice. Motivated by recent advancements in machine learning tools, particularly normalizing flows for lattice field theory, we propose the ``partitioning flow-based Markov chain Monte Carlo (PFMCMC) sampling" method to address two challenges encountered in normalizing flow applications for lattice field theory: the ``mode-collapse" and ``rare-event sampling" problems. Using a (2+1)-dimensional real scalar model as an example, we demonstrate the effectiveness of our PFMCMC method in modeling highly hierarchical order parameter probability distributions and simulating critical bubble configurations. These simulations are then used to facilitate the calculation of nucleation rates. We anticipate the application of this method to (3+1)-dimensional theories for studying realistic cosmological phase transitions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-28T21:36:40Z</published>
+    <arxiv:comment>32 pages, 14 figures, 1 table, matches the published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 10 (2024) 198</arxiv:journal_ref>
+    <author>
+      <name>Yang Bai</name>
+    </author>
+    <author>
+      <name>Ting-Kuo Chen</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP10(2024)198</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP10(2024)198" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.11674v1</id>
+    <title>Practical applications of machine-learned flows on gauge fields</title>
+    <updated>2024-04-17T18:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2404.11674v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.11674v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flows are machine-learned maps between different lattice theories which can be used as components in exact sampling and inference schemes. Ongoing work yields increasingly expressive flows on gauge fields, but it remains an open question how flows can improve lattice QCD at state-of-the-art scales. We discuss and demonstrate two applications of flows in replica exchange (parallel tempering) sampling, aimed at improving topological mixing, which are viable with iterative improvements upon presently available flows.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-17T18:17:14Z</published>
+    <arxiv:comment>9 pages, 5 figures, proceedings of the 40th International Symposium on Lattice Field Theory (Lattice 2023)</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.06561v2</id>
+    <title>Mitigating topological freezing using out-of-equilibrium simulations</title>
+    <updated>2024-04-29T15:38:39Z</updated>
+    <link href="https://arxiv.org/abs/2402.06561v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.06561v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the recently-established connection between Jarzynski's equality and the theoretical framework of Stochastic Normalizing Flows, we investigate a protocol relying on out-of-equilibrium lattice Monte Carlo simulations to mitigate the infamous computational problem of topological freezing. We test our proposal on $2d$ $\mathrm{CP}^{N-1}$ models and compare our results with those obtained adopting the Parallel Tempering on Boundary Conditions proposed by M. Hasenbusch, obtaining comparable performances. Our work thus sets the stage for future applications combining our Monte Carlo setup with machine learning techniques.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-09T17:21:04Z</published>
+    <arxiv:comment>1+26 pages, 14 figures; v2: 1+27 pages, 14 figures, discussion in section 4 expanded, matches published version</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>JHEP 04 (2024) 126</arxiv:journal_ref>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.10874v2</id>
+    <title>Applications of flow models to the generation of correlated lattice QCD ensembles</title>
+    <updated>2024-05-28T10:10:26Z</updated>
+    <link href="https://arxiv.org/abs/2401.10874v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.10874v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine-learned normalizing flows can be used in the context of lattice quantum field theory to generate statistically correlated ensembles of lattice gauge fields at different action parameters. This work demonstrates how these correlations can be exploited for variance reduction in the computation of observables. Three different proof-of-concept applications are demonstrated using a novel residual flow architecture: continuum limits of gauge theories, the mass dependence of QCD observables, and hadronic matrix elements based on the Feynman-Hellmann approach. In all three cases, it is shown that statistical uncertainties are significantly reduced when machine-learned flows are incorporated as compared with the same calculations performed with uncorrelated ensembles or direct reweighting.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-19T18:33:52Z</published>
+    <arxiv:comment>12 pages, 2 tables, 5 figures. v2: accepted for publication</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00828v4</id>
+    <title>Multi-Lattice Sampling of Quantum Field Theories via Neural Operator-based Flows</title>
+    <updated>2024-11-07T08:29:41Z</updated>
+    <link href="https://arxiv.org/abs/2401.00828v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.00828v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the problem of sampling lattice field configurations on a lattice from the Boltzmann distribution corresponding to some action. Since such densities arise as approximationw of an underlying functional density, we frame the task as an instance of operator learning. We propose to approximate a time-dependent neural operator whose time integral provides a mapping between the functional distributions of the free and target theories. Once a particular lattice is chosen, the neural operator can be discretized to a finite-dimensional, time-dependent vector field which in turn induces a continuous normalizing flow between finite dimensional distributions over the chosen lattice. This flow can then be trained to be a diffeormorphism between the discretized free and target theories on the chosen lattice, and, by construction, can be evaluated on different discretizations of spacetime. We experimentally validate the proposal on the 2-dimensional $φ^4$-theory to explore to what extent such operator-based flow architectures generalize to lattice sizes they were not trained on, and show that pretraining on smaller lattices can lead to a speedup over training directly on the target lattice size.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-01T17:56:24Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bálint Máté</name>
+    </author>
+    <author>
+      <name>François Fleuret</name>
+    </author>
+    <arxiv:doi>10.1088/2632-2153/ad9707</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2632-2153/ad9707" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.11979v1</id>
+    <title>Out-of-equilibrium simulations to fight topological freezing</title>
+    <updated>2023-10-18T14:07:43Z</updated>
+    <link href="https://arxiv.org/abs/2310.11979v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.11979v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Calculations of topological observables in lattice gauge theories with traditional Monte Carlo algorithms have long been known to be a difficult task, owing to the effects of long autocorrelations times. Several mitigation strategies have been put forward, including the use of open boundary conditions and methods such as parallel tempering. In this contribution we examine a new approach based on out-of-equilibrium Monte Carlo simulations. Starting from thermalized configurations with open boundary conditions on a line defect, periodic boundary conditions are gradually switched on. A sampling of topological observables is then shown to be possible with a specific reweighting-like technique inspired by Jarzynski's equality. We discuss the efficiency of this approach using results obtained for the 2-dimensional $\mathrm{CP}^{N-1}$ models. Furthermore, we outline the implementation of our proposal in the context of Stochastic Normalizing Flows, as they share the same theoretical framework of the non-equilibrium transformations we perform, and can be thought of as their generalization.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-18T14:07:43Z</published>
+    <arxiv:comment>1+8 pages, 6 figures, contribution for the 40th International Symposium on Lattice Field Theory (Lattice 2023), July 31st - August 4th, 2023, Fermi National Accelerator Laboratory</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Claudio Bonanno</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+    <author>
+      <name>Davide Vadacchino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.03381v1</id>
+    <title>Learning Trivializing Flows in a $φ^4$ theory from coarser lattices</title>
+    <updated>2023-10-05T08:32:16Z</updated>
+    <link href="https://arxiv.org/abs/2310.03381v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.03381v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The so-called trivializing flows were proposed to speed up Hybrid Monte Carlo simulations, where the Wilson flow was used as an approximation of a trivializing map, a transformation of the gauge fields which trivializes the theory. It was shown that the scaling of the computational costs towards the continuum did not change with respect to HMC. The introduction of machine learning tecniques, especially normalizing flows, for the sampling of lattice gauge theories has shed some hope on solving topology freezing in lattice QCD simulations. In this talk I will present our work in a $φ^{4}$ theory using normalizing flows as trivializing flows (given its similarity with the idea of a trivializing map), training from a trivial distribution as well as from coarser lattices, and study its scaling towards the continuum, comparing it with standard HMC.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-05T08:32:16Z</published>
+    <arxiv:comment>7 pages of main content, 5 figures, 1 table. Talk presented at the 40th International Symposium on Lattice Field Theory (Lattice2023), July 31st - August 4th, 2023, Fermi National Accelerator Laboratory</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>David Albandea</name>
+    </author>
+    <author>
+      <name>Luigi Del Debbio</name>
+    </author>
+    <author>
+      <name>Pilar Hernández</name>
+    </author>
+    <author>
+      <name>Richard Kenway</name>
+    </author>
+    <author>
+      <name>Joe Marsh Rossney</name>
+    </author>
+    <author>
+      <name>Alberto Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.14983v1</id>
+    <title>Sampling Nambu-Goto theory using Normalizing Flows</title>
+    <updated>2023-09-26T14:56:46Z</updated>
+    <link href="https://arxiv.org/abs/2309.14983v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.14983v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Effective String Theory (EST) is a non-perturbative framework used to describe confinement in Yang-Mills theory through the modeling of the interquark potential in terms of vibrating strings. An efficient numerical method to simulate such theories where analytical studies are challenging is still lacking. However, in recent years a new class of deep generative models called Normalizing Flows (NFs) has been proposed to sample lattice field theories more efficiently than traditional Monte Carlo methods. In this contribution, we show a proof of concept of the application of NFs to EST regularized on the lattice. Namely, we introduce Physics-Informed Stochastic Normalizing Flows and we use them to sample the Nambu-Goto string action with two goals: use the known analytical results of this theory as a benchmark and demonstrate the efficiency of our method in obtaining new results of physical interest and in particular in providing a numerical proof for a conjecture regarding the width of the string.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-26T14:56:46Z</published>
+    <arxiv:comment>7 pages, 3 figures, contribution for the 40th International Symposium on Lattice Field Theory (Lattice 2023), July 31st - August 4th, 2023, Fermi National Accelerator Laboratory</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Michele Caselle</name>
+    </author>
+    <author>
+      <name>Elia Cellini</name>
+    </author>
+    <author>
+      <name>Alessandro Nada</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.13294v2</id>
+    <title>Training normalizing flows with computationally intensive target probability distributions</title>
+    <updated>2024-02-28T15:48:09Z</updated>
+    <link href="https://arxiv.org/abs/2308.13294v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.13294v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning techniques, in particular the so-called normalizing flows, are becoming increasingly popular in the context of Monte Carlo simulations as they can effectively approximate target probability distributions. In the case of lattice field theories (LFT) the target distribution is given by the exponential of the action. The common loss function's gradient estimator based on the "reparametrization trick" requires the calculation of the derivative of the action with respect to the fields. This can present a significant computational cost for complicated, non-local actions like e.g. fermionic action in QCD. In this contribution, we propose an estimator for normalizing flows based on the REINFORCE algorithm that avoids this issue. We apply it to two dimensional Schwinger model with Wilson fermions at criticality and show that it is up to ten times faster in terms of the wall-clock time as well as requiring up to $30\%$ less memory than the reparameterization trick estimator. It is also more numerically stable allowing for single precision calculations and the use of half-float tensor cores. We present an in-depth analysis of the origins of those improvements. We believe that these benefits will appear also outside the realm of the LFT, in each case where the target probability distribution is computationally intensive.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-25T10:40:46Z</published>
+    <arxiv:comment>16 pages, 5 figures, 6 tables, 3 listings. Revised version as published in CPC. Added results for a other values of hoping parameter</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Computer Physics Communications 2024 109094</arxiv:journal_ref>
+    <author>
+      <name>Piotr Bialas</name>
+    </author>
+    <author>
+      <name>Piotr Korcyl</name>
+    </author>
+    <author>
+      <name>Tomasz Stebel</name>
+    </author>
+    <arxiv:doi>10.1016/j.cpc.2024.109094</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cpc.2024.109094" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.00581v2</id>
+    <title>Sampling U(1) gauge theory using a re-trainable conditional flow-based model</title>
+    <updated>2023-10-31T05:43:39Z</updated>
+    <link href="https://arxiv.org/abs/2306.00581v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.00581v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sampling topological quantities in the Monte Carlo simulation of Lattice Gauge Theory becomes challenging as we approach the continuum limit of the theory. In this work, we introduce a Conditional Normalizing Flow (C-NF) model to sample U(1) gauge theory in two dimensions, aiming to mitigate the impact of topological freezing when dealing with smaller values of the U(1) bare coupling. To train the conditional flow model, we utilize samples generated by Hybrid Monte Carlo (HMC) method, ensuring that the autocorrelation in topological quantities remains low. Subsequently, we employ the trained model to interpolate the coupling parameter to values where training was not performed. We thoroughly examine the quality of the model in this region and generate uncorrelated samples, significantly reducing the occurrence of topological freezing. Furthermore, we propose a re-trainable approach that utilizes the model's own samples to enhance the generalization capability of the conditional model. This method enables sampling for coupling values that are far beyond the initial training region, expanding the applicability of the model.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-01T11:52:56Z</published>
+    <arxiv:comment>1. Comments: page 4, added a section on Mode collapse in U(1) Gauge Theory. 2. Comments: page 11, added a section in appendix</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Phys.Rev.D 108 (2023) 7, 074518</arxiv:journal_ref>
+    <author>
+      <name>Ankur Singha</name>
+    </author>
+    <author>
+      <name>Dipankar Chakrabarti</name>
+    </author>
+    <author>
+      <name>Vipul Arora</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.108.074518</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.108.074518" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.02402v1</id>
+    <title>Normalizing flows for lattice gauge theory in arbitrary space-time dimension</title>
+    <updated>2023-05-03T19:54:04Z</updated>
+    <link href="https://arxiv.org/abs/2305.02402v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.02402v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Applications of normalizing flows to the sampling of field configurations in lattice gauge theory have so far been explored almost exclusively in two space-time dimensions. We report new algorithmic developments of gauge-equivariant flow architectures facilitating the generalization to higher-dimensional lattice geometries. Specifically, we discuss masked autoregressive transformations with tractable and unbiased Jacobian determinants, a key ingredient for scalable and asymptotically exact flow-based sampling algorithms. For concreteness, results from a proof-of-principle application to SU(3) lattice gauge theory in four space-time dimensions are reported.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-03T19:54:04Z</published>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Ryan Abbott</name>
+    </author>
+    <author>
+      <name>Michael S. Albergo</name>
+    </author>
+    <author>
+      <name>Aleksandar Botev</name>
+    </author>
+    <author>
+      <name>Denis Boyda</name>
+    </author>
+    <author>
+      <name>Kyle Cranmer</name>
+    </author>
+    <author>
+      <name>Daniel C. Hackett</name>
+    </author>
+    <author>
+      <name>Gurtej Kanwar</name>
+    </author>
+    <author>
+      <name>Alexander G. D. G. Matthews</name>
+    </author>
+    <author>
+      <name>Sébastien Racanière</name>
+    </author>
+    <author>
+      <name>Ali Razavi</name>
+    </author>
+    <author>
+      <name>Danilo J. Rezende</name>
+    </author>
+    <author>
+      <name>Fernando Romero-López</name>
+    </author>
+    <author>
+      <name>Phiala E. Shanahan</name>
+    </author>
+    <author>
+      <name>Julian M. Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.01798v1</id>
+    <title>Locality-constrained autoregressive cum conditional normalizing flow for lattice field theory simulations</title>
+    <updated>2023-04-04T13:55:51Z</updated>
+    <link href="https://arxiv.org/abs/2304.01798v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.01798v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalizing flow-based sampling methods have been successful in tackling computational challenges traditionally associated with simulating lattice quantum field theories. Further works have incorporated gauge and translational invariance of the action integral in the underlying neural networks, which have led to efficient training and inference in those models. In this paper, we incorporate locality of the action integral which leads to simplifications to the input domain of conditional normalizing flows that sample constant time sub-lattices in an autoregressive process, dubbed local-Autoregressive Conditional Normalizing Flow (l-ACNF). We find that the autocorrelation times of l-ACNF models outperform an equivalent normalizing flow model on the full lattice by orders of magnitude when sampling $φ^{4}$ theory on a 2 dimensional lattice.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-04T13:55:51Z</published>
+    <arxiv:comment>13 Pages, 6 Figures</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <author>
+      <name>Dinesh P. R.</name>
+    </author>
+  </entry>
+</feed>

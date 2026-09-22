@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DUV99ihyXU9hrBGanlHXyueVByk</id>
+  <title>arXiv Query: search_query=abs:"neural quantum states" AND abs:"DMRG"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-09-16T14:48:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22neural+quantum+states%22+AND+abs:%22DMRG%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11745v1</id>
+    <title>Unraveling the Kagome Antiferromagnetic $3J$ Model and Its Materials: An Integrated Approach</title>
+    <updated>2026-09-10T16:00:46Z</updated>
+    <link href="https://arxiv.org/abs/2609.11745v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11745v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the ground-state and finite-temperature properties of the kagome antiferromagnetic Heisenberg model with three inequivalent couplings, dubbed the 3J model, which is designed for the candidate Dirac quantum spin liquid (QSL) material YCu$_3$(OH)$_6$Br$_2$[Br$_{1-x}$(OH)$_x$] (see, e.g., Zeng et al., 2024). Employing large-scale density-matrix renormalization group (DMRG) supplemented by neural quantum states (NQS) simulations, we identify an intermediate QSL phase between two magnetically ordered phases. We also find that this QSL is separated from the kagome spin liquid ground state at the isotropic limit. To establish a direct comparison with experiments, we compute the specific heat of the model by means of advanced exponential (XTRG) and tangent-space (tanTRG) thermal tensor-network methods. In the magnetically ordered phase, the specific heat over temperature exhibits a shoulder at a temperature that is a fraction of the coupling strength $J_{hex}$, which disappears in the QSL phase. These universal behaviors are consistent with the experimentally observed specific heat in 3J materials for both ordered and QSL candidate samples. Our work thus connects microscopic models with experimentally measurable signatures, exemplifying an integrated approach (see Meng et al., 2026) to understanding QSL phenomena in frustrated quantum magnets, with 3J materials serving as a representative case and providing a foundation for future studies.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T16:00:46Z</published>
+    <arxiv:comment>9+7 pages, 5+7 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Xin Lu</name>
+    </author>
+    <author>
+      <name>Andreas Raikos</name>
+    </author>
+    <author>
+      <name>Menghan Song</name>
+    </author>
+    <author>
+      <name>Zezong Li</name>
+    </author>
+    <author>
+      <name>Lankun Han</name>
+    </author>
+    <author>
+      <name>Shiliang Li</name>
+    </author>
+    <author>
+      <name>Sylvain Capponi</name>
+    </author>
+    <author>
+      <name>Zi Yang Meng</name>
+    </author>
+    <author>
+      <name>Chengkang Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.14775v1</id>
+    <title>Neural network backflow for ab-initio solid calculations</title>
+    <updated>2026-03-16T03:15:59Z</updated>
+    <link href="https://arxiv.org/abs/2603.14775v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.14775v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurately simulating extended periodic systems is a central challenge in condensed matter physics. Neural quantum states (NQS) offer expressive wavefunctions for this task but face issues with scalability. In this work, we successfully extend the neural network backflow (NNBF) approach to ab-initio solid-state materials. Building on our scalable optimization framework for molecules [Liu et al., PRB 112, 155162 (2025)], we introduce a two-stage pruning strategy to manage the massive configuration space expansions: by utilizing a computationally cheap, physics-informed importance proxy, we devote exact NNBF amplitude evaluations solely to the most relevant determinants, significantly improving optimization efficiency, energy estimation, and convergence. Our framework achieves state-of-the-art accuracy across diverse solid-state benchmarks. For 1D hydrogen chains, NNBF matches or surpasses DMRG and AFQMC, remains robust in strongly correlated bond-breaking regimes where coupled-cluster methods fail, and smoothly extrapolates to the thermodynamic limit. We further demonstrate its scalability by computing ground-state potential energy curves for 2D graphene and 3D silicon. Finally, ablation studies validate the computational savings of our pruning strategy and highlight the dependence of the NNBF energies on basis sets.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-16T03:15:59Z</published>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>An-Jun Liu</name>
+    </author>
+    <author>
+      <name>Bryan K. Clark</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.01891v4</id>
+    <title>Probing Quantum Spin Systems with Kolmogorov-Arnold Neural Network Quantum States</title>
+    <updated>2025-06-27T21:50:31Z</updated>
+    <link href="https://arxiv.org/abs/2506.01891v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.01891v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural Quantum States (NQS) are a class of variational wave functions parametrized by neural networks (NNs) to study quantum many-body systems. In this work, we propose \texttt{SineKAN}, a NQS \textit{ansatz} based on Kolmogorov-Arnold Networks (KANs), to represent quantum mechanical wave functions as nested univariate functions. We show that \texttt{SineKAN} wavefunction with learnable sinusoidal activation functions can capture the ground state energies, fidelities and various correlation functions of the one dimensional Transverse-Field Ising model, Anisotropic Heisenberg model, and Antiferromagnetic $J_{1}-J_{2}$ model with different chain lengths. In our study of the $J_1-J_2$ model with $L=100$ sites, we find that the \texttt{SineKAN} model outperforms several previously explored neural quantum state \textit{ansätze}, including Restricted Boltzmann Machines (RBMs), Long Short-Term Memory models (LSTMs), and Multi-layer Perceptrons (MLP) \textit{a.k.a.} Feed Forward Neural Networks, when compared to the results obtained from the Density Matrix Renormalization Group (DMRG) algorithm. We find that \texttt{SineKAN} models can be trained to high precisions and accuracies with minimal computational costs.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-02T17:18:40Z</published>
+    <arxiv:comment>16 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mahmud Ashraf Shamim</name>
+    </author>
+    <author>
+      <name>Eric A F Reinhardt</name>
+    </author>
+    <author>
+      <name>Talal Ahmed Chowdhury</name>
+    </author>
+    <author>
+      <name>Sergei Gleyzer</name>
+    </author>
+    <author>
+      <name>Paulo T Araujo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18843v2</id>
+    <title>Efficient optimization of neural network backflow for ab-initio quantum chemistry</title>
+    <updated>2025-06-17T17:48:52Z</updated>
+    <link href="https://arxiv.org/abs/2502.18843v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.18843v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ground state of second-quantized quantum chemistry Hamiltonians is key to determining molecular properties. Neural quantum states (NQS) offer flexible and expressive wavefunction ansatze for this task but face two main challenges: highly peaked ground-state wavefunctions hinder efficient sampling, and local energy evaluations scale quartically with system size, incurring significant computational costs. In this work, we overcome these challenges by introducing a suite of algorithmic enhancements, which includes efficient periodic compact subspace construction, truncated local energy evaluations, improved stochastic sampling, and physics-informed modifications.
+  Applying these techniques to the neural network backflow (NNBF) ansatz, we demonstrate significant gains in both accuracy and scalability. Our enhanced method surpasses traditional quantum chemistry methods like CCSD and CCSD(T), outperforms other NQS approaches, and achieves competitive energies with state-of-the-art ab initio techniques such as HCI, ASCI, FCIQMC, and DMRG. A series of ablation and comparative studies quantifies the contribution of each enhancement to the observed improvements in accuracy and efficiency. Furthermore, we investigate the representational capacity of the ansatz, finding that its performance correlates with the inverse participation ratio (IPR), with more delocalized states being more challenging to approximate.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-26T05:31:08Z</published>
+    <arxiv:comment>This significant update features a major revision to the core algorithm by replacing the preselection with an efficient method constructing and intermittently updating the target space, new benchmark results for all-electron H2O and N2 systems, and two additional ablation studies providing deeper insights into the algorithmic enhancements</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>An-Jun Liu</name>
+    </author>
+    <author>
+      <name>Bryan K. Clark</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00096v2</id>
+    <title>Evidence for a $\mathbb{Z}_{2}$ Dirac spin liquid in the generalized Shastry-Sutherland model</title>
+    <updated>2026-03-16T10:48:37Z</updated>
+    <link href="https://arxiv.org/abs/2501.00096v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00096v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a multimethod investigation into the nature of the recently reported quantum spin liquid (QSL) phase in the spin-$1/2$ Heisenberg antiferromagnet on the Shastry-Sutherland lattice. A comprehensive projective symmetry group classification of fermionic mean-field Ansätze on this lattice yields 46 U(1) and 80 $\mathbb{Z}_2$ states. Using density-matrix renormalization group (DMRG) and exact diagonalization calculations, we find that the Shastry-Sutherland model and the square-lattice $J_1$-$J_2$ Heisenberg antiferromagnet share the same QSL phase. Motivated by this observation, we establish an explicit mapping of our Ansätze to those on the square lattice, and identify the counterpart of the square-lattice $\mathbb{Z}_2$ Dirac QSL (Z2A$zz$13) in the Shastry-Sutherland system. Employing state-of-the-art variational Monte Carlo calculations with Gutzwiller-projected wavefunctions, further improved by Lánczos steps, we demonstrate excellent agreement in both energies and correlation functions between a gapless (Dirac) $\mathbb{Z}_2$ spin liquid-characterized by only a few variational parameters-and results obtained from neural quantum states and DMRG. Finally, we apply the recently developed Keldysh formulation of the pseudo-fermion functional renormalization group to compute the dynamical spin structure factor. The resulting spectra exhibit features consistent with Dirac cones in the excitation spectrum, providing strong independent evidence for a Dirac QSL ground state. Our identification of a $d$-wave pairing $\mathbb{Z}_2$ Dirac QSL is consistent with recently observed signatures of QSL behavior in Pr$_2$Ga$_2$BeO$_7$ and outlines predictions for future experiments.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T19:00:00Z</published>
+    <arxiv:comment>52 pages, 36 figures, 16 tables</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Atanu Maity</name>
+    </author>
+    <author>
+      <name>Francesco Ferrari</name>
+    </author>
+    <author>
+      <name>Sylvain Capponi</name>
+    </author>
+    <author>
+      <name>Karlo Penc</name>
+    </author>
+    <author>
+      <name>Janik Potten</name>
+    </author>
+    <author>
+      <name>Tobias Müller</name>
+    </author>
+    <author>
+      <name>Andreas Feuerpfeil</name>
+    </author>
+    <author>
+      <name>Ronny Thomale</name>
+    </author>
+    <author>
+      <name>Jong Yeon Lee</name>
+    </author>
+    <author>
+      <name>Rhine Samajdar</name>
+    </author>
+    <author>
+      <name>Yasir Iqbal</name>
+    </author>
+  </entry>
+</feed>

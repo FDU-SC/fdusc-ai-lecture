@@ -1,0 +1,363 @@
+ Models with downloadable weights currently lag behind the top-performing models | Epoch AI 
+ Latest Our work Featured Trends & statistics Data explorers Capabilities & Benchmarking Publications Papers & reports Data Insights Newsletter Podcast All Publications Data explorers Capabilities Models Data centers Chip owners Companies Polling on AI use All Data Explorers Our benchmarks Epoch Capabilities Index MirrorCode FrontierMath: Open problems EBR-bench Topics AI progress Scaling Software progress Open models Capabilities & benchmarks Math Industry Leading companies Finances Geopolitics Infrastructure Chips Data centers Energy Impacts Adoption & use Economic impact Future of AI About Who we are About Team Transparency Engage with us Careers Press Consultations Donate Contact 
+ Latest Our work Featured Trends & statistics Data explorers Capabilities & Benchmarking Publications Papers & reports Data Insights Newsletter Podcast All Publications Data explorers Capabilities Models Data centers Chip owners Companies Polling on AI use All Data Explorers Our benchmarks Epoch Capabilities Index MirrorCode FrontierMath: Open problems EBR-bench Navigate by topic AI progress Scaling Software progress Open models Capabilities & benchmarks Math Industry Leading companies Finances Geopolitics Infrastructure Chips Data centers Energy Impacts Adoption & use Economic impact Future of AI About Who we are About Team Transparency Engage with us Careers Press Consultations Donate Contact 
+ Data Insights 
+ Models with downloadable weights currently lag behind the top-performing models Data Insight Nov. 27, 2024 Updated Feb. 7, 2025 Models with downloadable weights currently lag behind the top-performing models 
+ Cite By Jean-Stanislas Denain The models with the highest GPQA Diamond and MATH Level 5 accuracies tend not to have downloadable weights. For example, on GPQA Diamond OpenAI’s o1 outperformed the best-performing downloadable model at the time, Phi-4, by 20 percentage points. Similarly on MATH Level 5, Phi-4 lagged behind o1 by 29 percentage points. Benchmark GPQA Diamond MATH Level 5 GPQA Diamond model accuracies Name | Release date | Training compute (FLOP) | Training compute notes | Benchmark | Evaluation setting | Temperature | Top-p | Prompt template | Organization | Country | Accessibility | API | API name | Full API name | Accuracy | Accuracy std | 
+ Claude 2 | 2023-07-11 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Anthropic | United States of America | API access | Anthropic | claude-2.0 | anthropic/claude-2.0 | 0.35 | 0.0302 | 
+ Claude 2.1 | 2023-11-21 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Anthropic | United States of America | API access | Anthropic | claude-2.1 | anthropic/claude-2.1 | 0.36 | 0.0228 | 
+ Claude 3 Haiku | 2024-03-04 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Anthropic | United States of America | API access | Anthropic | claude-3-haiku-20240307 | anthropic/claude-3-haiku-20240307 | 0.34 | 0.0286 | 
+ Claude 3 Opus | 2024-03-04 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Anthropic | United States of America | API access | Anthropic | claude-3-opus-20240229 | anthropic/claude-3-opus-20240229 | 0.48 | 0.0300 | 
+ Claude 3 Sonnet | 2024-03-04 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Anthropic | United States of America | API access | Anthropic | claude-3-sonnet-20240229 | anthropic/claude-3-sonnet-20240229 | 0.39 | 0.0303 | 
+ Claude 3.5 Sonnet (2024-06-20) | 2024-06-20 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Anthropic | United States of America | API access | Anthropic | claude-3-5-sonnet-20240620 | anthropic/claude-3-5-sonnet-20240620 | 0.56 | 0.0254 | 
+ Claude 3.5 Sonnet (2024-10-22) | 2024-10-22 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of this response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Anthropic | United States of America | API access | Anthropic | claude-3-5-sonnet-20241022 | anthropic/claude-3-5-sonnet-20241022 | 0.58 | 0.0233 | 
+ DBRX | 2024-03-27 | 2.6e+24 | Mixture of Experts (MoE)
+36 billion active params * 12 trillion tokens * 6 ~= 2.6e24
+https://www.wolframalpha.com/input?i=6+FLOP+*+36+billion+*+12+trillion
+also, it was trained on 3072 NVIDIA H100s, but with an unclear timeframe (end-end process was three months, including evals and red-teaming). | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Databricks | United States of America | Open weights (restricted use) | Together | dbrx-instruct | together/databricks/dbrx-instruct | 0.30 | 0.0370 | 
+ DeepSeek LLM 67B | 2024-01-05 | 8.0e+23 | 67B * 2T * 6 = 8.04e23 | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | DeepSeek | China | Open weights (restricted use) | vLLM | deepseek-llm-67b-chat | custom_vllm_provider/deepseek-ai/deepseek-llm-67b-chat | 0.21 | 0.0224 | 
+ DeepSeek-Coder-V2 236B | 2024-06-17 | 1.3e+24 | Trained on a total of 10.2T tokens
+6NC: 6 * 10.2T * 21B active parameters = 1.285e24 | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | DeepSeek | China | Open weights (restricted use) | DeepSeek | deepseek-coder | openai/deepseek-coder | 0.43 | 0.0157 | 
+ DeepSeek-V2 | 2024-05-07 | 1.0e+24 | 21b active params * 8.1 trillion * 6 = 1.02e24 | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | DeepSeek | China | Open weights (restricted use) | DeepSeek | deepseek-chat | openai/deepseek-chat | 0.42 | 0.0200 | 
+ GLM-4 (0520) | 2024-06-18 | 1.2e+25 | - “the GLM-4 models are pre-trained on ten trillions of tokens”
+- I did not find any information about parameters or compute. Over here they speculatively estimate GLM-4 to be 200B parameters (which seems plausible to me), though no source provided. 
+- “GLM-4 gets close to the state-of-the-art models (GPT-4-Turbo, Gemini 1.5 Pro, and Claude 3 Opus)” none of these models has parameters disclosed or compute estimation.
+6*10000000000000*200000000000 = 1.2e+25 FLOPs with “Likely” confidence (+/- 1 OOM) | GPQA (Diamond Set) | Simple-eval | 0.95 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Zhipu AI | China | API access | BigModel | glm-4 | openai/glm-4 | 0.36 | 0.0266 | 
+ GPT-3.5 Turbo (2024-01-25) | 2024-01-25 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | gpt-3.5-turbo-0125 | openai/gpt-3.5-turbo-0125 | 0.30 | 0.0302 | 
+ GPT-4 (2023-06-13) | 2023-06-13 | 2.1e+25 | 90% CI: 8.2E+24 to 4.4E+25
+NOTE: this is a rough estimate based on public information, much less information than most other systems in the database.
+Calculation and confidence intervals here: https://colab.research.google.com/drive/1O99z9b1I5O66bT78r9ScslE_nOj5irN9?usp=sharing | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | gpt-4-0613 | openai/gpt-4-0613 | 0.33 | 0.0333 | 
+ GPT-4 Turbo (2023-11-06) | 2023-11-06 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | gpt-4-1106-preview | openai/gpt-4-1106-preview | 0.43 | 0.0200 | 
+ GPT-4o (2024-05-13) | 2024-05-13 | | Not known. But it's more capable than GPT-4, Gemini 1 Ultra, etc | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | gpt-4o-2024-05-13 | openai/gpt-4o-2024-05-13 | 0.49 | 0.0256 | 
+ GPT-4o (2024-08-06) | 2024-08-06 | | Not known. But it's more capable than GPT-4, Gemini 1 Ultra, etc | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | gpt-4o-2024-08-06 | openai/gpt-4o-2024-08-06 | 0.49 | 0.0251 | 
+ GPT-4o mini (2024-07-18) | 2024-07-18 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | gpt-4o-mini-2024-07-18 | openai/gpt-4o-mini-2024-07-18 | 0.40 | 0.0233 | 
+ Gemini 1.0 Pro (2024-04-09) | 2024-04-09 | | Not known.
+Our reasoning and calculations for Gemini 1 Ultra are detailed in this Colab notebook.
+https://colab.research.google.com/drive/1sfG91UfiYpEYnj_xB5YRy07T5dv-9O_c | GPQA (Diamond Set) | Simple-eval | 1.00 | 0.95 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.0-pro-002 | google/gemini-1.0-pro-002 | 0.34 | 0.0217 | 
+ Gemini 1.5 Flash (2024-05-10) | 2024-05-10 | | "Gemini 1.5 Flash is a dense Transformer based model that is online distilled [...] from Gemini 1.5 Pro."
+So Flash implicitly includes training compute of 1.5 Pro. | GPQA (Diamond Set) | Simple-eval | 1.00 | 0.95 | Answer the following multiple choice question. The last line of this response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-flash-001 | google/gemini-1.5-flash-001 | 0.41 | 0.0267 | 
+ Gemini 1.5 Flash (2024-08-27) | 2024-08-27 | | "Gemini 1.5 Flash is a dense Transformer based model that is online distilled [...] from Gemini 1.5 Pro."
+So Flash implicitly includes training compute of 1.5 Pro. | GPQA (Diamond Set) | Simple-eval | 1.00 | 0.95 | Answer the following multiple choice question. The last line of this response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-flash-exp-0827 | google/gemini-1.5-flash-exp-0827 | 0.50 | 0.0269 | 
+ Gemini 1.5 Flash (2024-09-24) | 2024-09-24 | | "Gemini 1.5 Flash is a dense Transformer based model that is online distilled [...] from Gemini 1.5 Pro."
+So Flash implicitly includes training compute of 1.5 Pro. | GPQA (Diamond Set) | Simple-eval | 1.00 | 0.95 | Answer the following multiple choice question. The last line of this response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-flash-002 | google/gemini-1.5-flash-002 | 0.49 | 0.0294 | 
+ Gemini 1.5 Pro (2024-02-15) | 2024-02-15 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 0.95 | Answer the following multiple choice question. The last line of this response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-pro-001 | google/gemini-1.5-pro-001 | 0.45 | 0.0179 | 
+ Gemini 1.5 Pro (2024-09-24) | 2024-09-24 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 0.95 | Answer the following multiple choice question. The last line of this response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-pro-002 | google/gemini-1.5-pro-002 | 0.58 | 0.0343 | 
+ Gemma 2 27B | 2024-06-24 | 2.1e+24 | "For the 27B model, we train on an 8x24x32 configuration of
+TPUv5p, totaling 6144 chips"
+trained on 13T tokens
+6ND = 6*27000000000*13000000000000=2.106e+24 | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | Open weights (restricted use) | Together | gemma-2-27b-it | together/google/gemma-2-27b-it | 0.35 | 0.0165 | 
+ Gemma 2 9B | 2024-06-24 | 4.3e+23 | "For the 9B model, we train on an 8x16x32 configuration of TPUv4, totaling 4096 chips"
+6ND = 6*9000000000*8000000000000=4.32e+23 | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | Open weights (restricted use) | Together | gemma-2-9b-it | together/google/gemma-2-9b-it | 0.32 | 0.0149 | 
+ Hermes 2 Theta Llama-3 70B | 2024-06-20 | 6.3e+24 | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Nous Research | United States of America | Open weights (unrestricted) | vLLM | Hermes-2-Theta-Llama-3-70B | custom_vllm_provider/NousResearch/Hermes-2-Theta-Llama-3-70B | 0.37 | 0.0045 | 
+ Llama 2-70B | 2023-07-18 | 8.1e+23 | "Pretraining utilized a cumulative 3.3M GPU hours of computation on hardware of type A100-80GB" of which 1720320 GPU hours were used to train the 70B model.
+311.84 BF16 TFLOP/s * 1720320 hours * 0.40 utilization = 7.725e+23 FLOP.
+Alternatively: the model was trained for 1 epoch on 2 trillion tokens and has 70B parameters. C = 6ND = 6*70B*2T = 8.4e+23 FLOP. | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Meta AI | United States of America | Open weights (restricted use) | vLLM | Llama-2-70b-chat-hf | custom_vllm_provider/meta-llama/Llama-2-70b-chat-hf | 0.25 | 0.0058 | 
+ Llama 3-70B | 2024-04-18 | 7.9e+24 | Arithmetic calculation:
+6 * 15T tokens * 70B parameters = 6.3e24
+GPU calculation:
+https://huggingface.co/meta-llama/Meta-Llama-3-70B indicates training took 6.4M GPU-hours
+We also know their larger scale training runs for 405B were getting between 0.38-0.41 MFU. Presumably the 70B model gets at least 0.43 utilization (405B has to be split across two nodes, while 70B should fit on one).
+990 TFLOPS per GPU * 6.4 million GPU hours * 3600s * 0.43 = 9.808e24
+Geometric mean: sqrt(6.3e24 * 9.808e24) = 7.861e24 | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Meta AI | United States of America | Open weights (restricted use) | Together | Llama-3-70b-chat-hf | together/meta-llama/Llama-3-70b-chat-hf | 0.38 | 0.0367 | 
+ Llama 3-8B | 2024-04-18 | 7.2e+23 | | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Meta AI | United States of America | Open weights (restricted use) | Together | Llama-3-8b-chat-hf | together/meta-llama/Llama-3-8b-chat-hf | 0.30 | 0.0402 | 
+ Llama 3.1-405B | 2024-07-23 | 3.8e+25 | Stated in paper.
+Also, 6 * 405B * 15.6T training tokens = 3.8e25 | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Meta AI | United States of America | Open weights (restricted use) | Hyperbolic | Meta-Llama-3.1-405B-Instruct | openai/meta-llama/Meta-Llama-3.1-405B-Instruct | 0.51 | 0.0305 | 
+ Llama 3.1-70B | 2024-07-23 | 7.9e+24 | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Meta AI | United States of America | Open weights (restricted use) | Hyperbolic | Meta-Llama-3.1-70B-Instruct | openai/meta-llama/Meta-Llama-3.1-70B-Instruct | 0.45 | 0.0231 | 
+ Llama 3.1-8B | 2024-07-23 | | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Meta AI | United States of America | Open weights (restricted use) | Hyperbolic | Meta-Llama-3.1-8B-Instruct | openai/meta-llama/Meta-Llama-3.1-8B-Instruct | 0.25 | 0.0413 | 
+ Mistral 7B | 2023-10-10 | | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mistral-7b | mistral/open-mistral-7b | 0.14 | 0.0213 | 
+ Mistral Large | 2024-02-26 | 1.1e+25 | https://www.wsj.com/tech/ai/the-9-month-old-ai-startup-challenging-silicon-valleys-giants-ee2e4c48
+Mistral spent <20 million euro (meaning approximately 20 million?) to train Mistral Large:
+https://x.com/EMostaque/status/1762152740938031484?s=20
+"assuming this is on H100s with @Scaleway who are €1.9/hour => 10m H100 hours (c 30m A100 hrs), 3 months at 4k H100s :timer_clock:" -Emad Mostaque
+Assuming bf16 or fp16, H100 SXM performance is 989 TFLOPS
+At 1.9 euro per H100-hour and 30% utilization, spending 20M euro produces 1.12*10^25 FLOP.
+https://www.wolframalpha.com/input?i=20+million+%2F+%281.9%2Fhour%29+*+989+TFLOPS+*+0.30 | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of this response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Mistral AI | France | API access | Mistral | mistral-large-2402 | mistralai/mistral-large-2402 | 0.34 | 0.0204 | 
+ Mistral Large 2 | 2024-07-24 | | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Mistral AI | France | Open weights (non-commercial) | Mistral | mistral-large-2407 | mistral/mistral-large-2407 | 0.49 | 0.0255 | 
+ Mistral NeMo | 2024-07-18 | | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mistral-nemo | mistral/open-mistral-nemo | 0.30 | 0.0326 | 
+ Mixtral 8x22B | 2024-04-17 | | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mixtral-8x22b | mistral/open-mixtral-8x22b | 0.33 | 0.0341 | 
+ Mixtral 8x7B | 2023-12-11 | | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mixtral-8x7b | mistral/open-mixtral-8x7b | 0.29 | 0.0250 | 
+ Nemotron-4 340B | 2024-06-14 | 1.8e+25 | 9 trillion tokens for training
+6 * 340B * 9T = 1.8E25
+alternatively, can do a hardware estimate with a few extra steps:
+According to the technical report, Nemotron-4 340B was trained using up to 6144 H100 GPUs. Helpfully, they also report the model FLOP utilization (MFU), which was 41-42% (Table 2). This is the ratio of the actual output of their GPUs, in FLOP used for training, relative to their theoretical max of 989 teraFLOP/s per GPU. 
+Unfortunately, the report omits the last ingredient, which is the duration of the training run. However, in Table 2 they report some relevant data that we can use to infer the training time. 
+Nemotron-4 was trained in several stages, but the largest stage used all 6144 GPUs with a batch size of 2304 and an iteration time (time per batch) of 8.0 seconds. This stage involved 7.6T tokens, so it makes up the majority of training. 
+A batch size of 2304 means that each batch consists of 2304 sequences, and they report that the sequence length used for training was 4096 tokens. This means that each batch contained 4096 * 2304 = 9,437,184 tokens. 
+So, during this stage, it took 8 seconds to train the model on 9.4m tokens. Extrapolating to the entire 9T token dataset, this implies the training run would have taken 7,659,574 seconds, or 89 days. (it actually took longer because they didn't use all their GPUs for the whole run) 
+Multiplying 7,659,574 seconds by 41% MFU, 989 peak teraFLOP/s for each H100, and 6144 H100s, we get ~1.9e25 FLOP. This is very close to our first estimate. 
+ | GPQA (Diamond Set) | Simple-eval | 0.20 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | NVIDIA | United States of America | Open weights (unrestricted) | NVIDIA | nemotron-4-340b-instruct | openai/nvidia/nemotron-4-340b-instruct | 0.42 | 0.0236 | 
+ Qwen1.5 72B | 2024-02-04 | 1.3e+24 | 3T training tokens: https://github.com/QwenLM/Qwen2/issues/97 
+6 * 72 billion * 3 trillion = ~1.3e24 | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Alibaba | China | Open weights (restricted use) | Together | Qwen1.5-72B-Chat | together/Qwen/Qwen1.5-72B-Chat | 0.29 | 0.0430 | 
+ Qwen1.5-110B | 2024-04-25 | | lower bound is taken from Qwen1.5 72B training compute estimation | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Alibaba | China | Open weights (unrestricted) | Together | Qwen1.5-110B-Chat | together/Qwen/Qwen1.5-110B-Chat | 0.30 | 0.0321 | 
+ Qwen1.5. 32B | 2024-04-25 | | | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Qwen | China | Open weights (unrestricted) | vLLM | Qwen1.5-32B-Chat | custom_vllm_provider/Qwen/Qwen1.5-32B-Chat | 0.18 | 0.0111 | 
+ Qwen2-72B | 2024-06-07 | 3.0e+24 | 72 billion params, 7 trillion tokens
+6 * 72 billion * 7 trillion ~= 3.02e24 | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | Alibaba | China | Open weights (unrestricted) | Together | Qwen2-72B-Instruct | together/Qwen/Qwen2-72B-Instruct | 0.38 | 0.0248 | 
+ Yi-1.5-34B | 2024-05-13 | 7.3e+23 | 6*34*10^9*3.6*10^12 = 7.344e+23 | GPQA (Diamond Set) | Simple-eval | 0.70 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | 01.AI | China | Open weights (restricted use) | vLLM | Yi-1.5-34B-Chat | custom_vllm_provider/01-ai/Yi-1.5-34B-Chat | 0.06 | 0.0140 | 
+ Yi-34B | 2023-11-02 | 6.1e+23 | "The dataset we use contains Chinese & English only. We used approximately 3T tokens" sounds like this means it was trained on 3T tokens, not necessarily that the dataset contains 3T tokens?
+If so, 34b * 3T * 6 = 6.1e23 | GPQA (Diamond Set) | Simple-eval | 0.70 | 0.70 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | 01.AI | China | Open weights (restricted use) | Together | Yi-34B-Chat | together/zero-one-ai/Yi-34B-Chat | 0.16 | 0.0210 | 
+ o1-mini | 2024-09-12 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | o1-mini-2024-09-12 | openai/o1-mini-2024-09-12 | 0.61 | 0.0256 | 
+ o1-preview | 2024-09-12 | | | GPQA (Diamond Set) | Simple-eval | 1.00 | 1.00 | Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+{question}
+{choices} | OpenAI | United States of America | API access | OpenAI | o1-preview-2024-09-12 | openai/o1-preview-2024-09-12 | 0.70 | 0.0253 | 
+ Enable JavaScript to see an interactive visualization. MATH Level 5 model accuracies Name | Release date | Training compute (FLOP) | Training compute notes | Benchmark | Evaluation setting | Temperature | Top-p | Prompt template | Organization | Country | Accessibility | API | API name | Full API name | Accuracy | Accuracy std | 
+ Claude 2 | 2023-07-11 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Anthropic | United States of America | API access | Anthropic | claude-2.0 | anthropic/claude-2.0 | 0.10 | | 
+ Claude 2.1 | 2023-11-21 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Anthropic | United States of America | API access | Anthropic | claude-2.1 | anthropic/claude-2.1 | 0.11 | | 
+ Claude 3 Haiku | 2024-03-04 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Anthropic | United States of America | API access | Anthropic | claude-3-haiku-20240307 | anthropic/claude-3-haiku-20240307 | 0.13 | | 
+ Claude 3 Opus | 2024-03-04 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Anthropic | United States of America | API access | Anthropic | claude-3-opus-20240229 | anthropic/claude-3-opus-20240229 | 0.34 | | 
+ Claude 3 Sonnet | 2024-03-04 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Anthropic | United States of America | API access | Anthropic | claude-3-sonnet-20240229 | anthropic/claude-3-sonnet-20240229 | 0.16 | | 
+ Claude 3.5 Sonnet (2024-06-20) | 2024-06-20 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Anthropic | United States of America | API access | Anthropic | claude-3-5-sonnet-20240620 | anthropic/claude-3-5-sonnet-20240620 | 0.46 | | 
+ Claude 3.5 Sonnet (2024-10-22) | 2024-10-22 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Anthropic | United States of America | API access | Anthropic | claude-3-5-sonnet-20241022 | anthropic/claude-3-5-sonnet-20241022 | 0.53 | | 
+ DeepSeek-V2.5 | 2024-09-06 | 1.8e+24 | V2.5 is a merge of V2-coder and V2-chat
+V2-coder is trained for 6T additional tokens from an intermediate checkpoint of V2, which had been trained for 4.2T tokens. Total: 10.2T
+V2-chat is fine-tuned from V2, saw 8.2T tokens in pre-training
+Unique steps: 8.2T + 6T = 14.2T
+FLOPs: 6 * 21B * 14.2T = 1.7892e24 | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | DeepSeek | China | Open weights (restricted use) | DeepSeek | deepseek-chat | deepseek/deepseek-chat | 0.46 | | 
+ GPT-3.5 Turbo (2023-11-06) | 2023-11-06 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-3.5-turbo-1106 | openai/gpt-3.5-turbo-1106 | 0.15 | | 
+ GPT-3.5 Turbo (2024-01-25) | 2024-01-25 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-3.5-turbo-0125 | openai/gpt-3.5-turbo-0125 | 0.11 | | 
+ GPT-4 (2023-06-13) | 2023-06-13 | 2.1e+25 | 90% CI: 8.2E+24 to 4.4E+25
+NOTE: this is a rough estimate based on public information, much less information than most other systems in the database.
+Calculation and confidence intervals here: https://colab.research.google.com/drive/1O99z9b1I5O66bT78r9ScslE_nOj5irN9?usp=sharing | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-4-0613 | openai/gpt-4-0613 | 0.21 | | 
+ GPT-4 Turbo (2023-11-06) | 2023-11-06 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-4-1106-preview | openai/gpt-4-1106-preview | 0.36 | | 
+ GPT-4 Turbo (2024-01-25) | 2024-01-25 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-4-0125-preview | openai/gpt-4-0125-preview | 0.34 | | 
+ GPT-4o (2024-05-13) | 2024-05-13 | | Not known. But it's more capable than GPT-4, Gemini 1 Ultra, etc | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-4o-2024-05-13 | openai/gpt-4o-2024-05-13 | 0.48 | | 
+ GPT-4o (2024-08-06) | 2024-08-06 | | Not known. But it's more capable than GPT-4, Gemini 1 Ultra, etc | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-4o-2024-08-06 | openai/gpt-4o-2024-08-06 | 0.47 | | 
+ GPT-4o mini (2024-07-18) | 2024-07-18 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | gpt-4o-mini-2024-07-18 | openai/gpt-4o-mini-2024-07-18 | 0.48 | | 
+ Gemini 1.5 Flash (2024-05-10) | 2024-05-10 | | "Gemini 1.5 Flash is a dense Transformer based model that is online distilled [...] from Gemini 1.5 Pro."
+So Flash implicitly includes training compute of 1.5 Pro. | MATH 5 | | 1.0 | 0.95 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-flash-001 | google/gemini-1.5-flash-001 | 0.23 | | 
+ Gemini 1.5 Flash (2024-09-24) | 2024-09-24 | | "Gemini 1.5 Flash is a dense Transformer based model that is online distilled [...] from Gemini 1.5 Pro."
+So Flash implicitly includes training compute of 1.5 Pro. | MATH 5 | | 1.0 | 0.95 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-flash-002 | google/gemini-1.5-flash-002 | 0.58 | | 
+ Gemini 1.5 Pro (2024-02-15) | 2024-02-15 | | | MATH 5 | | 0.9 | 0.95 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-pro-001 | google/gemini-1.5-pro-001 | 0.36 | | 
+ Gemini 1.5 Pro (2024-09-24) | 2024-09-24 | | | MATH 5 | | 1.0 | 0.95 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | API access | Gemini | gemini-1.5-pro-002 | google/gemini-1.5-pro-002 | 0.67 | | 
+ Gemma 2 27B | 2024-06-24 | 2.1e+24 | "For the 27B model, we train on an 8x24x32 configuration of
+TPUv5p, totaling 6144 chips"
+trained on 13T tokens
+6ND = 6*27000000000*13000000000000=2.106e+24 | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | Open weights (restricted use) | Together | gemma-2-27b-it | together/google/gemma-2-27b-it | 0.23 | | 
+ Gemma 2 9B | 2024-06-24 | 4.3e+23 | "For the 9B model, we train on an 8x16x32 configuration of TPUv4, totaling 4096 chips"
+6ND = 6*9000000000*8000000000000=4.32e+23 | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Google DeepMind | Multinational,United States of America,United Kingdom of Great Britain and Northern Ireland | Open weights (restricted use) | Together | gemma-2-9b-it | together/google/gemma-2-9b-it | 0.18 | | 
+ Grok-2 Beta | 2024-08-13 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | xAI | United States of America | Hosted access (no API) | XAI | grok-beta | xai/grok-beta | 0.40 | | 
+ Llama 3-70B | 2024-04-18 | 7.9e+24 | Arithmetic calculation:
+6 * 15T tokens * 70B parameters = 6.3e24
+GPU calculation:
+https://huggingface.co/meta-llama/Meta-Llama-3-70B indicates training took 6.4M GPU-hours
+We also know their larger scale training runs for 405B were getting between 0.38-0.41 MFU. Presumably the 70B model gets at least 0.43 utilization (405B has to be split across two nodes, while 70B should fit on one).
+990 TFLOPS per GPU * 6.4 million GPU hours * 3600s * 0.43 = 9.808e24
+Geometric mean: sqrt(6.3e24 * 9.808e24) = 7.861e24 | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Meta AI | United States of America | Open weights (restricted use) | Together | Llama-3-70b-chat-hf | together/meta-llama/Llama-3-70b-chat-hf | 0.22 | | 
+ Llama 3-8B | 2024-04-18 | 7.2e+23 | | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Meta AI | United States of America | Open weights (restricted use) | Together | Llama-3-8b-chat-hf | together/meta-llama/Llama-3-8b-chat-hf | 0.08 | | 
+ Llama 3.1-405B | 2024-07-23 | 3.8e+25 | Stated in paper.
+Also, 6 * 405B * 15.6T training tokens = 3.8e25 | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Meta AI | United States of America | Open weights (restricted use) | SambaNova | Meta-Llama-3.1-405B-Instruct | sambanova/Meta-Llama-3.1-405B-Instruct | 0.45 | | 
+ Llama 3.1-70B | 2024-07-23 | 7.9e+24 | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Meta AI | United States of America | Open weights (restricted use) | SambaNova | Meta-Llama-3.1-70B-Instruct | sambanova/Meta-Llama-3.1-70B-Instruct | 0.39 | | 
+ Llama 3.1-8B | 2024-07-23 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Meta AI | United States of America | Open weights (restricted use) | SambaNova | Meta-Llama-3.1-8B-Instruct | sambanova/Meta-Llama-3.1-8B-Instruct | 0.22 | | 
+ Ministral 3B | 2024-02-26 | | | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | API access | Mistral | ministral-3b-2410 | mistral/ministral-3b-2410 | 0.12 | | 
+ Ministral 8B | 2024-02-26 | | | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | API access | Mistral | ministral-8b-2410 | mistral/ministral-8b-2410 | 0.11 | | 
+ Mistral 7B | 2023-10-10 | | | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mistral-7b | mistral/open-mistral-7b | 0.03 | | 
+ Mistral Large | 2024-02-26 | 1.1e+25 | https://www.wsj.com/tech/ai/the-9-month-old-ai-startup-challenging-silicon-valleys-giants-ee2e4c48
+Mistral spent <20 million euro (meaning approximately 20 million?) to train Mistral Large:
+https://x.com/EMostaque/status/1762152740938031484?s=20
+"assuming this is on H100s with @Scaleway who are €1.9/hour => 10m H100 hours (c 30m A100 hrs), 3 months at 4k H100s :timer_clock:" -Emad Mostaque
+Assuming bf16 or fp16, H100 SXM performance is 989 TFLOPS
+At 1.9 euro per H100-hour and 30% utilization, spending 20M euro produces 1.12*10^25 FLOP.
+https://www.wolframalpha.com/input?i=20+million+%2F+%281.9%2Fhour%29+*+989+TFLOPS+*+0.30 | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | API access | Mistral | mistral-large-2402 | mistral/mistral-large-2402 | 0.21 | | 
+ Mistral Large 2 | 2024-07-24 | | | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | Open weights (non-commercial) | Mistral | mistral-large-2407 | mistral/mistral-large-2407 | 0.44 | | 
+ Mistral NeMo | 2024-07-18 | | | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mistral-nemo-2407 | mistral/open-mistral-nemo-2407 | 0.10 | | 
+ Mixtral 8x22B | 2024-04-17 | | | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mixtral-8x22b | mistral/open-mixtral-8x22b | 0.23 | | 
+ Mixtral 8x7B | 2023-12-11 | | | MATH 5 | | 0.7 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Mistral AI | France | Open weights (unrestricted) | Mistral | open-mixtral-8x7b | mistral/open-mixtral-8x7b | 0.07 | | 
+ Qwen1.5 72B | 2024-02-04 | 1.3e+24 | 3T training tokens: https://github.com/QwenLM/Qwen2/issues/97 
+6 * 72 billion * 3 trillion = ~1.3e24 | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Alibaba | China | Open weights (restricted use) | Together | Qwen1.5-72B-Chat | together/Qwen/Qwen1.5-72B-Chat | 0.19 | | 
+ Qwen2-72B | 2024-06-07 | 3.0e+24 | 72 billion params, 7 trillion tokens
+6 * 72 billion * 7 trillion ~= 3.02e24 | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Alibaba | China | Open weights (unrestricted) | Together | Qwen2-72B-Instruct | together/Qwen/Qwen2-72B-Instruct | 0.43 | | 
+ Qwen2.5-72B | 2024-09-19 | 7.8e+24 | Training dataset size was 18 trillion
+6 * 72.7 billion * 18 trillion = 7.8e24 | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Alibaba | China | Open weights (unrestricted) | Together | Qwen2.5-72B-Instruct-Turbo | together/Qwen/Qwen2.5-72B-Instruct-Turbo | 0.58 | | 
+ Wizard LM 2 8x22B | 2024-02-26 | | | MATH 5 | | 0.7 | 0.70 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | Microsoft | United States of America | Open weights (restricted use) | Together | WizardLM-2-8x22B | together/microsoft/WizardLM-2-8x22B | 0.22 | | 
+ o1-mini | 2024-09-12 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | o1-mini-2024-09-12 | openai/o1-mini-2024-09-12 | 0.81 | | 
+ o1-preview | 2024-09-12 | | | MATH 5 | | 1.0 | 1.00 | Solve the following math problem step by step. The last line of your response should be of the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem.
+{prompt}
+Remember to put your answer on its own line at the end in the form "ANSWER: $ANSWER" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \boxed command. | OpenAI | United States of America | API access | OpenAI | o1-preview-2024-09-12 | openai/o1-preview-2024-09-12 | 0.68 | | 
+ Enable JavaScript to see an interactive visualization. We further analyzed how far behind open models are in this article , where we found that the best-performing open LLMs lagged the best-performing closed LLMs by between 6 months on GPQA Diamond and 20 months on MMLU. 
+ However, the release of DeepSeek-R1 in January 2025 showed that the performance gap between open-weights and closed-weights has significantly decreased. For example, on MATH Level 5 DeepSeek-R1 only lags behind the current best-performing model, o3-mini, by 2 percentage points. Epoch's work is free to use, distribute, and reproduce provided the source and authors are credited under the Creative Commons BY license. Download this data GPQA Diamond model accuracies CSV , Updated Nov. 21, 2025 
+ MATH Level 5 model accuracies CSV , Updated Nov. 21, 2025 
+ Explore this data Capabilities & Benchmarking Benchmark results featuring the performance of leading AI models on challenging tasks. Related topics Adoption and use Capabilities Open models Cite 
+ Epoch AI’s work is free to use, distribute, and reproduce provided the source and authors are credited under the Creative Commons Attribution license . Citation Jean-Stanislas Denain (2025), "Models with downloadable weights currently lag behind the top-performing models". Published online at epoch.ai. Retrieved from 'https://epoch.ai/data-insights/open-vs-closed-model-performance' [online resource]. Accessed 16 Sept 2026. BibTeX Citation @misc{epoch2025openvsclosedmodelperformance,
+title={Models with downloadable weights currently lag behind the top-performing models},
+author={Jean-Stanislas Denain},
+year={2025},
+url={https://epoch.ai/data-insights/open-vs-closed-model-performance},
+note={Accessed: 2026-09-16}} Investigating the trajectory of AI for the benefit of society Get the latest from Epoch AI in your inbox Subscribe 
+ Our Work Latest AI Trends & Statistics Publications Data Insights Newsletter: Gradient Updates Podcast Data on AI Models AI Data Centers Hardware Companies Chip Sales Polling Benchmarking Capabilities & Benchmarking FrontierMath Company About Team Consultations Transparency Donate Careers © 2026 Epoch AI Privacy Policy Cookie Policy Designed by And—Now 
+ Feedback Feedback 
+ Have a question? Noticed something wrong? Let us know. Message If you would like a reply, please include your name and email address. Name Email address Cancel Submit Models with downloadable weights currently lag behind the top-performing models Epoch AI is a research institute investigating key trends and questions that will shape the trajectory and governance of Artificial Intelligence. 

@@ -1,0 +1,254 @@
+{
+ "id": "093b9df2-ebee-4309-943f-5a7e88360adf",
+ "slug": "gemini-3-5-flash-lite",
+ "name": "Gemini 3.5 Flash-Lite",
+ "shortName": "Gemini 3.5 Flash-Lite",
+ "chartDefaultSelected": true,
+ "chartHighlighted": false,
+ "releaseDate": "2026-07-21",
+ "knowledgeCutoffDate": null,
+ "isReasoning": true,
+ "reasoningTokens": 0,
+ "effort": {
+  "slug": "high",
+  "label": "high",
+  "level": 40
+ },
+ "release": {
+  "slug": "gemini-3-5-flash-lite",
+  "name": "Gemini 3.5 Flash-Lite"
+ },
+ "deprecated": false,
+ "deprecatedTo": null,
+ "isOpenWeights": false,
+ "openSourceCategorization": "proprietary",
+ "parameters": null,
+ "inferenceParametersActiveBillions": null,
+ "sizeClass": "medium",
+ "contextWindowTokens": 1000000,
+ "licenseName": null,
+ "licenseUrl": null,
+ "modelWeightsSourceUrl": null,
+ "microevalsEnabled": true,
+ "intelligenceIndex": 22.6606674839812,
+ "intelligenceIndexIsEstimated": false,
+ "capabilities": {
+  "financeAndAccounting": 24.26750149332541,
+  "strategyAndOps": 23.23652909566923,
+  "legal": 30.922908535903623,
+  "healthcareAndMedical": 23.67824675610797,
+  "engineering": 24.891422612126828,
+  "economics": 32.05086324142723
+ },
+ "omniscience": 5.23333333333333,
+ "omniscienceBreakdown": {
+  "accuracy": 0.2946666666666667,
+  "hallucinationRate": 0.3435727788279773
+ },
+ "mlcrOverall": 0.0722222222222222,
+ "gdpPdfAllPass": 0.136,
+ "gdpval": 1063.25,
+ "gdpvalNormalized": 0.281625,
+ "itBenchSre": null,
+ "tau2": null,
+ "tauBanking": 0.175257731958763,
+ "terminalbenchHard": null,
+ "terminalBench21": 0.535580524344569,
+ "terminalBench40": 0.0101010101010101,
+ "scicode": 0.413194444444444,
+ "lcr": 0.76,
+ "ifbench": null,
+ "hle": 0.188137164040778,
+ "gpqa": 0.838383838383838,
+ "critpt": 0,
+ "apexAgents": null,
+ "mmmuPro": 0.790173410404624,
+ "livecodebench": null,
+ "aime25": null,
+ "analystAgent": null,
+ "automationBenchPartialScore": 0.25011270511840955,
+ "enterpriseOpsGym": 0.423455684870188,
+ "price1mInputTokens": 0.3,
+ "price1mOutputTokens": 2.5,
+ "cacheHitPrice": 0.03,
+ "cacheHitDiscountPercent": 0.9,
+ "cacheWritePrice": null,
+ "pricePer1k1mpImages": null,
+ "price1mBlended0To3To1": 0.85,
+ "price1mBlended7To2To1": 0.331,
+ "price1mBlended0To1To1": 1.4,
+ "price1mBlended100To1To1": 0.056862745098039215,
+ "price1mBlended0To100To1": 0.3217821782178218,
+ "intelligenceIndexTimePerTask": 49.25770281992224,
+ "intelligenceIndexCost": {
+  "total": 266.9441129366118,
+  "input": 118.25620543661181,
+  "nonCacheInput": 6.5410419,
+  "cacheRead": 30.069722951487574,
+  "cacheWrite": 81.64544058512423,
+  "output": 148.6879075,
+  "reasoning": 122.0987625,
+  "answer": 26.589145
+ },
+ "intelligenceIndexCostPerTask": {
+  "cost": {
+   "total": 0.12352689651593446,
+   "input": 0.07976014869581427,
+   "nonCacheInput": 0.004420434677479369,
+   "cacheRead": 0.02108940475429524,
+   "cacheWrite": 0.054250309264039676,
+   "output": 0.04376674782012017,
+   "reasoning": 0.026012881416245023,
+   "answer": 0.017753866403875142
+  },
+  "evaluations": [
+   {
+    "slug": "aa-briefcase",
+    "weightedCostPerTask": 0.017996824535402002
+   },
+   {
+    "slug": "gdpval-aa",
+    "weightedCostPerTask": 0.010441611076120362
+   },
+   {
+    "slug": "automationbench-aa",
+    "weightedCostPerTask": 0.007077872423235336
+   },
+   {
+    "slug": "terminalbench-4-0",
+    "weightedCostPerTask": 0.07064363935811745
+   },
+   {
+    "slug": "scicode",
+    "weightedCostPerTask": 0.0012601281597222223
+   },
+   {
+    "slug": "humanitys-last-exam",
+    "weightedCostPerTask": 0.002707601232622799
+   },
+   {
+    "slug": "gdp-pdf",
+    "weightedCostPerTask": 0.0039496541999999996
+   },
+   {
+    "slug": "critpt",
+    "weightedCostPerTask": 0.007036145285714286
+   },
+   {
+    "slug": "omniscience",
+    "weightedCostPerTask": 0.0004648802449999999
+   },
+   {
+    "slug": "artificial-analysis-long-context-reasoning",
+    "weightedCostPerTask": 0.00194854
+   }
+  ]
+ },
+ "canonicalIntelligenceIndexTokenCount": {
+  "input": 1296279040,
+  "output": 59475163,
+  "answer": 10635658,
+  "reasoning": 48839505
+ },
+ "intelligenceIndexOutputTokensPerTask": {
+  "reasoning": 10405.152566498009,
+  "answer": 7101.546561550058,
+  "output": 17506.699128048065
+ },
+ "briefcaseBreakdown": {
+  "overall": {
+   "elo": 645.32,
+   "lower95ci": 637.26,
+   "upper95ci": 653.71
+  },
+  "rubricPassRate": 0.1484848484848485,
+  "analyticalQuality": {
+   "elo": 389.97,
+   "lower95ci": 374.81,
+   "upper95ci": 405.23
+  },
+  "presentation": {
+   "elo": 757.45,
+   "lower95ci": 741.84,
+   "upper95ci": 773.84
+  }
+ },
+ "briefcaseTotalCost": 10.918073551477216,
+ "timescaleData": {
+  "medianOutputSpeed": 362.513738231635,
+  "medianTimeToFirstChunk": 9.48914058049998
+ },
+ "outputSpeedVariance": {
+  "p05": 261.654030657971,
+  "q25": 301.212819299482,
+  "median": 362.513738231635,
+  "q75": 408.139371766352,
+  "p95": 447.384345006882
+ },
+ "timeToFirstChunkVariance": {
+  "p05": 5.82888021074999,
+  "q25": 7.89107383849993,
+  "median": 9.48914058049998,
+  "q75": 11.9342037674999,
+  "p95": 37.9250260691498
+ },
+ "performanceByPromptType": {
+  "medium": {
+   "medianOutputSpeed": 356.784521710335,
+   "medianTimeToFirstChunk": 6.97774292000001,
+   "medianTimeToFirstAnswerToken": 6.97774292000001,
+   "medianEndToEndResponseTime": 8.379149005676389
+  },
+  "long": {
+   "medianOutputSpeed": 362.513738231635,
+   "medianTimeToFirstChunk": 9.48914058049998,
+   "medianTimeToFirstAnswerToken": 9.48914058049998,
+   "medianEndToEndResponseTime": 10.868398653418904
+  },
+  "hundredK": {
+   "medianOutputSpeed": 344.587311437641,
+   "medianTimeToFirstChunk": 7.72165953800001,
+   "medianTimeToFirstAnswerToken": 7.72165953800001,
+   "medianEndToEndResponseTime": 9.17267059790807
+  },
+  "mediumParallel": {
+   "medianOutputSpeed": 297.832327179447,
+   "medianTimeToFirstChunk": 5.18262939950001,
+   "medianTimeToFirstAnswerToken": 5.18262939950001,
+   "medianEndToEndResponseTime": 6.8614263411723115
+  }
+ },
+ "endToEndResponseTime": {
+  "input": 9.48914058049998,
+  "reasoning": 0,
+  "answer": 1.3792580729189237,
+  "total": 10.868398653418904
+ },
+ "timeToFirstAnswerToken": {
+  "input": 9.48914058049998,
+  "reasoning": 0,
+  "total": 9.48914058049998
+ },
+ "performanceDataSource": {
+  "type": "firstParty",
+  "providerName": "Google"
+ },
+ "hostModelCount": 4,
+ "creator": {
+  "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+  "slug": "google",
+  "name": "Google",
+  "logo": "/img/logos/google_small.svg",
+  "color": "#34A853",
+  "country": "us",
+  "url": "https://deepmind.google/technologies/gemini/"
+ },
+ "inputModalityText": true,
+ "inputModalityImage": true,
+ "inputModalitySpeech": true,
+ "inputModalityVideo": true,
+ "outputModalityText": true,
+ "outputModalityImage": false,
+ "outputModalitySpeech": false,
+ "outputModalityVideo": false
+}
