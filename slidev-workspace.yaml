@@ -1,0 +1,4 @@
+# The site has a custom domain (slides.fdu.sc), so it is served from the root
+# and decks live at /<deck>/ rather than /<repo>/<deck>/. A baseUrl of
+# /fdusc-ai-lecture/ would 404 every asset once the CNAME is in place.
+baseUrl: "/"

@@ -1,0 +1,7 @@
+packages:
+  - "slides/*"
+
+# pnpm 10 blocks postinstall scripts by default; playwright-chromium needs its
+# browser download for scripts/verify.mjs to be able to drive a headless page.
+onlyBuiltDependencies:
+  - playwright-chromium

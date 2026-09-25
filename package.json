@@ -1,0 +1,13 @@
+{
+  "name": "fdusc-ai-lecture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev-workspace dev",
+    "preview": "slidev-workspace preview",
+    "build": "slidev-workspace build"
+  },
+  "devDependencies": {
+    "slidev-workspace": "^0.9.3"
+  }
+}

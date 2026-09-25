@@ -1,0 +1,14 @@
+node_modules
+dist
+_gh-pages
+.DS_Store
+*.local
+.vite-inspect
+.remote-assets
+components.d.ts
+__pycache__
+
+# A separate project (a MiniMax-H3 video service) that happens to sit in this
+# directory. It has its own credentials, model weights and logs, and it is not
+# part of the lecture workspace.
+h3/
